@@ -1,0 +1,91 @@
+{
+  "study_id": "baseline-qwen-v1",
+  "description": "Whole-photo, single-reference visual similarity baseline on Qwen3.7 Flash; user replaced Argon for cost.",
+  "model": "qwen/qwen3.7-flash",
+  "thinking_level": "low",
+  "max_output_tokens": 2048,
+  "query_max_dimension": 1536,
+  "query_jpeg_quality": 90,
+  "prompt": "Compare Image A (a real-world product photo) with Image B (a catalogue product photo). Give a visual similarity score from 0 to 100 for how similar the products shown in the two images look. Use 0 for completely different and 100 for identical. Return the score and one brief reason in JSON.",
+  "thresholds": [
+    80,
+    90
+  ],
+  "confidently_wrong_score_min": 90,
+  "decision_rule": "Below threshold: not_in_catalogue. Unique highest score at or above threshold: that catalogue product. Exact top-score tie at or above threshold: not_sure, with top two in catalogue order. No additional margin rule.",
+  "catalogue_order": [
+    "dyson_big_ball",
+    "dyson_v12_detect_slim",
+    "dyson_v15_detect",
+    "dyson_v16_piston_animal",
+    "dyson_v8_absolute",
+    "dyson_wash_g1"
+  ],
+  "catalogue_references": {
+    "dyson_big_ball": {
+      "file": "data/catalog/dyson_big_ball/00.png",
+      "sha256": "032925ba49dc676a492bd7248ba2c3c9fef243668e419b48e683759ee5ddde41"
+    },
+    "dyson_v12_detect_slim": {
+      "file": "data/catalog/dyson_v12_detect_slim/00.png",
+      "sha256": "b917f1ebfd6c4386f49759ded0e17cad51fc9a347ac9084e115e146a1d6a7d89"
+    },
+    "dyson_v15_detect": {
+      "file": "data/catalog/dyson_v15_detect/00.png",
+      "sha256": "ea013614151b18e61ecd83869d969df89ea33b98ed7b292148ebb1a724344357"
+    },
+    "dyson_v16_piston_animal": {
+      "file": "data/catalog/dyson_v16_piston_animal/00.png",
+      "sha256": "c455368688e30691b83db86527ee378e30f18830665deb5f427d253eba2e1a43"
+    },
+    "dyson_v8_absolute": {
+      "file": "data/catalog/dyson_v8_absolute/00.png",
+      "sha256": "3a206b5f02e53ddd7ffd34e4d35503d7ab37257e0dbdb61a1c67dd5164e2a2c1"
+    },
+    "dyson_wash_g1": {
+      "file": "data/catalog/dyson_wash_g1/00.png",
+      "sha256": "bd5f55d605676fea8ebc2e532413e0971024559de12b117766c18825576c42d3"
+    }
+  },
+  "test_manifest_sha256": "25f2b5497326cf3ba37be7393ff68d7e3907f284e7a89e283468d3d97acf0a32",
+  "pricing": {
+    "source": "https://openrouter.ai/qwen/qwen3.7-flash",
+    "checked_date": "2026-10-15",
+    "input_usd_per_million": 0.035,
+    "cached_input_usd_per_million": 0.007,
+    "output_including_thinking_usd_per_million": 0.15,
+    "displayed_catalogue_input_usd_per_million": 0.03,
+    "displayed_catalogue_output_usd_per_million": 0.13,
+    "cost_preference": "Use returned usage.cost; configured rates are conservative provider price caps."
+  },
+  "exchange_rate": {
+    "source": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+    "date": "2026-10-14",
+    "usd_inr": 95.15703439035285
+  },
+  "budget": {
+    "total_authorised_inr": 2000,
+    "baseline_max_inr": 50,
+    "conservative_usd_inr": 100,
+    "per_request_input_token_bound": 20000,
+    "concurrency": 4,
+    "previous_budget_accounted_inr": 39.772024407860656
+  },
+  "evaluation": {
+    "single_photos": 57,
+    "labelled_multi_photos": 1,
+    "unlabelled_demo_excluded": true,
+    "client_store_photos_available": false
+  },
+  "provider": "openrouter",
+  "output_dir": "out/baseline-qwen",
+  "input_dir": "out/baseline/inputs",
+  "openrouter_provider": {
+    "sort": "price",
+    "max_price": {
+      "prompt": 0.035,
+      "completion": 0.15
+    }
+  },
+  "reasoning_enabled": false
+}

@@ -1,0 +1,9 @@
+{
+  "status": "stopped_on_user_instruction",
+  "saved_successful_pairs": 43,
+  "reported_token_cost_usd": 0.236522,
+  "reported_token_cost_inr": 22.506732088075037,
+  "inflight_requests_without_returned_usage_max": 2,
+  "unknown_usage_reserve_usd": 0.18144,
+  "reason": "User requested a cheaper model and OpenRouter alternatives. No further Argon requests are authorised for this baseline."
+}
