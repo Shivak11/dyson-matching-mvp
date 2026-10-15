@@ -4,6 +4,13 @@ import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
 from summarize_pipeline_study import cost_tables
 class StudyTests(unittest.TestCase):
+    def test_latency_uses_the_same_photo_subset(self):
+        c={'models':{'a':{'model':'route'}},'reporting_usd_inr':100,'budget':{'usd_inr':100,'stage_max_inr':400}}
+        calls=[{'job_id':'check:a:visual:'+i+'_01','estimated_cost_usd':.01,'cost_basis':'provider_reported_cost','status':'ok','elapsed_seconds':seconds} for i,seconds in [('P001',2),('P002',100)]]
+        results=[{'model':'a','variant':'visual','image_id':i} for i in ['P001','P002']]
+        row=cost_tables(c,calls,results,{'P001'})['models'][0]
+        self.assertEqual(row['median_check_request_seconds'],2)
+        self.assertEqual(row['photo_count'],1)
     def test_shared_cost_once_and_audit_events_excluded(self):
         c={'models':{'a':{'model':'a-route'},'b':{'model':'b-route'}},'reporting_usd_inr':100,'budget':{'usd_inr':100,'stage_max_inr':400}}
         def call(job,cost,basis='provider_reported_cost',status='ok'):

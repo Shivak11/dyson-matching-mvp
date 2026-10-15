@@ -24,7 +24,7 @@ def cost_tables(config, calls, results, image_ids):
         elif parts[0]=='check':
             model,variant,instance=parts[1:4];image=instance.split('_')[0]
             checks[(model,variant,image)]+=usd
-            latency[(model,variant)].append(r.get('elapsed_seconds',0))
+            latency[(model,variant,image)].append(r.get('elapsed_seconds',0))
     groups=defaultdict(set)
     for r in results:
         if r['image_id'] in image_ids: groups[(r['model'],r['variant'])].add(r['image_id'])
@@ -33,7 +33,7 @@ def cost_tables(config, calls, results, image_ids):
         members=model.split('+')
         model_usd=sum(checks[(m,variant,i)] for m in members for i in ids)
         shared_usd=sum(shared[i] for i in ids)
-        times=[t for m in members for t in latency.get((m,variant),[])]
+        times=[t for m in members for i in ids for t in latency.get((m,variant,i),[])]
         rows.append({'model':model,'provider_models':[models[m] for m in members],'variant':variant,'photo_count':len(ids),
                      'checking_usd':model_usd,'shared_detection_retrieval_usd':shared_usd,
                      'pipeline_cost_inr':(model_usd+shared_usd)*rate,
