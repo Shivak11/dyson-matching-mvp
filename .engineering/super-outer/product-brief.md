@@ -69,3 +69,6 @@ No training anywhere: Shiva ruled it out on 2026-10-15 because models keep chang
 
 ## Deferred
 - TV sticker check, washing machines.
+
+## Approved step-4 revision, 15 October 2026
+The owner approved the engineering proposal and asked to bundle likely improvements. Step-4 spending ceiling is INR 400, with the INR 2,000 overall limit retained. Run shared detection, padded crops with context, multiple reference views, Embedding 2 retrieval and evidence-based checking together; compare independent cheap checkers and their combination, including the telling-details variant. Keep the baseline available alongside experimental results. The local demo must support both a known expected product and catalogue identification; insufficient evidence should lead to a specific retake request. A later client-store-photo rerun is needed to judge performance on the actual workflow. No further product judgement is needed before this contained experiment.
