@@ -72,3 +72,27 @@ class BaselineTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+class OpenRouterTests(unittest.TestCase):
+    def test_json_response_and_reported_cost(self):
+        response = {'choices': [{'finish_reason': 'stop', 'message': {'content': '{"similarity_score": 85, "reason": "Visible product shape"}'}}]}
+        self.assertEqual(b.parse_score(response)[0]['similarity_score'], 85)
+        self.assertAlmostEqual(b.usage_cost({'cost': 0.000123}, {}), 0.000123)
+        with self.assertRaises(ValueError):
+            b.usage_cost({'cost': -1}, {})
+
+    def test_openrouter_payload_preserves_two_images_without_labels(self):
+        config = json.loads((b.ROOT / 'data/baseline_qwen_config.json').read_text())
+        request = b.payload({'inlineData': {'mimeType': 'image/jpeg', 'data': 'QUERY'}}, {'inlineData': {'mimeType': 'image/jpeg', 'data': 'REFERENCE'}}, config)
+        content = request['messages'][1]['content']
+        self.assertEqual([p['image_url']['url'] for p in content if p['type'] == 'image_url'], ['data:image/jpeg;base64,QUERY', 'data:image/jpeg;base64,REFERENCE'])
+        self.assertEqual(request['provider']['max_price'], {'prompt': 0.035, 'completion': 0.15})
+        self.assertEqual(request['response_format'], {'type': 'json_object'})
+        self.assertNotIn('source_url', json.dumps(request))
+
+    def test_ignored_local_env_reads_only_named_key(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(b, 'ROOT', Path(directory)), patch.dict(b.os.environ, {}, clear=True):
+            (Path(directory) / '.env').write_text('OTHER_KEY=unrelated\nOPENROUTER_API_KEY="unit-test-value" # comment\n')
+            self.assertEqual(b.api_key_for('OPENROUTER_API_KEY'), 'unit-test-value')
+            with self.assertRaises(RuntimeError):
+                b.api_key_for('MISSING_KEY')

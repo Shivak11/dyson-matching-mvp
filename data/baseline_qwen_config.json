@@ -87,5 +87,6 @@
       "completion": 0.15
     }
   },
-  "reasoning_enabled": false
+  "reasoning_enabled": false,
+  "json_instruction": "Return a JSON object containing similarity_score (a number from 0 to 100) and reason (a short string)."
 }

@@ -9,6 +9,8 @@ import io
 import json
 import math
 import os
+import shlex
+import signal
 from pathlib import Path
 import statistics
 import time
@@ -26,10 +28,16 @@ def digest(data):
 
 
 def parse_score(response):
-    candidate, = response['candidates']
-    if candidate.get('finishReason') != 'STOP':
-        raise ValueError('Incomplete provider result: ' + str(candidate.get('finishReason')))
-    text = ''.join(p.get('text', '') for p in candidate['content']['parts'] if not p.get('thought'))
+    if 'choices' in response:
+        candidate, = response['choices']
+        if candidate.get('finish_reason') != 'stop':
+            raise ValueError('Incomplete provider result: ' + str(candidate.get('finish_reason')))
+        text = candidate['message']['content']
+    else:
+        candidate, = response['candidates']
+        if candidate.get('finishReason') != 'STOP':
+            raise ValueError('Incomplete provider result: ' + str(candidate.get('finishReason')))
+        text = ''.join(p.get('text', '') for p in candidate['content']['parts'] if not p.get('thought'))
     result = json.loads(text)
     score = result['similarity_score']
     if isinstance(score, bool) or not isinstance(score, (int, float)) or not math.isfinite(score) or not 0 <= score <= 100:
@@ -40,6 +48,13 @@ def parse_score(response):
 
 
 def usage_cost(usage, pricing):
+    if 'cost' in usage:
+        cost = usage['cost']
+        if isinstance(cost, bool) or not isinstance(cost, (int, float)) or not math.isfinite(cost) or cost < 0:
+            raise ValueError('Invalid reported cost')
+        return cost
+    if 'prompt_tokens' in usage:
+        usage = {'promptTokenCount': usage['prompt_tokens'], 'candidatesTokenCount': usage['completion_tokens']}
     prompt = usage['promptTokenCount']
     cached = usage.get('cachedContentTokenCount', 0)
     output = usage.get('candidatesTokenCount', 0) + usage.get('thoughtsTokenCount', 0)
@@ -62,7 +77,26 @@ def decide(scores, order, threshold):
     return {'status': 'match', 'product': top, 'score': scores[top], 'top_two': ranked[:2]}
 
 
+def api_key_for(name):
+    if os.environ.get(name):
+        return os.environ[name]
+    env_file = ROOT / '.env'
+    if env_file.exists():
+        for line in env_file.read_text().splitlines():
+            field, separator, value = line.partition('=')
+            if separator and field.strip().removeprefix('export ') == name:
+                parts = shlex.split(value, comments=True)
+                if len(parts) == 1:
+                    return parts[0]
+    raise RuntimeError(name + ' is unavailable')
+
+
 def payload(query, reference, config):
+    if config.get('provider') == 'openrouter':
+        def image(part):
+            data = part['inlineData']
+            return {'type': 'image_url', 'image_url': {'url': 'data:' + data['mimeType'] + ';base64,' + data['data']}}
+        return {'model': config['model'], 'messages': [{'role': 'system', 'content': config['json_instruction']}, {'role': 'user', 'content': [{'type': 'text', 'text': config['prompt']}, {'type': 'text', 'text': 'Image A:'}, image(query), {'type': 'text', 'text': 'Image B:'}, image(reference)]}], 'max_tokens': config['max_output_tokens'], 'reasoning': {'enabled': config['reasoning_enabled']}, 'response_format': {'type': 'json_object'}, 'provider': config['openrouter_provider'], 'usage': {'include': True}}
     schema = {'type': 'object', 'properties': {'similarity_score': {'type': 'number', 'minimum': 0, 'maximum': 100}, 'reason': {'type': 'string'}}, 'required': ['similarity_score', 'reason'], 'additionalProperties': False}
     return {'contents': [{'role': 'user', 'parts': [{'text': config['prompt']}, {'text': 'Image A:'}, query, {'text': 'Image B:'}, reference]}], 'generationConfig': {'thinkingConfig': {'thinkingLevel': config['thinking_level']}, 'maxOutputTokens': config['max_output_tokens'], 'responseFormat': {'text': {'mimeType': 'APPLICATION_JSON', 'schema': schema}}}}
 
@@ -72,7 +106,7 @@ def prepare(config):
     assert digest(manifest_bytes) == config['test_manifest_sha256'], 'Test answer key changed'
     rows = json.loads(manifest_bytes)
     parts, inputs = {}, []
-    input_dir = OUT / 'inputs'
+    input_dir = ROOT / config.get('input_dir', str((OUT / 'inputs').relative_to(ROOT)))
     input_dir.mkdir(parents=True, exist_ok=True)
     originals = [(r['image_id'], r['file'], r['sha256']) for r in rows]
     originals += [('R' + str(i + 1), ref['file'], ref['sha256']) for i, ref in enumerate(config['catalogue_references'].values())]
@@ -107,9 +141,8 @@ def ledger_rows(config_sha):
 
 
 def run(config, config_sha, rows, parts, limit):
-    api_key = os.environ.get('GEMINI_API_KEY')
-    if not api_key:
-        raise RuntimeError('GEMINI_API_KEY is unavailable')
+    openrouter = config.get('provider') == 'openrouter'
+    api_key = api_key_for('OPENROUTER_API_KEY' if openrouter else 'GEMINI_API_KEY')
     old = ledger_rows(config_sha)
     completed = {(r['image_id'], r['catalogue_id']) for r in old if r['status'] == 'ok'}
     jobs = [(row['image_id'], product, 'R' + str(i + 1)) for row in rows for i, product in enumerate(config['catalogue_order']) if (row['image_id'], product) not in completed]
@@ -117,8 +150,15 @@ def run(config, config_sha, rows, parts, limit):
         jobs = jobs[:limit]
     pricing, budget = config['pricing'], config['budget']
     reservation = (budget['per_request_input_token_bound'] * pricing['input_usd_per_million'] + config['max_output_tokens'] * pricing['output_including_thinking_usd_per_million']) / 1_000_000
-    cap = min(budget['baseline_max_inr'], budget['total_authorised_inr']) / budget['conservative_usd_inr']
+    cap = min(budget['baseline_max_inr'], budget['total_authorised_inr'] - budget.get('previous_budget_accounted_inr', 0)) / budget['conservative_usd_inr']
     spent = sum(row['estimated_cost_usd'] for row in old)
+    stop_requested = False
+
+    def stop_after_batch(signum, frame):
+        nonlocal stop_requested
+        stop_requested = True
+
+    signal.signal(signal.SIGTERM, stop_after_batch)
 
     def call(job):
         image_id, product, reference = job
@@ -127,15 +167,18 @@ def run(config, config_sha, rows, parts, limit):
         record['request_sha256'] = digest(body)
         start, response = time.monotonic(), None
         try:
-            request = urllib.request.Request('https://generativelanguage.googleapis.com/v1beta/models/' + config['model'] + ':generateContent', data=body, headers={'Content-Type': 'application/json', 'x-goog-api-key': api_key})
+            url = 'https://openrouter.ai/api/v1/chat/completions' if openrouter else 'https://generativelanguage.googleapis.com/v1beta/models/' + config['model'] + ':generateContent'
+            headers = {'Content-Type': 'application/json', **({'Authorization': 'Bearer ' + api_key} if openrouter else {'x-goog-api-key': api_key})}
+            request = urllib.request.Request(url, data=body, headers=headers)
             with urllib.request.urlopen(request, timeout=180) as reply:
                 response = json.load(reply)
-            record['usage_metadata'] = response.get('usageMetadata', {})
-            record['model_version'] = response.get('modelVersion')
-            record['response_id'] = response.get('responseId')
+            record['usage_metadata'] = response.get('usage', {}) if openrouter else response.get('usageMetadata', {})
+            record['model_version'] = response.get('model') if openrouter else response.get('modelVersion')
+            record['provider'] = response.get('provider')
+            record['response_id'] = response.get('id') if openrouter else response.get('responseId')
             result, text = parse_score(response)
             record.update(status='ok', result=result, response_text=text)
-            if record['usage_metadata']['promptTokenCount'] > budget['per_request_input_token_bound']:
+            if record['usage_metadata'].get('prompt_tokens' if openrouter else 'promptTokenCount', 0) > budget['per_request_input_token_bound']:
                 raise ValueError('Input token count exceeds reserved bound')
         except Exception as error:
             message = str(error)
@@ -147,13 +190,15 @@ def run(config, config_sha, rows, parts, limit):
         record['elapsed_seconds'] = time.monotonic() - start
         try:
             record['estimated_cost_usd'] = usage_cost(record['usage_metadata'], pricing)
-            record['cost_basis'] = 'reported_tokens_and_published_standard_rates'
+            record['cost_basis'] = 'openrouter_reported_cost' if openrouter and 'cost' in record['usage_metadata'] else 'reported_tokens_and_published_standard_rates'
         except (KeyError, ValueError):
             record['estimated_cost_usd'] = reservation
             record['cost_basis'] = 'reserved_upper_bound_usage_unavailable'
         return record
 
     for start in range(0, len(jobs), budget['concurrency']):
+        if stop_requested or (OUT / 'STOP').exists():
+            raise RuntimeError('Stopped on user instruction after saving in-flight responses')
         batch = jobs[start:start + budget['concurrency']]
         if not budget_allows(spent, len(batch), reservation, cap):
             raise RuntimeError('Baseline budget stop before scheduling another batch')
@@ -220,13 +265,16 @@ def summarize(config, config_sha, rows):
 
 
 def main():
+    global OUT
     parser = argparse.ArgumentParser()
     parser.add_argument('--run', action='store_true')
+    parser.add_argument('--config', default='data/baseline_qwen_config.json')
     parser.add_argument('--limit', type=int)
     parser.add_argument('--summarize', action='store_true')
     args = parser.parse_args()
-    config_bytes = (ROOT / 'data/baseline_config.json').read_bytes()
+    config_bytes = (ROOT / args.config).read_bytes()
     config, config_sha = json.loads(config_bytes), digest(config_bytes)
+    OUT = ROOT / config.get('output_dir', 'out/baseline')
     OUT.mkdir(parents=True, exist_ok=True)
     with (OUT / 'run.lock').open('w') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)

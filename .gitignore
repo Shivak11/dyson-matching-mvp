@@ -4,3 +4,4 @@ __pycache__/
 .worktrees/
 *.pyc
 out/baseline/run.lock
+out/baseline-qwen/run.lock
