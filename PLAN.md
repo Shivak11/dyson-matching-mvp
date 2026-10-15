@@ -53,3 +53,5 @@ Verification: offline tests for crop geometry, vector similarity, parsing, conse
 
 ### Additional owner instruction during implementation
 Shiva requested higher Gemini models too. Include Gemini 4 Argon and Gemini 3.1 Pro Preview, whose native model routes and published prices were checked on 15 October. Argon will use the full set if the shared INR 400 cap permits; Pro, GPT-5.5 and Sol use the same fixed 16-photo subset. Run cheaper models first and preserve all saved inputs. Higher-model calls use the telling-details bundle. No extra budget is inferred from the added model request.
+
+The orchestrator additionally owns tools/summarize_pipeline_study.py and tests/test_pipeline_study.py for full-set and fixed-subset cost/accuracy tables. Scheduling may use --workers without changing the frozen requests or model settings; every concurrent request remains budget-reserved. Eight workers are used for cheap checks, with lower concurrency for premium calls. This changes wall-clock scheduling only.
