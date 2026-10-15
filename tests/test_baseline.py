@@ -45,6 +45,7 @@ class BaselineTests(unittest.TestCase):
         parts = request['contents'][0]['parts']
         self.assertEqual(sum('inlineData' in part for part in parts), 2)
         self.assertEqual([part['text'] for part in parts if 'text' in part], [self.config['prompt'], 'Image A:', 'Image B:'])
+        self.assertEqual(request['generationConfig']['responseFormat']['text']['mimeType'], 'APPLICATION_JSON')
         self.assertNotIn('source_url', json.dumps(request))
         self.assertNotIn('dyson_v8_absolute', json.dumps(request))
 

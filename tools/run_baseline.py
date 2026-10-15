@@ -64,7 +64,7 @@ def decide(scores, order, threshold):
 
 def payload(query, reference, config):
     schema = {'type': 'object', 'properties': {'similarity_score': {'type': 'number', 'minimum': 0, 'maximum': 100}, 'reason': {'type': 'string'}}, 'required': ['similarity_score', 'reason'], 'additionalProperties': False}
-    return {'contents': [{'role': 'user', 'parts': [{'text': config['prompt']}, {'text': 'Image A:'}, query, {'text': 'Image B:'}, reference]}], 'generationConfig': {'thinkingConfig': {'thinkingLevel': config['thinking_level']}, 'maxOutputTokens': config['max_output_tokens'], 'responseFormat': {'text': {'mimeType': 'application/json', 'schema': schema}}}}
+    return {'contents': [{'role': 'user', 'parts': [{'text': config['prompt']}, {'text': 'Image A:'}, query, {'text': 'Image B:'}, reference]}], 'generationConfig': {'thinkingConfig': {'thinkingLevel': config['thinking_level']}, 'maxOutputTokens': config['max_output_tokens'], 'responseFormat': {'text': {'mimeType': 'APPLICATION_JSON', 'schema': schema}}}}
 
 
 def prepare(config):
