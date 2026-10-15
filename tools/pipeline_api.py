@@ -120,6 +120,10 @@ class Client:
     def generate(self, job_id, model_key, prompt, images, schema=None):
         model = self.config['models'][model_key]
         provider = model['provider']
+        if 'provider_only' in model:
+            only = model['provider_only']
+            if provider != 'openrouter' or not isinstance(only, list) or not only or any(not isinstance(name, str) or not name.strip() for name in only):
+                raise ValueError('provider_only must be a non-empty string list for OpenRouter')
         parts = [{'text': prompt}]
         for label, path in images:
             parts.extend([{'text': label}, image_part(path)])
@@ -133,6 +137,8 @@ class Client:
                     content.append({'type': 'image_url', 'image_url': {'url': 'data:' + item['mimeType'] + ';base64,' + item['data']}})
             reasoning = {'effort': model['thinking_level'].lower()} if model.get('thinking_level') else {'enabled': False}
             payload = {'model': model['model'], 'messages': [{'role': 'system', 'content': 'Return one valid JSON object. Follow the requested JSON fields exactly.'}, {'role': 'user', 'content': content}], 'max_tokens': model['max_output_tokens'], 'reasoning': reasoning, 'response_format': {'type': 'json_object'}, 'provider': {'sort': 'price', 'allow_fallbacks': False, 'max_price': {'prompt': model['input_usd_per_million'], 'completion': model['output_usd_per_million']}}, 'usage': {'include': True}}
+            if 'provider_only' in model:
+                payload['provider']['only'] = model['provider_only']
             url = 'https://openrouter.ai/api/v1/chat/completions'
         elif provider == 'gemini':
             text_format = {'mimeType': 'APPLICATION_JSON'}
@@ -162,6 +168,7 @@ class Client:
         return self._call(job_id, 'embed', dict(model, provider='gemini'), payload, url, positive(model['usd_per_image'], 'embedding price'), parse)
 
     def _call(self, job_id, operation, model, payload, url, reservation, parse):
+        timeout = positive(model.get('request_timeout_seconds', 180), 'request_timeout_seconds')
         if not isinstance(job_id, str) or not job_id:
             raise ValueError('A non-empty job ID is required')
         body = encoded(payload)
@@ -190,7 +197,7 @@ class Client:
         try:
             headers = {'Content-Type': 'application/json', **({'Authorization': 'Bearer ' + key} if model['provider'] == 'openrouter' else {'x-goog-api-key': key})}
             request = urllib.request.Request(url, data=body, headers=headers)
-            with urllib.request.urlopen(request, timeout=180) as reply:
+            with urllib.request.urlopen(request, timeout=timeout) as reply:
                 response = json.load(reply)
             record['provider_response'] = response
             usage = response.get('usage', {}) if model['provider'] == 'openrouter' else response.get('usageMetadata', {})

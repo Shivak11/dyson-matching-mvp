@@ -45,6 +45,8 @@ class PipelineApiTests(unittest.TestCase):
             self.assertEqual(payload['response_format'], {'type': 'json_object'})
             self.assertEqual(payload['provider']['max_price'], {'prompt': 1, 'completion': 2})
             self.assertFalse(payload['provider']['allow_fallbacks'])
+            self.assertNotIn('only', payload['provider'])
+            self.assertEqual(timeout, 180)
             self.assertEqual(payload['reasoning'], {'enabled': False})
             self.assertEqual(len(payload['messages'][1]['content']), 3)
             pending = json.loads(self.client.pending_path.read_text())
@@ -59,6 +61,34 @@ class PipelineApiTests(unittest.TestCase):
         self.assertEqual(self.client.accounted_cost_usd, 0.001)
         self.assertEqual(json.loads(self.client.pending_path.read_text()), {})
         self.assertEqual(self.rows()[0]['provider_response']['model'], 'test-model')
+
+    def test_explicit_provider_max_effort_and_timeout(self):
+        config = copy.deepcopy(self.config)
+        config['models']['test'].update(provider_only=['Google AI Studio'], thinking_level='max', request_timeout_seconds=600)
+        client = api.Client(config, self.root, self.root / 'pinned')
+        def network(request, timeout):
+            payload = json.loads(request.data)
+            self.assertEqual(payload['provider']['only'], ['Google AI Studio'])
+            self.assertFalse(payload['provider']['allow_fallbacks'])
+            self.assertEqual(payload['reasoning'], {'effort': 'max'})
+            self.assertEqual(timeout, 600)
+            return self.response(reply())
+        with patch.object(api.urllib.request, 'urlopen', side_effect=network) as network:
+            self.generate(client=client)
+            self.assertEqual(network.call_count, 1)
+
+    def test_invalid_optional_controls_fail_before_network(self):
+        invalid = [('request_timeout_seconds', value) for value in (0, -1, True, None, '600', float('nan'), float('inf'))]
+        invalid += [('provider_only', value) for value in ([], None, 'Google', [''], ['  '], [True], ['Google', 1])]
+        with patch.object(api.urllib.request, 'urlopen') as network:
+            for index, (key, value) in enumerate(invalid):
+                with self.subTest(key=key, value=value):
+                    config = copy.deepcopy(self.config)
+                    config['models']['test'][key] = value
+                    with self.assertRaises(ValueError):
+                        client = api.Client(config, self.root, self.root / ('invalid-' + str(index)))
+                        self.generate(client=client)
+            network.assert_not_called()
 
     def test_request_and_config_mismatch_stop(self):
         with patch.object(api.urllib.request, 'urlopen', return_value=self.response(reply())):
@@ -123,13 +153,14 @@ class PipelineApiTests(unittest.TestCase):
 
     def test_native_request_and_thinking_usage(self):
         config = copy.deepcopy(self.config)
-        config['models']['test'].update(provider='gemini', thinking_level='low')
+        config['models']['test'].update(provider='gemini', thinking_level='low', request_timeout_seconds=420)
         client = api.Client(config, self.root, self.root / 'native')
         response = {'candidates': [{'finishReason': 'STOP', 'content': {'parts': [{'text': '{"status":"ok"}'}]}}], 'usageMetadata': {'promptTokenCount': 100, 'candidatesTokenCount': 100, 'thoughtsTokenCount': 100}}
         def network(request, timeout):
             payload = json.loads(request.data)
             self.assertEqual(payload['generationConfig']['responseFormat']['text']['mimeType'], 'APPLICATION_JSON')
             self.assertEqual(payload['generationConfig']['thinkingConfig']['thinkingLevel'], 'LOW')
+            self.assertEqual(timeout, 420)
             return self.response(response)
         with patch.object(api.urllib.request, 'urlopen', side_effect=network):
             self.generate(client=client)
