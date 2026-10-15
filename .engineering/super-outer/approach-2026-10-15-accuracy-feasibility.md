@@ -93,9 +93,9 @@ Manually inspected product boxes may be used only as a diagnostic control, with 
 
 For unknown-product identification, report correct in-catalogue identification, wrong accepted identities, correct outside-catalogue decisions, catalogue products wrongly rejected as outside, and not-sure outcomes. Report confidently wrong answers separately using the frozen definition, while showing every wrong automatic acceptance regardless of score.
 
-Report precision among accepted catalogue identities and the share of all photos receiving a decision. Also report accuracy among all automatically resolved outcomes, including outside-catalogue decisions; an all-reject system must not look good. Show totals over every original photo, and separate per-instance outcomes for multi-product photos. A missed detection is a failure in the end-to-end result, not a missing row.
+Report precision among accepted catalogue identities and the share of all photos receiving a decision. Also report accuracy among all automatically resolved outcomes, including outside-catalogue decisions; an all-reject system must not look good. Show totals over every original photo. Report per-instance identity outcomes only where independent source evidence maps each model to its position. P059 names V12 and V15 together without mapping them to positions: score its photo-level identity set and localisation separately. Do not assign source identities to boxes by appearance. A missed detection is a failure in the end-to-end result, not a missing row.
 
-For known-model verification, report false acceptance and false rejection separately on positive and negative pairs. The exhaustive pair distribution is not the expected client workload. For detection, retrieval and checking, report their own failures; conditional checker accuracy is not overall system accuracy.
+For known-model verification, report confirmed, contradicted and insufficient-evidence counts separately for source-positive and source-negative pairs. Report resolved coverage for each group. False acceptance uses all source-negative pairs as its denominator; false rejection uses all source-positive pairs, with abstention still visible in those same totals. Also show error rates among resolved pairs with their denominators. The exhaustive pair distribution is not the expected client workload. For detection, retrieval and checking, report their own failures; conditional checker accuracy is not overall system accuracy.
 
 Compare methods at comparable automatically resolved shares where the data permits. A method that removes errors only by deferring nearly everything is a trade-off, not an unqualified improvement. No numerical production target is set by this document. Rank the observed precision/coverage/cost trade-offs for Shiva and the client to judge.
 
@@ -120,3 +120,10 @@ The previously researched provider prices are candidate-selection evidence only.
 ## Delivery boundary
 
 The completed output of this turn is a reviewed engineering proposal, not step 4 completion. Matcher accuracy gains, detection quality, retake success, multi-product accuracy and production performance are unproved. New implementation follows the owner's review of this concrete proposal, as required by Super-outer's story-walk procedure and the task's numbered stops.
+
+
+## Assessment verification
+
+A fresh read-only reviewer checked commit `f260a6e` against the raw responses, summary, manifests and owner records. It independently reproduced the 348-call count, both threshold counts, USD 0.03054383 total, 58 photos, 11 source groups and 32 catalogue files. It found two advisory gaps: P059 lacks a source-backed model-to-position mapping, and known-model evaluation needed explicit abstention counts and denominators. Both passages above were corrected in one repair pass and checked against the source manifest and the proposed three-outcome decision contract. No independent claim of live-model or external-source verification is made by that review.
+
+The primary source pages were inspected by the author; this review validates the design and local facts, not future matching performance. The assessment changes only this document. Existing code, answer keys, photos and paid results remain unchanged.
