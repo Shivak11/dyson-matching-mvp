@@ -74,7 +74,10 @@ def rank_products(vector, refs, vectors, top_k):
 
 
 def validate_result(result, candidates):
+    result=json.loads(json.dumps(result))
     d=result['decision']; status=d['status']
+    if status=='not_in_catalogue' and d.get('top_two') is None:
+        d['top_two']=[]
     if status not in ('match','not_sure','not_in_catalogue'): raise ValueError('Invalid status')
     confidence=d['confidence']
     if isinstance(confidence,bool) or not isinstance(confidence,(int,float)) or not math.isfinite(confidence) or not 0<=confidence<=100: raise ValueError('Invalid confidence')
@@ -95,10 +98,13 @@ def validate_result(result, candidates):
 def gate_decision(result, threshold):
     result=json.loads(json.dumps(result))
     d=result['decision']
-    if d['status']=='match' and d['confidence']<threshold:
-        d['raw_status']='match'; d['raw_product']=d['product']
+    confirmed=[c['product'] for c in result['candidate_checks'] if c['outcome']=='confirmed']
+    inconsistent=(d['status']=='match' and confirmed!=[d['product']]) or (d['status']=='not_in_catalogue' and bool(confirmed))
+    low_confidence=d['status']=='match' and d['confidence']<threshold
+    if inconsistent or low_confidence:
+        d['raw_status']=d['status']; d['raw_product']=d['product']
         d['status']='not_sure'; d['product']=None
-        d['missing_evidence'].append('Evidence strength below the frozen automatic-match threshold.')
+        d['missing_evidence'].append('Candidate checks conflict with the final answer.' if inconsistent else 'Evidence strength below the frozen automatic-match threshold.')
         d['retake']=d['retake'] or 'Photograph the motor, dust bin, controls and any model label clearly.'
     return result
 
@@ -179,9 +185,16 @@ def embeddings(config,client,refs,ids):
     save(OUT/'shortlists.json',shortlists)
 
 
-def check(config,client,photos,refs,ids,models,variants):
+def include_expected(ranking, expected, vector, refs, vectors):
+    if expected and expected not in [r['product'] for r in ranking]:
+        return ranking+[next(r for r in rank_products(vector,refs,vectors,len(refs)) if r['product']==expected)]
+    return ranking
+
+
+def check(config,client,photos,refs,ids,models,variants,expected=None):
     detections=read(OUT/'detections.json',{}); shortlists=read(OUT/'shortlists.json',{})
     cards=read(ROOT/'data/telling_details.json',{})
+    vectors=read(OUT/'embeddings.json',{}) if expected else {}
     previous=read(OUT/'results.json',[])
     results={(r['model'],r['variant'],r['instance_id']):r for r in previous if '+' not in r['model']}
     jobs=[]
@@ -189,14 +202,15 @@ def check(config,client,photos,refs,ids,models,variants):
         for variant in variants:
             if variant not in config['model_variants'].get(model,config['variants']): continue
             for i in ids:
-                if model in config['premium_models'] and i not in config['premium_subset_ids']: continue
+                if not i.startswith('U') and model in config['premium_models'] and i not in config['premium_subset_ids']: continue
                 if i not in detections: raise ValueError('Detection missing: '+i)
                 for obj in detections[i] or [None]: jobs.append((model,variant,i,obj))
     def call(job):
         model,variant,i,obj=job
         if obj is None:
             return {'image_id':i,'instance_id':i+'_none','model':model,'variant':variant,'candidates':[],'detection_missed':True,'decision':{'status':'not_sure','product':None,'confidence':0,'top_two':[],'evidence':[],'missing_evidence':['No cleaner was located.'],'contradictions':[],'retake':'Photograph the whole cleaner clearly.'},'candidate_checks':[]}
-        instance=obj['instance_id']; ranking=shortlists[instance]
+        instance=obj['instance_id']; retrieved=shortlists[instance]
+        ranking=include_expected(retrieved,expected,vectors.get(instance),refs,vectors)
         candidates=[r['product'] for r in ranking]
         images=[('Whole scene for context',ROOT/photos[i]['file']),('TARGET CROP',ROOT/obj['crop_file'])]
         for p in sorted(candidates):
@@ -214,7 +228,7 @@ def check(config,client,photos,refs,ids,models,variants):
         try: validated=validate_result(raw,candidates)
         except Exception as e: client.record_validation_failure(job_id,str(e)); raise
         accepted=gate_decision(validated,config['confidence_threshold'])
-        return {'image_id':i,'instance_id':instance,'model':model,'variant':variant,'candidates':candidates,'raw_decision':validated['decision'],**accepted}
+        return {'image_id':i,'instance_id':instance,'model':model,'variant':variant,'candidates':[r['product'] for r in retrieved],'supplied_candidates':candidates,'expected_product':expected,'raw_decision':validated['decision'],**accepted}
     for result in run_batch(jobs,call,config['run_concurrency']):
         results[(result['model'],result['variant'],result['instance_id'])]=result
         save(OUT/'results.json',list(results.values()))
@@ -236,7 +250,7 @@ def summarise(config,rows):
                 result['candidate_checks'].append({'product':c['product'],'outcome':outcome,'evidence':c['evidence']+' / '+(d['evidence'] if d else 'No second check')})
             results.append(result)
     save(OUT/'results.json',results)
-    save(OUT/'summary.json',evaluate(rows,results,config['catalogue_order']))
+    save(OUT/'summary.json',evaluate(rows,results,config['catalogue_order'],detections=read(OUT/'detections.json',{})))
 
 
 def main():
@@ -244,20 +258,33 @@ def main():
     parser.add_argument('--stage',choices=['prepare','detect','embed','check','summarize','all'],default='prepare')
     parser.add_argument('--run',action='store_true'); parser.add_argument('--limit',type=int)
     parser.add_argument('--model',action='append'); parser.add_argument('--variant',action='append')
+    parser.add_argument('--photo',type=Path,help='Run an additional local photo; it is excluded from benchmark accuracy.')
+    parser.add_argument('--expected-product',help='Catalogue ID to verify; supplied even if retrieval omits it.')
     args=parser.parse_args(); config=read(ROOT/'data/pipeline_config.json',{})
+    if args.expected_product and (not args.photo or args.expected_product not in config['catalogue_order']): parser.error('--expected-product requires --photo and a valid catalogue ID')
+    if args.photo and args.stage=='prepare': args.stage='all'
     OUT.mkdir(parents=True,exist_ok=True)
     with (OUT/'run.lock').open('w') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         rows,photos,refs=setup(config)
         ids=[r['image_id'] for r in rows]
-        if args.limit: ids=ids[:args.limit]
+        if args.photo:
+            identity=sha(args.photo)+(args.expected_product or '')
+            image_id='U'+hashlib.sha256(identity.encode()).hexdigest()[:12]
+            photos[image_id]=prepare_image(args.photo,OUT/'photos'/(image_id+'.jpg'),config['query_max_dimension'])
+            ids=[image_id]
+        elif args.limit: ids=ids[:args.limit]
         if args.stage in ('detect','embed','check','all') and not args.run: raise SystemExit('Paid stages require --run')
         client=Client(config,ROOT,OUT)
         try:
             if args.stage in ('detect','all'): detect(config,client,photos,ids)
             if args.stage in ('embed','all'): embeddings(config,client,refs,ids)
-            if args.stage in ('check','all'): check(config,client,photos,refs,ids,args.model or config['check_order'],args.variant or config['variants'])
+            if args.stage in ('check','all'): check(config,client,photos,refs,ids,args.model or (['qwen','gemma'] if args.photo else config['check_order']),args.variant or (['telling_details'] if args.photo else config['variants']),args.expected_product)
             if args.stage in ('summarize','all'): summarise(config,rows)
+            if args.photo:
+                upload=[r for r in read(OUT/'results.json',[]) if r['image_id']==ids[0]]
+                save(OUT/'uploads'/(ids[0]+'.json'),upload)
+                print(json.dumps({'local_photo_result':str(OUT/'uploads'/(ids[0]+'.json'))}))
         except Exception as e:
             save(OUT/'blocker.json',{'time_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'stage':args.stage,'error':str(e),'attempted':'Frozen workflow; saved calls are retained. No automatic retries.'})
             raise

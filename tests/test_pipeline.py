@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
-from run_pipeline import pixel_box,cosine,rank_products,validate_result,gate_decision,CHECK_PROMPT
+from run_pipeline import pixel_box,cosine,rank_products,validate_result,gate_decision,CHECK_PROMPT,include_expected
 
 class PipelineTests(unittest.TestCase):
     def test_padding_and_clamping(self):
@@ -31,6 +31,24 @@ class PipelineTests(unittest.TestCase):
             with self.assertRaises(ValueError): validate_result(x,['a','b'])
         x=self.result();x['candidate_checks'][0]['outcome']='insufficient_evidence'
         with self.assertRaises(ValueError):validate_result(x,['a','b'])
+    def test_null_alternatives_for_outside_preserve_answer(self):
+        raw=self.result();raw['decision'].update(status='not_in_catalogue',product=None,top_two=None)
+        out=validate_result(raw,['a','b'])
+        self.assertEqual(out['decision']['top_two'],[])
+        self.assertIsNone(raw['decision']['top_two'])
+    def test_conflicting_confirmations_cannot_be_accepted(self):
+        raw=self.result();raw['decision']['confidence']=99
+        raw['candidate_checks'][1]['outcome']='confirmed'
+        self.assertEqual(gate_decision(raw,90)['decision']['status'],'not_sure')
+        raw['decision'].update(status='not_in_catalogue',product=None)
+        self.assertEqual(gate_decision(raw,90)['decision']['status'],'not_sure')
+    def test_expected_product_is_supplied_without_changing_retrieval(self):
+        refs={'a':[{'id':'a1'}],'b':[{'id':'b1'}]};vectors={'a1':[1,0],'b1':[0,1]}
+        retrieved=rank_products([1,0],refs,vectors,1)
+        supplied=include_expected(retrieved,'b',[1,0],refs,vectors)
+        self.assertEqual([x['product'] for x in supplied],['a','b'])
+        self.assertEqual([x['product'] for x in retrieved],['a'])
+        self.assertEqual(include_expected(retrieved,None,None,refs,{}),retrieved)
     def test_prompt_keeps_uncertainty_and_no_label_input(self):
         self.assertIn('Failure to match the shortlist is not enough',CHECK_PROMPT)
         self.assertNotIn('source_label',CHECK_PROMPT)

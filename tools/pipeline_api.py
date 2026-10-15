@@ -241,3 +241,25 @@ class Client:
             record.update(status='validation_error', error=str(error), estimated_cost_usd=0, cost_basis='validation_only_no_new_request')
             self._append(record)
             self.failure = True
+
+    def recover_validation(self, job_id, validator):
+        """Revalidate a saved successful response offline; never repeat a paid request."""
+        with self.lock:
+            previous = self.records[job_id]
+            if previous['status'] != 'validation_error':
+                raise ValueError('Only domain-validation failures can be recovered offline')
+            history = [json.loads(line) for line in self.calls_path.read_text().splitlines()]
+            originals = [(index, row) for index, row in enumerate(history, 1) if row['job_id'] == job_id and row['status'] == 'ok' and row['cost_basis'] != 'offline_validation_recovery']
+            if len(originals) != 1:
+                raise ValueError('Expected exactly one original successful response')
+            line, original = originals[0]
+            if original['request_sha256'] != previous['request_sha256'] or original['config_sha256'] != self.config_sha256:
+                raise ValueError('Validation recovery input changed')
+            result = validator(copy.deepcopy(original['result']))
+            if not isinstance(result, dict):
+                raise ValueError('Offline validator must return the validated JSON object')
+            record = copy.deepcopy(original)
+            record.update(result=result, estimated_cost_usd=0, cost_basis='offline_validation_recovery', recovered_at_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), recovery={'original_response_line': line, 'original_record_sha256': digest(encoded(original)), 'validation_failure_sha256': digest(encoded(previous)), 'reason': previous['error']})
+            self._append(record)
+            self.failure = bool(self.pending) or any(row['status'] != 'ok' for row in self.records.values())
+            return copy.deepcopy(result)

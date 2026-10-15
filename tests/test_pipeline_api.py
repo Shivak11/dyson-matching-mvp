@@ -161,6 +161,44 @@ class PipelineApiTests(unittest.TestCase):
             self.generate(client=restored)
         self.assertEqual(len(self.rows()), 2)
 
+    def test_offline_recovery_keeps_cost_and_original_response(self):
+        raw = {'decision': {'status': 'not_in_catalogue', 'top_two': None}}
+        with patch.object(api.urllib.request, 'urlopen', return_value=self.response(reply(raw))):
+            self.generate()
+        self.client.record_validation_failure('first', 'top_two is null')
+        def validate(result):
+            self.assertEqual(result['decision']['status'], 'not_in_catalogue')
+            result['decision']['top_two'] = []
+            return result
+        restored = api.Client(self.config, self.root, self.root / 'out')
+        with patch.object(api.urllib.request, 'urlopen', side_effect=AssertionError('Must stay offline')) as network:
+            fixed = restored.recover_validation('first', validate)
+            self.assertEqual(self.generate(client=restored), fixed)
+            network.assert_not_called()
+        self.assertEqual(fixed['decision']['top_two'], [])
+        self.assertEqual(self.rows()[0]['result'], raw)
+        self.assertEqual(self.rows()[-1]['estimated_cost_usd'], 0)
+        self.assertEqual(self.rows()[-1]['recovery']['original_response_line'], 1)
+        self.assertFalse(restored.failure)
+        self.assertEqual(api.Client(self.config, self.root, self.root / 'out').accounted_cost_usd, 0.001)
+
+    def test_offline_recovery_rejects_network_failure_and_failed_validator(self):
+        with patch.object(api.urllib.request, 'urlopen', return_value=self.response(reply())):
+            self.generate()
+        self.client.record_validation_failure('first', 'invalid domain fields')
+        def invalid(result):
+            raise ValueError('Still invalid')
+        with self.assertRaisesRegex(ValueError, 'Still invalid'):
+            self.client.recover_validation('first', invalid)
+        self.assertEqual(len(self.rows()), 2)
+        self.assertTrue(self.client.failure)
+        separate = api.Client(self.config, self.root, self.root / 'network-failure')
+        with patch.object(api.urllib.request, 'urlopen', side_effect=OSError('offline')):
+            with self.assertRaises(RuntimeError):
+                self.generate(client=separate)
+        with self.assertRaisesRegex(ValueError, 'Only domain-validation'):
+            separate.recover_validation('first', lambda result: result)
+
     def test_actual_cost_over_reservation_is_recorded_then_stops(self):
         with patch.object(api.urllib.request, 'urlopen', return_value=self.response(reply(cost=0.01))):
             with self.assertRaisesRegex(RuntimeError, 'exceeded'):

@@ -134,6 +134,47 @@ class PipelineEvaluatorTests(unittest.TestCase):
         self.assertEqual(second["observed_subset_accuracy"], 1)
         self.assertEqual(second["metrics"]["accuracy"], .5)
 
+    def test_missing_detected_object_result_keeps_single_and_multi_incomplete(self):
+        rows = [source("single", ["a"]), source("multi", ["a", "b"], "labelled_multi")]
+        detections = {name: [{"instance_id": "1"}, {"instance_id": "2"}] for name in ("single", "multi")}
+        results = [result("single", "1", checks=[check("a", "contradicted")]),
+                   result("multi", "1", checks=[check("a", "confirmed"), check("b", "contradicted")])]
+        group = e.evaluate(rows, results, ["a", "b"], detections)["groups"][0]
+        self.assertEqual(group["metrics"]["not_sure_count"], 1)
+        self.assertEqual(group["metrics"]["accepted_count"], 0)
+        self.assertEqual(group["missing_instance_result_count"], 2)
+        self.assertEqual(group["complete_photo_count"], 0)
+        self.assertEqual(group["saved_photo_count"], 2)
+        self.assertIsNotNone(group["subset_warning"])
+        self.assertEqual(group["per_photo"][0]["missing_instance_result_ids"], ["2"])
+        self.assertTrue(group["multi_photo_results"][0]["unresolved"])
+        self.assertFalse(group["multi_photo_results"][0]["result_complete"])
+        self.assertFalse(group["multi_photo_results"][0]["correct_resolved_identity_set"])
+        self.assertEqual(group["verification"]["false_reject"], 0)
+        self.assertEqual(group["verification"]["positive_abstention"], 2)
+        self.assertEqual(group["verification"]["true_accept"], 1)
+        self.assertEqual(group["detection"]["per_photo"][0]["detected_instance_count"], 2)
+
+    def test_missing_third_object_prevents_resolved_multi_set_even_when_labels_match(self):
+        rows = [source("multi", ["a", "b"], "labelled_multi")]
+        detections = {"multi": [{"instance_id": str(i)} for i in (1, 2, 3)]}
+        results = [result("multi", "1"), result("multi", "2", decision(product="b"))]
+        multi = e.evaluate(rows, results, ["a", "b"], detections)["groups"][0]["multi_photo_results"][0]
+        self.assertTrue(multi["identity_set_exact"])
+        self.assertFalse(multi["correct_resolved_identity_set"])
+        self.assertEqual(multi["missing_instance_result_ids"], ["3"])
+
+    def test_empty_detection_stays_miss_and_unknown_detection_record_is_incomplete(self):
+        rows = [source("one", ["a"]), source("two", ["a"])]
+        results = [result("one", None, decision("not_sure")), result("two")]
+        group = e.evaluate(rows, results, ["a", "b"], {"one": []})["groups"][0]
+        self.assertEqual(group["metrics"]["not_sure_count"], 2)
+        self.assertEqual(group["detection"]["explicit_detection_miss_photo_count"], 1)
+        self.assertEqual(group["missing_detection_record_photo_count"], 1)
+        self.assertEqual(group["complete_photo_count"], 1)
+        with self.assertRaises(ValueError):
+            e.evaluate(rows, [result()], ["a", "b"], {"one": []})
+
     def test_invalid_or_duplicate_results_are_rejected(self):
         rows = [source("one", ["a"])]
         invalid = [result(checks=[check("unknown", "confirmed")]),

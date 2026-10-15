@@ -72,11 +72,13 @@ def _is_miss(result):
     return result.get("detection_missed", False) or result.get("instance_id") in MISS_IDS
 
 
-def _aggregate(instances):
+def _aggregate(instances, complete=True, detection_empty=False):
     if not instances:
         return _unsure("No pipeline result was saved for this photo.")
     decisions = [_decision(item["decision"]) for item in instances]
-    if any(_is_miss(item) for item in instances):
+    if not complete:
+        return _unsure("Results do not cover every detected object or the detection record is missing.", decisions)
+    if detection_empty or any(_is_miss(item) for item in instances):
         return _unsure("No product instance was detected.", decisions)
     statuses = {item["status"] for item in decisions}
     products = {item["product"] for item in decisions if item["status"] == "match"}
@@ -88,7 +90,7 @@ def _aggregate(instances):
     return _unsure("Detected objects did not give one consistent resolved identity.", decisions)
 
 
-def _verification(photo_rows, grouped):
+def _verification(photo_rows, grouped, coverage):
     counts = Counter()
     pairs = []
     for row in photo_rows:
@@ -98,7 +100,7 @@ def _verification(photo_rows, grouped):
             for check in instance.get("candidate_checks", []):
                 checks_by_product[check["product"]].append(check["outcome"])
         for product, outcomes in sorted(checks_by_product.items()):
-            complete = len(outcomes) == len(instances) and all(not _is_miss(item) for item in instances)
+            complete = coverage[row["image_id"]]["complete"] and len(outcomes) == len(instances) and all(not _is_miss(item) for item in instances)
             outcome = ("confirmed" if "confirmed" in outcomes else "contradicted"
                        if complete and all(x == "contradicted" for x in outcomes)
                        else "insufficient_evidence")
@@ -109,6 +111,7 @@ def _verification(photo_rows, grouped):
             pairs.append({"image_id": row["image_id"], "expected_product": product,
                           "source_positive": positive, "outcome": outcome,
                           "checked_instance_count": len(outcomes), "result_instance_count": len(instances),
+                          "detected_instance_count": coverage[row["image_id"]]["detected_instance_count"],
                           "complete_instance_coverage": complete})
     result = {key: counts[key] for key in ("true_accept", "false_accept", "true_reject", "false_reject", "positive_abstention", "negative_abstention")}
     positive = result["true_accept"] + result["false_reject"] + result["positive_abstention"]
@@ -127,7 +130,7 @@ def _verification(photo_rows, grouped):
     return result
 
 
-def evaluate(rows, results, catalogue_order):
+def evaluate(rows, results, catalogue_order, detections=None):
     """Keep the full labelled denominator for every observed model/variant group."""
     catalogue = set(catalogue_order)
     if not catalogue or len(catalogue) != len(catalogue_order):
@@ -143,6 +146,17 @@ def evaluate(rows, results, catalogue_order):
             raise ValueError("Source labels must be nonempty and unique")
         if row["evaluation_role"] == "labelled_single" and len(row["labels"]) != 1:
             raise ValueError("Single-photo rows must have exactly one source label")
+    detected_ids = {}
+    if detections is not None:
+        if not isinstance(detections, dict):
+            raise ValueError("Detections must map image IDs to object lists")
+        for image_id, objects in detections.items():
+            if not isinstance(objects, list):
+                raise ValueError("Each detection entry must be a list")
+            ids = [obj.get("instance_id") for obj in objects if isinstance(obj, dict)]
+            if len(ids) != len(objects) or any(not isinstance(i, str) or i in MISS_IDS for i in ids) or len(set(ids)) != len(ids):
+                raise ValueError("Detected instance IDs must be nonempty and unique within each photo")
+            detected_ids[image_id] = set(ids)
     singles = [row for row in rows if row["evaluation_role"] == "labelled_single"]
     multis = [row for row in rows if row["evaluation_role"] == "labelled_multi"]
     groups = defaultdict(lambda: defaultdict(list))
@@ -169,21 +183,38 @@ def evaluate(rows, results, catalogue_order):
             if check.get("product") not in supplied or check.get("outcome") not in OUTCOMES or check["product"] in checked:
                 raise ValueError("Candidate checks must be unique, valid and actually supplied")
             checked.add(check["product"])
+        if item["image_id"] in detected_ids and not _is_miss(item) and item["instance_id"] not in detected_ids[item["image_id"]]:
+            raise ValueError("Result instance does not appear in its detection record")
         groups[(item["model"], item["variant"])][item["image_id"]].append(item)
     output = {"labelled_photo_count": len(rows), "single_photo_count": len(singles), "multi_photo_count": len(multis),
-              "ignored_image_ids": sorted(ignored), "groups": []}
+              "ignored_image_ids": sorted(ignored), "detection_manifest_supplied": detections is not None, "groups": []}
     for (model, variant), grouped in sorted(groups.items()):
+        coverage = {}
+        for row in rows:
+            image_id = row["image_id"]
+            saved = {item["instance_id"] for item in grouped.get(image_id, []) if not _is_miss(item)}
+            expected = detected_ids.get(image_id, saved)
+            missing = sorted(expected - saved)
+            detection_record_present = detections is None or image_id in detected_ids
+            coverage[image_id] = {"complete": image_id in grouped and not missing and detection_record_present,
+                                  "missing_instance_result_ids": missing,
+                                  "detection_record_present": detection_record_present,
+                                  "detection_empty": image_id in detected_ids and not expected,
+                                  "detected_instance_count": len(expected)}
         per_photo = []
         confusions = Counter()
         for row in singles:
-            decision = _aggregate(grouped.get(row["image_id"], []))
+            photo_coverage = coverage[row["image_id"]]
+            decision = _aggregate(grouped.get(row["image_id"], []), photo_coverage["complete"], photo_coverage["detection_empty"])
             label = row["labels"][0]
             in_catalogue = label in catalogue
             correct = (decision["status"] == "match" and decision["product"] == label or
                        decision["status"] == "not_in_catalogue" and not in_catalogue)
             per_photo.append({**decision, "image_id": row["image_id"], "source_label": label,
                               "in_catalogue": in_catalogue, "correct": correct,
-                              "result_present": row["image_id"] in grouped})
+                              "result_present": row["image_id"] in grouped,
+                              "result_complete": photo_coverage["complete"],
+                              "missing_instance_result_ids": photo_coverage["missing_instance_result_ids"]})
             confusions[(label, decision["product"] or decision["status"])] += 1
         n = len(singles)
         accepted = [x for x in per_photo if x["status"] == "match"]
@@ -215,13 +246,16 @@ def evaluate(rows, results, catalogue_order):
             decisions = [_decision(item["decision"]) for item in instances]
             predicted = sorted({item["product"] for item in decisions if item["status"] == "match"})
             expected = sorted(set(row["labels"]) & catalogue)
-            unresolved = not instances or any(_is_miss(x) or x["decision"]["status"] == "not_sure" for x in instances)
+            photo_coverage = coverage[row["image_id"]]
+            unresolved = not photo_coverage["complete"] or photo_coverage["detection_empty"] or any(_is_miss(x) or x["decision"]["status"] == "not_sure" for x in instances)
             outside = sum(x["status"] == "not_in_catalogue" for x in decisions)
             multi_results.append({"image_id": row["image_id"], "expected_identity_set": expected,
                                   "predicted_identity_set": predicted,
                                   "identity_set_exact": predicted == expected,
                                   "correct_resolved_identity_set": predicted == expected and not unresolved and not outside,
                                   "unresolved": unresolved, "outside_instance_count": outside,
+                                  "result_complete": photo_coverage["complete"],
+                                  "missing_instance_result_ids": photo_coverage["missing_instance_result_ids"],
                                   "identity_to_box_accuracy": None,
                                   "scope": "Photo identity set only; the source does not assign model identity to a box."})
         retrieval_rows = []
@@ -240,19 +274,30 @@ def evaluate(rows, results, catalogue_order):
         detection_rows = []
         for row in rows:
             instances = grouped.get(row["image_id"], [])
-            count = sum(not _is_miss(item) for item in instances)
+            photo_coverage = coverage[row["image_id"]]
+            count = photo_coverage["detected_instance_count"]
             expected_count = len(row["labels"])
             detection_rows.append({"image_id": row["image_id"], "source_identity_count": expected_count,
                                    "detected_instance_count": count, "result_missing": not instances,
-                                   "explicit_detection_miss": any(_is_miss(item) for item in instances),
+                                   "explicit_detection_miss": photo_coverage["detection_empty"] or any(_is_miss(item) for item in instances),
+                                   "missing_instance_result_ids": photo_coverage["missing_instance_result_ids"],
+                                   "detection_record_present": photo_coverage["detection_record_present"],
                                    "instance_count_deficit": max(0, expected_count - count)})
         saved_count = len(grouped)
         missing_ids = [row["image_id"] for row in rows if row["image_id"] not in grouped]
+        missing_instance_results = [{"image_id": image_id, "instance_id": instance_id}
+                                    for image_id, entry in coverage.items() for instance_id in entry["missing_instance_result_ids"]]
+        complete_photo_count = sum(entry["complete"] for entry in coverage.values())
         observed_singles = [x for x in per_photo if x["result_present"]]
         output["groups"].append({"model": model, "variant": variant, "metrics": metrics,
                                   "saved_photo_count": saved_count, "missing_result_photo_count": len(missing_ids),
                                   "missing_result_image_ids": missing_ids,
-                                  "subset_warning": None if saved_count == len(rows) else "Incomplete model/variant coverage. Missing photos remain not sure in full-set metrics; observed-subset accuracy is not a full-set comparison.",
+                                  "complete_photo_count": complete_photo_count,
+                                  "missing_instance_result_count": len(missing_instance_results),
+                                  "missing_instance_results": missing_instance_results,
+                                  "missing_instance_result_ids": [x["instance_id"] for x in missing_instance_results],
+                                  "missing_detection_record_photo_count": sum(not x["detection_record_present"] for x in coverage.values()),
+                                  "subset_warning": None if complete_photo_count == len(rows) else "Incomplete model/variant coverage. Photos with missing results or detection records remain not sure; observed-subset accuracy is not a full-set comparison.",
                                   "observed_single_photo_count": len(observed_singles),
                                   "observed_subset_accuracy": _rate(sum(x["correct"] for x in observed_singles), len(observed_singles)),
                                   "per_photo": per_photo, "wrong_answers": wrong, "multi_photo_results": multi_results,
@@ -266,8 +311,8 @@ def evaluate(rows, results, catalogue_order):
                                                 "missing_result_photo_count": len(missing_ids),
                                                 "instance_count_deficit": sum(x["instance_count_deficit"] for x in detection_rows),
                                                 "per_photo": detection_rows,
-                                                "scope": "Count deficit against source identities, including missing results. Correct localisation and duplicate detections require separate box review."},
-                                  "verification": _verification(rows, grouped)})
+                                                "scope": "Count deficit against source identities, using the detection record when supplied. Missing crop results are reported separately. Correct localisation and duplicate detections require separate box review."},
+                                  "verification": _verification(rows, grouped, coverage)})
     return output
 
 
@@ -278,7 +323,9 @@ def main():
     parser.add_argument("--output", type=Path, default=ROOT / "out/pipeline/summary.json")
     args = parser.parse_args()
     catalogue = list(json.loads((ROOT / "data/catalog_sources.json").read_text()))
-    summary = evaluate(json.loads(args.manifest.read_text()), json.loads(args.results.read_text()), catalogue)
+    detection_path = args.results.with_name("detections.json")
+    detections = json.loads(detection_path.read_text()) if detection_path.exists() else None
+    summary = evaluate(json.loads(args.manifest.read_text()), json.loads(args.results.read_text()), catalogue, detections)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps({"output": str(args.output), "groups": len(summary["groups"]),
