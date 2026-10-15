@@ -1,0 +1,51 @@
+{
+  "started_at_utc": "2026-10-15T14:58:39Z",
+  "settled_at_utc": "2026-10-15T15:25:52Z",
+  "status": "completed",
+  "models": [
+    "solhigh",
+    "flash37high"
+  ],
+  "photo_ids": [
+    "P026",
+    "P031",
+    "P007",
+    "P012",
+    "P013",
+    "P018",
+    "P019",
+    "P025",
+    "P001",
+    "P006",
+    "P032",
+    "P038",
+    "P039",
+    "P047",
+    "P055",
+    "P059"
+  ],
+  "reused_jobs": [
+    "check:flash37high:telling_details:P006_01",
+    "check:flash37high:telling_details:P007_01",
+    "check:flash37high:telling_details:P012_01",
+    "check:flash37high:telling_details:P013_01",
+    "check:flash37high:telling_details:P018_01",
+    "check:flash37high:telling_details:P019_01",
+    "check:flash37high:telling_details:P025_01",
+    "check:flash37high:telling_details:P026_01",
+    "check:flash37high:telling_details:P031_01",
+    "check:flash37high:telling_details:P031_02",
+    "check:flash37high:telling_details:P032_01",
+    "check:flash37high:telling_details:P038_01",
+    "check:flash37high:telling_details:P039_01"
+  ],
+  "rate_limit_policy": {
+    "rate_limit_retries": 3,
+    "request_interval_seconds": 15,
+    "max_retry_delay_seconds": 300
+  },
+  "workers": 1,
+  "new_ledger_accounted_usd": 0.5474991249999999,
+  "inflight_count": 0,
+  "error": null
+}

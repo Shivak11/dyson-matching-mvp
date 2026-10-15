@@ -1,1 +1,1 @@
-Original run paused after model-setting revision. Use run_high_reasoning.py to retain the combined spending limit.
+Comparison complete. Use run_slow_comparison.py without --run for combined offline reporting. Retain every previous ledger and reserve.

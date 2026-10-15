@@ -1,0 +1,157 @@
+{
+  "audit": "PASS",
+  "source": "independent_checks.json",
+  "scope": "15 single-family public review photos plus one separately scored two-family photo. Development data; client-store accuracy is untested.",
+  "scoreboard": [
+    {
+      "model": "flash37high",
+      "single_photos": 15,
+      "completed_single_photos": 15,
+      "correct": 11,
+      "wrong": 1,
+      "confidently_wrong": 1,
+      "not_sure": 3,
+      "cost_per_completed_original_photo_inr": 1.3792067998681052,
+      "cost_photo_denominator": 16,
+      "cost_includes_old_failed_attempt_reserve": true,
+      "wrong_answers": [
+        {
+          "image_id": "P006",
+          "source_label": "dyson_v8_absolute",
+          "result_complete": true,
+          "correct": false,
+          "status": "not_in_catalogue",
+          "product": null,
+          "confidence": 95
+        }
+      ]
+    },
+    {
+      "model": "solhigh",
+      "single_photos": 15,
+      "completed_single_photos": 15,
+      "correct": 6,
+      "wrong": 1,
+      "confidently_wrong": 1,
+      "not_sure": 8,
+      "cost_per_completed_original_photo_inr": 3.2075369601147283,
+      "cost_photo_denominator": 16,
+      "cost_includes_old_failed_attempt_reserve": false,
+      "wrong_answers": [
+        {
+          "image_id": "P025",
+          "source_label": "dyson_v16_piston_animal",
+          "result_complete": true,
+          "correct": false,
+          "status": "not_in_catalogue",
+          "product": null,
+          "confidence": 95
+        }
+      ]
+    },
+    {
+      "model": "flash37high+solhigh",
+      "single_photos": 15,
+      "completed_single_photos": 15,
+      "correct": 6,
+      "wrong": 0,
+      "confidently_wrong": 0,
+      "not_sure": 9,
+      "cost_per_completed_original_photo_inr": 4.429542852341308,
+      "cost_photo_denominator": 16,
+      "cost_includes_old_failed_attempt_reserve": true,
+      "wrong_answers": []
+    }
+  ],
+  "two_family_photo": {
+    "flash37high": {
+      "result_complete": true,
+      "expected_identity_set": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "predicted_identity_set": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "correct_resolved_identity_set": true,
+      "crop_decisions": [
+        {
+          "status": "match",
+          "product": "dyson_v12_detect_slim",
+          "confidence": 98
+        },
+        {
+          "status": "match",
+          "product": "dyson_v15_detect",
+          "confidence": 98
+        }
+      ],
+      "scope": "Identity set only; no source-backed per-box model labels."
+    },
+    "solhigh": {
+      "result_complete": true,
+      "expected_identity_set": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "predicted_identity_set": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "correct_resolved_identity_set": true,
+      "crop_decisions": [
+        {
+          "status": "match",
+          "product": "dyson_v12_detect_slim",
+          "confidence": 97
+        },
+        {
+          "status": "match",
+          "product": "dyson_v15_detect",
+          "confidence": 94
+        }
+      ],
+      "scope": "Identity set only; no source-backed per-box model labels."
+    },
+    "flash37high+solhigh": {
+      "result_complete": true,
+      "expected_identity_set": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "predicted_identity_set": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "correct_resolved_identity_set": true,
+      "crop_decisions": [
+        {
+          "status": "match",
+          "product": "dyson_v12_detect_slim",
+          "confidence": 97
+        },
+        {
+          "status": "match",
+          "product": "dyson_v15_detect",
+          "confidence": 94
+        }
+      ],
+      "scope": "Identity set only; no source-backed per-box model labels."
+    }
+  },
+  "new_call_count": 23,
+  "reused_successful_gemini_checks": 13,
+  "new_api_errors": 0,
+  "new_cost_inr": 52.09839306631309,
+  "stage_accounted_cost_inr": 242.79772755780837,
+  "stage_guard_accounted_inr": 255.15478610000014,
+  "stage_ceiling_inr": 400,
+  "old_failed_call_reserve_inr": 7.844745915140689,
+  "success_only_pipeline_cost_per_photo_inr": {
+    "flash37high": 0.8889101801718123,
+    "solhigh": 3.2075369601147283,
+    "flash37high+solhigh": 3.939246232645015
+  },
+  "offline_tests_passed": 75
+}

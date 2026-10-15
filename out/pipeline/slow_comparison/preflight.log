@@ -1,0 +1,2 @@
+{"stage": "check", "model": "solhigh", "variant": "telling_details", "instance_id": "P026_01", "decision": "match"}
+{"status": "completed", "stage_cost_inr": 193.1245066699677, "guard_accounted_inr": 202.9534736, "stage_ceiling_inr": 400}

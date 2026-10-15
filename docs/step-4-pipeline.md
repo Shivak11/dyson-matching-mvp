@@ -1,12 +1,12 @@
 # Step 4: bundled matching experiment
 
-Status: step 4 is incomplete. The requested high-reasoning comparison stopped after an upstream Gemini rate-limit error. Partial results and all spending are saved.
+Status: the requested slow Gemini 3.7 Flash high versus GPT-6.1 Sol high comparison is complete. The final results are in the completed slow comparison section below. The earlier stopping results remain as historical evidence.
 
 The approved stage ceiling is INR 400, within INR 2,000 overall. Previous spend and unknown-usage reserves total INR 42.68. The guard uses INR 100 per USD; reporting uses the frozen baseline exchange rate of 95.15703439035285. Configuration and all requests are saved under out/pipeline/.
 
 The shared pipeline uses Gemini 3.8 Flash to locate each cleaner, 6% crop padding, original scene context, 18 selected manufacturer reference views and one Gemini Embedding 2 vector per image. Each crop retrieves three product families by its best matching reference view. The checker sees the crop, scene and two references for each candidate. Qwen3.7 Flash completed checks with and without manufacturer-reference detail notes. The owner stopped Gemma; its calls remain in spending but are excluded from comparisons. Independent model agreement is evaluated from saved answers. Automatic catalogue matches require confidence at least 90 and consistent candidate decisions. Confidence is not a measured probability.
 
-The earlier higher-model run stopped on the owner's new model instruction. Gemini 4 Argon completed 32 crop checks on 31 photos; Gemini 3.1 Pro Preview, GPT-5.5 and GPT-6.1 Sol each completed one preflight. Those partial runs remain in the evidence and spending records. The current comparison uses Qwen 3.8 Max, Gemini 3.7 Flash high and GPT-6.1 Sol max on the same fixed 16-photo subset and the telling-details bundle. The subset rule is the first and last single photo for each catalogue family, the first V11, Gen5detect and Shark photo, and the source-labelled pair. This rule was saved before new comparison results. Direct model rankings must use the same subset.
+The earlier higher-model run stopped on the owner's new model instruction. Gemini 4 Argon completed 32 crop checks on 31 photos; Gemini 3.1 Pro Preview, GPT-5.5 and GPT-6.1 Sol each completed one preflight. Those partial runs remain in the evidence and spending records. That comparison used Qwen 3.8 Max, Gemini 3.7 Flash high and GPT-6.1 Sol max on the same fixed 16-photo subset and the telling-details bundle. The subset rule is the first and last single photo for each catalogue family, the first V11, Gen5detect and Shark photo, and the source-labelled pair. This rule was saved before new comparison results. Direct model rankings must use the same subset.
 
 A local photo can be passed with --photo PATH --run. --expected-product CATALOGUE_ID ensures that product is supplied even if retrieval omitted it. Upload results stay outside benchmark accuracy. The browser upload screen and client HTML report belong to the remaining delivery work.
 
@@ -56,8 +56,40 @@ The failing request was check:flash37high:telling_details:P001_01. OpenRouter re
 
 Combined stage spending and the failed-call reserve total INR 190.70 at the report exchange rate. This includes an INR 7.84 reserve for the failed request because no billed usage was returned. At the conservative budgeting rate, INR 200.40 of the INR 400 stage limit is accounted for. All stopped-model calls, including Gemma, remain in this total. Previous-stage spending/reserves remain separate at INR 42.68 under the budget guard. The failed call has no score.
 
-The remaining work is to record a deliberate retry at lower concurrency, finish Gemini and Sol on the same subset, compare complete model pairs, and test the known-product local-photo path. The current transport rejects automatic retries, so simply rerunning the command will not repeat the failed call. Stop before step 5; the client HTML report and browser upload screen have not been built.
+At that stop, the remaining work was to record a deliberate retry at lower concurrency, finish Gemini and Sol on the same subset, compare complete model pairs, and test the known-product local-photo path. The transport then rejected automatic retries. The later authorised comparison below added a recorded retry path and completed both requested models. The client HTML report and browser upload screen have not been built.
 
 The final offline suite passed 55 tests. Candidate-verification scoring now excludes multiple-object and source-labelled multi-product photos because their per-object or complete-scene identities are not source-backed. P059 retains its separate photo identity-set score. Per-subset latency now uses only the same subset's calls. Source labels, model prompts and model decisions were not changed by those scoring corrections.
 
 An independent raw-response audit passed the partial stopping report: 354 distinct paid jobs with no duplicate paid requests, 89 reconstructed request hashes matching saved inputs, unchanged earlier ledger, and empty in-flight records. It separately reconciled correctness, source-label exclusions and costs. The receipt is out/pipeline/independent_checks.json.
+
+
+## Slow Gemini and Sol High comparison
+
+The owner authorised a new comparison on the same fixed 16 photos. GPT-6.1 Sol now uses high reasoning under the separate solhigh key. Gemini 3.7 Flash high keeps its exact pinned request settings; 13 saved responses were independently matched by request hash. Five Gemini crop checks remain. No photos, references, candidates, comparison notes, source labels or acceptance thresholds change.
+
+The new transport uses one request at a time and a 15-second pause after each response. Only HTTP 429 is retried, with at most three additional attempts, exponential waits, bounded jitter and Retry-After support. Every failed attempt retains its cost or unknown-usage reserve. Both previous ledgers are immutable. The new allowance is INR 199.5951264 at the guard exchange rate, after accounting for INR 200.4048736 already spent or reserved. The stage ceiling remains INR 400. The Sol High preflight succeeded and the complete comparison subsequently finished. All 75 offline tests and the independent pre-run request/budget review passed.
+
+
+## Completed slow comparison
+
+Both requested models completed all 16 photos and 18 crop checks. The table scores the same 15 photos with one source-labelled product family. The two-product photo is scored separately. Every automatic answer is compared with the source label, and missing or unclear evidence remains not sure.
+
+| Model or decision rule | Correct out of 15 | Confidently wrong | Not sure | Cost per original photo |
+|---|---:|---:|---:|---:|
+| Gemini 3.7 Flash high | 11 | 1 | 3 | INR 1.38 |
+| GPT-6.1 Sol high | 6 | 1 | 8 | INR 3.21 |
+| Require both to agree | 6 | 0 | 9 | INR 4.43 |
+
+Costs cover all 16 original photos, including both crops of the two-product photo. Shared detection and retrieval are counted once per approach. Gemini and the agreement rule include the earlier failed-call reserve. Excluding that INR 7.84 reserve, successful-call pipeline costs are INR 0.89, INR 3.21 and INR 3.94 per photo respectively. One-time catalogue embeddings remain separate.
+
+Gemini correctly matched eight catalogue photos and rejected all three non-catalogue photos. Its error remains P006: the source names Dyson V8 Absolute, but Gemini returned not_in_catalogue at confidence 95. Sol correctly matched four catalogue photos and rejected V11 and Shark. Its error is P025: the source names Dyson V16 Piston Animal, but Sol returned not_in_catalogue at confidence 95. Requiring agreement changed both errors to not sure. It also changed additional correct Gemini answers to not sure, leaving only six automatic answers on the 15 single-family photos.
+
+Both models, and their agreement, correctly returned the V12 and V15 identity set in P059. This proves only the source-labelled identity set for this photo; per-box model identity and general store-scene accuracy remain unmeasured.
+
+The new run made 23 paid requests: 18 Sol High checks and five Gemini checks. It reused 13 successful Gemini responses after exact request-hash checks. The previously failed Gemini P001 request succeeded on the first new attempt. No new HTTP 429 or other API error occurred, and no additional automatic retry or provider fallback was needed. Recorded pauses were approximately 15 seconds or longer between a response finishing and the next paid request. Some Gemini responses took several minutes.
+
+New calls cost INR 52.10. Total stage accounted cost is INR 242.80, including the earlier INR 7.84 unknown-usage reserve. The conservative guard accounts for INR 255.15 of the INR 400 ceiling. Both older ledgers are unchanged and all three in-flight files are empty. All 75 offline tests passed. The independent audit reconstructed 36 request hashes and raw answers, reconciled scores and costs, checked all 377 paid job IDs, and found no duplicate paid job or rebilled successful Gemini request. The audit source, receipt and compact scoreboard are in out/pipeline/slow_comparison/.
+
+Gemini returned more correct automatic answers on this development set at a lower measured cost. The agreement rule removed the observed confident errors while leaving nine photos unresolved. These results do not establish high accuracy on client store photos. The known-product local runtime, browser upload screen and client HTML report remain pending. Stop after presenting this comparison.
+
+No new Task Observer observation was logged: this change applied the existing requirements for recorded retries, cost accounting and exact-input verification. The task evidence is retained in this project; no wiki or QMD update was performed.
