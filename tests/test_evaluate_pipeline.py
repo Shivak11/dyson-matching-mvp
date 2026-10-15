@@ -64,6 +64,8 @@ class PipelineEvaluatorTests(unittest.TestCase):
         self.assertEqual(group["metrics"]["single_photo_count"], 0)
         self.assertTrue(multi["correct_resolved_identity_set"])
         self.assertIsNone(multi["identity_to_box_accuracy"])
+        self.assertEqual(group["verification"]["excluded_image_ids"], ["P059"])
+        self.assertEqual(group["verification"]["evaluated_pair_count"], 0)
         results.append(result("P059", "third", decision("not_sure")))
         multi = e.evaluate(rows, results, ["a", "b"])["groups"][0]["multi_photo_results"][0]
         self.assertTrue(multi["identity_set_exact"])
@@ -85,16 +87,34 @@ class PipelineEvaluatorTests(unittest.TestCase):
         self.assertAlmostEqual(verification["false_accept_rate_all_negative_pairs"], 1/3)
         self.assertEqual(verification["false_accept_rate_resolved_negative_pairs"], .5)
 
-    def test_unchecked_object_cannot_establish_photo_wide_contradiction(self):
+    def test_multiobject_backgrounds_are_excluded_from_candidate_verification(self):
+        rows = [source("background", ["a"]), source("single", ["a"]), source("outside", ["outside"])]
+        results = [result("background", "1", checks=[check("a", "contradicted"), check("b", "contradicted")]),
+                   result("background", "2", checks=[check("a", "contradicted"), check("b", "confirmed")]),
+                   result("single", checks=[check("a", "confirmed"), check("b", "contradicted")]),
+                   result("outside", checks=[check("a", "confirmed"), check("b", "contradicted")])]
+        detections = {"background": [{"instance_id": "1"}, {"instance_id": "2"}],
+                      "single": [{"instance_id": "1"}], "outside": [{"instance_id": "1"}]}
+        for detector_records in (None, detections):
+            group = e.evaluate(rows, results, ["a", "b"], detector_records)["groups"][0]
+            verification = group["verification"]
+            self.assertEqual(verification["evaluated_pair_count"], 4)
+            self.assertEqual(verification["true_accept"], 1)
+            self.assertEqual(verification["false_accept"], 1)
+            self.assertEqual(verification["true_reject"], 2)
+            self.assertEqual(verification["false_reject"], 0)
+            self.assertEqual(verification["excluded_image_ids"], ["background"])
+            self.assertTrue(verification["exclusion_reason"])
+            self.assertNotIn("background", {pair["image_id"] for pair in verification["pairs"]})
+            self.assertEqual(group["metrics"]["single_photo_count"], 3)
+            self.assertEqual(group["metrics"]["accepted_count"], 3)
+
+    def test_single_object_with_missing_detection_record_cannot_establish_contradiction(self):
         rows = [source("one", ["a"])]
-        first = result(checks=[check("a", "contradicted")])
-        second = result(instance_id="2", checks=[check("b", "contradicted")])
-        verification = e.evaluate(rows, [first, second], ["a", "b"])["groups"][0]["verification"]
+        verification = e.evaluate(rows, [result(checks=[check("a", "contradicted")])], ["a", "b"], {})["groups"][0]["verification"]
         self.assertEqual(verification["positive_abstention"], 1)
-        self.assertEqual(verification["negative_abstention"], 1)
-        second["candidate_checks"].append(check("a", "confirmed"))
-        verification = e.evaluate(rows, [first, second], ["a", "b"])["groups"][0]["verification"]
-        self.assertEqual(verification["true_accept"], 1)
+        self.assertEqual(verification["false_reject"], 0)
+        self.assertEqual(verification["excluded_image_ids"], [])
 
     def test_combine_requires_independent_agreement_and_keeps_lower_confidence(self):
         agreed = e.combine_decisions(decision(confidence=99), decision(confidence=81))
@@ -151,8 +171,8 @@ class PipelineEvaluatorTests(unittest.TestCase):
         self.assertFalse(group["multi_photo_results"][0]["result_complete"])
         self.assertFalse(group["multi_photo_results"][0]["correct_resolved_identity_set"])
         self.assertEqual(group["verification"]["false_reject"], 0)
-        self.assertEqual(group["verification"]["positive_abstention"], 2)
-        self.assertEqual(group["verification"]["true_accept"], 1)
+        self.assertEqual(group["verification"]["evaluated_pair_count"], 0)
+        self.assertEqual(group["verification"]["excluded_image_ids"], ["multi", "single"])
         self.assertEqual(group["detection"]["per_photo"][0]["detected_instance_count"], 2)
 
     def test_missing_third_object_prevents_resolved_multi_set_even_when_labels_match(self):

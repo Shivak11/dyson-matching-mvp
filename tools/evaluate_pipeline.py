@@ -93,7 +93,11 @@ def _aggregate(instances, complete=True, detection_empty=False):
 def _verification(photo_rows, grouped, coverage):
     counts = Counter()
     pairs = []
+    excluded = []
     for row in photo_rows:
+        if row["evaluation_role"] == "labelled_multi" or coverage[row["image_id"]]["detected_instance_count"] > 1:
+            excluded.append(row["image_id"])
+            continue
         instances = grouped.get(row["image_id"], [])
         checks_by_product = defaultdict(list)
         for instance in instances:
@@ -126,7 +130,9 @@ def _verification(photo_rows, grouped, coverage):
                    "false_accept_rate_resolved_negative_pairs": _rate(result["false_accept"], negative_resolved),
                    "false_reject_rate_resolved_positive_pairs": _rate(result["false_reject"], positive_resolved),
                    "pairs": pairs,
-                   "scope": "Only supplied, actually checked candidate-photo pairs. Unchecked candidates are excluded; incomplete instance coverage cannot establish contradiction."})
+                   "excluded_image_ids": sorted(excluded), "excluded_photo_count": len(excluded),
+                   "exclusion_reason": "Photos with multiple detected or source-labelled products lack source-backed identity for every object. Candidate verification excludes these photos, including P059.",
+                   "scope": "Only supplied, actually checked candidate-photo pairs on single-object photos. Unchecked candidates are excluded; incomplete instance coverage cannot establish contradiction."})
     return result
 
 
