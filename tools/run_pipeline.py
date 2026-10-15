@@ -98,9 +98,12 @@ def validate_result(result, candidates):
     checks=result['candidate_checks']
     if len(checks)!=len(candidates) or sorted(x['product'] for x in checks)!=sorted(candidates): raise ValueError('Missing or duplicate candidate check')
     for c in checks:
+        if c.get('outcome')=='not_sure':
+            c['outcome']='insufficient_evidence'; repairs.append('candidate outcome: not_sure means insufficient_evidence')
         if c['outcome'] not in ('confirmed','contradicted','insufficient_evidence') or not isinstance(c['evidence'],str) or not c['evidence'].strip(): raise ValueError('Invalid candidate outcome')
     if status=='match' and not any(c['product']==d['product'] and c['outcome']=='confirmed' for c in checks): raise ValueError('Match lacks confirmed check')
     if status!='not_sure' and not any(v.strip() for v in d['evidence']): raise ValueError('Resolved answer lacks evidence')
+    if repairs: result['format_repairs']=repairs
     return result
 
 
@@ -108,7 +111,7 @@ def gate_decision(result, threshold):
     result=json.loads(json.dumps(result))
     d=result['decision']
     confirmed=[c['product'] for c in result['candidate_checks'] if c['outcome']=='confirmed']
-    inconsistent=(d['status']=='match' and confirmed!=[d['product']]) or (d['status']=='not_in_catalogue' and bool(confirmed))
+    inconsistent=(d['status']=='match' and confirmed!=[d['product']]) or (d['status']=='not_in_catalogue' and any(c['outcome']!='contradicted' for c in result['candidate_checks']))
     low_confidence=d['status']=='match' and d['confidence']<threshold
     if inconsistent or low_confidence:
         d['raw_status']=d['status']; d['raw_product']=d['product']

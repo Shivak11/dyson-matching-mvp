@@ -45,6 +45,13 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(out['decision']['contradictions'],[])
         self.assertEqual(out['decision']['retake'],'')
         self.assertEqual(len(out['format_repairs']),2)
+    def test_candidate_not_sure_alias_and_outside_uncertainty(self):
+        raw=self.result();raw['decision'].update(status='not_in_catalogue',product=None,confidence=100)
+        raw['candidate_checks'][0]['outcome']='not_sure'
+        parsed=validate_result(raw,['a','b'])
+        self.assertEqual(parsed['candidate_checks'][0]['outcome'],'insufficient_evidence')
+        self.assertEqual(raw['candidate_checks'][0]['outcome'],'not_sure')
+        self.assertEqual(gate_decision(parsed,90)['decision']['status'],'not_sure')
     def test_conflicting_confirmations_cannot_be_accepted(self):
         raw=self.result();raw['decision']['confidence']=99
         raw['candidate_checks'][1]['outcome']='confirmed'
