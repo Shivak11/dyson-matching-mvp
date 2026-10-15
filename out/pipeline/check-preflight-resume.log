@@ -1,0 +1,6 @@
+{"stage": "check", "model": "qwen", "variant": "telling_details", "instance_id": "P001_01", "decision": "match"}
+{"stage": "check", "model": "sol", "variant": "telling_details", "instance_id": "P001_01", "decision": "not_sure"}
+{"stage": "check", "model": "gemma", "variant": "telling_details", "instance_id": "P001_01", "decision": "not_in_catalogue"}
+{"stage": "check", "model": "argon", "variant": "telling_details", "instance_id": "P001_01", "decision": "match"}
+{"stage": "check", "model": "pro31", "variant": "telling_details", "instance_id": "P001_01", "decision": "match"}
+{"stage": "check", "model": "gpt55", "variant": "telling_details", "instance_id": "P001_01", "decision": "not_sure"}

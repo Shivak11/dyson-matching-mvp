@@ -1,0 +1,1353 @@
+{
+  "P001": [
+    {
+      "box_2d": [
+        44,
+        213,
+        1000,
+        666
+      ],
+      "description": "Cordless stick vacuum cleaner with extension wand and roller head, held by a hand over a floor mat.",
+      "visibility": "whole_machine",
+      "instance_id": "P001_01",
+      "crop_file": "out/pipeline/crops/P001_01.jpg",
+      "crop_sha256": "2d80f18c488e4d9315e006a48a086f5be200e09d6d332999ba386c7f6c0a500f",
+      "pixel_box": [
+        222,
+        0,
+        832,
+        675
+      ]
+    }
+  ],
+  "P003": [
+    {
+      "box_2d": [
+        27,
+        0,
+        953,
+        960
+      ],
+      "visibility": "main_body",
+      "description": "Handheld cordless vacuum cleaner body with dust canister filled with debris and attached nozzle accessory",
+      "instance_id": "P003_01",
+      "crop_file": "out/pipeline/crops/P003_01.jpg",
+      "crop_sha256": "f7ae44ee7816544e526d25a1ae47fa4bc81e6cb36523a9066bcfba5fe8187c27",
+      "pixel_box": [
+        0,
+        0,
+        1200,
+        675
+      ]
+    }
+  ],
+  "P002": [
+    {
+      "box_2d": [
+        38,
+        280,
+        363,
+        649
+      ],
+      "visibility": "main_body",
+      "description": "cordless handheld vacuum cleaner body with dust canister and cyclone assembly",
+      "instance_id": "P002_01",
+      "crop_file": "out/pipeline/crops/P002_01.jpg",
+      "crop_sha256": "ce33d9ffccb194b27e9198d28efca4d9d76a61aedf6fbb01a1335ef58ee4a3c4",
+      "pixel_box": [
+        309,
+        12,
+        806,
+        259
+      ]
+    }
+  ],
+  "P004": [
+    {
+      "box_2d": [
+        51,
+        65,
+        966,
+        893
+      ],
+      "visibility": "whole_machine",
+      "description": "Handheld cordless vacuum cleaner with crevice tool attachment held in hand",
+      "instance_id": "P004_01",
+      "crop_file": "out/pipeline/crops/P004_01.jpg",
+      "crop_sha256": "78396b7ad0e7995ce3c1b7f8e0fd8b25d95e3998d9b5398b45ac368ee4127362",
+      "pixel_box": [
+        18,
+        0,
+        1132,
+        720
+      ]
+    }
+  ],
+  "P006": [
+    {
+      "box_2d": [
+        71,
+        78,
+        969,
+        936
+      ],
+      "visibility": "whole_machine",
+      "description": "cordless stick vacuum cleaner with orange wand and motorized cleaner head on tiled floor",
+      "instance_id": "P006_01",
+      "crop_file": "out/pipeline/crops/P006_01.jpg",
+      "crop_sha256": "d569beb62d028ac98c79653120afc66fa85a757aeae795336016163993fe8249",
+      "pixel_box": [
+        31,
+        12,
+        1185,
+        720
+      ]
+    }
+  ],
+  "P005": [
+    {
+      "box_2d": [
+        0,
+        0,
+        1000,
+        960
+      ],
+      "visibility": "main_body",
+      "description": "Partially visible main body of a handheld cordless vacuum cleaner being held by a hand, showing the clear dust bin, grey handle, and red trigger.",
+      "instance_id": "P005_01",
+      "crop_file": "out/pipeline/crops/P005_01.jpg",
+      "crop_sha256": "8e809663002f2e881c6ce57db1827a915c74c522de2f1fe15fe2bda2724107d7",
+      "pixel_box": [
+        0,
+        0,
+        1200,
+        720
+      ]
+    }
+  ],
+  "P009": [
+    {
+      "box_2d": [
+        232,
+        0,
+        1000,
+        755
+      ],
+      "visibility": "main_body",
+      "description": "Handheld cordless vacuum cleaner body with purple filter casing, gold cyclone assembly, clear dust canister, and grey handle being held by a hand.",
+      "instance_id": "P009_01",
+      "crop_file": "out/pipeline/crops/P009_01.jpg",
+      "crop_sha256": "e72ef35a20a4d10d3ccf3bb01d501585a57510dfe5121cfd91820647c9687544",
+      "pixel_box": [
+        0,
+        160,
+        1230,
+        863
+      ]
+    }
+  ],
+  "P007": [
+    {
+      "box_2d": [
+        0,
+        455,
+        996,
+        545
+      ],
+      "visibility": "whole_machine",
+      "description": "cordless stick vacuum cleaner standing upright between the couch and bookshelf",
+      "instance_id": "P007_01",
+      "crop_file": "out/pipeline/crops/P007_01.jpg",
+      "crop_sha256": "eb2d7fa73b7c509a332fefd38669d805008524b91a5c235f8137661e0df7b2c1",
+      "pixel_box": [
+        690,
+        0,
+        846,
+        658
+      ]
+    }
+  ],
+  "P008": [
+    {
+      "box_2d": [
+        51,
+        346,
+        1000,
+        638
+      ],
+      "visibility": "whole_machine",
+      "description": "Cordless handheld vacuum cleaner with purple filter, gold cyclone body, transparent dustbin, and attached cleaner head",
+      "instance_id": "P008_01",
+      "crop_file": "out/pipeline/crops/P008_01.jpg",
+      "crop_sha256": "6661bc61b4bfb1abde1d2b05eb449cf9ad59712194240d79f4c36af3c0424cc4",
+      "pixel_box": [
+        504,
+        0,
+        1007,
+        863
+      ]
+    }
+  ],
+  "P010": [
+    {
+      "box_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "visibility": "main_body",
+      "description": "cordless handheld vacuum cleaner body with clear dustbin, cyclone assembly, and handle held by a hand",
+      "instance_id": "P010_01",
+      "crop_file": "out/pipeline/crops/P010_01.jpg",
+      "crop_sha256": "0747c54b2dd1233e75e242eb080a667acecd1ac633ccdc82cd448f2adc16ec23",
+      "pixel_box": [
+        0,
+        0,
+        1536,
+        864
+      ]
+    }
+  ],
+  "P011": [
+    {
+      "box_2d": [
+        71,
+        287,
+        868,
+        715
+      ],
+      "visibility": "main_body",
+      "description": "Rear view of cordless vacuum cleaner main body with round LCD screen and purple filter ring",
+      "instance_id": "P011_01",
+      "crop_file": "out/pipeline/crops/P011_01.jpg",
+      "crop_sha256": "a71ae57f4040d31d1556d1ea3ed07b6a3a252135a27837500ec3c3e88a984b31",
+      "pixel_box": [
+        401,
+        20,
+        1138,
+        792
+      ]
+    }
+  ],
+  "P012": [
+    {
+      "box_2d": [
+        0,
+        332,
+        731,
+        737
+      ],
+      "visibility": "part_only",
+      "description": "motorized brush head attached to base of vacuum cleaner",
+      "instance_id": "P012_01",
+      "crop_file": "out/pipeline/crops/P012_01.jpg",
+      "crop_sha256": "e24481abfa2ac896a0cd38326cd8cf8377aa1d0b488925c95e7d362dc153e35d",
+      "pixel_box": [
+        472,
+        0,
+        1170,
+        669
+      ]
+    }
+  ],
+  "P013": [
+    {
+      "box_2d": [
+        121,
+        298,
+        897,
+        622
+      ],
+      "visibility": "whole_machine",
+      "description": "Cordless stick vacuum cleaner being held by a person",
+      "instance_id": "P013_01",
+      "crop_file": "out/pipeline/crops/P013_01.jpg",
+      "crop_sha256": "efc5c89e88c0c4011f987a10ce73bce48a8d3afc0c0782cfeacda0d85e47ef2b",
+      "pixel_box": [
+        334,
+        50,
+        770,
+        636
+      ]
+    }
+  ],
+  "P015": [
+    {
+      "box_2d": [
+        0,
+        0,
+        1000,
+        969
+      ],
+      "visibility": "main_body",
+      "description": "Handheld section of a cordless stick vacuum cleaner with purple top, grey handle, red trigger, and gold cyclones",
+      "instance_id": "P015_01",
+      "crop_file": "out/pipeline/crops/P015_01.jpg",
+      "crop_sha256": "d7773f5f06462ca75da73b0d93321d80bf962ca737cb7002e8714a6a77eeaf1b",
+      "pixel_box": [
+        0,
+        0,
+        830,
+        466
+      ]
+    }
+  ],
+  "P014": [
+    {
+      "box_2d": [
+        210,
+        237,
+        906,
+        608
+      ],
+      "visibility": "whole_machine",
+      "description": "cordless stick vacuum cleaner with an illuminated cleaning head",
+      "instance_id": "P014_01",
+      "crop_file": "out/pipeline/crops/P014_01.jpg",
+      "crop_sha256": "9017c42bf27e3cb6ee7a973ba6b315a7fc13b0e56d79205477a9e452fbe8a037",
+      "pixel_box": [
+        178,
+        78,
+        524,
+        442
+      ]
+    }
+  ],
+  "P017": [
+    {
+      "box_2d": [
+        18,
+        439,
+        936,
+        552
+      ],
+      "visibility": "whole_machine",
+      "description": "cordless stick vacuum cleaner mounted upright with wand and cleaner head attached",
+      "instance_id": "P017_01",
+      "crop_file": "out/pipeline/crops/P017_01.jpg",
+      "crop_sha256": "f4421e6f24552597237da257b82319556dd8b3d5d03355ee7f2b9a6261b50f77",
+      "pixel_box": [
+        442,
+        0,
+        573,
+        571
+      ]
+    }
+  ],
+  "P018": [
+    {
+      "box_2d": [
+        725,
+        467,
+        1000,
+        658
+      ],
+      "visibility": "part_only",
+      "description": "cleaning head of a vacuum cleaner attached to wand",
+      "instance_id": "P018_01",
+      "crop_file": "out/pipeline/crops/P018_01.jpg",
+      "crop_sha256": "2fa544a956dc637ebe95a6eda40ec30f2ecb528ca249785be09ab97f044fd2a4",
+      "pixel_box": [
+        378,
+        330,
+        556,
+        466
+      ]
+    }
+  ],
+  "P016": [
+    {
+      "box_2d": [
+        78,
+        347,
+        915,
+        521
+      ],
+      "visibility": "whole_machine",
+      "description": "Cordless stick vacuum cleaner being used on carpeted stairs",
+      "instance_id": "P016_01",
+      "crop_file": "out/pipeline/crops/P016_01.jpg",
+      "crop_sha256": "18b7fe3b93feea7b01850cb4383d312bfc2f4f8e4a4fb7bb13e34044ab5a017d",
+      "pixel_box": [
+        279,
+        12,
+        442,
+        450
+      ]
+    }
+  ],
+  "P021": [
+    {
+      "box_2d": [
+        46,
+        178,
+        968,
+        894
+      ],
+      "visibility": "main_body",
+      "description": "handheld cordless vacuum cleaner body with dustbin flap opened",
+      "instance_id": "P021_01",
+      "crop_file": "out/pipeline/crops/P021_01.jpg",
+      "crop_sha256": "741a1e1406b2550f223610f4be8bcb0bc83c39de2bd71327e23b872f94174987",
+      "pixel_box": [
+        162,
+        0,
+        1125,
+        675
+      ]
+    }
+  ],
+  "P019": [
+    {
+      "box_2d": [
+        10,
+        153,
+        989,
+        834
+      ],
+      "visibility": "whole_machine",
+      "description": "Cordless stick vacuum cleaner being held by a user, with orange wand, motorized roller cleaner head, transparent dustbin, and cyclone assembly.",
+      "instance_id": "P019_01",
+      "crop_file": "out/pipeline/crops/P019_01.jpg",
+      "crop_sha256": "f965b544efda01c71cfea27c327c758f7098f79c7c64e15de6830c7a2f4cedab",
+      "pixel_box": [
+        134,
+        0,
+        1050,
+        514
+      ]
+    }
+  ],
+  "P020": [
+    {
+      "box_2d": [
+        0,
+        241,
+        922,
+        786
+      ],
+      "visibility": "part_only",
+      "description": "cleaning head and lower wand of a cordless stick vacuum cleaner on carpet",
+      "instance_id": "P020_01",
+      "crop_file": "out/pipeline/crops/P020_01.jpg",
+      "crop_sha256": "92589ab42a028985df4c0bbbf5f541537c57b0f94937475ff0ad61976a49fd8f",
+      "pixel_box": [
+        249,
+        0,
+        983,
+        660
+      ]
+    }
+  ],
+  "P022": [
+    {
+      "box_2d": [
+        79,
+        155,
+        1000,
+        755
+      ],
+      "visibility": "part_only",
+      "description": "Close-up view of the rear display and filter assembly of a cordless stick vacuum cleaner",
+      "instance_id": "P022_01",
+      "crop_file": "out/pipeline/crops/P022_01.jpg",
+      "crop_sha256": "89382a533e8005dcf14fa0a662b6394fe4a8ab10b30e7a2d63978c2e6d1cd1ad",
+      "pixel_box": [
+        142,
+        16,
+        950,
+        675
+      ]
+    }
+  ],
+  "P023": [
+    {
+      "box_2d": [
+        73,
+        331,
+        824,
+        757
+      ],
+      "visibility": "whole_machine",
+      "description": "Cordless handheld vacuum cleaner fitted with a crevice nozzle attachment",
+      "instance_id": "P023_01",
+      "crop_file": "out/pipeline/crops/P023_01.jpg",
+      "crop_sha256": "2e4ce965c52faf8c2f098cbdd26d99268d013e86ed80eb65f81bc7e6aa2bbe5a",
+      "pixel_box": [
+        366,
+        18,
+        940,
+        587
+      ]
+    }
+  ],
+  "P024": [
+    {
+      "box_2d": [
+        483,
+        310,
+        1000,
+        649
+      ],
+      "visibility": "part_only",
+      "description": "Cleaner head of a vacuum cleaner illuminating the carpet with green light",
+      "instance_id": "P024_01",
+      "crop_file": "out/pipeline/crops/P024_01.jpg",
+      "crop_sha256": "04a7461dcd52e93e41f6ac588f41044254f4544b02071943c2d473953d1efc6c",
+      "pixel_box": [
+        444,
+        390,
+        1029,
+        864
+      ]
+    }
+  ],
+  "P026": [
+    {
+      "box_2d": [
+        0,
+        190,
+        1000,
+        730
+      ],
+      "visibility": "whole_machine",
+      "description": "Canister vacuum cleaner with ball-shaped body, orange cyclones, upright wand, attached cleaner head, and flexible hose",
+      "instance_id": "P026_01",
+      "crop_file": "out/pipeline/crops/P026_01.jpg",
+      "crop_sha256": "dd19a48c6f1cf5fca5c77e81192d2267d2397416fa44fba7aa7e22206376df99",
+      "pixel_box": [
+        189,
+        0,
+        915,
+        675
+      ]
+    }
+  ],
+  "P027": [
+    {
+      "box_2d": [
+        0,
+        230,
+        942,
+        810
+      ],
+      "visibility": "main_body",
+      "description": "Canister vacuum cleaner with spherical grey body, yellow cyclone assembly, flexible hose, extension wand, and cleaner head resting on a rug.",
+      "instance_id": "P027_01",
+      "crop_file": "out/pipeline/crops/P027_01.jpg",
+      "crop_sha256": "c39d87b90d4c501c7f10a485b7dd11dd7b2513b77f783f94646efc159cfe33d5",
+      "pixel_box": [
+        199,
+        0,
+        866,
+        576
+      ]
+    }
+  ],
+  "P025": [
+    {
+      "box_2d": [
+        46,
+        95,
+        951,
+        882
+      ],
+      "visibility": "whole_machine",
+      "description": "Cordless handheld stick vacuum cleaner with blue top, gold cyclone cones, clear dust canister, handle, battery pack, wand extension, and attached cleaner head.",
+      "instance_id": "P025_01",
+      "crop_file": "out/pipeline/crops/P025_01.jpg",
+      "crop_sha256": "1f599304128ef10f58bce01bd068d24054adaf36461e152188f841d2adaae258",
+      "pixel_box": [
+        73,
+        0,
+        1428,
+        864
+      ]
+    }
+  ],
+  "P030": [
+    {
+      "box_2d": [
+        0,
+        0,
+        995,
+        834
+      ],
+      "visibility": "main_body",
+      "description": "Canister vacuum cleaner seen from top view showing power button, cyclone assembly, and filter compartment",
+      "instance_id": "P030_01",
+      "crop_file": "out/pipeline/crops/P030_01.jpg",
+      "crop_sha256": "818b7316f90faf1bf7bceecb44e2e498a3cdc5c94313c35994d082d3e4c9adb9",
+      "pixel_box": [
+        0,
+        0,
+        734,
+        467
+      ]
+    }
+  ],
+  "P029": [
+    {
+      "box_2d": [
+        0,
+        208,
+        698,
+        804
+      ],
+      "visibility": "part_only",
+      "description": "Vacuum cleaner motorized floorhead with hair tangled around the roller brush",
+      "instance_id": "P029_01",
+      "crop_file": "out/pipeline/crops/P029_01.jpg",
+      "crop_sha256": "02df58a82542c346932519d95843b2c547b9ae4ee21d5eebf632dda0af6c3419",
+      "pixel_box": [
+        142,
+        0,
+        698,
+        346
+      ]
+    }
+  ],
+  "P028": [
+    {
+      "box_2d": [
+        0,
+        48,
+        680,
+        520
+      ],
+      "visibility": "part_only",
+      "description": "cleaning head and lower wand of a vacuum cleaner",
+      "instance_id": "P028_01",
+      "crop_file": "out/pipeline/crops/P028_01.jpg",
+      "crop_sha256": "eb3f3e7426004f2558b277f747ac1d54d00c4b6ce1ff618c6e7429d13580f41e",
+      "pixel_box": [
+        16,
+        0,
+        456,
+        337
+      ]
+    }
+  ],
+  "P031": [
+    {
+      "box_2d": [
+        58,
+        0,
+        404,
+        184
+      ],
+      "visibility": "main_body",
+      "description": "Canister vacuum cleaner body with cyclone assembly and wheel resting on the floor",
+      "instance_id": "P031_01",
+      "crop_file": "out/pipeline/crops/P031_01.jpg",
+      "crop_sha256": "cd6aa6058b65276b80431b087bf6e9b20c42808613115bdec1e598de7be59bde",
+      "pixel_box": [
+        0,
+        17,
+        162,
+        199
+      ]
+    },
+    {
+      "box_2d": [
+        614,
+        159,
+        1000,
+        456
+      ],
+      "visibility": "part_only",
+      "description": "Vacuum cleaner upholstery attachment nozzle placed on grey fabric cushion",
+      "instance_id": "P031_02",
+      "crop_file": "out/pipeline/crops/P031_02.jpg",
+      "crop_sha256": "cc6bab9dbb5b8f96925bdc016924eb0989f87edb03169eb21c7044f0abb5ffa2",
+      "pixel_box": [
+        117,
+        275,
+        394,
+        467
+      ]
+    }
+  ],
+  "P033": [
+    {
+      "box_2d": [
+        0,
+        357,
+        1000,
+        705
+      ],
+      "visibility": "part_only",
+      "description": "Handle and display section of a cordless vacuum cleaner",
+      "instance_id": "P033_01",
+      "crop_file": "out/pipeline/crops/P033_01.jpg",
+      "crop_sha256": "1ff9bdef793685432574ebc1ebf2453310d479e00ff4d268d3eba5e2e5fafac1",
+      "pixel_box": [
+        430,
+        0,
+        930,
+        720
+      ]
+    }
+  ],
+  "P032": [
+    {
+      "box_2d": [
+        80,
+        430,
+        824,
+        624
+      ],
+      "visibility": "whole_machine",
+      "description": "cordless wet-floor cleaner being held and operated",
+      "instance_id": "P032_01",
+      "crop_file": "out/pipeline/crops/P032_01.jpg",
+      "crop_sha256": "d4a70f63cf392188a1b0605f127bdd804b4f54442ae4a0269ede5a23bcbdfdf1",
+      "pixel_box": [
+        535,
+        25,
+        814,
+        626
+      ]
+    }
+  ],
+  "P036": [
+    {
+      "box_2d": [
+        0,
+        283,
+        995,
+        715
+      ],
+      "visibility": "part_only",
+      "description": "Top section of an upright wet-floor cleaner showing its water tank and mounting column",
+      "instance_id": "P036_01",
+      "crop_file": "out/pipeline/crops/P036_01.jpg",
+      "crop_sha256": "4162d52f7cba2b6ce37e57dfb67d9bbc249bcf7ef9545785c14f9fb23ac7ae9f",
+      "pixel_box": [
+        329,
+        0,
+        949,
+        720
+      ]
+    }
+  ],
+  "P034": [
+    {
+      "box_2d": [
+        0,
+        145,
+        915,
+        913
+      ],
+      "visibility": "part_only",
+      "description": "Floor cleaner cleaning head and neck assembly",
+      "instance_id": "P034_01",
+      "crop_file": "out/pipeline/crops/P034_01.jpg",
+      "crop_sha256": "aa6846992f9d6fba3ecd38a632aaa7a0dc76be74eca28324a630f2d48a83cdc0",
+      "pixel_box": [
+        126,
+        0,
+        1228,
+        699
+      ]
+    }
+  ],
+  "P035": [
+    {
+      "box_2d": [
+        0,
+        16,
+        814,
+        982
+      ],
+      "visibility": "part_only",
+      "description": "Floor cleaner head attachment with visible debris tray and roller mechanics",
+      "instance_id": "P035_01",
+      "crop_file": "out/pipeline/crops/P035_01.jpg",
+      "crop_sha256": "450ae4de1474da53a90baa73963e8ee2bdc729a301ffea907c6f7a452b6c1001",
+      "pixel_box": [
+        0,
+        0,
+        1280,
+        622
+      ]
+    }
+  ],
+  "P038": [
+    {
+      "box_2d": [
+        0,
+        290,
+        545,
+        661
+      ],
+      "visibility": "part_only",
+      "description": "Floor cleaner head and base neck of a wet-floor cleaner.",
+      "instance_id": "P038_01",
+      "crop_file": "out/pipeline/crops/P038_01.jpg",
+      "crop_sha256": "640985c4b72534a7207158e94407354a85d8aac7f54c3095cdc2126ab0119f6d",
+      "pixel_box": [
+        342,
+        0,
+        875,
+        416
+      ]
+    }
+  ],
+  "P037": [
+    {
+      "box_2d": [
+        0,
+        160,
+        915,
+        571
+      ],
+      "visibility": "main_body",
+      "description": "Floor cleaner with roller head and upright body section standing on the floor",
+      "instance_id": "P037_01",
+      "crop_file": "out/pipeline/crops/P037_01.jpg",
+      "crop_sha256": "bb6a8ec07bbe646d3a9e82545168260b923c5ccc3778af8beb6eb6386e35217f",
+      "pixel_box": [
+        173,
+        0,
+        763,
+        699
+      ]
+    },
+    {
+      "box_2d": [
+        36,
+        613,
+        946,
+        824
+      ],
+      "visibility": "part_only",
+      "description": "Detached cylindrical dual water tank reservoir for floor cleaner",
+      "instance_id": "P037_02",
+      "crop_file": "out/pipeline/crops/P037_02.jpg",
+      "crop_sha256": "fe7816bbe4fc202a62b65f96da08d8059574ef16c5cc2658c659552a782d5f24",
+      "pixel_box": [
+        768,
+        0,
+        1071,
+        720
+      ]
+    }
+  ],
+  "P039": [
+    {
+      "box_2d": [
+        7,
+        133,
+        988,
+        928
+      ],
+      "visibility": "whole_machine",
+      "description": "Cordless stick vacuum cleaner with purple wand, cleaner head, transparent dust bin, and handheld unit",
+      "instance_id": "P039_01",
+      "crop_file": "out/pipeline/crops/P039_01.jpg",
+      "crop_sha256": "1618dab0ae0867f093a4b0e303e91211720db28b57827c98e51fa4cf80153dfd",
+      "pixel_box": [
+        131,
+        0,
+        1499,
+        658
+      ]
+    }
+  ],
+  "P042": [
+    {
+      "box_2d": [
+        18,
+        226,
+        976,
+        829
+      ],
+      "visibility": "main_body",
+      "description": "Handheld cordless vacuum cleaner body being emptied or assembled by a person.",
+      "instance_id": "P042_01",
+      "crop_file": "out/pipeline/crops/P042_01.jpg",
+      "crop_sha256": "4e4729506f763dfc362c0af5fea747e0ec723d34634c6fcdf9f896667b81ca96",
+      "pixel_box": [
+        291,
+        0,
+        1329,
+        864
+      ]
+    }
+  ],
+  "P040": [
+    {
+      "box_2d": [
+        0,
+        311,
+        881,
+        735
+      ],
+      "visibility": "part_only",
+      "description": "Floor cleaning head and lower wand extension of a stick vacuum cleaner.",
+      "instance_id": "P040_01",
+      "crop_file": "out/pipeline/crops/P040_01.jpg",
+      "crop_sha256": "7dc0f89dbb56d16a1efc6e7d125465fdcc9c5845a4a4501931d68f3994d40aae",
+      "pixel_box": [
+        438,
+        0,
+        1169,
+        807
+      ]
+    }
+  ],
+  "P041": [
+    {
+      "box_2d": [
+        108,
+        149,
+        1000,
+        737
+      ],
+      "visibility": "main_body",
+      "description": "cordless handheld vacuum cleaner body showing back filter and circular digital display screen",
+      "instance_id": "P041_01",
+      "crop_file": "out/pipeline/crops/P041_01.jpg",
+      "crop_sha256": "f9bdb7fba3aba244939606fab6062c0cccdd9995ace5971bb38d66a109c76214",
+      "pixel_box": [
+        174,
+        47,
+        1187,
+        864
+      ]
+    }
+  ],
+  "P043": [
+    {
+      "box_2d": [
+        0,
+        234,
+        888,
+        755
+      ],
+      "visibility": "part_only",
+      "description": "Vacuum cleaner motorized roller floor head connected to lower extension wand section",
+      "instance_id": "P043_01",
+      "crop_file": "out/pipeline/crops/P043_01.jpg",
+      "crop_sha256": "63e1d6fd0ff32deb7236d955b34b8ac2ac7f31532b3d86f7c20d968d020fbd06",
+      "pixel_box": [
+        311,
+        0,
+        1208,
+        814
+      ]
+    }
+  ],
+  "P046": [
+    {
+      "box_2d": [
+        0,
+        271,
+        822,
+        706
+      ],
+      "visibility": "part_only",
+      "description": "Vacuum cleaner cleaner head connected to wand",
+      "instance_id": "P046_01",
+      "crop_file": "out/pipeline/crops/P046_01.jpg",
+      "crop_sha256": "6a160106a2892babb64fc4eb730175793d2cc2b5cc95776f790d8d44ac6fa69a",
+      "pixel_box": [
+        376,
+        0,
+        1125,
+        753
+      ]
+    }
+  ],
+  "P045": [
+    {
+      "box_2d": [
+        0,
+        105,
+        856,
+        672
+      ],
+      "visibility": "part_only",
+      "description": "Vacuum cleaner cleaner head attachment with rotating brush bar and lower section of the wand/neck",
+      "instance_id": "P045_01",
+      "crop_file": "out/pipeline/crops/P045_01.jpg",
+      "crop_sha256": "8740e70a452d10fdc7f3197c11ade2a4b47f353410618a43563fa6a9ab8e730c",
+      "pixel_box": [
+        109,
+        0,
+        1085,
+        784
+      ]
+    }
+  ],
+  "P047": [
+    {
+      "box_2d": [
+        0,
+        437,
+        773,
+        649
+      ],
+      "visibility": "main_body",
+      "description": "cordless stick vacuum cleaner with purple wand and cleaner head on a rug",
+      "instance_id": "P047_01",
+      "crop_file": "out/pipeline/crops/P047_01.jpg",
+      "crop_sha256": "46d17d1122f2f30c602a724a962fc6bfdaa4e5c3879221b334e55b8d53e138f3",
+      "pixel_box": [
+        509,
+        0,
+        795,
+        553
+      ]
+    }
+  ],
+  "P048": [
+    {
+      "box_2d": [
+        0,
+        546,
+        595,
+        951
+      ],
+      "visibility": "part_only",
+      "description": "Floor cleaner head and lower wand extension with green laser light illumination, vacuuming debris on hardwood floor.",
+      "instance_id": "P048_01",
+      "crop_file": "out/pipeline/crops/P048_01.jpg",
+      "crop_sha256": "d4507da0df4059a102feaf2f0c111dbd43293ea645145717211ccdde0ee3021d",
+      "pixel_box": [
+        433,
+        0,
+        810,
+        294
+      ]
+    }
+  ],
+  "P049": [
+    {
+      "box_2d": [
+        116,
+        362,
+        924,
+        630
+      ],
+      "visibility": "whole_machine",
+      "description": "Cordless stick vacuum cleaner facing directly forward with cleaner head on the floor, purple wand, and handheld motor unit behind it.",
+      "instance_id": "P049_01",
+      "crop_file": "out/pipeline/crops/P049_01.jpg",
+      "crop_sha256": "d1e175efeb70fea0211b7907646d55afe3fe7152a6245e23438cb4cb82fa05ce",
+      "pixel_box": [
+        354,
+        38,
+        662,
+        561
+      ]
+    }
+  ],
+  "P051": [
+    {
+      "box_2d": [
+        18,
+        301,
+        1000,
+        655
+      ],
+      "visibility": "main_body",
+      "description": "cordless stick vacuum cleaner body showing top filter assembly, motor housing, and cyclone array",
+      "instance_id": "P051_01",
+      "crop_file": "out/pipeline/crops/P051_01.jpg",
+      "crop_sha256": "36e906966847204dca27b789890c0bd0a1ad85f6e8ce060c3023d644cbc408e9",
+      "pixel_box": [
+        232,
+        0,
+        562,
+        466
+      ]
+    }
+  ],
+  "P052": [
+    {
+      "box_2d": [
+        112,
+        368,
+        620,
+        716
+      ],
+      "visibility": "main_body",
+      "description": "handheld cordless vacuum cleaner body placed on a weighing scale",
+      "instance_id": "P052_01",
+      "crop_file": "out/pipeline/crops/P052_01.jpg",
+      "crop_sha256": "10c1d506e1afbe9c342daa3d2a1957d761cd1ccebeb5ae003e6aa343e919be82",
+      "pixel_box": [
+        288,
+        37,
+        612,
+        304
+      ]
+    }
+  ],
+  "P050": [
+    {
+      "box_2d": [
+        0,
+        345,
+        856,
+        650
+      ],
+      "visibility": "part_only",
+      "description": "Vacuum cleaner motorized cleaner head with purple extension wand attached",
+      "instance_id": "P050_01",
+      "crop_file": "out/pipeline/crops/P050_01.jpg",
+      "crop_sha256": "326a134468473b3497731fa5343b3eccffa168ff6978a3e709120d9d9ad828dd",
+      "pixel_box": [
+        271,
+        0,
+        555,
+        423
+      ]
+    }
+  ],
+  "P054": [
+    {
+      "box_2d": [
+        197,
+        329,
+        771,
+        651
+      ],
+      "visibility": "part_only",
+      "description": "Rear circular end and display panel of a cordless stick vacuum cleaner held by a hand",
+      "instance_id": "P054_01",
+      "crop_file": "out/pipeline/crops/P054_01.jpg",
+      "crop_sha256": "1e8e71bd577a29045d339c7cb5635aa85c5406394d3502f34d7b99c058a89453",
+      "pixel_box": [
+        257,
+        75,
+        557,
+        376
+      ]
+    }
+  ],
+  "P053": [
+    {
+      "box_2d": [
+        102,
+        69,
+        977,
+        1000
+      ],
+      "visibility": "main_body",
+      "description": "Main body and handle unit of a cordless stick vacuum cleaner with dustbin and cyclone assembly",
+      "instance_id": "P053_01",
+      "crop_file": "out/pipeline/crops/P053_01.jpg",
+      "crop_sha256": "ca2ec1d9d973fad5c4ec977e783f3838247e60f3da5ebbbcb7a84765ba4643e0",
+      "pixel_box": [
+        10,
+        23,
+        830,
+        466
+      ]
+    }
+  ],
+  "P055": [
+    {
+      "box_2d": [
+        239,
+        344,
+        986,
+        601
+      ],
+      "visibility": "whole_machine",
+      "description": "Cordless stick vacuum cleaner being held by a person, complete with motor handle unit, extension wand, and cleaner head on the rug.",
+      "instance_id": "P055_01",
+      "crop_file": "out/pipeline/crops/P055_01.jpg",
+      "crop_sha256": "60850a4f4ba399dc7956cc0774b802f268bdcf9a626393e4d9386ca8e6f8c28e",
+      "pixel_box": [
+        394,
+        130,
+        740,
+        674
+      ]
+    }
+  ],
+  "P056": [
+    {
+      "box_2d": [
+        0,
+        134,
+        584,
+        903
+      ],
+      "visibility": "part_only",
+      "description": "Floor cleaner head attachment with lit LED headlights and visible roller brush on carpet",
+      "instance_id": "P056_01",
+      "crop_file": "out/pipeline/crops/P056_01.jpg",
+      "crop_sha256": "bb1a789a138e41f911496779a57f72304db23d29bc6aa659edb36f3ac97d94a9",
+      "pixel_box": [
+        72,
+        0,
+        788,
+        289
+      ]
+    }
+  ],
+  "P057": [
+    {
+      "box_2d": [
+        89,
+        66,
+        1000,
+        815
+      ],
+      "visibility": "part_only",
+      "description": "underside of a vacuum cleaner roller head tangled with hair",
+      "instance_id": "P057_01",
+      "crop_file": "out/pipeline/crops/P057_01.jpg",
+      "crop_sha256": "bba22d162f7a7ce7a644a4901445f4ac85464ae3b2f47fbd7c6f93f4d3fb6f45",
+      "pixel_box": [
+        17,
+        16,
+        714,
+        467
+      ]
+    },
+    {
+      "box_2d": [
+        492,
+        807,
+        1000,
+        996
+      ],
+      "visibility": "main_body",
+      "description": "handheld vacuum dust bin and motor unit",
+      "instance_id": "P057_02",
+      "crop_file": "out/pipeline/crops/P057_02.jpg",
+      "crop_sha256": "afdcec59d8389e0a6e141bd0888fbbd1d4a05ab85174f7d6bc2e491b8d950fd9",
+      "pixel_box": [
+        660,
+        215,
+        830,
+        467
+      ]
+    }
+  ],
+  "P058": [
+    {
+      "box_2d": [
+        366,
+        0,
+        1000,
+        816
+      ],
+      "visibility": "part_only",
+      "description": "handheld vacuum cleaner body with dust brush attachment cleaning a pillow",
+      "instance_id": "P058_01",
+      "crop_file": "out/pipeline/crops/P058_01.jpg",
+      "crop_sha256": "d063fb1233f1462c01a29f5c13dc5e3969cb00e45ba3989545db89c6e49c4910",
+      "pixel_box": [
+        0,
+        153,
+        718,
+        467
+      ]
+    },
+    {
+      "box_2d": [
+        63,
+        729,
+        290,
+        876
+      ],
+      "visibility": "part_only",
+      "description": "light green vacuum cleaner wand and floor head",
+      "instance_id": "P058_02",
+      "crop_file": "out/pipeline/crops/P058_02.jpg",
+      "crop_sha256": "7bdd87568316f19848865f2175076fc6411fcf6d4525c2c2ec7844f98bcb1238",
+      "pixel_box": [
+        597,
+        23,
+        735,
+        142
+      ]
+    },
+    {
+      "box_2d": [
+        98,
+        0,
+        336,
+        96
+      ],
+      "visibility": "part_only",
+      "description": "vacuum cleaner floor head on the floor",
+      "instance_id": "P058_03",
+      "crop_file": "out/pipeline/crops/P058_03.jpg",
+      "crop_sha256": "a2a8416b6d23b5ede6c2d1bc59f2eff62c8cea627afe69c57788e984b99ec51d",
+      "pixel_box": [
+        0,
+        39,
+        85,
+        164
+      ]
+    },
+    {
+      "box_2d": [
+        48,
+        792,
+        281,
+        999
+      ],
+      "visibility": "main_body",
+      "description": "black cordless vacuum cleaner handheld body on the rug",
+      "instance_id": "P058_04",
+      "crop_file": "out/pipeline/crops/P058_04.jpg",
+      "crop_sha256": "8f4c6a82278d4b1a67ebe149f9c9e2e0c28c365e40ec6d8ee11e9aa5218424f9",
+      "pixel_box": [
+        647,
+        15,
+        830,
+        138
+      ]
+    }
+  ],
+  "P059": [
+    {
+      "box_2d": [
+        38,
+        396,
+        953,
+        508
+      ],
+      "visibility": "whole_machine",
+      "description": "cordless stick vacuum cleaner with purple top, orange cyclonic body, transparent dust bin, long grey wand, and purple cleaner head on the floor",
+      "instance_id": "P059_01",
+      "crop_file": "out/pipeline/crops/P059_01.jpg",
+      "crop_sha256": "3b0ecfe67c9b052ac8dd33f5e3d076de8413a385d33872e2221df524e015985c",
+      "pixel_box": [
+        597,
+        0,
+        791,
+        864
+      ]
+    },
+    {
+      "box_2d": [
+        37,
+        517,
+        958,
+        627
+      ],
+      "visibility": "whole_machine",
+      "description": "cordless stick vacuum cleaner standing next to a bookshelf, featuring a purple top, orange cyclone chamber, clear bin, wand, and floor head",
+      "instance_id": "P059_02",
+      "crop_file": "out/pipeline/crops/P059_02.jpg",
+      "crop_sha256": "c928f99c44cca64e890315d9995861d9776e05104d1f11adaeee0a010ab08613",
+      "pixel_box": [
+        783,
+        0,
+        974,
+        864
+      ]
+    }
+  ]
+}

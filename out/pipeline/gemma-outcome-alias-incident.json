@@ -1,0 +1,7 @@
+{
+  "time_utc": "2026-10-15T13:46:42Z",
+  "stage": "check",
+  "error": "Invalid candidate outcome",
+  "attempted": "Frozen workflow; saved calls are retained. No automatic retries.",
+  "resolution": "Offline enum alias: candidate-level not_sure becomes insufficient_evidence; original final answer/cost retained. Decision gate defers outside answers with unresolved candidates. No paid retry."
+}

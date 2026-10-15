@@ -1,0 +1,4 @@
+{"stage": "check", "model": "solmax", "variant": "telling_details", "instance_id": "P026_01", "decision": "match"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P026_01", "decision": "match"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P026_01", "decision": "match"}
+{"stage_cost_inr": 97.27369423650407, "guard_accounted_inr": 102.2243861, "stage_ceiling_inr": 400}

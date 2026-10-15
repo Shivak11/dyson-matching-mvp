@@ -1,0 +1,7 @@
+{
+  "time_utc": "2026-10-15T13:51:00Z",
+  "stage": "check",
+  "error": "Missing or duplicate candidate check",
+  "attempted": "Frozen workflow; saved calls are retained. No automatic retries.",
+  "resolution": "Owner dropped Gemma. Its incomplete result is excluded; charges and original response retained. No retry."
+}

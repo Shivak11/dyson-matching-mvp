@@ -1,0 +1,64 @@
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P031_02", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P007_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P031_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P013_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P019_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P026_01", "decision": "match"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P012_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P018_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P001_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P025_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P006_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P032_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P047_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P038_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P039_01", "decision": "not_in_catalogue"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P055_01", "decision": "not_sure"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P026_01", "decision": "match"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P031_01", "decision": "match"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P012_01", "decision": "not_sure"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P007_01", "decision": "match"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P013_01", "decision": "match"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P059_02", "decision": "match"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P031_02", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P059_01", "decision": "match"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P038_01", "decision": "match"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P019_01", "decision": "match"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P006_01", "decision": "not_in_catalogue"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P018_01", "decision": "not_sure"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P039_01", "decision": "not_in_catalogue"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P032_01", "decision": "match"}
+{"stage": "check", "model": "flash37high", "variant": "telling_details", "instance_id": "P025_01", "decision": "match"}
+Traceback (most recent call last):
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_high_reasoning.py", line 99, in <module>
+    main()
+    ~~~~^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_high_reasoning.py", line 89, in main
+    pipeline.check(config, client, inputs['photos'], inputs['references'], ids, selected, ['telling_details'])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 247, in check
+    for result in run_batch(jobs,call,config['run_concurrency']):
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 158, in run_batch
+    if failures: raise failures[0]
+                 ^^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 155, in run_batch
+    try: results.append(f.result())
+                        ~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 242, in call
+    raw=client.generate(job_id,model,prompt,images)
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/pipeline_api.py", line 155, in generate
+    return self._call(job_id, 'generate', model, payload, url, reservation, lambda response: parse_generation(response, provider))
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/pipeline_api.py", line 240, in _call
+    raise RuntimeError(job_id + ': ' + record['error'])
+RuntimeError: check:flash37high:telling_details:P001_01: HTTP Error 429: Too Many Requests {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"google/gemini-3.7-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"Google","is_byok":false,"provider_error_code":"429","limit_source":"upstream_provider_shared_pool","remedy_hint":"Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"}},"user_id":"user_2vOFskgmtnhneHuvB8G4ah7Ujj2"}

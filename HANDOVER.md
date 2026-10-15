@@ -80,3 +80,11 @@ The current test set is in data/test/test_manifest.json: 58 labelled photos, com
 ## Step 3 completed on 15 October 2026
 
 Shiva stopped Argon for cost and authorised a cheaper OpenRouter model. The complete baseline is Qwen3.7 Flash: 348 comparisons across all 58 labelled photos, INR 2.91 total (about INR 0.05 per photo), no Qwen request failures. On 57 single-product photos, threshold 80 produced 25 correct decisions and 16 wrong accepted matches; threshold 90 produced 23 correct decisions and 12 wrong accepted matches. Both thresholds had 12 wrong accepted answers with score at least 90. The two-product photo was unresolved. See docs/step-3-baseline.md and out/baseline-qwen/. Argon partial results are separate in out/baseline/; do not present them as full-set accuracy. The default baseline runner now uses Qwen and loads the authorised local OpenRouter key from the ignored .env. No further Argon baseline calls. Stop before step 4.
+
+## 15 October: step 4 stopped on Gemini rate limit
+
+Worktree: .worktrees/test-set, branch codex/pipeline-v1. The owner replaced the comparison with Qwen 3.8 Max, Gemini 3.7 Flash high and GPT-6.1 Sol max. Gemma is excluded but its costs are retained. Read docs/step-4-pipeline.md and out/pipeline/high_reasoning/stop-receipt.json before resuming.
+
+Qwen completed the fixed 16 photos/18 crops. Gemini completed 12 photos/13 crops, then P001 returned upstream HTTP 429. Sol has only its P026 preflight. No retry or provider fallback occurred; all in-flight calls are settled. Combined stage accounted cost is INR 190.70 including a failed-call reserve, or INR 200.40 under the conservative INR 400 budget guard. New source/configuration uses a separate frozen ledger and shares existing detection, embeddings and cropped images. Existing successful calls must not be billed again.
+
+The next authorised continuation must explicitly record a failed-call retry, preferably with lower concurrency, and retain the old failed response and reserve until billing is resolved. Finish the fixed comparison before ranking combinations. Known-product local runtime testing, the local upload screen and the client HTML remain incomplete. Respect the original stop after step 4.

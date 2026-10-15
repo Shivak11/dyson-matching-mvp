@@ -1,0 +1,6 @@
+{
+  "time_utc": "2026-10-15T14:01:17Z",
+  "stage": "check",
+  "error": "STOP file found",
+  "attempted": "Frozen workflow; saved calls are retained. No automatic retries."
+}

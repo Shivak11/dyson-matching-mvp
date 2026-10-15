@@ -1,0 +1,51 @@
+{
+  "status": "PASS_partial_stopping_report",
+  "independent_reviewer": "review_accuracy_proposal",
+  "date": "2026-10-15",
+  "method": "Reconstructed decisions from raw model responses without importing production scoring; independently reconciled source labels, completeness and cost.",
+  "qwen38max": {
+    "successful_crops": 18,
+    "complete_photos": 16,
+    "correct_singles": 2,
+    "wrong_singles": 0,
+    "unresolved_singles": 13,
+    "multi_identity_set_correct": true
+  },
+  "flash37high": {
+    "successful_crops": 13,
+    "complete_photos": 12,
+    "correct_singles": 8,
+    "wrong_singles": 1,
+    "unresolved_singles": 3,
+    "missing_singles": 3,
+    "confidently_wrong_ids": [
+      "P006"
+    ]
+  },
+  "solmax": {
+    "successful_crops": 1,
+    "complete_photos": 1,
+    "correct_singles": 1,
+    "wrong_singles": 0,
+    "unresolved_singles": 0,
+    "missing_singles": 14
+  },
+  "stage_accounted_usd": 2.004048736,
+  "unknown_reserve_usd": 0.08244,
+  "stage_accounted_reporting_inr": 190.69933449149516,
+  "stage_accounted_guard_inr": 200.4048736,
+  "overall_guard_with_previous_stages_inr": 243.0848736,
+  "distinct_paid_jobs": 354,
+  "duplicate_paid_jobs": 0,
+  "reconstructed_request_hashes_matched": 89,
+  "inflight_empty": true,
+  "old_ledger_digest_unchanged": true,
+  "offline_tests_passed": 55,
+  "unproved": [
+    "Complete three-model comparison",
+    "Client store-photo accuracy",
+    "Live known-product upload path",
+    "Local browser upload screen",
+    "Final HTML report"
+  ]
+}

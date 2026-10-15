@@ -1,0 +1,7 @@
+{
+  "time_utc": "2026-10-15T13:20:23Z",
+  "stage": "check",
+  "error": "Invalid top_two",
+  "attempted": "Frozen workflow; saved calls are retained. No automatic retries.",
+  "resolution": "Resolved offline: null alternatives accepted as an empty list only for not_in_catalogue; original answer and cost retained. All six preflight routes subsequently passed."
+}

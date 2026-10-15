@@ -1,0 +1,3642 @@
+{
+  "P001_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8638368174455976,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8638368174455976
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8595217224869748
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8530571704723076
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.832425673862436,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.832425673862436
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8083176466404506
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.7918923126398066
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8276345330158359,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8276345330158359
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.820860931439884
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.7935590257381667
+        }
+      ]
+    }
+  ],
+  "P002_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8547411097291785,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8547411097291785
+        },
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.851944592515091
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8446111014470348
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.8150408557921546,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.8150408557921546
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.8025701753264058
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7798474317981803
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.7994315242923085,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.7994315242923085
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.7916728744024617
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.7750763991829229
+        }
+      ]
+    }
+  ],
+  "P003_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8576402954467884,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8576402954467884
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8572356526747245
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8568013747928725
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.8480698687674874,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.8480698687674874
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.8279766256647745
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.8061789162207327
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8082858119678691,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8082858119678691
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7955621036091597
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7904162149958657
+        }
+      ]
+    }
+  ],
+  "P004_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8584421384648389,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8584421384648389
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.857629181681367
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8426195802930605
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.8249567339460625,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.8249567339460625
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.8059377251754848
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7954027726111202
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8175885608066799,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8175885608066799
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8007543673604723
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.7995525019239997
+        }
+      ]
+    }
+  ],
+  "P005_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8663044265128876,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8663044265128876
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8645066011447168
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8527579111053941
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8239664489941141,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8239664489941141
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8182608640938509
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.7879724672797608
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.8235288326742823,
+      "references": [
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.8235288326742823
+        },
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.8179021192860179
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7973000331849506
+        }
+      ]
+    }
+  ],
+  "P006_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8792100956019844,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8792100956019844
+        },
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8791764025201225
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8715906303645341
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.844842576922864,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.844842576922864
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8183560104857729
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8099171166034458
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8400985749586704,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8400985749586704
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8346889898068752
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8049642140362441
+        }
+      ]
+    }
+  ],
+  "P007_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8944112578703989,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8944112578703989
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.88908559276662
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8424307330765683
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8926065131636379,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8926065131636379
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8860343398011769
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8375547079665409
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8529745323535478,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8529745323535478
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8458554942431552
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8233479005427355
+        }
+      ]
+    }
+  ],
+  "P008_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8595224742630158,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8595224742630158
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8565154345182948
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8384270664417327
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8567785480809111,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8567785480809111
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8492641990914996
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8330872554403537
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8360086143092325,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8360086143092325
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8276576874096069
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8160906209653286
+        }
+      ]
+    }
+  ],
+  "P009_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.850443902867344,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.850443902867344
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8487070055911033
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8346316171928608
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8503316712294327,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8503316712294327
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8432317067096069
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8317429080592724
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8227928169592319,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8227928169592319
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.817807078846442
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.814219152843944
+        }
+      ]
+    }
+  ],
+  "P010_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8546668378870881,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8546668378870881
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8460577245635615
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8235943421141011
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.847941706238398,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.847941706238398
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8445288456025611
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.818766425454962
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8259279920216744,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8259279920216744
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8155117159874863
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8108668152949532
+        }
+      ]
+    }
+  ],
+  "P011_01": [
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8634013010591575,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8634013010591575
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8035619803872973
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.7924689815787609
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8562479389689722,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8562479389689722
+        },
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8006918109660284
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.7975581260180913
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8078584688886338,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8078584688886338
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7828002436795818
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7549176795421232
+        }
+      ]
+    }
+  ],
+  "P012_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.835072192910467,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.835072192910467
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8166176472431155
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8124823605189951
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8269051832837356,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8269051832837356
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7667065819121583
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7562076694853472
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.8257216852753124,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.8257216852753124
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.8080844473359047
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7928434246227011
+        }
+      ]
+    }
+  ],
+  "P013_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8867819713742366,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8867819713742366
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8740632748092979
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8414135892554476
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8852404700196025,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8852404700196025
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8831937196127078
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8456537033736408
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8590743780469478,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8590743780469478
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8426248585933321
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8414280598937257
+        }
+      ]
+    }
+  ],
+  "P014_01": [
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8645015106145522,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8645015106145522
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8581602214833333
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8458988483750144
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8629900422898105,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8629900422898105
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8574488728895525
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8359814879482524
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8277046265413986,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8277046265413986
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8126207521020808
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8107592487439654
+        }
+      ]
+    }
+  ],
+  "P015_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8697512553021683,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8697512553021683
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.859507790916409
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.836209516189572
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8667786330674155,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8667786330674155
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8665401630671279
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8559156365107737
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8650808487936108,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8650808487936108
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8614877474273063
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8372844764035652
+        }
+      ]
+    }
+  ],
+  "P016_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8787926806508893,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8787926806508893
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.862243187851179
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8267611563145973
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8726767937765871,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8726767937765871
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8680650701572883
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8282794581083509
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8299818310451134,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8299818310451134
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.827343725642491
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8186953588882356
+        }
+      ]
+    }
+  ],
+  "P017_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8874634161747533,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8874634161747533
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8729401597118995
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8357724187088378
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8843970690369113,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8843970690369113
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8830624914695876
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8357552564809239
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8528649934393961,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8528649934393961
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8452018486811527
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8416060232726162
+        }
+      ]
+    }
+  ],
+  "P018_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8419947057957449,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8419947057957449
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8168655803892831
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8100368666372366
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8253552987735303,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8253552987735303
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7811153152610746
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.780668959546135
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8076934643369145,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8076934643369145
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8021262205382754
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.7827798602414779
+        }
+      ]
+    }
+  ],
+  "P019_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8671473348459061,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.8671473348459061
+        },
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8598219993891845
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.8447292944551856
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8192652832553654,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8192652832553654
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.7995413629893814
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.7888507205560653
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8127282651115297,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8127282651115297
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7869481355794031
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7757928808523964
+        }
+      ]
+    }
+  ],
+  "P020_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.9126956053964329,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.9126956053964329
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.8636133440336733
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.8501089024699655
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8585200013646525,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8585200013646525
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8308928552128959
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8295416135362927
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8580904314380148,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8580904314380148
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8464886516261289
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8391405260185687
+        }
+      ]
+    }
+  ],
+  "P021_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8759390881486706,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.8759390881486706
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.8502660378503971
+        },
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8460132142248163
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.850465166169054,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.850465166169054
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8305843539186941
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8102872625084717
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.839418762449111,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.839418762449111
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8333592950092825
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8137185209095431
+        }
+      ]
+    }
+  ],
+  "P022_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8065350683775419,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8065350683775419
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7966383270108254
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7944594430610513
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.7711353535023837,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.7711353535023837
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.7616637920897515
+        },
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.7615217706725013
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.7699773107533279,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.7699773107533279
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.7630954706962149
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.7526857185886014
+        }
+      ]
+    }
+  ],
+  "P023_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8697413237247489,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.8697413237247489
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.851885012327705
+        },
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8496328931379018
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8459141561667429,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8459141561667429
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.825109549531738
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8210901495107742
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8414709122876303,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8414709122876303
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8360298089779715
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8177696052195518
+        }
+      ]
+    }
+  ],
+  "P024_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8374285497593829,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8374285497593829
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.8176995630926637
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7838156298884182
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8040566710680402,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8040566710680402
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7821567786613473
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7748955979876946
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.7985130455922491,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.7985130455922491
+        },
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.783167348777024
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.7768731745869837
+        }
+      ]
+    }
+  ],
+  "P025_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.851586784283646,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.851586784283646
+        },
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8442954089203942
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.8415853500029871
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8359362933151844,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8359362933151844
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.820610385282636
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.813678066444689
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8286674217016687,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8286674217016687
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8237116165552067
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8135881305961775
+        }
+      ]
+    }
+  ],
+  "P026_01": [
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.8549105522128606,
+      "references": [
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.8549105522128606
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.8456170991232923
+        },
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.8123611594772888
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.805873096246732,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.805873096246732
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7962675601457703
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7845917114666691
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7830836862132959,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7830836862132959
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7529925594634226
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7464874330056768
+        }
+      ]
+    }
+  ],
+  "P027_01": [
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.8690579762865914,
+      "references": [
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.8690579762865914
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.8616035379314556
+        },
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.8322046629813212
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8235382710605551,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8235382710605551
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8153418143334702
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8091246551539925
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8151270458507449,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8151270458507449
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7726258882314897
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7657770383972571
+        }
+      ]
+    }
+  ],
+  "P028_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8527809241111324,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8527809241111324
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8346638256182821
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8169251719383066
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8506125384612734,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8506125384612734
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.800743262738787
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7913883524193412
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.822179006387038,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.822179006387038
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.8169155074057891
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.8100088597182222
+        }
+      ]
+    }
+  ],
+  "P029_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8475091913082662,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8475091913082662
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8246257316486125
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8086357740689389
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8287081405196953,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8287081405196953
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7793204145559154
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7668997573248043
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.8150063609186805,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.8150063609186805
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.8086103259607126
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7884974449196536
+        }
+      ]
+    }
+  ],
+  "P030_01": [
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.7868948307289191,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.7868948307289191
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7700829716633409
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.7669393570251323
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7785509541045698,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7785509541045698
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.738153424105641
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7345500490760852
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7605708689150202,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7605708689150202
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7450114817699597
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7439428083318556
+        }
+      ]
+    }
+  ],
+  "P031_01": [
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.80018962128124,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.80018962128124
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.7697371482731094
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7658830218128956
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.7775605389466106,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.7775605389466106
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.7640768056075113
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.73960472964232
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7748779279035758,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7748779279035758
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7625387159603559
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7610163363241563
+        }
+      ]
+    }
+  ],
+  "P031_02": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8048957116395682,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8048957116395682
+        },
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8026389116745214
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7847991476765873
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.7872020308507354,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.7872020308507354
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.7850225948563638
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7773514942312614
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7870737259835809,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7870737259835809
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7483888753153382
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7310800578262066
+        }
+      ]
+    }
+  ],
+  "P032_01": [
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.831223416813803,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.831223416813803
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.8198831159886846
+        },
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.8163760428685805
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7878549897460202,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7878549897460202
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7663883007650591
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7570150681346272
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7761725182415673,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7761725182415673
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7616437510626696
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7536092702415841
+        }
+      ]
+    }
+  ],
+  "P033_01": [
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.773800134714303,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.773800134714303
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.7708709958957175
+        },
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.7707324146893594
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7646610518217788,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7646610518217788
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7595528881434986
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7593158549622299
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7601641178896369,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7601641178896369
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7426055346107944
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7402502292432417
+        }
+      ]
+    }
+  ],
+  "P034_01": [
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.7978857753618019,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7978857753618019
+        },
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.7924092598539692
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.7887391436372472
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7879535453181207,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7879535453181207
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7407917772584133
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7397335227104785
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7555540628274703,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7555540628274703
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7290306763534136
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7184435106401299
+        }
+      ]
+    }
+  ],
+  "P035_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8181830909317648,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8181830909317648
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7370394961039426
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7355478312191485
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7800241474648724,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7800241474648724
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7619333360402741
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7559810278771345
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.7782468403286943,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.7782468403286943
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.7488942593120973
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7422965780570926
+        }
+      ]
+    }
+  ],
+  "P036_01": [
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.8061431667637028,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.8061431667637028
+        },
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7931020083183307
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.7921661847075544
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8017256792014378,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8017256792014378
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7549271743126431
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7407126332120134
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.7936295843734997,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.7936295843734997
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7579880001863493
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.7488388114167325
+        }
+      ]
+    }
+  ],
+  "P037_01": [
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.8008087963423612,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.8008087963423612
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.793065676775469
+        },
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.7895438558424567
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7709898406853999,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7709898406853999
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7428518927710297
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7251121153319496
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7528604585537402,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7528604585537402
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7217451586967126
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7150114438750489
+        }
+      ]
+    }
+  ],
+  "P037_02": [
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.7523254448568166,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.7523254448568166
+        },
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7521527155677982
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.7399570923737123
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.679060673495087,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.679060673495087
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.6728739715371416
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.6569118256679786
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.6776916483533334,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.6776916483533334
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.6588315603108199
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.6354593994871258
+        }
+      ]
+    }
+  ],
+  "P038_01": [
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.7863033232123625,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7863033232123625
+        },
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.7807231046791314
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.7711000234553763
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7491282143470995,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7491282143470995
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7144304690002791
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7109209209135999
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7194751381942681,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7194751381942681
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7148059302053249
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.6882678492213644
+        }
+      ]
+    }
+  ],
+  "P039_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8805209610124038,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8805209610124038
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8609837524288416
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.843808922728723
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.874977558737887,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.874977558737887
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8736935712582127
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8356968979119124
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8694004967035207,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8694004967035207
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.855352198716948
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8399250860224099
+        }
+      ]
+    }
+  ],
+  "P040_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8932598852389427,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8932598852389427
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8631566128180524
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8467137297134962
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8784898884279125,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8784898884279125
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7992785866637158
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7899402135941987
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8551712894308875,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8551712894308875
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.843109685760711
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8213500256654409
+        }
+      ]
+    }
+  ],
+  "P041_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8239345791762179,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8239345791762179
+        },
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8056650668235963
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8027903845901373
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8212353249789203,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8212353249789203
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8122288711547182
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8077273773101402
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8044184335230958,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8044184335230958
+        },
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.803731842874137
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.789559465356452
+        }
+      ]
+    }
+  ],
+  "P042_01": [
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8779414513055441,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8779414513055441
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8709701831357655
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.833637362757748
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8633560434690944,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8633560434690944
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8614854528966026
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8360876406878268
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8587340200841121,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8587340200841121
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8571739095147471
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8540650158995009
+        }
+      ]
+    }
+  ],
+  "P043_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8819147063779893,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8819147063779893
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8541002952955968
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8365022632115279
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8641703071962086,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8641703071962086
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.8142484759317754
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.8083042106447359
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8546885362377867,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8546885362377867
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8543945183033911
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8306796549072695
+        }
+      ]
+    }
+  ],
+  "P045_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8846989154966984,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8846989154966984
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8596687134574295
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8520565370107603
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.872973468495461,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.872973468495461
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7997635163715905
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7820993710554143
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8269341870854222,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8269341870854222
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8254804534058562
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8121778790477834
+        }
+      ]
+    }
+  ],
+  "P046_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8919113737847931,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8919113737847931
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8579778395198276
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8516004329014818
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8838872695632596,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8838872695632596
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.8121404970502965
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.8071687687253287
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8568423283252679,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8568423283252679
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8512501439159931
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8128797116363856
+        }
+      ]
+    }
+  ],
+  "P047_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8644344288106696,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8644344288106696
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8477461700009375
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8341144078382846
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8479516139913541,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8479516139913541
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8433252480634134
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8118977800638352
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.842214546811343,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.842214546811343
+        },
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8409541652846654
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8159050180093939
+        }
+      ]
+    }
+  ],
+  "P048_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8628132126481143,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8628132126481143
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8519195919147926
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8490239872874971
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8602870284140632,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8602870284140632
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.8373226181410712
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.79788817160315
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8579829029755397,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8579829029755397
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8572724703617081
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8565782819040275
+        }
+      ]
+    }
+  ],
+  "P049_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8802420847452928,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8802420847452928
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8642081984983588
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8408669794008432
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8644116996671882,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8644116996671882
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8489320414458091
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8269098081373293
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8639294842267334,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8639294842267334
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8610581229768752
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8274241424747335
+        }
+      ]
+    }
+  ],
+  "P050_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8780454884068354,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8780454884068354
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8566672427348833
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8461175635369839
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8433522854665804,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8433522854665804
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.840333578086552
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8217040300004231
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8387136199519775,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8387136199519775
+        },
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8372390097630973
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8210635640183093
+        }
+      ]
+    }
+  ],
+  "P051_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8100897905143786,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8100897905143786
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8023970690516616
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7912810010780982
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.8026226503783731,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.8026226503783731
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.766790964865101
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7393774376106642
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7830918032622075,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7830918032622075
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7583385069383594
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7507274000242345
+        }
+      ]
+    }
+  ],
+  "P052_01": [
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8401371676424925,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8401371676424925
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8326785307289013
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8272216534345628
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.830821349977991,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.830821349977991
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8248949747788348
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.7927600257475791
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8252560349424646,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8252560349424646
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8126721348721012
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.7956362357240354
+        }
+      ]
+    }
+  ],
+  "P053_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8613886958225454,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8613886958225454
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.851540593729228
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.8371322678545919
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8573233123609889,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8573233123609889
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8529259459339075
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8178530679267499
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8552599027235691,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8552599027235691
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8383225016809054
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8216044697270006
+        }
+      ]
+    }
+  ],
+  "P054_01": [
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.7604886131909353,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.7604886131909353
+        },
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7506947687898733
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.744613682983159
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.7510064657906906,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.7510064657906906
+        },
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.7072774553969992
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.7059871788583338
+        }
+      ]
+    },
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7500377311963592,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7500377311963592
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7413157468129093
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7356423987119557
+        }
+      ]
+    }
+  ],
+  "P055_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7727451789213761,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7727451789213761
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7639936583601183
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7634545881906448
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7675445765569094,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7675445765569094
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7350696514539636
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.730770127827842
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.7613368467410868,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.7613368467410868
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.7611152581625888
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.7534808314867403
+        }
+      ]
+    }
+  ],
+  "P056_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7964730746068482,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7964730746068482
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7653008907200262
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7613813992347283
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.7560079344752287,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.7560079344752287
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7274884969802524
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.7072721505905584
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7517182959474474,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7517182959474474
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7172691197110667
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7102916311610274
+        }
+      ]
+    }
+  ],
+  "P057_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.8031677400819325,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.8031677400819325
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7624433590779409
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7402727194898062
+        }
+      ]
+    },
+    {
+      "product": "dyson_big_ball",
+      "similarity": 0.7812960199820889,
+      "references": [
+        {
+          "reference": "dyson_big_ball_1",
+          "similarity": 0.7812960199820889
+        },
+        {
+          "reference": "dyson_big_ball_2",
+          "similarity": 0.7436113439590176
+        },
+        {
+          "reference": "dyson_big_ball_0",
+          "similarity": 0.741298408097199
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7645012300534973,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7645012300534973
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7371861653384334
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7263907703044236
+        }
+      ]
+    }
+  ],
+  "P057_02": [
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.7316955951309538,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.7316955951309538
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.727349807276658
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.7174197579397636
+        }
+      ]
+    },
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.7298094864023785,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.7298094864023785
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.7209169842373683
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.7070093456514845
+        }
+      ]
+    },
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.71965569660786,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.71965569660786
+        },
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7150966752775989
+        },
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.707935463301671
+        }
+      ]
+    }
+  ],
+  "P058_01": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7840472969162239,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7840472969162239
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7422756987749279
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7308464847163618
+        }
+      ]
+    },
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.762300725029097,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.762300725029097
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.7526471422734682
+        },
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7504003138988397
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7618466680268579,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7618466680268579
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.737486107727165
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7282099798694417
+        }
+      ]
+    }
+  ],
+  "P058_02": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7385950897843089,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7385950897843089
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7343162982952296
+        },
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7255558947063341
+        }
+      ]
+    },
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.7314631790702469,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.7314631790702469
+        },
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7250898686363221
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.7212160508554216
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.722189814710668,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.722189814710668
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.7194660123079066
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.7125166641752039
+        }
+      ]
+    }
+  ],
+  "P058_03": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.7464438345279305,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7464438345279305
+        },
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.7187507101326568
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7124258070273667
+        }
+      ]
+    },
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.7437291209709873,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7437291209709873
+        },
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.7314908357698937
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.7294178586310824
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.7139532375562632,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.7139532375562632
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.6709103865720322
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.6707337148103655
+        }
+      ]
+    }
+  ],
+  "P058_04": [
+    {
+      "product": "dyson_v16_piston_animal",
+      "similarity": 0.738482366294483,
+      "references": [
+        {
+          "reference": "dyson_v16_piston_animal_1",
+          "similarity": 0.738482366294483
+        },
+        {
+          "reference": "dyson_v16_piston_animal_0",
+          "similarity": 0.7333835414559816
+        },
+        {
+          "reference": "dyson_v16_piston_animal_2",
+          "similarity": 0.7186253899798246
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.726697678575978,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.726697678575978
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.7085426043899917
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.7079021131424663
+        }
+      ]
+    },
+    {
+      "product": "dyson_wash_g1",
+      "similarity": 0.7218424966570892,
+      "references": [
+        {
+          "reference": "dyson_wash_g1_2",
+          "similarity": 0.7218424966570892
+        },
+        {
+          "reference": "dyson_wash_g1_0",
+          "similarity": 0.7207853596604676
+        },
+        {
+          "reference": "dyson_wash_g1_1",
+          "similarity": 0.7199343927750487
+        }
+      ]
+    }
+  ],
+  "P059_01": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8981196443294459,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8981196443294459
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.883959157202809
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8396864469334068
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8908769423718264,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8908769423718264
+        },
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8902932358815975
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8394054467833723
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8668560843923873,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8668560843923873
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8581101229400172
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8450091465594363
+        }
+      ]
+    }
+  ],
+  "P059_02": [
+    {
+      "product": "dyson_v12_detect_slim",
+      "similarity": 0.8870058179822752,
+      "references": [
+        {
+          "reference": "dyson_v12_detect_slim_0",
+          "similarity": 0.8870058179822752
+        },
+        {
+          "reference": "dyson_v12_detect_slim_1",
+          "similarity": 0.8793037853130258
+        },
+        {
+          "reference": "dyson_v12_detect_slim_2",
+          "similarity": 0.8404966333050465
+        }
+      ]
+    },
+    {
+      "product": "dyson_v15_detect",
+      "similarity": 0.8862134926321626,
+      "references": [
+        {
+          "reference": "dyson_v15_detect_1",
+          "similarity": 0.8862134926321626
+        },
+        {
+          "reference": "dyson_v15_detect_0",
+          "similarity": 0.8829035346597374
+        },
+        {
+          "reference": "dyson_v15_detect_2",
+          "similarity": 0.8453322651422404
+        }
+      ]
+    },
+    {
+      "product": "dyson_v8_absolute",
+      "similarity": 0.8536764292605972,
+      "references": [
+        {
+          "reference": "dyson_v8_absolute_0",
+          "similarity": 0.8536764292605972
+        },
+        {
+          "reference": "dyson_v8_absolute_1",
+          "similarity": 0.8480632716285756
+        },
+        {
+          "reference": "dyson_v8_absolute_2",
+          "similarity": 0.8351342431151906
+        }
+      ]
+    }
+  ]
+}

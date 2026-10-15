@@ -1,0 +1,7 @@
+{
+  "time_utc": "2026-10-15T13:37:33Z",
+  "stage": "check",
+  "error": "Invalid top_two",
+  "attempted": "Frozen workflow; saved calls are retained. No automatic retries.",
+  "resolution": "Offline formatting repair removed null placeholders from an outside-catalogue alternatives list. Original answer, evidence and cost retained. No paid retry."
+}

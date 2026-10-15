@@ -1,0 +1,7 @@
+{
+  "time_utc": "2026-10-15T13:40:23Z",
+  "stage": "check",
+  "error": "'contradictions'",
+  "attempted": "Frozen workflow; saved calls are retained. No automatic retries.",
+  "resolution": "Offline adapter supplied empty optional contradictions/retake fields; original answer, evidence and cost retained. No paid retry."
+}

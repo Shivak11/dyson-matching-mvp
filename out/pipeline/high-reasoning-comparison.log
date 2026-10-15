@@ -1,0 +1,24 @@
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P026_01", "decision": "match"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P031_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P007_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P031_02", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P019_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P018_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P013_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P012_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P032_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P006_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P025_01", "decision": "not_sure"}
+{"stage": "check", "model": "qwen38max", "variant": "telling_details", "instance_id": "P001_01", "decision": "not_sure"}
+Traceback (most recent call last):
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_high_reasoning.py", line 97, in <module>
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_high_reasoning.py", line 87, in main
+    (OUT/'STOP').unlink(missing_ok=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 247, in check
+    for result in run_batch(jobs,call,config['run_concurrency']):
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 150, in run_batch
+    if (OUT/'STOP').exists(): raise RuntimeError('STOP file found')
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: STOP file found

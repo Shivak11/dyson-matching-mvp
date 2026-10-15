@@ -1,0 +1,34 @@
+{"stage": "check", "model": "qwen", "variant": "telling_details", "instance_id": "P001_01", "decision": "match"}
+{"stage": "check", "model": "sol", "variant": "telling_details", "instance_id": "P001_01", "decision": "not_sure"}
+Traceback (most recent call last):
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 265, in <module>
+    if __name__=='__main__': main()
+                             ~~~~^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 259, in main
+    if args.stage in ('check','all'): check(config,client,photos,refs,ids,args.model or config['check_order'],args.variant or config['variants'])
+                                      ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 218, in check
+    for result in run_batch(jobs,call,config['run_concurrency']):
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 139, in run_batch
+    if failures: raise failures[0]
+                 ^^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 136, in run_batch
+    try: results.append(f.result())
+                        ~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 214, in call
+    try: validated=validate_result(raw,candidates)
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/shivakakkar/Python Projects/dyson-matching-mvp/.worktrees/test-set/tools/run_pipeline.py", line 83, in validate_result
+    if not isinstance(d[key],list) or any(not isinstance(v,str) for v in d[key]): raise ValueError('Invalid '+key)
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Invalid top_two

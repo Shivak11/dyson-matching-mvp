@@ -1,0 +1,1 @@
+Stopped after provider HTTP 429. No automatic retry. Retain the failed request and its unknown-usage reserve.

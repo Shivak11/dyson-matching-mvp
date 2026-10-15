@@ -1,0 +1,22 @@
+{
+  "status": "blocked",
+  "stage": 4,
+  "failed_job": "check:flash37high:telling_details:P001_01",
+  "error": "HTTP 429: upstream Google shared-pool rate limit on OpenRouter",
+  "attempted": [
+    "Verified advertised dated Gemini 3.7 endpoint after native route documentation showed a redirect to 3.8.",
+    "Completed one-photo preflights on Qwen 3.8 Max, Gemini 3.7 Flash high and GPT-6.1 Sol max.",
+    "Ran the fixed subset with unchanged inputs and metered parallel requests; scheduling moved from four workers to eight for Qwen/Gemini.",
+    "Retained thirteen successful Gemini crop responses and the failed call. Allowed already-submitted requests to settle, then stopped."
+  ],
+  "not_attempted": [
+    "No retry of the failed paid request.",
+    "No provider fallback or model substitution.",
+    "Sol comparison did not start after the failed Gemini batch."
+  ],
+  "pending": "Retry requires a separately recorded explicit attempt; current transport intentionally rejects automatic retries. Use lower concurrency if resuming. Finish Gemini and Sol before ranking combinations.",
+  "unknown_usage_reserve_usd": 0.08244,
+  "stage_guard_accounted_inr": 200.4048736,
+  "stage_reporting_accounted_inr": 190.69933449149516,
+  "stage_ceiling_inr": 400
+}

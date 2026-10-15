@@ -1,0 +1,7 @@
+{
+  "time_utc": "2026-10-15T13:36:17Z",
+  "stage": "check",
+  "error": "STOP file found",
+  "attempted": "Frozen workflow; saved calls are retained. No automatic retries.",
+  "resolution": "Intentional pause after completed batch to change scheduling from three to eight concurrent cheap checks. No in-flight calls, model errors or changed request inputs."
+}

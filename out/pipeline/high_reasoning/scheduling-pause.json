@@ -1,0 +1,6 @@
+{
+  "time_utc": "2026-10-15T14:20:21Z",
+  "error": "STOP file found",
+  "attempted": "Requested models with existing inputs, saved usage and no automatic retries.",
+  "reason": "Scheduling-only pause: Qwen/Gemini eight workers, Sol four; unchanged requests and budget."
+}
