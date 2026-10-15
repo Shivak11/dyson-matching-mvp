@@ -242,11 +242,13 @@ def summarise(config,rows):
     from evaluate_pipeline import combine_decisions,evaluate
     results=[r for r in read(OUT/'results.json',[]) if '+' not in r['model']]
     lookup={(r['model'],r['variant'],r['instance_id']):r for r in results}
-    for r in list(results):
-        if r['model']!='qwen': continue
-        other=lookup.get(('gemma',r['variant'],r['instance_id']))
-        if other:
-            result={**r,'model':'qwen+gemma','decision':combine_decisions(r['decision'],other['decision']),'candidate_checks':[]}
+    from itertools import combinations
+    for first,second in combinations(config['check_order'],2):
+        for r in list(results):
+            if r['model']!=first: continue
+            other=lookup.get((second,r['variant'],r['instance_id']))
+            if not other: continue
+            result={**r,'model':first+'+'+second,'decision':combine_decisions(r['decision'],other['decision']),'candidate_checks':[]}
             for c in r['candidate_checks']:
                 d=next((x for x in other['candidate_checks'] if x['product']==c['product']),None)
                 outcome=c['outcome'] if d and c['outcome']==d['outcome'] else 'insufficient_evidence'
