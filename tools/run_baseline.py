@@ -256,7 +256,7 @@ def summarize(config, config_sha, rows):
     (OUT / 'scores.json').write_text(json.dumps(score_rows, indent=2) + '\n')
     (OUT / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     with (OUT / 'scores.csv').open('w', newline='') as target:
-        writer = csv.writer(target)
+        writer = csv.writer(target, lineterminator='\n')
         writer.writerow(['image_id', 'source_labels'] + config['catalogue_order'])
         writer.writerows([r['image_id'], '|'.join(r['source_labels']), *[r['scores'][p] for p in config['catalogue_order']]] for r in score_rows)
     print(json.dumps({k: v for k, v in summary.items() if k not in ('thresholds', 'multi_product_results')}, indent=2))

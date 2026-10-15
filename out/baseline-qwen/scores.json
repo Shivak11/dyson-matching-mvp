@@ -1,0 +1,2033 @@
+[
+  {
+    "image_id": "P001",
+    "source_labels": [
+      "dyson_v8_absolute"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 35,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 85,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 85,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P002",
+    "source_labels": [
+      "dyson_v8_absolute"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 25,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 92,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 92,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 92,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P003",
+    "source_labels": [
+      "dyson_v8_absolute"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P004",
+    "source_labels": [
+      "dyson_v8_absolute"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 25,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P005",
+    "source_labels": [
+      "dyson_v8_absolute"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 35,
+      "dyson_v12_detect_slim": 25,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 20
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P006",
+    "source_labels": [
+      "dyson_v8_absolute"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 25,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 35,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v15_detect",
+          "dyson_v16_piston_animal"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v15_detect",
+          "dyson_v16_piston_animal"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P007",
+    "source_labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 95,
+      "dyson_v15_detect": 95,
+      "dyson_v16_piston_animal": 45,
+      "dyson_v8_absolute": 45,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P008",
+    "source_labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 95,
+      "dyson_v15_detect": 85,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P009",
+    "source_labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 25,
+      "dyson_v12_detect_slim": 85,
+      "dyson_v15_detect": 95,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "score": 95,
+        "top_two": [
+          "dyson_v15_detect",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "score": 95,
+        "top_two": [
+          "dyson_v15_detect",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P010",
+    "source_labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 85,
+      "dyson_v15_detect": 95,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 35,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "score": 95,
+        "top_two": [
+          "dyson_v15_detect",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "score": 95,
+        "top_two": [
+          "dyson_v15_detect",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P011",
+    "source_labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 95,
+      "dyson_v15_detect": 95,
+      "dyson_v16_piston_animal": 45,
+      "dyson_v8_absolute": 85,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P012",
+    "source_labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 45,
+      "dyson_v12_detect_slim": 75,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P013",
+    "source_labels": [
+      "dyson_v15_detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 65,
+      "dyson_v15_detect": 85,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "score": 85,
+        "top_two": [
+          "dyson_v15_detect",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v15_detect",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P014",
+    "source_labels": [
+      "dyson_v15_detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 95,
+      "dyson_v15_detect": 95,
+      "dyson_v16_piston_animal": 65,
+      "dyson_v8_absolute": 85,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P015",
+    "source_labels": [
+      "dyson_v15_detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 95,
+      "dyson_v15_detect": 95,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 85,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P016",
+    "source_labels": [
+      "dyson_v15_detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 75,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 75,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 75,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P017",
+    "source_labels": [
+      "dyson_v15_detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 95,
+      "dyson_v15_detect": 95,
+      "dyson_v16_piston_animal": 45,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_sure",
+        "product": null,
+        "score": 95,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P018",
+    "source_labels": [
+      "dyson_v15_detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 85,
+      "dyson_v12_detect_slim": 65,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 85,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_sure",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v8_absolute"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v8_absolute"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P019",
+    "source_labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 45,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 95,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 95,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 95,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P020",
+    "source_labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 35,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 95,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 95,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v8_absolute"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 95,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v8_absolute"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P021",
+    "source_labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 35,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 95,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 95,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 95,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P022",
+    "source_labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 25,
+      "dyson_v16_piston_animal": 95,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 95,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 95,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P023",
+    "source_labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 35,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 75,
+      "dyson_v8_absolute": 35,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 75,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 75,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P024",
+    "source_labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 85,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 85,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_sure",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v8_absolute"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v8_absolute"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P025",
+    "source_labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 35,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 92,
+      "dyson_v8_absolute": 35,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 92,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 92,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P026",
+    "source_labels": [
+      "dyson_big_ball"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 85,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_big_ball",
+        "score": 85,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P027",
+    "source_labels": [
+      "dyson_big_ball"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 85,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 35,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_big_ball",
+        "score": 85,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v8_absolute"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v8_absolute"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P028",
+    "source_labels": [
+      "dyson_big_ball"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 25,
+      "dyson_v12_detect_slim": 65,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 85,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 85,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P029",
+    "source_labels": [
+      "dyson_big_ball"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 85,
+      "dyson_v12_detect_slim": 65,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 25
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_big_ball"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_big_ball"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P030",
+    "source_labels": [
+      "dyson_big_ball"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 15,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 15,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P031",
+    "source_labels": [
+      "dyson_big_ball"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 85,
+      "dyson_v12_detect_slim": 35,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 35,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_big_ball",
+        "score": 85,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P032",
+    "source_labels": [
+      "dyson_wash_g1"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 95
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "score": 95,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_big_ball"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "score": 95,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_big_ball"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P033",
+    "source_labels": [
+      "dyson_wash_g1"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 0,
+      "dyson_v12_detect_slim": 45,
+      "dyson_v15_detect": 25,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 95
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "score": 95,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "score": 95,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P034",
+    "source_labels": [
+      "dyson_wash_g1"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 15,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 15,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P035",
+    "source_labels": [
+      "dyson_wash_g1"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 45,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 45,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_big_ball"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 45,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_big_ball"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P036",
+    "source_labels": [
+      "dyson_wash_g1"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 100
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "score": 100,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_big_ball"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "score": 100,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_big_ball"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P037",
+    "source_labels": [
+      "dyson_wash_g1"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 95
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "score": 95,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_big_ball"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "score": 95,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_big_ball"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P038",
+    "source_labels": [
+      "dyson_wash_g1"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 85
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "score": 85,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_big_ball"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_wash_g1",
+          "dyson_big_ball"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P039",
+    "source_labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 45,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 25
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P040",
+    "source_labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 35,
+      "dyson_v12_detect_slim": 65,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P041",
+    "source_labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 45,
+      "dyson_v15_detect": 85,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P042",
+    "source_labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 25,
+      "dyson_v12_detect_slim": 45,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 85,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 85,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P043",
+    "source_labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 45,
+      "dyson_v12_detect_slim": 65,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P045",
+    "source_labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 85,
+      "dyson_v12_detect_slim": 65,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_big_ball"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_big_ball"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P046",
+    "source_labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 35,
+      "dyson_v12_detect_slim": 35,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P047",
+    "source_labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 45,
+      "dyson_v15_detect": 45,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 85,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 85,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P048",
+    "source_labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 85,
+      "dyson_v15_detect": 85,
+      "dyson_v16_piston_animal": 45,
+      "dyson_v8_absolute": 75,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_sure",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P049",
+    "source_labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 35,
+      "dyson_v12_detect_slim": 45,
+      "dyson_v15_detect": 65,
+      "dyson_v16_piston_animal": 45,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P050",
+    "source_labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 35,
+      "dyson_v12_detect_slim": 35,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 95,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_big_ball"
+        ]
+      },
+      "90": {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "score": 95,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_big_ball"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P051",
+    "source_labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 25,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P052",
+    "source_labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 45,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P053",
+    "source_labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 35,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 45,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 45,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 45,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P054",
+    "source_labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 0,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 85,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "score": 85,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v16_piston_animal",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P055",
+    "source_labels": [
+      "NONCAT_shark_stratos"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 35,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 35,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v16_piston_animal"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 35,
+        "top_two": [
+          "dyson_v8_absolute",
+          "dyson_v16_piston_animal"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P056",
+    "source_labels": [
+      "NONCAT_shark_stratos"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 35,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 25,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 35,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v16_piston_animal"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 35,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v16_piston_animal"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P057",
+    "source_labels": [
+      "NONCAT_shark_stratos"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 65,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 35,
+      "dyson_v16_piston_animal": 45,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v8_absolute"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 65,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v8_absolute"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P058",
+    "source_labels": [
+      "NONCAT_shark_stratos"
+    ],
+    "evaluation_role": "labelled_single",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 15,
+      "dyson_v15_detect": 15,
+      "dyson_v16_piston_animal": 15,
+      "dyson_v8_absolute": 15,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 15,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 15,
+        "top_two": [
+          "dyson_big_ball",
+          "dyson_v12_detect_slim"
+        ]
+      }
+    }
+  },
+  {
+    "image_id": "P059",
+    "source_labels": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "evaluation_role": "labelled_multi",
+    "scores": {
+      "dyson_big_ball": 15,
+      "dyson_v12_detect_slim": 85,
+      "dyson_v15_detect": 85,
+      "dyson_v16_piston_animal": 35,
+      "dyson_v8_absolute": 65,
+      "dyson_wash_g1": 15
+    },
+    "decisions": {
+      "80": {
+        "status": "not_sure",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      },
+      "90": {
+        "status": "not_in_catalogue",
+        "product": null,
+        "score": 85,
+        "top_two": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ]
+      }
+    }
+  }
+]

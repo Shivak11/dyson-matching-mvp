@@ -69,10 +69,6 @@ class BaselineTests(unittest.TestCase):
             with self.assertRaises(AssertionError):
                 b.ledger_rows('new')
 
-
-if __name__ == '__main__':
-    unittest.main()
-
 class OpenRouterTests(unittest.TestCase):
     def test_json_response_and_reported_cost(self):
         response = {'choices': [{'finish_reason': 'stop', 'message': {'content': '{"similarity_score": 85, "reason": "Visible product shape"}'}}]}
@@ -96,3 +92,7 @@ class OpenRouterTests(unittest.TestCase):
             self.assertEqual(b.api_key_for('OPENROUTER_API_KEY'), 'unit-test-value')
             with self.assertRaises(RuntimeError):
                 b.api_key_for('MISSING_KEY')
+
+
+if __name__ == '__main__':
+    unittest.main()

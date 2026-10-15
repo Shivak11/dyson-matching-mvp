@@ -34,3 +34,6 @@ Shiva explicitly authorised retrieving OpenRouter from another project's env, ex
 Extend the existing runner for the OpenRouter request/response format, local JSON validation, reported usage.cost and graceful stop after recording in-flight responses. Retain the native Gemini path for interpreting saved Argon records; the default paid run must now use Qwen. Orchestrator ownership extends to .gitignore, data/baseline_qwen_config.json and docs/cheaper-model-approach.md. Stop after baseline results.
 
 The proposed step-4 study compares a cheap model alone with a second visual checker, potentially Gemma 4 26B A4B. This is a proposal, not approval to run new step-4 calls. Check every proposed automatic acceptance during that experiment, including high-scoring ones; agreement alone is not proof. Preserve no-training, embedding shortlist and insufficient-evidence decisions.
+
+## Step 3 status
+Completed the full Qwen baseline and independent score/cost verification. Results are in docs/step-3-baseline.md and out/baseline-qwen/. No further baseline API calls are required. Stop before step 4; the proposed two-model check is not yet implemented or evaluated.

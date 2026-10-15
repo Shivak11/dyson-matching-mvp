@@ -1,0 +1,100 @@
+{
+  "checks_passed": [
+    "348 unique successful comparisons",
+    "frozen configuration digest",
+    "all returned model IDs",
+    "raw response JSON equals parsed result",
+    "CSV scores equal raw responses",
+    "independent threshold and wrong-answer counts",
+    "provider-reported cost sum",
+    "under INR 50 stage limit"
+  ],
+  "independent_counts": {
+    "80": {
+      "accepted": 34,
+      "correct_known": 18,
+      "correct": 25,
+      "rejected": 15,
+      "uncertain": 8,
+      "wrong_accepted": 16,
+      "wrong_at_least_90": 12,
+      "correct_unknown": 7
+    },
+    "90": {
+      "rejected": 28,
+      "accepted": 24,
+      "correct_known": 12,
+      "correct": 23,
+      "uncertain": 5,
+      "wrong_accepted": 12,
+      "wrong_at_least_90": 12,
+      "correct_unknown": 11
+    }
+  },
+  "confusions": {
+    "80": [
+      {
+        "source_label": "NONCAT_dyson_v11",
+        "predicted": "dyson_v8_absolute",
+        "count": 7
+      },
+      {
+        "source_label": "NONCAT_dyson_gen5detect",
+        "predicted": "dyson_v8_absolute",
+        "count": 3
+      },
+      {
+        "source_label": "dyson_v12_detect_slim",
+        "predicted": "dyson_v15_detect",
+        "count": 2
+      },
+      {
+        "source_label": "dyson_big_ball",
+        "predicted": "dyson_v8_absolute",
+        "count": 2
+      },
+      {
+        "source_label": "dyson_v12_detect_slim",
+        "predicted": "dyson_v8_absolute",
+        "count": 1
+      },
+      {
+        "source_label": "NONCAT_dyson_gen5detect",
+        "predicted": "dyson_v16_piston_animal",
+        "count": 1
+      }
+    ],
+    "90": [
+      {
+        "source_label": "NONCAT_dyson_v11",
+        "predicted": "dyson_v8_absolute",
+        "count": 6
+      },
+      {
+        "source_label": "dyson_v12_detect_slim",
+        "predicted": "dyson_v15_detect",
+        "count": 2
+      },
+      {
+        "source_label": "NONCAT_dyson_gen5detect",
+        "predicted": "dyson_v8_absolute",
+        "count": 2
+      },
+      {
+        "source_label": "dyson_v12_detect_slim",
+        "predicted": "dyson_v8_absolute",
+        "count": 1
+      },
+      {
+        "source_label": "dyson_big_ball",
+        "predicted": "dyson_v8_absolute",
+        "count": 1
+      }
+    ]
+  },
+  "qwen_provider_reported_cost_usd": 0.03054383,
+  "qwen_cost_inr": 2.906460281723091,
+  "combined_recorded_model_cost_inr": 25.41319236979813,
+  "unresolved_argon_usage_reserve_inr": 17.26529231978562,
+  "total_budget_accounted_inr": 42.67848468958375
+}

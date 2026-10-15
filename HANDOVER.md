@@ -75,3 +75,8 @@ Write it in plain, direct English. No marketing tone.
 ## Step 2 completed on 15 October 2026
 
 The current test set is in data/test/test_manifest.json: 58 labelled photos, comprising 57 single-product photos and one source-labelled V12/V15 pair. data/test/demo_manifest.json holds one unlabelled display scene outside accuracy totals. Native image viewing dropped three candidates with no visible machine. The source metadata, precise counts, variant scope and collection recoveries are in docs/step-2-test-set.md. The contact sheet is out/test_contact_sheet.jpg. The old frames.json is preserved and is not the answer key. No baseline or paid matching calls have run. Stop after showing this sheet.
+
+
+## Step 3 completed on 15 October 2026
+
+Shiva stopped Argon for cost and authorised a cheaper OpenRouter model. The complete baseline is Qwen3.7 Flash: 348 comparisons across all 58 labelled photos, INR 2.91 total (about INR 0.05 per photo), no Qwen request failures. On 57 single-product photos, threshold 80 produced 25 correct decisions and 16 wrong accepted matches; threshold 90 produced 23 correct decisions and 12 wrong accepted matches. Both thresholds had 12 wrong accepted answers with score at least 90. The two-product photo was unresolved. See docs/step-3-baseline.md and out/baseline-qwen/. Argon partial results are separate in out/baseline/; do not present them as full-set accuracy. The default baseline runner now uses Qwen and loads the authorised local OpenRouter key from the ignored .env. No further Argon baseline calls. Stop before step 4.

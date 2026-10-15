@@ -1,0 +1,57 @@
+{
+  "study": "baseline-qwen-v1",
+  "model": "qwen/qwen3.7-flash",
+  "config_sha256": "c3a136a4a648583d46ff436f833942daa50d4b19fcc0d7ecc9645f5414eb7074",
+  "labelled_photos": 58,
+  "single_photos": 57,
+  "multi_photos": 1,
+  "successful_calls": 348,
+  "failed_calls": 0,
+  "model_versions": [
+    "qwen/qwen3.7-flash"
+  ],
+  "estimated_cost_usd": 0.03054383,
+  "estimated_cost_inr": 2.906460281723091,
+  "estimated_cost_inr_per_original_photo": 0.0501113841676395,
+  "mean_successful_pair_cost_inr": 0.00835189736127325
+}
+{
+  "threshold": "80",
+  "single_photo_count": 57,
+  "correct_total": 25,
+  "correct_catalogue_matches": 18,
+  "catalogue_photo_count": 38,
+  "correct_non_catalogue_rejections": 7,
+  "non_catalogue_photo_count": 19,
+  "accepted_count": 34,
+  "wrong_accepted_count": 16,
+  "not_sure_count": 8,
+  "not_in_catalogue_count": 15,
+  "confidently_wrong_count": 12,
+  "verification_pair_counts": {
+    "true_accept": 28,
+    "false_accept": 33,
+    "true_reject": 275,
+    "false_reject": 12
+  }
+}
+{
+  "threshold": "90",
+  "single_photo_count": 57,
+  "correct_total": 23,
+  "correct_catalogue_matches": 12,
+  "catalogue_photo_count": 38,
+  "correct_non_catalogue_rejections": 11,
+  "non_catalogue_photo_count": 19,
+  "accepted_count": 24,
+  "wrong_accepted_count": 12,
+  "not_sure_count": 5,
+  "not_in_catalogue_count": 28,
+  "confidently_wrong_count": 12,
+  "verification_pair_counts": {
+    "true_accept": 17,
+    "false_accept": 17,
+    "true_reject": 291,
+    "false_reject": 23
+  }
+}
