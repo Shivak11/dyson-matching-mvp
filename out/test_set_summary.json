@@ -1,0 +1,27 @@
+{
+  "downloaded": 62,
+  "labelled_photos": 58,
+  "single_product_photos": 57,
+  "labelled_multi_product_photos": 1,
+  "unlabelled_demo_photos": 1,
+  "dropped_no_product_visible": 3,
+  "single_product_counts": {
+    "dyson_v8_absolute": 6,
+    "dyson_v12_detect_slim": 6,
+    "dyson_v15_detect": 6,
+    "dyson_v16_piston_animal": 7,
+    "dyson_big_ball": 6,
+    "dyson_wash_g1": 7,
+    "NONCAT_dyson_v11": 7,
+    "NONCAT_dyson_gen5detect": 8,
+    "NONCAT_shark_stratos": 4
+  },
+  "labelled_source_groups": 11,
+  "downloaded_photo_bytes": 52960393,
+  "paid_matching_calls": 0,
+  "contact_sheet_sha256": "0f6c5e80610e75bfe0ea1ac38e36adb6bd595d1348ea08984c73d139fb8b63e4",
+  "contact_sheet_size": [
+    1800,
+    2602
+  ]
+}

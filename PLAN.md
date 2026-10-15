@@ -11,3 +11,6 @@ Check every retained file, dimensions, SHA-256, source fields, label coverage, e
 
 ## Current client decisions
 Both expected-model verification and catalogue identification are required later. Compare Gemini 4 Argon, GPT-5.5 and GPT-6.1 Sol; Claude Opus is removed. API budget is INR 2,000 including reruns. Return not sure/top-two or not in catalogue where appropriate. The local upload demo and scrolling HTML accuracy report follow later numbered steps.
+
+## Step 2 status
+The reviewed photo set and contact sheet are complete. File checks passed. Shiva has not yet reviewed the delivered contact sheet. Stop before step 3. See docs/step-2-test-set.md.

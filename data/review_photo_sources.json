@@ -1,0 +1,1123 @@
+[
+  {
+    "image_id": "P001",
+    "labels": [
+      "dyson_v8_absolute"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v8_geekdad",
+    "source_url": "https://geekdad.com/2018/01/review-dyson-v8-absolute-nails-cordless-vacuum/",
+    "source_title": "Review: Dyson V8 Absolute Nails the Cordless Vacuum",
+    "label_basis": "Article heading: Review: Dyson V8 Absolute Nails the Cordless Vacuum. Image alt text: Dyson V8 Absolute Review",
+    "source_alt": "Dyson V8 Absolute Review",
+    "source_html_sha256": "150702461dc77460ee51812f2cce3a7f06cef1fcf256b948ea4fbf95270c4775",
+    "image_url": "https://geekdad.com/wp-content/uploads/2018/01/Dyson-V8-Absolute-in-use.jpg",
+    "source_image_index": 1,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P002",
+    "labels": [
+      "dyson_v8_absolute"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v8_geekdad",
+    "source_url": "https://geekdad.com/2018/01/review-dyson-v8-absolute-nails-cordless-vacuum/",
+    "source_title": "Review: Dyson V8 Absolute Nails the Cordless Vacuum",
+    "label_basis": "Article heading: Review: Dyson V8 Absolute Nails the Cordless Vacuum. Image alt text: Dyson V8 Absolute Review",
+    "source_alt": "Dyson V8 Absolute Review",
+    "source_html_sha256": "150702461dc77460ee51812f2cce3a7f06cef1fcf256b948ea4fbf95270c4775",
+    "image_url": "https://geekdad.com/wp-content/uploads/2018/01/Dyson-V8-with-Accessories.jpg",
+    "source_image_index": 2,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P003",
+    "labels": [
+      "dyson_v8_absolute"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v8_geekdad",
+    "source_url": "https://geekdad.com/2018/01/review-dyson-v8-absolute-nails-cordless-vacuum/",
+    "source_title": "Review: Dyson V8 Absolute Nails the Cordless Vacuum",
+    "label_basis": "Article heading: Review: Dyson V8 Absolute Nails the Cordless Vacuum. Image alt text: Dyson V8 Absolute Review",
+    "source_alt": "Dyson V8 Absolute Review",
+    "source_html_sha256": "150702461dc77460ee51812f2cce3a7f06cef1fcf256b948ea4fbf95270c4775",
+    "image_url": "https://geekdad.com/wp-content/uploads/2018/01/Dyson-V8-in-hand-held-mode.jpg",
+    "source_image_index": 3,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P004",
+    "labels": [
+      "dyson_v8_absolute"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v8_guardian",
+    "source_url": "https://www.theguardian.com/technology/2016/may/04/dyson-v8-review-absolute-animal-cordless-vacuum",
+    "source_title": "Dyson V8 Absolute review: finally a cordless alternative to an upright",
+    "label_basis": "Article heading: Dyson V8 Absolute review: finally a cordless alternative to an upright. Image alt text: dyson v8 review",
+    "source_alt": "dyson v8 review",
+    "source_html_sha256": "a2d2d587c816f19093ce4fce266f29ff5bc3bb9f2dbdda533cedf268f9f797ad",
+    "image_url": "https://i.guim.co.uk/img/media/9b5155492b0351800ef1687782aebbd4f30514f0/0_0_4301_2581/master/4301.jpg?width=1200&dpr=1&s=none&crop=none",
+    "source_image_index": 1,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P005",
+    "labels": [
+      "dyson_v8_absolute"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v8_guardian",
+    "source_url": "https://www.theguardian.com/technology/2016/may/04/dyson-v8-review-absolute-animal-cordless-vacuum",
+    "source_title": "Dyson V8 Absolute review: finally a cordless alternative to an upright",
+    "label_basis": "Article heading: Dyson V8 Absolute review: finally a cordless alternative to an upright. Image alt text: dyson v8 review",
+    "source_alt": "dyson v8 review",
+    "source_html_sha256": "a2d2d587c816f19093ce4fce266f29ff5bc3bb9f2dbdda533cedf268f9f797ad",
+    "image_url": "https://i.guim.co.uk/img/media/8f328a64fced199a49c945a132a308cf7917abfd/0_0_3901_2341/master/3901.jpg?width=1200&dpr=1&s=none&crop=none",
+    "source_image_index": 3,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P006",
+    "labels": [
+      "dyson_v8_absolute"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v8_guardian",
+    "source_url": "https://www.theguardian.com/technology/2016/may/04/dyson-v8-review-absolute-animal-cordless-vacuum",
+    "source_title": "Dyson V8 Absolute review: finally a cordless alternative to an upright",
+    "label_basis": "Article heading: Dyson V8 Absolute review: finally a cordless alternative to an upright. Image alt text: dyson v8 review",
+    "source_alt": "dyson v8 review",
+    "source_html_sha256": "a2d2d587c816f19093ce4fce266f29ff5bc3bb9f2dbdda533cedf268f9f797ad",
+    "image_url": "https://i.guim.co.uk/img/media/61299188711fdd134984c057813d41b02a8c819f/0_0_4083_2450/master/4083.jpg?width=1200&dpr=1&s=none&crop=none",
+    "source_image_index": 4,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P007",
+    "labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v12_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v12-detect-slim",
+    "source_title": "Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated",
+    "label_basis": "Article heading: Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated. Image alt text: Dyson V12 Detect Slim",
+    "source_alt": "Dyson V12 Detect Slim",
+    "source_html_sha256": "17b0c1c60b694432781ced192d32b95dfa5dc0cf4bcba0fda6359a01cfc141cf",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/xhFAvdZQ4Phz4Gu9TQmQfb.jpg",
+    "source_image_index": 30,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P008",
+    "labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v12_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v12-detect-slim",
+    "source_title": "Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated",
+    "label_basis": "Article heading: Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated. Image alt text: Dyson V12 Detect Slim power button",
+    "source_alt": "Dyson V12 Detect Slim power button",
+    "source_html_sha256": "17b0c1c60b694432781ced192d32b95dfa5dc0cf4bcba0fda6359a01cfc141cf",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/cswZArMY5Ld9m3uq6nJU7S.jpg",
+    "source_image_index": 31,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P009",
+    "labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v12_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v12-detect-slim",
+    "source_title": "Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated",
+    "label_basis": "Article heading: Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated. Image alt text: Dyson V12 Detect Slim handheld unit side view",
+    "source_alt": "Dyson V12 Detect Slim handheld unit side view",
+    "source_html_sha256": "17b0c1c60b694432781ced192d32b95dfa5dc0cf4bcba0fda6359a01cfc141cf",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/tDLm4LZxyNaDt8Bz2J2RtT.jpg",
+    "source_image_index": 32,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P010",
+    "labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v12_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v12-detect-slim",
+    "source_title": "Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated",
+    "label_basis": "Article heading: Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated. Image alt text: Dyson V12 Detect Slim side view",
+    "source_alt": "Dyson V12 Detect Slim side view",
+    "source_html_sha256": "17b0c1c60b694432781ced192d32b95dfa5dc0cf4bcba0fda6359a01cfc141cf",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/Y8iu7RrQCnYMp5gmoMbnvj.jpg",
+    "source_image_index": 35,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P011",
+    "labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v12_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v12-detect-slim",
+    "source_title": "Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated",
+    "label_basis": "Article heading: Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated. Image alt text: Dyson V12 Detect Slim digital display",
+    "source_alt": "Dyson V12 Detect Slim digital display",
+    "source_html_sha256": "17b0c1c60b694432781ced192d32b95dfa5dc0cf4bcba0fda6359a01cfc141cf",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/veyoqqZvHcNyAL8UUcix6V.jpg",
+    "source_image_index": 36,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P012",
+    "labels": [
+      "dyson_v12_detect_slim"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v12_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v12-detect-slim",
+    "source_title": "Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated",
+    "label_basis": "Article heading: Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated. Image alt text: Dyson V12 Detect Slim's Hair Screw Tool",
+    "source_alt": "Dyson V12 Detect Slim's Hair Screw Tool",
+    "source_html_sha256": "17b0c1c60b694432781ced192d32b95dfa5dc0cf4bcba0fda6359a01cfc141cf",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/o3gEjGSHDDAx65aP2cSpQi.jpg",
+    "source_image_index": 37,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P013",
+    "labels": [
+      "dyson_v15_detect"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v15_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-v15-detect",
+    "source_title": "Dyson V15 Detect Review",
+    "label_basis": "Article heading: Dyson V15 Detect Review. Image alt text: Dyson V15 Detect Review (Testing the Dyson V15 Detect on a variety of surfaces.)",
+    "source_alt": "Dyson V15 Detect Review (Testing the Dyson V15 Detect on a variety of surfaces.)",
+    "source_html_sha256": "593eb90f911bba4e19b91ce0b5195f566744df84f7be66c79f0b3a242612d667",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/11/502653_25413_XXL.jpg",
+    "source_image_index": 3,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P014",
+    "labels": [
+      "dyson_v15_detect"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v15_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-v15-detect",
+    "source_title": "Dyson V15 Detect Review",
+    "label_basis": "Article heading: Dyson V15 Detect Review. Image alt text: dyson v15 detect - the green light helped us see debris on our hardwood floors.",
+    "source_alt": "dyson v15 detect - the green light helped us see debris on our hardwood floors.",
+    "source_html_sha256": "593eb90f911bba4e19b91ce0b5195f566744df84f7be66c79f0b3a242612d667",
+    "image_url": "https://techgearlab.b-cdn.net/photos/40/43/525848_10524_L2.jpg",
+    "source_image_index": 16,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P015",
+    "labels": [
+      "dyson_v15_detect"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v15_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-v15-detect",
+    "source_title": "Dyson V15 Detect Review",
+    "label_basis": "Article heading: Dyson V15 Detect Review. Image alt text: dyson v15 detect - holding a trigger down constantly while vacuuming can create hand...",
+    "source_alt": "dyson v15 detect - holding a trigger down constantly while vacuuming can create hand...",
+    "source_html_sha256": "593eb90f911bba4e19b91ce0b5195f566744df84f7be66c79f0b3a242612d667",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/11/502581_11948_L2.jpg",
+    "source_image_index": 17,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P016",
+    "labels": [
+      "dyson_v15_detect"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v15_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-v15-detect",
+    "source_title": "Dyson V15 Detect Review",
+    "label_basis": "Article heading: Dyson V15 Detect Review. Image alt text: the dyson v15 detect is a great choice for homes with stairs.",
+    "source_alt": "the dyson v15 detect is a great choice for homes with stairs.",
+    "source_html_sha256": "593eb90f911bba4e19b91ce0b5195f566744df84f7be66c79f0b3a242612d667",
+    "image_url": "https://techgearlab.b-cdn.net/photos/40/43/525846_11027_L2.jpg",
+    "source_image_index": 18,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P017",
+    "labels": [
+      "dyson_v15_detect"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v15_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-v15-detect",
+    "source_title": "Dyson V15 Detect Review",
+    "label_basis": "Article heading: Dyson V15 Detect Review. Image alt text: dyson v15 detect - the dyson v15 detect is one of the best-performing vacuums. part of...",
+    "source_alt": "dyson v15 detect - the dyson v15 detect is one of the best-performing vacuums. part of...",
+    "source_html_sha256": "593eb90f911bba4e19b91ce0b5195f566744df84f7be66c79f0b3a242612d667",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/10/502548_22999_XL.jpg",
+    "source_image_index": 22,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P018",
+    "labels": [
+      "dyson_v15_detect"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v15_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-v15-detect",
+    "source_title": "Dyson V15 Detect Review",
+    "label_basis": "Article heading: Dyson V15 Detect Review. Image alt text: dyson v15 detect - after 24 seconds in this trial, you can see most of the carpet was...",
+    "source_alt": "dyson v15 detect - after 24 seconds in this trial, you can see most of the carpet was...",
+    "source_html_sha256": "593eb90f911bba4e19b91ce0b5195f566744df84f7be66c79f0b3a242612d667",
+    "image_url": "https://techgearlab.b-cdn.net/photos/39/14/512960_13510_L2.jpg",
+    "source_image_index": 24,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P019",
+    "labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v16_techradar",
+    "source_url": "https://www.techradar.com/home/vacuums/dyson-v16-piston-animal-cordless-vacuum-review",
+    "source_title": "Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead",
+    "label_basis": "Article heading: Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead. Image alt text: Dyson V16 Piston Animal cordless stick vacuum",
+    "source_alt": "Dyson V16 Piston Animal cordless stick vacuum",
+    "source_html_sha256": "d8556b69bfcebfbe8bfa49e7d776a32c15fb592fdfa576396a4b34c7c5200f52",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/7XRpHBvww7YqX3nF6gfXzn-1200-80.jpg",
+    "source_image_index": 30,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text",
+    "original_source_image_url": "https://cdn.mos.cms.futurecdn.net/7XRpHBvww7YqX3nF6gfXzn.jpg",
+    "download_note": "Published 1200px srcset version; original exceeds 10 MB."
+  },
+  {
+    "image_id": "P020",
+    "labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v16_techradar",
+    "source_url": "https://www.techradar.com/home/vacuums/dyson-v16-piston-animal-cordless-vacuum-review",
+    "source_title": "Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead",
+    "label_basis": "Article heading: Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead. Image alt text: Close up of floorhead on Dyson V16 Piston Animal cordless stick vacuum being used on a rug",
+    "source_alt": "Close up of floorhead on Dyson V16 Piston Animal cordless stick vacuum being used on a rug",
+    "source_html_sha256": "d8556b69bfcebfbe8bfa49e7d776a32c15fb592fdfa576396a4b34c7c5200f52",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/dffrBv62SvT2eqf3CpPsAn-1200-80.jpg",
+    "source_image_index": 31,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text",
+    "original_source_image_url": "https://cdn.mos.cms.futurecdn.net/dffrBv62SvT2eqf3CpPsAn.jpg",
+    "download_note": "Published 1200px srcset version; original exceeds 10 MB."
+  },
+  {
+    "image_id": "P021",
+    "labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v16_techradar",
+    "source_url": "https://www.techradar.com/home/vacuums/dyson-v16-piston-animal-cordless-vacuum-review",
+    "source_title": "Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead",
+    "label_basis": "Article heading: Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead. Image alt text: Dyson V16 Piston Animal cordless stick vacuum with bin open",
+    "source_alt": "Dyson V16 Piston Animal cordless stick vacuum with bin open",
+    "source_html_sha256": "d8556b69bfcebfbe8bfa49e7d776a32c15fb592fdfa576396a4b34c7c5200f52",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/rW9yxcM8Lg9HS6h6hEaQFo-1200-80.jpg",
+    "source_image_index": 32,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text",
+    "original_source_image_url": "https://cdn.mos.cms.futurecdn.net/rW9yxcM8Lg9HS6h6hEaQFo.jpg",
+    "download_note": "Published 1200px srcset version; original exceeds 10 MB."
+  },
+  {
+    "image_id": "P022",
+    "labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v16_techradar",
+    "source_url": "https://www.techradar.com/home/vacuums/dyson-v16-piston-animal-cordless-vacuum-review",
+    "source_title": "Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead",
+    "label_basis": "Article heading: Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead. Image alt text: Close up of screen on Dyson V16 Piston Animal cordless stick vacuum, showing that it's in Auto mode",
+    "source_alt": "Close up of screen on Dyson V16 Piston Animal cordless stick vacuum, showing that it's in Auto mode",
+    "source_html_sha256": "d8556b69bfcebfbe8bfa49e7d776a32c15fb592fdfa576396a4b34c7c5200f52",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/2dAjtwgSWSg2nAexKM7V4o-1200-80.jpg",
+    "source_image_index": 34,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text",
+    "original_source_image_url": "https://cdn.mos.cms.futurecdn.net/2dAjtwgSWSg2nAexKM7V4o.jpg",
+    "download_note": "Published 1200px srcset version; original exceeds 10 MB."
+  },
+  {
+    "image_id": "P023",
+    "labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v16_techradar",
+    "source_url": "https://www.techradar.com/home/vacuums/dyson-v16-piston-animal-cordless-vacuum-review",
+    "source_title": "Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead",
+    "label_basis": "Article heading: Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead. Image alt text: Dyson V16 Piston Animal vacuum in handheld mode, being used to clean a baseboard",
+    "source_alt": "Dyson V16 Piston Animal vacuum in handheld mode, being used to clean a baseboard",
+    "source_html_sha256": "d8556b69bfcebfbe8bfa49e7d776a32c15fb592fdfa576396a4b34c7c5200f52",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/vDfZEqkoibEMqxpFrQhkMo-1200-80.jpg",
+    "source_image_index": 37,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text",
+    "original_source_image_url": "https://cdn.mos.cms.futurecdn.net/vDfZEqkoibEMqxpFrQhkMo.jpg",
+    "download_note": "Published 1200px srcset version; original exceeds 10 MB."
+  },
+  {
+    "image_id": "P024",
+    "labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v16_techradar",
+    "source_url": "https://www.techradar.com/home/vacuums/dyson-v16-piston-animal-cordless-vacuum-review",
+    "source_title": "Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead",
+    "label_basis": "Article heading: Dyson V16 Piston Animal review: a powerful vacuum let down by a poorly designed floorhead. Image alt text: Dyson V16 cleaning under a desk",
+    "source_alt": "Dyson V16 cleaning under a desk",
+    "source_html_sha256": "d8556b69bfcebfbe8bfa49e7d776a32c15fb592fdfa576396a4b34c7c5200f52",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/6vSbQXEA5GpBaLvWtTbbvV.jpg",
+    "source_image_index": 38,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P025",
+    "labels": [
+      "dyson_v16_piston_animal"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "v16_expert",
+    "source_url": "https://www.expertreviews.co.uk/home-garden/vacuums-cleaning/dyson-v16-piston-animal-review",
+    "source_title": "Dyson V16 Piston Animal review: A brilliant vacuum cleaner, but it’s very expensive",
+    "label_basis": "Article heading: Dyson V16 Piston Animal review: A brilliant vacuum cleaner, but it’s very expensive. Image alt text: The Dyson V16 Piston Animal pictured from above",
+    "source_alt": "The Dyson V16 Piston Animal pictured from above",
+    "source_html_sha256": "3dcec17f4563122ce0c2827c87388800dd21503fb11eb1c9d46f7e98b9ce0ed8",
+    "image_url": "https://images.expertreviews.co.uk/wp-content/uploads/sites/6/2025/09/Dyson-Piston-Animal-V16-_08.jpg",
+    "source_image_index": 13,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P026",
+    "labels": [
+      "dyson_big_ball"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "bigball_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/canister-vacuum/dyson-big-ball-turbinehead",
+    "source_title": "Dyson Big Ball Turbinehead Review",
+    "label_basis": "Article heading: Dyson Big Ball Turbinehead Review. Image alt text: Dyson Big Ball Turbinehead Review",
+    "source_alt": "Dyson Big Ball Turbinehead Review",
+    "source_html_sha256": "c42f6eeb93e99beefd23e832d8d73c2d1907522b52e47cd7c59290e8315c053f",
+    "image_url": "https://techgearlab.b-cdn.net/photos/40/18/523333_13964_XXL.jpg",
+    "source_image_index": 3,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P027",
+    "labels": [
+      "dyson_big_ball"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "bigball_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/canister-vacuum/dyson-big-ball-turbinehead",
+    "source_title": "Dyson Big Ball Turbinehead Review",
+    "label_basis": "Article heading: Dyson Big Ball Turbinehead Review. Image alt text: dyson big ball turbinehead - the big ball turbinehead is a bagless canister vacuum with a rolling...",
+    "source_alt": "dyson big ball turbinehead - the big ball turbinehead is a bagless canister vacuum with a rolling...",
+    "source_html_sha256": "c42f6eeb93e99beefd23e832d8d73c2d1907522b52e47cd7c59290e8315c053f",
+    "image_url": "https://techgearlab.b-cdn.net/photos/40/18/523332_19420_XL.jpg",
+    "source_image_index": 14,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P028",
+    "labels": [
+      "dyson_big_ball"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "bigball_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/canister-vacuum/dyson-big-ball-turbinehead",
+    "source_title": "Dyson Big Ball Turbinehead Review",
+    "label_basis": "Article heading: Dyson Big Ball Turbinehead Review. Image alt text: dyson big ball turbinehead - the dyson left our carpets with a mess to clean up after we had run...",
+    "source_alt": "dyson big ball turbinehead - the dyson left our carpets with a mess to clean up after we had run...",
+    "source_html_sha256": "c42f6eeb93e99beefd23e832d8d73c2d1907522b52e47cd7c59290e8315c053f",
+    "image_url": "https://techgearlab.b-cdn.net/photos/40/18/523324_30826_L2.jpg",
+    "source_image_index": 15,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P029",
+    "labels": [
+      "dyson_big_ball"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "bigball_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/canister-vacuum/dyson-big-ball-turbinehead",
+    "source_title": "Dyson Big Ball Turbinehead Review",
+    "label_basis": "Article heading: Dyson Big Ball Turbinehead Review. Image alt text: dyson big ball turbinehead - shown here is the brush roll completely overwhelmed by pet hair.",
+    "source_alt": "dyson big ball turbinehead - shown here is the brush roll completely overwhelmed by pet hair.",
+    "source_html_sha256": "c42f6eeb93e99beefd23e832d8d73c2d1907522b52e47cd7c59290e8315c053f",
+    "image_url": "https://techgearlab.b-cdn.net/photos/40/18/523307_28908_L2.jpg",
+    "source_image_index": 16,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P030",
+    "labels": [
+      "dyson_big_ball"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "bigball_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/canister-vacuum/dyson-big-ball-turbinehead",
+    "source_title": "Dyson Big Ball Turbinehead Review",
+    "label_basis": "Article heading: Dyson Big Ball Turbinehead Review. Image alt text: dyson big ball turbinehead - the whole system filter is effective at keeping particles trapped.",
+    "source_alt": "dyson big ball turbinehead - the whole system filter is effective at keeping particles trapped.",
+    "source_html_sha256": "c42f6eeb93e99beefd23e832d8d73c2d1907522b52e47cd7c59290e8315c053f",
+    "image_url": "https://techgearlab.b-cdn.net/photos/40/18/523326_16541_L2.jpg",
+    "source_image_index": 17,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P031",
+    "labels": [
+      "dyson_big_ball"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "bigball_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/canister-vacuum/dyson-big-ball-turbinehead",
+    "source_title": "Dyson Big Ball Turbinehead Review",
+    "label_basis": "Article heading: Dyson Big Ball Turbinehead Review. Image alt text: dyson big ball turbinehead - the dyson has an upholstery tool that mostly cleaned up our coffee...",
+    "source_alt": "dyson big ball turbinehead - the dyson has an upholstery tool that mostly cleaned up our coffee...",
+    "source_html_sha256": "c42f6eeb93e99beefd23e832d8d73c2d1907522b52e47cd7c59290e8315c053f",
+    "image_url": "https://techgearlab.b-cdn.net/photos/40/18/523354_7213_L2.jpg",
+    "source_image_index": 18,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P032",
+    "labels": [
+      "dyson_wash_g1"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "washg1_t3",
+    "source_url": "https://www.t3.com/home-living/vacuum-cleaners/dyson-washg1-review",
+    "source_title": "Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor",
+    "label_basis": "Article heading: Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor. Image alt text: Dyson Wash G1",
+    "source_alt": "Dyson Wash G1",
+    "source_html_sha256": "d50fdf29ad716a13abec8c5180c6be86106029a8255949b913842bc48c1576f9",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/E6uL2J3RJ3m8spLQwjcrib.jpg",
+    "source_image_index": 8,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P033",
+    "labels": [
+      "dyson_wash_g1"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "washg1_t3",
+    "source_url": "https://www.t3.com/home-living/vacuum-cleaners/dyson-washg1-review",
+    "source_title": "Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor",
+    "label_basis": "Article heading: Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor. Image alt text: Dyson Wash G1",
+    "source_alt": "Dyson Wash G1",
+    "source_html_sha256": "d50fdf29ad716a13abec8c5180c6be86106029a8255949b913842bc48c1576f9",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/fcotqKRmWGw8wCnD7Twpia.jpg",
+    "source_image_index": 14,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P034",
+    "labels": [
+      "dyson_wash_g1"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "washg1_t3",
+    "source_url": "https://www.t3.com/home-living/vacuum-cleaners/dyson-washg1-review",
+    "source_title": "Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor",
+    "label_basis": "Article heading: Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor. Image alt text: Dyson Wash G1",
+    "source_alt": "Dyson Wash G1",
+    "source_html_sha256": "d50fdf29ad716a13abec8c5180c6be86106029a8255949b913842bc48c1576f9",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/47qTqBpsnmBjodEkJTCXta.jpg",
+    "source_image_index": 15,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P035",
+    "labels": [
+      "dyson_wash_g1"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "washg1_t3",
+    "source_url": "https://www.t3.com/home-living/vacuum-cleaners/dyson-washg1-review",
+    "source_title": "Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor",
+    "label_basis": "Article heading: Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor. Image alt text: Dyson Wash G1",
+    "source_alt": "Dyson Wash G1",
+    "source_html_sha256": "d50fdf29ad716a13abec8c5180c6be86106029a8255949b913842bc48c1576f9",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/Cm2xbQPVLTYAntpSec7P6b.jpg",
+    "source_image_index": 16,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P036",
+    "labels": [
+      "dyson_wash_g1"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "washg1_t3",
+    "source_url": "https://www.t3.com/home-living/vacuum-cleaners/dyson-washg1-review",
+    "source_title": "Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor",
+    "label_basis": "Article heading: Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor. Image alt text: Dyson Wash G1",
+    "source_alt": "Dyson Wash G1",
+    "source_html_sha256": "d50fdf29ad716a13abec8c5180c6be86106029a8255949b913842bc48c1576f9",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/eZKCECKbCTUdQ3fRCGcJFb.jpg",
+    "source_image_index": 17,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P037",
+    "labels": [
+      "dyson_wash_g1"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "washg1_t3",
+    "source_url": "https://www.t3.com/home-living/vacuum-cleaners/dyson-washg1-review",
+    "source_title": "Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor",
+    "label_basis": "Article heading: Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor. Image alt text: Dyson Wash G1",
+    "source_alt": "Dyson Wash G1",
+    "source_html_sha256": "d50fdf29ad716a13abec8c5180c6be86106029a8255949b913842bc48c1576f9",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/6LBXC6apwR3UtPmNzPpaQb-1280-80.jpg",
+    "source_image_index": 18,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P038",
+    "labels": [
+      "dyson_wash_g1"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_single",
+    "source_group": "washg1_t3",
+    "source_url": "https://www.t3.com/home-living/vacuum-cleaners/dyson-washg1-review",
+    "source_title": "Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor",
+    "label_basis": "Article heading: Dyson WashG1 review: an ingenious wet cleaner that’s changed how I mop my floor. Image alt text: Dyson Wash G1",
+    "source_alt": "Dyson Wash G1",
+    "source_html_sha256": "d50fdf29ad716a13abec8c5180c6be86106029a8255949b913842bc48c1576f9",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/hQy4GeFjZRSATvnGAU8gZb-1280-80.jpg",
+    "source_image_index": 19,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P039",
+    "labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "v11_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v11",
+    "source_title": "I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb",
+    "label_basis": "Article heading: I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb. Image alt text: Dyson V11 stick vacuum",
+    "source_alt": "Dyson V11 stick vacuum",
+    "source_html_sha256": "d175eb0a16c778515785c85d7578b8f196b2560460f9c02a5dff9100f1121ad0",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/PK8SqJg82d2kzY8TFR3ELD.jpg",
+    "source_image_index": 30,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P040",
+    "labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "v11_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v11",
+    "source_title": "I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb",
+    "label_basis": "Article heading: I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb. Image alt text: Dyson V11 vacuum being used on carpet",
+    "source_alt": "Dyson V11 vacuum being used on carpet",
+    "source_html_sha256": "d175eb0a16c778515785c85d7578b8f196b2560460f9c02a5dff9100f1121ad0",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/qq7cmP4c3sXa8sht62dSSC.jpg",
+    "source_image_index": 31,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P041",
+    "labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "v11_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v11",
+    "source_title": "I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb",
+    "label_basis": "Article heading: I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb. Image alt text: Close up of control screen on Dyson V11 stick vacuum",
+    "source_alt": "Close up of control screen on Dyson V11 stick vacuum",
+    "source_html_sha256": "d175eb0a16c778515785c85d7578b8f196b2560460f9c02a5dff9100f1121ad0",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/Nf3r3ZEHtizF9hiG4iAaJD.jpg",
+    "source_image_index": 32,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P042",
+    "labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "v11_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v11",
+    "source_title": "I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb",
+    "label_basis": "Article heading: I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb. Image alt text: Dyson V11 stick vacuum with bin emptying slider being demonstrated",
+    "source_alt": "Dyson V11 stick vacuum with bin emptying slider being demonstrated",
+    "source_html_sha256": "d175eb0a16c778515785c85d7578b8f196b2560460f9c02a5dff9100f1121ad0",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/rezxGxcQagvytrQtrrK3KD.jpg",
+    "source_image_index": 33,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P043",
+    "labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "v11_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v11",
+    "source_title": "I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb",
+    "label_basis": "Article heading: I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb. Image alt text: Main floorhead for Dyson V11 stick vacuum",
+    "source_alt": "Main floorhead for Dyson V11 stick vacuum",
+    "source_html_sha256": "d175eb0a16c778515785c85d7578b8f196b2560460f9c02a5dff9100f1121ad0",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/ZMdCFxsLEvx2KtGLE4nfKD.jpg",
+    "source_image_index": 34,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P044",
+    "labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "v11_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v11",
+    "source_title": "I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb",
+    "label_basis": "Article heading: I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb. Image alt text: Combo tool and Crevice tool for Dyson V11 stick vacuum",
+    "source_alt": "Combo tool and Crevice tool for Dyson V11 stick vacuum",
+    "source_html_sha256": "d175eb0a16c778515785c85d7578b8f196b2560460f9c02a5dff9100f1121ad0",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/F5p4uqkYSaCK6uJRnZkZLD-1200-80.jpg",
+    "source_image_index": 36,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P045",
+    "labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "v11_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v11",
+    "source_title": "I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb",
+    "label_basis": "Article heading: I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb. Image alt text: Dyson V11 vacuum being used to clear lentils/rice and dry tea from carpet",
+    "source_alt": "Dyson V11 vacuum being used to clear lentils/rice and dry tea from carpet",
+    "source_html_sha256": "d175eb0a16c778515785c85d7578b8f196b2560460f9c02a5dff9100f1121ad0",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/aYs8Znp7AUDKJj3juhEiZC.jpg",
+    "source_image_index": 39,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P046",
+    "labels": [
+      "NONCAT_dyson_v11"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "v11_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v11",
+    "source_title": "I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb",
+    "label_basis": "Article heading: I re-tested the Dyson V11 for 2025, and while it lacks cutting-edge features, its cleaning powers are still absolutely superb. Image alt text: Dyson V11 vacuum being used to clear dog hair from carpet",
+    "source_alt": "Dyson V11 vacuum being used to clear dog hair from carpet",
+    "source_html_sha256": "d175eb0a16c778515785c85d7578b8f196b2560460f9c02a5dff9100f1121ad0",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/xda4AZraLkuGgbPtLsWerC.jpg",
+    "source_image_index": 40,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P047",
+    "labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "gen5_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-gen5detect",
+    "source_title": "Dyson Gen5detect Review",
+    "label_basis": "Article heading: Dyson Gen5detect Review. Image alt text: Dyson Gen5detect Review",
+    "source_alt": "Dyson Gen5detect Review",
+    "source_html_sha256": "2004a107ce20fde21e731b830a98d1052d030977aafaf0d57684fc7213350246",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/11/502654_7598_XXL.jpg",
+    "source_image_index": 3,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P048",
+    "labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "gen5_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-gen5detect",
+    "source_title": "Dyson Gen5detect Review",
+    "label_basis": "Article heading: Dyson Gen5detect Review. Image alt text: dyson gen5detect - the fluffy optic brush head has a green light that makes it easier...",
+    "source_alt": "dyson gen5detect - the fluffy optic brush head has a green light that makes it easier...",
+    "source_html_sha256": "2004a107ce20fde21e731b830a98d1052d030977aafaf0d57684fc7213350246",
+    "image_url": "https://techgearlab.b-cdn.net/photos/39/15/512993_4200_L2.jpg",
+    "source_image_index": 17,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P049",
+    "labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "gen5_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-gen5detect",
+    "source_title": "Dyson Gen5detect Review",
+    "label_basis": "Article heading: Dyson Gen5detect Review. Image alt text: dyson gen5detect - the dyson gen5detect is an all-around premium powerhouse, and its...",
+    "source_alt": "dyson gen5detect - the dyson gen5detect is an all-around premium powerhouse, and its...",
+    "source_html_sha256": "2004a107ce20fde21e731b830a98d1052d030977aafaf0d57684fc7213350246",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/10/502574_22475_XL.jpg",
+    "source_image_index": 19,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P050",
+    "labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "gen5_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-gen5detect",
+    "source_title": "Dyson Gen5detect Review",
+    "label_basis": "Article heading: Dyson Gen5detect Review. Image alt text: dyson gen5detect - in this carpet test, the gen5 head collected sand, rice, and...",
+    "source_alt": "dyson gen5detect - in this carpet test, the gen5 head collected sand, rice, and...",
+    "source_html_sha256": "2004a107ce20fde21e731b830a98d1052d030977aafaf0d57684fc7213350246",
+    "image_url": "https://techgearlab.b-cdn.net/photos/39/14/512920_11877_L2.jpg",
+    "source_image_index": 20,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P051",
+    "labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "gen5_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-gen5detect",
+    "source_title": "Dyson Gen5detect Review",
+    "label_basis": "Article heading: Dyson Gen5detect Review. Image alt text: dyson gen5detect - gen5detect's includes a hepa filter as part of their filtration...",
+    "source_alt": "dyson gen5detect - gen5detect's includes a hepa filter as part of their filtration...",
+    "source_html_sha256": "2004a107ce20fde21e731b830a98d1052d030977aafaf0d57684fc7213350246",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/10/502572_9719_L2.jpg",
+    "source_image_index": 28,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P052",
+    "labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "gen5_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-gen5detect",
+    "source_title": "Dyson Gen5detect Review",
+    "label_basis": "Article heading: Dyson Gen5detect Review. Image alt text: dyson gen5detect - we recorded the dyson gen5detect's handheld weight at 5.0 lbs, which...",
+    "source_alt": "dyson gen5detect - we recorded the dyson gen5detect's handheld weight at 5.0 lbs, which...",
+    "source_html_sha256": "2004a107ce20fde21e731b830a98d1052d030977aafaf0d57684fc7213350246",
+    "image_url": "https://techgearlab.b-cdn.net/photos/39/15/513035_4411_L2.jpg",
+    "source_image_index": 29,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P053",
+    "labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "gen5_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-gen5detect",
+    "source_title": "Dyson Gen5detect Review",
+    "label_basis": "Article heading: Dyson Gen5detect Review. Image alt text: dyson gen5detect - removing and maintaining the dust bin is straightforward, making...",
+    "source_alt": "dyson gen5detect - removing and maintaining the dust bin is straightforward, making...",
+    "source_html_sha256": "2004a107ce20fde21e731b830a98d1052d030977aafaf0d57684fc7213350246",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/10/502505_10846_L2.jpg",
+    "source_image_index": 30,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P054",
+    "labels": [
+      "NONCAT_dyson_gen5detect"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "gen5_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/dyson-gen5detect",
+    "source_title": "Dyson Gen5detect Review",
+    "label_basis": "Article heading: Dyson Gen5detect Review. Image alt text: dyson gen5detect - we very much liked the modern digital control and info screen on the...",
+    "source_alt": "dyson gen5detect - we very much liked the modern digital control and info screen on the...",
+    "source_html_sha256": "2004a107ce20fde21e731b830a98d1052d030977aafaf0d57684fc7213350246",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/10/502573_29376_L2.jpg",
+    "source_image_index": 31,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P055",
+    "labels": [
+      "NONCAT_shark_stratos"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "shark_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/shark-stratos-cordless",
+    "source_title": "Shark Stratos Cordless Review",
+    "label_basis": "Article heading: Shark Stratos Cordless Review. Image alt text: Shark Stratos Cordless Review",
+    "source_alt": "Shark Stratos Cordless Review",
+    "source_html_sha256": "72e51330bdd095a508579c26a097c2a19cd66f4c01a435b0ba285b7ba7563004",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/11/502650_23814_XXL.jpg",
+    "source_image_index": 3,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P056",
+    "labels": [
+      "NONCAT_shark_stratos"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "shark_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/shark-stratos-cordless",
+    "source_title": "Shark Stratos Cordless Review",
+    "label_basis": "Article heading: Shark Stratos Cordless Review. Image alt text: shark stratos cordless - the tall front head lets this cleaner head roll right over big...",
+    "source_alt": "shark stratos cordless - the tall front head lets this cleaner head roll right over big...",
+    "source_html_sha256": "72e51330bdd095a508579c26a097c2a19cd66f4c01a435b0ba285b7ba7563004",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/10/502540_12974_L2.jpg",
+    "source_image_index": 13,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P057",
+    "labels": [
+      "NONCAT_shark_stratos"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "shark_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/shark-stratos-cordless",
+    "source_title": "Shark Stratos Cordless Review",
+    "label_basis": "Article heading: Shark Stratos Cordless Review. Image alt text: shark stratos cordless - over time, pet hair could accumulate between the two rollers, having...",
+    "source_alt": "shark stratos cordless - over time, pet hair could accumulate between the two rollers, having...",
+    "source_html_sha256": "72e51330bdd095a508579c26a097c2a19cd66f4c01a435b0ba285b7ba7563004",
+    "image_url": "https://techgearlab.b-cdn.net/photos/37/4/491899_11683_L2.jpg",
+    "source_image_index": 18,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P058",
+    "labels": [
+      "NONCAT_shark_stratos"
+    ],
+    "in_catalog": false,
+    "evaluation_role": "labelled_single",
+    "source_group": "shark_gearlab",
+    "source_url": "https://www.techgearlab.com/reviews/floor-cleaning/cordless-stick-vacuum/shark-stratos-cordless",
+    "source_title": "Shark Stratos Cordless Review",
+    "label_basis": "Article heading: Shark Stratos Cordless Review. Image alt text: shark stratos cordless - shark's included anti-allergen brush worked well to while vacuuming...",
+    "source_alt": "shark stratos cordless - shark's included anti-allergen brush worked well to while vacuuming...",
+    "source_html_sha256": "72e51330bdd095a508579c26a097c2a19cd66f4c01a435b0ba285b7ba7563004",
+    "image_url": "https://techgearlab.b-cdn.net/photos/38/12/502716_23975_L2.jpg",
+    "source_image_index": 19,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P059",
+    "labels": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "in_catalog": true,
+    "evaluation_role": "labelled_multi",
+    "source_group": "v12_techradar",
+    "source_url": "https://www.techradar.com/reviews/dyson-v12-detect-slim",
+    "source_title": "Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated",
+    "label_basis": "Article heading: Dyson V12 Detect Slim vacuum cleaner review: powerful, tech-packed, and underrated. Image alt text: Dyson V12 Detect Slim and Dyson V15 Detect side by side",
+    "source_alt": "Dyson V12 Detect Slim and Dyson V15 Detect side by side",
+    "source_html_sha256": "17b0c1c60b694432781ced192d32b95dfa5dc0cf4bcba0fda6359a01cfc141cf",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/nufvZQjfoW7w9G2DxzGfse.jpg",
+    "source_image_index": 33,
+    "image_kind": "review_photograph",
+    "label_granularity": "model_family; source variant retained in title and alt text"
+  },
+  {
+    "image_id": "P060",
+    "labels": [],
+    "in_catalog": null,
+    "evaluation_role": "unlabelled_demo",
+    "source_group": "utrecht_store_2023",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dyson,_Utrecht_(2023)_01.jpg",
+    "source_title": "Dyson, Utrecht (2023) 01.jpg",
+    "label_basis": "The source identifies a Dyson shop; individual product models are not labelled. Demo only.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dyson%2C_Utrecht_%282023%29_01.jpg",
+    "image_kind": "store_photograph",
+    "creator": "Donald Trung Quoc Don",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "None; contact sheet resizes the preview."
+  },
+  {
+    "image_id": "P061",
+    "labels": [],
+    "in_catalog": null,
+    "evaluation_role": "unlabelled_demo",
+    "source_group": "utrecht_store_2023",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dyson,_Utrecht_(2023)_02.jpg",
+    "source_title": "Dyson, Utrecht (2023) 02.jpg",
+    "label_basis": "The source identifies a Dyson shop; individual product models are not labelled. Demo only.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Dyson%2C_Utrecht_%282023%29_02.jpg",
+    "image_kind": "store_photograph",
+    "creator": "Donald Trung Quoc Don",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "None; contact sheet resizes the preview."
+  },
+  {
+    "image_id": "P062",
+    "labels": [],
+    "in_catalog": null,
+    "evaluation_role": "unlabelled_demo",
+    "source_group": "ifa_display_2015",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dyson,_IFA_2015_-_20591413644.jpg",
+    "source_title": "Dyson, IFA 2015 - 20591413644.jpg",
+    "label_basis": "The file title and Commons category identify a Dyson display at IFA 2015. Individual models are unlabelled; demo only.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Dyson%2C_IFA_2015_-_20591413644.jpg",
+    "image_kind": "display_photograph",
+    "creator": "dambranslv",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "modifications": "None; contact sheet resizes the preview."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "image_id": "P062",
+    "labels": [],
+    "in_catalog": null,
+    "evaluation_role": "unlabelled_demo",
+    "source_group": "ifa_display_2015",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dyson,_IFA_2015_-_20591413644.jpg",
+    "source_title": "Dyson, IFA 2015 - 20591413644.jpg",
+    "label_basis": "The file title and Commons category identify a Dyson display at IFA 2015. Individual models are unlabelled; demo only.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Dyson%2C_IFA_2015_-_20591413644.jpg",
+    "image_kind": "display_photograph",
+    "creator": "dambranslv",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "modifications": "None; contact sheet resizes the preview.",
+    "width": 4896,
+    "height": 3264,
+    "file": "data/test/review_photos/P062.jpg",
+    "sha256": "6bd8e51340f7960c104ff7ccda4bf9050686343aff9624432e802b43d9915155",
+    "bytes": 9218936,
+    "presence_review": {
+      "image_id": "P062",
+      "product_visible": true,
+      "review_method": "native_image_viewing",
+      "review_date": "2026-10-15",
+      "review_scope": "Product presence only; model labels are inherited from source text.",
+      "reason": "A vacuum or catalogue floor cleaner is visible, including partial views and close-ups."
+    },
+    "label": "unlabelled_display"
+  }
+]

@@ -70,3 +70,8 @@ Write it in plain, direct English. No marketing tone.
 - Python 3.14 with Pillow is installed. `yt-dlp` and `ffmpeg` are in `/opt/homebrew/bin`.
 - Shiva approved downloading the images (catalog plus about 30 to 60 public test images, under 100 MB).
 - This folder is a temporary session folder. Move the project somewhere permanent before relying on it.
+
+
+## Step 2 completed on 15 October 2026
+
+The current test set is in data/test/test_manifest.json: 58 labelled photos, comprising 57 single-product photos and one source-labelled V12/V15 pair. data/test/demo_manifest.json holds one unlabelled display scene outside accuracy totals. Native image viewing dropped three candidates with no visible machine. The source metadata, precise counts, variant scope and collection recoveries are in docs/step-2-test-set.md. The contact sheet is out/test_contact_sheet.jpg. The old frames.json is preserved and is not the answer key. No baseline or paid matching calls have run. Stop after showing this sheet.

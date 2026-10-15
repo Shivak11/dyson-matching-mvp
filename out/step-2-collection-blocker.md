@@ -1,3 +1,5 @@
+Current status: the YouTube route remains blocked, but step 2 was completed using source-labelled review photographs after Shiva authorised alternative search methods. See docs/step-2-test-set.md.
+
 # Step 2 collection blocker
 
 Date: 15 October 2026
