@@ -1,0 +1,274 @@
+{
+  "study_id": "pipeline-v1-slow-gemini-sol-high",
+  "test_manifest_sha256": "25f2b5497326cf3ba37be7393ff68d7e3907f284e7a89e283468d3d97acf0a32",
+  "catalogue_order": [
+    "dyson_big_ball",
+    "dyson_v12_detect_slim",
+    "dyson_v15_detect",
+    "dyson_v16_piston_animal",
+    "dyson_v8_absolute",
+    "dyson_wash_g1"
+  ],
+  "reference_pack_sha256": "fde2968bb61e574756cf9e8d68bd1c955804ce4742df660005c42eb1fa783e08",
+  "telling_details_sha256": "671f904120856cf5e0d09471270adc7f3e8f3d66e19ab1563280c3a1bfb63df7",
+  "budget": {
+    "stage_max_inr": 199.5951264,
+    "total_max_inr": 2000,
+    "prior_accounted_inr": 243.0848736,
+    "usd_inr": 100
+  },
+  "reporting_usd_inr": 95.15703439035285,
+  "pricing_checked_date": "2026-10-15",
+  "pricing_sources": [
+    "https://openrouter.ai/api/v1/models",
+    "https://ai.google.dev/gemini-api/docs/pricing"
+  ],
+  "models": {
+    "detector": {
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "input_usd_per_million": 0.75,
+      "output_usd_per_million": 3.75,
+      "cached_input_usd_per_million": 0.75,
+      "max_output_tokens": 2048,
+      "input_token_bound": 6000,
+      "thinking_level": "low"
+    },
+    "qwen": {
+      "model": "qwen/qwen3.7-flash",
+      "provider": "openrouter",
+      "input_usd_per_million": 0.035,
+      "output_usd_per_million": 0.15,
+      "cached_input_usd_per_million": 0.035,
+      "max_output_tokens": 2400,
+      "input_token_bound": 28000
+    },
+    "gemma": {
+      "model": "google/gemma-4-26b-a4b-it",
+      "provider": "openrouter",
+      "input_usd_per_million": 0.1,
+      "output_usd_per_million": 0.35,
+      "cached_input_usd_per_million": 0.1,
+      "max_output_tokens": 2400,
+      "input_token_bound": 28000
+    },
+    "gpt55": {
+      "model": "openai/gpt-5.5",
+      "provider": "openrouter",
+      "input_usd_per_million": 5,
+      "output_usd_per_million": 30,
+      "cached_input_usd_per_million": 5,
+      "max_output_tokens": 4000,
+      "input_token_bound": 28000,
+      "thinking_level": "low"
+    },
+    "sol": {
+      "model": "openai/gpt-6.1-sol",
+      "provider": "openrouter",
+      "input_usd_per_million": 2,
+      "output_usd_per_million": 10,
+      "cached_input_usd_per_million": 2,
+      "max_output_tokens": 4000,
+      "input_token_bound": 28000,
+      "thinking_level": "low"
+    },
+    "argon": {
+      "model": "gemini-4-argon",
+      "provider": "gemini",
+      "input_usd_per_million": 2,
+      "output_usd_per_million": 10,
+      "cached_input_usd_per_million": 0.1,
+      "max_output_tokens": 4000,
+      "input_token_bound": 28000,
+      "thinking_level": "low"
+    },
+    "pro31": {
+      "model": "gemini-3.1-pro-preview",
+      "provider": "gemini",
+      "input_usd_per_million": 2,
+      "output_usd_per_million": 12,
+      "cached_input_usd_per_million": 0.2,
+      "max_output_tokens": 4000,
+      "input_token_bound": 28000,
+      "thinking_level": "low"
+    },
+    "qwen38max": {
+      "model": "qwen/qwen3.8-max-0902",
+      "provider": "openrouter",
+      "input_usd_per_million": 2,
+      "output_usd_per_million": 6,
+      "cached_input_usd_per_million": 0.25,
+      "max_output_tokens": 16384,
+      "input_token_bound": 28000,
+      "thinking_level": "high",
+      "request_timeout_seconds": 480,
+      "provider_only": [
+        "alibaba/us-east-1",
+        "alibaba"
+      ]
+    },
+    "flash37high": {
+      "model": "google/gemini-3.7-flash",
+      "provider": "openrouter",
+      "input_usd_per_million": 0.75,
+      "output_usd_per_million": 3.75,
+      "cached_input_usd_per_million": 0.075,
+      "max_output_tokens": 16384,
+      "input_token_bound": 28000,
+      "thinking_level": "high",
+      "request_timeout_seconds": 480,
+      "provider_only": [
+        "google-vertex/global/flex"
+      ]
+    },
+    "solmax": {
+      "model": "openai/gpt-6.1-sol",
+      "provider": "openrouter",
+      "input_usd_per_million": 2,
+      "output_usd_per_million": 10,
+      "cached_input_usd_per_million": 2,
+      "max_output_tokens": 16384,
+      "input_token_bound": 28000,
+      "thinking_level": "max",
+      "request_timeout_seconds": 480,
+      "provider_only": [
+        "openai"
+      ]
+    },
+    "solhigh": {
+      "model": "openai/gpt-6.1-sol",
+      "provider": "openrouter",
+      "input_usd_per_million": 2,
+      "output_usd_per_million": 10,
+      "cached_input_usd_per_million": 2,
+      "max_output_tokens": 16384,
+      "input_token_bound": 28000,
+      "thinking_level": "high",
+      "request_timeout_seconds": 480,
+      "provider_only": [
+        "openai"
+      ]
+    }
+  },
+  "embedding": {
+    "model": "gemini-embedding-2",
+    "dimensions": 3072,
+    "usd_per_image": 0.00012
+  },
+  "crop_padding_fraction": 0.06,
+  "query_max_dimension": 1536,
+  "reference_max_dimension": 1024,
+  "retrieval_top_k": 3,
+  "reference_images_per_candidate": 2,
+  "variants": [
+    "visual",
+    "telling_details"
+  ],
+  "full_set_models": [
+    "qwen",
+    "gemma",
+    "argon"
+  ],
+  "premium_models": [
+    "sol",
+    "gpt55",
+    "pro31",
+    "qwen38max",
+    "flash37high",
+    "solmax",
+    "solhigh"
+  ],
+  "premium_variant": "telling_details",
+  "premium_subset_ids": [
+    "P026",
+    "P031",
+    "P007",
+    "P012",
+    "P013",
+    "P018",
+    "P019",
+    "P025",
+    "P001",
+    "P006",
+    "P032",
+    "P038",
+    "P039",
+    "P047",
+    "P055",
+    "P059"
+  ],
+  "premium_subset_rule": "First and last single photo for each catalogue label in manifest order, first V11/Gen5/Shark, plus the source-labelled pair. Chosen before new model results.",
+  "confidence_threshold": 90,
+  "run_concurrency": 1,
+  "check_order": [
+    "qwen",
+    "gemma",
+    "sol",
+    "gpt55",
+    "pro31",
+    "argon",
+    "qwen38max",
+    "flash37high",
+    "solmax",
+    "solhigh"
+  ],
+  "model_variants": {
+    "qwen": [
+      "visual",
+      "telling_details"
+    ],
+    "gemma": [
+      "visual",
+      "telling_details"
+    ],
+    "sol": [
+      "telling_details"
+    ],
+    "gpt55": [
+      "telling_details"
+    ],
+    "pro31": [
+      "telling_details"
+    ],
+    "argon": [
+      "telling_details"
+    ],
+    "qwen38max": [
+      "telling_details"
+    ],
+    "flash37high": [
+      "telling_details"
+    ],
+    "solmax": [
+      "telling_details"
+    ],
+    "solhigh": [
+      "telling_details"
+    ]
+  },
+  "requested_models": [
+    "flash37high",
+    "solhigh"
+  ],
+  "selection_note": "Owner requested slow Gemini 3.7 Flash high versus GPT-6.1 Sol high. Gemini keeps its exact previous pinned request; Sol high is a separate key from Sol max. Reuse only exact historical request hashes. All failed attempts remain budget-accounted.",
+  "source_head": "23b7029",
+  "previous_ledgers": [
+    {
+      "file": "out/pipeline/calls.jsonl",
+      "sha256": "4fdff79add26e2f2896eb34f8f1c544855b8bc6867a3d96805c2f1b508c2045e",
+      "accounted_cost_usd": 0.942440986
+    },
+    {
+      "file": "out/pipeline/high_reasoning/calls.jsonl",
+      "sha256": "b8988e6e0cceadf47416fe53c93ad08c1c1942c29c15cbb8496655a915e75fac",
+      "accounted_cost_usd": 1.06160775
+    }
+  ],
+  "stage_ceiling_inr": 400,
+  "prior_stage_accounted_inr": 42.68,
+  "rate_limit_policy": {
+    "rate_limit_retries": 3,
+    "request_interval_seconds": 15,
+    "max_retry_delay_seconds": 300
+  }
+}
