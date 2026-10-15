@@ -169,7 +169,9 @@ def run(config, config_sha, rows, parts, limit):
                 spent += record['estimated_cost_usd']
                 if record['status'] == 'error':
                     failures.append(record['error'])
-        count = len(completed) + min(start + len(batch), len(jobs))
+                else:
+                    completed.add((record['image_id'], record['catalogue_id']))
+        count = len(completed)
         print(json.dumps({'completed_pairs': count, 'total_pairs': len(rows) * len(config['catalogue_order']), 'estimated_cost_usd': round(spent, 6), 'failed_this_batch': len(failures)}), flush=True)
         if failures:
             raise RuntimeError('Provider/response failure; no further batches scheduled: ' + failures[0])

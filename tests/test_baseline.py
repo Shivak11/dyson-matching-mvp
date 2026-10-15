@@ -52,7 +52,7 @@ class BaselineTests(unittest.TestCase):
         rows = [{'image_id': 'P001', 'labels': ['a'], 'evaluation_role': 'labelled_single'}, {'image_id': 'P002', 'labels': ['NONCAT_x'], 'evaluation_role': 'labelled_single'}]
         config = dict(self.config, catalogue_order=['a', 'b'], thresholds=[90])
         calls = [{'image_id': i, 'catalogue_id': p, 'status': 'ok', 'config_sha256': 'fixed', 'result': {'similarity_score': score}, 'estimated_cost_usd': 0.01} for i, p, score in [('P001', 'a', 80), ('P001', 'b', 95), ('P002', 'a', 30), ('P002', 'b', 20)]]
-        with tempfile.TemporaryDirectory() as d, patch.object(b, 'OUT', Path(d)), patch.object(b, 'ledger_rows', return_value=calls):
+        with tempfile.TemporaryDirectory() as d, patch.object(b, 'OUT', Path(d)), patch.object(b, 'ledger_rows', return_value=calls), patch('builtins.print'):
             b.summarize(config, 'fixed', rows)
             result = json.loads((Path(d) / 'summary.json').read_text())['thresholds']['90']
             self.assertEqual(result['correct_total'], 1)
