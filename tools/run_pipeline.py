@@ -77,8 +77,9 @@ def rank_products(vector, refs, vectors, top_k):
 def validate_result(result, candidates):
     result=json.loads(json.dumps(result))
     d=result['decision']; status=d['status']
-    if status=='not_in_catalogue' and d.get('top_two') is None:
-        d['top_two']=[]
+    if status=='not_in_catalogue':
+        if d.get('top_two') is None: d['top_two']=[]
+        elif isinstance(d['top_two'],list): d['top_two']=[v for v in d['top_two'] if v is not None]
     if status not in ('match','not_sure','not_in_catalogue'): raise ValueError('Invalid status')
     confidence=d['confidence']
     if isinstance(confidence,bool) or not isinstance(confidence,(int,float)) or not math.isfinite(confidence) or not 0<=confidence<=100: raise ValueError('Invalid confidence')

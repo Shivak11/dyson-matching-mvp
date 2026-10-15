@@ -36,6 +36,8 @@ class PipelineTests(unittest.TestCase):
         out=validate_result(raw,['a','b'])
         self.assertEqual(out['decision']['top_two'],[])
         self.assertIsNone(raw['decision']['top_two'])
+        raw['decision']['top_two']=[None,None]
+        self.assertEqual(validate_result(raw,['a','b'])['decision']['top_two'],[])
     def test_conflicting_confirmations_cannot_be_accepted(self):
         raw=self.result();raw['decision']['confidence']=99
         raw['candidate_checks'][1]['outcome']='confirmed'
