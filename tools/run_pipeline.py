@@ -208,6 +208,8 @@ def check(config,client,photos,refs,ids,models,variants,expected=None):
     detections=read(OUT/'detections.json',{}); shortlists=read(OUT/'shortlists.json',{})
     cards=read(ROOT/'data/telling_details.json',{})
     vectors=read(OUT/'embeddings.json',{}) if expected else {}
+    excluded=set(read(ROOT/'data/pipeline_exclusions.json',{}).get('model_keys',[]))
+    if any(m in excluded for m in models): raise ValueError('An explicitly excluded model was requested')
     previous=read(OUT/'results.json',[])
     results={(r['model'],r['variant'],r['instance_id']):r for r in previous if '+' not in r['model']}
     jobs=[]
@@ -250,10 +252,11 @@ def check(config,client,photos,refs,ids,models,variants,expected=None):
 
 def summarise(config,rows):
     from evaluate_pipeline import combine_decisions,evaluate
-    results=[r for r in read(OUT/'results.json',[]) if '+' not in r['model']]
+    excluded=set(read(ROOT/'data/pipeline_exclusions.json',{}).get('model_keys',[]))
+    results=[r for r in read(OUT/'results.json',[]) if '+' not in r['model'] and r['model'] not in excluded]
     lookup={(r['model'],r['variant'],r['instance_id']):r for r in results}
     from itertools import combinations
-    for first,second in combinations(config['check_order'],2):
+    for first,second in combinations([m for m in config['check_order'] if m not in excluded],2):
         for r in list(results):
             if r['model']!=first: continue
             other=lookup.get((second,r['variant'],r['instance_id']))
@@ -294,10 +297,12 @@ def main():
         elif args.limit: ids=ids[:args.limit]
         if args.stage in ('detect','embed','check','all') and not args.run: raise SystemExit('Paid stages require --run')
         client=Client(config,ROOT,OUT)
+        excluded=set(read(ROOT/'data/pipeline_exclusions.json',{}).get('model_keys',[]))
+        selected=args.model or [m for m in (['qwen','argon'] if args.photo else config['check_order']) if m not in excluded]
         try:
             if args.stage in ('detect','all'): detect(config,client,photos,ids)
             if args.stage in ('embed','all'): embeddings(config,client,refs,ids)
-            if args.stage in ('check','all'): check(config,client,photos,refs,ids,args.model or (['qwen','gemma'] if args.photo else config['check_order']),args.variant or (['telling_details'] if args.photo else config['variants']),args.expected_product)
+            if args.stage in ('check','all'): check(config,client,photos,refs,ids,selected,args.variant or (['telling_details'] if args.photo else config['variants']),args.expected_product)
             if args.stage in ('summarize','all'): summarise(config,rows)
             if args.photo:
                 upload=[r for r in read(OUT/'results.json',[]) if r['image_id']==ids[0]]

@@ -57,3 +57,6 @@ Shiva requested higher Gemini models too. Include Gemini 4 Argon and Gemini 3.1 
 The orchestrator additionally owns tools/summarize_pipeline_study.py and tests/test_pipeline_study.py for full-set and fixed-subset cost/accuracy tables. Scheduling may use --workers without changing the frozen requests or model settings; every concurrent request remains budget-reserved. Eight workers are used for cheap checks, with lower concurrency for premium calls. This changes wall-clock scheduling only.
 
 All pairs of independently collected models will be compared offline on common inputs. This adds no inference calls. Pair results require the same resolved answer and use the lower confidence; report acceptance and unresolved coverage as well as errors. Full-set pairs and fixed-subset pairs remain separate, and small-subset rankings are exploratory.
+
+### Owner removed Gemma
+The owner wrote "Just drop Gemma.....use better models". Do not send further Gemma requests. Preserve its original responses and charges, exclude it from comparison results, and continue Argon, Gemini 3.1 Pro, Sol and GPT-5.5. Completed Qwen results remain as the cheap-model comparison. The spending ceiling stays INR 400. data/pipeline_exclusions.json records this instruction without changing previously frozen requests.
