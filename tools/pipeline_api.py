@@ -1,10 +1,13 @@
 """Metered, resumable transport for the frozen pipeline experiment."""
 import base64
 import copy
+from contextlib import nullcontext
+from email.utils import parsedate_to_datetime
 import json
 import math
 import mimetypes
 import os
+import random
 from pathlib import Path
 import threading
 import time
@@ -57,7 +60,19 @@ def parse_generation(response, provider):
 
 class Client:
     """The runner holds the process lock; this class serialises ledger updates."""
-    def __init__(self, config, root, out):
+    def __init__(self, config, root, out, *, reuse_records=(), rate_limit_retries=0, request_interval_seconds=0, max_retry_delay_seconds=300):
+        if isinstance(rate_limit_retries, bool) or not isinstance(rate_limit_retries, int) or rate_limit_retries < 0:
+            raise ValueError('rate_limit_retries must be a non-negative integer')
+        self.rate_limit_retries = rate_limit_retries
+        self.request_interval_seconds = positive(request_interval_seconds, 'request_interval_seconds', True)
+        self.max_retry_delay_seconds = positive(max_retry_delay_seconds, 'max_retry_delay_seconds', True)
+        reuse_records = copy.deepcopy(list(reuse_records))
+        self.retry_enabled = bool(reuse_records) or rate_limit_retries > 0
+        self.reused_jobs = set()
+        self.reuse_records = {row.get('logical_job_id', row['job_id']): row for row in reuse_records}
+        self.reuse_job_ids = {row['job_id'] for row in reuse_records}
+        self.request_lock = threading.Lock()
+        self.last_request_finished_at = None
         self.config = copy.deepcopy(config)
         self.root, self.out = Path(root), Path(out)
         self.out.mkdir(parents=True, exist_ok=True)
@@ -77,10 +92,12 @@ class Client:
         self.calls_path = self.out / 'calls.jsonl'
         records = [json.loads(line) for line in self.calls_path.read_text().splitlines()] if self.calls_path.exists() else []
         self.records = {}
+        self.logical_records = {}
+        self.attempts = {}
         for row in records:
             if row['config_sha256'] != self.config_sha256:
                 raise ValueError('Config changed after metered calls')
-            self.records[row['job_id']] = row
+            self._index_record(row)
         self.spent_usd = sum(positive(row['estimated_cost_usd'], 'recorded cost', True) for row in records if row['status'] != 'validation_error')
         self.pending_path = self.out / 'inflight.json'
         self.pending = json.loads(self.pending_path.read_text()) if self.pending_path.exists() else {}
@@ -88,7 +105,11 @@ class Client:
             raise ValueError('Config changed with requests in flight')
         # A saved terminal response settles its reservation even if the process stopped before removal.
         self.pending = {job: row for job, row in self.pending.items() if job not in self.records}
-        self.failure = bool(self.pending) or any(row['status'] != 'ok' for row in self.records.values())
+        self.unresolved_jobs = set(self.pending)
+        self._refresh_failure()
+        finished = [row['request_finished_unix'] for row in records + reuse_records if isinstance(row.get('request_finished_unix'), (int, float)) and math.isfinite(row['request_finished_unix'])]
+        if finished:
+            self.last_request_finished_at = time.monotonic() - max(0, time.time() - max(finished))
         if self.pending_path.exists():
             self._atomic_json(self.pending_path, self.pending)
 
@@ -110,7 +131,56 @@ class Client:
             target.write(encoded(record) + b'\n')
             target.flush()
             os.fsync(target.fileno())
+        self._index_record(record)
+
+    def _index_record(self, record):
+        logical_id = record.get('logical_job_id', record['job_id'])
         self.records[record['job_id']] = record
+        self.logical_records[logical_id] = record
+        if 'reserved_cost_usd' in record:
+            self.attempts.setdefault(logical_id, set()).add(record['job_id'])
+
+    @staticmethod
+    def _is_rate_limit(record):
+        # Older frozen ledgers predate the explicit HTTP status field.
+        return record['status'] == 'error' and (record.get('http_status') == 429 or ('http_status' not in record and record.get('error', '').startswith('HTTP Error 429:')))
+
+    def _recoverable(self, logical_id, record):
+        return self.retry_enabled and self._is_rate_limit(record) and not record.get('retry_exhausted') and len(self.attempts.get(logical_id, ())) < 1 + self.rate_limit_retries
+
+    def _refresh_failure(self):
+        latest = {**self.reuse_records, **self.logical_records}
+        self.failure = bool(self.unresolved_jobs) or any(row['status'] != 'ok' and not self._recoverable(job, row) for job, row in latest.items())
+
+    def _wait(self, seconds):
+        deadline = time.monotonic() + seconds
+        while True:
+            if (self.out / 'STOP').exists():
+                raise RuntimeError('Pipeline STOP file is present')
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                return
+            time.sleep(min(remaining, 30))
+
+    def _retry_delay(self, record, count):
+        delay = 60 * (2 ** min(max(count - 1, 0), 10)) + random.uniform(0, 1)
+        return max(delay, record.get('retry_after_seconds', 0))
+
+    @staticmethod
+    def _retry_after(header):
+        if not isinstance(header, str) or len(header) > 256:
+            return None
+        try:
+            delay = float(header)
+        except ValueError:
+            try:
+                when = parsedate_to_datetime(header)
+                if when.tzinfo is None:
+                    return None
+                delay = max(0, when.timestamp() - time.time())
+            except (TypeError, ValueError, OverflowError):
+                return None
+        return delay if math.isfinite(delay) and delay >= 0 else None
 
     @property
     def accounted_cost_usd(self):
@@ -173,14 +243,46 @@ class Client:
             raise ValueError('A non-empty job ID is required')
         body = encoded(payload)
         request_sha = digest(url.encode() + b'\n' + body)
-        with self.lock:
-            old = self.records.get(job_id)
+        sequential = self.retry_enabled or self.request_interval_seconds > 0
+        with self.request_lock if sequential else nullcontext():
+            with self.lock:
+                old = self.logical_records.get(job_id, self.reuse_records.get(job_id))
+                if old:
+                    if old['request_sha256'] != request_sha:
+                        raise ValueError('Request changed for cached job: ' + job_id)
+                    if old['status'] == 'ok':
+                        if job_id not in self.logical_records:
+                            self.reused_jobs.add(job_id)
+                        return copy.deepcopy(old['result'])
+                    if not self._recoverable(job_id, old):
+                        raise RuntimeError('Previously failed job cannot be retried: ' + job_id)
+                if self.failure or any(row.get('logical_job_id', pending_id) == job_id for pending_id, row in self.pending.items()):
+                    raise RuntimeError('Pipeline stopped after failed or unresolved request; inspect calls.jsonl and inflight.json')
             if old:
-                if old['request_sha256'] != request_sha:
-                    raise ValueError('Request changed for cached job: ' + job_id)
-                if old['status'] != 'ok':
-                    raise RuntimeError('Previously failed job cannot be retried: ' + job_id)
-                return copy.deepcopy(old['result'])
+                delay = old.get('retry_delay_seconds', self._retry_delay(old, len(self.attempts.get(job_id, ()))))
+                if delay > self.max_retry_delay_seconds:
+                    raise RuntimeError('Rate-limit retry delay exceeds configured maximum: ' + job_id)
+                self._wait(delay)
+            while True:
+                if self.last_request_finished_at is not None:
+                    self._wait(max(0, self.request_interval_seconds - (time.monotonic() - self.last_request_finished_at)))
+                attempt_id = job_id
+                if self.retry_enabled:
+                    number = 1
+                    while job_id + ':attempt:' + str(number) in self.records or job_id + ':attempt:' + str(number) in self.reuse_job_ids:
+                        number += 1
+                    attempt_id = job_id + ':attempt:' + str(number)
+                try:
+                    return self._paid_call(attempt_id, job_id, operation, model, body, request_sha, url, reservation, parse, timeout)
+                except RuntimeError:
+                    with self.lock:
+                        failed = self.logical_records.get(job_id)
+                        if not failed or failed['job_id'] != attempt_id or not self._recoverable(job_id, failed):
+                            raise
+                    self._wait(failed['retry_delay_seconds'])
+
+    def _paid_call(self, job_id, logical_id, operation, model, body, request_sha, url, reservation, parse, timeout):
+        with self.lock:
             if self.failure or job_id in self.pending:
                 raise RuntimeError('Pipeline stopped after failed or unresolved request; inspect calls.jsonl and inflight.json')
             if (self.out / 'STOP').exists():
@@ -189,6 +291,10 @@ class Client:
                 raise RuntimeError('Pipeline budget stop before request: ' + job_id)
             key = api_key_for('OPENROUTER_API_KEY' if model['provider'] == 'openrouter' else 'GEMINI_API_KEY')
             record = {'job_id': job_id, 'operation': operation, 'config_sha256': self.config_sha256, 'request_sha256': request_sha, 'requested_model': model['model'], 'provider_route': model['provider'], 'timestamp_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'reserved_cost_usd': reservation}
+            if self.retry_enabled:
+                record['logical_job_id'] = logical_id
+            if self.retry_enabled or self.request_interval_seconds:
+                record['request_started_unix'] = time.time()
             self.pending[job_id] = record
             self._atomic_json(self.pending_path, self.pending)
         start = time.monotonic()
@@ -198,6 +304,7 @@ class Client:
             headers = {'Content-Type': 'application/json', **({'Authorization': 'Bearer ' + key} if model['provider'] == 'openrouter' else {'x-goog-api-key': key})}
             request = urllib.request.Request(url, data=body, headers=headers)
             with urllib.request.urlopen(request, timeout=timeout) as reply:
+                record['http_status'] = getattr(reply, 'status', 200)
                 response = json.load(reply)
             record['provider_response'] = response
             usage = response.get('usage', {}) if model['provider'] == 'openrouter' else response.get('usageMetadata', {})
@@ -211,9 +318,19 @@ class Client:
         except Exception as error:
             message = str(error)
             if isinstance(error, urllib.error.HTTPError):
-                message += ' ' + error.read(3000).decode(errors='replace')
+                record['http_status'] = error.code
+                retry_after = self._retry_after(error.headers.get('Retry-After')) if error.headers is not None else None
+                if retry_after is not None:
+                    record['retry_after_seconds'] = retry_after
+                try:
+                    message += ' ' + error.read(3000).decode(errors='replace')
+                finally:
+                    error.close()
             record.update(status='error', error=message.replace(key, '[REDACTED]'))
-        record['elapsed_seconds'] = time.monotonic() - start
+        self.last_request_finished_at = time.monotonic()
+        if self.retry_enabled or self.request_interval_seconds:
+            record['request_finished_unix'] = time.time()
+        record['elapsed_seconds'] = self.last_request_finished_at - start
         if operation == 'embed':
             record['estimated_cost_usd'] = reservation
             record['cost_basis'] = 'published_per_image_estimate' if response is not None else 'reserved_upper_bound_usage_unavailable'
@@ -230,12 +347,16 @@ class Client:
         if record['estimated_cost_usd'] > reservation + 1e-12:
             record.update(status='error', error='Provider cost exceeded request reservation')
         with self.lock:
+            if self.retry_enabled and self._is_rate_limit(record):
+                count = len(self.attempts.get(logical_id, ())) + 1
+                delay = self._retry_delay(record, count)
+                record['retry_delay_seconds'] = delay
+                record['retry_exhausted'] = count >= 1 + self.rate_limit_retries or delay > self.max_retry_delay_seconds
             self._append(record)
             self.spent_usd += record['estimated_cost_usd']
             del self.pending[job_id]
             self._atomic_json(self.pending_path, self.pending)
-            if record['status'] != 'ok':
-                self.failure = True
+            self._refresh_failure()
         if record['status'] != 'ok':
             raise RuntimeError(job_id + ': ' + record['error'])
         return copy.deepcopy(record['result'])
@@ -243,8 +364,14 @@ class Client:
     def record_validation_failure(self, job_id, error):
         """Keep returned usage when a caller rejects a domain-invalid JSON object."""
         with self.lock:
-            old = self.records[job_id]
+            old = self.logical_records.get(job_id, self.reuse_records.get(job_id))
+            if old is None:
+                raise ValueError('No saved response for validation: ' + job_id)
             record = {key: old[key] for key in ('job_id', 'config_sha256', 'request_sha256', 'requested_model')}
+            if job_id not in self.logical_records:
+                record.update(job_id=job_id, logical_job_id=job_id, config_sha256=self.config_sha256, reused_record_sha256=digest(encoded(old)))
+            if 'logical_job_id' in old:
+                record['logical_job_id'] = old['logical_job_id']
             record.update(status='validation_error', error=str(error), estimated_cost_usd=0, cost_basis='validation_only_no_new_request')
             self._append(record)
             self.failure = True
@@ -252,11 +379,11 @@ class Client:
     def recover_validation(self, job_id, validator):
         """Revalidate a saved successful response offline; never repeat a paid request."""
         with self.lock:
-            previous = self.records[job_id]
+            previous = self.logical_records[job_id]
             if previous['status'] != 'validation_error':
                 raise ValueError('Only domain-validation failures can be recovered offline')
             history = [json.loads(line) for line in self.calls_path.read_text().splitlines()]
-            originals = [(index, row) for index, row in enumerate(history, 1) if row['job_id'] == job_id and row['status'] == 'ok' and row['cost_basis'] != 'offline_validation_recovery']
+            originals = [(index, row) for index, row in enumerate(history, 1) if row.get('logical_job_id', row['job_id']) == job_id and row['status'] == 'ok' and row['cost_basis'] != 'offline_validation_recovery']
             if len(originals) != 1:
                 raise ValueError('Expected exactly one original successful response')
             line, original = originals[0]
@@ -268,5 +395,5 @@ class Client:
             record = copy.deepcopy(original)
             record.update(result=result, estimated_cost_usd=0, cost_basis='offline_validation_recovery', recovered_at_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), recovery={'original_response_line': line, 'original_record_sha256': digest(encoded(original)), 'validation_failure_sha256': digest(encoded(previous)), 'reason': previous['error']})
             self._append(record)
-            self.failure = bool(self.pending) or any(row['status'] != 'ok' for row in self.records.values())
+            self._refresh_failure()
             return copy.deepcopy(result)
