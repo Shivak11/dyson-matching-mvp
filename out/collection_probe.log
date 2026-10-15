@@ -1,0 +1,12 @@
+[info] yft0rDip4jc: Downloading 1 format(s): 18
+[info] yft0rDip4jc: Downloading 1 time ranges: 50.0-52.0
+[download] Destination: /private/tmp/dyson-collection-probe/v8-probe.mp4
+
+
+[https @ 0x7c42c14000] HTTP error 403 Forbidden
+[in#0 @ 0x7c43400000] Error opening input: Server returned 403 Forbidden (access denied)
+Error opening input file <URL>
+Error opening input files: Server returned 403 Forbidden (access denied)
+
+
+ERROR: ffmpeg exited with code 8
