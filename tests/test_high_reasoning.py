@@ -5,6 +5,8 @@ import sys
 import tempfile
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
+from unittest.mock import patch
+import run_high_reasoning
 from run_high_reasoning import verify_previous
 from run_pipeline import sha
 
@@ -15,6 +17,11 @@ class RevisionTests(unittest.TestCase):
         (self.out/'calls.jsonl').write_text(json.dumps({'estimated_cost_usd':.94})+'\n')
         (self.out/'inflight.json').write_text('{}')
         self.config={'budget':{'usd_inr':100,'stage_max_inr':306,'prior_accounted_inr':136.68},'previous_stage':{'calls_sha256':sha(self.out/'calls.jsonl'),'guard_accounted_inr':94,'stage_ceiling_inr':400,'prior_accounted_inr':42.68}}
+    def test_report_waits_for_unresolved_new_spending(self):
+        (self.out/'inflight.json').write_text('{"job":{}}')
+        with patch.object(run_high_reasoning,'NEW',self.out):
+            with self.assertRaisesRegex(ValueError,'unresolved'):
+                run_high_reasoning.combined_study({},[])
     def test_spend_and_remaining_allowance(self):
         self.assertEqual(len(verify_previous(self.config,self.out)),1)
     def test_old_ledger_change_and_unresolved_call_stop(self):

@@ -54,6 +54,8 @@ def saved_inputs(config):
 
 
 def combined_study(config, old_calls):
+    if pipeline.read(NEW/'inflight.json', {}):
+        raise ValueError('New requests remain unresolved; report after their spending is settled')
     pipeline.summarise(config, pipeline.read(ROOT/'data/test/test_manifest.json', []))
     calls = old_calls + [json.loads(line) for line in (NEW/'calls.jsonl').read_text().splitlines()] if (NEW/'calls.jsonl').exists() else old_calls
     reporting = copy.deepcopy(config)
