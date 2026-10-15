@@ -1,0 +1,62 @@
+{
+  "dyson_big_ball": {
+    "text": "The manufacturer views show a separate rounded canister on the floor connected to a flexible hose and long rigid wand. Look for that whole arrangement. A floorhead or hose by itself cannot distinguish the machine family.",
+    "basis": "Native comparison of the source-labelled manufacturer reference views in reference_pack.json; descriptive visual cues, not a claim of uniqueness.",
+    "source_url": "https://www.dyson.in/big-ball-vacuum",
+    "source_files": [
+      "data/catalog/dyson_big_ball/00.png",
+      "data/catalog/dyson_big_ball/02.png",
+      "data/catalog/dyson_big_ball/03.png"
+    ]
+  },
+  "dyson_v12_detect_slim": {
+    "text": "The manufacturer views show a compact straight inline dust bin under the cyclone/motor, a round rear display and a red power button on top. Compare bin proportions and control placement with V15. A green-lit floorhead and purple/gold colour alone do not separate V12, V15 and other Dyson families.",
+    "basis": "Native comparison of the source-labelled manufacturer reference views in reference_pack.json; descriptive visual cues, not a claim of uniqueness.",
+    "source_url": "https://www.dyson.in/dyson-v12-detect-slim-vacuum-cleaner",
+    "source_files": [
+      "data/catalog/dyson_v12_detect_slim/05.png",
+      "data/catalog/dyson_v12_detect_slim/01.jpg",
+      "data/catalog/dyson_v12_detect_slim/02.jpg"
+    ]
+  },
+  "dyson_v15_detect": {
+    "text": "The manufacturer views show a larger inline clear dust bin projecting below the motor/cyclones, a pistol grip and round rear display. Compare the grip/control area and bin proportions with V12. Similar illumination, attachments and colours occur on other Dyson models; absent or hidden controls do not establish a contradiction.",
+    "basis": "Native comparison of the source-labelled manufacturer reference views in reference_pack.json; descriptive visual cues, not a claim of uniqueness.",
+    "source_url": "https://www.dyson.in/dyson-v15-detect-vacuum-cleaner",
+    "source_files": [
+      "data/catalog/dyson_v15_detect/00.png",
+      "data/catalog/dyson_v15_detect/01.jpg",
+      "data/catalog/dyson_v15_detect/02.jpg"
+    ]
+  },
+  "dyson_v16_piston_animal": {
+    "text": "Compare the manufacturer views of the long inline bin, its external compression mechanism, tall rear motor/filter section and cleaner-head geometry. A cleaner head alone is weak evidence because accessories can be detached or changed. Do not identify this family from wand colour alone.",
+    "basis": "Native comparison of the source-labelled manufacturer reference views in reference_pack.json; descriptive visual cues, not a claim of uniqueness.",
+    "source_url": "https://www.dyson.in/v16-piston-animal-cordless-vacuum",
+    "source_files": [
+      "data/catalog/dyson_v16_piston_animal/01.png",
+      "data/catalog/dyson_v16_piston_animal/00.png",
+      "data/catalog/dyson_v16_piston_animal/02.jpg"
+    ]
+  },
+  "dyson_v8_absolute": {
+    "text": "The manufacturer views show the clear dust bin arranged across/below the motor rather than the long straight inline bin of V12 and V15, with a pistol grip behind it. Check the whole motor-bin-grip arrangement. Other older Dyson families can share this layout, so it is not sufficient proof by itself.",
+    "basis": "Native comparison of the source-labelled manufacturer reference views in reference_pack.json; descriptive visual cues, not a claim of uniqueness.",
+    "source_url": "https://www.dyson.in/dyson-v8-absolute-vacuum",
+    "source_files": [
+      "data/catalog/dyson_v8_absolute/00.png",
+      "data/catalog/dyson_v8_absolute/01.png",
+      "data/catalog/dyson_v8_absolute/03.jpg"
+    ]
+  },
+  "dyson_wash_g1": {
+    "text": "The manufacturer views show an upright hard-floor cleaner with a long curved handle, two vertically arranged liquid tanks and a broad low cleaning base. Compare the tank and handle arrangement. A close-up of rollers or the cleaning base alone may be insufficient to distinguish wet cleaners.",
+    "basis": "Native comparison of the source-labelled manufacturer reference views in reference_pack.json; descriptive visual cues, not a claim of uniqueness.",
+    "source_url": "https://www.dyson.in/washg1-wet-cleaner-blue-black",
+    "source_files": [
+      "data/catalog/dyson_wash_g1/00.png",
+      "data/catalog/dyson_wash_g1/01.png",
+      "data/catalog/dyson_wash_g1/04.jpg"
+    ]
+  }
+}

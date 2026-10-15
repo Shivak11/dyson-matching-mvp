@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 out/baseline/run.lock
 out/baseline-qwen/run.lock
+out/pipeline/run.lock

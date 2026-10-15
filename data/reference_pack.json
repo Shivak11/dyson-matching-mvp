@@ -1,0 +1,104 @@
+{
+  "dyson_big_ball": {
+    "source_url": "https://www.dyson.in/big-ball-vacuum",
+    "files": [
+      {
+        "file": "data/catalog/dyson_big_ball/00.png",
+        "sha256": "032925ba49dc676a492bd7248ba2c3c9fef243668e419b48e683759ee5ddde41"
+      },
+      {
+        "file": "data/catalog/dyson_big_ball/02.png",
+        "sha256": "894c00f829edb1cd3357e151bbffe8566e1e096910313ab740eeccb9c2c54926"
+      },
+      {
+        "file": "data/catalog/dyson_big_ball/03.png",
+        "sha256": "6e1697538d66219500d6a177b50bfbc62cbabeb15eedf0759fb553027a151d9a"
+      }
+    ]
+  },
+  "dyson_v12_detect_slim": {
+    "source_url": "https://www.dyson.in/dyson-v12-detect-slim-vacuum-cleaner",
+    "files": [
+      {
+        "file": "data/catalog/dyson_v12_detect_slim/05.png",
+        "sha256": "9a3fd77750d920c6fa4426ff46f23be908ff67b5e41f68db8b04871f98074f3f"
+      },
+      {
+        "file": "data/catalog/dyson_v12_detect_slim/01.jpg",
+        "sha256": "91a949f5e793cda7d519107ff388d702cb81c8777193c0413c92baf14b39bb97"
+      },
+      {
+        "file": "data/catalog/dyson_v12_detect_slim/02.jpg",
+        "sha256": "07a1d015254bdc8bf1b52681e260381b28d33d788c7506262ff93cb483688b50"
+      }
+    ]
+  },
+  "dyson_v15_detect": {
+    "source_url": "https://www.dyson.in/dyson-v15-detect-vacuum-cleaner",
+    "files": [
+      {
+        "file": "data/catalog/dyson_v15_detect/00.png",
+        "sha256": "ea013614151b18e61ecd83869d969df89ea33b98ed7b292148ebb1a724344357"
+      },
+      {
+        "file": "data/catalog/dyson_v15_detect/01.jpg",
+        "sha256": "2cc447b8f67f0e10f625c7d433e75fa39ee803c729f01f5320573583525b1083"
+      },
+      {
+        "file": "data/catalog/dyson_v15_detect/02.jpg",
+        "sha256": "85fea099ea5322440c4b76ccc9aa9d3fe4920b6038a327bd585318f08f59f2ac"
+      }
+    ]
+  },
+  "dyson_v16_piston_animal": {
+    "source_url": "https://www.dyson.in/v16-piston-animal-cordless-vacuum",
+    "files": [
+      {
+        "file": "data/catalog/dyson_v16_piston_animal/01.png",
+        "sha256": "680d623aa809e93bd91ac75357f5449107de0f2742e4087ee5743287ce8fa824"
+      },
+      {
+        "file": "data/catalog/dyson_v16_piston_animal/00.png",
+        "sha256": "c455368688e30691b83db86527ee378e30f18830665deb5f427d253eba2e1a43"
+      },
+      {
+        "file": "data/catalog/dyson_v16_piston_animal/02.jpg",
+        "sha256": "f4f8d10eaf87d045f4778417d675bcc0735447bf10341097d0cd92bbc8e727b8"
+      }
+    ]
+  },
+  "dyson_v8_absolute": {
+    "source_url": "https://www.dyson.in/dyson-v8-absolute-vacuum",
+    "files": [
+      {
+        "file": "data/catalog/dyson_v8_absolute/00.png",
+        "sha256": "3a206b5f02e53ddd7ffd34e4d35503d7ab37257e0dbdb61a1c67dd5164e2a2c1"
+      },
+      {
+        "file": "data/catalog/dyson_v8_absolute/01.png",
+        "sha256": "1dd8c4d13219d4f480870b12f0064a6968f5bfa7a15ac768bba6274b34276caa"
+      },
+      {
+        "file": "data/catalog/dyson_v8_absolute/03.jpg",
+        "sha256": "4f09e371d388c80d2d2799edcd320b027ef57806b15920986b556f4b83fe620e"
+      }
+    ]
+  },
+  "dyson_wash_g1": {
+    "source_url": "https://www.dyson.in/washg1-wet-cleaner-blue-black",
+    "files": [
+      {
+        "file": "data/catalog/dyson_wash_g1/00.png",
+        "sha256": "bd5f55d605676fea8ebc2e532413e0971024559de12b117766c18825576c42d3"
+      },
+      {
+        "file": "data/catalog/dyson_wash_g1/01.png",
+        "sha256": "4e1e92b82fc359819b04e0d487e59ef3d8b96ab512134c939aba860a7362d91b"
+      },
+      {
+        "file": "data/catalog/dyson_wash_g1/04.jpg",
+        "sha256": "8fa7782fd6e61eef03f6fd6b17d9e9b59832c1ecae682f33c4aae324d204bc17"
+      }
+    ]
+  }
+}
