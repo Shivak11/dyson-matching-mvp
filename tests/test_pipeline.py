@@ -38,6 +38,13 @@ class PipelineTests(unittest.TestCase):
         self.assertIsNone(raw['decision']['top_two'])
         raw['decision']['top_two']=[None,None]
         self.assertEqual(validate_result(raw,['a','b'])['decision']['top_two'],[])
+    def test_missing_optional_explanation_fields_preserve_decision(self):
+        raw=self.result();del raw['decision']['contradictions'];del raw['decision']['retake']
+        out=validate_result(raw,['a','b'])
+        self.assertEqual(out['decision']['product'],'a')
+        self.assertEqual(out['decision']['contradictions'],[])
+        self.assertEqual(out['decision']['retake'],'')
+        self.assertEqual(len(out['format_repairs']),2)
     def test_conflicting_confirmations_cannot_be_accepted(self):
         raw=self.result();raw['decision']['confidence']=99
         raw['candidate_checks'][1]['outcome']='confirmed'
