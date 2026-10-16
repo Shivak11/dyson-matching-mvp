@@ -1,0 +1,200 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 40,
+        "top_two": [
+          "R03",
+          "R07"
+        ],
+        "evidence": [
+          "Only the cleaner head and lower extension wand are visible, displaying 'dyson' branding, while the main body containing diagnostic features is entirely out of frame."
+        ],
+        "missing_evidence": [
+          "Handheld main body showing the dust canister, cyclone assembly, handle, and display controls"
+        ],
+        "contradictions": [],
+        "retake": "Photograph of the upper main vacuum body showing the cyclone assembly, dust bin, and handle interface"
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "Query cleaner head has internal detangling vanes and a front slider, conflicting with R01-P1's turbine floor head.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                584,
+                348,
+                852,
+                650
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                864,
+                646,
+                946,
+                942
+              ],
+              "detail": "Query features a Motorbar head with detangling vanes and slider, whereas R01-P1 has a turbine head without these features"
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query shows only the cleaner head and wand, while R02 only shows the handheld body, leaving all diagnostic features unobserved.",
+          "comparisons": []
+        },
+        {
+          "reference": "R03",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query lacks the handheld body and R03 lacks the cleaner head, so no diagnostic features can be compared.",
+          "comparisons": []
+        },
+        {
+          "reference": "R04",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query only captures the cleaner head, while R04 only illustrates the main vacuum body.",
+          "comparisons": []
+        },
+        {
+          "reference": "R05",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query lacks the cyclone and canister body, while R05 does not show the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "R06 has dual enclosed wet rollers, conflicting with query's single roller vacuum head with detangling vanes.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                584,
+                348,
+                852,
+                650
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                905,
+                705,
+                990,
+                963
+              ],
+              "detail": "R06 uses dual wet rollers without a clear front window or detangling comb"
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "insufficient_evidence",
+          "evidence": "Diagnostic features of the main body are out of frame in the query, and R07 does not show the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R08",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query does not show the handheld body and R08 does not show the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Query has a Dyson cleaner head, which conflicts with R09-P3's Shark DuoClean nozzle architecture.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                584,
+                348,
+                852,
+                650
+              ],
+              "panel": "R09-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                400,
+                71,
+                846,
+                907
+              ],
+              "detail": "Query features a Dyson Motorbar with detangling vanes, while R09 has a Shark DuoClean nozzle with front headlights"
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "not_sure",
+      "confidence": 40,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v11"
+      ],
+      "evidence": [
+        "Only the cleaner head and lower extension wand are visible, displaying 'dyson' branding, while the main body containing diagnostic features is entirely out of frame."
+      ],
+      "missing_evidence": [
+        "Handheld main body showing the dust canister, cyclone assembly, handle, and display controls"
+      ],
+      "contradictions": [],
+      "retake": "Photograph of the upper main vacuum body showing the cyclone assembly, dust bin, and handle interface",
+      "product": null
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Query cleaner head has internal detangling vanes and a front slider, conflicting with R01-P1's turbine floor head."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "Query shows only the cleaner head and wand, while R02 only shows the handheld body, leaving all diagnostic features unobserved."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "Query lacks the handheld body and R03 lacks the cleaner head, so no diagnostic features can be compared."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "Query only captures the cleaner head, while R04 only illustrates the main vacuum body."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "Query lacks the cyclone and canister body, while R05 does not show the cleaner head."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "R06 has dual enclosed wet rollers, conflicting with query's single roller vacuum head with detangling vanes."
+      }
+    ],
+    "top_two": [
+      "dyson_v15_detect",
+      "dyson_v11"
+    ],
+    "gate_reasons": [],
+    "matched_reference": null,
+    "matched_product": null
+  }
+}

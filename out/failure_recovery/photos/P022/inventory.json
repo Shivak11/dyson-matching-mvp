@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        74,
+        151,
+        1000,
+        755
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen showing power/battery level bars and the word Auto",
+          "box_2d": [
+            206,
+            403,
+            632,
+            662
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red push button positioned above the circular display and a silver button below it",
+          "box_2d": [
+            236,
+            480,
+            597,
+            592
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "translucent blue circular rear filter ring surrounding the control console",
+          "box_2d": [
+            74,
+            274,
+            897,
+            754
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "bronze-colored radial cyclone cones visible along the lower body",
+          "box_2d": [
+            574,
+            152,
+            1000,
+            279
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        74,
+        151,
+        1000,
+        755
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen showing power/battery level bars and the word Auto",
+          "box_2d": [
+            206,
+            403,
+            632,
+            662
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red push button positioned above the circular display and a silver button below it",
+          "box_2d": [
+            236,
+            480,
+            597,
+            592
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "translucent blue circular rear filter ring surrounding the control console",
+          "box_2d": [
+            74,
+            274,
+            897,
+            754
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "bronze-colored radial cyclone cones visible along the lower body",
+          "box_2d": [
+            574,
+            152,
+            1000,
+            279
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

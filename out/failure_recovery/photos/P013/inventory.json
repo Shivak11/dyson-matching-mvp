@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "box_2d": [
+        123,
+        297,
+        895,
+        622
+      ],
+      "object_id": "o1",
+      "observations": [
+        {
+          "box_2d": [
+            123,
+            487,
+            411,
+            608
+          ],
+          "detail": "inline clear dustbin with gold cyclone array and purple rear filter cap",
+          "feature": "body_layout",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            209,
+            562,
+            333,
+            624
+          ],
+          "detail": "grey pistol-grip handle held in user's hand with trigger",
+          "feature": "handle_and_trigger",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            401,
+            381,
+            792,
+            513
+          ],
+          "detail": "dark grey extension wand connecting main body to cleaner head",
+          "feature": "wand",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            757,
+            297,
+            895,
+            401
+          ],
+          "detail": "motorized floor nozzle with swiveling neck resting on carpet",
+          "feature": "cleaner_head",
+          "visible": true
+        }
+      ],
+      "parent_id": null,
+      "readable_identifier": "",
+      "role": "machine",
+      "visibility": "whole_machine"
+    }
+  ],
+  "machines": [
+    {
+      "box_2d": [
+        123,
+        297,
+        895,
+        622
+      ],
+      "object_id": "o1",
+      "observations": [
+        {
+          "box_2d": [
+            123,
+            487,
+            411,
+            608
+          ],
+          "detail": "inline clear dustbin with gold cyclone array and purple rear filter cap",
+          "feature": "body_layout",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            209,
+            562,
+            333,
+            624
+          ],
+          "detail": "grey pistol-grip handle held in user's hand with trigger",
+          "feature": "handle_and_trigger",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            401,
+            381,
+            792,
+            513
+          ],
+          "detail": "dark grey extension wand connecting main body to cleaner head",
+          "feature": "wand",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            757,
+            297,
+            895,
+            401
+          ],
+          "detail": "motorized floor nozzle with swiveling neck resting on carpet",
+          "feature": "cleaner_head",
+          "visible": true
+        }
+      ],
+      "parent_id": null,
+      "readable_identifier": "",
+      "role": "machine",
+      "visibility": "whole_machine"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        107,
+        854,
+        675
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dustbin, and handle are out of frame above wand connector",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized cleaner head with purple brush roller, spiral red bristles, and clear housing",
+          "box_2d": [
+            409,
+            107,
+            854,
+            674
+          ]
+        },
+        {
+          "feature": "release_button",
+          "visible": true,
+          "detail": "Red oval quick-release button on wand connector",
+          "box_2d": [
+            79,
+            470,
+            193,
+            519
+          ]
+        },
+        {
+          "feature": "neck_joint",
+          "visible": true,
+          "detail": "Articulated grey swivel joint connecting cleaner head to wand socket",
+          "box_2d": [
+            301,
+            372,
+            515,
+            527
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        107,
+        854,
+        675
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dustbin, and handle are out of frame above wand connector",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized cleaner head with purple brush roller, spiral red bristles, and clear housing",
+          "box_2d": [
+            409,
+            107,
+            854,
+            674
+          ]
+        },
+        {
+          "feature": "release_button",
+          "visible": true,
+          "detail": "Red oval quick-release button on wand connector",
+          "box_2d": [
+            79,
+            470,
+            193,
+            519
+          ]
+        },
+        {
+          "feature": "neck_joint",
+          "visible": true,
+          "detail": "Articulated grey swivel joint connecting cleaner head to wand socket",
+          "box_2d": [
+            301,
+            372,
+            515,
+            527
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

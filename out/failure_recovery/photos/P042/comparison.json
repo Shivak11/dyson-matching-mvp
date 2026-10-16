@@ -1,0 +1,382 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "same_family",
+        "reference": "R07",
+        "confidence": 95,
+        "top_two": [
+          "R07",
+          "R03"
+        ],
+        "evidence": [
+          "Query shares the in-line body layout, red trigger pistol grip, linear slide bin-release mechanism, and nickel cyclone with translucent purple filter cap matching R07."
+        ],
+        "missing_evidence": [],
+        "contradictions": [],
+        "retake": ""
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "R01 is a wheeled canister vacuum, conflicting with query's cordless handheld format.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                19,
+                226,
+                975,
+                835
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                55,
+                85,
+                950,
+                940
+              ],
+              "detail": "Query is a handheld cordless stick vacuum, whereas R01 is a corded canister vacuum with a ball base."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "visible_conflict",
+          "evidence": "R02 uses a push-button power control on the body rather than a trigger.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                322,
+                532,
+                655,
+                835
+              ],
+              "panel": "R02-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                385,
+                335,
+                600,
+                480
+              ],
+              "detail": "Query has a red trigger switch inside the handle grip, whereas R02 uses a top push-button power control."
+            }
+          ]
+        },
+        {
+          "reference": "R03",
+          "outcome": "visible_conflict",
+          "evidence": "R03 has a yellow/gold cyclone pack, conflicting with query's nickel/grey cyclone.",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                205,
+                365,
+                470,
+                645
+              ],
+              "panel": "R03-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                300,
+                115,
+                440,
+                485
+              ],
+              "detail": "Query features a nickel/grey cyclone assembly, whereas R03 has a gold/yellow cyclone pack."
+            }
+          ]
+        },
+        {
+          "reference": "R04",
+          "outcome": "visible_conflict",
+          "evidence": "R04 has a triggerless handle with push-button operation and copper cyclone.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                322,
+                532,
+                655,
+                835
+              ],
+              "panel": "R04-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                145,
+                440,
+                580,
+                905
+              ],
+              "detail": "Query features a red trigger on the handle, whereas R04 has a triggerless handle."
+            }
+          ]
+        },
+        {
+          "reference": "R05",
+          "outcome": "visible_conflict",
+          "evidence": "R05 has a vertical dustbin configuration with top pull-up bin release.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                19,
+                226,
+                975,
+                835
+              ],
+              "panel": "R05-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                120,
+                50,
+                875,
+                790
+              ],
+              "detail": "Query has an in-line dustbin layout, whereas R05 has a vertical dustbin below the cyclone."
+            }
+          ]
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "R06 is an upright floor washer with vertical liquid tanks.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                19,
+                226,
+                975,
+                835
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                10,
+                30,
+                990,
+                230
+              ],
+              "detail": "Query is a handheld cyclonic vacuum, whereas R06 is an upright hard floor washer with liquid tanks."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "supported",
+          "evidence": "Query matches R07 in in-line body layout, handle trigger control, bin mechanism, and cyclone assembly.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                19,
+                226,
+                975,
+                695
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                115,
+                115,
+                850,
+                920
+              ],
+              "detail": "Both share an in-line body configuration with longitudinal clear bin, cyclone, and rear handle."
+            },
+            {
+              "feature": "handle_control",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                322,
+                532,
+                655,
+                835
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                290,
+                480,
+                400,
+                580
+              ],
+              "detail": "Both feature a pistol grip handle with an integrated red finger trigger."
+            },
+            {
+              "feature": "bin_mechanism",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                678,
+                381,
+                860,
+                482
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                530,
+                470,
+                600,
+                608
+              ],
+              "detail": "Both share a linear slide-action bin release runner with a red sliding lever."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                19,
+                365,
+                465,
+                700
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                115,
+                115,
+                450,
+                480
+              ],
+              "detail": "Both have a nickel multi-cone cyclone assembly paired with a rear translucent purple filter cap."
+            }
+          ]
+        },
+        {
+          "reference": "R08",
+          "outcome": "visible_conflict",
+          "evidence": "R08 features a triggerless handle and cyan filter cap.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                322,
+                532,
+                655,
+                835
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                50,
+                455,
+                430,
+                925
+              ],
+              "detail": "Query has a red trigger on the handle, whereas R08 features a triggerless handle with push-button control."
+            }
+          ]
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "R09 is a Shark stick vacuum with distinct body architecture and front dust cup.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                19,
+                226,
+                975,
+                835
+              ],
+              "panel": "R09-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                20,
+                20,
+                990,
+                940
+              ],
+              "detail": "Query has an in-line cyclonic handheld architecture, whereas R09 has a front-mounted dust cup and folding stick."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "not_in_catalogue",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v11",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Query shares the in-line body layout, red trigger pistol grip, linear slide bin-release mechanism, and nickel cyclone with translucent purple filter cap matching R07."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": "",
+      "product": null
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "R01 is a wheeled canister vacuum, conflicting with query's cordless handheld format."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "R02 uses a push-button power control on the body rather than a trigger."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "R03 has a yellow/gold cyclone pack, conflicting with query's nickel/grey cyclone."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "R04 has a triggerless handle with push-button operation and copper cyclone."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "R05 has a vertical dustbin configuration with top pull-up bin release."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "R06 is an upright floor washer with vertical liquid tanks."
+      }
+    ],
+    "top_two": [
+      "dyson_v11",
+      "dyson_v15_detect"
+    ],
+    "gate_reasons": [],
+    "matched_reference": "R07",
+    "matched_product": "dyson_v11"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        348,
+        853,
+        650
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dust canister, and handle are out of frame above the wand",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor cleaner head with clear roller housing, internal de-tangling vanes, and front adjustment slider",
+          "box_2d": [
+            584,
+            348,
+            852,
+            650
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Purple extension tube attached to swivel neck with red quick-release catch",
+          "box_2d": [
+            0,
+            461,
+            568,
+            542
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        348,
+        853,
+        650
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dust canister, and handle are out of frame above the wand",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor cleaner head with clear roller housing, internal de-tangling vanes, and front adjustment slider",
+          "box_2d": [
+            584,
+            348,
+            852,
+            650
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Purple extension tube attached to swivel neck with red quick-release catch",
+          "box_2d": [
+            0,
+            461,
+            568,
+            542
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

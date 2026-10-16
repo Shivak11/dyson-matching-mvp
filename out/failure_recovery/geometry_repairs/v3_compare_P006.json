@@ -1,0 +1,248 @@
+{
+  "job_id": "v3:compare:P006",
+  "helper_source_sha256": "88b84d47d2ce22de83f8ea0fd70bdcfed479b25e32d10b37df5e30827a57e96e",
+  "policy": "For a scene-valid query comparison outside its physical target, preserve the full original and locator as unverified metadata, then set query_visible=false, query_box_2d=null and relation=unobserved. Downgrade visible_conflict only when its final valid conflict is removed. Preserve raw decisions and text; validate again with the actual physical targets.",
+  "original_response_line": 40,
+  "original_record_sha256": "279c36b882cbe69b8433763066a45589108b6215b4f11549c7580ccbb07565cb",
+  "validation_failure_sha256": "60fdf8e877274b27770da40a54e84fcb0b4bfd311921d6779e445956085ba672",
+  "provider_response_sha256": "3f482bf0e5af77be782a3b9e9fa099b2df3ce3276b4de7b6e7ab8869153a7d7d",
+  "request_sha256": "b9de899c31652cf1862af96171fbe93aad0ad018564f193587f050d75162f036",
+  "config_sha256": "d20c97facbbb3b75e919b9d59268bf48760d7e0d6c67a27ba2d4cd0f941a162c",
+  "canonical_context_sha256": {
+    "out/failure_recovery/photos/P006/inventory.json": "a3b58333e688de3ca9da37bfbd0c503a7ff8f793c3b099f05776e9173529366a",
+    "out/failure_recovery/reference_panels.json": "f613f620ed03ae5caa45689200a58ee8719d9afacf72049b31500fd22ae4ad85"
+  },
+  "hash_kind": "canonical_json",
+  "normalised_result_sha256": "dca779a19eb9025552e647dd463faa6f807461e44852db61d0152dc506639d13",
+  "transformations": [
+    {
+      "object_id": "o1",
+      "reference": "R01",
+      "comparison_index": 0,
+      "comparison": {
+        "feature": "body_layout",
+        "relation": "conflict",
+        "query_visible": true,
+        "query_box_2d": [
+          137,
+          516,
+          968,
+          938
+        ],
+        "panel": "R01-P1",
+        "reference_visible": true,
+        "reference_box_2d": [
+          535,
+          87,
+          935,
+          575
+        ],
+        "detail": "Handheld stick vacuum unit conflicts with wheeled canister vacuum body."
+      }
+    },
+    {
+      "object_id": "o1",
+      "reference": "R02",
+      "comparison_index": 0,
+      "comparison": {
+        "feature": "body_layout",
+        "relation": "conflict",
+        "query_visible": true,
+        "query_box_2d": [
+          137,
+          516,
+          968,
+          938
+        ],
+        "panel": "R02-P1",
+        "reference_visible": true,
+        "reference_box_2d": [
+          50,
+          115,
+          985,
+          905
+        ],
+        "detail": "Vertical bin beneath cyclones conflicts with in-line horizontal dust bin."
+      }
+    },
+    {
+      "object_id": "o1",
+      "reference": "R03",
+      "comparison_index": 0,
+      "comparison": {
+        "feature": "body_layout",
+        "relation": "conflict",
+        "query_visible": true,
+        "query_box_2d": [
+          137,
+          516,
+          968,
+          938
+        ],
+        "panel": "R03-P1",
+        "reference_visible": true,
+        "reference_box_2d": [
+          40,
+          110,
+          990,
+          900
+        ],
+        "detail": "Vertical bin layout below cyclones conflicts with in-line horizontal bin layout."
+      }
+    },
+    {
+      "object_id": "o1",
+      "reference": "R04",
+      "comparison_index": 0,
+      "comparison": {
+        "feature": "body_layout",
+        "relation": "conflict",
+        "query_visible": true,
+        "query_box_2d": [
+          137,
+          516,
+          968,
+          938
+        ],
+        "panel": "R04-P1",
+        "reference_visible": true,
+        "reference_box_2d": [
+          105,
+          75,
+          990,
+          915
+        ],
+        "detail": "Vertical bin perpendicular to wand conflicts with in-line dust bin."
+      }
+    },
+    {
+      "object_id": "o1",
+      "reference": "R05",
+      "comparison_index": 0,
+      "comparison": {
+        "feature": "body_layout",
+        "relation": "support",
+        "query_visible": true,
+        "query_box_2d": [
+          137,
+          516,
+          968,
+          938
+        ],
+        "panel": "R05-P2",
+        "reference_visible": true,
+        "reference_box_2d": [
+          105,
+          50,
+          875,
+          795
+        ],
+        "detail": "Handheld configuration with vertical clear bin below cyclones and battery beneath handle matches R05."
+      }
+    },
+    {
+      "object_id": "o1",
+      "reference": "R06",
+      "comparison_index": 0,
+      "comparison": {
+        "feature": "body_layout",
+        "relation": "conflict",
+        "query_visible": true,
+        "query_box_2d": [
+          137,
+          516,
+          968,
+          938
+        ],
+        "panel": "R06-P1",
+        "reference_visible": true,
+        "reference_box_2d": [
+          10,
+          35,
+          990,
+          230
+        ],
+        "detail": "Handheld cyclonic body conflicts with upright column carrying dual clean/dirty water tanks."
+      }
+    },
+    {
+      "object_id": "o1",
+      "reference": "R07",
+      "comparison_index": 0,
+      "comparison": {
+        "feature": "body_layout",
+        "relation": "conflict",
+        "query_visible": true,
+        "query_box_2d": [
+          137,
+          516,
+          968,
+          938
+        ],
+        "panel": "R07-P1",
+        "reference_visible": true,
+        "reference_box_2d": [
+          115,
+          115,
+          990,
+          915
+        ],
+        "detail": "Vertical bin below the cyclones conflicts with in-line horizontal bin aligned with the motor."
+      }
+    },
+    {
+      "object_id": "o1",
+      "reference": "R08",
+      "comparison_index": 0,
+      "comparison": {
+        "feature": "body_layout",
+        "relation": "conflict",
+        "query_visible": true,
+        "query_box_2d": [
+          137,
+          516,
+          968,
+          938
+        ],
+        "panel": "R08-P1",
+        "reference_visible": true,
+        "reference_box_2d": [
+          30,
+          70,
+          990,
+          930
+        ],
+        "detail": "Perpendicular vertical bin layout conflicts with horizontal in-line bin configuration."
+      }
+    },
+    {
+      "object_id": "o1",
+      "reference": "R09",
+      "comparison_index": 0,
+      "comparison": {
+        "feature": "body_layout",
+        "relation": "conflict",
+        "query_visible": true,
+        "query_box_2d": [
+          137,
+          516,
+          968,
+          938
+        ],
+        "panel": "R09-P1",
+        "reference_visible": true,
+        "reference_box_2d": [
+          20,
+          325,
+          335,
+          680
+        ],
+        "detail": "Dyson handheld cyclone pack and vertical bin conflict with Shark linear dust cup layout."
+      }
+    }
+  ],
+  "paid_requests": 0,
+  "additional_cost_usd": 0,
+  "recovery_record_sha256": "c28846157bae8d7fd533c6296aa7de40812913fdf498921ab98bb4a372a6ced7",
+  "recorded_at_utc": "2026-10-16T10:11:41Z"
+}

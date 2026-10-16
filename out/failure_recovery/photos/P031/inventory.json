@@ -1,0 +1,90 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        59,
+        0,
+        404,
+        185
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "ball-shaped cylinder body with orange cyclone assembly and clear bin",
+          "box_2d": [
+            59,
+            0,
+            404,
+            185
+          ]
+        }
+      ],
+      "readable_identifier": "dyson big ball turbinehead"
+    },
+    {
+      "object_id": "o2",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        614,
+        159,
+        1000,
+        458
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "grey upholstery nozzle tool with circular red release button",
+          "box_2d": [
+            614,
+            159,
+            1000,
+            458
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "attached vacuum body and wand extend outside visible frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        59,
+        0,
+        404,
+        185
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "ball-shaped cylinder body with orange cyclone assembly and clear bin",
+          "box_2d": [
+            59,
+            0,
+            404,
+            185
+          ]
+        }
+      ],
+      "readable_identifier": "dyson big ball turbinehead"
+    }
+  ]
+}

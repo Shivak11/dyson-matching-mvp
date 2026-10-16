@@ -1,0 +1,93 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        47,
+        677,
+        518
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main vacuum body, motor, and dust bin are out of frame above the wand",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Soft roller floor nozzle with transparent brush roller housing and swivel joint",
+          "box_2d": [
+            182,
+            269,
+            677,
+            518
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Dark grey neck tube with red release clip",
+          "box_2d": [
+            0,
+            48,
+            340,
+            312
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        47,
+        677,
+        518
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main vacuum body, motor, and dust bin are out of frame above the wand",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Soft roller floor nozzle with transparent brush roller housing and swivel joint",
+          "box_2d": [
+            182,
+            269,
+            677,
+            518
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Dark grey neck tube with red release clip",
+          "box_2d": [
+            0,
+            48,
+            340,
+            312
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "accessory_only": true
+    }
+  ]
+}

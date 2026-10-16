@@ -1,0 +1,462 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "same_family",
+        "reference": "R04",
+        "confidence": 95,
+        "top_two": [
+          "R04",
+          "R02"
+        ],
+        "evidence": [
+          "Identified as R04 (Dyson Gen5detect family) by the distinctive rear display layout featuring a top red power button and bottom oblong selection button, paired with the black motor body with vertical vent slots and inline cyclone layout."
+        ],
+        "missing_evidence": [],
+        "contradictions": [],
+        "retake": ""
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "Body layout conflicts between cordless stick and canister vacuum with rolling ball.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                45,
+                93,
+                897,
+                614
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                51,
+                84,
+                946,
+                947
+              ],
+              "detail": "Query is a cordless stick vacuum, while R01 is a canister vacuum with a ball base and flexible hose."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "visible_conflict",
+          "evidence": "Display layout and control placement conflict with R02's top cyclone button and bottom display button.",
+          "comparisons": [
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                271,
+                260,
+                381
+              ],
+              "panel": "R02-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                421,
+                226,
+                705,
+                383
+              ],
+              "detail": "Query has a red button positioned at the top of the display screen, whereas R02 has a red button at the bottom."
+            },
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                205,
+                412,
+                574,
+                555
+              ],
+              "panel": "R02-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                390,
+                345,
+                597,
+                469
+              ],
+              "detail": "R02 has a red power push button on top of the cyclone body, which is absent on the query."
+            }
+          ]
+        },
+        {
+          "reference": "R03",
+          "outcome": "visible_conflict",
+          "evidence": "Display layout and motor housing conflict with R03's single-button display and silver casing.",
+          "comparisons": [
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                271,
+                260,
+                381
+              ],
+              "panel": "R03-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                292,
+                473,
+                565,
+                689
+              ],
+              "detail": "Query has a red button above the screen and oblong button below, while R03 has only a single round button below the screen."
+            },
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                125,
+                281,
+                461,
+                520
+              ],
+              "panel": "R03-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                180,
+                185,
+                310,
+                460
+              ],
+              "detail": "Query has a black housing with dual vertical vent slots behind the cyclone, unlike R03's smooth silver housing."
+            }
+          ]
+        },
+        {
+          "reference": "R04",
+          "outcome": "supported",
+          "evidence": "Matches R04 in both rear display layout and motor body layout.",
+          "comparisons": [
+            {
+              "feature": "display_layout",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                271,
+                260,
+                381
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                229,
+                362,
+                532,
+                584
+              ],
+              "detail": "Both feature a circular rear LCD screen with a red button at the top and an oblong silver button at the bottom."
+            },
+            {
+              "feature": "body_layout",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                45,
+                93,
+                897,
+                614
+              ],
+              "panel": "R04-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                111,
+                84,
+                935,
+                903
+              ],
+              "detail": "Both have an inline cordless body layout with black motor housing featuring dual vertical vent slots."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                45,
+                258,
+                575,
+                560
+              ],
+              "panel": "R04-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                114,
+                381,
+                584,
+                945
+              ],
+              "detail": "Both share a fluted two-tier cyclone cone array attached ahead of the cylindrical filter casing."
+            }
+          ]
+        },
+        {
+          "reference": "R05",
+          "outcome": "visible_conflict",
+          "evidence": "Body layout conflicts with R05's perpendicular bin design.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                45,
+                93,
+                897,
+                614
+              ],
+              "panel": "R05-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                118,
+                56,
+                868,
+                792
+              ],
+              "detail": "Query has an inline dust bin and cyclone assembly, whereas R05 has a vertical dust bin perpendicular to the wand."
+            }
+          ]
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "Body layout conflicts with R06's dual-tank wet floor cleaner design.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                45,
+                93,
+                897,
+                614
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                12,
+                33,
+                989,
+                966
+              ],
+              "detail": "Query is a handheld cyclone stick vacuum, unlike R06 which is an upright wet floor cleaner with dual water tanks."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "visible_conflict",
+          "evidence": "Body layout and control design conflict with R07's silver housing and trigger grip.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                125,
+                281,
+                461,
+                520
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                248,
+                178,
+                332,
+                473
+              ],
+              "detail": "Query has a black motor housing with vertical vent slits, whereas R07 has a smooth silver motor housing."
+            },
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                390,
+                270,
+                560,
+                440
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                331,
+                490,
+                396,
+                563
+              ],
+              "detail": "R07 features a trigger mechanism under the handle grip, whereas query lacks a handle trigger and uses rear push buttons."
+            }
+          ]
+        },
+        {
+          "reference": "R08",
+          "outcome": "visible_conflict",
+          "evidence": "Body layout and handle controls conflict with R08's silver body and trigger control.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                125,
+                281,
+                461,
+                520
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                144,
+                110,
+                252,
+                448
+              ],
+              "detail": "Query has a black housing with dual vertical vent slits behind the cyclone, while R08 has a smooth silver body."
+            },
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                390,
+                270,
+                560,
+                440
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                378,
+                462,
+                437,
+                532
+              ],
+              "detail": "R08 uses a finger trigger on the handle grip, unlike the query which operates without a trigger."
+            }
+          ]
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Body layout and branding conflict with R09's Shark platform.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                45,
+                93,
+                897,
+                614
+              ],
+              "panel": "R09-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                26,
+                21,
+                980,
+                940
+              ],
+              "detail": "Query has a radial cyclone array and inline bin layout, differing completely from R09's Shark stick vacuum body."
+            },
+            {
+              "feature": "identifier",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                286,
+                413,
+                337,
+                442
+              ],
+              "panel": "R09-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                572,
+                477,
+                706,
+                532
+              ],
+              "detail": "Query is branded 'dyson', whereas R09 is branded 'Shark'."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "match",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Identified as R04 (Dyson Gen5detect family) by the distinctive rear display layout featuring a top red power button and bottom oblong selection button, paired with the black motor body with vertical vent slots and inline cyclone layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": "",
+      "product": "dyson_v16_piston_animal"
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Body layout conflicts between cordless stick and canister vacuum with rolling ball."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Display layout and control placement conflict with R02's top cyclone button and bottom display button."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Display layout and motor housing conflict with R03's single-button display and silver casing."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "Matches R04 in both rear display layout and motor body layout."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Body layout conflicts with R05's perpendicular bin design."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Body layout conflicts with R06's dual-tank wet floor cleaner design."
+      }
+    ],
+    "top_two": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim"
+    ],
+    "gate_reasons": [],
+    "matched_reference": "R04",
+    "matched_product": "dyson_v16_piston_animal"
+  }
+}

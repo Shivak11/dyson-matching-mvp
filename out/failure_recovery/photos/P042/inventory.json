@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        19,
+        226,
+        975,
+        835
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "In-line configuration with transparent dustbin, cyclone assembly, and rear motor housing",
+          "box_2d": [
+            19,
+            226,
+            975,
+            695
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Purple translucent filter cap with side ventilation slots at the rear",
+          "box_2d": [
+            19,
+            552,
+            271,
+            695
+          ]
+        },
+        {
+          "feature": "handle_controls",
+          "visible": true,
+          "detail": "Pistol grip handle with red finger trigger and integrated battery base",
+          "box_2d": [
+            322,
+            532,
+            655,
+            835
+          ]
+        },
+        {
+          "feature": "bin_release",
+          "visible": true,
+          "detail": "Red slider mechanism along the side runner for bin emptying",
+          "box_2d": [
+            678,
+            381,
+            860,
+            482
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        19,
+        226,
+        975,
+        835
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "In-line configuration with transparent dustbin, cyclone assembly, and rear motor housing",
+          "box_2d": [
+            19,
+            226,
+            975,
+            695
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Purple translucent filter cap with side ventilation slots at the rear",
+          "box_2d": [
+            19,
+            552,
+            271,
+            695
+          ]
+        },
+        {
+          "feature": "handle_controls",
+          "visible": true,
+          "detail": "Pistol grip handle with red finger trigger and integrated battery base",
+          "box_2d": [
+            322,
+            532,
+            655,
+            835
+          ]
+        },
+        {
+          "feature": "bin_release",
+          "visible": true,
+          "detail": "Red slider mechanism along the side runner for bin emptying",
+          "box_2d": [
+            678,
+            381,
+            860,
+            482
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

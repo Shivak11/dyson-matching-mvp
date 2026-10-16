@@ -1,0 +1,468 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 95,
+        "top_two": [
+          "R01",
+          "R02"
+        ],
+        "evidence": [
+          "Canister vacuum body featuring a cord rewind button, power button, and a central blue washable filter cap labeled FILTRO within an orange cyclone ring."
+        ],
+        "missing_evidence": [],
+        "contradictions": [
+          "R01 is a Cinetic canister vacuum with no central washable filter cap, whereas query has a central blue washable filter lid.",
+          "References R02 through R09 are cordless stick or upright wet cleaners rather than corded canister vacuums."
+        ],
+        "retake": "Photo showing the full machine body and model rating label."
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "Query features a central blue washable filter lid in the cyclone pack and a clear handle with red release trigger, conflicting with R01's Cinetic filter-free cyclone assembly.",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                513,
+                769
+              ],
+              "panel": "R01-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                54,
+                256,
+                262,
+                737
+              ],
+              "detail": "Query has a central blue filter cap labeled FILTRO inside the cyclone array, whereas R01 has a Cinetic two-tier cyclone pack with flexible red tips and no central filter."
+            },
+            {
+              "feature": "bin_mechanism",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                390,
+                128,
+                779,
+                345
+              ],
+              "panel": "R01-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                247,
+                480,
+                400,
+                550
+              ],
+              "detail": "Query has a clear carry handle with an embedded red push release button on top, whereas R01 uses a red sliding collar release on the spine."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a corded canister vacuum with cord rewind, whereas R02 is a cordless stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                995,
+                836
+              ],
+              "panel": "R02-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                48,
+                118,
+                976,
+                902
+              ],
+              "detail": "Query is a canister vacuum body, whereas R02 is an inline cordless stick vacuum."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                513,
+                769
+              ],
+              "panel": "R02-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                210,
+                40,
+                650,
+                305
+              ],
+              "detail": "Query has a central top circular filter lid, whereas R02 has a rear cylindrical purple filter unit."
+            }
+          ]
+        },
+        {
+          "reference": "R03",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a canister vacuum, whereas R03 is a cordless stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                995,
+                836
+              ],
+              "panel": "R03-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                48,
+                118,
+                976,
+                902
+              ],
+              "detail": "Query has a canister body with cord rewind button, unlike R03's cordless stick vacuum architecture."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                513,
+                769
+              ],
+              "panel": "R03-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                120,
+                50,
+                820,
+                860
+              ],
+              "detail": "Query has a central blue filter cap surrounded by orange cyclones, whereas R03 has a rear purple filter with an LCD display."
+            }
+          ]
+        },
+        {
+          "reference": "R04",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a canister vacuum, whereas R04 is an inline cordless stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                995,
+                836
+              ],
+              "panel": "R04-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                110,
+                85,
+                980,
+                905
+              ],
+              "detail": "Query is a canister vacuum, whereas R04 is a cordless stick vacuum."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                513,
+                769
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                200,
+                160,
+                680,
+                800
+              ],
+              "detail": "Query has a central blue washable filter lid on top, whereas R04 has a rear turquoise filter assembly with an integrated LCD display."
+            }
+          ]
+        },
+        {
+          "reference": "R05",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a canister vacuum, whereas R05 is a cordless handheld/stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                995,
+                836
+              ],
+              "panel": "R05-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                120,
+                48,
+                880,
+                800
+              ],
+              "detail": "Query is a corded canister vacuum with cord rewind, unlike R05's pistol-grip cordless format."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                513,
+                769
+              ],
+              "panel": "R05-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                35,
+                290,
+                830,
+                725
+              ],
+              "detail": "Query has a flat circular blue filter cap, whereas R05 has a central pre-filter wand insert and a rear post-motor filter."
+            }
+          ]
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a canister vacuum, whereas R06 is an upright wet floor cleaner.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                995,
+                836
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                14,
+                30,
+                980,
+                230
+              ],
+              "detail": "Query is a canister vacuum with cyclone assembly, whereas R06 is an upright wet cleaner with twin clean/dirty water tanks."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a canister vacuum, whereas R07 is a cordless stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                995,
+                836
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                115,
+                115,
+                985,
+                915
+              ],
+              "detail": "Query is a canister vacuum, whereas R07 is an inline cordless stick vacuum."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                513,
+                769
+              ],
+              "panel": "R07-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                115,
+                360,
+                480,
+                890
+              ],
+              "detail": "Query has a central top blue filter lid, whereas R07 has a rear purple cylindrical filter cap."
+            }
+          ]
+        },
+        {
+          "reference": "R08",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a canister vacuum, whereas R08 is a compact stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                995,
+                836
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                35,
+                75,
+                980,
+                925
+              ],
+              "detail": "Query is a canister vacuum, whereas R08 is a compact cordless stick vacuum."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                513,
+                769
+              ],
+              "panel": "R08-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                35,
+                305,
+                340,
+                890
+              ],
+              "detail": "Query has a central blue washable filter cap, whereas R08 has a rear teal cylindrical filter cap."
+            }
+          ]
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a canister vacuum, whereas R09 is an upright cordless stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                0,
+                0,
+                995,
+                836
+              ],
+              "panel": "R09-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                25,
+                24,
+                980,
+                970
+              ],
+              "detail": "Query is a canister vacuum with cyclone assembly and cord rewind, whereas R09 is a cordless stick vacuum with a folding wand."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "not_sure",
+      "confidence": 95,
+      "top_two": [
+        "dyson_big_ball",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Canister vacuum body featuring a cord rewind button, power button, and a central blue washable filter cap labeled FILTRO within an orange cyclone ring."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "R01 is a Cinetic canister vacuum with no central washable filter cap, whereas query has a central blue washable filter lid.",
+        "References R02 through R09 are cordless stick or upright wet cleaners rather than corded canister vacuums."
+      ],
+      "retake": "Photo showing the full machine body and model rating label.",
+      "product": null
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Query features a central blue washable filter lid in the cyclone pack and a clear handle with red release trigger, conflicting with R01's Cinetic filter-free cyclone assembly."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Query is a corded canister vacuum with cord rewind, whereas R02 is a cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Query is a canister vacuum, whereas R03 is a cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Query is a canister vacuum, whereas R04 is an inline cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Query is a canister vacuum, whereas R05 is a cordless handheld/stick vacuum."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Query is a canister vacuum, whereas R06 is an upright wet floor cleaner."
+      }
+    ],
+    "top_two": [
+      "dyson_big_ball",
+      "dyson_v12_detect_slim"
+    ],
+    "gate_reasons": [],
+    "matched_reference": null,
+    "matched_product": null
+  }
+}

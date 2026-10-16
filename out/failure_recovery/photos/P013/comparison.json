@@ -1,0 +1,444 @@
+{
+  "o1": {
+    "raw": {
+      "decision": {
+        "confidence": 95,
+        "contradictions": [],
+        "evidence": [
+          "Inline configuration with clear bin, two-tier gold cyclone array, separate grey cylindrical motor casing, purple rear filter cap, and pistol-grip trigger handle matching R03."
+        ],
+        "missing_evidence": [],
+        "reference": "R03",
+        "retake": "",
+        "status": "same_family",
+        "top_two": [
+          "R03",
+          "R02"
+        ]
+      },
+      "object_id": "o1",
+      "other_brand_evidence": [],
+      "reference_checks": [
+        {
+          "comparisons": [
+            {
+              "detail": "Query has an inline stick body, while R01 has a canister base on spherical wheels.",
+              "feature": "body_layout",
+              "panel": "R01-P1",
+              "query_box_2d": [
+                123,
+                485,
+                411,
+                622
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                595,
+                87,
+                928,
+                597
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "Query o1 is an inline cordless stick vacuum, whereas R01 is a wheeled canister vacuum with a flexible hose.",
+          "outcome": "visible_conflict",
+          "reference": "R01"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Query has a two-tier cyclone array and separate grey motor section, unlike R02's single-tier cyclone housing.",
+              "feature": "cyclone_filter",
+              "panel": "R02-P1",
+              "query_box_2d": [
+                123,
+                520,
+                285,
+                602
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                50,
+                116,
+                460,
+                485
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            },
+            {
+              "detail": "Query uses a pistol-grip trigger, whereas R02 uses a push-button power switch on the body.",
+              "feature": "handle_control",
+              "panel": "R02-P2",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                395,
+                335,
+                590,
+                470
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            }
+          ],
+          "evidence": "R02 has a single-tier cyclone pack with housing extending continuously to the filter and a body push button, whereas query o1 has a two-tier cyclone pack ahead of a grey motor section and a trigger handle.",
+          "outcome": "visible_conflict",
+          "reference": "R02"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Both feature an inline arrangement of dustbin, cyclone array, motor, and filter with handle below.",
+              "feature": "body_layout",
+              "panel": "R03-P1",
+              "query_box_2d": [
+                123,
+                485,
+                411,
+                622
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                45,
+                135,
+                850,
+                895
+              ],
+              "reference_visible": true,
+              "relation": "support"
+            },
+            {
+              "detail": "Both show a two-tier radial cyclone pack positioned forward of a distinct cylindrical grey motor housing and rear cylindrical filter.",
+              "feature": "cyclone_filter",
+              "panel": "R03-P1",
+              "query_box_2d": [
+                123,
+                520,
+                285,
+                602
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                45,
+                115,
+                425,
+                485
+              ],
+              "reference_visible": true,
+              "relation": "support"
+            },
+            {
+              "detail": "Both feature an axial point-and-shoot emptying bin with a red sliding release latch along the runner.",
+              "feature": "bin_mechanism",
+              "panel": "R03-P1",
+              "query_box_2d": [
+                240,
+                485,
+                411,
+                575
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                450,
+                140,
+                855,
+                540
+              ],
+              "reference_visible": true,
+              "relation": "support"
+            },
+            {
+              "detail": "Both feature a pistol grip handle with a finger trigger and diagonal lower support strut.",
+              "feature": "handle_control",
+              "panel": "R03-P1",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                145,
+                470,
+                510,
+                895
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            }
+          ],
+          "evidence": "Query o1 shares the identical two-tier cyclone array, grey motor casing, purple filter cap, inline point-and-shoot bin, and trigger handle with R03.",
+          "outcome": "supported",
+          "reference": "R03"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Query has a smooth cylindrical purple filter cap and gold cyclones, unlike R04's fluted cyan filter and vented black housing.",
+              "feature": "cyclone_filter",
+              "panel": "R04-P1",
+              "query_box_2d": [
+                123,
+                520,
+                285,
+                602
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                112,
+                85,
+                580,
+                475
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "R04 features a fluted cyan filter cap, black/copper housing with dual vent slots, and push-button control, conflicting with query o1.",
+          "outcome": "visible_conflict",
+          "reference": "R04"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Query has an inline longitudinal bin, whereas R05 has a bin positioned perpendicularly below the cyclones.",
+              "feature": "body_layout",
+              "panel": "R05-P1",
+              "query_box_2d": [
+                123,
+                485,
+                411,
+                622
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                455,
+                380,
+                795,
+                885
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "R05 has a vertical dustbin mounted perpendicularly to the suction inlet, conflicting with query o1's inline bin architecture.",
+          "outcome": "visible_conflict",
+          "reference": "R05"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Query is an inline handheld stick vacuum, whereas R06 is an upright hard floor wet cleaner.",
+              "feature": "body_layout",
+              "panel": "R06-P1",
+              "query_box_2d": [
+                123,
+                297,
+                895,
+                622
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                20,
+                30,
+                990,
+                230
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "R06 is a dual-roller upright wet cleaner with twin water tanks along the shaft, completely conflicting with query o1's dry vacuum design.",
+          "outcome": "visible_conflict",
+          "reference": "R06"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Query has a dense two-tier radial cyclone pack, unlike the single-tier cyclone arrangement on R07.",
+              "feature": "cyclone_filter",
+              "panel": "R07-P1",
+              "query_box_2d": [
+                185,
+                520,
+                285,
+                575
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                318,
+                110,
+                465,
+                500
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "R07 has a single-tier ring of widely spaced individual cyclones on a compact slender body, conflicting with query o1's dual-tier cyclone array.",
+          "outcome": "visible_conflict",
+          "reference": "R07"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Query has a purple filter cap and gold two-tier cyclones, conflicting with R08's cyan filter and purple cyclones.",
+              "feature": "cyclone_filter",
+              "panel": "R08-P1",
+              "query_box_2d": [
+                123,
+                520,
+                285,
+                602
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                35,
+                115,
+                335,
+                470
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "R08 features a cyan filter cap and purple single-tier cyclones, whereas query o1 has a purple filter cap and two-tier gold cyclones.",
+          "outcome": "visible_conflict",
+          "reference": "R08"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Query has an inline cyclonic cylindrical layout, unlike the rectangular non-cyclonic bin layout of R09.",
+              "feature": "body_layout",
+              "panel": "R09-P1",
+              "query_box_2d": [
+                123,
+                485,
+                411,
+                622
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                25,
+                330,
+                320,
+                670
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "R09 has a Shark stick architecture with a front dust box, folding hinge wand, and dual-roller head, completely differing from query o1.",
+          "outcome": "visible_conflict",
+          "reference": "R09"
+        }
+      ],
+      "unverified_comparisons": [
+        {
+          "comparison": {
+            "detail": "Query uses a pistol-grip trigger, whereas R02 uses a push-button power switch on the body.",
+            "feature": "handle_control",
+            "panel": "R02-P2",
+            "query_box_2d": [
+              209,
+              560,
+              333,
+              624
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              395,
+              335,
+              590,
+              470
+            ],
+            "reference_visible": true,
+            "relation": "conflict"
+          },
+          "comparison_index": 1,
+          "object_id": "o1",
+          "reference": "R02"
+        },
+        {
+          "comparison": {
+            "detail": "Both feature a pistol grip handle with a finger trigger and diagonal lower support strut.",
+            "feature": "handle_control",
+            "panel": "R03-P1",
+            "query_box_2d": [
+              209,
+              560,
+              333,
+              624
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              145,
+              470,
+              510,
+              895
+            ],
+            "reference_visible": true,
+            "relation": "support"
+          },
+          "comparison_index": 3,
+          "object_id": "o1",
+          "reference": "R03"
+        }
+      ]
+    },
+    "decision": {
+      "confidence": 95,
+      "contradictions": [],
+      "evidence": [
+        "Inline configuration with clear bin, two-tier gold cyclone array, separate grey cylindrical motor casing, purple rear filter cap, and pistol-grip trigger handle matching R03."
+      ],
+      "missing_evidence": [],
+      "retake": "",
+      "status": "match",
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "product": "dyson_v15_detect"
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Query o1 is an inline cordless stick vacuum, whereas R01 is a wheeled canister vacuum with a flexible hose."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "R02 has a single-tier cyclone pack with housing extending continuously to the filter and a body push button, whereas query o1 has a two-tier cyclone pack ahead of a grey motor section and a trigger handle."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "Query o1 shares the identical two-tier cyclone array, grey motor casing, purple filter cap, inline point-and-shoot bin, and trigger handle with R03."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "R04 features a fluted cyan filter cap, black/copper housing with dual vent slots, and push-button control, conflicting with query o1."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "R05 has a vertical dustbin mounted perpendicularly to the suction inlet, conflicting with query o1's inline bin architecture."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "R06 is a dual-roller upright wet cleaner with twin water tanks along the shaft, completely conflicting with query o1's dry vacuum design."
+      }
+    ],
+    "top_two": [
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim"
+    ],
+    "gate_reasons": [],
+    "matched_reference": "R03",
+    "matched_product": "dyson_v15_detect"
+  }
+}

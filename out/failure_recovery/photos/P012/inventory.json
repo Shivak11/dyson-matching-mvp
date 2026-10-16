@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        331,
+        731,
+        735
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "conical anti-tangle screw brush bar inside clear motorized tool housing",
+          "box_2d": [
+            200,
+            331,
+            731,
+            735
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red quick-release button on connection collar",
+          "box_2d": [
+            147,
+            506,
+            248,
+            565
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "clear cylindrical bin base partially visible above attachment neck",
+          "box_2d": [
+            0,
+            385,
+            142,
+            695
+          ]
+        },
+        {
+          "feature": "handle",
+          "visible": false,
+          "detail": "main body, motor, and handle are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        331,
+        731,
+        735
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "conical anti-tangle screw brush bar inside clear motorized tool housing",
+          "box_2d": [
+            200,
+            331,
+            731,
+            735
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red quick-release button on connection collar",
+          "box_2d": [
+            147,
+            506,
+            248,
+            565
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "clear cylindrical bin base partially visible above attachment neck",
+          "box_2d": [
+            0,
+            385,
+            142,
+            695
+          ]
+        },
+        {
+          "feature": "handle",
+          "visible": false,
+          "detail": "main body, motor, and handle are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

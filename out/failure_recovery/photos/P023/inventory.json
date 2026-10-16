@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        75,
+        329,
+        824,
+        757
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "In-line configuration with transparent dust bin and gold-colored cyclone assembly",
+          "box_2d": [
+            228,
+            395,
+            642,
+            627
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "Circular digital display on the end of the blue rear filter cap",
+          "box_2d": [
+            75,
+            524,
+            258,
+            638
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Pistol-grip handle with red trigger and detachable base battery unit",
+          "box_2d": [
+            267,
+            532,
+            683,
+            755
+          ]
+        },
+        {
+          "feature": "attachment",
+          "visible": true,
+          "detail": "Long black crevice nozzle attached directly to the bin suction inlet",
+          "box_2d": [
+            572,
+            330,
+            824,
+            443
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        75,
+        329,
+        824,
+        757
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "In-line configuration with transparent dust bin and gold-colored cyclone assembly",
+          "box_2d": [
+            228,
+            395,
+            642,
+            627
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "Circular digital display on the end of the blue rear filter cap",
+          "box_2d": [
+            75,
+            524,
+            258,
+            638
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Pistol-grip handle with red trigger and detachable base battery unit",
+          "box_2d": [
+            267,
+            532,
+            683,
+            755
+          ]
+        },
+        {
+          "feature": "attachment",
+          "visible": true,
+          "detail": "Long black crevice nozzle attached directly to the bin suction inlet",
+          "box_2d": [
+            572,
+            330,
+            824,
+            443
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

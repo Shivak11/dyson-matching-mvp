@@ -1,0 +1,362 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "same_family",
+        "reference": "R04",
+        "confidence": 95,
+        "top_two": [
+          "R04",
+          "R08"
+        ],
+        "evidence": [
+          "Rear control console features an identical arrangement with a red push button above the circular digital display and a silver pill-shaped button below it, framed by a translucent cyan filter housing and bronze cyclone cones."
+        ],
+        "missing_evidence": [],
+        "contradictions": [],
+        "retake": ""
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "R01 is a wheeled canister vacuum without a rear handheld display or filter console",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                74,
+                274,
+                897,
+                754
+              ],
+              "panel": "R01-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                62,
+                146,
+                888,
+                853
+              ],
+              "detail": "o1 has a stick vacuum cylindrical rear filter and display console, whereas R01 is a canister vacuum"
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "visible_conflict",
+          "evidence": "R02 features a single red button below its rear display and a purple filter casing",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                236,
+                439,
+                597,
+                592
+              ],
+              "panel": "R02-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                635,
+                230,
+                702,
+                304
+              ],
+              "detail": "o1 has a red button above the display and a silver button below it, whereas R02-P3 has a red button below the screen and none above"
+            }
+          ]
+        },
+        {
+          "reference": "R03",
+          "outcome": "visible_conflict",
+          "evidence": "R03 has a purple filter casing with a single round silver button below the screen",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                236,
+                439,
+                597,
+                592
+              ],
+              "panel": "R03-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                487,
+                683,
+                570,
+                757
+              ],
+              "detail": "o1 has a red button above the display and silver pill button below, whereas R03-P3 has only a single round button below"
+            }
+          ]
+        },
+        {
+          "reference": "R04",
+          "outcome": "supported",
+          "evidence": "Matches the control configuration, circular display, translucent cyan filter ring, and bronze cyclones",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                236,
+                439,
+                597,
+                592
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                249,
+                432,
+                513,
+                517
+              ],
+              "detail": "both share a red push button directly above the rear display and a silver pill button below it"
+            },
+            {
+              "feature": "display_layout",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                206,
+                403,
+                632,
+                662
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                304,
+                381,
+                467,
+                567
+              ],
+              "detail": "both feature a circular LCD screen centered between the top red and bottom silver buttons"
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                74,
+                274,
+                897,
+                754
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                105,
+                185,
+                664,
+                786
+              ],
+              "detail": "both feature a translucent cyan circular filter ring surrounding the rear endcap"
+            }
+          ]
+        },
+        {
+          "reference": "R05",
+          "outcome": "visible_conflict",
+          "evidence": "R05 lacks a digital display screen on the rear assembly",
+          "comparisons": [
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                206,
+                403,
+                632,
+                662
+              ],
+              "panel": "R05-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                238,
+                417,
+                287,
+                606
+              ],
+              "detail": "o1 has a circular digital screen, whereas R05 has a mechanical slide switch and no LCD"
+            }
+          ]
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "R06 is a dual-roller wet floor cleaner with a completely different handle layout",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                74,
+                151,
+                1000,
+                755
+              ],
+              "panel": "R06-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                55,
+                66,
+                355,
+                512
+              ],
+              "detail": "o1 is a radial cyclone handheld unit, whereas R06-P3 is an upright handle wand"
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "visible_conflict",
+          "evidence": "R07 features a purple filter assembly and silver cyclones",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                74,
+                274,
+                897,
+                754
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                116,
+                185,
+                237,
+                462
+              ],
+              "detail": "o1 has a cyan filter ring, whereas R07 has a purple filter casing"
+            }
+          ]
+        },
+        {
+          "reference": "R08",
+          "outcome": "visible_conflict",
+          "evidence": "R08 has purple cyclone cones rather than bronze ones",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                574,
+                152,
+                1000,
+                279
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                229,
+                74,
+                335,
+                477
+              ],
+              "detail": "o1 displays bronze cyclone cones, whereas R08 features purple cyclone cones"
+            }
+          ]
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "R09 is a Shark vacuum cleaner with a rectangular dirt container and distinct architecture",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                74,
+                151,
+                1000,
+                755
+              ],
+              "panel": "R09-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                61,
+                331,
+                887,
+                672
+              ],
+              "detail": "o1 has a circular rear filter and display with radial cyclones, unlike the linear Shark chassis of R09"
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "match",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_gen5detect"
+      ],
+      "evidence": [
+        "Rear control console features an identical arrangement with a red push button above the circular digital display and a silver pill-shaped button below it, framed by a translucent cyan filter housing and bronze cyclone cones."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": "",
+      "product": "dyson_v16_piston_animal"
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "R01 is a wheeled canister vacuum without a rear handheld display or filter console"
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "R02 features a single red button below its rear display and a purple filter casing"
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "R03 has a purple filter casing with a single round silver button below the screen"
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "Matches the control configuration, circular display, translucent cyan filter ring, and bronze cyclones"
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "R05 lacks a digital display screen on the rear assembly"
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "R06 is a dual-roller wet floor cleaner with a completely different handle layout"
+      }
+    ],
+    "top_two": [
+      "dyson_v16_piston_animal",
+      "dyson_gen5detect"
+    ],
+    "gate_reasons": [],
+    "matched_reference": "R04",
+    "matched_product": "dyson_v16_piston_animal"
+  }
+}

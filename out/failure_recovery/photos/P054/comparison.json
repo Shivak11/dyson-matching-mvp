@@ -1,0 +1,482 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "same_family",
+        "reference": "R04",
+        "confidence": 95,
+        "top_two": [
+          "R04",
+          "R08"
+        ],
+        "evidence": [
+          "The rear interface features a red power push-button above a circular particle-counting display, a silver selection button below, and a cyan circular filter casing, precisely matching R04."
+        ],
+        "missing_evidence": [],
+        "contradictions": [],
+        "retake": ""
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "R01 is a canister vacuum with canister-mounted cyclones and lacks the rear cylindrical filter housing and display interface.",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                198,
+                330,
+                785,
+                652
+              ],
+              "panel": "R01-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                57,
+                255,
+                270,
+                742
+              ],
+              "detail": "Query has a circular cyan filter housing at the rear of a stick vacuum, whereas R01 has a canister cyclone assembly with red accents."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "visible_conflict",
+          "evidence": "R02 positions its red power button on top of the main body chassis and features a purple filter with a different lower-button configuration.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                304,
+                476,
+                365,
+                511
+              ],
+              "panel": "R02-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                398,
+                340,
+                597,
+                477
+              ],
+              "detail": "Query features a red power push-button positioned on the rear face above the display, whereas R02 positions its red power button on top of the main body."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                198,
+                330,
+                785,
+                652
+              ],
+              "panel": "R02-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                150,
+                118,
+                830,
+                742
+              ],
+              "detail": "Query has a cyan filter ring, whereas R02 has a purple translucent filter housing."
+            }
+          ]
+        },
+        {
+          "reference": "R03",
+          "outcome": "visible_conflict",
+          "evidence": "R03 uses a trigger on the handle, a purple filter housing, and a single circular button at the lower right of the display.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                304,
+                476,
+                365,
+                511
+              ],
+              "panel": "R03-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                285,
+                488,
+                355,
+                560
+              ],
+              "detail": "Query uses a push-button power control above the rear display, whereas R03 utilizes a trigger located under the handle grip."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                198,
+                330,
+                785,
+                652
+              ],
+              "panel": "R03-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                75,
+                48,
+                840,
+                780
+              ],
+              "detail": "Query features a cyan filter ring, while R03 features a purple filter housing."
+            }
+          ]
+        },
+        {
+          "reference": "R04",
+          "outcome": "supported",
+          "evidence": "R04 matches the red power button positioned above the circular particle-counting display, the silver selection button below, and the cyan filter housing.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                304,
+                468,
+                631,
+                511
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                254,
+                437,
+                512,
+                516
+              ],
+              "detail": "Both feature a red power push-button positioned directly above the display and a silver selection button positioned directly below it."
+            },
+            {
+              "feature": "display_layout",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                405,
+                445,
+                573,
+                537
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                308,
+                383,
+                467,
+                567
+              ],
+              "detail": "Both feature a central circular digital screen reporting particle count metrics across four size channels alongside a numeric runtime readout."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                198,
+                330,
+                785,
+                652
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                105,
+                168,
+                667,
+                792
+              ],
+              "detail": "Both feature a cyan circular filter housing encircling the rear interface."
+            }
+          ]
+        },
+        {
+          "reference": "R05",
+          "outcome": "visible_conflict",
+          "evidence": "R05 uses a trigger control and top slider switch, lacking any digital display screen.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                304,
+                476,
+                365,
+                511
+              ],
+              "panel": "R05-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                420,
+                520,
+                520,
+                590
+              ],
+              "detail": "Query has a push-button power control above the display, whereas R05 operates via a trigger under the handle."
+            },
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                405,
+                445,
+                573,
+                537
+              ],
+              "panel": "R05-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                240,
+                415,
+                298,
+                595
+              ],
+              "detail": "Query features an LCD screen displaying particle counts and runtime, whereas R05 has a mechanical slider switch without a display screen."
+            }
+          ]
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "R06 is a wet floor cleaner with handle-stalk controls and hydration icons on its screen rather than particle count metrics and an on-screen power button.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                304,
+                476,
+                365,
+                511
+              ],
+              "panel": "R06-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                420,
+                300,
+                565,
+                455
+              ],
+              "detail": "Query places the red power push-button directly on the rear circular face, whereas R06 locates control buttons on the forward handle stalk."
+            },
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                405,
+                445,
+                573,
+                537
+              ],
+              "panel": "R06-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                110,
+                195,
+                260,
+                410
+              ],
+              "detail": "Query screen displays four particle count categories, whereas R06 displays water droplet hydration mode indicators."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "visible_conflict",
+          "evidence": "R07 utilizes a trigger switch under the handle grip and a purple filter housing.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                304,
+                476,
+                365,
+                511
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                325,
+                490,
+                375,
+                565
+              ],
+              "detail": "Query features a push-button power control above the rear display, whereas R07 uses a red trigger under the handle grip."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                198,
+                330,
+                785,
+                652
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                118,
+                185,
+                245,
+                458
+              ],
+              "detail": "Query has a cyan filter ring, whereas R07 has a purple filter housing."
+            }
+          ]
+        },
+        {
+          "reference": "R08",
+          "outcome": "visible_conflict",
+          "evidence": "R08 positions its red power button on the top spine of the main body chassis rather than directly above the rear display.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                304,
+                476,
+                365,
+                511
+              ],
+              "panel": "R08-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                848,
+                528,
+                888,
+                642
+              ],
+              "detail": "Query features a red power push-button located directly above the display on the rear face, whereas R08 positions its red power button on the top spine of the body."
+            }
+          ]
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "R09 features a rectangular top power button on a rose gold and black handle stalk without a circular rear display screen.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                304,
+                476,
+                365,
+                511
+              ],
+              "panel": "R09-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                62,
+                425,
+                218,
+                582
+              ],
+              "detail": "Query features a circular rear face with push-button controls, whereas R09 uses a rectangular top-mounted push button on the handle stalk."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                198,
+                330,
+                785,
+                652
+              ],
+              "panel": "R09-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                210,
+                340,
+                292,
+                670
+              ],
+              "detail": "Query features a cyan circular filter housing, whereas R09 has a cylindrical black body with a rose-gold ribbed collar."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "match",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_gen5detect"
+      ],
+      "evidence": [
+        "The rear interface features a red power push-button above a circular particle-counting display, a silver selection button below, and a cyan circular filter casing, precisely matching R04."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": "",
+      "product": "dyson_v16_piston_animal"
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "R01 is a canister vacuum with canister-mounted cyclones and lacks the rear cylindrical filter housing and display interface."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "R02 positions its red power button on top of the main body chassis and features a purple filter with a different lower-button configuration."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "R03 uses a trigger on the handle, a purple filter housing, and a single circular button at the lower right of the display."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "R04 matches the red power button positioned above the circular particle-counting display, the silver selection button below, and the cyan filter housing."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "R05 uses a trigger control and top slider switch, lacking any digital display screen."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "R06 is a wet floor cleaner with handle-stalk controls and hydration icons on its screen rather than particle count metrics and an on-screen power button."
+      }
+    ],
+    "top_two": [
+      "dyson_v16_piston_animal",
+      "dyson_gen5detect"
+    ],
+    "gate_reasons": [],
+    "matched_reference": "R04",
+    "matched_product": "dyson_v16_piston_animal"
+  }
+}

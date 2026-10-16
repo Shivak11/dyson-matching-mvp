@@ -1,0 +1,442 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "same_family",
+        "reference": "R04",
+        "confidence": 95,
+        "top_two": [
+          "R04",
+          "R02"
+        ],
+        "evidence": [
+          "Query shares the distinct Dyson Gen5detect family layout with R04, notably the rear display interface with an upper red power push-button and lower silver button, along with a triggerless pistol grip."
+        ],
+        "missing_evidence": [],
+        "contradictions": [],
+        "retake": ""
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a handheld stick vacuum, whereas R01 is a canister vacuum with a floor-based spherical ball body.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                380,
+                735,
+                755
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                550,
+                85,
+                935,
+                575
+              ],
+              "detail": "Query has an in-line cordless handheld body, whereas R01 has a canister base on large rolling wheels."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "visible_conflict",
+          "evidence": "R02 features a top-mounted body power button and a different rear display button layout.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                524,
+                258,
+                638
+              ],
+              "panel": "R02-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                390,
+                340,
+                600,
+                475
+              ],
+              "detail": "Query integrates the power button on the rear display face, whereas R02 has a red button situated on the top of the cyclone housing."
+            },
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                524,
+                258,
+                638
+              ],
+              "panel": "R02-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                415,
+                195,
+                740,
+                490
+              ],
+              "detail": "Query display has a red button at the 12 o'clock position, whereas R02 display only has a button at the 6 o'clock position."
+            }
+          ]
+        },
+        {
+          "reference": "R03",
+          "outcome": "visible_conflict",
+          "evidence": "R03 uses a physical trigger on the handle, whereas the query vacuum is triggerless.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                315,
+                530,
+                550,
+                715
+              ],
+              "panel": "R03-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                275,
+                485,
+                350,
+                568
+              ],
+              "detail": "Query handle has no trigger beneath the index finger, whereas R03 has a red trigger switch."
+            },
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                524,
+                258,
+                638
+              ],
+              "panel": "R03-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                310,
+                455,
+                660,
+                785
+              ],
+              "detail": "Query has a prominent red push-button above the screen bezel, absent on R03."
+            }
+          ]
+        },
+        {
+          "reference": "R04",
+          "outcome": "supported",
+          "evidence": "Query matches R04 in its triggerless handle grip, in-line body design, and display with top red power button and bottom selection button.",
+          "comparisons": [
+            {
+              "feature": "display_layout",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                524,
+                258,
+                638
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                240,
+                325,
+                535,
+                625
+              ],
+              "detail": "Both feature a circular digital display on the rear filter face with a top red push-button and a bottom silver pill-shaped button."
+            },
+            {
+              "feature": "handle_control",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                315,
+                530,
+                550,
+                715
+              ],
+              "panel": "R04-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                210,
+                425,
+                580,
+                905
+              ],
+              "detail": "Both have a triggerless handle with an inlaid red accent strip running down the front of the grip."
+            },
+            {
+              "feature": "body_layout",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                380,
+                735,
+                755
+              ],
+              "panel": "R04-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                110,
+                80,
+                990,
+                905
+              ],
+              "detail": "Both have an in-line body configuration with paired vertical cooling vents on the motor bucket and an aligned clear bin."
+            }
+          ]
+        },
+        {
+          "reference": "R05",
+          "outcome": "visible_conflict",
+          "evidence": "R05 features a perpendicular cyclone/bin configuration and a red trigger switch.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                380,
+                735,
+                755
+              ],
+              "panel": "R05-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                118,
+                55,
+                870,
+                790
+              ],
+              "detail": "Query has an in-line cylindrical dustbin, whereas R05 has a vertically oriented perpendicular bin and cyclone assembly."
+            },
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                315,
+                530,
+                550,
+                715
+              ],
+              "panel": "R05-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                410,
+                525,
+                505,
+                595
+              ],
+              "detail": "Query has a triggerless grip, whereas R05 uses a trigger control."
+            }
+          ]
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "R06 is a dual-tank wet cleaning machine, completely differing in architecture from the query handheld vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                380,
+                735,
+                755
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                15,
+                30,
+                990,
+                230
+              ],
+              "detail": "Query is a cyclonic dry handheld vacuum, whereas R06 is a hard-floor wet cleaner with stacked clean and dirty liquid tanks."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "visible_conflict",
+          "evidence": "R07 features a trigger control on the handle and lacks the top power button on the rear display.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                315,
+                530,
+                550,
+                715
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                320,
+                485,
+                395,
+                570
+              ],
+              "detail": "Query is triggerless, while R07 has a prominent red trigger."
+            },
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                524,
+                258,
+                638
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                120,
+                180,
+                280,
+                465
+              ],
+              "detail": "Query display includes a red push-button at the top of the bezel, which is absent on R07."
+            }
+          ]
+        },
+        {
+          "reference": "R08",
+          "outcome": "visible_conflict",
+          "evidence": "R08 features a red trigger switch on the inner grip, conflicting with the triggerless query handle.",
+          "comparisons": [
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                315,
+                530,
+                550,
+                715
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                305,
+                485,
+                385,
+                580
+              ],
+              "detail": "Query handle is smooth and triggerless, whereas R08 features an operating trigger under the index finger."
+            }
+          ]
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "R09 is a Shark stick vacuum with a distinct non-cyclonic body architecture.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                76,
+                380,
+                735,
+                755
+              ],
+              "panel": "R09-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                25,
+                340,
+                325,
+                650
+              ],
+              "detail": "Query uses an in-line radial cyclone arrangement, whereas R09 has a central Shark-branded dust pod."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "match",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Query shares the distinct Dyson Gen5detect family layout with R04, notably the rear display interface with an upper red power push-button and lower silver button, along with a triggerless pistol grip."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": "",
+      "product": "dyson_v16_piston_animal"
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Query is a handheld stick vacuum, whereas R01 is a canister vacuum with a floor-based spherical ball body."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "R02 features a top-mounted body power button and a different rear display button layout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "R03 uses a physical trigger on the handle, whereas the query vacuum is triggerless."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "Query matches R04 in its triggerless handle grip, in-line body design, and display with top red power button and bottom selection button."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "R05 features a perpendicular cyclone/bin configuration and a red trigger switch."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "R06 is a dual-tank wet cleaning machine, completely differing in architecture from the query handheld vacuum."
+      }
+    ],
+    "top_two": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim"
+    ],
+    "gate_reasons": [],
+    "matched_reference": "R04",
+    "matched_product": "dyson_v16_piston_animal"
+  }
+}

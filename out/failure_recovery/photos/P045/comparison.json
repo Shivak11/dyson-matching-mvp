@@ -1,0 +1,228 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 40,
+        "top_two": [
+          "R01",
+          "R03"
+        ],
+        "evidence": [
+          "Only the cleaner head and wand connector are visible, while the main body, cyclone filter, dustbin, and handle controls are out of frame.",
+          "Cleaner heads are interchangeable accessories that do not uniquely diagnose a specific vacuum family."
+        ],
+        "missing_evidence": [
+          "body_layout",
+          "cyclone_filter",
+          "handle_control",
+          "bin_mechanism"
+        ],
+        "contradictions": [],
+        "retake": "Take a photo of the complete vacuum including the main body, cyclone assembly, dustbin, and handle."
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "insufficient_evidence",
+          "evidence": "Cleaner head resembles the motorized brush roller head in R01-P1, but cleaner heads are interchangeable accessories and the canister body is absent.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                409,
+                107,
+                854,
+                674
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                864,
+                645,
+                948,
+                944
+              ],
+              "detail": "Both feature a motorized cleaner head with a rotating spiral bristle brush roller and clear front cover."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main body, cyclone assembly, and display shown in R02 are out of frame in the query, and R02 does not depict a cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R03",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query lacks views of the main body, cyclone filter, or handle controls depicted in R03.",
+          "comparisons": []
+        },
+        {
+          "reference": "R04",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main body, dustbin, and rear display visible in R04 are not visible in the query.",
+          "comparisons": []
+        },
+        {
+          "reference": "R05",
+          "outcome": "insufficient_evidence",
+          "evidence": "Cyclone assembly, dustbin, and handle layout shown in R05 are not captured in the query.",
+          "comparisons": []
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "Query shows a single bristle roller cleaner head, conflicting with the dual wet-roller head of R06.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                409,
+                107,
+                854,
+                674
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                910,
+                703,
+                988,
+                963
+              ],
+              "detail": "Query has a dry cleaner head with a bristle brush roller, whereas R06 features a dual wet-roller floor head."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main body, dustbin, and cyclone assembly shown in R07 are not visible in the query.",
+          "comparisons": []
+        },
+        {
+          "reference": "R08",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query does not show the main body, cyclone filter, or wand push buttons depicted in R08.",
+          "comparisons": []
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Query shows Dyson cleaner head architecture and branding, conflicting with Shark DuoClean architecture and Shark brand text.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                409,
+                107,
+                854,
+                674
+              ],
+              "panel": "R09-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                480,
+                67,
+                855,
+                905
+              ],
+              "detail": "Query has a Dyson motorized cleaner head without headlights, conflicting with Shark DuoClean architecture."
+            },
+            {
+              "feature": "identifier",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                657,
+                506,
+                706,
+                602
+              ],
+              "panel": "R09-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                559,
+                474,
+                698,
+                529
+              ],
+              "detail": "Query displays 'dyson' text, conflicting with 'Shark' branding on R09."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "not_sure",
+      "confidence": 40,
+      "top_two": [
+        "dyson_big_ball",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Only the cleaner head and wand connector are visible, while the main body, cyclone filter, dustbin, and handle controls are out of frame.",
+        "Cleaner heads are interchangeable accessories that do not uniquely diagnose a specific vacuum family."
+      ],
+      "missing_evidence": [
+        "body_layout",
+        "cyclone_filter",
+        "handle_control",
+        "bin_mechanism"
+      ],
+      "contradictions": [],
+      "retake": "Take a photo of the complete vacuum including the main body, cyclone assembly, dustbin, and handle.",
+      "product": null
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "Cleaner head resembles the motorized brush roller head in R01-P1, but cleaner heads are interchangeable accessories and the canister body is absent."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "Main body, cyclone assembly, and display shown in R02 are out of frame in the query, and R02 does not depict a cleaner head."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "Query lacks views of the main body, cyclone filter, or handle controls depicted in R03."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "Main body, dustbin, and rear display visible in R04 are not visible in the query."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "Cyclone assembly, dustbin, and handle layout shown in R05 are not captured in the query."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Query shows a single bristle roller cleaner head, conflicting with the dual wet-roller head of R06."
+      }
+    ],
+    "top_two": [
+      "dyson_big_ball",
+      "dyson_v15_detect"
+    ],
+    "gate_reasons": [],
+    "matched_reference": null,
+    "matched_product": null
+  }
+}

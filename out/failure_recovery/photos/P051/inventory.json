@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        18,
+        298,
+        1000,
+        655
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Translucent cyan cylindrical filter unit labelled WASHABLE HEPA FILTER",
+          "box_2d": [
+            18,
+            313,
+            481,
+            635
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Purple radial cyclone cones with red accent trim below the central body",
+          "box_2d": [
+            669,
+            298,
+            1000,
+            656
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Lower dust bin, handle, trigger, battery, and cleaning head are out of frame below",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        18,
+        298,
+        1000,
+        655
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Translucent cyan cylindrical filter unit labelled WASHABLE HEPA FILTER",
+          "box_2d": [
+            18,
+            313,
+            481,
+            635
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Purple radial cyclone cones with red accent trim below the central body",
+          "box_2d": [
+            669,
+            298,
+            1000,
+            656
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Lower dust bin, handle, trigger, battery, and cleaning head are out of frame below",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

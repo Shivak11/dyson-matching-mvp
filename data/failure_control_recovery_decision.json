@@ -1,0 +1,31 @@
+{
+  "failed_logical_job_id": "v3:compare:P019",
+  "previous_max_output_tokens": 32768,
+  "new_max_output_tokens": 65536,
+  "previous_request_timeout_seconds": 480,
+  "new_request_timeout_seconds": 900,
+  "requested_model": "google/gemini-3.7-flash",
+  "provider_only": [
+    "google-ai-studio"
+  ],
+  "thinking_level": "high",
+  "stage_ceiling_inr": 1000,
+  "overall_ceiling_inr": 2000,
+  "owner_instruction": "Finish the authorised failure round and controls, then continue the next handoff method within the unchanged remaining budget. The bounded output-limit retry is an implementation decision under that scope.",
+  "owner_quotes": [
+    "once done move to the next method as given in the handoff",
+    "budget increase by anohter 400"
+  ],
+  "automatic_fallback": false,
+  "reuse_exact_inventory": true,
+  "previous_completed_count": 22,
+  "reservation_usd": 0.28326,
+  "prior_stage_guard_inr": 766.6601861,
+  "original_failure_sha256": "5024def1e687526ae93f6469044a880e1769a6140e2273952c06baa292b5d959",
+  "metadata_source_url": "https://openrouter.ai/api/v1/models/google/gemini-3.7-flash/endpoints",
+  "metadata_provider_tag": "google-ai-studio",
+  "metadata_max_completion_tokens": 65536,
+  "metadata_verified_utc": "2026-10-16T10:29:19.695805+00:00",
+  "one_output_limit_retry_only": true,
+  "new_spending_allowance_inr": 0
+}

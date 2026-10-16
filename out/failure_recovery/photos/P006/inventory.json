@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "box_2d": [
+        68,
+        77,
+        968,
+        937
+      ],
+      "object_id": "o1",
+      "observations": [
+        {
+          "box_2d": [
+            137,
+            516,
+            968,
+            938
+          ],
+          "detail": "Handheld unit with vertical clear dust bin, multi-cyclone assembly, and pistol grip above battery base",
+          "feature": "body_layout",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            201,
+            707,
+            497,
+            924
+          ],
+          "detail": "Purple rear post-motor filter cap attached to back of body",
+          "feature": "filter",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            174,
+            206,
+            473,
+            558
+          ],
+          "detail": "Orange rigid extension tube connecting handheld body to cleaner head",
+          "feature": "wand",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            68,
+            77,
+            281,
+            338
+          ],
+          "detail": "Floor cleaner head with transparent shell and red/blue rotating brush roller",
+          "feature": "cleaner_head",
+          "visible": true
+        }
+      ],
+      "parent_id": null,
+      "readable_identifier": "dyson",
+      "role": "machine",
+      "visibility": "whole_machine"
+    }
+  ],
+  "machines": [
+    {
+      "box_2d": [
+        68,
+        77,
+        968,
+        937
+      ],
+      "object_id": "o1",
+      "observations": [
+        {
+          "box_2d": [
+            137,
+            516,
+            968,
+            938
+          ],
+          "detail": "Handheld unit with vertical clear dust bin, multi-cyclone assembly, and pistol grip above battery base",
+          "feature": "body_layout",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            201,
+            707,
+            497,
+            924
+          ],
+          "detail": "Purple rear post-motor filter cap attached to back of body",
+          "feature": "filter",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            174,
+            206,
+            473,
+            558
+          ],
+          "detail": "Orange rigid extension tube connecting handheld body to cleaner head",
+          "feature": "wand",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            68,
+            77,
+            281,
+            338
+          ],
+          "detail": "Floor cleaner head with transparent shell and red/blue rotating brush roller",
+          "feature": "cleaner_head",
+          "visible": true
+        }
+      ],
+      "parent_id": null,
+      "readable_identifier": "dyson",
+      "role": "machine",
+      "visibility": "whole_machine"
+    }
+  ]
+}

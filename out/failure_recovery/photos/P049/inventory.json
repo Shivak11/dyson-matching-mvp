@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        114,
+        362,
+        924,
+        631
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline cylindrical dustbin and cyclone assembly aligned vertically with wand",
+          "box_2d": [
+            114,
+            458,
+            350,
+            524
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Cleaner head with transparent window, dual-colored roller bar, and red switch",
+          "box_2d": [
+            783,
+            362,
+            924,
+            631
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Purple straight extension wand connecting head to main unit",
+          "box_2d": [
+            305,
+            477,
+            764,
+            524
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        114,
+        362,
+        924,
+        631
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline cylindrical dustbin and cyclone assembly aligned vertically with wand",
+          "box_2d": [
+            114,
+            458,
+            350,
+            524
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Cleaner head with transparent window, dual-colored roller bar, and red switch",
+          "box_2d": [
+            783,
+            362,
+            924,
+            631
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Purple straight extension wand connecting head to main unit",
+          "box_2d": [
+            305,
+            477,
+            764,
+            524
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

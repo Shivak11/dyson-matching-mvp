@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        995,
+        836
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Red circular power button with power symbol",
+          "box_2d": [
+            483,
+            455,
+            663,
+            551
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Orange cyclone assembly surrounding a blue circular top lid",
+          "box_2d": [
+            0,
+            0,
+            513,
+            769
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Clear handle assembly with red release mechanism",
+          "box_2d": [
+            390,
+            128,
+            779,
+            345
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Button embossed with electrical plug icon",
+          "box_2d": [
+            444,
+            28,
+            595,
+            135
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        995,
+        836
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Red circular power button with power symbol",
+          "box_2d": [
+            483,
+            455,
+            663,
+            551
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Orange cyclone assembly surrounding a blue circular top lid",
+          "box_2d": [
+            0,
+            0,
+            513,
+            769
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Clear handle assembly with red release mechanism",
+          "box_2d": [
+            390,
+            128,
+            779,
+            345
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Button embossed with electrical plug icon",
+          "box_2d": [
+            444,
+            28,
+            595,
+            135
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

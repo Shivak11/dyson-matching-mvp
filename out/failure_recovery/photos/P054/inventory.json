@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        198,
+        330,
+        1000,
+        652
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen displaying particle size counts and 25:52 remaining runtime",
+          "box_2d": [
+            405,
+            445,
+            573,
+            537
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red circular power push-button positioned above the display",
+          "box_2d": [
+            304,
+            476,
+            365,
+            511
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "horizontal pill-shaped selection button below the display",
+          "box_2d": [
+            605,
+            468,
+            631,
+            511
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "wand, dust bin, and cleaner head extend forward directly away from view",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        198,
+        330,
+        1000,
+        652
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen displaying particle size counts and 25:52 remaining runtime",
+          "box_2d": [
+            405,
+            445,
+            573,
+            537
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red circular power push-button positioned above the display",
+          "box_2d": [
+            304,
+            476,
+            365,
+            511
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "horizontal pill-shaped selection button below the display",
+          "box_2d": [
+            605,
+            468,
+            631,
+            511
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "wand, dust bin, and cleaner head extend forward directly away from view",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

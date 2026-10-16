@@ -1,0 +1,93 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        209,
+        705,
+        804
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "vacuum wand and main body are out of frame",
+          "box_2d": null
+        },
+        {
+          "feature": "brushroll",
+          "visible": true,
+          "detail": "motorized brush bar with tangled pet hair and red and blue bristles",
+          "box_2d": [
+            526,
+            247,
+            659,
+            788
+          ]
+        },
+        {
+          "feature": "swivel_joint",
+          "visible": true,
+          "detail": "ball-style articulation neck with flexible corrugated hose",
+          "box_2d": [
+            0,
+            428,
+            279,
+            592
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        209,
+        705,
+        804
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "vacuum wand and main body are out of frame",
+          "box_2d": null
+        },
+        {
+          "feature": "brushroll",
+          "visible": true,
+          "detail": "motorized brush bar with tangled pet hair and red and blue bristles",
+          "box_2d": [
+            526,
+            247,
+            659,
+            788
+          ]
+        },
+        {
+          "feature": "swivel_joint",
+          "visible": true,
+          "detail": "ball-style articulation neck with flexible corrugated hose",
+          "box_2d": [
+            0,
+            428,
+            279,
+            592
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "accessory_only": true
+    }
+  ]
+}

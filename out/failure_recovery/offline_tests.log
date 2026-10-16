@@ -1,0 +1,7 @@
+.........................................................................................................................................{"photo": "P002", "completed": 2, "machines": 0, "final": [{"status": "not_sure", "product": null, "confidence": 0, "top_two": [], "evidence": [], "missing_evidence": ["No physical cleaner was located."], "contradictions": [], "retake": "Photograph the cleaner body, bin and controls."}], "continuation_guard_inr": 0}
+{"status": "completed", "costs": {}}
+.............................
+----------------------------------------------------------------------
+Ran 166 tests in 4.061s
+
+OK

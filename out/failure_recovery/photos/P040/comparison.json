@@ -1,0 +1,200 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 90,
+        "top_two": [
+          "R01",
+          "R08"
+        ],
+        "evidence": [
+          "Only the cleaner head and lower wand are visible; the main body, cyclone, and handle are out of frame."
+        ],
+        "missing_evidence": [
+          "View of the main body, cyclone assembly, dustbin, and handle controls to identify the specific model family."
+        ],
+        "contradictions": [],
+        "retake": "Photograph the main vacuum body showing the cyclone, bin, and handle controls."
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "insufficient_evidence",
+          "evidence": "Similar soft roller cleaner head is visible, but the main body is absent and the head is an interchangeable accessory.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                675,
+                310,
+                882,
+                734
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                862,
+                646,
+                951,
+                943
+              ],
+              "detail": "Both feature a soft roller cleaner head with a clear front housing and plush roller."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "insufficient_evidence",
+          "evidence": "The query's main body is out of frame and R02 does not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R03",
+          "outcome": "insufficient_evidence",
+          "evidence": "The query's main body is out of frame and R03 does not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R04",
+          "outcome": "insufficient_evidence",
+          "evidence": "The query's main body is out of frame and R04 does not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R05",
+          "outcome": "insufficient_evidence",
+          "evidence": "The query's main body is out of frame and R05 does not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "Cleaner head design conflicts directly between the single soft roller and the dual wet-roller head.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                675,
+                310,
+                882,
+                734
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                910,
+                705,
+                990,
+                965
+              ],
+              "detail": "Query has a single soft roller in clear housing, whereas R06 has an enclosed dual wet-roller head."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "insufficient_evidence",
+          "evidence": "The query's main body is out of frame and R07 does not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R08",
+          "outcome": "insufficient_evidence",
+          "evidence": "The query's main body is out of frame and R08 does not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Cleaner head architecture conflicts with the Shark DuoClean dual-roller head with headlights.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                675,
+                310,
+                882,
+                734
+              ],
+              "panel": "R09-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                490,
+                68,
+                850,
+                905
+              ],
+              "detail": "Query has a Dyson soft roller head in clear housing, conflicting with R09's DuoClean head with headlights."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "not_sure",
+      "confidence": 90,
+      "top_two": [
+        "dyson_big_ball",
+        "dyson_gen5detect"
+      ],
+      "evidence": [
+        "Only the cleaner head and lower wand are visible; the main body, cyclone, and handle are out of frame."
+      ],
+      "missing_evidence": [
+        "View of the main body, cyclone assembly, dustbin, and handle controls to identify the specific model family."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the main vacuum body showing the cyclone, bin, and handle controls.",
+      "product": null
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "Similar soft roller cleaner head is visible, but the main body is absent and the head is an interchangeable accessory."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The query's main body is out of frame and R02 does not depict the cleaner head."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The query's main body is out of frame and R03 does not depict the cleaner head."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The query's main body is out of frame and R04 does not depict the cleaner head."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The query's main body is out of frame and R05 does not depict the cleaner head."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Cleaner head design conflicts directly between the single soft roller and the dual wet-roller head."
+      }
+    ],
+    "top_two": [
+      "dyson_big_ball",
+      "dyson_gen5detect"
+    ],
+    "gate_reasons": [],
+    "matched_reference": null,
+    "matched_product": null
+  }
+}

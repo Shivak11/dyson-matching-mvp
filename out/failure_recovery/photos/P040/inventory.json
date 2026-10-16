@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        310,
+        883,
+        734
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dustbin, and handle are out of frame above",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Roller cleaner head with purple and red brush roll inside clear housing",
+          "box_2d": [
+            675,
+            310,
+            882,
+            734
+          ]
+        },
+        {
+          "feature": "wand_and_connector",
+          "visible": true,
+          "detail": "Purple extension wand attached to grey swivel neck connector with red release clip",
+          "box_2d": [
+            0,
+            408,
+            693,
+            545
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        310,
+        883,
+        734
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dustbin, and handle are out of frame above",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Roller cleaner head with purple and red brush roll inside clear housing",
+          "box_2d": [
+            675,
+            310,
+            882,
+            734
+          ]
+        },
+        {
+          "feature": "wand_and_connector",
+          "visible": true,
+          "detail": "Purple extension wand attached to grey swivel neck connector with red release clip",
+          "box_2d": [
+            0,
+            408,
+            693,
+            545
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

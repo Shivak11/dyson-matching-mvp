@@ -1,0 +1,44 @@
+{
+  "o1": [
+    {
+      "file": "out/failure_recovery/photos/P045/o1_body.jpg",
+      "pixel_box": [
+        210,
+        0,
+        1745,
+        1249
+      ],
+      "sha256": "233bfb4d01261d5bce340bd2544ae0b46c9a813346492f6acb6d00a87437e5ea"
+    },
+    {
+      "file": "out/failure_recovery/photos/P045/o1_detail_1.jpg",
+      "pixel_box": [
+        210,
+        550,
+        1742,
+        1226
+      ],
+      "sha256": "417f4980166b8021edd099bce136df2c9311346aaa187550decd0a73ec11d394"
+    },
+    {
+      "file": "out/failure_recovery/photos/P045/o1_detail_2.jpg",
+      "pixel_box": [
+        1170,
+        104,
+        1303,
+        278
+      ],
+      "sha256": "d96cce061ab1f377e438a905291f8fbf5415a9e8f76ff50c432e6a30fdbaac89"
+    },
+    {
+      "file": "out/failure_recovery/photos/P045/o1_detail_3.jpg",
+      "pixel_box": [
+        914,
+        411,
+        1333,
+        737
+      ],
+      "sha256": "de994922f30ca76fad036e23a4b372506a8d96c257133c510d88aade05588080"
+    }
+  ]
+}

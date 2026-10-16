@@ -1,0 +1,38 @@
+{
+  "status": "verified_stopped_phase",
+  "completed_photos": 22,
+  "selected_photos": 23,
+  "completed_failure_cases": 20,
+  "completed_controls": [
+    "P006",
+    "P014"
+  ],
+  "incomplete_controls": [
+    "P019"
+  ],
+  "expected_base_audit_errors": [
+    "An unrecovered non-429 failure, validation error or exhausted429 request exists"
+  ],
+  "error_is_not_an_identification_result": true,
+  "frozen_input_count": 969,
+  "frozen_changes": [],
+  "offline_tests": 166,
+  "independent_audit_source_sha256": "80c7217e47cbb7b82f6fafb43d4c3bf9bfe4346511217bbe601927bfdcdcf300",
+  "audit_result_sha256": "85dc68104fd9c9db62379561bcc0a119af8830685dfe3d199cff75c02c390e5b",
+  "costs": {
+    "historical_seven_ledgers_accounted_usd": 5.748449860999999,
+    "new_settled_usd": 1.918152,
+    "new_unresolved_reserve_usd": 0,
+    "new_accounted_usd": 1.918152,
+    "new_reporting_inr": 182.5256558299241,
+    "new_guard_inr": 191.8152,
+    "combined_stage_guard_inr": 766.6601860999999,
+    "stage_ceiling_inr": 1000,
+    "remaining_stage_guard_inr": 233.33981390000008,
+    "combined_stage_reporting_inr": 729.5310969443201,
+    "overall_guard_inr": 809.3401861,
+    "overall_ceiling_inr": 2000,
+    "new_reporting_cost_per_completed_photo_inr": 8.296620719542004
+  },
+  "next_action": "One separately frozen P019 output-limit retry; do not alter this stopped phase."
+}

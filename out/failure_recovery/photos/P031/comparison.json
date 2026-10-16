@@ -1,0 +1,364 @@
+{
+  "o1": {
+    "raw": {
+      "object_id": "o1",
+      "decision": {
+        "status": "same_family",
+        "reference": "R01",
+        "confidence": 95,
+        "top_two": [
+          "R01",
+          "R02"
+        ],
+        "evidence": [
+          "Spherical canister ball body with forward-angled bin layout matching R01",
+          "Two-tier radial cyclone pack and clear bin with inner perforated shroud and red collar matching R01"
+        ],
+        "missing_evidence": [],
+        "contradictions": [],
+        "retake": ""
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "supported",
+          "evidence": "Matches the spherical ball canister architecture, two-tier cyclone pack, and bin mechanism of the Dyson Big Ball family.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                404,
+                185
+              ],
+              "panel": "R01-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                59,
+                48,
+                888,
+                966
+              ],
+              "detail": "Both share a spherical canister body layout with large ball wheels and a forward-angled dust bin."
+            },
+            {
+              "feature": "cyclone_filter",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                315,
+                115
+              ],
+              "panel": "R01-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                54,
+                252,
+                295,
+                747
+              ],
+              "detail": "Both feature a two-tier radial cyclone assembly seated directly above the cylindrical bin."
+            },
+            {
+              "feature": "bin_mechanism",
+              "relation": "support",
+              "query_visible": true,
+              "query_box_2d": [
+                112,
+                18,
+                396,
+                185
+              ],
+              "panel": "R01-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                229,
+                280,
+                802,
+                706
+              ],
+              "detail": "Both feature a clear cylindrical bin enclosing a central perforated shroud with a red sliding wiper collar."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "visible_conflict",
+          "evidence": "Target is a spherical canister vacuum, whereas R02 is a cordless stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                404,
+                185
+              ],
+              "panel": "R02-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                46,
+                120,
+                998,
+                904
+              ],
+              "detail": "Target is a canister vacuum with a ball body, whereas R02 is an in-line stick vacuum with a handle."
+            }
+          ]
+        },
+        {
+          "reference": "R03",
+          "outcome": "visible_conflict",
+          "evidence": "Target is a spherical canister vacuum, whereas R03 is a cordless stick vacuum with a pistol grip.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                404,
+                185
+              ],
+              "panel": "R03-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                40,
+                115,
+                998,
+                900
+              ],
+              "detail": "Target has a spherical canister body, whereas R03 has an in-line handheld stick layout."
+            }
+          ]
+        },
+        {
+          "reference": "R04",
+          "outcome": "visible_conflict",
+          "evidence": "Target is a spherical canister vacuum, whereas R04 is an in-line cordless stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                404,
+                185
+              ],
+              "panel": "R04-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                114,
+                83,
+                996,
+                909
+              ],
+              "detail": "Target has a ball canister body, whereas R04 has an in-line stick vacuum configuration."
+            }
+          ]
+        },
+        {
+          "reference": "R05",
+          "outcome": "visible_conflict",
+          "evidence": "Target is a spherical canister vacuum, whereas R05 is a handheld stick vacuum with a horizontal bin.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                404,
+                185
+              ],
+              "panel": "R05-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                117,
+                54,
+                868,
+                799
+              ],
+              "detail": "Target has a spherical canister layout, whereas R05 has a horizontal bin and vertical cyclone handheld layout."
+            }
+          ]
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "Target is a spherical dry canister vacuum, whereas R06 is an upright wet floor cleaner.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                404,
+                185
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                13,
+                33,
+                992,
+                227
+              ],
+              "detail": "Target is a canister vacuum with ball chassis, whereas R06 is an upright floor washer with vertical tanks."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "visible_conflict",
+          "evidence": "Target is a spherical canister vacuum, whereas R07 is an in-line cordless stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                404,
+                185
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                118,
+                117,
+                996,
+                915
+              ],
+              "detail": "Target is a canister vacuum with a ball body, whereas R07 is an in-line handheld stick vacuum."
+            }
+          ]
+        },
+        {
+          "reference": "R08",
+          "outcome": "visible_conflict",
+          "evidence": "Target is a spherical canister vacuum, whereas R08 is a compact in-line stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                404,
+                185
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                36,
+                75,
+                996,
+                929
+              ],
+              "detail": "Target has a ball canister body, whereas R08 has a slender in-line stick format."
+            }
+          ]
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Target is a Dyson canister vacuum, whereas R09 is a Shark stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                59,
+                0,
+                404,
+                185
+              ],
+              "panel": "R09-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                22,
+                21,
+                975,
+                908
+              ],
+              "detail": "Target is a spherical canister vacuum, whereas R09 is an upright stick vacuum."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    },
+    "decision": {
+      "status": "match",
+      "confidence": 95,
+      "top_two": [
+        "dyson_big_ball",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Spherical canister ball body with forward-angled bin layout matching R01",
+        "Two-tier radial cyclone pack and clear bin with inner perforated shroud and red collar matching R01"
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": "",
+      "product": "dyson_big_ball"
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "confirmed",
+        "evidence": "Matches the spherical ball canister architecture, two-tier cyclone pack, and bin mechanism of the Dyson Big Ball family."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target is a spherical canister vacuum, whereas R02 is a cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Target is a spherical canister vacuum, whereas R03 is a cordless stick vacuum with a pistol grip."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target is a spherical canister vacuum, whereas R04 is an in-line cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Target is a spherical canister vacuum, whereas R05 is a handheld stick vacuum with a horizontal bin."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Target is a spherical dry canister vacuum, whereas R06 is an upright wet floor cleaner."
+      }
+    ],
+    "top_two": [
+      "dyson_big_ball",
+      "dyson_v12_detect_slim"
+    ],
+    "gate_reasons": [],
+    "matched_reference": "R01",
+    "matched_product": "dyson_big_ball"
+  }
+}

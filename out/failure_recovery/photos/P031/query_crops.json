@@ -1,0 +1,24 @@
+{
+  "o1": [
+    {
+      "file": "out/failure_recovery/photos/P031/o1_body.jpg",
+      "pixel_box": [
+        0,
+        21,
+        160,
+        196
+      ],
+      "sha256": "461d822cd0a9285d169615043367cf06f6c089f6f2336a58885812fd50f3c7ce"
+    },
+    {
+      "file": "out/failure_recovery/photos/P031/o1_detail_0.jpg",
+      "pixel_box": [
+        0,
+        21,
+        160,
+        196
+      ],
+      "sha256": "461d822cd0a9285d169615043367cf06f6c089f6f2336a58885812fd50f3c7ce"
+    }
+  ]
+}
