@@ -1,0 +1,57 @@
+[
+  {
+    "label": "WHOLE SCENE",
+    "file": "out/focused_recovery/photos/P030/scene.jpg",
+    "pixel_box": [
+      0,
+      0,
+      830,
+      467
+    ],
+    "sha256": "0630adaf38a02e148868cc2f7ddb17848d85d4a435e8f88b5de3f5afb139e542"
+  },
+  {
+    "label": "TARGET o1",
+    "file": "out/focused_recovery/photos/P030/o1_body.jpg",
+    "pixel_box": [
+      0,
+      0,
+      722,
+      467
+    ],
+    "sha256": "96d25e7bc1eabb330ca547916e2d200d31d2c6cda68c0c9d562ac4d2a2fa088f"
+  },
+  {
+    "label": "TARGET o1 DETAIL 0",
+    "file": "out/focused_recovery/photos/P030/o1_detail_0.jpg",
+    "pixel_box": [
+      374,
+      222,
+      461,
+      313
+    ],
+    "sha256": "838a49be21b2604612c50c7c4e4e610fd108d74d9b0fe1aa48a62dbfe29d1cff"
+  },
+  {
+    "label": "TARGET o1 DETAIL 1",
+    "file": "out/focused_recovery/photos/P030/o1_detail_1.jpg",
+    "pixel_box": [
+      0,
+      0,
+      664,
+      250
+    ],
+    "sha256": "f27e274cf445beca964a7a87d81897bdfeb550c78883cc2f74aaa1769eddd405"
+  },
+  {
+    "label": "TARGET o1 DETAIL 2",
+    "file": "out/focused_recovery/photos/P030/o1_detail_2.jpg",
+    "pixel_box": [
+      99,
+      174,
+      294,
+      372
+    ],
+    "sha256": "ee3fb265877e25fbe9f5d0ecab659b7c27aa9ddd695fb30b8160ab144f4f36c3"
+  }
+]

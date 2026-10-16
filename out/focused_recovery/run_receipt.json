@@ -1,0 +1,21 @@
+{
+  "status": "stopped",
+  "started_utc": "2026-10-16T11:02:17Z",
+  "settled_utc": "2026-10-16T11:04:02Z",
+  "completed_count": 0,
+  "selected_ids": [
+    "P030"
+  ],
+  "workers": 1,
+  "inflight_count": 0,
+  "error": "v4:predicates:P030:attempt:1: Incomplete provider result: length",
+  "costs": {
+    "new_accounted_usd": 0.07347975,
+    "new_reporting_inr": 6.992115097744529,
+    "new_guard_inr": 7.347975,
+    "new_pending_reserve_usd": 0,
+    "combined_stage_guard_inr": 785.1389111,
+    "remaining_guard_inr": 214.86108890000003,
+    "overall_guard_inr": 827.8189110999999
+  }
+}

@@ -1,0 +1,1378 @@
+{
+  "audit_status": "FAIL",
+  "errors": [
+    "A terminal error or validation failure is unresolved"
+  ],
+  "notes": [],
+  "completed_photo_count": 0,
+  "selected_photo_count": 17,
+  "scores": {
+    "focused_recovery": {
+      "failures": {
+        "metrics": {
+          "denominator": 14,
+          "correct": 0,
+          "wrong": 0,
+          "confidently_wrong": 0,
+          "unsure": 0,
+          "not_run": 14,
+          "accuracy_all_selected": 0.0
+        },
+        "per_photo": [
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P012",
+            "source_label": "dyson_v12_detect_slim",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P018",
+            "source_label": "dyson_v15_detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P028",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P029",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P030",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P040",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P043",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P045",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P046",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P048",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P049",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P050",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P051",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P054",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          }
+        ]
+      },
+      "controls": {
+        "metrics": {
+          "denominator": 3,
+          "correct": 0,
+          "wrong": 0,
+          "confidently_wrong": 0,
+          "unsure": 0,
+          "not_run": 3,
+          "accuracy_all_selected": 0.0
+        },
+        "per_photo": [
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P006",
+            "source_label": "dyson_v8_absolute",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P014",
+            "source_label": "dyson_v15_detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P019",
+            "source_label": "dyson_v16_piston_animal",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          }
+        ]
+      },
+      "all_selected": {
+        "metrics": {
+          "denominator": 17,
+          "correct": 0,
+          "wrong": 0,
+          "confidently_wrong": 0,
+          "unsure": 0,
+          "not_run": 17,
+          "accuracy_all_selected": 0.0
+        },
+        "per_photo": [
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P012",
+            "source_label": "dyson_v12_detect_slim",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P018",
+            "source_label": "dyson_v15_detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P028",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P029",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P030",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P040",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P043",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P045",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P046",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P048",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P049",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P050",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P051",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P054",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P006",
+            "source_label": "dyson_v8_absolute",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P014",
+            "source_label": "dyson_v15_detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P019",
+            "source_label": "dyson_v16_piston_animal",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          }
+        ]
+      }
+    },
+    "focused_raw": {
+      "failures": {
+        "metrics": {
+          "denominator": 14,
+          "correct": 0,
+          "wrong": 0,
+          "confidently_wrong": 0,
+          "unsure": 0,
+          "not_run": 14,
+          "accuracy_all_selected": 0.0
+        },
+        "per_photo": [
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P012",
+            "source_label": "dyson_v12_detect_slim",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P018",
+            "source_label": "dyson_v15_detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P028",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P029",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P030",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P040",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P043",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P045",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P046",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P048",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P049",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P050",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P051",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P054",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          }
+        ]
+      },
+      "controls": {
+        "metrics": {
+          "denominator": 3,
+          "correct": 0,
+          "wrong": 0,
+          "confidently_wrong": 0,
+          "unsure": 0,
+          "not_run": 3,
+          "accuracy_all_selected": 0.0
+        },
+        "per_photo": [
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P006",
+            "source_label": "dyson_v8_absolute",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P014",
+            "source_label": "dyson_v15_detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P019",
+            "source_label": "dyson_v16_piston_animal",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          }
+        ]
+      },
+      "all_selected": {
+        "metrics": {
+          "denominator": 17,
+          "correct": 0,
+          "wrong": 0,
+          "confidently_wrong": 0,
+          "unsure": 0,
+          "not_run": 17,
+          "accuracy_all_selected": 0.0
+        },
+        "per_photo": [
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P012",
+            "source_label": "dyson_v12_detect_slim",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P018",
+            "source_label": "dyson_v15_detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P028",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P029",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P030",
+            "source_label": "dyson_big_ball",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P040",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P043",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P045",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P046",
+            "source_label": "NONCAT_dyson_v11",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P048",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P049",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P050",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P051",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P054",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P006",
+            "source_label": "dyson_v8_absolute",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P014",
+            "source_label": "dyson_v15_detect",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          },
+          {
+            "status": "not_sure",
+            "product": null,
+            "confidence": 0,
+            "complete": false,
+            "image_id": "P019",
+            "source_label": "dyson_v16_piston_animal",
+            "completed": false,
+            "correct": false,
+            "run_status": "not_run"
+          }
+        ]
+      }
+    }
+  },
+  "exact_reference_family_scores": {
+    "focused_recovery": {
+      "failures": {
+        "denominator": 14,
+        "exact_correct": 0,
+        "wrong_resolved_family": 0,
+        "unresolved_or_unrun": 14,
+        "per_photo": [
+          {
+            "image_id": "P012",
+            "source_label": "dyson_v12_detect_slim",
+            "expected_reference_family": "dyson_v12_detect_slim",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P018",
+            "source_label": "dyson_v15_detect",
+            "expected_reference_family": "dyson_v15_detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P028",
+            "source_label": "dyson_big_ball",
+            "expected_reference_family": "dyson_big_ball",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P029",
+            "source_label": "dyson_big_ball",
+            "expected_reference_family": "dyson_big_ball",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P030",
+            "source_label": "dyson_big_ball",
+            "expected_reference_family": "dyson_big_ball",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P040",
+            "source_label": "NONCAT_dyson_v11",
+            "expected_reference_family": "dyson_v11",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P043",
+            "source_label": "NONCAT_dyson_v11",
+            "expected_reference_family": "dyson_v11",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P045",
+            "source_label": "NONCAT_dyson_v11",
+            "expected_reference_family": "dyson_v11",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P046",
+            "source_label": "NONCAT_dyson_v11",
+            "expected_reference_family": "dyson_v11",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P048",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P049",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P050",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P051",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P054",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          }
+        ]
+      },
+      "controls": {
+        "denominator": 3,
+        "exact_correct": 0,
+        "wrong_resolved_family": 0,
+        "unresolved_or_unrun": 3,
+        "per_photo": [
+          {
+            "image_id": "P006",
+            "source_label": "dyson_v8_absolute",
+            "expected_reference_family": "dyson_v8_absolute",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P014",
+            "source_label": "dyson_v15_detect",
+            "expected_reference_family": "dyson_v15_detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P019",
+            "source_label": "dyson_v16_piston_animal",
+            "expected_reference_family": "dyson_v16_piston_animal",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          }
+        ]
+      }
+    },
+    "focused_raw": {
+      "failures": {
+        "denominator": 14,
+        "exact_correct": 0,
+        "wrong_resolved_family": 0,
+        "unresolved_or_unrun": 14,
+        "per_photo": [
+          {
+            "image_id": "P012",
+            "source_label": "dyson_v12_detect_slim",
+            "expected_reference_family": "dyson_v12_detect_slim",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P018",
+            "source_label": "dyson_v15_detect",
+            "expected_reference_family": "dyson_v15_detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P028",
+            "source_label": "dyson_big_ball",
+            "expected_reference_family": "dyson_big_ball",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P029",
+            "source_label": "dyson_big_ball",
+            "expected_reference_family": "dyson_big_ball",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P030",
+            "source_label": "dyson_big_ball",
+            "expected_reference_family": "dyson_big_ball",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P040",
+            "source_label": "NONCAT_dyson_v11",
+            "expected_reference_family": "dyson_v11",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P043",
+            "source_label": "NONCAT_dyson_v11",
+            "expected_reference_family": "dyson_v11",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P045",
+            "source_label": "NONCAT_dyson_v11",
+            "expected_reference_family": "dyson_v11",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P046",
+            "source_label": "NONCAT_dyson_v11",
+            "expected_reference_family": "dyson_v11",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P048",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P049",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P050",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P051",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P054",
+            "source_label": "NONCAT_dyson_gen5detect",
+            "expected_reference_family": "dyson_gen5detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          }
+        ]
+      },
+      "controls": {
+        "denominator": 3,
+        "exact_correct": 0,
+        "wrong_resolved_family": 0,
+        "unresolved_or_unrun": 3,
+        "per_photo": [
+          {
+            "image_id": "P006",
+            "source_label": "dyson_v8_absolute",
+            "expected_reference_family": "dyson_v8_absolute",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P014",
+            "source_label": "dyson_v15_detect",
+            "expected_reference_family": "dyson_v15_detect",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          },
+          {
+            "image_id": "P019",
+            "source_label": "dyson_v16_piston_animal",
+            "expected_reference_family": "dyson_v16_piston_animal",
+            "predicted_reference_families": [],
+            "completed": false,
+            "resolved_known_reference_family": false,
+            "exact_reference_family_correct": false
+          }
+        ]
+      }
+    }
+  },
+  "failure_outcomes": {
+    "not_run": 14
+  },
+  "transitions": [
+    {
+      "image_id": "P012",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P018",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P028",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P029",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P030",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P040",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P043",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P045",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P046",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P048",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P049",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P050",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P051",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P054",
+      "old_status": "match",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P006",
+      "old_status": "match",
+      "old_correct": true,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P014",
+      "old_status": "match",
+      "old_correct": true,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    },
+    {
+      "image_id": "P019",
+      "old_status": "not_sure",
+      "old_correct": false,
+      "new_status": "not_run",
+      "new_correct": false,
+      "outcome": "not_run"
+    }
+  ],
+  "control_regressions_vs_original_correct_controls": [],
+  "integrity": {
+    "audit_source_sha256": "6eb9e9dcea1acd09ce4dacad109ab653f5a9005965acb225c8b3c4874e420d0c",
+    "config_sha256": "e46771b9c7e77c6b1e6c2a4dd091ab81141ebc7596949c076e61dbc92d5d3aba",
+    "frozen_file_count": 1218,
+    "frozen_changes": [],
+    "fresh_previous_phase": {
+      "status": "PASS",
+      "completed": 23,
+      "old58": {
+        "status": "PASS",
+        "completed_photo_count": 58,
+        "frozen_changes": []
+      },
+      "frozen_changes": []
+    },
+    "all_ten_ledgers_physical_jobs": 582,
+    "duplicate_physical_job_ids": [],
+    "requests_reconstructed": 1,
+    "independent_final_gates": 0,
+    "original_pixel_crops_checked": 5,
+    "server_ocr_annotations_checked": 0
+  },
+  "transport": {
+    "physical_paid_calls": 1,
+    "pending": [],
+    "usage_cost_checks": 1,
+    "recorded_429_retries": 0,
+    "minimum_finish_to_start_gap_seconds": 1396.6712369918823
+  },
+  "costs": {
+    "prior_nine_ledgers_accounted_usd": 7.777909360999999,
+    "new_settled_usd": 0.07347975,
+    "new_pending_reserve_usd": 0,
+    "new_accounted_usd": 0.07347975,
+    "new_reporting_inr": 6.992115097744529,
+    "new_guard_inr": 7.347975,
+    "combined_stage_guard_inr": 785.1389110999999,
+    "remaining_guard_inr": 214.86108890000014,
+    "overall_guard_inr": 827.8189110999999,
+    "stage_ceiling_inr": 1000,
+    "overall_ceiling_inr": 2000,
+    "maximum_planned_guard_inr": 205.09764799999996
+  },
+  "scope": {
+    "development_failures": 14,
+    "controls": 3,
+    "new_full58_accuracy_tested": false,
+    "new_images_used": false,
+    "training_used": false,
+    "ocr_route": "OpenRouter only"
+  }
+}

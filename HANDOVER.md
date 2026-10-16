@@ -142,3 +142,8 @@ The committed PLAN.md records one separately frozen P019 completion with65536 ou
 The separate same-prompt P019 retry completed normally at the 65,536-token cap and returned unsure. All 23 selected photos are complete. The 20 failures remain six correct, one confidently wrong and 13 unsure; controls P006 and P014 remain correct and P019 regresses from correct to unsure. The original 32k truncation and its charge remain unchanged. The combined strict independent audit passes, including all 1,148 frozen inputs and the original 58-photo benchmark.
 
 The retry cost USD0.1113075, or INR10.5916916 at the recorded reporting rate. The complete selected failure round including the retry cost INR193.1173474, or INR8.3964064 per selected photo. All nine stage ledgers account for INR777.7909361 under the conservative guard, leaving INR222.2090639 of the INR1,000 stage ceiling. Overall guard spending is INR820.4709361 of INR2,000. No calls remain pending. The audit source, report, 173-test log and verification receipt are in out/failure_recovery_completion/.
+
+
+## Targeted OCR continuation, 16 October 2026
+
+The focused visual preflight stopped on P030 length/MAX_TOKENS, with no completed new decisions. Its203-test log, partial audit, response and USD0.07347975 cost are preserved in out/focused_recovery/. Stage guard is INR785.1389111 with INR214.8610889 remaining. Shiva then directed the OCR step on P054 and the other13 unsure photos, excluding all58 regression testing and the three controls. Read docs/plan-targeted-ocr.md. This is a separate OpenRouter Mistral file-parser experiment, with no native/local OCR and no new spending allowance.

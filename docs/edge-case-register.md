@@ -1,6 +1,6 @@
 # Dyson matching edge cases
 
-This record follows the saved V2 benchmark, the aligned-reference failure round and the next focused recovery wave. Source labels remain unchanged. The labels below are used for evaluation and are excluded from inference inputs. The next wave has not yet run.
+This record follows the saved V2 benchmark, the aligned-reference failure round and the next focused recovery wave. Source labels remain unchanged. The labels below are used for evaluation and are excluded from inference inputs. The focused visual preflight stopped before producing a decision. A separate targeted OCR run is now planned for P054 and the13 unsure cases.
 
 | Cases | Observed failure and current result | Check using the existing photographs | Status |
 |---|---|---|---|
@@ -21,3 +21,6 @@ The [Gen5detect product page](https://www.dyson.com/vacuum-cleaners/cordless/gen
 Manufacturer compatibility is positive evidence for a set. Hair screw tool [972213-02](https://www.dyson.com/support/journey/spare-details.972213-02) lists Gen5detect, V12 Detect Slim and Gen5outsize; [971426-01](https://www.dyson.com/support/journey/spare-details.971426-01) lists several other families. A missing entry is not proof of incompatibility. A readable part code may identify a component while leaving the cleaner body unresolved.
 
 After the focused wave, append the actual per-case changes, paid cost, control regressions and the supported alternatives that use no additional photographs. Distinguish recovered identities, wrong answers changed to unsure, compatible-family suggestions and cases that still lack a distinguishing observation. Do not infer a new 58-photo accuracy figure from these selected development cases.
+
+
+The focused preflight stopped on P030 output truncation before any case reached Sol or Mistral OCR. It adds no new identity result. The selected OCR-only follow-up is documented in docs/plan-targeted-ocr.md; P054 remains a confidently wrong V16 answer in the last complete round until a subsequent result establishes otherwise.

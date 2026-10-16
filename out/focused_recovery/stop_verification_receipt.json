@@ -1,0 +1,39 @@
+{
+  "status": "stopped",
+  "completed_photos": 0,
+  "attempted_job": "v4:predicates:P030",
+  "error": "Incomplete provider result: length",
+  "provider_finish_reason": "length",
+  "costs": {
+    "prior_nine_ledgers_accounted_usd": 7.777909360999999,
+    "new_settled_usd": 0.07347975,
+    "new_pending_reserve_usd": 0,
+    "new_accounted_usd": 0.07347975,
+    "new_reporting_inr": 6.992115097744529,
+    "new_guard_inr": 7.347975,
+    "combined_stage_guard_inr": 785.1389110999999,
+    "remaining_guard_inr": 214.86108890000014,
+    "overall_guard_inr": 827.8189110999999,
+    "stage_ceiling_inr": 1000,
+    "overall_ceiling_inr": 2000,
+    "maximum_planned_guard_inr": 205.09764799999996
+  },
+  "independent_audit_status": "FAIL",
+  "audit_errors": [
+    "A terminal error or validation failure is unresolved"
+  ],
+  "tests_passed": 203,
+  "frozen_changes": [],
+  "previous_round_preserved": {
+    "status": "PASS",
+    "completed": 23,
+    "old58": {
+      "status": "PASS",
+      "completed_photo_count": 58,
+      "frozen_changes": []
+    },
+    "frozen_changes": []
+  },
+  "new_ocr_or_sol_calls": 0,
+  "owner_next_instruction": "Run the OCR step on P054 and the other unsure cases, not all58."
+}

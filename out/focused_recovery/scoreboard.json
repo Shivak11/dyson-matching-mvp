@@ -1,0 +1,82 @@
+{
+  "scope": {
+    "failure_ids": [
+      "P012",
+      "P018",
+      "P028",
+      "P029",
+      "P030",
+      "P040",
+      "P043",
+      "P045",
+      "P046",
+      "P048",
+      "P049",
+      "P050",
+      "P051",
+      "P054"
+    ],
+    "control_ids": [
+      "P006",
+      "P014",
+      "P019"
+    ],
+    "photo_ids": [
+      "P012",
+      "P018",
+      "P028",
+      "P029",
+      "P030",
+      "P040",
+      "P043",
+      "P045",
+      "P046",
+      "P048",
+      "P049",
+      "P050",
+      "P051",
+      "P054",
+      "P006",
+      "P014",
+      "P019"
+    ]
+  },
+  "summaries": {
+    "failures": {
+      "labelled_photo_count": 14,
+      "single_photo_count": 14,
+      "multi_photo_count": 0,
+      "ignored_image_ids": [],
+      "detection_manifest_supplied": true,
+      "groups": []
+    },
+    "controls": {
+      "labelled_photo_count": 3,
+      "single_photo_count": 3,
+      "multi_photo_count": 0,
+      "ignored_image_ids": [],
+      "detection_manifest_supplied": true,
+      "groups": []
+    },
+    "all_selected": {
+      "labelled_photo_count": 17,
+      "single_photo_count": 17,
+      "multi_photo_count": 0,
+      "ignored_image_ids": [],
+      "detection_manifest_supplied": true,
+      "groups": []
+    }
+  },
+  "completed_count": 0,
+  "completed_ids": [],
+  "full58_accuracy_retested": false,
+  "costs": {
+    "new_accounted_usd": 0.07347975,
+    "new_reporting_inr": 6.992115097744529,
+    "new_guard_inr": 7.347975,
+    "new_pending_reserve_usd": 0,
+    "combined_stage_guard_inr": 785.1389111,
+    "remaining_guard_inr": 214.86108890000003,
+    "overall_guard_inr": 827.8189110999999
+  }
+}
