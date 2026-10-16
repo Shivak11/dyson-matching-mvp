@@ -1,0 +1,113 @@
+{
+  "targets": [
+    {
+      "object_id": "o1",
+      "box_2d": [
+        0,
+        47,
+        677,
+        518
+      ],
+      "role": "partial_machine",
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main vacuum body, motor, and dust bin are out of frame above the wand",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Soft roller floor nozzle with transparent brush roller housing and swivel joint",
+          "box_2d": [
+            182,
+            269,
+            677,
+            518
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Dark grey neck tube with red release clip",
+          "box_2d": [
+            0,
+            48,
+            340,
+            312
+          ]
+        }
+      ],
+      "accessory_only": true
+    }
+  ],
+  "active_ids": [],
+  "passive_ids": [
+    "o1"
+  ],
+  "baseline": {
+    "o1": null
+  },
+  "focus_refs": {},
+  "plausible_refs": {},
+  "panels": {
+    "R01": [
+      "R01-P1",
+      "R01-P2",
+      "R01-P3"
+    ],
+    "R02": [
+      "R02-P1",
+      "R02-P2",
+      "R02-P3"
+    ],
+    "R03": [
+      "R03-P1",
+      "R03-P2",
+      "R03-P3"
+    ],
+    "R04": [
+      "R04-P1",
+      "R04-P2",
+      "R04-P3"
+    ],
+    "R05": [
+      "R05-P1",
+      "R05-P2",
+      "R05-P3"
+    ],
+    "R06": [
+      "R06-P1",
+      "R06-P2",
+      "R06-P3"
+    ],
+    "R07": [
+      "R07-P1",
+      "R07-P2"
+    ],
+    "R08": [
+      "R08-P1",
+      "R08-P2"
+    ],
+    "R09": [
+      "R09-P1",
+      "R09-P2",
+      "R09-P3"
+    ]
+  },
+  "questions": [],
+  "check_question_ids": [],
+  "overflow_ids": [],
+  "ambiguity_sets": [
+    [
+      "R04",
+      "R08"
+    ],
+    [
+      "R02",
+      "R03"
+    ]
+  ]
+}

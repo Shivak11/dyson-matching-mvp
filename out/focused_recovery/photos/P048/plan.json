@@ -1,0 +1,274 @@
+{
+  "targets": [
+    {
+      "object_id": "o1",
+      "box_2d": [
+        0,
+        546,
+        595,
+        948
+      ],
+      "role": "partial_machine",
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "soft roller head emitting a green illumination light beam",
+          "box_2d": [
+            151,
+            546,
+            595,
+            948
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red quick-release latch on the articulating neck",
+          "box_2d": [
+            12,
+            809,
+            101,
+            855
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "main body, motor, dustbin, and handle extend out of frame above",
+          "box_2d": null
+        }
+      ]
+    }
+  ],
+  "active_ids": [],
+  "passive_ids": [
+    "o1"
+  ],
+  "baseline": {
+    "o1": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 40,
+        "top_two": [
+          "R03",
+          "R02"
+        ],
+        "evidence": [
+          "Only the cleaner head is visible, showing a Dyson illuminated soft roller head; the main body, cyclone assembly, and handle controls are out of frame."
+        ],
+        "missing_evidence": [
+          "main body layout",
+          "cyclone and bin assembly",
+          "handle and controls",
+          "display screen"
+        ],
+        "contradictions": [],
+        "retake": "Photo showing the main vacuum body, cyclone assembly, and handle controls."
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "Conflicting cleaner head architecture between the query soft roller head and R01 floor tool.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                151,
+                546,
+                595,
+                948
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                860,
+                644,
+                949,
+                943
+              ],
+              "detail": "Query has an illuminated soft roller head, whereas R01-P1 shows a non-illuminated low-profile floor nozzle."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "insufficient_evidence",
+          "evidence": "Cleaner head is not depicted in R02 panels, and the main vacuum body is missing in query.",
+          "comparisons": []
+        },
+        {
+          "reference": "R03",
+          "outcome": "insufficient_evidence",
+          "evidence": "R03 panels show only the handheld body and upper wand without depicting the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R04",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query only depicts the cleaner head, which is unobserved in R04 reference panels.",
+          "comparisons": []
+        },
+        {
+          "reference": "R05",
+          "outcome": "insufficient_evidence",
+          "evidence": "R05 only depicts the handheld body, while query only shows the floor cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "R06 has a dual wet-roller floor head, conflicting with the query dry laser soft roller head.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                151,
+                546,
+                595,
+                948
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                908,
+                703,
+                992,
+                963
+              ],
+              "detail": "Query features an illuminated dry soft roller head, while R06 features a dual wet-roller floor nozzle."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "insufficient_evidence",
+          "evidence": "Cleaner head is absent from R07 panels, and query does not show the main body.",
+          "comparisons": []
+        },
+        {
+          "reference": "R08",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query shows only the cleaner head, which is not depicted in R08 panels.",
+          "comparisons": []
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Conflicting brand identifier and cleaner head architecture between Shark and Dyson.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                151,
+                546,
+                595,
+                948
+              ],
+              "panel": "R09-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                404,
+                72,
+                856,
+                905
+              ],
+              "detail": "Query has a single soft roller with laser illumination, conflicting with the Shark DuoClean dual-roller nozzle."
+            },
+            {
+              "feature": "identifier",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                388,
+                679,
+                513,
+                817
+              ],
+              "panel": "R09-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                574,
+                477,
+                693,
+                532
+              ],
+              "detail": "Query displays 'dyson' branding, conflicting with the 'Shark' text on R09-P2."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    }
+  },
+  "focus_refs": {},
+  "plausible_refs": {},
+  "panels": {
+    "R01": [
+      "R01-P1",
+      "R01-P2",
+      "R01-P3"
+    ],
+    "R02": [
+      "R02-P1",
+      "R02-P2",
+      "R02-P3"
+    ],
+    "R03": [
+      "R03-P1",
+      "R03-P2",
+      "R03-P3"
+    ],
+    "R04": [
+      "R04-P1",
+      "R04-P2",
+      "R04-P3"
+    ],
+    "R05": [
+      "R05-P1",
+      "R05-P2",
+      "R05-P3"
+    ],
+    "R06": [
+      "R06-P1",
+      "R06-P2",
+      "R06-P3"
+    ],
+    "R07": [
+      "R07-P1",
+      "R07-P2"
+    ],
+    "R08": [
+      "R08-P1",
+      "R08-P2"
+    ],
+    "R09": [
+      "R09-P1",
+      "R09-P2",
+      "R09-P3"
+    ]
+  },
+  "questions": [],
+  "check_question_ids": [],
+  "overflow_ids": [],
+  "ambiguity_sets": [
+    [
+      "R04",
+      "R08"
+    ],
+    [
+      "R02",
+      "R03"
+    ]
+  ]
+}

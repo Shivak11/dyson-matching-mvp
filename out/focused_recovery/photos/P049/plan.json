@@ -1,0 +1,495 @@
+{
+  "targets": [
+    {
+      "object_id": "o1",
+      "box_2d": [
+        114,
+        362,
+        924,
+        631
+      ],
+      "role": "machine",
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline cylindrical dustbin and cyclone assembly aligned vertically with wand",
+          "box_2d": [
+            114,
+            458,
+            350,
+            524
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Cleaner head with transparent window, dual-colored roller bar, and red switch",
+          "box_2d": [
+            783,
+            362,
+            924,
+            631
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Purple straight extension wand connecting head to main unit",
+          "box_2d": [
+            305,
+            477,
+            764,
+            524
+          ]
+        }
+      ]
+    }
+  ],
+  "active_ids": [
+    "o1"
+  ],
+  "passive_ids": [],
+  "baseline": {
+    "o1": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 95,
+        "top_two": [
+          "R08",
+          "R07"
+        ],
+        "evidence": [
+          "Visible 'cyclone v10' marking, cyan filter cap, and direct wand connection identify this machine as a Dyson Cyclone V10, which conflicts with all supplied reference families."
+        ],
+        "missing_evidence": [],
+        "contradictions": [],
+        "retake": ""
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a stick vacuum with an inline cylindrical body, whereas R01 is a canister vacuum with a spherical wheeled body.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                114,
+                458,
+                350,
+                524
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                612,
+                102,
+                917,
+                582
+              ],
+              "detail": "Query has an inline stick body, whereas reference is a canister vacuum with a spherical ball base and flexible hose."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "visible_conflict",
+          "evidence": "Query has a solid cyan filter cap and no body power button, conflicting with R02's purple filter, gold cyclones, and top push button.",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                114,
+                466,
+                172,
+                514
+              ],
+              "panel": "R02-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                57,
+                168,
+                281,
+                461
+              ],
+              "detail": "Query has a cyan filter cap and dark cyclones, whereas reference has a purple filter and gold cyclones."
+            },
+            {
+              "feature": "handle_control",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                114,
+                466,
+                210,
+                518
+              ],
+              "panel": "R02-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                415,
+                345,
+                595,
+                474
+              ],
+              "detail": "Reference features a red push-button power control on the cyclone body, which is absent on the query."
+            }
+          ]
+        },
+        {
+          "reference": "R03",
+          "outcome": "visible_conflict",
+          "evidence": "Query has a cyan filter cap and dark cyclones, conflicting with R03's purple filter and gold cyclones.",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                114,
+                466,
+                200,
+                518
+              ],
+              "panel": "R03-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                42,
+                122,
+                452,
+                492
+              ],
+              "detail": "Query has a cyan top filter cap and grey cyclones, whereas reference has a purple filter and gold cyclones."
+            }
+          ]
+        },
+        {
+          "reference": "R04",
+          "outcome": "visible_conflict",
+          "evidence": "Query has dark grey cyclones, conflicting with R04's rich copper cyclone assembly.",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                140,
+                460,
+                248,
+                524
+              ],
+              "panel": "R04-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                348,
+                87,
+                581,
+                477
+              ],
+              "detail": "Query has dark grey cyclones, whereas reference has rich copper cyclone cones."
+            }
+          ]
+        },
+        {
+          "reference": "R05",
+          "outcome": "visible_conflict",
+          "evidence": "Query has an inline cylindrical dustbin, whereas R05 has a horizontal bin beneath a vertical cyclone pack.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                114,
+                458,
+                350,
+                524
+              ],
+              "panel": "R05-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                33,
+                114,
+                825,
+                891
+              ],
+              "detail": "Query has an inline bin aligned with the wand, whereas reference has a vertical cyclone pack above a horizontal bin."
+            }
+          ]
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "Query is a dry cyclonic stick vacuum, whereas R06 is a wet cleaner with dual liquid tanks.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                114,
+                458,
+                350,
+                524
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                465,
+                57,
+                835,
+                203
+              ],
+              "detail": "Query features an inline clear dustbin, whereas reference has dual clean and dirty water tanks."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "visible_conflict",
+          "evidence": "Query has a cyan filter cap and 'cyclone v10' marking, conflicting with R07's purple filter and V11 family architecture.",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                114,
+                466,
+                172,
+                514
+              ],
+              "panel": "R07-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                119,
+                184,
+                281,
+                464
+              ],
+              "detail": "Query has a solid cyan filter cap, whereas reference features a purple translucent filter."
+            },
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                325,
+                477,
+                360,
+                515
+              ],
+              "panel": "R07-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                835,
+                480,
+                1000,
+                560
+              ],
+              "detail": "Query wand displays 'cyclone v10' branding, conflicting with the V11 platform in reference."
+            }
+          ]
+        },
+        {
+          "reference": "R08",
+          "outcome": "visible_conflict",
+          "evidence": "Query connects wand directly to the dustbin, lacking R08's integrated wand-in-wand crevice tool mechanism.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                270,
+                473,
+                350,
+                520
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                640,
+                206,
+                960,
+                376
+              ],
+              "detail": "Reference features a built-in dusting and crevice tool sleeve inside the wand neck, which is absent on the query."
+            },
+            {
+              "feature": "identifier",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                330,
+                480,
+                360,
+                512
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                700,
+                240,
+                840,
+                360
+              ],
+              "detail": "Query wand is labelled 'cyclone v10', conflicting with the Gen5 model family shown in reference."
+            }
+          ]
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Query has Dyson cyclonic stick layout and floorhead, conflicting with R09's Shark Stratos architecture.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                114,
+                458,
+                350,
+                524
+              ],
+              "panel": "R09-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                23,
+                332,
+                980,
+                672
+              ],
+              "detail": "Query has a Dyson inline cyclone bin and Motorbar floorhead, conflicting with Shark body and DuoClean head design."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    }
+  },
+  "focus_refs": {
+    "o1": [
+      "R08",
+      "R07",
+      "R04"
+    ]
+  },
+  "plausible_refs": {
+    "o1": [
+      "R08",
+      "R07",
+      "R04"
+    ]
+  },
+  "panels": {
+    "R01": [
+      "R01-P1",
+      "R01-P2",
+      "R01-P3"
+    ],
+    "R02": [
+      "R02-P1",
+      "R02-P2",
+      "R02-P3"
+    ],
+    "R03": [
+      "R03-P1",
+      "R03-P2",
+      "R03-P3"
+    ],
+    "R04": [
+      "R04-P1",
+      "R04-P2",
+      "R04-P3"
+    ],
+    "R05": [
+      "R05-P1",
+      "R05-P2",
+      "R05-P3"
+    ],
+    "R06": [
+      "R06-P1",
+      "R06-P2",
+      "R06-P3"
+    ],
+    "R07": [
+      "R07-P1",
+      "R07-P2"
+    ],
+    "R08": [
+      "R08-P1",
+      "R08-P2"
+    ],
+    "R09": [
+      "R09-P1",
+      "R09-P2",
+      "R09-P3"
+    ]
+  },
+  "questions": [
+    {
+      "object_id": "o1",
+      "question_id": "o1__body_layout",
+      "feature": "body_layout",
+      "question": "Describe the visible main-body, motor and bin arrangement."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__handle_control",
+      "feature": "handle_control",
+      "question": "Describe the visible handle, power control and trigger geometry."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__bin_mechanism",
+      "feature": "bin_mechanism",
+      "question": "Describe the visible bin opening or compression mechanism; do not infer hidden parts."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__display_layout",
+      "feature": "display_layout",
+      "question": "Describe the visible display and adjacent controls."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__cyclone_filter",
+      "feature": "cyclone_filter",
+      "question": "Describe the visible cyclone/filter structure; colour alone is not distinctive."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__identifier",
+      "feature": "identifier",
+      "question": "Is distinguishing model or part text plausibly visible on this physical object? Transcribe only legible literal text."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__relationship",
+      "feature": "relationship",
+      "question": "Does this region show an independent cleaner or a connected component? Preserve independent partial machines."
+    }
+  ],
+  "check_question_ids": [],
+  "overflow_ids": [],
+  "ambiguity_sets": [
+    [
+      "R04",
+      "R08"
+    ],
+    [
+      "R02",
+      "R03"
+    ]
+  ]
+}

@@ -1,0 +1,846 @@
+{
+  "targets": [
+    {
+      "object_id": "o1",
+      "box_2d": [
+        68,
+        77,
+        968,
+        937
+      ],
+      "role": "machine",
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "box_2d": [
+            137,
+            516,
+            968,
+            938
+          ],
+          "detail": "Handheld unit with vertical clear dust bin, multi-cyclone assembly, and pistol grip above battery base",
+          "feature": "body_layout",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            201,
+            707,
+            497,
+            924
+          ],
+          "detail": "Purple rear post-motor filter cap attached to back of body",
+          "feature": "filter",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            174,
+            206,
+            473,
+            558
+          ],
+          "detail": "Orange rigid extension tube connecting handheld body to cleaner head",
+          "feature": "wand",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            68,
+            77,
+            281,
+            338
+          ],
+          "detail": "Floor cleaner head with transparent shell and red/blue rotating brush roller",
+          "feature": "cleaner_head",
+          "visible": true
+        }
+      ]
+    }
+  ],
+  "active_ids": [
+    "o1"
+  ],
+  "passive_ids": [],
+  "baseline": {
+    "o1": {
+      "decision": {
+        "confidence": 95,
+        "contradictions": [],
+        "evidence": [
+          "Matches R05 in vertical clear bin layout, dual-tier radial cyclone pack, top red release latch, and pistol-grip trigger handle."
+        ],
+        "missing_evidence": [],
+        "reference": "R05",
+        "retake": "",
+        "status": "same_family",
+        "top_two": [
+          "R05",
+          "R07"
+        ]
+      },
+      "object_id": "o1",
+      "other_brand_evidence": [],
+      "reference_checks": [
+        {
+          "comparisons": [
+            {
+              "detail": "Handheld stick vacuum unit conflicts with wheeled canister vacuum body.",
+              "feature": "body_layout",
+              "panel": "R01-P1",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                535,
+                87,
+                935,
+                575
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            }
+          ],
+          "evidence": "Handheld cordless format conflicts with the wheeled canister format of R01.",
+          "outcome": "insufficient_evidence",
+          "reference": "R01"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Vertical bin beneath cyclones conflicts with in-line horizontal dust bin.",
+              "feature": "body_layout",
+              "panel": "R02-P1",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                50,
+                115,
+                985,
+                905
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            },
+            {
+              "detail": "Pistol-grip pull trigger conflicts with top-mounted push button control.",
+              "feature": "handle_control",
+              "panel": "R02-P2",
+              "query_box_2d": [
+                380,
+                670,
+                600,
+                770
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                405,
+                335,
+                600,
+                485
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            },
+            {
+              "detail": "Rear filter cap with printed label lacks the interactive color LCD screen seen on R02.",
+              "feature": "display_layout",
+              "panel": "R02-P3",
+              "query_box_2d": [
+                195,
+                700,
+                485,
+                925
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                400,
+                220,
+                630,
+                395
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "Vertical dust bin, trigger control, and lack of screen conflict with the in-line push-button and LCD layout of R02.",
+          "outcome": "visible_conflict",
+          "reference": "R02"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Vertical bin layout below cyclones conflicts with in-line horizontal bin layout.",
+              "feature": "body_layout",
+              "panel": "R03-P1",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                40,
+                110,
+                990,
+                900
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            },
+            {
+              "detail": "Standard filter cap conflicts with the rear circular LCD display on R03.",
+              "feature": "display_layout",
+              "panel": "R03-P3",
+              "query_box_2d": [
+                195,
+                700,
+                485,
+                925
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                295,
+                465,
+                630,
+                785
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "Vertical dust bin and absence of an LCD display conflict with the in-line bin and screen of R03.",
+          "outcome": "visible_conflict",
+          "reference": "R03"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Vertical bin perpendicular to wand conflicts with in-line dust bin.",
+              "feature": "body_layout",
+              "panel": "R04-P1",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                105,
+                75,
+                990,
+                915
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            },
+            {
+              "detail": "Query filter cap lacks the digital LCD readout present on R04.",
+              "feature": "display_layout",
+              "panel": "R04-P2",
+              "query_box_2d": [
+                195,
+                700,
+                485,
+                925
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                285,
+                365,
+                520,
+                605
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "Vertical dust bin and purple filter cap conflict with the in-line bin and cyan LCD filter cap of R04.",
+          "outcome": "visible_conflict",
+          "reference": "R04"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Handheld configuration with vertical clear bin below cyclones and battery beneath handle matches R05.",
+              "feature": "body_layout",
+              "panel": "R05-P2",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                105,
+                50,
+                875,
+                795
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            },
+            {
+              "detail": "Dual-tier radial cyclones with rear cylindrical post-motor filter match R05.",
+              "feature": "cyclone_filter",
+              "panel": "R05-P2",
+              "query_box_2d": [
+                137,
+                520,
+                497,
+                924
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                108,
+                204,
+                412,
+                792
+              ],
+              "reference_visible": true,
+              "relation": "support"
+            },
+            {
+              "detail": "Vertical clear bin with red wiper ring and top red lift-up release latch matches R05.",
+              "feature": "bin_mechanism",
+              "panel": "R05-P2",
+              "query_box_2d": [
+                153,
+                532,
+                820,
+                686
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                120,
+                220,
+                870,
+                520
+              ],
+              "reference_visible": true,
+              "relation": "support"
+            },
+            {
+              "detail": "Pistol-grip handle with inner red power trigger matches R05.",
+              "feature": "handle_control",
+              "panel": "R05-P2",
+              "query_box_2d": [
+                380,
+                670,
+                800,
+                840
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                405,
+                515,
+                760,
+                715
+              ],
+              "reference_visible": true,
+              "relation": "support"
+            }
+          ],
+          "evidence": "Identical vertical bin orientation, dual-tier radial cyclone pack, top red release latch, and trigger handle.",
+          "outcome": "supported",
+          "reference": "R05"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Handheld cyclonic body conflicts with upright column carrying dual clean/dirty water tanks.",
+              "feature": "body_layout",
+              "panel": "R06-P1",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                10,
+                35,
+                990,
+                230
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            },
+            {
+              "detail": "Single roller vacuum head conflicts with dual contra-rotating wet roller cleaner head.",
+              "feature": "head_architecture",
+              "panel": "R06-P1",
+              "query_box_2d": [
+                68,
+                77,
+                281,
+                338
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                915,
+                33,
+                995,
+                230
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "Dry handheld stick vacuum conflicts with the dual-tank upright floor washer architecture of R06.",
+          "outcome": "visible_conflict",
+          "reference": "R06"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Vertical bin below the cyclones conflicts with in-line horizontal bin aligned with the motor.",
+              "feature": "body_layout",
+              "panel": "R07-P1",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                115,
+                115,
+                990,
+                915
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            },
+            {
+              "detail": "Top-mounted pull latch emptying mechanism conflicts with the bottom sliding collar mechanism on R07.",
+              "feature": "bin_mechanism",
+              "panel": "R07-P1",
+              "query_box_2d": [
+                153,
+                532,
+                820,
+                686
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                465,
+                135,
+                845,
+                570
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "Vertical dust bin and top release latch conflict with the in-line dust bin and sliding ejector of R07.",
+          "outcome": "visible_conflict",
+          "reference": "R07"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Perpendicular vertical bin layout conflicts with horizontal in-line bin configuration.",
+              "feature": "body_layout",
+              "panel": "R08-P1",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                30,
+                70,
+                990,
+                930
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            },
+            {
+              "detail": "Nickel dual-tier cyclones and rear purple cap conflict with purple cyclones and top cyan filter cap.",
+              "feature": "cyclone_filter",
+              "panel": "R08-P1",
+              "query_box_2d": [
+                137,
+                520,
+                497,
+                924
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                35,
+                75,
+                330,
+                475
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "Vertical dust bin and purple filter cap conflict with the in-line bin and cyan filter cap of R08.",
+          "outcome": "visible_conflict",
+          "reference": "R08"
+        },
+        {
+          "comparisons": [
+            {
+              "detail": "Dyson handheld cyclone pack and vertical bin conflict with Shark linear dust cup layout.",
+              "feature": "body_layout",
+              "panel": "R09-P1",
+              "query_box_2d": null,
+              "query_visible": false,
+              "reference_box_2d": [
+                20,
+                325,
+                335,
+                680
+              ],
+              "reference_visible": true,
+              "relation": "unobserved"
+            },
+            {
+              "detail": "Dyson identifier on rear filter cap conflicts with Shark brand text on dust cup.",
+              "feature": "identifier",
+              "panel": "R09-P2",
+              "query_box_2d": [
+                275,
+                790,
+                395,
+                885
+              ],
+              "query_visible": true,
+              "reference_box_2d": [
+                565,
+                465,
+                695,
+                540
+              ],
+              "reference_visible": true,
+              "relation": "conflict"
+            }
+          ],
+          "evidence": "Entire body layout, cyclone structure, and brand identifier conflict with Shark Stratos R09.",
+          "outcome": "visible_conflict",
+          "reference": "R09"
+        }
+      ],
+      "unverified_comparisons": [
+        {
+          "comparison": {
+            "detail": "Handheld stick vacuum unit conflicts with wheeled canister vacuum body.",
+            "feature": "body_layout",
+            "panel": "R01-P1",
+            "query_box_2d": [
+              137,
+              516,
+              968,
+              938
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              535,
+              87,
+              935,
+              575
+            ],
+            "reference_visible": true,
+            "relation": "conflict"
+          },
+          "comparison_index": 0,
+          "object_id": "o1",
+          "reference": "R01"
+        },
+        {
+          "comparison": {
+            "detail": "Vertical bin beneath cyclones conflicts with in-line horizontal dust bin.",
+            "feature": "body_layout",
+            "panel": "R02-P1",
+            "query_box_2d": [
+              137,
+              516,
+              968,
+              938
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              50,
+              115,
+              985,
+              905
+            ],
+            "reference_visible": true,
+            "relation": "conflict"
+          },
+          "comparison_index": 0,
+          "object_id": "o1",
+          "reference": "R02"
+        },
+        {
+          "comparison": {
+            "detail": "Vertical bin layout below cyclones conflicts with in-line horizontal bin layout.",
+            "feature": "body_layout",
+            "panel": "R03-P1",
+            "query_box_2d": [
+              137,
+              516,
+              968,
+              938
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              40,
+              110,
+              990,
+              900
+            ],
+            "reference_visible": true,
+            "relation": "conflict"
+          },
+          "comparison_index": 0,
+          "object_id": "o1",
+          "reference": "R03"
+        },
+        {
+          "comparison": {
+            "detail": "Vertical bin perpendicular to wand conflicts with in-line dust bin.",
+            "feature": "body_layout",
+            "panel": "R04-P1",
+            "query_box_2d": [
+              137,
+              516,
+              968,
+              938
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              105,
+              75,
+              990,
+              915
+            ],
+            "reference_visible": true,
+            "relation": "conflict"
+          },
+          "comparison_index": 0,
+          "object_id": "o1",
+          "reference": "R04"
+        },
+        {
+          "comparison": {
+            "detail": "Handheld configuration with vertical clear bin below cyclones and battery beneath handle matches R05.",
+            "feature": "body_layout",
+            "panel": "R05-P2",
+            "query_box_2d": [
+              137,
+              516,
+              968,
+              938
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              105,
+              50,
+              875,
+              795
+            ],
+            "reference_visible": true,
+            "relation": "support"
+          },
+          "comparison_index": 0,
+          "object_id": "o1",
+          "reference": "R05"
+        },
+        {
+          "comparison": {
+            "detail": "Handheld cyclonic body conflicts with upright column carrying dual clean/dirty water tanks.",
+            "feature": "body_layout",
+            "panel": "R06-P1",
+            "query_box_2d": [
+              137,
+              516,
+              968,
+              938
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              10,
+              35,
+              990,
+              230
+            ],
+            "reference_visible": true,
+            "relation": "conflict"
+          },
+          "comparison_index": 0,
+          "object_id": "o1",
+          "reference": "R06"
+        },
+        {
+          "comparison": {
+            "detail": "Vertical bin below the cyclones conflicts with in-line horizontal bin aligned with the motor.",
+            "feature": "body_layout",
+            "panel": "R07-P1",
+            "query_box_2d": [
+              137,
+              516,
+              968,
+              938
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              115,
+              115,
+              990,
+              915
+            ],
+            "reference_visible": true,
+            "relation": "conflict"
+          },
+          "comparison_index": 0,
+          "object_id": "o1",
+          "reference": "R07"
+        },
+        {
+          "comparison": {
+            "detail": "Perpendicular vertical bin layout conflicts with horizontal in-line bin configuration.",
+            "feature": "body_layout",
+            "panel": "R08-P1",
+            "query_box_2d": [
+              137,
+              516,
+              968,
+              938
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              30,
+              70,
+              990,
+              930
+            ],
+            "reference_visible": true,
+            "relation": "conflict"
+          },
+          "comparison_index": 0,
+          "object_id": "o1",
+          "reference": "R08"
+        },
+        {
+          "comparison": {
+            "detail": "Dyson handheld cyclone pack and vertical bin conflict with Shark linear dust cup layout.",
+            "feature": "body_layout",
+            "panel": "R09-P1",
+            "query_box_2d": [
+              137,
+              516,
+              968,
+              938
+            ],
+            "query_visible": true,
+            "reference_box_2d": [
+              20,
+              325,
+              335,
+              680
+            ],
+            "reference_visible": true,
+            "relation": "conflict"
+          },
+          "comparison_index": 0,
+          "object_id": "o1",
+          "reference": "R09"
+        }
+      ]
+    }
+  },
+  "focus_refs": {
+    "o1": [
+      "R05",
+      "R07"
+    ]
+  },
+  "plausible_refs": {
+    "o1": [
+      "R05",
+      "R07"
+    ]
+  },
+  "panels": {
+    "R01": [
+      "R01-P1",
+      "R01-P2",
+      "R01-P3"
+    ],
+    "R02": [
+      "R02-P1",
+      "R02-P2",
+      "R02-P3"
+    ],
+    "R03": [
+      "R03-P1",
+      "R03-P2",
+      "R03-P3"
+    ],
+    "R04": [
+      "R04-P1",
+      "R04-P2",
+      "R04-P3"
+    ],
+    "R05": [
+      "R05-P1",
+      "R05-P2",
+      "R05-P3"
+    ],
+    "R06": [
+      "R06-P1",
+      "R06-P2",
+      "R06-P3"
+    ],
+    "R07": [
+      "R07-P1",
+      "R07-P2"
+    ],
+    "R08": [
+      "R08-P1",
+      "R08-P2"
+    ],
+    "R09": [
+      "R09-P1",
+      "R09-P2",
+      "R09-P3"
+    ]
+  },
+  "questions": [
+    {
+      "object_id": "o1",
+      "question_id": "o1__body_layout",
+      "feature": "body_layout",
+      "question": "Describe the visible main-body, motor and bin arrangement."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__handle_control",
+      "feature": "handle_control",
+      "question": "Describe the visible handle, power control and trigger geometry."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__bin_mechanism",
+      "feature": "bin_mechanism",
+      "question": "Describe the visible bin opening or compression mechanism; do not infer hidden parts."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__display_layout",
+      "feature": "display_layout",
+      "question": "Describe the visible display and adjacent controls."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__cyclone_filter",
+      "feature": "cyclone_filter",
+      "question": "Describe the visible cyclone/filter structure; colour alone is not distinctive."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__identifier",
+      "feature": "identifier",
+      "question": "Is distinguishing model or part text plausibly visible on this physical object? Transcribe only legible literal text."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__relationship",
+      "feature": "relationship",
+      "question": "Does this region show an independent cleaner or a connected component? Preserve independent partial machines."
+    }
+  ],
+  "check_question_ids": [],
+  "overflow_ids": [],
+  "ambiguity_sets": [
+    [
+      "R04",
+      "R08"
+    ],
+    [
+      "R02",
+      "R03"
+    ]
+  ]
+}

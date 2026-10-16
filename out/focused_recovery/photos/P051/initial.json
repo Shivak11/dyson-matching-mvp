@@ -1,0 +1,424 @@
+{
+  "inventory": {
+    "objects": [
+      {
+        "object_id": "o1",
+        "role": "partial_machine",
+        "parent_id": null,
+        "box_2d": [
+          18,
+          298,
+          1000,
+          655
+        ],
+        "visibility": "part_only",
+        "observations": [
+          {
+            "feature": "filter",
+            "visible": true,
+            "detail": "Translucent cyan cylindrical filter unit labelled WASHABLE HEPA FILTER",
+            "box_2d": [
+              18,
+              313,
+              481,
+              635
+            ]
+          },
+          {
+            "feature": "cyclone_assembly",
+            "visible": true,
+            "detail": "Purple radial cyclone cones with red accent trim below the central body",
+            "box_2d": [
+              669,
+              298,
+              1000,
+              656
+            ]
+          },
+          {
+            "feature": "body_layout",
+            "visible": false,
+            "detail": "Lower dust bin, handle, trigger, battery, and cleaning head are out of frame below",
+            "box_2d": null
+          }
+        ],
+        "readable_identifier": "dyson"
+      }
+    ],
+    "machines": [
+      {
+        "object_id": "o1",
+        "role": "partial_machine",
+        "parent_id": null,
+        "box_2d": [
+          18,
+          298,
+          1000,
+          655
+        ],
+        "visibility": "part_only",
+        "observations": [
+          {
+            "feature": "filter",
+            "visible": true,
+            "detail": "Translucent cyan cylindrical filter unit labelled WASHABLE HEPA FILTER",
+            "box_2d": [
+              18,
+              313,
+              481,
+              635
+            ]
+          },
+          {
+            "feature": "cyclone_assembly",
+            "visible": true,
+            "detail": "Purple radial cyclone cones with red accent trim below the central body",
+            "box_2d": [
+              669,
+              298,
+              1000,
+              656
+            ]
+          },
+          {
+            "feature": "body_layout",
+            "visible": false,
+            "detail": "Lower dust bin, handle, trigger, battery, and cleaning head are out of frame below",
+            "box_2d": null
+          }
+        ],
+        "readable_identifier": "dyson"
+      }
+    ]
+  },
+  "comparison": {
+    "o1": {
+      "raw": {
+        "object_id": "o1",
+        "decision": {
+          "status": "not_sure",
+          "reference": null,
+          "confidence": 65,
+          "top_two": [
+            "R08",
+            "R04"
+          ],
+          "evidence": [
+            "Only the upper filter and cyclone assembly are visible, matching R08, but secondary diagnostic feature types like handle controls and bin mechanism are out of frame."
+          ],
+          "missing_evidence": [
+            "handle_control",
+            "body_layout",
+            "bin_mechanism"
+          ],
+          "contradictions": [],
+          "retake": "Take a photo showing the complete machine including the handle, power controls, and dust bin."
+        },
+        "reference_checks": [
+          {
+            "reference": "R01",
+            "outcome": "visible_conflict",
+            "evidence": "Canister vacuum cyclone pack conflicts with query's inline axial cylindrical filter and cyclones.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  18,
+                  298,
+                  1000,
+                  655
+                ],
+                "panel": "R01-P2",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  54,
+                  255,
+                  275,
+                  746
+                ],
+                "detail": "Query has an axial cylindrical top filter and radial cyclones, whereas R01 has a canister-mounted dual-tier cyclone pack without an axial top filter."
+              }
+            ]
+          },
+          {
+            "reference": "R02",
+            "outcome": "visible_conflict",
+            "evidence": "Query filter and cyclone colors conflict with R02's purple filter and gold cyclones.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  18,
+                  298,
+                  1000,
+                  655
+                ],
+                "panel": "R02-P2",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  208,
+                  38,
+                  890,
+                  786
+                ],
+                "detail": "Query has purple cyclones and a cyan filter, conflicting with R02's gold cyclones and purple filter."
+              }
+            ]
+          },
+          {
+            "reference": "R03",
+            "outcome": "visible_conflict",
+            "evidence": "Filter and cyclone assembly conflict with R03's purple filter and gold cyclone cones.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  18,
+                  298,
+                  1000,
+                  655
+                ],
+                "panel": "R03-P2",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  42,
+                  237,
+                  452,
+                  927
+                ],
+                "detail": "Query has purple cyclones and a cyan filter, whereas R03 has gold cyclones and a purple filter."
+              }
+            ]
+          },
+          {
+            "reference": "R04",
+            "outcome": "visible_conflict",
+            "evidence": "Cyclone cone color and housing design conflict with R04's bronze cyclones and vented casing.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  18,
+                  298,
+                  1000,
+                  655
+                ],
+                "panel": "R04-P3",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  111,
+                  382,
+                  592,
+                  946
+                ],
+                "detail": "Query has purple cyclone cones on a smooth casing, whereas R04 has bronze cones and vertical vent slots on the motor housing."
+              }
+            ]
+          },
+          {
+            "reference": "R05",
+            "outcome": "visible_conflict",
+            "evidence": "Cyclone and filter layout conflicts with R05's central pre-filter and separate rear filter.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  18,
+                  298,
+                  1000,
+                  655
+                ],
+                "panel": "R05-P2",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  118,
+                  207,
+                  401,
+                  792
+                ],
+                "detail": "Query has an axial cylindrical top filter and purple cyclones, whereas R05 has a central pre-filter and rear post-motor filter."
+              }
+            ]
+          },
+          {
+            "reference": "R06",
+            "outcome": "visible_conflict",
+            "evidence": "Wet floor cleaner water tanks conflict with query's cyclone and dry filter assembly.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  18,
+                  298,
+                  1000,
+                  655
+                ],
+                "panel": "R06-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  464,
+                  46,
+                  836,
+                  196
+                ],
+                "detail": "Query has a multi-cone cyclone assembly and cylindrical top filter, whereas R06 has clean and dirty water tanks."
+              }
+            ]
+          },
+          {
+            "reference": "R07",
+            "outcome": "visible_conflict",
+            "evidence": "Filter and cyclone colors conflict with R07's purple filter and nickel cyclone pack.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  18,
+                  298,
+                  1000,
+                  655
+                ],
+                "panel": "R07-P2",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  115,
+                  269,
+                  442,
+                  920
+                ],
+                "detail": "Query has a cyan filter and purple cyclones, conflicting with R07's purple filter and silver/nickel cyclones."
+              }
+            ]
+          },
+          {
+            "reference": "R08",
+            "outcome": "supported",
+            "evidence": "Cyan top HEPA filter unit and purple radial cyclone cones match R08.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "support",
+                "query_visible": true,
+                "query_box_2d": [
+                  18,
+                  298,
+                  1000,
+                  655
+                ],
+                "panel": "R08-P2",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  36,
+                  226,
+                  337,
+                  747
+                ],
+                "detail": "Both feature a cyan cylindrical top filter unit above purple radial cyclone cones."
+              }
+            ]
+          },
+          {
+            "reference": "R09",
+            "outcome": "visible_conflict",
+            "evidence": "Shark dust cup and body architecture conflict with query's Dyson cyclone and filter assembly.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  18,
+                  298,
+                  1000,
+                  655
+                ],
+                "panel": "R09-P2",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  209,
+                  332,
+                  888,
+                  672
+                ],
+                "detail": "Query has radial cyclones and a cylindrical top filter, whereas R09 has a dust cup and no radial cyclones."
+              }
+            ]
+          }
+        ],
+        "other_brand_evidence": []
+      },
+      "decision": {
+        "status": "not_sure",
+        "confidence": 65,
+        "top_two": [
+          "dyson_gen5detect",
+          "dyson_v16_piston_animal"
+        ],
+        "evidence": [
+          "Only the upper filter and cyclone assembly are visible, matching R08, but secondary diagnostic feature types like handle controls and bin mechanism are out of frame."
+        ],
+        "missing_evidence": [
+          "handle_control",
+          "body_layout",
+          "bin_mechanism"
+        ],
+        "contradictions": [],
+        "retake": "Take a photo showing the complete machine including the handle, power controls, and dust bin.",
+        "product": null
+      },
+      "candidate_checks": [
+        {
+          "product": "dyson_big_ball",
+          "outcome": "contradicted",
+          "evidence": "Canister vacuum cyclone pack conflicts with query's inline axial cylindrical filter and cyclones."
+        },
+        {
+          "product": "dyson_v12_detect_slim",
+          "outcome": "contradicted",
+          "evidence": "Query filter and cyclone colors conflict with R02's purple filter and gold cyclones."
+        },
+        {
+          "product": "dyson_v15_detect",
+          "outcome": "contradicted",
+          "evidence": "Filter and cyclone assembly conflict with R03's purple filter and gold cyclone cones."
+        },
+        {
+          "product": "dyson_v16_piston_animal",
+          "outcome": "contradicted",
+          "evidence": "Cyclone cone color and housing design conflict with R04's bronze cyclones and vented casing."
+        },
+        {
+          "product": "dyson_v8_absolute",
+          "outcome": "contradicted",
+          "evidence": "Cyclone and filter layout conflicts with R05's central pre-filter and separate rear filter."
+        },
+        {
+          "product": "dyson_wash_g1",
+          "outcome": "contradicted",
+          "evidence": "Wet floor cleaner water tanks conflict with query's cyclone and dry filter assembly."
+        }
+      ],
+      "top_two": [
+        "dyson_gen5detect",
+        "dyson_v16_piston_animal"
+      ],
+      "gate_reasons": [],
+      "matched_reference": null,
+      "matched_product": null
+    }
+  }
+}

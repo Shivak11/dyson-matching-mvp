@@ -1,0 +1,224 @@
+{
+  "targets": [
+    {
+      "object_id": "o1",
+      "box_2d": [
+        0,
+        331,
+        731,
+        735
+      ],
+      "role": "partial_machine",
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "conical anti-tangle screw brush bar inside clear motorized tool housing",
+          "box_2d": [
+            200,
+            331,
+            731,
+            735
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red quick-release button on connection collar",
+          "box_2d": [
+            147,
+            506,
+            248,
+            565
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "clear cylindrical bin base partially visible above attachment neck",
+          "box_2d": [
+            0,
+            385,
+            142,
+            695
+          ]
+        },
+        {
+          "feature": "handle",
+          "visible": false,
+          "detail": "main body, motor, and handle are out of frame above",
+          "box_2d": null
+        }
+      ]
+    }
+  ],
+  "active_ids": [],
+  "passive_ids": [
+    "o1"
+  ],
+  "baseline": {
+    "o1": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 50,
+        "top_two": [
+          "R02",
+          "R03"
+        ],
+        "evidence": [
+          "Only the motorized anti-tangle screw tool and the bottom rim of the dust bin are visible.",
+          "The hair screw tool is an interchangeable accessory that does not establish the specific vacuum family."
+        ],
+        "missing_evidence": [
+          "main body",
+          "cyclone assembly",
+          "handle and power controls",
+          "display screen"
+        ],
+        "contradictions": [],
+        "retake": "Photograph the complete vacuum body including the cyclone assembly, handle, and display screen."
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main canister body and cyclone are out of frame; the visible hair screw tool is an interchangeable accessory.",
+          "comparisons": []
+        },
+        {
+          "reference": "R02",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main vacuum body, cyclone assembly, and controls are out of frame, preventing confirmation of the V12 family.",
+          "comparisons": []
+        },
+        {
+          "reference": "R03",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main vacuum body, handle controls, and LCD screen are out of frame, preventing confirmation of the V15 family.",
+          "comparisons": []
+        },
+        {
+          "reference": "R04",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main body, cyclone pack, and filter assembly are out of frame, leaving insufficient evidence.",
+          "comparisons": []
+        },
+        {
+          "reference": "R05",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main body, handle, and cyclone assembly are out of frame.",
+          "comparisons": []
+        },
+        {
+          "reference": "R06",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main body and cleaning mechanism are out of frame; the visible part is an interchangeable accessory.",
+          "comparisons": []
+        },
+        {
+          "reference": "R07",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main body, cyclone assembly, and handle are out of frame.",
+          "comparisons": []
+        },
+        {
+          "reference": "R08",
+          "outcome": "insufficient_evidence",
+          "evidence": "Main body, cyclone assembly, and handle controls are out of frame.",
+          "comparisons": []
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Query shows Dyson branding, conflicting with Shark branding on R09.",
+          "comparisons": [
+            {
+              "feature": "identifier",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                614,
+                630,
+                652,
+                705
+              ],
+              "panel": "R09-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                569,
+                474,
+                693,
+                532
+              ],
+              "detail": "Query displays Dyson brand text, conflicting with Shark branding on R09."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    }
+  },
+  "focus_refs": {},
+  "plausible_refs": {},
+  "panels": {
+    "R01": [
+      "R01-P1",
+      "R01-P2",
+      "R01-P3"
+    ],
+    "R02": [
+      "R02-P1",
+      "R02-P2",
+      "R02-P3"
+    ],
+    "R03": [
+      "R03-P1",
+      "R03-P2",
+      "R03-P3"
+    ],
+    "R04": [
+      "R04-P1",
+      "R04-P2",
+      "R04-P3"
+    ],
+    "R05": [
+      "R05-P1",
+      "R05-P2",
+      "R05-P3"
+    ],
+    "R06": [
+      "R06-P1",
+      "R06-P2",
+      "R06-P3"
+    ],
+    "R07": [
+      "R07-P1",
+      "R07-P2"
+    ],
+    "R08": [
+      "R08-P1",
+      "R08-P2"
+    ],
+    "R09": [
+      "R09-P1",
+      "R09-P2",
+      "R09-P3"
+    ]
+  },
+  "questions": [],
+  "check_question_ids": [],
+  "overflow_ids": [],
+  "ambiguity_sets": [
+    [
+      "R04",
+      "R08"
+    ],
+    [
+      "R02",
+      "R03"
+    ]
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "targets": [
+    {
+      "object_id": "o1",
+      "box_2d": [
+        0,
+        348,
+        853,
+        650
+      ],
+      "role": "partial_machine",
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dust canister, and handle are out of frame above the wand",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor cleaner head with clear roller housing, internal de-tangling vanes, and front adjustment slider",
+          "box_2d": [
+            584,
+            348,
+            852,
+            650
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Purple extension tube attached to swivel neck with red quick-release catch",
+          "box_2d": [
+            0,
+            461,
+            568,
+            542
+          ]
+        }
+      ]
+    }
+  ],
+  "active_ids": [],
+  "passive_ids": [
+    "o1"
+  ],
+  "baseline": {
+    "o1": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 40,
+        "top_two": [
+          "R03",
+          "R07"
+        ],
+        "evidence": [
+          "Only the cleaner head and lower extension wand are visible, displaying 'dyson' branding, while the main body containing diagnostic features is entirely out of frame."
+        ],
+        "missing_evidence": [
+          "Handheld main body showing the dust canister, cyclone assembly, handle, and display controls"
+        ],
+        "contradictions": [],
+        "retake": "Photograph of the upper main vacuum body showing the cyclone assembly, dust bin, and handle interface"
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "Query cleaner head has internal detangling vanes and a front slider, conflicting with R01-P1's turbine floor head.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                584,
+                348,
+                852,
+                650
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                864,
+                646,
+                946,
+                942
+              ],
+              "detail": "Query features a Motorbar head with detangling vanes and slider, whereas R01-P1 has a turbine head without these features"
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query shows only the cleaner head and wand, while R02 only shows the handheld body, leaving all diagnostic features unobserved.",
+          "comparisons": []
+        },
+        {
+          "reference": "R03",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query lacks the handheld body and R03 lacks the cleaner head, so no diagnostic features can be compared.",
+          "comparisons": []
+        },
+        {
+          "reference": "R04",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query only captures the cleaner head, while R04 only illustrates the main vacuum body.",
+          "comparisons": []
+        },
+        {
+          "reference": "R05",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query lacks the cyclone and canister body, while R05 does not show the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "R06 has dual enclosed wet rollers, conflicting with query's single roller vacuum head with detangling vanes.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                584,
+                348,
+                852,
+                650
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                905,
+                705,
+                990,
+                963
+              ],
+              "detail": "R06 uses dual wet rollers without a clear front window or detangling comb"
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "insufficient_evidence",
+          "evidence": "Diagnostic features of the main body are out of frame in the query, and R07 does not show the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R08",
+          "outcome": "insufficient_evidence",
+          "evidence": "Query does not show the handheld body and R08 does not show the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Query has a Dyson cleaner head, which conflicts with R09-P3's Shark DuoClean nozzle architecture.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                584,
+                348,
+                852,
+                650
+              ],
+              "panel": "R09-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                400,
+                71,
+                846,
+                907
+              ],
+              "detail": "Query features a Dyson Motorbar with detangling vanes, while R09 has a Shark DuoClean nozzle with front headlights"
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    }
+  },
+  "focus_refs": {},
+  "plausible_refs": {},
+  "panels": {
+    "R01": [
+      "R01-P1",
+      "R01-P2",
+      "R01-P3"
+    ],
+    "R02": [
+      "R02-P1",
+      "R02-P2",
+      "R02-P3"
+    ],
+    "R03": [
+      "R03-P1",
+      "R03-P2",
+      "R03-P3"
+    ],
+    "R04": [
+      "R04-P1",
+      "R04-P2",
+      "R04-P3"
+    ],
+    "R05": [
+      "R05-P1",
+      "R05-P2",
+      "R05-P3"
+    ],
+    "R06": [
+      "R06-P1",
+      "R06-P2",
+      "R06-P3"
+    ],
+    "R07": [
+      "R07-P1",
+      "R07-P2"
+    ],
+    "R08": [
+      "R08-P1",
+      "R08-P2"
+    ],
+    "R09": [
+      "R09-P1",
+      "R09-P2",
+      "R09-P3"
+    ]
+  },
+  "questions": [],
+  "check_question_ids": [],
+  "overflow_ids": [],
+  "ambiguity_sets": [
+    [
+      "R04",
+      "R08"
+    ],
+    [
+      "R02",
+      "R03"
+    ]
+  ]
+}

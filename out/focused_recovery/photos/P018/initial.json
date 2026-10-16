@@ -1,0 +1,96 @@
+{
+  "inventory": {
+    "objects": [
+      {
+        "object_id": "o1",
+        "role": "accessory",
+        "parent_id": null,
+        "box_2d": [
+          723,
+          466,
+          1000,
+          659
+        ],
+        "visibility": "part_only",
+        "observations": [
+          {
+            "feature": "cleaner_head",
+            "visible": true,
+            "detail": "cleaner head with transparent roller housing, spiral brush bar, and pivoting neck",
+            "box_2d": [
+              724,
+              466,
+              860,
+              659
+            ]
+          },
+          {
+            "feature": "controls",
+            "visible": true,
+            "detail": "red quick-release button on the neck connector",
+            "box_2d": [
+              890,
+              550,
+              999,
+              595
+            ]
+          },
+          {
+            "feature": "body_layout",
+            "visible": false,
+            "detail": "main body, dustbin, and wand are out of frame beyond the bottom edge",
+            "box_2d": null
+          }
+        ],
+        "readable_identifier": "ANTI TANGLE COMB"
+      }
+    ],
+    "machines": [
+      {
+        "object_id": "o1",
+        "role": "partial_machine",
+        "parent_id": null,
+        "box_2d": [
+          723,
+          466,
+          1000,
+          659
+        ],
+        "visibility": "part_only",
+        "observations": [
+          {
+            "feature": "cleaner_head",
+            "visible": true,
+            "detail": "cleaner head with transparent roller housing, spiral brush bar, and pivoting neck",
+            "box_2d": [
+              724,
+              466,
+              860,
+              659
+            ]
+          },
+          {
+            "feature": "controls",
+            "visible": true,
+            "detail": "red quick-release button on the neck connector",
+            "box_2d": [
+              890,
+              550,
+              999,
+              595
+            ]
+          },
+          {
+            "feature": "body_layout",
+            "visible": false,
+            "detail": "main body, dustbin, and wand are out of frame beyond the bottom edge",
+            "box_2d": null
+          }
+        ],
+        "readable_identifier": "",
+        "accessory_only": true
+      }
+    ]
+  },
+  "comparison": {}
+}

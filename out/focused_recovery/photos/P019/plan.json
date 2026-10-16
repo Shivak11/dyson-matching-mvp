@@ -1,0 +1,446 @@
+{
+  "targets": [
+    {
+      "object_id": "o1",
+      "box_2d": [
+        4,
+        151,
+        989,
+        836
+      ],
+      "role": "machine",
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "in-line configuration with dust bin aligned directly with cyclone assembly and wand",
+          "box_2d": [
+            4,
+            631,
+            346,
+            836
+          ]
+        },
+        {
+          "feature": "cyclone",
+          "visible": true,
+          "detail": "copper-colored multi-cyclone assembly arranged radially",
+          "box_2d": [
+            68,
+            705,
+            251,
+            793
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "orange-copper rigid extension tube connecting cleaner head to body",
+          "box_2d": [
+            398,
+            346,
+            737,
+            596
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "motorized cleaner head with visible red and blue brush roller elements",
+          "box_2d": [
+            824,
+            151,
+            989,
+            292
+          ]
+        }
+      ]
+    }
+  ],
+  "active_ids": [
+    "o1"
+  ],
+  "passive_ids": [],
+  "baseline": {
+    "o1": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 90,
+        "top_two": [
+          "R07",
+          "R04"
+        ],
+        "evidence": [
+          "Query is an in-line cordless stick vacuum with copper-colored cyclones, an 'animal' identifier, and a rear filter cap lacking an LCD display, conflicting with all supplied reference families."
+        ],
+        "missing_evidence": [],
+        "contradictions": [],
+        "retake": "Close-up photo of the rear filter cap and the model printing on the motor housing."
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "Query is an in-line stick vacuum, whereas reference is a wheeled canister vacuum with a flexible hose.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                4,
+                631,
+                346,
+                836
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                612,
+                192,
+                936,
+                577
+              ],
+              "detail": "Query has an in-line stick vacuum body, whereas reference has a canister body with large ball wheels."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "visible_conflict",
+          "evidence": "Reference features a rear LCD display and a top push button, whereas query lacks a rear display.",
+          "comparisons": [
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                4,
+                762,
+                142,
+                836
+              ],
+              "panel": "R02-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                417,
+                226,
+                736,
+                452
+              ],
+              "detail": "Reference has an LCD screen with particle count graphs on the rear, whereas query has a filter cap without a screen."
+            }
+          ]
+        },
+        {
+          "reference": "R03",
+          "outcome": "visible_conflict",
+          "evidence": "Reference features a rear LCD screen with particle counts and gold cyclones, whereas query lacks a rear screen.",
+          "comparisons": [
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                4,
+                762,
+                142,
+                836
+              ],
+              "panel": "R03-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                318,
+                477,
+                655,
+                755
+              ],
+              "detail": "Reference has an LCD screen on the rear face, whereas query has a solid filter cap without a display."
+            }
+          ]
+        },
+        {
+          "reference": "R04",
+          "outcome": "visible_conflict",
+          "evidence": "Reference has a rear LCD screen with an integrated power button, which is absent on the query filter cap.",
+          "comparisons": [
+            {
+              "feature": "display_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                4,
+                762,
+                142,
+                836
+              ],
+              "panel": "R04-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                234,
+                303,
+                555,
+                652
+              ],
+              "detail": "Reference features a circular LCD display with an upper power button, absent on the query filter cap."
+            }
+          ]
+        },
+        {
+          "reference": "R05",
+          "outcome": "visible_conflict",
+          "evidence": "Reference has a perpendicular dust bin positioned beneath the handle, whereas query has an in-line dust bin.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                166,
+                638,
+                346,
+                754
+              ],
+              "panel": "R05-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                453,
+                396,
+                804,
+                882
+              ],
+              "detail": "Reference has a dust bin aligned perpendicular to the wand, whereas query has an in-line bin."
+            }
+          ]
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "Reference is a dual-tank wet floor cleaner, whereas query is a dry cyclone stick vacuum.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                4,
+                631,
+                346,
+                836
+              ],
+              "panel": "R06-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                465,
+                54,
+                836,
+                196
+              ],
+              "detail": "Reference is an upright hard floor wet cleaner with water tanks, unlike query's cyclonic stick body."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "visible_conflict",
+          "evidence": "Reference has silver/nickel cyclone cones, whereas query has copper-colored cyclone cones.",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                68,
+                705,
+                251,
+                793
+              ],
+              "panel": "R07-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                318,
+                267,
+                474,
+                915
+              ],
+              "detail": "Reference has silver cyclone cones, whereas query has copper-colored cyclone cones."
+            }
+          ]
+        },
+        {
+          "reference": "R08",
+          "outcome": "visible_conflict",
+          "evidence": "Reference has purple cyclone cones, conflicting with query's copper-colored cyclones.",
+          "comparisons": [
+            {
+              "feature": "cyclone_filter",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                68,
+                705,
+                251,
+                793
+              ],
+              "panel": "R08-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                227,
+                72,
+                335,
+                476
+              ],
+              "detail": "Reference has purple cyclone cones, whereas query features copper-colored cyclone cones."
+            }
+          ]
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Reference has a Shark motor housing and dust cup layout without radial cyclones.",
+          "comparisons": [
+            {
+              "feature": "body_layout",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                4,
+                631,
+                346,
+                836
+              ],
+              "panel": "R09-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                24,
+                337,
+                329,
+                663
+              ],
+              "detail": "Reference has a Shark non-cyclone upper body layout, conflicting with query's radial multi-cyclone layout."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    }
+  },
+  "focus_refs": {
+    "o1": [
+      "R07",
+      "R04",
+      "R08"
+    ]
+  },
+  "plausible_refs": {
+    "o1": [
+      "R07",
+      "R04",
+      "R08"
+    ]
+  },
+  "panels": {
+    "R01": [
+      "R01-P1",
+      "R01-P2",
+      "R01-P3"
+    ],
+    "R02": [
+      "R02-P1",
+      "R02-P2",
+      "R02-P3"
+    ],
+    "R03": [
+      "R03-P1",
+      "R03-P2",
+      "R03-P3"
+    ],
+    "R04": [
+      "R04-P1",
+      "R04-P2",
+      "R04-P3"
+    ],
+    "R05": [
+      "R05-P1",
+      "R05-P2",
+      "R05-P3"
+    ],
+    "R06": [
+      "R06-P1",
+      "R06-P2",
+      "R06-P3"
+    ],
+    "R07": [
+      "R07-P1",
+      "R07-P2"
+    ],
+    "R08": [
+      "R08-P1",
+      "R08-P2"
+    ],
+    "R09": [
+      "R09-P1",
+      "R09-P2",
+      "R09-P3"
+    ]
+  },
+  "questions": [
+    {
+      "object_id": "o1",
+      "question_id": "o1__body_layout",
+      "feature": "body_layout",
+      "question": "Describe the visible main-body, motor and bin arrangement."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__handle_control",
+      "feature": "handle_control",
+      "question": "Describe the visible handle, power control and trigger geometry."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__bin_mechanism",
+      "feature": "bin_mechanism",
+      "question": "Describe the visible bin opening or compression mechanism; do not infer hidden parts."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__display_layout",
+      "feature": "display_layout",
+      "question": "Describe the visible display and adjacent controls."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__cyclone_filter",
+      "feature": "cyclone_filter",
+      "question": "Describe the visible cyclone/filter structure; colour alone is not distinctive."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__identifier",
+      "feature": "identifier",
+      "question": "Is distinguishing model or part text plausibly visible on this physical object? Transcribe only legible literal text."
+    },
+    {
+      "object_id": "o1",
+      "question_id": "o1__relationship",
+      "feature": "relationship",
+      "question": "Does this region show an independent cleaner or a connected component? Preserve independent partial machines."
+    }
+  ],
+  "check_question_ids": [],
+  "overflow_ids": [],
+  "ambiguity_sets": [
+    [
+      "R04",
+      "R08"
+    ],
+    [
+      "R02",
+      "R03"
+    ]
+  ]
+}

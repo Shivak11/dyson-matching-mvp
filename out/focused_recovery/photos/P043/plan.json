@@ -1,0 +1,271 @@
+{
+  "targets": [
+    {
+      "object_id": "o1",
+      "box_2d": [
+        0,
+        234,
+        891,
+        749
+      ],
+      "role": "partial_machine",
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized cleaner head with clear casing, purple brush roller with red bristles, and hair removal vanes",
+          "box_2d": [
+            282,
+            234,
+            891,
+            673
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Swivel neck joint with red release button attached to a purple wand",
+          "box_2d": [
+            0,
+            583,
+            447,
+            749
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "Main motor, cyclone, bin, and handle are out of frame above the wand",
+          "box_2d": null
+        }
+      ]
+    }
+  ],
+  "active_ids": [],
+  "passive_ids": [
+    "o1"
+  ],
+  "baseline": {
+    "o1": {
+      "object_id": "o1",
+      "decision": {
+        "status": "not_sure",
+        "reference": null,
+        "confidence": 35,
+        "top_two": [
+          "R03",
+          "R07"
+        ],
+        "evidence": [
+          "The query only shows a Dyson Motorbar cleaner head and lower wand; the main motor, cyclone, bin, and handle are out of frame, preventing specific cordless model identification."
+        ],
+        "missing_evidence": [
+          "Main vacuum body with cyclone, dust bin, handle, and controls"
+        ],
+        "contradictions": [],
+        "retake": "Photograph the main vacuum body showing the handle, bin, and cyclone assembly."
+      },
+      "reference_checks": [
+        {
+          "reference": "R01",
+          "outcome": "visible_conflict",
+          "evidence": "Target features a direct-drive Motorbar head with hair removal vanes, which conflicts with the canister turbine head shown in R01-P1.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                282,
+                234,
+                891,
+                673
+              ],
+              "panel": "R01-P1",
+              "reference_visible": true,
+              "reference_box_2d": [
+                860,
+                646,
+                946,
+                943
+              ],
+              "detail": "Target features a motorized cleaner head with hair removal vanes and clear cylindrical housing, whereas R01-P1 has a low-profile canister turbine head."
+            }
+          ]
+        },
+        {
+          "reference": "R02",
+          "outcome": "insufficient_evidence",
+          "evidence": "The main vacuum body is missing in the query, and R02 panels do not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R03",
+          "outcome": "insufficient_evidence",
+          "evidence": "The main vacuum body is missing in the query, and R03 panels do not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R04",
+          "outcome": "insufficient_evidence",
+          "evidence": "The main vacuum body is missing in the query, and R04 panels do not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R05",
+          "outcome": "insufficient_evidence",
+          "evidence": "The main vacuum body is missing in the query, and R05 panels do not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R06",
+          "outcome": "visible_conflict",
+          "evidence": "R06 has a dual-roller wet cleaning head, conflicting with target's single brush bar dry cleaner head.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                282,
+                234,
+                891,
+                673
+              ],
+              "panel": "R06-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                132,
+                47,
+                546,
+                638
+              ],
+              "detail": "Target has a motorized single brush bar with hair removal vanes, whereas R06-P2 features a dual-roller wet cleaning floor head."
+            }
+          ]
+        },
+        {
+          "reference": "R07",
+          "outcome": "insufficient_evidence",
+          "evidence": "The main vacuum body is missing in the query, and R07 panels do not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R08",
+          "outcome": "insufficient_evidence",
+          "evidence": "The main vacuum body is missing in the query, and R08 panels do not depict the cleaner head.",
+          "comparisons": []
+        },
+        {
+          "reference": "R09",
+          "outcome": "visible_conflict",
+          "evidence": "Shark brand and DuoClean twin-roller head architecture conflict with target's Dyson Motorbar head.",
+          "comparisons": [
+            {
+              "feature": "head_architecture",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                282,
+                234,
+                891,
+                673
+              ],
+              "panel": "R09-P3",
+              "reference_visible": true,
+              "reference_box_2d": [
+                405,
+                68,
+                843,
+                905
+              ],
+              "detail": "Target has a single brush roller with hair removal vanes, whereas R09-P3 features a DuoClean head with dual rollers and LED headlights."
+            },
+            {
+              "feature": "identifier",
+              "relation": "conflict",
+              "query_visible": true,
+              "query_box_2d": [
+                670,
+                445,
+                775,
+                520
+              ],
+              "panel": "R09-P2",
+              "reference_visible": true,
+              "reference_box_2d": [
+                572,
+                479,
+                696,
+                529
+              ],
+              "detail": "Target is labeled 'dyson', conflicting with 'Shark' brand lettering on R09."
+            }
+          ]
+        }
+      ],
+      "other_brand_evidence": []
+    }
+  },
+  "focus_refs": {},
+  "plausible_refs": {},
+  "panels": {
+    "R01": [
+      "R01-P1",
+      "R01-P2",
+      "R01-P3"
+    ],
+    "R02": [
+      "R02-P1",
+      "R02-P2",
+      "R02-P3"
+    ],
+    "R03": [
+      "R03-P1",
+      "R03-P2",
+      "R03-P3"
+    ],
+    "R04": [
+      "R04-P1",
+      "R04-P2",
+      "R04-P3"
+    ],
+    "R05": [
+      "R05-P1",
+      "R05-P2",
+      "R05-P3"
+    ],
+    "R06": [
+      "R06-P1",
+      "R06-P2",
+      "R06-P3"
+    ],
+    "R07": [
+      "R07-P1",
+      "R07-P2"
+    ],
+    "R08": [
+      "R08-P1",
+      "R08-P2"
+    ],
+    "R09": [
+      "R09-P1",
+      "R09-P2",
+      "R09-P3"
+    ]
+  },
+  "questions": [],
+  "check_question_ids": [],
+  "overflow_ids": [],
+  "ambiguity_sets": [
+    [
+      "R04",
+      "R08"
+    ],
+    [
+      "R02",
+      "R03"
+    ]
+  ]
+}

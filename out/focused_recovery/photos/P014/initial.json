@@ -1,0 +1,486 @@
+{
+  "inventory": {
+    "objects": [
+      {
+        "object_id": "o1",
+        "role": "machine",
+        "parent_id": null,
+        "box_2d": [
+          208,
+          239,
+          909,
+          618
+        ],
+        "visibility": "whole_machine",
+        "observations": [
+          {
+            "feature": "body_layout",
+            "visible": true,
+            "detail": "Inline clear bin with gold cyclone assembly and purple end filter",
+            "box_2d": [
+              208,
+              239,
+              461,
+              402
+            ]
+          },
+          {
+            "feature": "wand",
+            "visible": true,
+            "detail": "Dark grey wand extending from handheld body down to floor head",
+            "box_2d": [
+              417,
+              372,
+              843,
+              581
+            ]
+          },
+          {
+            "feature": "cleaner_head",
+            "visible": true,
+            "detail": "Floor head with roller casting green illumination onto the floor",
+            "box_2d": [
+              770,
+              568,
+              909,
+              618
+            ]
+          }
+        ],
+        "readable_identifier": ""
+      }
+    ],
+    "machines": [
+      {
+        "object_id": "o1",
+        "role": "machine",
+        "parent_id": null,
+        "box_2d": [
+          208,
+          239,
+          909,
+          618
+        ],
+        "visibility": "whole_machine",
+        "observations": [
+          {
+            "feature": "body_layout",
+            "visible": true,
+            "detail": "Inline clear bin with gold cyclone assembly and purple end filter",
+            "box_2d": [
+              208,
+              239,
+              461,
+              402
+            ]
+          },
+          {
+            "feature": "wand",
+            "visible": true,
+            "detail": "Dark grey wand extending from handheld body down to floor head",
+            "box_2d": [
+              417,
+              372,
+              843,
+              581
+            ]
+          },
+          {
+            "feature": "cleaner_head",
+            "visible": true,
+            "detail": "Floor head with roller casting green illumination onto the floor",
+            "box_2d": [
+              770,
+              568,
+              909,
+              618
+            ]
+          }
+        ],
+        "readable_identifier": ""
+      }
+    ]
+  },
+  "comparison": {
+    "o1": {
+      "raw": {
+        "object_id": "o1",
+        "decision": {
+          "status": "same_family",
+          "reference": "R03",
+          "confidence": 95,
+          "top_two": [
+            "R03",
+            "R02"
+          ],
+          "evidence": [
+            "Matches R03 in inline handheld body layout, clear bin mechanism with red release runner, and gold radial cyclones with purple filter, while conflicting with R02's top button and R07's silver cyclones."
+          ],
+          "missing_evidence": [],
+          "contradictions": [],
+          "retake": ""
+        },
+        "reference_checks": [
+          {
+            "reference": "R01",
+            "outcome": "visible_conflict",
+            "evidence": "Query is a cordless inline stick vacuum, whereas R01 is a canister vacuum with ball mechanism and hose.",
+            "comparisons": [
+              {
+                "feature": "body_layout",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  208,
+                  239,
+                  460,
+                  415
+                ],
+                "panel": "R01-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  608,
+                  83,
+                  934,
+                  575
+                ],
+                "detail": "Query is an inline stick vacuum, whereas R01 is a canister vacuum with ball wheels."
+              }
+            ]
+          },
+          {
+            "reference": "R02",
+            "outcome": "visible_conflict",
+            "evidence": "Query lacks R02's top-mounted red power push button and has a full-size bin rather than a slim body.",
+            "comparisons": [
+              {
+                "feature": "handle_control",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  230,
+                  305,
+                  285,
+                  345
+                ],
+                "panel": "R02-P2",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  390,
+                  341,
+                  595,
+                  479
+                ],
+                "detail": "Query body surface has no red push button, whereas R02 has a top-mounted red power button."
+              },
+              {
+                "feature": "body_layout",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  208,
+                  239,
+                  460,
+                  415
+                ],
+                "panel": "R02-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  44,
+                  117,
+                  860,
+                  574
+                ],
+                "detail": "Query has a full-size dustbin and grey motor housing, whereas R02 has a compact slim bin and gold motor housing."
+              }
+            ]
+          },
+          {
+            "reference": "R03",
+            "outcome": "supported",
+            "evidence": "Query matches R03 in full-size inline body layout, bin mechanism with red runner, and gold cyclone pack with purple filter.",
+            "comparisons": [
+              {
+                "feature": "body_layout",
+                "relation": "support",
+                "query_visible": true,
+                "query_box_2d": [
+                  208,
+                  239,
+                  460,
+                  415
+                ],
+                "panel": "R03-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  44,
+                  117,
+                  880,
+                  595
+                ],
+                "detail": "Query matches R03-P1 in inline handheld stick architecture with full-size bin and grey motor housing."
+              },
+              {
+                "feature": "bin_mechanism",
+                "relation": "support",
+                "query_visible": true,
+                "query_box_2d": [
+                  300,
+                  305,
+                  455,
+                  415
+                ],
+                "panel": "R03-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  450,
+                  137,
+                  876,
+                  526
+                ],
+                "detail": "Query shares the inline clear bin with internal shroud, red sealing gasket, and red sliding dirt ejection lever."
+              },
+              {
+                "feature": "cyclone_filter",
+                "relation": "support",
+                "query_visible": true,
+                "query_box_2d": [
+                  210,
+                  274,
+                  355,
+                  368
+                ],
+                "panel": "R03-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  44,
+                  117,
+                  436,
+                  483
+                ],
+                "detail": "Query features matching radial cyclone cones in gold with a purple cylindrical rear filter."
+              }
+            ]
+          },
+          {
+            "reference": "R04",
+            "outcome": "visible_conflict",
+            "evidence": "Query has gold cyclones and a purple filter, whereas R04 has copper cyclones and a cyan filter.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  210,
+                  274,
+                  355,
+                  368
+                ],
+                "panel": "R04-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  110,
+                  83,
+                  583,
+                  471
+                ],
+                "detail": "Query has gold cyclones and purple filter, unlike R04's copper cyclones and cyan filter."
+              }
+            ]
+          },
+          {
+            "reference": "R05",
+            "outcome": "visible_conflict",
+            "evidence": "Query has an inline horizontal dustbin layout, whereas R05 has a perpendicular vertical dustbin.",
+            "comparisons": [
+              {
+                "feature": "body_layout",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  208,
+                  239,
+                  460,
+                  415
+                ],
+                "panel": "R05-P2",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  120,
+                  54,
+                  880,
+                  795
+                ],
+                "detail": "Query has an inline dustbin, whereas R05 has a vertical dustbin positioned beneath the cyclone."
+              }
+            ]
+          },
+          {
+            "reference": "R06",
+            "outcome": "visible_conflict",
+            "evidence": "Query is a dry stick vacuum with cyclone assembly, whereas R06 is a wet cleaner with dual water tanks.",
+            "comparisons": [
+              {
+                "feature": "body_layout",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  208,
+                  239,
+                  909,
+                  618
+                ],
+                "panel": "R06-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  10,
+                  52,
+                  986,
+                  227
+                ],
+                "detail": "Query is an inline dry cyclone stick vacuum, whereas R06 is an upright wet floor cleaner with water tanks."
+              }
+            ]
+          },
+          {
+            "reference": "R07",
+            "outcome": "visible_conflict",
+            "evidence": "Query features gold cyclone cones, whereas R07 has silver/nickel cyclone cones.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  260,
+                  295,
+                  345,
+                  368
+                ],
+                "panel": "R07-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  333,
+                  117,
+                  473,
+                  495
+                ],
+                "detail": "Query has gold cyclone cones, whereas R07 has silver/nickel cyclone cones."
+              }
+            ]
+          },
+          {
+            "reference": "R08",
+            "outcome": "visible_conflict",
+            "evidence": "Query has gold cyclones and a purple filter, whereas R08 features purple cyclones and a cyan filter.",
+            "comparisons": [
+              {
+                "feature": "cyclone_filter",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  210,
+                  274,
+                  355,
+                  368
+                ],
+                "panel": "R08-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  31,
+                  74,
+                  329,
+                  473
+                ],
+                "detail": "Query has gold cyclones and purple filter, conflicting with R08's purple cyclones and cyan filter."
+              }
+            ]
+          },
+          {
+            "reference": "R09",
+            "outcome": "visible_conflict",
+            "evidence": "Query has Dyson inline cyclone architecture, whereas R09 has a Shark handheld stick vacuum layout.",
+            "comparisons": [
+              {
+                "feature": "body_layout",
+                "relation": "conflict",
+                "query_visible": true,
+                "query_box_2d": [
+                  208,
+                  239,
+                  460,
+                  415
+                ],
+                "panel": "R09-P1",
+                "reference_visible": true,
+                "reference_box_2d": [
+                  22,
+                  332,
+                  322,
+                  655
+                ],
+                "detail": "Query has an inline cyclone stick vacuum layout, whereas R09 has a Shark handheld body layout."
+              }
+            ]
+          }
+        ],
+        "other_brand_evidence": []
+      },
+      "decision": {
+        "status": "match",
+        "confidence": 95,
+        "top_two": [
+          "dyson_v15_detect",
+          "dyson_v12_detect_slim"
+        ],
+        "evidence": [
+          "Matches R03 in inline handheld body layout, clear bin mechanism with red release runner, and gold radial cyclones with purple filter, while conflicting with R02's top button and R07's silver cyclones."
+        ],
+        "missing_evidence": [],
+        "contradictions": [],
+        "retake": "",
+        "product": "dyson_v15_detect"
+      },
+      "candidate_checks": [
+        {
+          "product": "dyson_big_ball",
+          "outcome": "contradicted",
+          "evidence": "Query is a cordless inline stick vacuum, whereas R01 is a canister vacuum with ball mechanism and hose."
+        },
+        {
+          "product": "dyson_v12_detect_slim",
+          "outcome": "contradicted",
+          "evidence": "Query lacks R02's top-mounted red power push button and has a full-size bin rather than a slim body."
+        },
+        {
+          "product": "dyson_v15_detect",
+          "outcome": "confirmed",
+          "evidence": "Query matches R03 in full-size inline body layout, bin mechanism with red runner, and gold cyclone pack with purple filter."
+        },
+        {
+          "product": "dyson_v16_piston_animal",
+          "outcome": "contradicted",
+          "evidence": "Query has gold cyclones and a purple filter, whereas R04 has copper cyclones and a cyan filter."
+        },
+        {
+          "product": "dyson_v8_absolute",
+          "outcome": "contradicted",
+          "evidence": "Query has an inline horizontal dustbin layout, whereas R05 has a perpendicular vertical dustbin."
+        },
+        {
+          "product": "dyson_wash_g1",
+          "outcome": "contradicted",
+          "evidence": "Query is a dry stick vacuum with cyclone assembly, whereas R06 is a wet cleaner with dual water tanks."
+        }
+      ],
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "gate_reasons": [],
+      "matched_reference": "R03",
+      "matched_product": "dyson_v15_detect"
+    }
+  }
+}
