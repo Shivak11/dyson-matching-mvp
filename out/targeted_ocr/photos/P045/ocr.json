@@ -1,0 +1,38 @@
+{
+  "image_id": "P045",
+  "object_id": "o1",
+  "query_box_2d": [
+    0,
+    107,
+    854,
+    675
+  ],
+  "location_kind": "submitted original-image crop; no per-character boxes",
+  "crop": {
+    "file": "out/targeted_ocr/photos/P045/object.jpg",
+    "pixel_box": [
+      210,
+      0,
+      1745,
+      1249
+    ],
+    "sha256": "233bfb4d01261d5bce340bd2544ae0b46c9a813346492f6acb6d00a87437e5ea"
+  },
+  "ocr": {
+    "literal_texts": [
+      "<file name=\"region.pdf\">",
+      "|  ![img-0.jpeg](img-0.jpeg)  |   |   |\n| --- | --- | --- |",
+      "</file>"
+    ],
+    "no_text_extracted": false,
+    "annotation_file_hash": "ce2bfc924cb53abab3443b253c7a9969d7ee045f1fd763958bf31625ec12f443",
+    "engine": "mistral-ocr",
+    "evidence_source": "OpenRouter server file-parser annotations; downstream answer excluded"
+  },
+  "candidates": {
+    "possible_model_strings": [],
+    "possible_part_codes": [],
+    "manufacturer_verified": false,
+    "body_identity_accepted": false
+  }
+}

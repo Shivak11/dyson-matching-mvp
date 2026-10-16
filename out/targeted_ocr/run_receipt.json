@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-16T11:14:22Z",
+  "settled_utc": "2026-10-16T11:18:14Z",
+  "completed_count": 14,
+  "workers": 1,
+  "inflight_count": 0,
+  "error": null,
+  "costs": {
+    "new_accounted_usd": 0.16829333000000002,
+    "new_reporting_inr": 16.014294190477003,
+    "new_guard_inr": 16.829333000000002,
+    "pending_reserve_usd": 0,
+    "retained_parser_fee_reserve_usd": 0.14,
+    "combined_stage_guard_inr": 801.9682441,
+    "remaining_guard_inr": 198.0317559,
+    "overall_guard_inr": 844.6482441
+  }
+}

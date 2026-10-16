@@ -1,6 +1,6 @@
 # Dyson matching edge cases
 
-This record follows the saved V2 benchmark, the aligned-reference failure round and the next focused recovery wave. Source labels remain unchanged. The labels below are used for evaluation and are excluded from inference inputs. The focused visual preflight stopped before producing a decision. A separate targeted OCR run is now planned for P054 and the13 unsure cases.
+This record follows the saved V2 benchmark, the aligned-reference failure round and the next focused recovery wave. Source labels remain unchanged. The labels below are used for evaluation and are excluded from inference inputs. The focused visual preflight stopped before producing a decision. The separate targeted OCR run is complete on P054 and the 13 unsure cases. It recovered no identities.
 
 | Cases | Observed failure and current result | Check using the existing photographs | Status |
 |---|---|---|---|
@@ -12,7 +12,7 @@ This record follows the saved V2 benchmark, the aligned-reference failure round 
 | P022, P023, P025 | Earlier V16 errors relied on false or unsupported control/reference exclusions. All three now return V16 correctly. | Use the existing manufacturer control crop and check the corresponding query region. Also test the nearest non-catalogue lookalike; P054 shows that matching a control arrangement alone is insufficient. | Three correct recoveries; no general accuracy claim. |
 | P031 | A recognised Big Ball body was cancelled by a separate upholstery tool treated as a second partial machine. | Check whether the partial object has independent motor/bin/handle evidence. Preserve real independent machines and a correctly recognised body separately from loose accessories. | Correct recovery through the fresh inventory/comparison bundle. |
 | P012, P018, P028, P029, P040, P043, P045, P046, P048, P050 | All ten primarily attachment-only photos remain unsure after the aligned-reference round. | Use independent text reading through OpenRouter only for plausible model/part text. Verify exact codes against manufacturer compatibility. Keep compatible-family sets separate from body identification; a shared tool or bundle membership does not identify the unseen cleaner body. | Ten unresolved cases remain in the denominator. |
-| P019 control | The comparison exhausted 32,768 output tokens. Its incomplete response cost USD0.14911875. | Retry once in a separate frozen ledger with the same prompt/model/high/route/gate and65536 output tokens. Never score incomplete JSON as a product decision. | Completed in the separate ledger; now unsure, a control regression. Retry cost USD0.1113075. |
+| P019 control | The comparison exhausted 32,768 output tokens. Its incomplete response cost USD 0.14911875. | Retry once in a separate frozen ledger with the same prompt/model/high/route/gate and 65536 output tokens. Never score incomplete JSON as a product decision. | Completed in the separate ledger; now unsure, a control regression. Retry cost USD 0.1113075. |
 
 Dyson's [India Big Ball specification](https://www.dyson.in/big-ball-vacuum) identifies the catalogue product as CY23 with 2 Tier Radial cyclones. Its [CY23 manual](https://www.dyson.co.uk/content/dam/dyson/india/2025/CY23_IN_DYSON-BIG-BALL.pdf) requires filter washing. The ordinary Big Ball and Cinetic filtration distinction does not justify merging all ball-shaped cylinder models, and cyclone tier count alone is not exclusive.
 
@@ -24,3 +24,10 @@ After the focused wave, append the actual per-case changes, paid cost, control r
 
 
 The focused preflight stopped on P030 output truncation before any case reached Sol or Mistral OCR. It adds no new identity result. The selected OCR-only follow-up is documented in docs/plan-targeted-ocr.md; P054 remains a confidently wrong V16 answer in the last complete round until a subsequent result establishes otherwise.
+
+
+## Targeted OCR completed, 16 October 2026
+
+All 14 selected photos completed through OpenRouter's Mistral file parser. There were no usable model or part identifiers. P054 returned only an image placeholder; its earlier wrong V16-at 95 result remains unchanged in the completed matching evidence. P051 returned WASHABLE HEPA FILTER and dyson, which are shared attributes. P012 returned the unverified fragment UOSho. The other11 selected photos also returned only transport/image/table markup. No component code was available for manufacturer verification.
+
+OpenRouter reported INR 2.69, or INR 0.19 per selected photo. The conservative budget retains an extra fee reserve, accounting for INR 16.83 under the guard; INR 198.03 remains. All 14 request and pixel reconstructions and 1,240 frozen hashes pass the independent audit. The visual feature round remains stopped before a decision; no OCR success is counted as a model recovery. The assessment using no additional photographs is in docs/no-additional-photo-assessment.md.

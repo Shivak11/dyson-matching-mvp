@@ -1,0 +1,305 @@
+{
+  "audit_status": "PASS",
+  "errors": [],
+  "notes": [
+    "The frozen photos_with_text field includes transport wrappers; use photos_with_actual_content_text for interpretation."
+  ],
+  "completed_count": 14,
+  "selected_count": 14,
+  "ocr_counts": {
+    "photos_with_nonempty_annotation_text": 14,
+    "photos_with_actual_content_text": 2,
+    "transport_wrapper_only_photo_ids": [
+      "P054",
+      "P018",
+      "P028",
+      "P029",
+      "P030",
+      "P040",
+      "P043",
+      "P045",
+      "P046",
+      "P048",
+      "P049",
+      "P050"
+    ],
+    "photos_without_actual_content_text": 12,
+    "photos_with_specific_candidate": 0,
+    "manufacturer_verified_body_identities": 0,
+    "not_run": 0
+  },
+  "per_photo": [
+    {
+      "image_id": "P054",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "![img-0.jpeg](img-0.jpeg)",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P012",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "![img-0.jpeg](img-0.jpeg)\n\nUOSho",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [
+        "UOSho"
+      ],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P018",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  ![img-0.jpeg](img-0.jpeg)  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P028",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P029",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  ![img-0.jpeg](img-0.jpeg)  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P030",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  ![img-0.jpeg](img-0.jpeg)  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P040",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  ![img-0.jpeg](img-0.jpeg)  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P043",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  ![img-0.jpeg](img-0.jpeg)  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P045",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  ![img-0.jpeg](img-0.jpeg)  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P046",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  ![img-0.jpeg](img-0.jpeg)  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P048",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  ![img-0.jpeg](img-0.jpeg)  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P049",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "![img-0.jpeg](img-0.jpeg)",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P050",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "|  |   |   |\n| --- | --- | --- |",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    },
+    {
+      "image_id": "P051",
+      "literal_texts": [
+        "<file name=\"region.pdf\">",
+        "# WASHABLE HEPA FILTER\n\ndyson",
+        "</file>"
+      ],
+      "content_texts_excluding_transport_wrappers": [
+        "# WASHABLE HEPA FILTER",
+        "dyson"
+      ],
+      "candidates": {
+        "possible_model_strings": [],
+        "possible_part_codes": [],
+        "manufacturer_verified": false,
+        "body_identity_accepted": false
+      }
+    }
+  ],
+  "integrity": {
+    "audit_source_sha256": "f12781e670f462d6a1cf0b20e15ca72b77c7bde1cf17e86752a86d460456fbd0",
+    "config_sha256": "0c189353f417df354a36fe1ad991328c9461c9ddf30524c5a979690c3c344a41",
+    "frozen_file_count": 1240,
+    "frozen_changes": [],
+    "fresh_prior_audits": {
+      "completed23": {
+        "audit_status": "PASS",
+        "errors": [],
+        "source_sha256": "3bb23b52605edad90757640e0080b9aa2700b36a80a1f3189a74fd8726ec152b",
+        "frozen_changes": []
+      },
+      "focused_stop": {
+        "audit_status": "FAIL",
+        "errors": [
+          "A terminal error or validation failure is unresolved"
+        ],
+        "source_sha256": "6eb9e9dcea1acd09ce4dacad109ab653f5a9005965acb225c8b3c4874e420d0c",
+        "frozen_changes": []
+      }
+    },
+    "all_eleven_ledgers_physical_jobs": 596,
+    "duplicate_physical_jobs": [],
+    "requests_reconstructed": 14,
+    "original_pixel_crops_checked": 14,
+    "server_annotations_checked": 14
+  },
+  "transport": {
+    "physical_calls": 14,
+    "usage_cost_checks": 14,
+    "pending": [],
+    "recorded429": 0,
+    "minimum_finish_to_start_gap_seconds": 15.004387855529785
+  },
+  "costs": {
+    "prior_ten_ledgers_accounted_usd": 7.851389110999999,
+    "new_settled_usd": 0.16829333000000002,
+    "pending_reserve_usd": 0,
+    "new_accounted_usd": 0.16829333000000002,
+    "reported_or_token_derived_cost_usd": 0.02829333,
+    "extra_parser_fee_reserve_usd": 0.13999999999999999,
+    "new_reporting_inr": 16.014294190477003,
+    "new_guard_inr": 16.829333000000002,
+    "combined_stage_guard_inr": 801.9682440999999,
+    "remaining_guard_inr": 198.03175590000012,
+    "overall_guard_inr": 844.6482441,
+    "stage_ceiling_inr": 1000,
+    "overall_ceiling_inr": 2000,
+    "maximum_first_attempts_guard_inr": 28.275296000000004
+  },
+  "scope": {
+    "all58_tested": false,
+    "controls_tested": false,
+    "source_labels_changed": false,
+    "body_identity_recovery_claimed": false,
+    "ocr_route": "OpenRouter Mistral server file-parser only"
+  }
+}

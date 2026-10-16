@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "selected_photos": 14,
+  "actual_content_text_photos": 2,
+  "transport_wrapper_only_photos": 12,
+  "specific_model_or_part_identifiers": 0,
+  "manufacturer_verified_identifiers": 0,
+  "recovered_body_identities": 0,
+  "P054": {
+    "extracted_content_text": [],
+    "usable_identifier": null,
+    "identity_resolved": false,
+    "previous_complete_round_prediction": "dyson_v16_piston_animal",
+    "previous_complete_round_confidence": 95,
+    "previous_source_label": "NONCAT_dyson_gen5detect",
+    "previous_scored_answer_unchanged": true
+  },
+  "content_text": {
+    "P012": [
+      "UOSho"
+    ],
+    "P051": [
+      "WASHABLE HEPA FILTER",
+      "dyson"
+    ]
+  },
+  "interpretation": "P012 is an unverified garbled fragment. P051 has generic filter and brand text. All other responses contain only file/image/table markup. This parser result does not establish that the original photos contain no readable text.",
+  "provider_reported_cost_usd": 0.02829333,
+  "provider_reported_cost_inr": 2.6923093758276018,
+  "provider_reported_cost_per_photo_inr": 0.19230781255911442,
+  "additional_fee_reserve_usd": 0.13999999999999999,
+  "accounted_reporting_inr": 16.014294190477003,
+  "guard_inr": 16.829333000000002,
+  "remaining_stage_guard_inr": 198.03175590000012,
+  "raw_scoreboard_note": "photos_with_text counts nonempty server annotation blocks including markup. Use actual_content_text_photos here for content interpretation.",
+  "all58_tested": false,
+  "controls_tested": false,
+  "new_images_used": false,
+  "training_used": false,
+  "manufacturer_verification": "No specific model or part string was returned to verify. Generic HEPA and Dyson are documented shared attributes, not model identifiers."
+}

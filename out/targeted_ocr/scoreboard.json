@@ -1,0 +1,34 @@
+{
+  "selected_count": 14,
+  "completed_count": 14,
+  "completed_ids": [
+    "P054",
+    "P012",
+    "P018",
+    "P028",
+    "P029",
+    "P030",
+    "P040",
+    "P043",
+    "P045",
+    "P046",
+    "P048",
+    "P049",
+    "P050",
+    "P051"
+  ],
+  "photos_with_text": 14,
+  "photos_with_specific_candidate": 0,
+  "accepted_body_identities": 0,
+  "full58_matching_accuracy_retested": false,
+  "costs": {
+    "new_accounted_usd": 0.16829333000000002,
+    "new_reporting_inr": 16.014294190477003,
+    "new_guard_inr": 16.829333000000002,
+    "pending_reserve_usd": 0,
+    "retained_parser_fee_reserve_usd": 0.14,
+    "combined_stage_guard_inr": 801.9682441,
+    "remaining_guard_inr": 198.0317559,
+    "overall_guard_inr": 844.6482441
+  }
+}

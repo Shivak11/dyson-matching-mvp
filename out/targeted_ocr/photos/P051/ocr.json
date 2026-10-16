@@ -1,0 +1,38 @@
+{
+  "image_id": "P051",
+  "object_id": "o1",
+  "query_box_2d": [
+    18,
+    298,
+    1000,
+    655
+  ],
+  "location_kind": "submitted original-image crop; no per-character boxes",
+  "crop": {
+    "file": "out/targeted_ocr/photos/P051/object.jpg",
+    "pixel_box": [
+      235,
+      0,
+      556,
+      466
+    ],
+    "sha256": "1cee1bdbc49007ccf576bc435f8293b6cff27a5b84d9b6f7e2240c1dd1df85be"
+  },
+  "ocr": {
+    "literal_texts": [
+      "<file name=\"region.pdf\">",
+      "# WASHABLE HEPA FILTER\n\ndyson",
+      "</file>"
+    ],
+    "no_text_extracted": false,
+    "annotation_file_hash": "e9b24ae6669244a4d224e69d47172059369e3b3c36401ce701225e5eac69f922",
+    "engine": "mistral-ocr",
+    "evidence_source": "OpenRouter server file-parser annotations; downstream answer excluded"
+  },
+  "candidates": {
+    "possible_model_strings": [],
+    "possible_part_codes": [],
+    "manufacturer_verified": false,
+    "body_identity_accepted": false
+  }
+}
