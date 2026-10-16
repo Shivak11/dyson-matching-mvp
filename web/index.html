@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Photo matching · Multiplier</title>
+  <link rel="stylesheet" href="/web/style.css">
+  <script src="/web/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="brand">Multiplier<span>Photo matching</span></div>
+    <nav aria-label="Main navigation">
+      <button type="button" data-nav="match" class="active" aria-current="page">Match photos</button>
+      <button type="button" data-nav="catalogue">Catalogue</button>
+      <button type="button" data-nav="history">History</button>
+      <button type="button" data-nav="evaluation">Saved evaluation</button>
+      <a href="/report" target="_blank" rel="noreferrer">Accuracy report ↗</a>
+    </nav>
+    <span class="local">Local workspace</span>
+  </header>
+  <p id="globalError" class="globalerror hidden" role="alert"></p>
+  <div class="layout">
+    <aside aria-label="Store photo queue">
+      <div class="asidetitle"><h2>Store photos</h2><span class="count" id="queueCount">0 photos</span></div>
+      <button class="upload" type="button" data-upload><span class="plus" aria-hidden="true">+</span> Upload photos</button>
+      <div id="queue"><p class="asideempty">Your store photos will appear here.</p></div>
+      <div class="asidebottom" id="allowance"><p class="small muted">Loading run allowance…</p></div>
+    </aside>
+    <main class="main" id="main" tabindex="-1" aria-busy="true"><div class="heading"><h1>Loading workspace…</h1></div></main>
+  </div>
+  <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden aria-label="Choose store photographs">
+  <div class="sr-only" id="announcer" role="status" aria-live="polite"></div>
+  <noscript><p class="globalerror">Enable JavaScript to upload photographs and inspect matching results.</p></noscript>
+</body>
+</html>

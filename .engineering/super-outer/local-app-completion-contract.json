@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "claims": [
+    {
+      "id": "source-tests",
+      "level": "source",
+      "actor_ref": "configured-owner",
+      "client": "python",
+      "environment": "local",
+      "action": "Run regression and app tests",
+      "expected_result": "All tests pass without paid requests",
+      "context_file": "docs/local-app-context.json"
+    },
+    {
+      "id": "browser-journey",
+      "level": "journey",
+      "actor_ref": "configured-owner",
+      "client": "local-browser",
+      "environment": "local",
+      "action": "Add manufacturer material, preview store images and inspect results",
+      "expected_result": "Catalogue persists, jobs update and per-object results remain inspectable",
+      "context_file": "docs/local-app-context.json"
+    },
+    {
+      "id": "openrouter-runtime",
+      "level": "runtime",
+      "actor_ref": "configured-owner",
+      "client": "local-server",
+      "environment": "local",
+      "action": "Run one bounded uploaded-photo comparison",
+      "expected_result": "Pinned OpenRouter Gemini returns a locally validated result and metered charges",
+      "context_file": "docs/local-app-context.json"
+    },
+    {
+      "id": "design-review",
+      "level": "intent-conformance",
+      "actor_ref": "configured-owner",
+      "client": "local-browser",
+      "environment": "local",
+      "action": "Review the built screens against the intent and design package",
+      "expected_result": "A fresh reviewer passes the required paths",
+      "context_file": "docs/local-app-context.json"
+    },
+    {
+      "id": "owner-acceptance",
+      "level": "owner-acceptance",
+      "actor_ref": "configured-owner",
+      "client": "local-browser",
+      "environment": "local",
+      "action": "Owner tries and accepts the app",
+      "expected_result": "Explicit owner acceptance, currently pending",
+      "context_file": "docs/local-app-context.json"
+    }
+  ]
+}
