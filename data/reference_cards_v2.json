@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "feature_basis": "Manufacturer text plus native inspection of the listed manufacturer images. Features are comparison evidence, not individually exclusive identifiers.",
+  "decision_rules": [
+    "A feature hidden, blurred or outside the frame is unobserved; it cannot contradict a family.",
+    "Compare body layout, controls and readable identifiers before using colour or interchangeable accessories.",
+    "These negative examples are not an exhaustive non-catalogue universe.",
+    "Reference images contain no test photograph, test label or test-case identifier."
+  ],
+  "products": {
+    "dyson_big_ball": {
+      "name": "Dyson Big Ball",
+      "in_catalog": true,
+      "sources": [
+        {
+          "url": "https://www.dyson.in/big-ball-vacuum",
+          "title": "Dyson Big Ball corded vacuum",
+          "supporting_passage": "Rides on a ball, to steer easily around corners and into difficult places."
+        }
+      ],
+      "visible_features": [
+        "A separate floor-standing spherical wheeled canister, with a transparent bin and cyclone assembly above the ball; compare the hose connection and canister outline.",
+        "A flexible hose connects the canister to a separate wand and cleaner head."
+      ],
+      "variant_limits": [
+        "A detached mattress, combination or floor tool is an accessory; its presence does not establish another machine.",
+        "Ball-shaped canisters also occur in other Dyson cylinder ranges; these references do not prove every cylinder variant belongs to this catalogue family."
+      ],
+      "images": [
+        {
+          "file": "data/catalog/dyson_big_ball/00.png",
+          "sha256": "032925ba49dc676a492bd7248ba2c3c9fef243668e419b48e683759ee5ddde41",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/286519-01.png",
+          "view": "Full canister, hose and wand"
+        },
+        {
+          "file": "data/catalog/dyson_big_ball/02.png",
+          "sha256": "894c00f829edb1cd3357e151bbffe8566e1e096910313ab740eeccb9c2c54926",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/india/2024/Gallery%20image%202.png",
+          "view": "Canister and bin front view"
+        },
+        {
+          "file": "data/catalog/dyson_big_ball/03.png",
+          "sha256": "6e1697538d66219500d6a177b50bfbc62cbabeb15eedf0759fb553027a151d9a",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/india/2024/Gallery%20image%203.png",
+          "view": "Canister and hose in use"
+        }
+      ]
+    },
+    "dyson_v8_absolute": {
+      "name": "Dyson V8 Absolute family",
+      "in_catalog": true,
+      "sources": [
+        {
+          "url": "https://www.dyson.in/dyson-v8-absolute-vacuum",
+          "title": "Dyson V8 Absolute vacuum cleaner",
+          "supporting_passage": "The motor and battery are positioned around the handle, creating the optimum centre of gravity for floor-to-ceiling cleaning."
+        },
+        {
+          "url": "https://www.dyson.com/support/vacuum-cleaners/cordless/v8",
+          "title": "Choose your Dyson V8 support",
+          "supporting_passage": "The top of this filter is light purple and translucent."
+        },
+        {
+          "url": "https://www.dyson.com.cy/medialibrary/manuals/214747_01_V8",
+          "title": "Dyson V8 SV10 operating manual, page 20",
+          "supporting_passage": "pull the red lever back and lift upwards to release the cyclone."
+        }
+      ],
+      "visible_features": [
+        "The referenced V8 has its transparent bin below the cyclone assembly; compare this perpendicular bin/body layout against the in-line V12, V15 and V11 bodies.",
+        "The SV10 manual documents a red lever lifted to empty the bin, and a finger trigger. Inspect the lever region directly before claiming it is absent.",
+        "Dyson lists star-filter and pinch-handle-filter V8 variants; a light-purple translucent top filter is documented."
+      ],
+      "variant_limits": [
+        "Filter shape, filter colour, wand colour and bundled heads vary. Do not reject V8 because a cap differs from the current India reference.",
+        "The V8 family overlaps visually with earlier Dyson cordless models. A visible red lever or purple cap alone is not an exclusive identifier.",
+        "The Hair screw tool is supplied with multiple families, including the current V8; an accessory-only image cannot identify V8 by that tool."
+      ],
+      "images": [
+        {
+          "file": "data/catalog/dyson_v8_absolute/00.png",
+          "sha256": "3a206b5f02e53ddd7ffd34e4d35503d7ab37257e0dbdb61a1c67dd5164e2a2c1",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/vacuums/sticks/285L/primary/394483-01.png",
+          "view": "Full machine"
+        },
+        {
+          "file": "data/catalog/dyson_v8_absolute/01.png",
+          "sha256": "1dd8c4d13219d4f480870b12f0064a6968f5bfa7a15ac768bba6274b34276caa",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/285l/pdp/specifications/285L_spec_IRSILNK_MTB.png",
+          "view": "Front and side body layout"
+        },
+        {
+          "file": "data/catalog/dyson_v8_absolute/05.jpg",
+          "sha256": "d0a9696f372a1f65845322bfa99a5e4a0143040c83afa067ac7619fc093eceea",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/vacuum-cleaners/sticks/v8/pdp/silver-nickel/carousel/2_Ergonomic_and_lightweight.jpg",
+          "view": "Handheld motor, bin and controls at larger scale"
+        }
+      ]
+    },
+    "dyson_v12_detect_slim": {
+      "name": "Dyson V12 Detect Slim",
+      "in_catalog": true,
+      "sources": [
+        {
+          "url": "https://www.dyson.in/dyson-v12-detect-slim-vacuum-cleaner",
+          "title": "Dyson V12 Detect Slim Absolute vacuum",
+          "supporting_passage": "Single-button power control\nNo need to hold the trigger."
+        },
+        {
+          "url": "https://www.dyson.com/vacuum-cleaners/cordless/illumination",
+          "title": "Dyson illuminated cordless vacuum comparison",
+          "supporting_passage": "Dyson V15™ Detect\nTrigger\nDyson V12™ Detect Slim\nButton"
+        }
+      ],
+      "visible_features": [
+        "An in-line slim motor/bin body with a rear circular LCD and a separate on/off button on the motor housing; inspect the button reference.",
+        "The body/bin is slimmer than V15 in the manufacturer views. Use proportions together with the visible control layout."
+      ],
+      "variant_limits": [
+        "A rear LCD and illuminated cleaner head also occur on V15 and Gen5detect.",
+        "Hair screw tools and green illumination alone do not distinguish V12 from other compatible Dyson families.",
+        "Yellow and purple in these references are examples, not mandatory family colours. A hidden power button supplies no contradiction."
+      ],
+      "images": [
+        {
+          "file": "data/catalog/dyson_v12_detect_slim/01.jpg",
+          "sha256": "91a949f5e793cda7d519107ff388d702cb81c8777193c0413c92baf14b39bb97",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v12-detected-slim/pdp/lifestyle/yellow/Spec%20module%20-%20Yellow.jpg",
+          "view": "Side and front machine views"
+        },
+        {
+          "file": "data/reference_images_v2/v12_button.jpg",
+          "sha256": "c4290177113f02c8c6b9792f8c3db8c774bb1f9da2d3944953b50cdfcf15069d",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/vacuum-cleaners/sticks/v12/pdp/yellow-nickel/v12_Single_Power_button.jpg",
+          "view": "Close-up of single on/off button and rear motor housing"
+        },
+        {
+          "file": "data/catalog/dyson_v12_detect_slim/02.jpg",
+          "sha256": "07a1d015254bdc8bf1b52681e260381b28d33d788c7506262ff93cb483688b50",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v12-detected-slim/pdp/gallery-images-/01-Gallery-hero-yellow.jpg",
+          "view": "Larger motor/bin and rear-display view"
+        }
+      ]
+    },
+    "dyson_v15_detect": {
+      "name": "Dyson V15 Detect",
+      "in_catalog": true,
+      "sources": [
+        {
+          "url": "https://www.dyson.in/dyson-v15-detect-vacuum-cleaner",
+          "title": "Dyson V15 Detect vacuum cleaner",
+          "supporting_passage": "LCD screen intelligently reports in real time"
+        },
+        {
+          "url": "https://www.dyson.com/vacuum-cleaners/cordless/illumination",
+          "title": "Dyson illuminated cordless vacuum comparison",
+          "supporting_passage": "Dyson V15™ Detect\nTrigger\nDyson V12™ Detect Slim\nButton"
+        }
+      ],
+      "visible_features": [
+        "An in-line transparent bin ahead of the motor/cyclones and rear circular LCD. The manufacturer comparison specifies trigger operation.",
+        "Compare the trigger/handle and fuller bin proportions against V12; confirm the relevant region is visible."
+      ],
+      "variant_limits": [
+        "An LCD screen by itself does not distinguish V15 from V11, V12 or Gen5detect.",
+        "Illuminated soft-roller heads and Hair screw tools are shared across families. A cleaner-head-only photo may lack family evidence.",
+        "Wand and filter colours vary; the purple/gold and other manufacturer views are examples. Do not infer absent controls from an obscured handle."
+      ],
+      "images": [
+        {
+          "file": "data/catalog/dyson_v15_detect/01.jpg",
+          "sha256": "2cc447b8f67f0e10f625c7d433e75fa39ee803c729f01f5320573583525b1083",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v15-detect/pdp/dynamic-media/specifications/SV22-CORE-LB-Specs.jpg",
+          "view": "Side and front views"
+        },
+        {
+          "file": "data/catalog/dyson_v15_detect/02.jpg",
+          "sha256": "85fea099ea5322440c4b76ccc9aa9d3fe4920b6038a327bd585318f08f59f2ac",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v15-detect/pdp/gallery/Dyson-V15-Direct-HeroWithNasties-Core-LB.jpg",
+          "view": "Larger motor and rear-display view"
+        },
+        {
+          "file": "data/catalog/dyson_v15_detect/05.jpg",
+          "sha256": "843f0f6bc24ae2103a05c49e5370b86759ec82cf5378865ebc42406a097c7071",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/vacuum-cleaners/sticks/v15/pdp/variants/carousel/V15_Yellow_Non-HEPA_Hero-carousel_1.jpg",
+          "view": "Alternative manufacturer body angle"
+        }
+      ]
+    },
+    "dyson_v16_piston_animal": {
+      "name": "Dyson V16 Piston Animal",
+      "in_catalog": true,
+      "sources": [
+        {
+          "url": "https://www.dyson.in/v16-piston-animal-cordless-vacuum",
+          "title": "Dyson V16 Piston Animal cordless vacuum",
+          "supporting_passage": "New dual conical cleaner head\nNew compressing bin\nLCD screen for instant feedback"
+        }
+      ],
+      "visible_features": [
+        "The All Floor Cones Sense head has two conical rollers. Compare both rollers and the centre of the head with the supplied detail image.",
+        "The motor/bin body has a CleanCompaktor compression mechanism and rear LCD; compare the body silhouette and handle with the manufacturer side view."
+      ],
+      "variant_limits": [
+        "The supplied matte-black/copper colourway is an example, not a colour-only identity rule.",
+        "This product is also supplied with a Fluffy Optic head, so lack of the dual-cone head cannot exclude V16.",
+        "The manufacturer says its intelligent attachments are not interchangeable with other current Dyson vacuums; do not transfer older accessory compatibility to V16.",
+        "Compression capacity, motor power and filtration performance cannot be established from a store photo."
+      ],
+      "images": [
+        {
+          "file": "data/catalog/dyson_v16_piston_animal/01.png",
+          "sha256": "680d623aa809e93bd91ac75357f5449107de0f2742e4087ee5743287ce8fa824",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/specifications/home/floorcare/cordless/Web-692B-PDP-Specification-Image-Module5.png",
+          "view": "Body and handle from side and front"
+        },
+        {
+          "file": "data/catalog/dyson_v16_piston_animal/02.jpg",
+          "sha256": "f4f8d10eaf87d045f4778417d675bcc0735447bf10341097d0cd92bbc8e727b8",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/gallery/home/floorcare/cordless/v16-piston-animal/Web_V16-PistonAnimal_PDP_GalleryImage_10.jpg",
+          "view": "Dual-conical cleaner head detail"
+        },
+        {
+          "file": "data/catalog/dyson_v16_piston_animal/00.png",
+          "sha256": "c455368688e30691b83db86527ee378e30f18830665deb5f427d253eba2e1a43",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/vacuums/sticks/692b/primary/Web_V16-PistonAnimal_DynamicMedia_PrimaryImage.png",
+          "view": "Full machine and supplied attachments"
+        }
+      ]
+    },
+    "dyson_wash_g1": {
+      "name": "Dyson WashG1",
+      "in_catalog": true,
+      "sources": [
+        {
+          "url": "https://www.dyson.in/washg1-wet-cleaner-blue-black",
+          "title": "Dyson WashG1 wet floor cleaner",
+          "supporting_passage": "Two motorised counter-rotating microfibre rollers"
+        }
+      ],
+      "visible_features": [
+        "A long loop handle above a low body containing water tanks, with a broad rectangular two-roller cleaning head.",
+        "Compare the front/side tank layout, handle bend and roller head with the supplied manufacturer views."
+      ],
+      "variant_limits": [
+        "This is a wet floor cleaner. A generic upright wet-cleaner silhouette alone does not identify this family.",
+        "Water tanks or rollers outside the frame are unobserved, not absent.",
+        "The supplied blue/black finish is an example; colour alone must not decide identity."
+      ],
+      "images": [
+        {
+          "file": "data/catalog/dyson_wash_g1/00.png",
+          "sha256": "bd5f55d605676fea8ebc2e532413e0971024559de12b117766c18825576c42d3",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/floorcare/wet-cleaners/693/primary/693_primary.png",
+          "view": "Full machine"
+        },
+        {
+          "file": "data/catalog/dyson_wash_g1/01.png",
+          "sha256": "4e1e92b82fc359819b04e0d487e59ef3d8b96ab512134c939aba860a7362d91b",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floor-cleaners/wet/washg1/pdp/blue-black/693_PDP_specifications.png",
+          "view": "Side and front body/tank views"
+        },
+        {
+          "file": "data/catalog/dyson_wash_g1/04.jpg",
+          "sha256": "8fa7782fd6e61eef03f6fd6b17d9e9b59832c1ecae682f33c4aae324d204bc17",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floor-cleaners/wet/washg1/pdp/blue-black/gallery-images/693_PDP_gallery_images_3.jpg",
+          "view": "Lower body and tank layout in use"
+        }
+      ]
+    },
+    "dyson_v11": {
+      "name": "Dyson V11, non-catalogue lookalike",
+      "in_catalog": false,
+      "sources": [
+        {
+          "url": "https://www.dyson.com/commercial/vacuums/v11-blue",
+          "title": "Dyson V11 cordless vacuum cleaner for business",
+          "supporting_passage": "The motor, bin, and cyclone are aligned"
+        }
+      ],
+      "visible_features": [
+        "An in-line transparent bin and motor/cyclone body, finger trigger and rear display; compare the complete body against V15.",
+        "The referenced V11 LCD shows runtime and modes; an LCD alone does not distinguish it from V15."
+      ],
+      "variant_limits": [
+        "V11 variants include differing display/control implementations. A single reference is not exhaustive.",
+        "Absence of a dust-particle graph in a switched-off or unreadable display does not establish V11.",
+        "Heads and Hair screw tools are shared with other Dyson families."
+      ],
+      "images": [
+        {
+          "file": "data/reference_images_v2/v11_side_front.jpg",
+          "sha256": "dddeb2dea96182225a90605adfc57bb991f07d8ecec9f7abdd4b719c3b707fee",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/us/floorcare/npd-2023/v11/_V11_Spec-Variant_FC-Range-Reset-2023.jpg",
+          "view": "Official V11 front and side views"
+        }
+      ]
+    },
+    "dyson_gen5detect": {
+      "name": "Dyson Gen5detect, non-catalogue lookalike",
+      "in_catalog": false,
+      "sources": [
+        {
+          "url": "https://www.dyson.com/vacuum-cleaners/cordless/gen5/detect-hepa-purple-iron",
+          "title": "Dyson Gen5detect Iron/Purple",
+          "supporting_passage": "Power at the touch of a button, with no trigger to hold"
+        },
+        {
+          "url": "https://www.dyson.com/discover/innovation/new-machines/gen5detect-gen5outsize-launch",
+          "title": "Dyson Gen5detect and Gen5outsize launch",
+          "supporting_passage": "Hidden inside the wand is a built-in dusting and crevice tool"
+        }
+      ],
+      "visible_features": [
+        "An in-line transparent bin and larger motor/filter body with rear circular LCD and single-button power control.",
+        "The manufacturer describes a handle comfort pad and a built-in dusting/crevice tool exposed when the wand is removed; compare these only where visible."
+      ],
+      "variant_limits": [
+        "Gen5detect shares a rear LCD, illuminated head and Hair screw tool with other Dyson families.",
+        "Both iron/purple and blue/copper variants exist. These references cannot make filter colour an invariant.",
+        "A button alone does not distinguish Gen5detect from V12; inspect body/handle proportions and any readable machine identifier."
+      ],
+      "images": [
+        {
+          "file": "data/reference_images_v2/gen5_side_front.png",
+          "sha256": "11f78de5113d484b24995fa93f2cddb34fc5cb59b79d77a726f1b2b7428c8127",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/cord-free-vacuums/sticks/Dyson-Gen5detect/pdp/iron-purple/Specification_SV23_Core_Purple_colourway_%28Purple_Iron_Purple%29.png",
+          "view": "Official Gen5detect Iron/Purple front and side views"
+        }
+      ]
+    },
+    "shark_stratos": {
+      "name": "Shark Stratos cordless family, non-catalogue lookalike",
+      "in_catalog": false,
+      "sources": [
+        {
+          "url": "https://www.sharkninja.co.uk/shark-stratos-anti-hair-wrap-plus-cordless-vacuum-single-battery-iz400uk/IZ400UK.html",
+          "title": "Shark Stratos IZ400UK cordless vacuum",
+          "supporting_passage": "Shark Stratos Anti Hair Wrap Plus Cordless Vacuum"
+        },
+        {
+          "url": "https://assets.sharkninja.com/image/list/IZ400UK.json",
+          "title": "Shark official IZ400UK product-image manifest",
+          "supporting_passage": "storefront/products-UK/IZ400UK/IZ400UK_01"
+        }
+      ],
+      "visible_features": [
+        "The official IZ400UK reference shows an elongated dark handheld body, visible Shark wordmark, stick wand and broad floor nozzle; compare its housing shape with Dyson cyclone bodies.",
+        "Use a readable Shark name on the actual machine as brand evidence, while checking its association with that object."
+      ],
+      "variant_limits": [
+        "The manufacturer image is UK IZ400UK; US IZ862H and other Stratos variants can differ in finish and attachments.",
+        "This negative represents the Stratos family, not every Shark model. An unreadable brand name is not evidence that it is absent.",
+        "A generic head or narrow partial wand alone does not identify Shark or rule out Dyson."
+      ],
+      "images": [
+        {
+          "file": "data/reference_images_v2/shark_stratos.png",
+          "sha256": "ae0b86b040a6a060bfee53c36f6f1e21c21f5dd8d8df2f9bcac8002c436f222a",
+          "source_url": "https://assets.sharkninja.com/image/upload/v1780568255/storefront/products-UK/IZ400UK/IZ400UK_01.png",
+          "view": "Official UK Stratos whole machine and accessories"
+        }
+      ]
+    }
+  }
+}
