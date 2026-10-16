@@ -1,0 +1,54 @@
+{
+  "head": "fe7ba160f4b6dd1d6ce29e65c3f4f4f638cb09a9",
+  "python_tests": 245,
+  "test_command": "python3 -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "log_sha256": "93fefae080c9bac25ebf525e7c9a46976e5cf37e82c8122d6da6c015f44b29cc",
+  "javascript_syntax_exit_code": 0,
+  "whitespace_exit_code": 0,
+  "files": {
+    "app_server.py": "0119f301fb0990bdbeb6c1863eaca322fef160bfbf8cf99a3ae0fac36dd39468",
+    "webapp/store.py": "9c624ec13b89252e6da530d2e5e37c4e81f0d927df57f15d6b5fc875aa0ade2d",
+    "webapp/inference.py": "68058df051f0f47442ece02185a96ec37e5d8db578cf6bea045850d7ca19757e",
+    "web/index.html": "fc0b0eaf199dc4ccd7563ef599c252e1dc685373b98ff02181cb3d4cad687485",
+    "web/app.js": "68dae353418a1764275ba6d9af1dc99aa43d92f83b63a74569281c34d1abbe17",
+    "web/style.css": "f7dada96d12f5dc3c03ffa972a1143eb320d12c304962e3d17a1c3532df3eef8",
+    "tests/test_webapp.py": "f0467f7fc980e41c34f5a7b10e08087954268b5242e90dccd906c2be29bf00e8",
+    "tests/test_webapp_inference.py": "17a3fdf6fd0866aac8c3f475f3a070c04020f47c2f67b2a93df4a9da6e59715f",
+    "tests/fixtures/app_geometry_overrun.json": "9620144673dac35bf3f3ac17ca157599e289b6d0ea32f01dd0987159c290a9b5"
+  },
+  "historical_audit": {
+    "status": "PASS",
+    "frozen_inputs": 1240,
+    "changed_inputs": [],
+    "integrity": {
+      "audit_source_sha256": "f12781e670f462d6a1cf0b20e15ca72b77c7bde1cf17e86752a86d460456fbd0",
+      "config_sha256": "0c189353f417df354a36fe1ad991328c9461c9ddf30524c5a979690c3c344a41",
+      "frozen_file_count": 1240,
+      "frozen_changes": [],
+      "fresh_prior_audits": {
+        "completed23": {
+          "audit_status": "PASS",
+          "errors": [],
+          "source_sha256": "3bb23b52605edad90757640e0080b9aa2700b36a80a1f3189a74fd8726ec152b",
+          "frozen_changes": []
+        },
+        "focused_stop": {
+          "audit_status": "FAIL",
+          "errors": [
+            "A terminal error or validation failure is unresolved"
+          ],
+          "source_sha256": "6eb9e9dcea1acd09ce4dacad109ab653f5a9005965acb225c8b3c4874e420d0c",
+          "frozen_changes": []
+        }
+      },
+      "all_eleven_ledgers_physical_jobs": 596,
+      "duplicate_physical_jobs": [],
+      "requests_reconstructed": 14,
+      "original_pixel_crops_checked": 14,
+      "server_annotations_checked": 14
+    }
+  },
+  "observed_at": "2026-10-16T12:59:58.972599+00:00",
+  "loopback_permission": "HTTP tests ran with local socket permission; the earlier sandbox-denied log is retained under ignored var/."
+}

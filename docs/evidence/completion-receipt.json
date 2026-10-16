@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "claims": [
+    {
+      "id": "source-tests",
+      "level": "source",
+      "contract_sha256": "d377f2a58d2cb07dbc76211a1436dff467eb7357b4e0dbd865e1b6db7bdfc81b",
+      "context_sha256": "d3df2311bf963ea206434e576e518b07df73bd971bf587cbb964ade23547f8cf",
+      "status": "PASS",
+      "observed_at": "2026-10-16T13:00:20.830Z",
+      "expires_at": "2026-10-17T13:00:20.830Z",
+      "evidence_file": "docs/evidence/source-tests.json",
+      "evidence_sha256": "743cebf272b849dfc71b6d63c57bd2415c35a3b6986bc09ca104e82ff3a54e1d",
+      "method": "local-check"
+    },
+    {
+      "id": "browser-journey",
+      "level": "journey",
+      "contract_sha256": "d377f2a58d2cb07dbc76211a1436dff467eb7357b4e0dbd865e1b6db7bdfc81b",
+      "context_sha256": "29feb45a3748e91148af1fad8ddf5c422f8736aa7e2ae481d9db0c122cfcde8a",
+      "status": "PASS",
+      "observed_at": "2026-10-16T13:00:20.830Z",
+      "expires_at": "2026-10-17T13:00:20.830Z",
+      "evidence_file": "docs/evidence/browser-journey.json",
+      "evidence_sha256": "a8ddd2071e581f9632b80f37c1f76f78efd3d1049100ab2efa37c24b0d4de7d6",
+      "method": "direct-observation"
+    },
+    {
+      "id": "openrouter-runtime",
+      "level": "runtime",
+      "contract_sha256": "d377f2a58d2cb07dbc76211a1436dff467eb7357b4e0dbd865e1b6db7bdfc81b",
+      "context_sha256": "6c69d0dcf827ac1325d690423bab912596c6a1be79d89b25a1c1cd20be12ed9e",
+      "status": "PASS",
+      "observed_at": "2026-10-16T13:00:20.830Z",
+      "expires_at": "2026-10-17T13:00:20.830Z",
+      "evidence_file": "docs/evidence/openrouter-runtime.json",
+      "evidence_sha256": "15e3008851a3b2fa8101ab331ea5292ff782b4ced1dac77faac3ba0e194334e3",
+      "method": "direct-observation"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "actor_ref": "configured-owner",
+  "client": "local-browser",
+  "environment": "local",
+  "route": "http://127.0.0.1:8768",
+  "revision": "fe7ba160f4b6dd1d6ce29e65c3f4f4f638cb09a9",
+  "permissions": "Single local user; loopback access. No public deployment.",
+  "artifact_ref": "design-manifest-sha256:c247bec7f016f41e2c957446d98f009ab6e44d681b5fa3d1466e1097cb097fa1"
+}

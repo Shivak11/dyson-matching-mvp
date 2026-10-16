@@ -1,0 +1,168 @@
+{
+  "source_head": "72d0d9e5796fd3833a7de43ad5d1b112c61d5cf5",
+  "jobs": [
+    {
+      "id": "8996b5f841464b9193f40be197752750",
+      "mode": "verify",
+      "status": "completed",
+      "expected_product_name": "Dyson V12 Detect Slim",
+      "cost_inr": 5.162775,
+      "matches": [
+        {
+          "object_id": "o1",
+          "box_2d": [
+            43,
+            213,
+            915,
+            668
+          ],
+          "status": "match",
+          "product_id": "dyson_v8_absolute",
+          "product_name": "Dyson V8 Absolute family",
+          "confidence": "High",
+          "evidence": [
+            "Handheld cordless body with cylindrical clear bin suspended perpendicularly below radial cyclones and motor housing.",
+            "Red pull lever on top of cyclone assembly to lift the cyclone shroud and open the bin base.",
+            "Purple cylindrical rear post-motor filter cap with longitudinal fluting seated at the rear of the motor housing.",
+            "Direct-drive floor cleaner head with rotating motorized brush roller."
+          ],
+          "missing_evidence": [],
+          "alternatives": [
+            {
+              "id": "dyson_v8_absolute",
+              "name": "Dyson V8 Absolute family"
+            },
+            {
+              "id": "dyson_v12_detect_slim",
+              "name": "Dyson V12 Detect Slim"
+            }
+          ],
+          "reference_image_url": "/media/9d3c481927f94933930a14a15436b9f4",
+          "verification": "rejected",
+          "reference_images": [
+            {
+              "id": "9d3c481927f94933930a14a15436b9f4",
+              "url": "/media/9d3c481927f94933930a14a15436b9f4",
+              "filename": "00.png"
+            },
+            {
+              "id": "54c081f4cdc54711ac21f46ee4a0503c",
+              "url": "/media/54c081f4cdc54711ac21f46ee4a0503c",
+              "filename": "01.png"
+            },
+            {
+              "id": "8e1b952c2adf40f2885a3f6fe25aeae6",
+              "url": "/media/8e1b952c2adf40f2885a3f6fe25aeae6",
+              "filename": "05.jpg"
+            },
+            {
+              "id": "2d4e67e643494cf3bb5c525ebbc01922",
+              "url": "/media/2d4e67e643494cf3bb5c525ebbc01922",
+              "filename": "03.jpg"
+            }
+          ],
+          "source_url": "https://www.dyson.in/dyson-v8-absolute-vacuum"
+        }
+      ]
+    },
+    {
+      "id": "04521c353db642058c2f41afa34a3c03",
+      "mode": "identify",
+      "status": "completed",
+      "expected_product_name": null,
+      "cost_inr": 6.948,
+      "matches": [
+        {
+          "object_id": "o1",
+          "box_2d": [
+            45,
+            214,
+            915,
+            667
+          ],
+          "status": "match",
+          "product_id": "dyson_v8_absolute",
+          "product_name": "Dyson V8 Absolute family",
+          "confidence": "High",
+          "evidence": [
+            "Query shows perpendicular bin positioned below the cyclone assembly and handle, matching V8 body layout.",
+            "Query shows red lift lever mounted on top of the cyclone shroud, matching the SV10/V8 bin emptying release."
+          ],
+          "missing_evidence": [
+            "A detail region extended outside the detected machine and was excluded from support."
+          ],
+          "alternatives": [
+            {
+              "id": "dyson_v8_absolute",
+              "name": "Dyson V8 Absolute family"
+            },
+            {
+              "id": "dyson_v15_detect",
+              "name": "Dyson V15 Detect"
+            }
+          ],
+          "reference_image_url": "/media/9d3c481927f94933930a14a15436b9f4",
+          "verification": null,
+          "reference_images": [
+            {
+              "id": "9d3c481927f94933930a14a15436b9f4",
+              "url": "/media/9d3c481927f94933930a14a15436b9f4",
+              "filename": "00.png"
+            },
+            {
+              "id": "54c081f4cdc54711ac21f46ee4a0503c",
+              "url": "/media/54c081f4cdc54711ac21f46ee4a0503c",
+              "filename": "01.png"
+            },
+            {
+              "id": "8e1b952c2adf40f2885a3f6fe25aeae6",
+              "url": "/media/8e1b952c2adf40f2885a3f6fe25aeae6",
+              "filename": "05.jpg"
+            },
+            {
+              "id": "2d4e67e643494cf3bb5c525ebbc01922",
+              "url": "/media/2d4e67e643494cf3bb5c525ebbc01922",
+              "filename": "03.jpg"
+            }
+          ],
+          "source_url": "https://www.dyson.in/dyson-v8-absolute-vacuum"
+        }
+      ],
+      "recovery": "Offline revalidation excluded one out-of-object detail; original failure and paid response are preserved."
+    }
+  ],
+  "physical_requests": 4,
+  "rate_limit_retries": 0,
+  "minimum_finish_to_start_gap_seconds": 15.005728960037231,
+  "pending_requests": 0,
+  "runtime_guard_inr": 12.110775,
+  "remaining_stage_guard_inr": 185.92098090000002,
+  "runtime_allowance_inr": 100,
+  "first_validation_failure_recovered_offline": true,
+  "source_labels_supplied_to_model": false,
+  "providers": [
+    "Google AI Studio"
+  ],
+  "model_responses": [
+    {
+      "finish_reason": "stop",
+      "model": "google/gemini-3.7-flash",
+      "cost_usd": 0.005034
+    },
+    {
+      "finish_reason": "stop",
+      "model": "google/gemini-3.7-flash",
+      "cost_usd": 0.04659375
+    },
+    {
+      "finish_reason": "stop",
+      "model": "google/gemini-3.7-flash",
+      "cost_usd": 0.0051015
+    },
+    {
+      "finish_reason": "stop",
+      "model": "google/gemini-3.7-flash",
+      "cost_usd": 0.0643785
+    }
+  ]
+}

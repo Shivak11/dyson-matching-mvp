@@ -1,0 +1,25 @@
+{
+  "revision": "fe7ba160f4b6dd1d6ce29e65c3f4f4f638cb09a9",
+  "manifest_sha256": "c247bec7f016f41e2c957446d98f009ab6e44d681b5fa3d1466e1097cb097fa1",
+  "verdict": "UNPROVED",
+  "observed_paths": "PASS",
+  "remaining_observed_defects": 0,
+  "resolved_findings": [
+    {
+      "id": "M1",
+      "description": "Narrow table sr-only absolute header escaped overflow container",
+      "recheck": "PASS",
+      "document_width": 390
+    }
+  ],
+  "unproved": [
+    "fresh paid Run lifecycle",
+    "catalogue Save",
+    "paid Retry",
+    "server-restart interruption interaction"
+  ],
+  "paid_calls_by_reviewer": 0,
+  "repository_writes_by_reviewer": 0,
+  "owner_acceptance": "not_assessed",
+  "review_path": "/tmp/dyson-app-independent-review/review.md"
+}

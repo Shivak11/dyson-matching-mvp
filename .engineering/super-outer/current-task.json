@@ -99,5 +99,6 @@
     "path": ".engineering/super-outer/intent/local-app.md",
     "version": "1",
     "sha256": "f709d757017b0e59ac6d80dabf2a19abd68c8785acfe97597e9f2d9f6f0a0421"
-  }
+  },
+  "completion_evidence": "docs/evidence/completion-receipt.json"
 }

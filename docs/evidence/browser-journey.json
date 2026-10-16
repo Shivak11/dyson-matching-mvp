@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-10-16T12:58:23.330986+00:00",
+  "source_head": "fe7ba160f4b6dd1d6ce29e65c3f4f4f638cb09a9",
+  "route": "http://127.0.0.1:8768",
+  "browser_session": "dyson-live",
+  "paid_calls_during_browser_checks": 0,
+  "desktop_viewport": [
+    1440,
+    1000
+  ],
+  "narrow_viewport": [
+    390,
+    844
+  ],
+  "checks": [
+    "Identify is the default; Verify requires an expected catalogue product.",
+    "An original source-backed V8 manufacturer image was appended and survived reload and server restart.",
+    "Queued jobs and completed results survived browser reload.",
+    "Live results show store photograph, object box, snapshot reference, qualitative confidence and evidence.",
+    "Verify expected V12 on the V8 photograph displays Does not match expected model.",
+    "History table scrollWidth 645, container width 356; internal scrollLeft 100 while page scrollWidth 390 and scrollX zero.",
+    "Report loads all 58 embedded images; filters show five confidently wrong and 15 unsure cases.",
+    "Final table container fix retained accessible hidden labels."
+  ],
+  "fixture_checks": {
+    "count": 20,
+    "uses_paid_models": false,
+    "source": "/tmp/dyson-frontend-browser-evidence.json"
+  },
+  "screenshots": {
+    "app-narrow.png": "a8cdd4a7966ccb0a3a167f22aebab7b92a984a1a425e14e128ee362f27079e26",
+    "history-narrow.png": "dd2d1b7914756e7acf0e1c1a9ed12a41246d02fa3ee24328c9420df415d2d8f4",
+    "app-desktop.png": "c7917f1abf511db6d704b99fdf8e09148421bb0c4f9e0648b5e66276a85d3109"
+  },
+  "limits": [
+    "Two live jobs use one source-labelled public photograph; no new accuracy percentage is established."
+  ]
+}

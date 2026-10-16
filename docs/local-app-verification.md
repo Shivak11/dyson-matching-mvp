@@ -16,21 +16,23 @@ Twenty frontend fixture checks passed before real integration. The orchestrator 
 
 The portable report embeds all 58 photographs. Desktop 1440 by 1000 and narrow 390 by 844 were rendered. All embedded images load. Its filters show exactly five confidently wrong and 15 unsure cases. The report separates the selected recovery experiments from the complete 58-photo benchmark.
 
+A fresh read-only reviewer independently inspected desktop and narrow screens, saved-result reconstruction, catalogue inspection, local preview, multi-machine selection, History, report filtering and browser offline/recovery. The reviewer found one narrow table overflow defect. A shared positioning fix passed independent rechecks on History, Catalogue and Saved evaluation, retaining accessible column labels. No observed defect remains. The review's overall verdict is UNPROVED because its read-only assignment prohibited fresh paid submission, saving, paid retry and restart interruption. The orchestrator separately exercised live submission and catalogue saving; offline tests cover retries and interrupted jobs. A real paid retry was not exercised. The bounded review and exact source revision are retained in docs/evidence/.
+
 ## Live OpenRouter verification
 
 The first uploaded photo generated two complete paid responses, detection and comparison. The model returned V8, while one of three supporting detail regions extended one normalized coordinate unit outside the detected machine. Initial strict validation rejected the whole response. The original error, complete raw response and charge remain preserved.
 
 The repair marks that detail unverified and excludes it from support. The two independently located body/bin comparisons remain valid. A recorded-input regression proves the original response is unchanged. Offline replay recovered the V8 result without another call or charge. Source labels were not used in the model prompt or gate.
 
-A second, deliberate live run tests an incorrect expected V12 model on the same V8 photograph. Its outcome is pending while this record is drafted. This is a workflow check, not a new accuracy benchmark. No further paid calls are planned beyond this run.
+A second, deliberate live run selected V12 as the expected model on the same V8 photograph. It completed normally, identified V8 with High confidence and rejected the expected V12. Both jobs remain inspectable in History. These are two workflow checks on one photograph, not a new accuracy benchmark. No further paid calls are planned.
 
-Initial live run guard cost: INR 6.948; remaining stage guard: INR 191.0837559. The app has an aggregate INR 100 allowance, counts uncertain charges, uses one worker, waits at least 15 seconds after each response and permits bounded rate-limit retries without fallback. The original experiment budget and reserves are preserved.
+The two jobs made four physical requests, with zero retries and zero pending requests. The minimum measured finish-to-next-start pause was 15.0057 seconds. Their total guard cost is INR 12.110775, leaving INR 87.889225 of the app's INR 100 allowance and INR 185.9209809 of the authorised stage budget. The app counts uncertain charges, uses one worker and permits bounded rate-limit retries without fallback. The original experiment budget and reserves are preserved. Sanitised response and accounting evidence is in docs/evidence/openrouter-runtime.json.
 
 ## Delivery and remaining proof
 
 Default port 8766 was already occupied by other listeners. They were left untouched; the app uses 127.0.0.1:8768. The completed result and catalogue material survived a graceful server restart. Runtime databases, uploads, responses and keys are ignored by Git. A history scan found no actual credential values or credential patterns before the first push.
 
-The private repository is Shivak11/dyson-matching-mvp, branch codex/local-app. The earlier source and report were pushed; final app push and independent rendered review remain pending while verification continues. The global JaipuriaAI account was left unchanged; push credentials were explicitly scoped to Shivak11.
+The private repository is Shivak11/dyson-matching-mvp, branch codex/local-app. Delivery uses that feature branch and checks its remote commit against the local commit. The global JaipuriaAI account was left unchanged; push credentials were explicitly scoped to Shivak11. Source main was not merged or rewritten.
 
 Owner acceptance, client-store holdout accuracy, cloud deployment and remote CI are unproved. The delivered scope is local. Original uploaded brochure PDFs are stored without extraction; entered brochure text is used for matching.
 

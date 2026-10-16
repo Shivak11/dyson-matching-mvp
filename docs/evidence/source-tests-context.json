@@ -1,0 +1,9 @@
+{
+  "actor_ref": "configured-owner",
+  "client": "python",
+  "environment": "local",
+  "route": "local regression suite",
+  "revision": "fe7ba160f4b6dd1d6ce29e65c3f4f4f638cb09a9",
+  "permissions": "Single local user; loopback access. No public deployment.",
+  "artifact_ref": "local-app-source@fe7ba160f4b6dd1d6ce29e65c3f4f4f638cb09a9"
+}
