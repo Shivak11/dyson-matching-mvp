@@ -85,6 +85,13 @@ class EvidenceProtocolTests(unittest.TestCase):
         obj['observations'][0]['box_2d']=[800,800,900,900]
         with self.assertRaises(ValueError):validate_observation({'objects':[obj]})
 
+    def test_fractional_confidence_is_not_silently_demoted_or_rescaled(self):
+        raw=self.result();raw['decision']['confidence']=.95
+        with self.assertRaises(ValueError):validate_match_result(raw,['a','b'])
+        raw['decision']['confidence']=95
+        self.assertEqual(validate_match_result(raw,['a','b'])['decision']['status'],'match')
+        self.assertIn('integer percentage from 0 to 100',build_match_prompt({},['a','b'],{'a':{},'b':{}}))
+
     def test_hidden_feature_has_no_visible_region(self):
         obj = self.obj(); observation = obj['observations'][0]
         observation.update(visible=False, detail='Controls are outside the frame.', box_2d=None)

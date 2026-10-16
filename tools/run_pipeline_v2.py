@@ -15,8 +15,8 @@ from evidence_v2 import (OBSERVE_PROMPT, validate_observation, select_candidate_
                          build_match_prompt, build_refine_prompt, needs_refinement,
                          validate_match_result)
 
-OUT = ROOT / 'out/pipeline_v2'
-CONFIG = ROOT / 'data/pipeline_v2_config.json'
+OUT = ROOT / 'out/pipeline_v2_full'
+CONFIG = ROOT / 'data/pipeline_v2_full_config.json'
 
 
 def verify_frozen(config):
@@ -117,7 +117,7 @@ def run_photo(client, config, photo, cards, plates, old_detections, old_shortlis
     directory.mkdir(parents=True, exist_ok=True)
     scene = directory / 'scene.jpg'
     prepare_image(ROOT/photo['file'], scene, 2048)
-    observations = generate_validated(client, 'v2:observe:'+image_id, OBSERVE_PROMPT,
+    observations = generate_validated(client, 'v2full:observe:'+image_id, OBSERVE_PROMPT,
                                       [('WHOLE SCENE', scene)], validate_observation)
     save(directory/'observations.json', observations)
     targets = observations['machines']
@@ -133,7 +133,7 @@ def run_photo(client, config, photo, cards, plates, old_detections, old_shortlis
     images = [('WHOLE SCENE', scene)] + [('TARGET '+key, ROOT/value['file']) for key,value in crops.items()]
     supplied = sorted({p for values in candidates.values() for p in values})
     images += [('CATALOGUE '+p, ROOT/plates[p]['file']) for p in supplied]
-    initial = generate_validated(client, 'v2:identify:'+image_id,
+    initial = generate_validated(client, 'v2full:identify:'+image_id,
                                 batch_prompt(targets, candidates, cards, expected=expected), images,
                                 lambda raw: validate_batch(raw, targets, candidates, config['confidence_threshold']))
     save(directory/'initial.json', initial)
@@ -160,7 +160,7 @@ def run_photo(client, config, photo, cards, plates, old_detections, old_shortlis
             reference_details[product] = prepare_image(source,destination,1536)
             detail_images.append(('CATALOGUE '+product+' ORIGINAL REFERENCE DETAIL',destination))
         save(directory/'refinement_inputs.json', {'crops':detail_records,'expanded_candidates':expanded,'original_reference_details':reference_details})
-        refined = generate_validated(client, 'v2:refine:'+image_id,
+        refined = generate_validated(client, 'v2full:refine:'+image_id,
                                      batch_prompt(refine_targets, expanded, cards, initial=initial, expected=expected), detail_images,
                                      lambda raw: validate_batch(raw, refine_targets, expanded, config['confidence_threshold']))
         save(directory/'refined.json', refined)
