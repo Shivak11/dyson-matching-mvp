@@ -1,0 +1,11 @@
+{
+  "approved_at_utc": "2026-10-16T06:09:04.703332+00:00",
+  "owner_instruction": "increase the spending i authorize by 200 bucks more",
+  "continuation_instruction": "lets complete this",
+  "stage_ceiling_before_inr": 400,
+  "additional_authorized_inr": 200,
+  "stage_ceiling_after_inr": 600,
+  "overall_ceiling_inr": 2000,
+  "model_and_request_settings_unchanged": true,
+  "note": "The active frozen run retains its stricter original guard. If more allowance is needed, preserve its ledger and activate a separately frozen continuation ledger; never mutate paid-call configuration or reset spending."
+}
