@@ -1,0 +1,370 @@
+{
+  "identity": {
+    "intent_path": "/Users/shivakakkar/Python Projects/Multiplier-dyson/app/.engineering/super-outer/intent/private-testing.md",
+    "intent_version": "1",
+    "intent_sha256": "2af71e48f3cef34844d761db58c62424d6abc657ada997c8220c51b46b7f9a76",
+    "package_path": "/Users/shivakakkar/Python Projects/Multiplier-dyson/app/.engineering/super-outer/design/private-testing/v1",
+    "package_version": "1",
+    "manifest_sha256": "4e1cc91ce6c78aef317376c5fbab5118fa16b9d5c80217bc856c9548a25b9075",
+    "route": "http://127.0.0.1:8768",
+    "revision": "bd3339b002e5f934286e08585d59c44089099501",
+    "initial_revision": "706d993e61eb6da32c8d0d740384555bef8d22d4",
+    "environment": "Supplied loopback server with two previously completed development-photo jobs; no model calls or server mutations initiated by reviewer.",
+    "client": "Chromium via agent-browser 0.23.0, isolated private-independent session",
+    "dimensions": [
+      [
+        1440,
+        1000
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "newer_package_versions": [],
+    "frame_hashes_verified": 24,
+    "final_archive_sha256": "32959be2f2f5eea9efb9de6b157baa57d9e833b7350825bc5cf7a2fd664a0002",
+    "tracked_changes_during_review": true,
+    "foreign_untracked_at_end": [
+      " M HANDOVER.md",
+      "?? docs/evidence/private-testing/",
+      "?? docs/private-testing-verification.md"
+    ],
+    "tracked_change_paths_at_end": [
+      "HANDOVER.md"
+    ],
+    "reviewer_repository_edits": false
+  },
+  "method": {
+    "assessment": "both",
+    "rendered": true,
+    "browser": "agent-browser 0.23.0",
+    "degraded": "Single-context review; no isolated A/B reviewers. A was recorded before formal B, but keyboard/overflow reconnaissance preceded A.",
+    "browser_ladder": "Initial agent-browser socket denied in sandbox; escalated local socket succeeded. IAB visible tab unsupported for subagent and Chrome connector unavailable; no install.",
+    "builder_notes": "Orchestrator and builder claims were present; not used as evidence.",
+    "fixture_attempt": "Browser-only bootstrap route fixture did not take effect; screenshot 18 is still the real completed result and proves no failed-state claim.",
+    "closed_session": true
+  },
+  "intent_claims": [
+    {
+      "claim": "Preview a photograph before explicit Run; Identify default; Verify requires a claim.",
+      "status": "PASS",
+      "evidence": [
+        "preview-journey.txt",
+        "07-selected-desktop.png",
+        "08-verify-desktop.png",
+        "09-selected-narrow.png"
+      ]
+    },
+    {
+      "claim": "Saved single-object result has a selectable physical-machine box, manufacturer reference, written qualitative confidence and supporting/missing evidence.",
+      "status": "PASS",
+      "evidence": [
+        "02-verify-result-desktop.png",
+        "11-result-narrow.png",
+        "final-browser.txt"
+      ]
+    },
+    {
+      "claim": "Verify preserves identity separately from the claimed model.",
+      "status": "PASS",
+      "evidence": [
+        "02-verify-result-desktop.png",
+        "8996b5f841464b9193f40be197752750.json"
+      ],
+      "observed": "V8 Absolute family identity; V12 Detect Slim claim rejected."
+    },
+    {
+      "claim": "Saved results survive leaving for Catalogue/History and returning.",
+      "status": "PASS",
+      "evidence": [
+        "desktop-journey.txt",
+        "04-history-desktop.png",
+        "05-identify-desktop.png",
+        "06-catalogue-desktop.png"
+      ]
+    },
+    {
+      "claim": "Technical details distinguish requested and actual model/provider, charged cost and request limit, retaining unknown legacy times.",
+      "status": "PASS",
+      "evidence": [
+        "14-final-costs-narrow.png",
+        "20-final-details-desktop.png",
+        "final-browser.txt",
+        "private-tests-escalated.txt"
+      ]
+    },
+    {
+      "claim": "JSON/CSV downloads use immutable saved envelopes and exclude private fields.",
+      "status": "PASS",
+      "evidence": [
+        "get-api-evidence.json",
+        "browser-prediction.json",
+        "browser-prediction.csv",
+        "private-tests-escalated.txt"
+      ],
+      "scope": "Real repeated GET/download bytes; catalogue/config/restart stability and formula escaping independently tested on disposable fixtures."
+    },
+    {
+      "claim": "Historical evaluation/report UI, endpoints, media and experiment-runner dependencies are excluded.",
+      "status": "PASS",
+      "evidence": [
+        "get-api-evidence.json",
+        "browser-requests.txt",
+        "final-archive-audit.json",
+        "private-tests-escalated.txt"
+      ]
+    },
+    {
+      "claim": "Original matching protocol and fresh request/image preparation are preserved.",
+      "status": "PASS",
+      "evidence": [
+        "private-tests-escalated.txt"
+      ],
+      "scope": "Offline source-byte/AST and captured-request/image parity; no new accuracy measurement."
+    },
+    {
+      "claim": "Narrow layout, keyboard summary/selection/focus and contained tables remain usable.",
+      "status": "PASS",
+      "evidence": [
+        "narrow-journey-corrected.txt",
+        "mechanical-actions.txt",
+        "11-result-narrow.png",
+        "14-final-costs-narrow.png",
+        "15-keyboard-scroll-narrow.png",
+        "contrast-audit.json"
+      ]
+    },
+    {
+      "claim": "Connection/download errors preserve the selected result and describe recovery.",
+      "status": "PASS",
+      "evidence": [
+        "17-offline-narrow.png",
+        "browser-requests.txt"
+      ]
+    },
+    {
+      "claim": "Fresh paid Run reaches real queued/running/completed states and can be left/returned to.",
+      "status": "UNPROVED",
+      "evidence": [],
+      "reason": "Run and Retry excluded by assignment; only real legacy completed records were available."
+    },
+    {
+      "claim": "Multiple physical objects switch reference, evidence and per-object retake guidance together; not-sure/outside/failed states render from real persisted jobs.",
+      "status": "UNPROVED",
+      "evidence": [
+        "private-tests-escalated.txt"
+      ],
+      "reason": "Available real records each contain one matched object without retake guidance; offline tests establish backend behaviour only."
+    }
+  ],
+  "frame_comparisons": [
+    {
+      "frame": "frames/01-result-desktop.png",
+      "built_screen": "19-final-result-desktop.png",
+      "difference_and_decision": "Comparison/control hierarchy retained; real saved photo, one object, manufacturer references, filename and provenance replace simulated values; fixture tools omitted (o1 and manifest.simulated)."
+    },
+    {
+      "frame": "frames/02-result-guidance-desktop.png",
+      "built_screen": "02-verify-result-desktop.png",
+      "difference_and_decision": "Comparison/control hierarchy retained; real saved photo, one object, manufacturer references, filename and provenance replace simulated values; fixture tools omitted (o1 and manifest.simulated)."
+    },
+    {
+      "frame": "frames/03-details-desktop.png",
+      "built_screen": "20-final-details-desktop.png",
+      "difference_and_decision": "Native expandable details and internal request table retained (d2). API-contract labels distinguish requested AI model, actual provider and request limit; unknown legacy timing remains Not recorded."
+    },
+    {
+      "frame": "frames/04-empty-desktop.png",
+      "built_screen": "01-empty-desktop.png",
+      "difference_and_decision": "Comparison/control hierarchy retained; real saved photo, one object, manufacturer references, filename and provenance replace simulated values; fixture tools omitted (o1 and manifest.simulated)."
+    },
+    {
+      "frame": "frames/05-running-desktop.png",
+      "built_screen": null,
+      "difference_and_decision": "No matching real state available; interaction conformance remains UNPROVED."
+    },
+    {
+      "frame": "frames/06-error-desktop.png",
+      "built_screen": null,
+      "difference_and_decision": "Source uses explicit Retry as a new run instead of prototype review-first action. Allowed by committed docs/PLAN-private-testing-app.md, final 16 October clarification; actual failed-state rendering remains UNPROVED."
+    },
+    {
+      "frame": "frames/07-history-desktop.png",
+      "built_screen": "04-history-desktop.png",
+      "difference_and_decision": "History contains actual saved rows and row-local Open run/JSON/CSV actions (d1); table scroll is internal. Prototype has additional synthetic running/failed rows absent from real records."
+    },
+    {
+      "frame": "frames/08-selected-desktop.png",
+      "built_screen": "07-selected-desktop.png",
+      "difference_and_decision": "Existing pending-photo strip/Remove photo controls retained (o1); Identify/Verify and claim gating exercised. Actual fixture photo selected locally without Run."
+    },
+    {
+      "frame": "frames/09-verify-desktop.png",
+      "built_screen": "08-verify-desktop.png",
+      "difference_and_decision": "Existing pending-photo strip/Remove photo controls retained (o1); Identify/Verify and claim gating exercised. Actual fixture photo selected locally without Run."
+    },
+    {
+      "frame": "frames/10-result-narrow.png",
+      "built_screen": "11-result-narrow.png",
+      "difference_and_decision": "Comparison/control hierarchy retained; real saved photo, one object, manufacturer references, filename and provenance replace simulated values; fixture tools omitted (o1 and manifest.simulated)."
+    },
+    {
+      "frame": "frames/11-result-guidance-narrow.png",
+      "built_screen": null,
+      "difference_and_decision": "No matching real state available; interaction conformance remains UNPROVED."
+    },
+    {
+      "frame": "frames/12-details-narrow.png",
+      "built_screen": "14-final-costs-narrow.png",
+      "difference_and_decision": "Native expandable details and internal request table retained (d2). API-contract labels distinguish requested AI model, actual provider and request limit; unknown legacy timing remains Not recorded."
+    },
+    {
+      "frame": "frames/13-empty-narrow.png",
+      "built_screen": null,
+      "difference_and_decision": "No matching real state available; interaction conformance remains UNPROVED."
+    },
+    {
+      "frame": "frames/14-running-narrow.png",
+      "built_screen": null,
+      "difference_and_decision": "No matching real state available; interaction conformance remains UNPROVED."
+    },
+    {
+      "frame": "frames/15-error-narrow.png",
+      "built_screen": null,
+      "difference_and_decision": "Source uses explicit Retry as a new run instead of prototype review-first action. Allowed by committed docs/PLAN-private-testing-app.md, final 16 October clarification; actual failed-state rendering remains UNPROVED."
+    },
+    {
+      "frame": "frames/16-history-narrow.png",
+      "built_screen": "10-history-narrow.png",
+      "difference_and_decision": "History contains actual saved rows and row-local Open run/JSON/CSV actions (d1); table scroll is internal. Prototype has additional synthetic running/failed rows absent from real records."
+    },
+    {
+      "frame": "frames/17-selected-narrow.png",
+      "built_screen": "09-selected-narrow.png",
+      "difference_and_decision": "Existing pending-photo strip/Remove photo controls retained (o1); Identify/Verify and claim gating exercised. Actual fixture photo selected locally without Run."
+    },
+    {
+      "frame": "frames/18-verify-narrow.png",
+      "built_screen": "09-selected-narrow.png",
+      "difference_and_decision": "Existing pending-photo strip/Remove photo controls retained (o1); Identify/Verify and claim gating exercised. Actual fixture photo selected locally without Run."
+    },
+    {
+      "frame": "frames/19-not-sure-narrow.png",
+      "built_screen": null,
+      "difference_and_decision": "No matching real state available; interaction conformance remains UNPROVED."
+    },
+    {
+      "frame": "frames/20-outside-desktop.png",
+      "built_screen": null,
+      "difference_and_decision": "No matching real state available; interaction conformance remains UNPROVED."
+    },
+    {
+      "frame": "frames/21-keyboard-reduced-motion.png",
+      "built_screen": "15-keyboard-scroll-narrow.png",
+      "difference_and_decision": "Comparison/control hierarchy retained; real saved photo, one object, manufacturer references, filename and provenance replace simulated values; fixture tools omitted (o1 and manifest.simulated)."
+    },
+    {
+      "frame": "frames/22-details-costs-narrow.png",
+      "built_screen": "14-final-costs-narrow.png",
+      "difference_and_decision": "Native expandable details and internal request table retained (d2). API-contract labels distinguish requested AI model, actual provider and request limit; unknown legacy timing remains Not recorded."
+    },
+    {
+      "frame": "frames/23-history-actions-narrow.png",
+      "built_screen": "10-history-narrow.png",
+      "difference_and_decision": "History contains actual saved rows and row-local Open run/JSON/CSV actions (d1); table scroll is internal. Prototype has additional synthetic running/failed rows absent from real records."
+    },
+    {
+      "frame": "frames/24-verify-result-desktop.png",
+      "built_screen": "02-verify-result-desktop.png",
+      "difference_and_decision": "Comparison/control hierarchy retained; real saved photo, one object, manufacturer references, filename and provenance replace simulated values; fixture tools omitted (o1 and manifest.simulated)."
+    }
+  ],
+  "mechanical_findings": [
+    {
+      "location": "390px result/details/preview and 1440px result",
+      "observation": "No measured horizontal document overflow; images loaded. Request table client width 326px and final scroll width 913px; rightmost columns reached by container scroll. ArrowLeft moved focused table from 587px to 547px while visible; blue 2px focus outline present.",
+      "affects": "Narrow layout and keyboard access."
+    },
+    {
+      "location": "Run details and machine selector",
+      "observation": "Space/Enter toggles native summary with focus retained. Selecting the saved object leaves details expanded and focuses machine selector. Polling did not close details.",
+      "affects": "Keyboard and expansion retention."
+    },
+    {
+      "location": "Rendered text",
+      "observation": "Sampled computed text contrast ranges from 4.78:1 for muted canvas text to 15.75:1 for primary white-surface text; green confidence 5.88:1 and blue export actions 6.64:1.",
+      "affects": "Readability; sampled colours only."
+    },
+    {
+      "location": "Verify expected-model select and Catalogue",
+      "observation": "Six catalogue choices use a labelled native select; Catalogue presents manufacturer product entries. The main photograph/reference comparison, physical-machine boxes and model-family evidence are specific to the requested task. An unrelated non-photo product would require content and interaction changes.",
+      "affects": "More-than-four choices and unrelated-product test."
+    },
+    {
+      "location": "Review coverage",
+      "observation": "No observed defect in exercised read-only scope. Real paid progress, multiple-object retake switching, real failed/not-sure/outside records, reduced-motion running animation and screen-reader operation remain unproved.",
+      "affects": "Full intent conformance."
+    },
+    {
+      "location": "Repository status at final read",
+      "observation": "HANDOVER.md became modified by concurrent work after the browser closed; no product-code file changed and reviewer made no repository edit.",
+      "affects": "Checkout evidence only."
+    }
+  ],
+  "source_tests": "19 independently run private-app tests passed. Initial sandbox run had two loopback bind permission errors; rerun with loopback permission passed all 19.",
+  "findings": [],
+  "verdict": "UNPROVED",
+  "verdict_reason": "No defect observed in exercised read-only scope, but the complete fresh paid journey and multi-object retake states were not operated.",
+  "observer": "No new observer observation logged: this read-only review permits evidence only in scratch.",
+  "evidence_files": [
+    "01-empty-desktop.png",
+    "02-verify-result-desktop.png",
+    "03-details-desktop.png",
+    "04-history-desktop.png",
+    "04521c353db642058c2f41afa34a3c03.csv",
+    "04521c353db642058c2f41afa34a3c03.json",
+    "05-identify-desktop.png",
+    "06-catalogue-desktop.png",
+    "07-selected-desktop.png",
+    "08-verify-desktop.png",
+    "09-selected-narrow.png",
+    "0b885b22-2f0a-4697-9b98-b96624977782",
+    "10-history-narrow.png",
+    "11-result-narrow.png",
+    "12-details-narrow.png",
+    "13-costs-narrow.png",
+    "14-final-costs-narrow.png",
+    "15-keyboard-scroll-narrow.png",
+    "16-download-error-narrow.png",
+    "17-offline-narrow.png",
+    "18-failed-fixture-narrow.png",
+    "19-final-result-desktop.png",
+    "20-final-details-desktop.png",
+    "8996b5f841464b9193f40be197752750.csv",
+    "8996b5f841464b9193f40be197752750.json",
+    "archive-audit.json",
+    "browser-prediction.csv",
+    "browser-prediction.json",
+    "browser-requests.txt",
+    "contrast-audit.json",
+    "design-assessment.json",
+    "desktop-journey.txt",
+    "evidence-audit.json",
+    "failed-browser-fixture.json",
+    "failed-fixture-snapshot.txt",
+    "final-archive-audit.json",
+    "final-browser.txt",
+    "get-api-evidence.json",
+    "mechanical-actions.txt",
+    "narrow-journey-corrected.txt",
+    "narrow-journey.txt",
+    "package-contact-sheet.png",
+    "preview-journey.txt",
+    "private-tests-escalated.txt",
+    "private-tests.txt",
+    "xcrun_db",
+    "review.md",
+    "summary.json"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "test_only": true,
+  "checks": [
+    "Request limit header",
+    "Eight plain cost basis labels",
+    "Null, unknown and prototype-key fallback",
+    "Upper bound numeric value preserved",
+    "No page errors or document overflow"
+  ],
+  "screenshot": "/tmp/dyson-private-frontend/frames/20-cost-copy-desktop.png",
+  "state": {
+    "width": 1440,
+    "height": 1000,
+    "visibility": "visible",
+    "overflow": false
+  },
+  "app_js_sha256": "f4ecb32d623ac32134a8c53de22c3270043836c9d7d897aa69b8fb0d8857f32f"
+}

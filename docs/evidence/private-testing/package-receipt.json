@@ -1,0 +1,37 @@
+{
+  "source_head": "bd3339b002e5f934286e08585d59c44089099501",
+  "code_files": {
+    "app_server.py": "15c2566389cd3626bef5e727906b58d31791ed1838def8b2d71c0813e1427f07",
+    "requirements.txt": "afef94cb54188a888fb6b5b25f2997dc269414d0f5523f00b734ed9b0e3020ad",
+    "web/index.html": "c35b2ffab47379c3ea25ed01f8c3bc057b9ad30cb32e0faa3de5e272d7519830",
+    "web/app.js": "f4ecb32d623ac32134a8c53de22c3270043836c9d7d897aa69b8fb0d8857f32f",
+    "web/style.css": "da18cd510a48ae12d8212dcf529afe39c078a48392cc5cf19bb376780dd0fb50",
+    "webapp/__init__.py": "ef3260f9a20de94831a06c04184289e66918966f5650f78bbd6fcc854bd6bbb6",
+    "webapp/inference.py": "980c51b629e847d4ceeefa73cb4f966897105c87f6c3bd1042fc7ba120c6d724",
+    "webapp/predictions.py": "15520618f93ebefed41828e4d510279d1331c412fbd25d47b38980066c277336",
+    "webapp/protocol.py": "01a072d9fb40a071a0b89eddf17833b872da3d53075a85bdf4e87df25ae41ee6",
+    "webapp/store.py": "3d6671d317202501e1969658db37570a8cd2ae495cb2d502ec1ca23dabb00c12",
+    "webapp/transport.py": "78ad714117e62c09bda28f88cd92fccbed4a662fc3277d079134b5d78855f2de"
+  },
+  "archive_sha256": "32959be2f2f5eea9efb9de6b157baa57d9e833b7350825bc5cf7a2fd664a0002",
+  "archive_files": [
+    "app_server.py",
+    "requirements.txt",
+    "web/index.html",
+    "web/app.js",
+    "web/style.css",
+    "webapp/__init__.py",
+    "webapp/inference.py",
+    "webapp/predictions.py",
+    "webapp/protocol.py",
+    "webapp/store.py",
+    "webapp/transport.py"
+  ],
+  "data_in_archive": false,
+  "credentials_in_archive": false,
+  "local_inputs": {
+    "manufacturer_images": 21,
+    "seed_sha256": "c8a7252370c1dff5c3b2147af94dd48146e6dd03bb6043c0f355e81cb1669bde",
+    "runtime_config_sha256": "7a238c2ebd3a8514a9b9dae6422f04ca3e36e4820f7c57a027694ccc392059ee"
+  }
+}

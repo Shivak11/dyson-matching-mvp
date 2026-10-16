@@ -1,0 +1,245 @@
+{
+  "session": "private-frontend",
+  "test_only": true,
+  "served_source": "/Users/shivakakkar/Python Projects/Multiplier-dyson/app",
+  "source_sha256": {
+    "web/index.html": "c35b2ffab47379c3ea25ed01f8c3bc057b9ad30cb32e0faa3de5e272d7519830",
+    "web/app.js": "eab19e06195014beb553e46cc005996cd56f30c694019b909be6f12fd5a80f41",
+    "web/style.css": "da18cd510a48ae12d8212dcf529afe39c078a48392cc5cf19bb376780dd0fb50"
+  },
+  "checks": [
+    "empty states and historical navigation removed",
+    "two-photo preview and explicit Verify claim gate with native select",
+    "invalid type and five-photo limit preserve accepted previews",
+    "failed upload preserves photos and request id; two jobs submitted only by explicit Run",
+    "actual stage polling, running download guard and reduced motion",
+    "saved requested/actual AI metadata and explicit unknown reservation records",
+    "per-machine guidance, keyboard object selection, details expansion/focus and contained table scroll",
+    "JSON/CSV downloads, repeat bytes and failed-download recovery preserve result",
+    "History row exports and selected persisted job survives reload without new run",
+    "outside catalogue identity and rejected verification remain separate",
+    "legacy metadata and unavailable export recovery never substitute workspace settings",
+    "completed no-object result still offers saved prediction export",
+    "failed photo preserved; retry only after explicit button and recoverable failure",
+    "accounting failure disables new Run/retry with null budgets and retained photo",
+    "catalogue details/editor remain usable and unsaved form survives polling",
+    "bootstrap failure recovers through existing refresh control",
+    "no page errors or historical evaluation/report requests"
+  ],
+  "frames": [
+    {
+      "file": "/tmp/dyson-private-frontend/frames/01-empty-desktop.png",
+      "width": 1440,
+      "height": 1000,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/02-empty-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/03-verify-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/04-running-desktop.png",
+      "width": 1440,
+      "height": 1000,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/05-running-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/06-result-desktop.png",
+      "width": 1440,
+      "height": 1000,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/07-result-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/08-guidance-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 783,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/09-details-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 783,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/10-costs-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 1524,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/11-details-desktop.png",
+      "width": 1440,
+      "height": 1000,
+      "visibility": "visible",
+      "scrollY": 797,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/12-history-desktop.png",
+      "width": 1440,
+      "height": 1000,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/13-history-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/14-history-actions-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 46,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/15-outside-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/16-legacy-recovery-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 762,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/17-failed-desktop.png",
+      "width": 1440,
+      "height": 1000,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/18-failed-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    },
+    {
+      "file": "/tmp/dyson-private-frontend/frames/19-accounting-unavailable-narrow.png",
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "scrollY": 0,
+      "overflow": false
+    }
+  ],
+  "page_errors": [],
+  "job_submissions": 2,
+  "retries": 1,
+  "requests": [
+    "/",
+    "/web/style.css",
+    "/web/app.js",
+    "/api/bootstrap",
+    "/api/jobs",
+    "/api/jobs",
+    "/api/bootstrap",
+    "/media/photo",
+    "/api/bootstrap",
+    "/api/bootstrap",
+    "/media/reference",
+    "/api/bootstrap",
+    "/api/jobs/fixture-run-1/export.json",
+    "/api/jobs/fixture-run-1/export.csv",
+    "/api/jobs/fixture-run-1/export.json",
+    "/api/jobs/fixture-run-1/export.json",
+    "/api/jobs/fixture-run-1/export.json",
+    "/api/bootstrap",
+    "/",
+    "/web/style.css",
+    "/web/app.js",
+    "/api/bootstrap",
+    "/media/photo",
+    "/media/reference",
+    "/",
+    "/web/style.css",
+    "/web/app.js",
+    "/api/bootstrap",
+    "/media/photo",
+    "/",
+    "/web/style.css",
+    "/web/app.js",
+    "/api/bootstrap",
+    "/media/photo",
+    "/media/reference",
+    "/",
+    "/web/style.css",
+    "/web/app.js",
+    "/api/bootstrap",
+    "/media/photo",
+    "/",
+    "/web/style.css",
+    "/web/app.js",
+    "/api/bootstrap",
+    "/media/photo",
+    "/api/bootstrap",
+    "/api/jobs/fixture-failed/retry",
+    "/api/bootstrap",
+    "/api/bootstrap",
+    "/media/reference",
+    "/api/bootstrap",
+    "/",
+    "/web/style.css",
+    "/web/app.js",
+    "/api/bootstrap",
+    "/api/bootstrap",
+    "/media/photo"
+  ]
+}

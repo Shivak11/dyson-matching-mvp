@@ -1,0 +1,9 @@
+{
+  "actor_ref": "configured-owner",
+  "client": "local-browser",
+  "environment": "local",
+  "route": "http://127.0.0.1:8768",
+  "revision": "bd3339b002e5f934286e08585d59c44089099501",
+  "permissions": "Local code/tests only; no paid inference, deployment or private data transfer",
+  "artifact_ref": "docs/evidence/private-testing/independent-summary.json"
+}

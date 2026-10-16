@@ -1,0 +1,9 @@
+{
+  "source_head": "bd3339b002e5f934286e08585d59c44089099501",
+  "archive_sha256": "32959be2f2f5eea9efb9de6b157baa57d9e833b7350825bc5cf7a2fd664a0002",
+  "archive_files": 11,
+  "all_entries_match_current_source": true,
+  "credential_values_or_patterns_found": false,
+  "runtime_or_source_data_included": false,
+  "paid_calls_during_conversion": 0
+}

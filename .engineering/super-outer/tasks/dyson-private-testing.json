@@ -98,5 +98,6 @@
     "path": ".engineering/super-outer/intent/private-testing.md",
     "version": "1",
     "sha256": "2af71e48f3cef34844d761db58c62424d6abc657ada997c8220c51b46b7f9a76"
-  }
+  },
+  "completion_evidence": "docs/evidence/private-testing/completion-receipt.json"
 }

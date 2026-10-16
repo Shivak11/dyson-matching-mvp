@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "catalogue_products": 9,
+  "fresh_upload_jobs": 2,
+  "mock_inventory_calls": 2,
+  "paid_requests": 0,
+  "network_forbidden": true,
+  "no_historical_directories": true,
+  "runtime_imports_only": true,
+  "restart_export_bytes_identical": true,
+  "fixture": "Generated blank development image; no identity scoring",
+  "export_sha256": [
+    "a17b9eaaea0224a261a4569402a3fdbbe1abebb66b74bdc6a62d7c4b8a311533",
+    "b40ecef045f3b309a4a917dae83ef07b9daf290ee7a76c1cc17d4955b347a382"
+  ],
+  "source_head": "bd3339b002e5f934286e08585d59c44089099501",
+  "archive_sha256": "32959be2f2f5eea9efb9de6b157baa57d9e833b7350825bc5cf7a2fd664a0002",
+  "code_archive_files": 11
+}

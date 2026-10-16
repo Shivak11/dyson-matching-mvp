@@ -1,0 +1,38 @@
+[
+  {
+    "job_id": "8996b5f841464b9193f40be197752750",
+    "format": "json",
+    "bytes": 2077,
+    "sha256": "ab67e51801be2ff04d375b3dbacd8e2d01811f6cf369f16107d6c6d2fc39d182",
+    "repeated_bytes_equal": true,
+    "attachment": "attachment; filename=\"prediction-8996b5f841464b9193f40be197752750.json\"",
+    "content_type": "application/json; charset=utf-8"
+  },
+  {
+    "job_id": "8996b5f841464b9193f40be197752750",
+    "format": "csv",
+    "bytes": 1150,
+    "sha256": "97dc8768feea9618d130705951329df17bf2bd4919e03b9996a1d6b60f4cd28d",
+    "repeated_bytes_equal": true,
+    "attachment": "attachment; filename=\"prediction-8996b5f841464b9193f40be197752750.csv\"",
+    "content_type": "text/csv; charset=utf-8"
+  },
+  {
+    "job_id": "04521c353db642058c2f41afa34a3c03",
+    "format": "json",
+    "bytes": 1995,
+    "sha256": "eb10e093e0306579a685b8b03b563408dabaebb68a0aa762774e615ecd219a2e",
+    "repeated_bytes_equal": true,
+    "attachment": "attachment; filename=\"prediction-04521c353db642058c2f41afa34a3c03.json\"",
+    "content_type": "application/json; charset=utf-8"
+  },
+  {
+    "job_id": "04521c353db642058c2f41afa34a3c03",
+    "format": "csv",
+    "bytes": 1113,
+    "sha256": "c8d37a670b2f51741a85f93adc37e95ff82682017b1fe2501bccca067e859834",
+    "repeated_bytes_equal": true,
+    "attachment": "attachment; filename=\"prediction-04521c353db642058c2f41afa34a3c03.csv\"",
+    "content_type": "text/csv; charset=utf-8"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "claims": [
+    {
+      "id": "private-source",
+      "level": "source",
+      "contract_sha256": "23e6f31f3700c12a6c97d855c0f28f533f4a21a440f5b270dc561b1c05ea608f",
+      "context_sha256": "ca73c50d13c377ad32f72e706eb6c28c421e9fa4ac8b09d1164270d9fb83250b",
+      "status": "PASS",
+      "observed_at": "2026-10-16T13:58:40.505Z",
+      "expires_at": "2026-10-23T13:58:40.505Z",
+      "evidence_file": "docs/evidence/private-testing/source-proof.json",
+      "evidence_sha256": "50e6f6110d8f605efdc8ec603389af8392a0153033b48bb409350eba90b2cc5a",
+      "method": "local-check"
+    },
+    {
+      "id": "private-package",
+      "level": "package",
+      "contract_sha256": "23e6f31f3700c12a6c97d855c0f28f533f4a21a440f5b270dc561b1c05ea608f",
+      "context_sha256": "0ece84fce2b80147a78743964d7504d6c36c1964f611ec060a9e14fab5735465",
+      "status": "PASS",
+      "observed_at": "2026-10-16T13:58:40.505Z",
+      "expires_at": "2026-10-23T13:58:40.505Z",
+      "evidence_file": "docs/evidence/private-testing/package-proof.json",
+      "evidence_sha256": "ce12eac9b6f326c53739ca83353468521c516dd87cc00b079da3a5c445c7a985",
+      "method": "local-check"
+    },
+    {
+      "id": "private-hosting",
+      "level": "source",
+      "contract_sha256": "23e6f31f3700c12a6c97d855c0f28f533f4a21a440f5b270dc561b1c05ea608f",
+      "context_sha256": "f77ed7c519ef0f28caeb313d50501a5b96cc0ebeb9c3f192c2590a0acee60a85",
+      "status": "PASS",
+      "observed_at": "2026-10-16T13:58:40.505Z",
+      "expires_at": "2026-10-23T13:58:40.505Z",
+      "evidence_file": "docs/private-testing-sites-feasibility.md",
+      "evidence_sha256": "b4bfb492a29cfe3df2dc84dfbf27835566a5382f6a752121227977db68596434",
+      "method": "local-check"
+    }
+  ]
+}

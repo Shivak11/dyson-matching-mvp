@@ -1,0 +1,23 @@
+{
+  "source_head": "bd3339b002e5f934286e08585d59c44089099501",
+  "python_tests": 265,
+  "test_log_sha256": "9d0132f658c53f0d567a41b09a4f2ee6bce7ad974ea2886fd2868b361e16433b",
+  "javascript_syntax": "PASS",
+  "paid_requests_during_conversion": 0,
+  "source_fingerprints": {
+    "app_server.py": "15c2566389cd3626bef5e727906b58d31791ed1838def8b2d71c0813e1427f07",
+    "webapp/store.py": "3d6671d317202501e1969658db37570a8cd2ae495cb2d502ec1ca23dabb00c12",
+    "webapp/inference.py": "980c51b629e847d4ceeefa73cb4f966897105c87f6c3bd1042fc7ba120c6d724",
+    "webapp/protocol.py": "01a072d9fb40a071a0b89eddf17833b872da3d53075a85bdf4e87df25ae41ee6",
+    "webapp/transport.py": "78ad714117e62c09bda28f88cd92fccbed4a662fc3277d079134b5d78855f2de",
+    "webapp/predictions.py": "15520618f93ebefed41828e4d510279d1331c412fbd25d47b38980066c277336",
+    "web/index.html": "c35b2ffab47379c3ea25ed01f8c3bc057b9ad30cb32e0faa3de5e272d7519830",
+    "web/app.js": "f4ecb32d623ac32134a8c53de22c3270043836c9d7d897aa69b8fb0d8857f32f",
+    "web/style.css": "da18cd510a48ae12d8212dcf529afe39c078a48392cc5cf19bb376780dd0fb50",
+    "tools/build_private_app.py": "83035d2232d9efbed56e993fe758b6b0eac573a289d92e1ce85146a17a41955f",
+    "tests/test_webapp.py": "f03f787efa83efa1d2abcf64c3fd57225d8d25f7a84d152f2a01222daab51bca",
+    "tests/test_webapp_inference.py": "17a3fdf6fd0866aac8c3f475f3a070c04020f47c2f67b2a93df4a9da6e59715f",
+    "tests/test_private_app.py": "5781fa8c889181259699dec0cbcb821c8aad1bcdd11810a2c5be4b01c5614610",
+    "tests/test_private_packaging.py": "531b25d5f5dddd42a58d8072c3a5ba982c20674b12b5b261a3b13d4340e1f34b"
+  }
+}
