@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-10-16",
+  "references": {
+    "R01": {
+      "product": "dyson_big_ball",
+      "in_catalog": true,
+      "panels": [
+        "R01-P1",
+        "R01-P2",
+        "R01-P3"
+      ]
+    },
+    "R02": {
+      "product": "dyson_v12_detect_slim",
+      "in_catalog": true,
+      "panels": [
+        "R02-P1",
+        "R02-P2",
+        "R02-P3"
+      ]
+    },
+    "R03": {
+      "product": "dyson_v15_detect",
+      "in_catalog": true,
+      "panels": [
+        "R03-P1",
+        "R03-P2",
+        "R03-P3"
+      ]
+    },
+    "R04": {
+      "product": "dyson_v16_piston_animal",
+      "in_catalog": true,
+      "panels": [
+        "R04-P1",
+        "R04-P2",
+        "R04-P3"
+      ]
+    },
+    "R05": {
+      "product": "dyson_v8_absolute",
+      "in_catalog": true,
+      "panels": [
+        "R05-P1",
+        "R05-P2",
+        "R05-P3"
+      ]
+    },
+    "R06": {
+      "product": "dyson_wash_g1",
+      "in_catalog": true,
+      "panels": [
+        "R06-P1",
+        "R06-P2",
+        "R06-P3"
+      ]
+    },
+    "R07": {
+      "product": "dyson_v11",
+      "in_catalog": false,
+      "panels": [
+        "R07-P1",
+        "R07-P2"
+      ]
+    },
+    "R08": {
+      "product": "dyson_gen5detect",
+      "in_catalog": false,
+      "panels": [
+        "R08-P1",
+        "R08-P2"
+      ]
+    },
+    "R09": {
+      "product": "shark_stratos",
+      "in_catalog": false,
+      "panels": [
+        "R09-P1",
+        "R09-P2",
+        "R09-P3"
+      ]
+    }
+  },
+  "facts": [
+    {
+      "id": "CY23",
+      "statement": "R01 is the ordinary Big Ball CY23 with 2 Tier Radial cyclones. The catalogue source identifies it as CY23, not Cinetic. A washable-filter cap is compatible with this family. Different ball-shaped canister models are not automatically equivalent.",
+      "references": [
+        "R01"
+      ],
+      "source_urls": [
+        "https://www.dyson.in/big-ball-vacuum",
+        "https://www.dyson.co.uk/content/dam/dyson/india/2025/CY23_IN_DYSON-BIG-BALL.pdf"
+      ],
+      "kind": "variant"
+    },
+    {
+      "id": "CY23_FILTER",
+      "statement": "R01 has a washable filter. Cinetic filtration has a different maintenance arrangement; the two-tier cyclone count alone does not distinguish these ranges. Do not exclude R01 merely for a blue filter cap or filter-washing marking.",
+      "references": [
+        "R01"
+      ],
+      "source_urls": [
+        "https://www.dyson.co.uk/content/dam/dyson/india/2025/CY23_IN_DYSON-BIG-BALL.pdf",
+        "https://www.fi.dyson.com/polynimurit/johdolliset-polynimurit/cinetic-big-ball"
+      ],
+      "kind": "variant"
+    },
+    {
+      "id": "SHARED_CONTROLS",
+      "statement": "R04 and R08 both have button power, an LCD and HEPA filtration. R08 has a silver Selection button in its manual and a cyan rear filter in its saved manufacturer image. Colour, broad button/display/selection layout and HEPA text cannot establish uniqueness between these families. Exact R08 upper-button geometry is not established by the saved rear reference coverage.",
+      "references": [
+        "R04",
+        "R08"
+      ],
+      "source_urls": [
+        "https://www.dyson.com/vacuum-cleaners/cordless/gen5/detect-hepa-purple-iron",
+        "https://www.dyson.co.uk/content/dam/dyson/maintenance/user-guides/en_my/N418_OUG_MY.pdf",
+        "https://www.dyson.in/v16-piston-animal-cordless-vacuum"
+      ],
+      "kind": "shared",
+      "non_unique_features": [
+        "handle_control",
+        "display_layout",
+        "cyclone_filter",
+        "identifier"
+      ]
+    },
+    {
+      "id": "COMPACTION",
+      "statement": "R04 has a CleanCompaktor dust-compression bin. Check actual visible bin mechanism and structure against the existing body views. Hidden bin structure supplies neither support nor exclusion. The manufacturer feature name alone is not proof that every red release mechanism is this bin.",
+      "references": [
+        "R04"
+      ],
+      "source_urls": [
+        "https://www.dyson.in/v16-piston-animal-cordless-vacuum"
+      ],
+      "kind": "positive",
+      "feature": "bin_mechanism"
+    },
+    {
+      "id": "HEAD_VARIATION",
+      "statement": "R04 includes both the All Floor Cones Sense head and a Fluffy Optic head in the India catalogue. A conventional soft-roller head does not exclude the body family; an interchangeable head does not establish it.",
+      "references": [
+        "R04"
+      ],
+      "source_urls": [
+        "https://www.dyson.in/v16-piston-animal-cordless-vacuum"
+      ],
+      "kind": "variant"
+    },
+    {
+      "id": "IMAGE_R01",
+      "statement": "The individually labelled manufacturer panels establish the visible structure of R01. Only compare parts actually shown; absent reference coverage is unknown. A separate floor-standing spherical wheeled canister, with a transparent bin and cyclone assembly above the ball; compare the hose connection and canister outline. A flexible hose connects the canister to a separate wand and cleaner head.",
+      "references": [
+        "R01"
+      ],
+      "source_urls": [
+        "https://www.dyson.in/big-ball-vacuum",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/286519-01.png",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/india/2024/Gallery%20image%202.png",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/286519-01.png"
+      ],
+      "kind": "reference_image",
+      "feature": "body_layout",
+      "panels": [
+        "R01-P1",
+        "R01-P2",
+        "R01-P3"
+      ]
+    },
+    {
+      "id": "IMAGE_R02",
+      "statement": "The individually labelled manufacturer panels establish the visible structure of R02. Only compare parts actually shown; absent reference coverage is unknown. An in-line slim motor/bin body with a rear circular LCD and a separate on/off button on the motor housing; inspect the button reference. The body/bin is slimmer than V15 in the manufacturer views. Use proportions together with the visible control layout.",
+      "references": [
+        "R02"
+      ],
+      "source_urls": [
+        "https://www.dyson.in/dyson-v12-detect-slim-vacuum-cleaner",
+        "https://www.dyson.com/vacuum-cleaners/cordless/illumination",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v12-detected-slim/pdp/lifestyle/yellow/Spec%20module%20-%20Yellow.jpg",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/vacuum-cleaners/sticks/v12/pdp/yellow-nickel/v12_Single_Power_button.jpg",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v12-detected-slim/pdp/gallery-images-/01-Gallery-hero-yellow.jpg"
+      ],
+      "kind": "reference_image",
+      "feature": "body_layout",
+      "panels": [
+        "R02-P1",
+        "R02-P2",
+        "R02-P3"
+      ]
+    },
+    {
+      "id": "IMAGE_R03",
+      "statement": "The individually labelled manufacturer panels establish the visible structure of R03. Only compare parts actually shown; absent reference coverage is unknown. An in-line transparent bin ahead of the motor/cyclones and rear circular LCD. The manufacturer comparison specifies trigger operation. Compare the trigger/handle and fuller bin proportions against V12; confirm the relevant region is visible.",
+      "references": [
+        "R03"
+      ],
+      "source_urls": [
+        "https://www.dyson.in/dyson-v15-detect-vacuum-cleaner",
+        "https://www.dyson.com/vacuum-cleaners/cordless/illumination",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v15-detect/pdp/dynamic-media/specifications/SV22-CORE-LB-Specs.jpg",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v15-detect/pdp/dynamic-media/specifications/SV22-CORE-LB-Specs.jpg",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v15-detect/pdp/gallery/Dyson-V15-Direct-HeroWithNasties-Core-LB.jpg"
+      ],
+      "kind": "reference_image",
+      "feature": "body_layout",
+      "panels": [
+        "R03-P1",
+        "R03-P2",
+        "R03-P3"
+      ]
+    },
+    {
+      "id": "IMAGE_R04",
+      "statement": "The individually labelled manufacturer panels establish the visible structure of R04. Only compare parts actually shown; absent reference coverage is unknown. The All Floor Cones Sense head has two conical rollers. Compare both rollers and the centre of the head with the supplied detail image. The motor/bin body has a CleanCompaktor compression mechanism and rear LCD; compare the body silhouette and handle with the manufacturer side view.",
+      "references": [
+        "R04"
+      ],
+      "source_urls": [
+        "https://www.dyson.in/v16-piston-animal-cordless-vacuum",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/specifications/home/floorcare/cordless/Web-692B-PDP-Specification-Image-Module5.png",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/vacuums/sticks/692b/primary/Web_V16-PistonAnimal_DynamicMedia_PrimaryImage.png",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/specifications/home/floorcare/cordless/Web-692B-PDP-Specification-Image-Module5.png"
+      ],
+      "kind": "reference_image",
+      "feature": "body_layout",
+      "panels": [
+        "R04-P1",
+        "R04-P2",
+        "R04-P3"
+      ]
+    },
+    {
+      "id": "IMAGE_R05",
+      "statement": "The individually labelled manufacturer panels establish the visible structure of R05. Only compare parts actually shown; absent reference coverage is unknown. The referenced V8 has its transparent bin below the cyclone assembly; compare this perpendicular bin/body layout against the in-line V12, V15 and V11 bodies. The SV10 manual documents a red lever lifted to empty the bin, and a finger trigger. Inspect the lever region directly before claiming it is absent. Dyson lists star-filter and pinch-handle-filter V8 variants; a light-purple translucent top filter is documented.",
+      "references": [
+        "R05"
+      ],
+      "source_urls": [
+        "https://www.dyson.in/dyson-v8-absolute-vacuum",
+        "https://www.dyson.com/support/vacuum-cleaners/cordless/v8",
+        "https://www.dyson.com.cy/medialibrary/manuals/214747_01_V8",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/285l/pdp/specifications/285L_spec_IRSILNK_MTB.png",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/vacuum-cleaners/sticks/v8/pdp/silver-nickel/carousel/2_Ergonomic_and_lightweight.jpg",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/285l/pdp/specifications/285L_spec_IRSILNK_MTB.png"
+      ],
+      "kind": "reference_image",
+      "feature": "body_layout",
+      "panels": [
+        "R05-P1",
+        "R05-P2",
+        "R05-P3"
+      ]
+    },
+    {
+      "id": "IMAGE_R06",
+      "statement": "The individually labelled manufacturer panels establish the visible structure of R06. Only compare parts actually shown; absent reference coverage is unknown. A long loop handle above a low body containing water tanks, with a broad rectangular two-roller cleaning head. Compare the front/side tank layout, handle bend and roller head with the supplied manufacturer views.",
+      "references": [
+        "R06"
+      ],
+      "source_urls": [
+        "https://www.dyson.in/washg1-wet-cleaner-blue-black",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floor-cleaners/wet/washg1/pdp/blue-black/693_PDP_specifications.png",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floor-cleaners/wet/washg1/pdp/blue-black/gallery-images/693_PDP_gallery_images_3.jpg",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floor-cleaners/wet/washg1/pdp/blue-black/gallery-images/693_PDP_gallery_images_3.jpg"
+      ],
+      "kind": "reference_image",
+      "feature": "body_layout",
+      "panels": [
+        "R06-P1",
+        "R06-P2",
+        "R06-P3"
+      ]
+    },
+    {
+      "id": "IMAGE_R07",
+      "statement": "The individually labelled manufacturer panels establish the visible structure of R07. Only compare parts actually shown; absent reference coverage is unknown. An in-line transparent bin and motor/cyclone body, finger trigger and rear display; compare the complete body against V15. The referenced V11 LCD shows runtime and modes; an LCD alone does not distinguish it from V15.",
+      "references": [
+        "R07"
+      ],
+      "source_urls": [
+        "https://www.dyson.com/commercial/vacuums/v11-blue",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/us/floorcare/npd-2023/v11/_V11_Spec-Variant_FC-Range-Reset-2023.jpg",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/us/floorcare/npd-2023/v11/_V11_Spec-Variant_FC-Range-Reset-2023.jpg"
+      ],
+      "kind": "reference_image",
+      "feature": "body_layout",
+      "panels": [
+        "R07-P1",
+        "R07-P2"
+      ]
+    },
+    {
+      "id": "IMAGE_R08",
+      "statement": "The individually labelled manufacturer panels establish the visible structure of R08. Only compare parts actually shown; absent reference coverage is unknown. An in-line transparent bin and larger motor/filter body with rear circular LCD and single-button power control. The manufacturer describes a handle comfort pad and a built-in dusting/crevice tool exposed when the wand is removed; compare these only where visible.",
+      "references": [
+        "R08"
+      ],
+      "source_urls": [
+        "https://www.dyson.com/vacuum-cleaners/cordless/gen5/detect-hepa-purple-iron",
+        "https://www.dyson.com/discover/innovation/new-machines/gen5detect-gen5outsize-launch",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/cord-free-vacuums/sticks/Dyson-Gen5detect/pdp/iron-purple/Specification_SV23_Core_Purple_colourway_%28Purple_Iron_Purple%29.png",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/cord-free-vacuums/sticks/Dyson-Gen5detect/pdp/iron-purple/Specification_SV23_Core_Purple_colourway_%28Purple_Iron_Purple%29.png"
+      ],
+      "kind": "reference_image",
+      "feature": "body_layout",
+      "panels": [
+        "R08-P1",
+        "R08-P2"
+      ]
+    },
+    {
+      "id": "IMAGE_R09",
+      "statement": "The individually labelled manufacturer panels establish the visible structure of R09. Only compare parts actually shown; absent reference coverage is unknown. The official IZ400UK reference shows an elongated dark handheld body, visible Shark wordmark, stick wand and broad floor nozzle; compare its housing shape with Dyson cyclone bodies. Use a readable Shark name on the actual machine as brand evidence, while checking its association with that object.",
+      "references": [
+        "R09"
+      ],
+      "source_urls": [
+        "https://www.sharkninja.co.uk/shark-stratos-anti-hair-wrap-plus-cordless-vacuum-single-battery-iz400uk/IZ400UK.html",
+        "https://assets.sharkninja.com/image/list/IZ400UK.json",
+        "https://assets.sharkninja.com/image/upload/v1780568255/storefront/products-UK/IZ400UK/IZ400UK_01.png",
+        "https://assets.sharkninja.com/image/upload/v1780568255/storefront/products-UK/IZ400UK/IZ400UK_01.png",
+        "https://assets.sharkninja.com/image/upload/v1780568255/storefront/products-UK/IZ400UK/IZ400UK_01.png"
+      ],
+      "kind": "reference_image",
+      "feature": "body_layout",
+      "panels": [
+        "R09-P1",
+        "R09-P2",
+        "R09-P3"
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "part_code": "971426-01",
+      "references": [
+        "R03",
+        "R05",
+        "R07"
+      ],
+      "statement": "Manufacturer compatibility lists V8 star-prefilter, V10, V11, Outsize, V15 and V15s. This positive set is not exhaustive incompatibility proof and does not identify an unseen cleaner body.",
+      "source_url": "https://www.dyson.com/support/journey/spare-details.971426-01",
+      "body_identity": false
+    },
+    {
+      "part_code": "972213-02",
+      "references": [
+        "R02",
+        "R08"
+      ],
+      "statement": "Manufacturer compatibility lists V12 Detect Slim, Gen5detect and Gen5outsize. This positive set is not exhaustive incompatibility proof and does not identify an unseen cleaner body.",
+      "source_url": "https://www.dyson.com/support/journey/spare-details.972213-02",
+      "body_identity": false
+    },
+    {
+      "part_code": "972522-01",
+      "references": [
+        "R03"
+      ],
+      "statement": "Manufacturer compatibility lists V15 and V15s. This positive set is not exhaustive incompatibility proof and does not identify an unseen cleaner body.",
+      "source_url": "https://www.dyson.com/support/journey/spare-details.972522-01",
+      "body_identity": false
+    },
+    {
+      "part_code": "972522-02",
+      "references": [
+        "R02"
+      ],
+      "statement": "Manufacturer compatibility lists V12 Detect Slim variants. This positive set is not exhaustive incompatibility proof and does not identify an unseen cleaner body.",
+      "source_url": "https://www.dyson.com/support/journey/spare-details.972522-02",
+      "body_identity": false
+    },
+    {
+      "part_code": "972417-01",
+      "references": [
+        "R08"
+      ],
+      "statement": "Manufacturer compatibility lists Gen5detect and Gen5outsize. This positive set is not exhaustive incompatibility proof and does not identify an unseen cleaner body.",
+      "source_url": "https://www.dyson.com/support/journey/spare-details.972417-01",
+      "body_identity": false
+    }
+  ],
+  "ambiguity_sets": [
+    [
+      "R04",
+      "R08"
+    ],
+    [
+      "R02",
+      "R03"
+    ]
+  ],
+  "constraints": [
+    "No query source labels, titles, captions or URLs in inference.",
+    "No Apple, native or local OCR; text reading uses OpenRouter.",
+    "No additional store or manufacturer photographs.",
+    "Generic Dyson, HEPA, FILTRO and animal text is not a model identifier.",
+    "A component code may narrow compatibility without establishing cleaner identity."
+  ]
+}
