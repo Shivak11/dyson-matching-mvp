@@ -1,0 +1,1167 @@
+{
+  "P022": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        74,
+        151,
+        1000,
+        755
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen showing power/battery level bars and the word Auto",
+          "box_2d": [
+            206,
+            403,
+            632,
+            662
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red push button positioned above the circular display and a silver button below it",
+          "box_2d": [
+            236,
+            480,
+            597,
+            592
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "translucent blue circular rear filter ring surrounding the control console",
+          "box_2d": [
+            74,
+            274,
+            897,
+            754
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "bronze-colored radial cyclone cones visible along the lower body",
+          "box_2d": [
+            574,
+            152,
+            1000,
+            279
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "instance_id": "P022_o1"
+    }
+  ],
+  "P012": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        331,
+        731,
+        735
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "conical anti-tangle screw brush bar inside clear motorized tool housing",
+          "box_2d": [
+            200,
+            331,
+            731,
+            735
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red quick-release button on connection collar",
+          "box_2d": [
+            147,
+            506,
+            248,
+            565
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "clear cylindrical bin base partially visible above attachment neck",
+          "box_2d": [
+            0,
+            385,
+            142,
+            695
+          ]
+        },
+        {
+          "feature": "handle",
+          "visible": false,
+          "detail": "main body, motor, and handle are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson",
+      "instance_id": "P012_o1"
+    }
+  ],
+  "P013": [
+    {
+      "box_2d": [
+        123,
+        297,
+        895,
+        622
+      ],
+      "object_id": "o1",
+      "observations": [
+        {
+          "box_2d": [
+            123,
+            487,
+            411,
+            608
+          ],
+          "detail": "inline clear dustbin with gold cyclone array and purple rear filter cap",
+          "feature": "body_layout",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            209,
+            562,
+            333,
+            624
+          ],
+          "detail": "grey pistol-grip handle held in user's hand with trigger",
+          "feature": "handle_and_trigger",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            401,
+            381,
+            792,
+            513
+          ],
+          "detail": "dark grey extension wand connecting main body to cleaner head",
+          "feature": "wand",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            757,
+            297,
+            895,
+            401
+          ],
+          "detail": "motorized floor nozzle with swiveling neck resting on carpet",
+          "feature": "cleaner_head",
+          "visible": true
+        }
+      ],
+      "parent_id": null,
+      "readable_identifier": "",
+      "role": "machine",
+      "visibility": "whole_machine",
+      "instance_id": "P013_o1"
+    }
+  ],
+  "P018": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        723,
+        466,
+        1000,
+        659
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "cleaner head with transparent roller housing, spiral brush bar, and pivoting neck",
+          "box_2d": [
+            724,
+            466,
+            860,
+            659
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red quick-release button on the neck connector",
+          "box_2d": [
+            890,
+            550,
+            999,
+            595
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "main body, dustbin, and wand are out of frame beyond the bottom edge",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "",
+      "accessory_only": true,
+      "instance_id": "P018_o1"
+    }
+  ],
+  "P023": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        75,
+        329,
+        824,
+        757
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "In-line configuration with transparent dust bin and gold-colored cyclone assembly",
+          "box_2d": [
+            228,
+            395,
+            642,
+            627
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "Circular digital display on the end of the blue rear filter cap",
+          "box_2d": [
+            75,
+            524,
+            258,
+            638
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Pistol-grip handle with red trigger and detachable base battery unit",
+          "box_2d": [
+            267,
+            532,
+            683,
+            755
+          ]
+        },
+        {
+          "feature": "attachment",
+          "visible": true,
+          "detail": "Long black crevice nozzle attached directly to the bin suction inlet",
+          "box_2d": [
+            572,
+            330,
+            824,
+            443
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "instance_id": "P023_o1"
+    }
+  ],
+  "P025": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        45,
+        93,
+        946,
+        885
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "cordless handheld body with inline clear dust bin, gold cyclone assembly, pistol grip handle, and bottom battery",
+          "box_2d": [
+            45,
+            93,
+            897,
+            614
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen centered on the rear filter housing",
+          "box_2d": [
+            94,
+            281,
+            255,
+            375
+          ]
+        },
+        {
+          "feature": "filter_cap",
+          "visible": true,
+          "detail": "translucent blue rear filter casing",
+          "box_2d": [
+            45,
+            258,
+            355,
+            432
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "compact roller cleaner head with multi-colored brush strips attached to wand",
+          "box_2d": [
+            676,
+            679,
+            946,
+            887
+          ]
+        }
+      ],
+      "readable_identifier": "dyson",
+      "instance_id": "P025_o1"
+    }
+  ],
+  "P028": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        47,
+        677,
+        518
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main vacuum body, motor, and dust bin are out of frame above the wand",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Soft roller floor nozzle with transparent brush roller housing and swivel joint",
+          "box_2d": [
+            182,
+            269,
+            677,
+            518
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Dark grey neck tube with red release clip",
+          "box_2d": [
+            0,
+            48,
+            340,
+            312
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "accessory_only": true,
+      "instance_id": "P028_o1"
+    }
+  ],
+  "P029": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        209,
+        705,
+        804
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "vacuum wand and main body are out of frame",
+          "box_2d": null
+        },
+        {
+          "feature": "brushroll",
+          "visible": true,
+          "detail": "motorized brush bar with tangled pet hair and red and blue bristles",
+          "box_2d": [
+            526,
+            247,
+            659,
+            788
+          ]
+        },
+        {
+          "feature": "swivel_joint",
+          "visible": true,
+          "detail": "ball-style articulation neck with flexible corrugated hose",
+          "box_2d": [
+            0,
+            428,
+            279,
+            592
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "accessory_only": true,
+      "instance_id": "P029_o1"
+    }
+  ],
+  "P030": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        995,
+        836
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Red circular power button with power symbol",
+          "box_2d": [
+            483,
+            455,
+            663,
+            551
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Orange cyclone assembly surrounding a blue circular top lid",
+          "box_2d": [
+            0,
+            0,
+            513,
+            769
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Clear handle assembly with red release mechanism",
+          "box_2d": [
+            390,
+            128,
+            779,
+            345
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Button embossed with electrical plug icon",
+          "box_2d": [
+            444,
+            28,
+            595,
+            135
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "instance_id": "P030_o1"
+    }
+  ],
+  "P031": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        59,
+        0,
+        404,
+        185
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "ball-shaped cylinder body with orange cyclone assembly and clear bin",
+          "box_2d": [
+            59,
+            0,
+            404,
+            185
+          ]
+        }
+      ],
+      "readable_identifier": "dyson big ball turbinehead",
+      "instance_id": "P031_o1"
+    }
+  ],
+  "P040": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        310,
+        883,
+        734
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dustbin, and handle are out of frame above",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Roller cleaner head with purple and red brush roll inside clear housing",
+          "box_2d": [
+            675,
+            310,
+            882,
+            734
+          ]
+        },
+        {
+          "feature": "wand_and_connector",
+          "visible": true,
+          "detail": "Purple extension wand attached to grey swivel neck connector with red release clip",
+          "box_2d": [
+            0,
+            408,
+            693,
+            545
+          ]
+        }
+      ],
+      "readable_identifier": "dyson",
+      "instance_id": "P040_o1"
+    }
+  ],
+  "P042": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        19,
+        226,
+        975,
+        835
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "In-line configuration with transparent dustbin, cyclone assembly, and rear motor housing",
+          "box_2d": [
+            19,
+            226,
+            975,
+            695
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Purple translucent filter cap with side ventilation slots at the rear",
+          "box_2d": [
+            19,
+            552,
+            271,
+            695
+          ]
+        },
+        {
+          "feature": "handle_controls",
+          "visible": true,
+          "detail": "Pistol grip handle with red finger trigger and integrated battery base",
+          "box_2d": [
+            322,
+            532,
+            655,
+            835
+          ]
+        },
+        {
+          "feature": "bin_release",
+          "visible": true,
+          "detail": "Red slider mechanism along the side runner for bin emptying",
+          "box_2d": [
+            678,
+            381,
+            860,
+            482
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "instance_id": "P042_o1"
+    }
+  ],
+  "P043": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        234,
+        891,
+        749
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized cleaner head with clear casing, purple brush roller with red bristles, and hair removal vanes",
+          "box_2d": [
+            282,
+            234,
+            891,
+            673
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Swivel neck joint with red release button attached to a purple wand",
+          "box_2d": [
+            0,
+            583,
+            447,
+            749
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "Main motor, cyclone, bin, and handle are out of frame above the wand",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson",
+      "instance_id": "P043_o1"
+    }
+  ],
+  "P045": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        107,
+        854,
+        675
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dustbin, and handle are out of frame above wand connector",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized cleaner head with purple brush roller, spiral red bristles, and clear housing",
+          "box_2d": [
+            409,
+            107,
+            854,
+            674
+          ]
+        },
+        {
+          "feature": "release_button",
+          "visible": true,
+          "detail": "Red oval quick-release button on wand connector",
+          "box_2d": [
+            79,
+            470,
+            193,
+            519
+          ]
+        },
+        {
+          "feature": "neck_joint",
+          "visible": true,
+          "detail": "Articulated grey swivel joint connecting cleaner head to wand socket",
+          "box_2d": [
+            301,
+            372,
+            515,
+            527
+          ]
+        }
+      ],
+      "readable_identifier": "dyson",
+      "instance_id": "P045_o1"
+    }
+  ],
+  "P046": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        272,
+        814,
+        706
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "main body, motor, and dust bin are out of frame above the wand",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "roller cleaner head with purple brush bar, spiral bristle strips, and clear cover",
+          "box_2d": [
+            572,
+            272,
+            814,
+            706
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red release button on the grey connector neck",
+          "box_2d": [
+            251,
+            505,
+            342,
+            542
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "purple extension wand tube connected to the cleaner head neck",
+          "box_2d": [
+            0,
+            513,
+            117,
+            580
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "accessory_only": true,
+      "instance_id": "P046_o1"
+    }
+  ],
+  "P048": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        546,
+        595,
+        948
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "soft roller head emitting a green illumination light beam",
+          "box_2d": [
+            151,
+            546,
+            595,
+            948
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red quick-release latch on the articulating neck",
+          "box_2d": [
+            12,
+            809,
+            101,
+            855
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "main body, motor, dustbin, and handle extend out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson",
+      "instance_id": "P048_o1"
+    }
+  ],
+  "P049": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        114,
+        362,
+        924,
+        631
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline cylindrical dustbin and cyclone assembly aligned vertically with wand",
+          "box_2d": [
+            114,
+            458,
+            350,
+            524
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Cleaner head with transparent window, dual-colored roller bar, and red switch",
+          "box_2d": [
+            783,
+            362,
+            924,
+            631
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Purple straight extension wand connecting head to main unit",
+          "box_2d": [
+            305,
+            477,
+            764,
+            524
+          ]
+        }
+      ],
+      "readable_identifier": "dyson",
+      "instance_id": "P049_o1"
+    }
+  ],
+  "P050": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        348,
+        853,
+        650
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, motor, dust canister, and handle are out of frame above the wand",
+          "box_2d": null
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor cleaner head with clear roller housing, internal de-tangling vanes, and front adjustment slider",
+          "box_2d": [
+            584,
+            348,
+            852,
+            650
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Purple extension tube attached to swivel neck with red quick-release catch",
+          "box_2d": [
+            0,
+            461,
+            568,
+            542
+          ]
+        }
+      ],
+      "readable_identifier": "dyson",
+      "instance_id": "P050_o1"
+    }
+  ],
+  "P051": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        18,
+        298,
+        1000,
+        655
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Translucent cyan cylindrical filter unit labelled WASHABLE HEPA FILTER",
+          "box_2d": [
+            18,
+            313,
+            481,
+            635
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Purple radial cyclone cones with red accent trim below the central body",
+          "box_2d": [
+            669,
+            298,
+            1000,
+            656
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Lower dust bin, handle, trigger, battery, and cleaning head are out of frame below",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson",
+      "instance_id": "P051_o1"
+    }
+  ],
+  "P054": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        198,
+        330,
+        1000,
+        652
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen displaying particle size counts and 25:52 remaining runtime",
+          "box_2d": [
+            405,
+            445,
+            573,
+            537
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red circular power push-button positioned above the display",
+          "box_2d": [
+            304,
+            476,
+            365,
+            511
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "horizontal pill-shaped selection button below the display",
+          "box_2d": [
+            605,
+            468,
+            631,
+            511
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "wand, dust bin, and cleaner head extend forward directly away from view",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "",
+      "instance_id": "P054_o1"
+    }
+  ],
+  "P006": [
+    {
+      "box_2d": [
+        68,
+        77,
+        968,
+        937
+      ],
+      "object_id": "o1",
+      "observations": [
+        {
+          "box_2d": [
+            137,
+            516,
+            968,
+            938
+          ],
+          "detail": "Handheld unit with vertical clear dust bin, multi-cyclone assembly, and pistol grip above battery base",
+          "feature": "body_layout",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            201,
+            707,
+            497,
+            924
+          ],
+          "detail": "Purple rear post-motor filter cap attached to back of body",
+          "feature": "filter",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            174,
+            206,
+            473,
+            558
+          ],
+          "detail": "Orange rigid extension tube connecting handheld body to cleaner head",
+          "feature": "wand",
+          "visible": true
+        },
+        {
+          "box_2d": [
+            68,
+            77,
+            281,
+            338
+          ],
+          "detail": "Floor cleaner head with transparent shell and red/blue rotating brush roller",
+          "feature": "cleaner_head",
+          "visible": true
+        }
+      ],
+      "parent_id": null,
+      "readable_identifier": "dyson",
+      "role": "machine",
+      "visibility": "whole_machine",
+      "instance_id": "P006_o1"
+    }
+  ],
+  "P014": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        208,
+        239,
+        909,
+        618
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline clear bin with gold cyclone assembly and purple end filter",
+          "box_2d": [
+            208,
+            239,
+            461,
+            402
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Dark grey wand extending from handheld body down to floor head",
+          "box_2d": [
+            417,
+            372,
+            843,
+            581
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor head with roller casting green illumination onto the floor",
+          "box_2d": [
+            770,
+            568,
+            909,
+            618
+          ]
+        }
+      ],
+      "readable_identifier": "",
+      "instance_id": "P014_o1"
+    }
+  ]
+}

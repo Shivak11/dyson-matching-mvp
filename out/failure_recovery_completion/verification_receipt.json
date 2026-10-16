@@ -1,0 +1,47 @@
+{
+  "audit_status": "PASS",
+  "audit_source_sha256": "3bb23b52605edad90757640e0080b9aa2700b36a80a1f3189a74fd8726ec152b",
+  "audit_report_sha256": "24fb3edbb3531265e6a70fb07cbc8af87a5489404fc6d7da15f86bb6f3ecfab9",
+  "tests": 173,
+  "test_log_sha256": "3c92829dc9c47a451fc7a1ac02433478298b3e7fcfc29d17b30e80461c4bcfd6",
+  "completed_count": 23,
+  "failure_metrics": {
+    "denominator": 20,
+    "correct": 6,
+    "wrong": 1,
+    "confidently_wrong": 1,
+    "unsure": 13,
+    "not_run": 0,
+    "accuracy_all_selected": 0.3
+  },
+  "control_metrics": {
+    "denominator": 3,
+    "correct": 2,
+    "wrong": 0,
+    "confidently_wrong": 0,
+    "unsure": 1,
+    "not_run": 0,
+    "accuracy_all_selected": 0.6666666666666666
+  },
+  "costs": {
+    "prior_eight_ledgers_accounted_usd": 7.666601860999999,
+    "completion_settled_usd": 0.1113075,
+    "completion_unresolved_reserve_usd": 0,
+    "completion_accounted_usd": 0.1113075,
+    "completion_reporting_inr": 10.5916916054042,
+    "failure_wave_including_completion_accounted_usd": 2.0294595,
+    "failure_wave_including_completion_reporting_inr": 193.11734743532833,
+    "failure_wave_cost_per_completed_photo_inr": 8.396406410231666,
+    "combined_stage_guard_inr": 777.7909361,
+    "stage_ceiling_inr": 1000,
+    "remaining_stage_guard_inr": 222.20906390000005,
+    "combined_stage_reporting_inr": 740.1227885497242,
+    "overall_guard_inr": 820.4709361,
+    "overall_ceiling_inr": 2000
+  },
+  "old58_preserved": {
+    "status": "PASS",
+    "completed_photo_count": 58,
+    "frozen_changes": []
+  }
+}

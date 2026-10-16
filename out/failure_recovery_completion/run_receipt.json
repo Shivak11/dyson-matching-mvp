@@ -1,0 +1,51 @@
+{
+  "started_utc": "2026-10-16T10:36:01Z",
+  "settled_utc": "2026-10-16T10:39:00Z",
+  "status": "completed",
+  "completed_count": 23,
+  "selected_photo_ids": [
+    "P019"
+  ],
+  "all_photo_ids": [
+    "P012",
+    "P013",
+    "P018",
+    "P022",
+    "P023",
+    "P025",
+    "P028",
+    "P029",
+    "P030",
+    "P031",
+    "P040",
+    "P042",
+    "P043",
+    "P045",
+    "P046",
+    "P048",
+    "P049",
+    "P050",
+    "P051",
+    "P054",
+    "P006",
+    "P014",
+    "P019"
+  ],
+  "error": null,
+  "inflight_count": 0,
+  "workers": 1,
+  "costs": {
+    "new_accounted_usd": 0.1113075,
+    "new_accounted_inr": 10.5916916054042,
+    "combined_stage_guard_inr": 777.7909361,
+    "combined_stage_reporting_inr": 740.1227885497243,
+    "remaining_guard_inr": 222.20906390000005,
+    "stage_ceiling_inr": 1000,
+    "completion_retry_accounted_usd": 0.1113075,
+    "whole_v3_and_retry_accounted_usd": 2.0294595,
+    "whole_v3_and_retry_reporting_inr": 193.11734743532833,
+    "whole_v3_and_retry_guard_inr": 202.94595
+  },
+  "config_sha256": "c1077b1929e316c9c6267613892d6d2164c27a832788ae3a61102969f395ee3d",
+  "helper_source_sha256": "3e375a48c123475eb51a103ebe1775bf4f4ad8db9d245aa2251d051dcb027174"
+}

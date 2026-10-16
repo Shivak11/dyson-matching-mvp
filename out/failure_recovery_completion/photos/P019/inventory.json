@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        4,
+        151,
+        989,
+        836
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "in-line configuration with dust bin aligned directly with cyclone assembly and wand",
+          "box_2d": [
+            4,
+            631,
+            346,
+            836
+          ]
+        },
+        {
+          "feature": "cyclone",
+          "visible": true,
+          "detail": "copper-colored multi-cyclone assembly arranged radially",
+          "box_2d": [
+            68,
+            705,
+            251,
+            793
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "orange-copper rigid extension tube connecting cleaner head to body",
+          "box_2d": [
+            398,
+            346,
+            737,
+            596
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "motorized cleaner head with visible red and blue brush roller elements",
+          "box_2d": [
+            824,
+            151,
+            989,
+            292
+          ]
+        }
+      ],
+      "readable_identifier": "animal"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        4,
+        151,
+        989,
+        836
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "in-line configuration with dust bin aligned directly with cyclone assembly and wand",
+          "box_2d": [
+            4,
+            631,
+            346,
+            836
+          ]
+        },
+        {
+          "feature": "cyclone",
+          "visible": true,
+          "detail": "copper-colored multi-cyclone assembly arranged radially",
+          "box_2d": [
+            68,
+            705,
+            251,
+            793
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "orange-copper rigid extension tube connecting cleaner head to body",
+          "box_2d": [
+            398,
+            346,
+            737,
+            596
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "motorized cleaner head with visible red and blue brush roller elements",
+          "box_2d": [
+            824,
+            151,
+            989,
+            292
+          ]
+        }
+      ],
+      "readable_identifier": "animal"
+    }
+  ]
+}

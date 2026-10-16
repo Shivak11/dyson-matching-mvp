@@ -55,3 +55,10 @@ The stopped phase has made 42 paid requests and costs INR 182.53 at the reportin
 All 166 offline tests pass. The partial audit verifies 969 unchanged input/source/reference hashes, the saved completed outputs, request reconstruction, costs and pauses. It retains a failed status because P019 is a known terminal output-limit error; it is not a completed 23-photo audit. A fresh strict audit of the preserved earlier 58-photo benchmark still passes.
 
 The old benchmark remains 37 correct, five confidently wrong and 15 unsure on 57 singles, plus the correct V12/V15 identity set. Client-store holdout accuracy, paid expected-product verification, retake completion, the local upload screen and client HTML remain untested or pending. See edge-case-register.md for the requested case record.
+
+
+## Final control completion, 16 October 2026
+
+The separate same-prompt P019 retry completed normally at the 65,536-token cap and returned unsure. All 23 selected photos are complete. The 20 failures remain six correct, one confidently wrong and 13 unsure; controls P006 and P014 remain correct and P019 regresses from correct to unsure. The original 32k truncation and its charge remain unchanged. The combined strict independent audit passes, including all 1,148 frozen inputs and the original 58-photo benchmark.
+
+The retry cost USD0.1113075, or INR10.5916916 at the recorded reporting rate. The complete selected failure round including the retry cost INR193.1173474, or INR8.3964064 per selected photo. All nine stage ledgers account for INR777.7909361 under the conservative guard, leaving INR222.2090639 of the INR1,000 stage ceiling. Overall guard spending is INR820.4709361 of INR2,000. No calls remain pending. The audit source, report, 173-test log and verification receipt are in out/failure_recovery_completion/.

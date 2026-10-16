@@ -1,0 +1,9 @@
+{
+  "job_id": "v3:inventory:P019",
+  "request_sha256": "0d268587a9150e6283dc4b764060b8450f77a177bb3458b47afe955731ae132e",
+  "original_record_sha256": "7959fd1bc67d9e25e5f7bd39aec424843796cea4753203eef7c3fa023fae66e3",
+  "original_config_sha256": "d20c97facbbb3b75e919b9d59268bf48760d7e0d6c67a27ba2d4cd0f941a162c",
+  "original_raw_sha256": "7f1e99896633f7b1b7634ce970c24b445eef07907abf9b2b0655e07863ecd6bd",
+  "paid_requests": 0,
+  "additional_cost_usd": 0
+}

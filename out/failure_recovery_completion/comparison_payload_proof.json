@@ -1,0 +1,16 @@
+{
+  "old_logical_job_id": "v3:compare:P019",
+  "new_logical_job_id": "v3long:compare:P019",
+  "old_request_sha256": "8620e95432c65540b0a35d9492ae2ce34cca4b9aa14c313b9ca3b34d3481615f",
+  "new_request_sha256": "dc688c3dba2136468fe339ce9770b7323d2b6806e3fcbcd75b0f2ad97b98adc9",
+  "payload_changed_fields": {
+    "max_tokens": {
+      "old": 32768,
+      "new": 65536
+    }
+  },
+  "old_timeout_seconds": 480,
+  "new_timeout_seconds": 900,
+  "reservation_usd": 0.28326,
+  "original_failed_record_sha256": "5024def1e687526ae93f6469044a880e1769a6140e2273952c06baa292b5d959"
+}
