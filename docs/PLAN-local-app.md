@@ -43,3 +43,5 @@ Orchestrator owns this plan, product intent, shared API contract, tests for inte
 ## Completion evidence
 
 Record source tests, local runtime, browser journeys, live provider inference, independent experience review, remote push and owner acceptance separately in docs/local-app-verification.md. Owner acceptance remains pending until Shiva tries or accepts the app. No deployment claim. Old accuracy figures remain old measurements; the web app itself has no fresh accuracy score.
+
+16 October interview outcome: Shiva confirmed both Identify(default) and Verify, with six starting Dyson products and the ability to add manufacturer images and brochure details.
