@@ -39,13 +39,16 @@ class PrivatePackagingTests(unittest.TestCase):
     def test_local_seed_has_only_manufacturer_inputs(self):
         with tempfile.TemporaryDirectory() as d:
             source = Path(d) / 'source'; source.mkdir(); self.fixture(source)
-            cards = {'products': {'family': {'images': [{'file': 'data/catalog/photo.jpg'}]}}}
+            reference = source / 'data/reference_images_v2/button.jpg'
+            reference.parent.mkdir()
+            reference.write_bytes(b'manufacturer-reference')
+            cards = {'products': {'family': {'images': [{'file': 'data/catalog/photo.jpg'}, {'file': 'data/reference_images_v2/button.jpg'}]}}}
             (source / 'data/reference_cards_v2.json').write_text(json.dumps(cards))
             model = {'provider': 'openrouter', 'model': 'fixed-model', 'threshold': 90}
             (source / 'data/pipeline_v2_recovery_config.json').write_text(json.dumps({'models': {'flash37high': model}, 'frozen_files': ['DO_NOT_COPY']}))
             destination = Path(d) / 'local'
             result = packaging.prepare_inputs(source, destination)
-            self.assertEqual(result['manufacturer_images'], 1)
+            self.assertEqual(result['manufacturer_images'], 2)
             self.assertEqual(json.loads((destination / 'runtime_config.json').read_text()), {'model': model})
             self.assertEqual(json.loads((destination / 'var/catalogue-seed/reference_cards.json').read_text()), cards)
             self.assertFalse((destination / 'data/test').exists())

@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "dyson-private-testing",
+  "status": "UNASSESSED",
+  "repository": "/Users/shivakakkar/Python Projects/Multiplier-dyson/app",
+  "branch": "codex/local-app",
+  "base": "ed4eb5f@ed4eb5f91a466d8d495af87ee0dbedfa788762c4",
+  "mode": "FOCUSED",
+  "selected_modules": [
+    "ai-llm",
+    "backend-api",
+    "frontend-client",
+    "compatibility-integrations"
+  ],
+  "allowed_actions": [
+    "edit-files",
+    "run-tests",
+    "commit"
+  ],
+  "allowed_paths": [
+    "."
+  ],
+  "allowed_destinations": [
+    "none"
+  ],
+  "plan": "docs/PLAN-private-testing-app.md",
+  "environment": "local",
+  "excluded_actions": [
+    "all-other-mutations"
+  ],
+  "created_at": "2026-10-16T13:27:37.282Z",
+  "attempt_limit": 4,
+  "minute_budget": 60,
+  "attempts": [],
+  "completion_contract": {
+    "schema_version": "1.0.0",
+    "claims": [
+      {
+        "id": "private-source",
+        "level": "source",
+        "actor_ref": "configured-owner",
+        "client": "local-tools",
+        "environment": "local",
+        "action": "Run app and parity tests without network inference",
+        "expected_result": "Offline tests pass; prompts, settings and gates preserve baseline behaviour",
+        "context_file": "docs/evidence/private-testing/private-source-context.json"
+      },
+      {
+        "id": "private-package",
+        "level": "package",
+        "actor_ref": "configured-owner",
+        "client": "local-tools",
+        "environment": "local",
+        "action": "Run allowlisted code with manufacturer seed and historical files absent",
+        "expected_result": "Fresh path starts and accepts test uploads without research manifests or outputs",
+        "context_file": "docs/evidence/private-testing/private-package-context.json"
+      },
+      {
+        "id": "private-journey",
+        "level": "journey",
+        "actor_ref": "configured-owner",
+        "client": "local-browser",
+        "environment": "local",
+        "action": "Use Identify/Verify, per-object decisions, Run details and downloads",
+        "expected_result": "Responsive accessible UI works; downloaded predictions remain unchanged",
+        "context_file": "docs/evidence/private-testing/private-journey-context.json"
+      },
+      {
+        "id": "private-hosting",
+        "level": "source",
+        "actor_ref": "configured-owner",
+        "client": "local-tools",
+        "environment": "local",
+        "action": "Inspect officially supported Sites execution and access model",
+        "expected_result": "Exact hosting dependencies or verified supported architecture are recorded",
+        "context_file": "docs/evidence/private-testing/private-hosting-context.json"
+      },
+      {
+        "id": "owner-acceptance",
+        "level": "owner-acceptance",
+        "actor_ref": "configured-owner",
+        "client": "local-browser",
+        "environment": "local",
+        "action": "Owner tries the resulting app",
+        "expected_result": "Explicit acceptance remains pending",
+        "context_file": "docs/evidence/private-testing/owner-acceptance-context.json"
+      }
+    ]
+  }
+}

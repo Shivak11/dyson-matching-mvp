@@ -1,80 +1,79 @@
 {
   "schema_version": "1.0.0",
-  "task_id": "dyson-local-app",
+  "task_id": "dyson-private-testing",
   "status": "UNASSESSED",
   "repository": "/Users/shivakakkar/Python Projects/Multiplier-dyson/app",
   "branch": "codex/local-app",
-  "base": "ff82806@ff828065f4ffdfd56b7c905b7ee13d89a3e6da22",
+  "base": "ed4eb5f@ed4eb5f91a466d8d495af87ee0dbedfa788762c4",
   "mode": "FOCUSED",
   "selected_modules": [
     "ai-llm",
     "backend-api",
     "frontend-client",
-    "data-migrations"
+    "compatibility-integrations"
   ],
   "allowed_actions": [
     "edit-files",
     "run-tests",
-    "commit",
-    "push"
+    "commit"
   ],
   "allowed_paths": [
     "."
   ],
   "allowed_destinations": [
-    "private-repository"
+    "none"
   ],
-  "plan": "docs/PLAN-local-app.md",
+  "plan": "docs/PLAN-private-testing-app.md",
   "environment": "local",
   "excluded_actions": [
     "all-other-mutations"
   ],
-  "created_at": "2026-10-16T12:32:28.431Z",
+  "created_at": "2026-10-16T13:27:37.282Z",
   "attempt_limit": 4,
-  "minute_budget": 180,
+  "minute_budget": 60,
   "attempts": [],
   "completion_contract": {
     "schema_version": "1.0.0",
     "claims": [
       {
-        "id": "source-tests",
+        "id": "private-source",
         "level": "source",
         "actor_ref": "configured-owner",
-        "client": "python",
+        "client": "local-tools",
         "environment": "local",
-        "action": "Run regression and app tests",
-        "expected_result": "All tests pass without paid requests",
-        "context_file": "docs/evidence/source-tests-context.json"
+        "action": "Run app and parity tests without network inference",
+        "expected_result": "Offline tests pass; prompts, settings and gates preserve baseline behaviour",
+        "context_file": "docs/evidence/private-testing/private-source-context.json"
       },
       {
-        "id": "browser-journey",
+        "id": "private-package",
+        "level": "package",
+        "actor_ref": "configured-owner",
+        "client": "local-tools",
+        "environment": "local",
+        "action": "Run allowlisted code with manufacturer seed and historical files absent",
+        "expected_result": "Fresh path starts and accepts test uploads without research manifests or outputs",
+        "context_file": "docs/evidence/private-testing/private-package-context.json"
+      },
+      {
+        "id": "private-journey",
         "level": "journey",
         "actor_ref": "configured-owner",
         "client": "local-browser",
         "environment": "local",
-        "action": "Add manufacturer material, preview store images and inspect results",
-        "expected_result": "Catalogue persists, jobs update and per-object results remain inspectable",
-        "context_file": "docs/evidence/browser-journey-context.json"
+        "action": "Use Identify/Verify, per-object decisions, Run details and downloads",
+        "expected_result": "Responsive accessible UI works; downloaded predictions remain unchanged",
+        "context_file": "docs/evidence/private-testing/private-journey-context.json"
       },
       {
-        "id": "openrouter-runtime",
-        "level": "runtime",
+        "id": "private-hosting",
+        "level": "source",
         "actor_ref": "configured-owner",
-        "client": "local-server",
+        "client": "local-tools",
         "environment": "local",
-        "action": "Run one bounded uploaded-photo comparison",
-        "expected_result": "Pinned OpenRouter Gemini returns a locally validated result and metered charges",
-        "context_file": "docs/evidence/openrouter-runtime-context.json"
-      },
-      {
-        "id": "design-review",
-        "level": "intent-conformance",
-        "actor_ref": "configured-owner",
-        "client": "local-browser",
-        "environment": "local",
-        "action": "Review the built screens against the intent and design package",
-        "expected_result": "A fresh reviewer passes the required paths",
-        "context_file": "docs/evidence/design-review-context.json"
+        "action": "Inspect officially supported Sites execution and access model",
+        "expected_result": "Exact hosting dependencies or verified supported architecture are recorded",
+        "context_file": "docs/evidence/private-testing/private-hosting-context.json"
       },
       {
         "id": "owner-acceptance",
@@ -82,23 +81,10 @@
         "actor_ref": "configured-owner",
         "client": "local-browser",
         "environment": "local",
-        "action": "Owner tries and accepts the app",
-        "expected_result": "Explicit owner acceptance, currently pending",
-        "context_file": "docs/evidence/owner-acceptance-context.json"
+        "action": "Owner tries the resulting app",
+        "expected_result": "Explicit acceptance remains pending",
+        "context_file": "docs/evidence/private-testing/owner-acceptance-context.json"
       }
     ]
-  },
-  "design_package": {
-    "required": true,
-    "reason": "New local upload and comparison application",
-    "path": ".engineering/super-outer/design/local-app/v1",
-    "version": "1",
-    "sha256": "c247bec7f016f41e2c957446d98f009ab6e44d681b5fa3d1466e1097cb097fa1"
-  },
-  "product_intent": {
-    "path": ".engineering/super-outer/intent/local-app.md",
-    "version": "1",
-    "sha256": "f709d757017b0e59ac6d80dabf2a19abd68c8785acfe97597e9f2d9f6f0a0421"
-  },
-  "completion_evidence": "docs/evidence/completion-receipt.json"
+  }
 }

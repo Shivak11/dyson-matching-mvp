@@ -43,7 +43,8 @@ def prepare_inputs(source, destination):
             relative = Path(image['file'])
             original = (source / relative).resolve()
             target = (seed / relative).resolve()
-            if relative.is_absolute() or not original.is_relative_to(source / 'data/catalog') or not target.is_relative_to(seed):
+            manufacturer_roots = (source / 'data/catalog', source / 'data/reference_images_v2')
+            if relative.is_absolute() or not any(original.is_relative_to(folder) for folder in manufacturer_roots) or not target.is_relative_to(seed):
                 raise ValueError('Manufacturer images must stay inside the catalogue folders.')
             if original.is_symlink() or not original.is_file():
                 raise ValueError('A manufacturer reference is missing.')
