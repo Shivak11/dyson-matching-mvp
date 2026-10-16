@@ -45,3 +45,5 @@ Workers are not alone in the codebase. Stat their files before writing. On unexp
 - Rendered desktop and 390px journeys, keyboard operation, useful empty/error states, per-object selection, Run details, JSON/CSV download and catalogue persistence. Test-only fixtures are clearly identified and kept outside production source/runtime.
 - Exact Sites runtime evidence, and either a verified owner-private deployed URL or a precise blocker with no workaround exposure.
 - Owner acceptance remains separate and pending until explicitly supplied.
+
+16 October clarification: retain the existing photo-visible, explicit Retry as a new run action. The prototype's review-first wording does not add another confirmation step. No automatic paid retry is introduced by this conversion. In diagnostics, AI model names are labelled as AI models so they cannot be mistaken for the claimed product model.

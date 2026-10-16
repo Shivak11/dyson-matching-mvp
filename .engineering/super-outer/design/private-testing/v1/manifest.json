@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "surface": "private-testing",
+  "version": "1",
+  "intent": {
+    "path": ".engineering/super-outer/intent/private-testing.md",
+    "version": "1",
+    "sha256": "2af71e48f3cef34844d761db58c62424d6abc657ada997c8220c51b46b7f9a76"
+  },
+  "frames": [
+    {
+      "file": "frames/01-result-desktop.png",
+      "state": "result",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "a323416ca00ea9175b9554f8a1fe059e438dd7112c84f25a4a7f3286be10bb4d",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/02-result-guidance-desktop.png",
+      "state": "result",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "34810aac896cef6d2d590ca61518c4d0fd3ae3b91b77fb2e538ce629d8b39122",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/03-details-desktop.png",
+      "state": "details",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "c41762440cbd8689fc073cc3acd969df94ab7bd312258ec5c243c05a0f58c11b",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/04-empty-desktop.png",
+      "state": "empty",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "a8ed4d5077171cbd399e867c48da00d457f817d9049ffba3a3dafd2f640b7c99",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/05-running-desktop.png",
+      "state": "running",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "7ad7c6a4831bae313b2304b775a51f2523c1d79486d0d55fd5c1c58431d816e9",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/06-error-desktop.png",
+      "state": "error",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "2d36db9374b416841553f9aa1f97ab41ff6c87486659eeeb1bdbfd5172e340f8",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/07-history-desktop.png",
+      "state": "history",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "cbaabbeaf211a1e96c929a4ac5912adb95cb8ed4609d4b33067cebbdb0703651",
+      "screen": "History"
+    },
+    {
+      "file": "frames/08-selected-desktop.png",
+      "state": "selected",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "310863455cca16b6e69e266b1b9dbdfce241871e6c484c3e69387a61ecd05df9",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/09-verify-desktop.png",
+      "state": "selected",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "5a91badd0c9f36a4f38271937061f20e0cbef0e429805c7183999081f513bd56",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/10-result-narrow.png",
+      "state": "result",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "ade4ddc23ea699fb510b9b44e05d7f18fb5c9bb79f1d7ed9342282a7b0a68444",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/11-result-guidance-narrow.png",
+      "state": "result",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "35e9d9f56cf604a6ad2b0c0b23b56420453a0bcf661d0cc8334601b5a35b52c5",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/12-details-narrow.png",
+      "state": "details",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "4fd1faf9109ff18bfb2df74597e37d8461185cdd127cb863f1f284be1a5680d1",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/13-empty-narrow.png",
+      "state": "empty",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "2126e7c68f7c8445fc2d7992abd43fad0a0ff9d38b993b37799d6aa082d7f200",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/14-running-narrow.png",
+      "state": "running",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "d0838a1e8e4249da6b091b19dc5ea9114ff1c54d24f18e5914e04b109849bbab",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/15-error-narrow.png",
+      "state": "error",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "e5b84d41a67bb9298d6c9c83222180f4435fda5d884eb49ca4fa922cdb205098",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/16-history-narrow.png",
+      "state": "history",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "8c88211fade5eb40b227d9a6c9bf61a358639c490983756fc13e5fc50f969466",
+      "screen": "History"
+    },
+    {
+      "file": "frames/17-selected-narrow.png",
+      "state": "selected",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "1499723dce83f95f1d4230455288d2b2629620d7bf9ecb0c8fa0bb6babdb7eb9",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/18-verify-narrow.png",
+      "state": "selected",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "77596569bc4f4a08a2b2784f89f1490fa0a74bc38f09829998cd8f5200448476",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/19-not-sure-narrow.png",
+      "state": "not-sure",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "bb2cbf4da033d39b7c31843611247daff2e44c3fe99ec57532d70186527ae034",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/20-outside-desktop.png",
+      "state": "outside",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "c57372b16113413010b772eb294864a118f03055abe844f055b4172fd1d40f75",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/21-keyboard-reduced-motion.png",
+      "state": "result",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "e9c671ec9e431845e63cb7037d712f2e6768e5bccf4928b6860f2ed47e6862b8",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/22-details-costs-narrow.png",
+      "state": "details",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "bbd6b50c4866aa408146c4ef7316dff65b616a9c9fe34d9ba4438d341423cb00",
+      "screen": "Match photos"
+    },
+    {
+      "file": "frames/23-history-actions-narrow.png",
+      "state": "history",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "4cb894fd4530d272be545ea533bada6b06be1bf2e73da8b34dce98d9152f8563",
+      "screen": "History"
+    },
+    {
+      "file": "frames/24-verify-result-desktop.png",
+      "state": "verify-result",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "sha256": "7298d91c4fc9c46015d81a871e5868b292680bdf20da3dc03ecf166ab98adb61",
+      "screen": "Match photos"
+    }
+  ],
+  "states_covered": [
+    "loading",
+    "empty",
+    "selected",
+    "verify-selected",
+    "queued",
+    "running",
+    "long-running",
+    "return",
+    "result",
+    "details",
+    "not-sure",
+    "outside",
+    "failed",
+    "history",
+    "export-unavailable",
+    "legacy-details",
+    "narrow",
+    "reduced-motion"
+  ],
+  "decisions": [
+    {
+      "id": "o1",
+      "statement": "Keep the existing comparison workspace, tokens, manufacturer catalogue and qualitative confidence. Add exports, Run details and per-object retake guidance; remove historical evaluation/report UI. Source: committed docs/PLAN-private-testing-app.md and intent/private-testing.md v1.",
+      "provenance": "owner",
+      "date": "2026-10-16",
+      "decider": "Shiva, recorded by orchestrator"
+    },
+    {
+      "id": "d1",
+      "statement": "Place saved-result export actions above the comparison and in the matching History row. Put retake guidance after selected-machine evidence.",
+      "provenance": "designer",
+      "date": "2026-10-16",
+      "decider": "design prototyper"
+    },
+    {
+      "id": "d2",
+      "statement": "Use native details/summary for metadata and a focusable internal-scroll request table. Preserve expansion/focus through polling and selection.",
+      "provenance": "designer",
+      "date": "2026-10-16",
+      "decider": "design prototyper"
+    },
+    {
+      "id": "a1",
+      "statement": "Retain light-only app styling and representative 1440x1000 and390x844 viewports from local-app/v1; revisit if another client/theme is required.",
+      "provenance": "assumption",
+      "date": "2026-10-16",
+      "decider": "design prototyper"
+    }
+  ],
+  "simulated": [
+    {
+      "what": "Store photo, boxes, identities, evidence and retake guidance",
+      "how": "Earlier design fixture photograph plus invented fixed decisions. Runtime must use uploaded originals and saved per-object inference output."
+    },
+    {
+      "what": "Run stages, History, timing, digests, model/provider and cost records",
+      "how": "Fixed fixture state switch and sample values. Runtime must use persisted job/run_details and budget ledger; no current-config substitution for missing history."
+    },
+    {
+      "what": "Uploads, new runs, retry and downloads",
+      "how": "Fixture state navigation and clearly marked download alert only. Runtime must use existing upload/job APIs and sealed export endpoints; no live service was called."
+    },
+    {
+      "what": "Catalogue navigation",
+      "how": "Package placeholder only. Runtime must retain existing catalogue screens and storage."
+    }
+  ],
+  "components": [
+    {
+      "name": "Photo queue / comparison / evidence / status / table / buttons",
+      "status": "existing",
+      "source": "web/app.js and web/style.css"
+    },
+    {
+      "name": "Saved export actions",
+      "status": "new",
+      "source": "prototype.html; briefs/frontend.md"
+    },
+    {
+      "name": "Per-object retake guidance",
+      "status": "new",
+      "source": "prototype.html; briefs/frontend.md"
+    },
+    {
+      "name": "Native Run details",
+      "status": "new",
+      "source": "prototype.html; briefs/frontend.md"
+    }
+  ],
+  "tokens": {
+    "source": "web/style.css :root (copied inline for standalone host mirror)",
+    "names": [
+      "--paper",
+      "--canvas",
+      "--ink",
+      "--muted",
+      "--line",
+      "--blue",
+      "--bluewash",
+      "--green",
+      "--greenwash",
+      "--amber",
+      "--amberwash",
+      "--red",
+      "--radius",
+      "--focus"
+    ]
+  },
+  "prototype": {
+    "kind": "standalone",
+    "location": ".engineering/super-outer/design/private-testing/v1/prototype.html",
+    "branch": null,
+    "authorisation": "Orchestrator explicitly authorised package-only host mirror; no product files may be edited by designer."
+  },
+  "supersedes": null,
+  "not_rendered": [
+    {
+      "state": "loading / queued / long-running / return / export failure / legacy-null-details",
+      "reason": "Behaviour specified in states.md; bounded package uses the existing loading/running/result layouts rather than separate duplicate frames."
+    },
+    {
+      "state": "dark theme",
+      "reason": "Existing local app supports light theme only."
+    }
+  ],
+  "owner_questions": [],
+  "exclusions": [
+    "All files in this package are design-only and must be excluded from runtime packaging."
+  ],
+  "checks": {
+    "native_viewport_frames": true,
+    "png_dimensions_verified": true,
+    "page_errors": [],
+    "document_overflow": false,
+    "interaction_evidence": "interaction-evidence.json",
+    "owner_acceptance": "pending"
+  },
+  "files_written": [
+    "assets/fixture-photo.jpg",
+    "assets/v12.png",
+    "briefs/frontend.md",
+    "check-interactions.py",
+    "frames/01-result-desktop.png",
+    "frames/02-result-guidance-desktop.png",
+    "frames/03-details-desktop.png",
+    "frames/04-empty-desktop.png",
+    "frames/05-running-desktop.png",
+    "frames/06-error-desktop.png",
+    "frames/07-history-desktop.png",
+    "frames/08-selected-desktop.png",
+    "frames/09-verify-desktop.png",
+    "frames/10-result-narrow.png",
+    "frames/11-result-guidance-narrow.png",
+    "frames/12-details-narrow.png",
+    "frames/13-empty-narrow.png",
+    "frames/14-running-narrow.png",
+    "frames/15-error-narrow.png",
+    "frames/16-history-narrow.png",
+    "frames/17-selected-narrow.png",
+    "frames/18-verify-narrow.png",
+    "frames/19-not-sure-narrow.png",
+    "frames/20-outside-desktop.png",
+    "frames/21-keyboard-reduced-motion.png",
+    "frames/22-details-costs-narrow.png",
+    "frames/23-history-actions-narrow.png",
+    "frames/24-verify-result-desktop.png",
+    "interaction-evidence.json",
+    "prototype.html",
+    "render-evidence.json",
+    "render.py",
+    "states.md",
+    "manifest.json"
+  ]
+}

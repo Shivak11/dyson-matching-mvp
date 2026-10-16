@@ -86,5 +86,17 @@
         "context_file": "docs/evidence/private-testing/owner-acceptance-context.json"
       }
     ]
+  },
+  "design_package": {
+    "required": true,
+    "reason": "Bounded additions to the private upload and saved prediction interface",
+    "path": ".engineering/super-outer/design/private-testing/v1",
+    "version": "1",
+    "sha256": "4e1cc91ce6c78aef317376c5fbab5118fa16b9d5c80217bc856c9548a25b9075"
+  },
+  "product_intent": {
+    "path": ".engineering/super-outer/intent/private-testing.md",
+    "version": "1",
+    "sha256": "2af71e48f3cef34844d761db58c62424d6abc657ada997c8220c51b46b7f9a76"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "native_details_space_open_close": true,
+  "keyboard_selection_updates_retake": true,
+  "verify_requires_claimed_model": true,
+  "explicit_run_only": true,
+  "running_has_no_downloads": true,
+  "return_from_history": true,
+  "error_preserves_photo_review": true,
+  "browser_errors": ""
+}

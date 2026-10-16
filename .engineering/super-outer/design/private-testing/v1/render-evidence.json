@@ -1,0 +1,409 @@
+[
+  {
+    "file": "frames/01-result-desktop.png",
+    "state": "result",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/02-result-guidance-desktop.png",
+    "state": "result",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 309,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/03-details-desktop.png",
+    "state": "details",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 717,
+      "overflow": false,
+      "images": true,
+      "details": true
+    }
+  },
+  {
+    "file": "frames/04-empty-desktop.png",
+    "state": "empty",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/05-running-desktop.png",
+    "state": "running",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/06-error-desktop.png",
+    "state": "error",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/07-history-desktop.png",
+    "state": "history",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/08-selected-desktop.png",
+    "state": "selected",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/09-verify-desktop.png",
+    "state": "selected",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/10-result-narrow.png",
+    "state": "result",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/11-result-guidance-narrow.png",
+    "state": "result",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 913,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/12-details-narrow.png",
+    "state": "details",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 1659,
+      "overflow": false,
+      "images": true,
+      "details": true
+    }
+  },
+  {
+    "file": "frames/13-empty-narrow.png",
+    "state": "empty",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/14-running-narrow.png",
+    "state": "running",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/15-error-narrow.png",
+    "state": "error",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/16-history-narrow.png",
+    "state": "history",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/17-selected-narrow.png",
+    "state": "selected",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/18-verify-narrow.png",
+    "state": "selected",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 173,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/19-not-sure-narrow.png",
+    "state": "not-sure",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 802,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/20-outside-desktop.png",
+    "state": "outside",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 309,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/21-keyboard-reduced-motion.png",
+    "state": "result",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "scrollY": 268,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/22-details-costs-narrow.png",
+    "state": "details",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 1615,
+      "overflow": false,
+      "images": true,
+      "details": true
+    }
+  },
+  {
+    "file": "frames/23-history-actions-narrow.png",
+    "state": "history",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 390,
+      "height": 844,
+      "visible": "visible",
+      "scrollY": 0,
+      "overflow": false,
+      "images": true,
+      "details": false
+    }
+  },
+  {
+    "file": "frames/24-verify-result-desktop.png",
+    "state": "verify-result",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "tool": "agent-browser",
+    "readback": {
+      "width": 1440,
+      "height": 1000,
+      "visible": "visible",
+      "mode": "verify",
+      "claim": "Matches the selected model",
+      "overflow": false
+    }
+  }
+]
