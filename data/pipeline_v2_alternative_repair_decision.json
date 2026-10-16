@@ -1,0 +1,34 @@
+{
+  "recorded_at_utc": "2026-10-16T07:54:13.587858+00:00",
+  "owner_instruction": "continue the calls lets finish the 58",
+  "job_id": "v2long:identify:P051",
+  "allowed_error": "Invalid top two",
+  "allowed_status": "not_sure",
+  "known_non_catalogue_ids": [
+    "dyson_v11",
+    "dyson_gen5detect",
+    "shark_stratos"
+  ],
+  "action": "Remove only known non-catalogue IDs outside supplied candidates from advisory top_two; retain them as unverified alternatives.",
+  "preserve_fields": [
+    "status",
+    "product",
+    "confidence",
+    "evidence",
+    "missing_evidence",
+    "contradictions",
+    "retake",
+    "candidate_checks"
+  ],
+  "invent_guesses": false,
+  "source_labels_unchanged": true,
+  "new_paid_requests": 0,
+  "use_existing_offline_validation_recovery": true,
+  "stage_ceiling_inr": 600,
+  "job_prefix": "v2long:",
+  "allowed_stages": [
+    "identify",
+    "refine"
+  ],
+  "scope": "Only unresolved advisory-alternative failures in the nine-photo recovery. Keep one immutable receipt for each repaired job."
+}
