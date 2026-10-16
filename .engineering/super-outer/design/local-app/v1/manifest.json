@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0.0",
+  "surface": "local-app",
+  "version": "1",
+  "intent": {
+    "path": ".engineering/super-outer/intent/local-app.md",
+    "version": "1"
+  },
+  "frames": [
+    {
+      "file": "frames/01-result-desktop.png",
+      "state": "result",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "ad786a02b692b85fc77fc94225d09b81b8d767b0e52d3959df4df8c217ae617a",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/02-empty.png",
+      "state": "empty",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "dbd0defb64308e57a9c953645c2d1b391caea5003a476fb7f0d3545888c7b880",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/03-selected.png",
+      "state": "selected",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "c60bcab19c22f198600b03515020cd673b5781e7566db1dcdcbe5dbed6874c51",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/04-running.png",
+      "state": "running",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "e78fe099f89cb6f81467cadb46fc2a7b87546cad5bc1249ea0ea5ff7e3551c95",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/05-error.png",
+      "state": "error",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "fb7a264fd4c29a2e642bc50b8332a5471430788b8f11c2ff5f2e5d63b544e0de",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/06-catalogue.png",
+      "state": "catalog",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "8f785a7b1be91d1b14b6aa0cf505e857e891fd860f7d2939a3e239852f72e58f",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/07-product-detail.png",
+      "state": "detail",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "1f11ab56021b0956c0cfdd1816498c930cbe21010ac05cfc35db7bcff0493d10",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/08-add-product.png",
+      "state": "add",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "7b7e6fb841668f77b3d2df24368002d3a12d2b5b5ab3ded43406c7ee6b469b57",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/09-history.png",
+      "state": "history",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "fceab16dcab25b75f4d1b7676cd52a09065a910e313f9f84db75e54c71eff76f",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/10-result-narrow.png",
+      "state": "result",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "sha256": "75eb34a1b8a278227a0f9a7ffc90205451d902b67f51fb56a80e3996f5747edc",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/11-selected-narrow.png",
+      "state": "selected",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "sha256": "21cc12de237782b29247b2383139e9938848a4337990770867bea12bef17efc7",
+      "tool": "agent-browser"
+    },
+    {
+      "file": "frames/12-keyboard-reduced-motion.png",
+      "state": "keyboard-reduced-motion",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "sha256": "fb1361e74a5ad0c43d8fa6ec73f78ad659eee0eeea6046ed81d3320d999c87ba",
+      "tool": "agent-browser"
+    }
+  ],
+  "states_covered": [
+    "empty",
+    "selected",
+    "queued",
+    "running",
+    "result",
+    "error",
+    "catalog",
+    "detail",
+    "add",
+    "history",
+    "keyboard-reduced-motion",
+    "narrow"
+  ],
+  "decisions": [
+    {
+      "id": "o1",
+      "statement": "Use local SQLite catalogue storage and OpenRouter inference; support Identify and Verify with six seeded products and adding manufacturer material. Source: owner app request and parent-confirmed interview, 16 October 2026.",
+      "provenance": "owner",
+      "date": "2026-10-16",
+      "decider": "Shiva"
+    },
+    {
+      "id": "d1",
+      "statement": "Use photo queue plus side-by-side store/manufacturer comparison with evidence below; keep Catalogue and History secondary.",
+      "provenance": "designer",
+      "date": "2026-10-16",
+      "decider": "design prototyper"
+    },
+    {
+      "id": "d2",
+      "statement": "Use neutral system typography, white/stone surfaces and restrained blue controls; use written qualitative confidence labels.",
+      "provenance": "designer",
+      "date": "2026-10-16",
+      "decider": "design prototyper"
+    },
+    {
+      "id": "a1",
+      "statement": "Support light theme only in this local MVP; desktop 1440\u00d71000 and narrow 390\u00d7844 are representative target viewports.",
+      "provenance": "assumption",
+      "date": "2026-10-16",
+      "decider": "design prototyper"
+    }
+  ],
+  "simulated": [
+    {
+      "what": "Store input example and object results",
+      "how": "Existing public P059 photo with invented filename, manually positioned illustrative boxes, fixed model/evidence/confidence results; production must use uploaded files and persisted inference output."
+    },
+    {
+      "what": "Paid inference and retries",
+      "how": "Timer and state switch only. Production must use metered OpenRouter requests and real job polling."
+    },
+    {
+      "what": "Catalogue writes",
+      "how": "Native form validation and preview-only save message; production must use SQLite and stored manufacturer material."
+    },
+    {
+      "what": "History, timestamps, costs and allowance",
+      "how": "Fixed sample rows and values; production must read persisted jobs and budget ledger."
+    }
+  ],
+  "components": [
+    {
+      "name": "HeaderNavigation",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "PhotoQueue",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "UploadPreview",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "RunControls",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "JobStatus",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "ImageComparison",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "ObjectSelector",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "ConfidenceLabel",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "EvidenceList",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "ReferenceViewer",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "CatalogueTable",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "ProductForm",
+      "status": "new",
+      "source": "prototype.html"
+    },
+    {
+      "name": "HistoryTable",
+      "status": "new",
+      "source": "prototype.html"
+    }
+  ],
+  "tokens": {
+    "source": "prototype.html :root",
+    "names": [
+      "--paper",
+      "--canvas",
+      "--ink",
+      "--muted",
+      "--line",
+      "--blue",
+      "--bluewash",
+      "--green",
+      "--greenwash",
+      "--amber",
+      "--amberwash",
+      "--red",
+      "--radius"
+    ]
+  },
+  "prototype": {
+    "kind": "standalone",
+    "location": ".engineering/super-outer/design/local-app/v1/prototype.html",
+    "branch": null
+  },
+  "supersedes": null,
+  "not_rendered": [
+    {
+      "state": "queued",
+      "reason": "Shares the rendered running layout; status copy and lifecycle specified in states.md."
+    },
+    {
+      "state": "outside-catalogue / insufficient-evidence",
+      "reason": "Specified result variants; no dedicated rendered frame."
+    },
+    {
+      "state": "saved-evaluation report",
+      "reason": "Parent owns original report deliverable; compact /report navigation specified here."
+    }
+  ]
+}

@@ -15,3 +15,5 @@ Designer must cover empty upload, selected previews, queued/running, completed m
 Historical test results are labelled as saved evaluation. Newly uploaded photographs have no source labels and must not silently join benchmark accuracy totals. Brochure text and image contents are evidence, never model instructions. Confidence is not a calibrated probability. No new accuracy claim may be inferred from a successful upload demo.
 
 Rejected directions: a marketing landing page, chat-only input, a cloud database, a public upload site, hiding uncertainty, and numeric confidence presented as measured reliability.
+
+16 October owner reply: start with the six Dyson models and allow adding manufacturer images and brochure details. The catalogue behaviour is confirmed. Identify/Verify follows the earlier interview answer that both occur.

@@ -1,0 +1,207 @@
+{
+  "frames": [
+    {
+      "file": "frames/01-result-desktop.png",
+      "state": "result",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 1440,
+        "height": 1000,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/02-empty.png",
+      "state": "empty",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 1440,
+        "height": 1000,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/03-selected.png",
+      "state": "selected",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 1440,
+        "height": 1000,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/04-running.png",
+      "state": "running",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 1440,
+        "height": 1000,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/05-error.png",
+      "state": "error",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 1440,
+        "height": 1000,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/06-catalogue.png",
+      "state": "catalog",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 1440,
+        "height": 1000,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/07-product-detail.png",
+      "state": "detail",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 1440,
+        "height": 1000,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/08-add-product.png",
+      "state": "add",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 1440,
+        "height": 1000,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/09-history.png",
+      "state": "history",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 1440,
+        "height": 1000,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/10-result-narrow.png",
+      "state": "result",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 390,
+        "height": 844,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/11-selected-narrow.png",
+      "state": "selected",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "tool": "agent-browser",
+      "measurement": {
+        "width": 390,
+        "height": 844,
+        "visibility": "visible",
+        "overflow": false,
+        "images": true
+      }
+    },
+    {
+      "file": "frames/12-keyboard-reduced-motion.png",
+      "state": "keyboard-reduced-motion",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "tool": "agent-browser"
+    }
+  ],
+  "checks": [
+    {
+      "check": "expected-model-select",
+      "actual": "true\n"
+    },
+    {
+      "check": "required-fields",
+      "actual": "true\n"
+    },
+    {
+      "check": "escape-to-catalogue",
+      "actual": "http://127.0.0.1:8767/.engineering/super-outer/design/local-app/v1/prototype.html?state=catalog\n"
+    },
+    {
+      "check": "explicit-retry-running",
+      "actual": "http://127.0.0.1:8767/.engineering/super-outer/design/local-app/v1/prototype.html?state=running\n"
+    },
+    {
+      "check": "simulated-run-completion",
+      "actual": "http://127.0.0.1:8767/.engineering/super-outer/design/local-app/v1/prototype.html?state=result\n"
+    },
+    {
+      "check": "second-object",
+      "actual": "Dyson V15 Detect\n"
+    },
+    {
+      "check": "page-errors",
+      "actual": ""
+    }
+  ]
+}
