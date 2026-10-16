@@ -6,3 +6,8 @@ __pycache__/
 out/baseline/run.lock
 out/baseline-qwen/run.lock
 out/pipeline/run.lock
+var/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+.DS_Store
