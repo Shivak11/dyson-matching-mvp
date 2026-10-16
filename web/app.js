@@ -254,7 +254,7 @@
       const data = await api('/api/bootstrap');
       if (!Array.isArray(data.jobs) || !Array.isArray(data.catalogue) || !data.csrf_token || !data.settings) throw new Error('The server returned an incomplete workspace. Refresh the page to try again.');
       const oldJob = currentJob(); const oldStatus = oldJob?.status;
-      
+
       state.csrf = data.csrf_token; state.catalogue = data.catalogue; state.jobs = data.jobs; state.settings = data.settings; state.pollFailures = 0;
       if (!state.ready) { state.ready = true; try { const id = localStorage.getItem('dyson-selected-job'); if (state.jobs.some(j => j.id === id)) rememberJob(id); } catch {} render(); }
       else {

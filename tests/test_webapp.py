@@ -203,6 +203,15 @@ class AppTests(unittest.TestCase):
         diagnostic = json.loads((self.app.ledger_root / job['id'] / 'error.json').read_text())
         self.assertEqual(diagnostic['type'], 'RuntimeError')
 
+    def test_public_job_includes_current_inflight_reservation(self):
+        job = self.app.store.create_jobs({'images': [image_file()]})[0]
+        folder = self.app.ledger_root / job['id']
+        folder.mkdir()
+        (folder / 'inflight.json').write_text(json.dumps({'active-request': {'reserved_cost_usd': .25}}))
+        self.assertEqual(self.app.store.job(job['id'])['cost_inr'], 0)
+        self.assertEqual(self.app.public_jobs(job['id'])[0]['cost_inr'], 25)
+        self.assertEqual(self.app.bootstrap()['jobs'][0]['cost_inr'], 25)
+
     def test_saved_evaluation_keeps_raw_evidence_multi_objects_and_original_names(self):
         import shutil
         for relative in ('data/test/test_manifest.json', 'out/pipeline_v2_recovery/scoreboard.json',

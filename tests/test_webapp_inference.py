@@ -139,6 +139,27 @@ class InferenceTests(unittest.TestCase):
             with self.subTest(modify=modify), self.assertRaises(ValueError):
                 validate_batch(raw, [target()], self.snapshot)
 
+    def test_recorded_geometry_overrun_excludes_only_unverified_detail(self):
+        fixture = json.loads((Path(__file__).parent / 'fixtures/app_geometry_overrun.json').read_text())
+        before = copy.deepcopy(fixture['response'])
+        item = validate_batch(fixture['response'], fixture['targets'], fixture['candidates'])['o1']
+        self.assertEqual(item['decision']['product'], 'dyson_v8_absolute')
+        self.assertEqual(item['decision']['status'], 'match')
+        self.assertEqual(len(item['unverified_feature_checks']), 1)
+        self.assertEqual(len(item['decision']['evidence']), 2)
+        self.assertFalse(item['feature_checks'][2]['query_visible'])
+        self.assertIn('excluded', item['decision']['missing_evidence'][-1])
+        self.assertEqual(fixture['response'], before)
+
+    def test_foreign_body_support_cannot_establish_identity(self):
+        machine = target()
+        machine['box_2d'] = [100, 100, 900, 900]
+        raw = response(self.snapshot)
+        raw['results'][0]['result']['feature_checks'][0]['query_box_2d'] = [0, 0, 90, 90]
+        item = validate_batch(raw, [machine], self.snapshot)['o1']
+        self.assertEqual(item['decision']['status'], 'not_sure')
+        self.assertIsNone(item['decision']['product'])
+
     def test_failed_validation_records_failure_and_does_not_retry_success(self):
         self.script = [{'objects': [target()]}, {'results': []}]
         with self.assertRaises(ValueError):

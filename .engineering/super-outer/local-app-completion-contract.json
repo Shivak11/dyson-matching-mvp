@@ -9,7 +9,7 @@
       "environment": "local",
       "action": "Run regression and app tests",
       "expected_result": "All tests pass without paid requests",
-      "context_file": "docs/local-app-context.json"
+      "context_file": "docs/evidence/source-tests-context.json"
     },
     {
       "id": "browser-journey",
@@ -19,7 +19,7 @@
       "environment": "local",
       "action": "Add manufacturer material, preview store images and inspect results",
       "expected_result": "Catalogue persists, jobs update and per-object results remain inspectable",
-      "context_file": "docs/local-app-context.json"
+      "context_file": "docs/evidence/browser-journey-context.json"
     },
     {
       "id": "openrouter-runtime",
@@ -29,7 +29,7 @@
       "environment": "local",
       "action": "Run one bounded uploaded-photo comparison",
       "expected_result": "Pinned OpenRouter Gemini returns a locally validated result and metered charges",
-      "context_file": "docs/local-app-context.json"
+      "context_file": "docs/evidence/openrouter-runtime-context.json"
     },
     {
       "id": "design-review",
@@ -39,7 +39,7 @@
       "environment": "local",
       "action": "Review the built screens against the intent and design package",
       "expected_result": "A fresh reviewer passes the required paths",
-      "context_file": "docs/local-app-context.json"
+      "context_file": "docs/evidence/design-review-context.json"
     },
     {
       "id": "owner-acceptance",
@@ -49,7 +49,7 @@
       "environment": "local",
       "action": "Owner tries and accepts the app",
       "expected_result": "Explicit owner acceptance, currently pending",
-      "context_file": "docs/local-app-context.json"
+      "context_file": "docs/evidence/owner-acceptance-context.json"
     }
   ]
 }

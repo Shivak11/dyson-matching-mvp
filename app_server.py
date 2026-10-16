@@ -107,8 +107,15 @@ class App:
         return {'jobs': jobs}
 
     def bootstrap(self):
-        return {'csrf_token': self.csrf_token, 'catalogue': self.store.products(), 'jobs': self.store.jobs(),
+        return {'csrf_token': self.csrf_token, 'catalogue': self.store.products(), 'jobs': self.public_jobs(),
                 'settings': settings(self.ledger_root), 'evaluation': EVALUATION_SUMMARY}
+
+    def public_jobs(self, key=None):
+        jobs = [self.store.job(key)] if key is not None else self.store.jobs()
+        costs = ledger_accounting(self.ledger_root)['per_job']
+        for job in jobs:
+            job['cost_inr'] = costs.get(job['id'], job['cost_inr'])
+        return jobs
 
     def evaluation(self):
         manifest = json.loads((self.root / 'data/test/test_manifest.json').read_text())
@@ -247,9 +254,9 @@ class Handler(BaseHTTPRequestHandler):
             elif re.fullmatch(r'/api/catalogue/[A-Za-z0-9_-]{1,80}', path):
                 self.send_json(200, self.app.store.product(path.rsplit('/', 1)[1]))
             elif path == '/api/jobs':
-                self.send_json(200, {'jobs': self.app.store.jobs()})
+                self.send_json(200, {'jobs': self.app.public_jobs()})
             elif re.fullmatch(r'/api/jobs/[A-Za-z0-9_-]{1,80}', path):
-                self.send_json(200, self.app.store.job(path.rsplit('/', 1)[1]))
+                self.send_json(200, self.app.public_jobs(path.rsplit('/', 1)[1])[0])
             elif path == '/api/evaluation':
                 self.send_json(200, self.app.evaluation())
             elif re.fullmatch(r'/media/[A-Za-z0-9_-]{1,80}', path):
@@ -360,7 +367,7 @@ class LocalServer(ThreadingHTTPServer):
             self.app.close()
 
 
-def make_server(app=None, port=8766, *, root=ROOT, data_dir=None, **options):
+def make_server(app=None, port=8768, *, root=ROOT, data_dir=None, **options):
     created = app is None
     app = app or build_app(root, data_dir, **options)
     try:
@@ -375,7 +382,7 @@ def make_server(app=None, port=8766, *, root=ROOT, data_dir=None, **options):
 
 def main():
     parser = argparse.ArgumentParser(description='Run the local Dyson matching app.')
-    parser.add_argument('--port', type=int, default=8766)
+    parser.add_argument('--port', type=int, default=8768)
     parser.add_argument('--data-dir', type=Path)
     args = parser.parse_args()
     if not 1 <= args.port <= 65535:

@@ -131,11 +131,18 @@ def validate_batch(raw, targets, snapshot, available_originals=()):
         target = next(target for target in targets if target['object_id'] == row['object_id'])
         item = validate_match_result(row.get('result'), candidates)
         if item.get('decisive_region') is not None:
-            valid_box(item['decisive_region'], target['box_2d'])
+            valid_box(item['decisive_region'])
+            try:
+                valid_box(item['decisive_region'], target['box_2d'])
+            except ValueError:
+                item['unverified_decisive_region'] = item['decisive_region']
+                item['decisive_region'] = None
         checks = item.get('feature_checks')
         if not isinstance(checks, list) or len(checks) > 4:
             raise ValueError('Missing visible feature checks.')
         supported = set()
+        supported_details = []
+        unverified = []
         decision = item['decision']
         for check in checks:
             if (not isinstance(check, dict) or check.get('product') not in candidates or check.get('feature') not in FEATURES
@@ -147,15 +154,29 @@ def validate_batch(raw, targets, snapshot, available_originals=()):
                 raise ValueError('The referenced manufacturer view was not supplied.')
             for side in ('query', 'reference'):
                 if check[side + '_visible']:
-                    valid_box(check.get(side + '_box_2d'), target['box_2d'] if side == 'query' else None)
+                    valid_box(check.get(side + '_box_2d'))
                 elif check.get(side + '_box_2d') is not None:
                     raise ValueError('Hidden feature claims a region.')
+            if check['query_visible']:
+                try:
+                    valid_box(check['query_box_2d'], target['box_2d'])
+                except ValueError:
+                    unverified.append(copy.deepcopy(check))
+                    check['query_visible'] = False
+                    check['query_box_2d'] = None
             if (check['product'] == decision['product'] and check['query_visible'] and check['reference_visible']):
                 supported.add(check['feature'])
+                supported_details.append(check['detail'])
+        if unverified:
+            item['unverified_feature_checks'] = unverified
+            decision['missing_evidence'].append('A detail region extended outside the detected machine and was excluded from support.')
         if decision['status'] == 'match' and (len(supported) < 2 or not supported & BODY_FEATURES):
             decision['raw_status'], decision['raw_product'] = decision['status'], decision['product']
             decision['status'], decision['product'] = 'not_sure', None
             decision['missing_evidence'].append('A distinguishing body, bin or family identifier was not established alongside a second visible feature.')
+        elif decision['status'] == 'match':
+            decision['raw_evidence'] = decision['evidence']
+            decision['evidence'] = list(dict.fromkeys(supported_details))
         results[row['object_id']] = item
     return results
 
