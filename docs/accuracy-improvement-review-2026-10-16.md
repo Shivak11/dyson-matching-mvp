@@ -19,6 +19,8 @@ The proposed general rule removes part_only detections only when the same photo 
 
 On the fixed 15 single-family photos, Gemini changes from 11 correct, one confidently wrong and three unresolved to 12 correct, one confidently wrong and two unresolved. P031 is the only changed photo-level answer. Sol High does not change. The completed cheaper Qwen visual run changes from 30 to 31 correct out of 57, with its 20 confidently wrong decisions unchanged; its detail-note run changes from 26 to 27 correct, with 12 confidently wrong unchanged. These are counterfactual policy results from saved answers, not a new inference benchmark. The original scoreboard stays frozen.
 
+This replay diagnoses a grouping problem; it is not a safe rule to deploy unchanged. A visible head might belong to a second independent machine. The revised detector must distinguish accessories from partial machines and preserve uncertain independent products. Return the recognised machine and flag unresolved independent objects separately, rather than cancelling every result for the photo.
+
 ## Recommended revision
 
 Keep Gemini 3.7 Flash High as the primary model. Replace universal two-model agreement with a short sequence that obtains and checks specific evidence.
