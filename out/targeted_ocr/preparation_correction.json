@@ -1,0 +1,5 @@
+{
+  "superseded_pre_activation_config_sha256": "4c84fc044eb339dc47248e69dfbe993ed904a053c535e925bd0634c71ddf9528",
+  "paid_calls": 0,
+  "reason": "Reject malformed text annotation parts explicitly; blank annotations remain valid."
+}
