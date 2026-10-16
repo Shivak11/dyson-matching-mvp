@@ -156,15 +156,26 @@
   const recorded = value => value === null || value === undefined || value === '' ? 'Not recorded' : String(value);
   const duration = value => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? `${new Intl.NumberFormat('en-IN',{maximumFractionDigits:2}).format(value)} seconds` : 'Not recorded';
   const recordedCost = (value,currency) => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? new Intl.NumberFormat('en-IN',{style:'currency',currency,minimumFractionDigits:2,maximumFractionDigits:6}).format(value) : 'Not recorded';
+  const costBases = new Map([
+    ['provider_reported_cost','Reported by OpenRouter'],
+    ['recorded_request_costs','Recorded request charges'],
+    ['reported_tokens_and_configured_rates','Calculated from recorded tokens'],
+    ['includes_unresolved_or_reserved_usage','Includes unresolved request costs'],
+    ['reserved_upper_bound_usage_unavailable','Upper bound; usage not available'],
+    ['published_per_image_estimate','Published per-image estimate'],
+    ['offline_validation_recovery','Offline recovery; no new call'],
+    ['no_recorded_requests','No request cost recorded']
+  ]);
+  const costBasis = value => costBases.get(value) || 'Not recorded';
   function runDetails(job) {
     const previous = $('#runDetails');
     if (previous?.dataset.job === job.id) state.detailsOpen[job.id] = previous.open;
     const d = job.run_details;
     const header = `<details class="rundetails" id="runDetails" data-job="${esc(job.id)}" ${state.detailsOpen[job.id] ? 'open' : ''}><summary id="runDetailsSummary">Run details</summary>`;
     if (!d) return header + '<p class="legacydetails">Run details were not recorded for this run.</p></details>';
-    const fields = [['Elapsed time',duration(d.elapsed_seconds)],['Queue time',duration(d.queued_seconds)],['Started',d.started_at ? dateText(d.started_at) : null],['Completed',d.completed_at ? dateText(d.completed_at) : null],['Requested AI model',d.requested_model],['Requested provider',d.requested_provider],['Reasoning',d.reasoning_effort],['Pipeline version',d.pipeline_version],['Configuration SHA-256',d.config_sha256],['Catalogue SHA-256',d.catalogue_sha256],['Cost recorded (INR)',recordedCost(d.cost_inr,'INR')],['Cost basis',d.cost_basis]];
+    const fields = [['Elapsed time',duration(d.elapsed_seconds)],['Queue time',duration(d.queued_seconds)],['Started',d.started_at ? dateText(d.started_at) : null],['Completed',d.completed_at ? dateText(d.completed_at) : null],['Requested AI model',d.requested_model],['Requested provider',d.requested_provider],['Reasoning',d.reasoning_effort],['Pipeline version',d.pipeline_version],['Configuration SHA-256',d.config_sha256],['Catalogue SHA-256',d.catalogue_sha256],['Cost recorded (INR)',recordedCost(d.cost_inr,'INR')],['Cost basis',costBasis(d.cost_basis)]];
     const requests = Array.isArray(d.requests) ? d.requests : [];
-    return header + `<dl>${fields.map(([name,value]) => `<dt>${esc(name)}</dt><dd>${esc(recorded(value))}</dd>`).join('')}</dl>` + (requests.length ? `<div class="tablewrap" id="requestRecords" role="region" aria-label="Request cost records" tabindex="0"><table><thead><tr>${['Request','Status','AI model used','Actual provider','Elapsed time','Charged USD','Reserved USD','Cost basis'].map(name => `<th scope="col">${name}</th>`).join('')}</tr></thead><tbody>${requests.map(r => `<tr>${[r.operation,r.status,r.model,r.provider,duration(r.elapsed_seconds),recordedCost(r.cost_usd,'USD'),recordedCost(r.reserved_cost_usd,'USD'),r.cost_basis].map(value => `<td>${esc(recorded(value))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : '<p class="legacydetails">No request records were saved.</p>') + '</details>';
+    return header + `<dl>${fields.map(([name,value]) => `<dt>${esc(name)}</dt><dd>${esc(recorded(value))}</dd>`).join('')}</dl>` + (requests.length ? `<div class="tablewrap" id="requestRecords" role="region" aria-label="Request cost records" tabindex="0"><table><thead><tr>${['Request','Status','AI model used','Actual provider','Elapsed time','Charged USD','Request limit USD','Cost basis'].map(name => `<th scope="col">${name}</th>`).join('')}</tr></thead><tbody>${requests.map(r => `<tr>${[r.operation,r.status,r.model,r.provider,duration(r.elapsed_seconds),recordedCost(r.cost_usd,'USD'),recordedCost(r.reserved_cost_usd,'USD'),costBasis(r.cost_basis)].map(value => `<td>${esc(recorded(value))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : '<p class="legacydetails">No request records were saved.</p>') + '</details>';
   }
   function renderJob(job) {
     state.viewSignature = JSON.stringify([job,state.settings.accounting_error]);
