@@ -1,0 +1,460 @@
+{
+  "references": {
+    "R01": {
+      "product": "dyson_big_ball",
+      "in_catalog": true,
+      "panels": [
+        "R01-P1",
+        "R01-P2",
+        "R01-P3"
+      ]
+    },
+    "R02": {
+      "product": "dyson_v12_detect_slim",
+      "in_catalog": true,
+      "panels": [
+        "R02-P1",
+        "R02-P2",
+        "R02-P3"
+      ]
+    },
+    "R03": {
+      "product": "dyson_v15_detect",
+      "in_catalog": true,
+      "panels": [
+        "R03-P1",
+        "R03-P2",
+        "R03-P3"
+      ]
+    },
+    "R04": {
+      "product": "dyson_v16_piston_animal",
+      "in_catalog": true,
+      "panels": [
+        "R04-P1",
+        "R04-P2",
+        "R04-P3"
+      ]
+    },
+    "R05": {
+      "product": "dyson_v8_absolute",
+      "in_catalog": true,
+      "panels": [
+        "R05-P1",
+        "R05-P2",
+        "R05-P3"
+      ]
+    },
+    "R06": {
+      "product": "dyson_wash_g1",
+      "in_catalog": true,
+      "panels": [
+        "R06-P1",
+        "R06-P2",
+        "R06-P3"
+      ]
+    },
+    "R07": {
+      "product": "dyson_v11",
+      "in_catalog": false,
+      "panels": [
+        "R07-P1",
+        "R07-P2"
+      ]
+    },
+    "R08": {
+      "product": "dyson_gen5detect",
+      "in_catalog": false,
+      "panels": [
+        "R08-P1",
+        "R08-P2"
+      ]
+    },
+    "R09": {
+      "product": "shark_stratos",
+      "in_catalog": false,
+      "panels": [
+        "R09-P1",
+        "R09-P2",
+        "R09-P3"
+      ]
+    }
+  },
+  "images": [
+    {
+      "panel_id": "R01-P1",
+      "file": "out/failure_recovery/references/R01-P1.jpg",
+      "sha256": "f279486c73fb6e6e64fe4b49cbec62b448773dd1096f874696d7d3032f0c4cd4",
+      "source_file": "data/catalog/dyson_big_ball/00.png",
+      "source_sha256": "032925ba49dc676a492bd7248ba2c3c9fef243668e419b48e683759ee5ddde41",
+      "source_pixel_box": [
+        448,
+        180,
+        1136,
+        948
+      ],
+      "width": 688,
+      "height": 768
+    },
+    {
+      "panel_id": "R01-P2",
+      "file": "out/failure_recovery/references/R01-P2.jpg",
+      "sha256": "a3d5ce1423ef2e5a8bb2cd7f6a74a038ff3774fb1c3e2c72f556714db8610f78",
+      "source_file": "data/catalog/dyson_big_ball/02.png",
+      "source_sha256": "894c00f829edb1cd3357e151bbffe8566e1e096910313ab740eeccb9c2c54926",
+      "source_pixel_box": [
+        480,
+        7,
+        1120,
+        712
+      ],
+      "width": 640,
+      "height": 705
+    },
+    {
+      "panel_id": "R01-P3",
+      "file": "out/failure_recovery/references/R01-P3.jpg",
+      "sha256": "94369088a8910affc1b3f71622255edcdd7f334d40807fac8c0c9fcc12afefa0",
+      "source_file": "data/catalog/dyson_big_ball/00.png",
+      "source_sha256": "032925ba49dc676a492bd7248ba2c3c9fef243668e419b48e683759ee5ddde41",
+      "source_pixel_box": [
+        488,
+        624,
+        864,
+        924
+      ],
+      "width": 376,
+      "height": 300
+    },
+    {
+      "panel_id": "R02-P1",
+      "file": "out/failure_recovery/references/R02-P1.jpg",
+      "sha256": "d25d654661016b70a76f573db9cbc037f7d50c86b237771cde3527e20345a1b5",
+      "source_file": "data/catalog/dyson_v12_detect_slim/01.jpg",
+      "source_sha256": "91a949f5e793cda7d519107ff388d702cb81c8777193c0413c92baf14b39bb97",
+      "source_pixel_box": [
+        408,
+        0,
+        616,
+        291
+      ],
+      "width": 208,
+      "height": 291
+    },
+    {
+      "panel_id": "R02-P2",
+      "file": "out/failure_recovery/references/R02-P2.jpg",
+      "sha256": "73aa91921894567314048621f9a650e4de57ea7df9aae3806ca5123113f072f2",
+      "source_file": "data/reference_images_v2/v12_button.jpg",
+      "source_sha256": "c4290177113f02c8c6b9792f8c3db8c774bb1f9da2d3944953b50cdfcf15069d",
+      "source_pixel_box": [
+        795,
+        78,
+        1500,
+        525
+      ],
+      "width": 705,
+      "height": 447
+    },
+    {
+      "panel_id": "R02-P3",
+      "file": "out/failure_recovery/references/R02-P3.jpg",
+      "sha256": "cd58fe25fe5eb8be5c4c8b714b7ec830e701d6b7131a0c0c650c04ea4ba40ae9",
+      "source_file": "data/catalog/dyson_v12_detect_slim/02.jpg",
+      "source_sha256": "07a1d015254bdc8bf1b52681e260381b28d33d788c7506262ff93cb483688b50",
+      "source_pixel_box": [
+        448,
+        360,
+        832,
+        675
+      ],
+      "width": 384,
+      "height": 315
+    },
+    {
+      "panel_id": "R03-P1",
+      "file": "out/failure_recovery/references/R03-P1.jpg",
+      "sha256": "7cdd64a4f8f684bde85410b6e6457dbbf2ee2190c7af63bc2806e4ac8363093b",
+      "source_file": "data/catalog/dyson_v15_detect/01.jpg",
+      "source_sha256": "2cc447b8f67f0e10f625c7d433e75fa39ee803c729f01f5320573583525b1083",
+      "source_pixel_box": [
+        400,
+        0,
+        624,
+        300
+      ],
+      "width": 224,
+      "height": 300
+    },
+    {
+      "panel_id": "R03-P2",
+      "file": "out/failure_recovery/references/R03-P2.jpg",
+      "sha256": "1425772657f81e601e6d5b277da4af80d6f9321ba0dfed0f22c8c8627adb358b",
+      "source_file": "data/catalog/dyson_v15_detect/01.jpg",
+      "source_sha256": "2cc447b8f67f0e10f625c7d433e75fa39ee803c729f01f5320573583525b1083",
+      "source_pixel_box": [
+        1040,
+        0,
+        1176,
+        305
+      ],
+      "width": 136,
+      "height": 305
+    },
+    {
+      "panel_id": "R03-P3",
+      "file": "out/failure_recovery/references/R03-P3.jpg",
+      "sha256": "bcb5121474efdeae1ad11ae08ea3d424c5b3aa84f853504147465a0a4beb81ce",
+      "source_file": "data/catalog/dyson_v15_detect/02.jpg",
+      "source_sha256": "85fea099ea5322440c4b76ccc9aa9d3fe4920b6038a327bd585318f08f59f2ac",
+      "source_pixel_box": [
+        912,
+        261,
+        1280,
+        612
+      ],
+      "width": 368,
+      "height": 351
+    },
+    {
+      "panel_id": "R04-P1",
+      "file": "out/failure_recovery/references/R04-P1.jpg",
+      "sha256": "d3058a3ef225264e9ecec0f9896606ef1b2f62e01d7c9090a606c7f22578368c",
+      "source_file": "data/catalog/dyson_v16_piston_animal/01.png",
+      "source_sha256": "680d623aa809e93bd91ac75357f5449107de0f2742e4087ee5743287ce8fa824",
+      "source_pixel_box": [
+        920,
+        0,
+        1192,
+        379
+      ],
+      "width": 272,
+      "height": 379
+    },
+    {
+      "panel_id": "R04-P2",
+      "file": "out/failure_recovery/references/R04-P2.jpg",
+      "sha256": "567f20a13db1d35d2ee00b7ef509b6cf021a58f81af02303f7cdf5f94b1e974d",
+      "source_file": "data/catalog/dyson_v16_piston_animal/00.png",
+      "source_sha256": "c455368688e30691b83db86527ee378e30f18830665deb5f427d253eba2e1a43",
+      "source_pixel_box": [
+        656,
+        103,
+        816,
+        280
+      ],
+      "width": 160,
+      "height": 177
+    },
+    {
+      "panel_id": "R04-P3",
+      "file": "out/failure_recovery/references/R04-P3.jpg",
+      "sha256": "cd1d77ff9eab74384b7cafa23bfa010288d012add13781eb12a817e1f0cd2294",
+      "source_file": "data/catalog/dyson_v16_piston_animal/01.png",
+      "source_sha256": "680d623aa809e93bd91ac75357f5449107de0f2742e4087ee5743287ce8fa824",
+      "source_pixel_box": [
+        480,
+        0,
+        672,
+        397
+      ],
+      "width": 192,
+      "height": 397
+    },
+    {
+      "panel_id": "R05-P1",
+      "file": "out/failure_recovery/references/R05-P1.jpg",
+      "sha256": "3cc29aad48b16cc36598832fecf765170c0df10576e681c16082f1c154e2525f",
+      "source_file": "data/catalog/dyson_v8_absolute/01.png",
+      "source_sha256": "1dd8c4d13219d4f480870b12f0064a6968f5bfa7a15ac768bba6274b34276caa",
+      "source_pixel_box": [
+        376,
+        0,
+        568,
+        240
+      ],
+      "width": 192,
+      "height": 240
+    },
+    {
+      "panel_id": "R05-P2",
+      "file": "out/failure_recovery/references/R05-P2.jpg",
+      "sha256": "3137a1764678d4319505c89b74a5d31963f1e30fd8ffe988a8945dcd3372c8a5",
+      "source_file": "data/catalog/dyson_v8_absolute/05.jpg",
+      "source_sha256": "d0a9696f372a1f65845322bfa99a5e4a0143040c83afa067ac7619fc093eceea",
+      "source_pixel_box": [
+        520,
+        556,
+        952,
+        823
+      ],
+      "width": 432,
+      "height": 267
+    },
+    {
+      "panel_id": "R05-P3",
+      "file": "out/failure_recovery/references/R05-P3.jpg",
+      "sha256": "e5fa8a2c62a1c49b94d7cd050e18771912a5c9271ed8b94069bce22520367dff",
+      "source_file": "data/catalog/dyson_v8_absolute/01.png",
+      "source_sha256": "1dd8c4d13219d4f480870b12f0064a6968f5bfa7a15ac768bba6274b34276caa",
+      "source_pixel_box": [
+        1040,
+        0,
+        1200,
+        259
+      ],
+      "width": 160,
+      "height": 259
+    },
+    {
+      "panel_id": "R06-P1",
+      "file": "out/failure_recovery/references/R06-P1.jpg",
+      "sha256": "9892c456e986b901aa854e928d3f77ea90f3b7932800ad85ccf0c29e2dec6046",
+      "source_file": "data/catalog/dyson_wash_g1/01.png",
+      "source_sha256": "4e1e92b82fc359819b04e0d487e59ef3d8b96ab512134c939aba860a7362d91b",
+      "source_pixel_box": [
+        352,
+        0,
+        1280,
+        923
+      ],
+      "width": 768,
+      "height": 764
+    },
+    {
+      "panel_id": "R06-P2",
+      "file": "out/failure_recovery/references/R06-P2.jpg",
+      "sha256": "2c958ad58bec2779ef9584f16c904a8179a2b546b1f7d190cef0954019f9ee76",
+      "source_file": "data/catalog/dyson_wash_g1/04.jpg",
+      "source_sha256": "8fa7782fd6e61eef03f6fd6b17d9e9b59832c1ecae682f33c4aae324d204bc17",
+      "source_pixel_box": [
+        368,
+        198,
+        944,
+        617
+      ],
+      "width": 576,
+      "height": 419
+    },
+    {
+      "panel_id": "R06-P3",
+      "file": "out/failure_recovery/references/R06-P3.jpg",
+      "sha256": "7c64d624e61736afcae8f163527eeae12431d83f0d335e2d3b3e74a94fa79b12",
+      "source_file": "data/catalog/dyson_wash_g1/04.jpg",
+      "source_sha256": "8fa7782fd6e61eef03f6fd6b17d9e9b59832c1ecae682f33c4aae324d204bc17",
+      "source_pixel_box": [
+        1360,
+        517,
+        1600,
+        900
+      ],
+      "width": 240,
+      "height": 383
+    },
+    {
+      "panel_id": "R07-P1",
+      "file": "out/failure_recovery/references/R07-P1.jpg",
+      "sha256": "4afc26aa5e58467494fece4db79118788bcd13101c604b41d6d7f5222e625db1",
+      "source_file": "data/reference_images_v2/v11_side_front.jpg",
+      "source_sha256": "dddeb2dea96182225a90605adfc57bb991f07d8ecec9f7abdd4b719c3b707fee",
+      "source_pixel_box": [
+        233,
+        0,
+        437,
+        332
+      ],
+      "width": 204,
+      "height": 332
+    },
+    {
+      "panel_id": "R07-P2",
+      "file": "out/failure_recovery/references/R07-P2.jpg",
+      "sha256": "4dfc90308d7a916aaedac3a0c878634274eee8e83480fb734adba187ef339e71",
+      "source_file": "data/reference_images_v2/v11_side_front.jpg",
+      "source_sha256": "dddeb2dea96182225a90605adfc57bb991f07d8ecec9f7abdd4b719c3b707fee",
+      "source_pixel_box": [
+        824,
+        0,
+        954,
+        337
+      ],
+      "width": 130,
+      "height": 337
+    },
+    {
+      "panel_id": "R08-P1",
+      "file": "out/failure_recovery/references/R08-P1.jpg",
+      "sha256": "e3f76737cd4e03e95664fa5591f8ee0addd572ef27a41eabfd0357472552ada0",
+      "source_file": "data/reference_images_v2/gen5_side_front.png",
+      "source_sha256": "11f78de5113d484b24995fa93f2cddb34fc5cb59b79d77a726f1b2b7428c8127",
+      "source_pixel_box": [
+        227,
+        0,
+        437,
+        425
+      ],
+      "width": 210,
+      "height": 425
+    },
+    {
+      "panel_id": "R08-P2",
+      "file": "out/failure_recovery/references/R08-P2.jpg",
+      "sha256": "945d67c920e56577557800b1d4260e5dea2fdda4c466be3879d965a20d4c3cb1",
+      "source_file": "data/reference_images_v2/gen5_side_front.png",
+      "source_sha256": "11f78de5113d484b24995fa93f2cddb34fc5cb59b79d77a726f1b2b7428c8127",
+      "source_pixel_box": [
+        861,
+        0,
+        991,
+        420
+      ],
+      "width": 130,
+      "height": 420
+    },
+    {
+      "panel_id": "R09-P1",
+      "file": "out/failure_recovery/references/R09-P1.jpg",
+      "sha256": "83535df88f4beeaef7f4245e998b5174db31feb1f3243853bf0ff24620bfdf39",
+      "source_file": "data/reference_images_v2/shark_stratos.png",
+      "source_sha256": "ae0b86b040a6a060bfee53c36f6f1e21c21f5dd8d8df2f9bcac8002c436f222a",
+      "source_pixel_box": [
+        786,
+        82,
+        1284,
+        1998
+      ],
+      "width": 200,
+      "height": 768
+    },
+    {
+      "panel_id": "R09-P2",
+      "file": "out/failure_recovery/references/R09-P2.jpg",
+      "sha256": "19a04126080c40b46981308acce618ddcac8e243f7b8d1c2a44bf75ad1cf9559",
+      "source_file": "data/reference_images_v2/shark_stratos.png",
+      "source_sha256": "ae0b86b040a6a060bfee53c36f6f1e21c21f5dd8d8df2f9bcac8002c436f222a",
+      "source_pixel_box": [
+        807,
+        82,
+        1263,
+        746
+      ],
+      "width": 456,
+      "height": 664
+    },
+    {
+      "panel_id": "R09-P3",
+      "file": "out/failure_recovery/references/R09-P3.jpg",
+      "sha256": "aa7683a1543e7790e780d033a4952bcf85ad39240db3c2178fd98778c85580d0",
+      "source_file": "data/reference_images_v2/shark_stratos.png",
+      "source_sha256": "ae0b86b040a6a060bfee53c36f6f1e21c21f5dd8d8df2f9bcac8002c436f222a",
+      "source_pixel_box": [
+        765,
+        1635,
+        1305,
+        1998
+      ],
+      "width": 540,
+      "height": 363
+    }
+  ]
+}

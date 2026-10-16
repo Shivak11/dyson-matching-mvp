@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "references": {
+    "R01": {
+      "product": "dyson_big_ball",
+      "in_catalog": true,
+      "panels": [
+        {
+          "panel_id": "R01-P1",
+          "source_file": "data/catalog/dyson_big_ball/00.png",
+          "source_sha256": "032925ba49dc676a492bd7248ba2c3c9fef243668e419b48e683759ee5ddde41",
+          "box_2d": [
+            150,
+            280,
+            790,
+            710
+          ],
+          "description": "Complete machine, hose and wand",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/286519-01.png"
+        },
+        {
+          "panel_id": "R01-P2",
+          "source_file": "data/catalog/dyson_big_ball/02.png",
+          "source_sha256": "894c00f829edb1cd3357e151bbffe8566e1e096910313ab740eeccb9c2c54926",
+          "box_2d": [
+            10,
+            300,
+            950,
+            700
+          ],
+          "description": "Canister, bin and cyclone assembly",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/india/2024/Gallery%20image%202.png"
+        },
+        {
+          "panel_id": "R01-P3",
+          "source_file": "data/catalog/dyson_big_ball/00.png",
+          "source_sha256": "032925ba49dc676a492bd7248ba2c3c9fef243668e419b48e683759ee5ddde41",
+          "box_2d": [
+            520,
+            305,
+            770,
+            540
+          ],
+          "description": "Canister side and hose connection",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/286519-01.png"
+        }
+      ]
+    },
+    "R02": {
+      "product": "dyson_v12_detect_slim",
+      "in_catalog": true,
+      "panels": [
+        {
+          "panel_id": "R02-P1",
+          "source_file": "data/catalog/dyson_v12_detect_slim/01.jpg",
+          "source_sha256": "91a949f5e793cda7d519107ff388d702cb81c8777193c0413c92baf14b39bb97",
+          "box_2d": [
+            0,
+            255,
+            315,
+            385
+          ],
+          "description": "Motor, bin and handle from the side",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v12-detected-slim/pdp/lifestyle/yellow/Spec%20module%20-%20Yellow.jpg"
+        },
+        {
+          "panel_id": "R02-P2",
+          "source_file": "data/reference_images_v2/v12_button.jpg",
+          "source_sha256": "c4290177113f02c8c6b9792f8c3db8c774bb1f9da2d3944953b50cdfcf15069d",
+          "box_2d": [
+            60,
+            530,
+            400,
+            1000
+          ],
+          "description": "Upper housing and power control",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/vacuum-cleaners/sticks/v12/pdp/yellow-nickel/v12_Single_Power_button.jpg"
+        },
+        {
+          "panel_id": "R02-P3",
+          "source_file": "data/catalog/dyson_v12_detect_slim/02.jpg",
+          "source_sha256": "07a1d015254bdc8bf1b52681e260381b28d33d788c7506262ff93cb483688b50",
+          "box_2d": [
+            400,
+            280,
+            750,
+            520
+          ],
+          "description": "Rear display and surrounding housing",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v12-detected-slim/pdp/gallery-images-/01-Gallery-hero-yellow.jpg"
+        }
+      ]
+    },
+    "R03": {
+      "product": "dyson_v15_detect",
+      "in_catalog": true,
+      "panels": [
+        {
+          "panel_id": "R03-P1",
+          "source_file": "data/catalog/dyson_v15_detect/01.jpg",
+          "source_sha256": "2cc447b8f67f0e10f625c7d433e75fa39ee803c729f01f5320573583525b1083",
+          "box_2d": [
+            0,
+            250,
+            325,
+            390
+          ],
+          "description": "Motor, bin and handle from the side",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v15-detect/pdp/dynamic-media/specifications/SV22-CORE-LB-Specs.jpg"
+        },
+        {
+          "panel_id": "R03-P2",
+          "source_file": "data/catalog/dyson_v15_detect/01.jpg",
+          "source_sha256": "2cc447b8f67f0e10f625c7d433e75fa39ee803c729f01f5320573583525b1083",
+          "box_2d": [
+            0,
+            650,
+            330,
+            735
+          ],
+          "description": "Motor and bin from the front",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v15-detect/pdp/dynamic-media/specifications/SV22-CORE-LB-Specs.jpg"
+        },
+        {
+          "panel_id": "R03-P3",
+          "source_file": "data/catalog/dyson_v15_detect/02.jpg",
+          "source_sha256": "85fea099ea5322440c4b76ccc9aa9d3fe4920b6038a327bd585318f08f59f2ac",
+          "box_2d": [
+            290,
+            570,
+            680,
+            800
+          ],
+          "description": "Rear display and surrounding housing",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v15-detect/pdp/gallery/Dyson-V15-Direct-HeroWithNasties-Core-LB.jpg"
+        }
+      ]
+    },
+    "R04": {
+      "product": "dyson_v16_piston_animal",
+      "in_catalog": true,
+      "panels": [
+        {
+          "panel_id": "R04-P1",
+          "source_file": "data/catalog/dyson_v16_piston_animal/01.png",
+          "source_sha256": "680d623aa809e93bd91ac75357f5449107de0f2742e4087ee5743287ce8fa824",
+          "box_2d": [
+            0,
+            575,
+            315,
+            745
+          ],
+          "description": "Motor, bin and handle from the side",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/specifications/home/floorcare/cordless/Web-692B-PDP-Specification-Image-Module5.png"
+        },
+        {
+          "panel_id": "R04-P2",
+          "source_file": "data/catalog/dyson_v16_piston_animal/00.png",
+          "source_sha256": "c455368688e30691b83db86527ee378e30f18830665deb5f427d253eba2e1a43",
+          "box_2d": [
+            85,
+            410,
+            230,
+            510
+          ],
+          "description": "Rear display and controls",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/vacuums/sticks/692b/primary/Web_V16-PistonAnimal_DynamicMedia_PrimaryImage.png"
+        },
+        {
+          "panel_id": "R04-P3",
+          "source_file": "data/catalog/dyson_v16_piston_animal/01.png",
+          "source_sha256": "680d623aa809e93bd91ac75357f5449107de0f2742e4087ee5743287ce8fa824",
+          "box_2d": [
+            0,
+            300,
+            330,
+            420
+          ],
+          "description": "Motor and bin from the front",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/specifications/home/floorcare/cordless/Web-692B-PDP-Specification-Image-Module5.png"
+        }
+      ]
+    },
+    "R05": {
+      "product": "dyson_v8_absolute",
+      "in_catalog": true,
+      "panels": [
+        {
+          "panel_id": "R05-P1",
+          "source_file": "data/catalog/dyson_v8_absolute/01.png",
+          "source_sha256": "1dd8c4d13219d4f480870b12f0064a6968f5bfa7a15ac768bba6274b34276caa",
+          "box_2d": [
+            0,
+            235,
+            260,
+            355
+          ],
+          "description": "Motor, bin and handle from the side",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/285l/pdp/specifications/285L_spec_IRSILNK_MTB.png"
+        },
+        {
+          "panel_id": "R05-P2",
+          "source_file": "data/catalog/dyson_v8_absolute/05.jpg",
+          "source_sha256": "d0a9696f372a1f65845322bfa99a5e4a0143040c83afa067ac7619fc093eceea",
+          "box_2d": [
+            440,
+            325,
+            650,
+            595
+          ],
+          "description": "Handheld body, bin and controls",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/vacuum-cleaners/sticks/v8/pdp/silver-nickel/carousel/2_Ergonomic_and_lightweight.jpg"
+        },
+        {
+          "panel_id": "R05-P3",
+          "source_file": "data/catalog/dyson_v8_absolute/01.png",
+          "source_sha256": "1dd8c4d13219d4f480870b12f0064a6968f5bfa7a15ac768bba6274b34276caa",
+          "box_2d": [
+            0,
+            650,
+            280,
+            750
+          ],
+          "description": "Motor and bin from the front",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/285l/pdp/specifications/285L_spec_IRSILNK_MTB.png"
+        }
+      ]
+    },
+    "R06": {
+      "product": "dyson_wash_g1",
+      "in_catalog": true,
+      "panels": [
+        {
+          "panel_id": "R06-P1",
+          "source_file": "data/catalog/dyson_wash_g1/01.png",
+          "source_sha256": "4e1e92b82fc359819b04e0d487e59ef3d8b96ab512134c939aba860a7362d91b",
+          "box_2d": [
+            0,
+            220,
+            1000,
+            800
+          ],
+          "description": "Complete machine from the side and front",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floor-cleaners/wet/washg1/pdp/blue-black/693_PDP_specifications.png"
+        },
+        {
+          "panel_id": "R06-P2",
+          "source_file": "data/catalog/dyson_wash_g1/04.jpg",
+          "source_sha256": "8fa7782fd6e61eef03f6fd6b17d9e9b59832c1ecae682f33c4aae324d204bc17",
+          "box_2d": [
+            220,
+            230,
+            685,
+            590
+          ],
+          "description": "Lower body, tanks and cleaning head",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floor-cleaners/wet/washg1/pdp/blue-black/gallery-images/693_PDP_gallery_images_3.jpg"
+        },
+        {
+          "panel_id": "R06-P3",
+          "source_file": "data/catalog/dyson_wash_g1/04.jpg",
+          "source_sha256": "8fa7782fd6e61eef03f6fd6b17d9e9b59832c1ecae682f33c4aae324d204bc17",
+          "box_2d": [
+            575,
+            850,
+            1000,
+            1000
+          ],
+          "description": "Handle display and controls",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floor-cleaners/wet/washg1/pdp/blue-black/gallery-images/693_PDP_gallery_images_3.jpg"
+        }
+      ]
+    },
+    "R07": {
+      "product": "dyson_v11",
+      "in_catalog": false,
+      "panels": [
+        {
+          "panel_id": "R07-P1",
+          "source_file": "data/reference_images_v2/v11_side_front.jpg",
+          "source_sha256": "dddeb2dea96182225a90605adfc57bb991f07d8ecec9f7abdd4b719c3b707fee",
+          "box_2d": [
+            0,
+            190,
+            360,
+            355
+          ],
+          "description": "Motor, bin and handle from the side",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/us/floorcare/npd-2023/v11/_V11_Spec-Variant_FC-Range-Reset-2023.jpg"
+        },
+        {
+          "panel_id": "R07-P2",
+          "source_file": "data/reference_images_v2/v11_side_front.jpg",
+          "source_sha256": "dddeb2dea96182225a90605adfc57bb991f07d8ecec9f7abdd4b719c3b707fee",
+          "box_2d": [
+            0,
+            670,
+            365,
+            775
+          ],
+          "description": "Motor and bin from the front",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/us/floorcare/npd-2023/v11/_V11_Spec-Variant_FC-Range-Reset-2023.jpg"
+        }
+      ]
+    },
+    "R08": {
+      "product": "dyson_gen5detect",
+      "in_catalog": false,
+      "panels": [
+        {
+          "panel_id": "R08-P1",
+          "source_file": "data/reference_images_v2/gen5_side_front.png",
+          "source_sha256": "11f78de5113d484b24995fa93f2cddb34fc5cb59b79d77a726f1b2b7428c8127",
+          "box_2d": [
+            0,
+            185,
+            460,
+            355
+          ],
+          "description": "Motor, bin, handle and upper wand from the side",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/cord-free-vacuums/sticks/Dyson-Gen5detect/pdp/iron-purple/Specification_SV23_Core_Purple_colourway_%28Purple_Iron_Purple%29.png"
+        },
+        {
+          "panel_id": "R08-P2",
+          "source_file": "data/reference_images_v2/gen5_side_front.png",
+          "source_sha256": "11f78de5113d484b24995fa93f2cddb34fc5cb59b79d77a726f1b2b7428c8127",
+          "box_2d": [
+            0,
+            700,
+            455,
+            805
+          ],
+          "description": "Motor, bin and upper wand from the front",
+          "source_url": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/cord-free-vacuums/sticks/Dyson-Gen5detect/pdp/iron-purple/Specification_SV23_Core_Purple_colourway_%28Purple_Iron_Purple%29.png"
+        }
+      ]
+    },
+    "R09": {
+      "product": "shark_stratos",
+      "in_catalog": false,
+      "panels": [
+        {
+          "panel_id": "R09-P1",
+          "source_file": "data/reference_images_v2/shark_stratos.png",
+          "source_sha256": "ae0b86b040a6a060bfee53c36f6f1e21c21f5dd8d8df2f9bcac8002c436f222a",
+          "box_2d": [
+            40,
+            380,
+            965,
+            620
+          ],
+          "description": "Complete machine",
+          "source_url": "https://assets.sharkninja.com/image/upload/v1780568255/storefront/products-UK/IZ400UK/IZ400UK_01.png"
+        },
+        {
+          "panel_id": "R09-P2",
+          "source_file": "data/reference_images_v2/shark_stratos.png",
+          "source_sha256": "ae0b86b040a6a060bfee53c36f6f1e21c21f5dd8d8df2f9bcac8002c436f222a",
+          "box_2d": [
+            40,
+            390,
+            360,
+            610
+          ],
+          "description": "Upper body, bin and controls",
+          "source_url": "https://assets.sharkninja.com/image/upload/v1780568255/storefront/products-UK/IZ400UK/IZ400UK_01.png"
+        },
+        {
+          "panel_id": "R09-P3",
+          "source_file": "data/reference_images_v2/shark_stratos.png",
+          "source_sha256": "ae0b86b040a6a060bfee53c36f6f1e21c21f5dd8d8df2f9bcac8002c436f222a",
+          "box_2d": [
+            790,
+            370,
+            965,
+            630
+          ],
+          "description": "Cleaner head and lower wand",
+          "source_url": "https://assets.sharkninja.com/image/upload/v1780568255/storefront/products-UK/IZ400UK/IZ400UK_01.png"
+        }
+      ]
+    }
+  }
+}
