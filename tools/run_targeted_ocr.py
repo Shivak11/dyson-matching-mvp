@@ -39,7 +39,9 @@ def parse_annotations(response,model):
         raise ValueError('Independent server file-parser annotation is missing')
     content=files[0].get('content')
     if not isinstance(content,list) or any(not isinstance(p,dict) for p in content):raise ValueError('Invalid server OCR content')
-    texts=[p['text'] for p in content if p.get('type')=='text' and isinstance(p.get('text'),str)]
+    if any(p.get('type')=='text' and not isinstance(p.get('text'),str) for p in content):
+        raise ValueError('Malformed OCR text annotation')
+    texts=[p['text'] for p in content if p.get('type')=='text']
     return {'literal_texts':texts,'no_text_extracted':not any(t.strip() for t in texts),
        'annotation_file_hash':files[0]['hash'],'engine':'mistral-ocr',
        'evidence_source':'OpenRouter server file-parser annotations; downstream answer excluded'}

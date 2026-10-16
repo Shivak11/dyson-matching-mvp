@@ -21,6 +21,13 @@ class TargetedOCRTests(unittest.TestCase):
         value['choices'][0]['message']['annotations']=[]
         with self.assertRaises(ValueError):target.parse_annotations(value,{'input_token_bound':6000})
 
+    def test_malformed_text_is_rejected_separately_from_empty_extraction(self):
+        for part in [{'type':'text','text':123},{'type':'text'}]:
+            with self.assertRaisesRegex(ValueError,'Malformed OCR text'):
+                target.parse_annotations(self.response([part]),{'input_token_bound':6000})
+        for content in [[],[{'type':'text','text':''}],[{'type':'image_url','image_url':{}}]]:
+            self.assertTrue(target.parse_annotations(self.response(content),{'input_token_bound':6000})['no_text_extracted'])
+
     def test_only_literal_server_text_is_retained(self):
         parsed=target.parse_annotations(self.response([{'type':'text','text':'FILTRO'}]),{'input_token_bound':6000})
         self.assertEqual(parsed['literal_texts'],['FILTRO']);self.assertNotIn('V99',str(parsed))
