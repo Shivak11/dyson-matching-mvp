@@ -26,5 +26,7 @@
   "automatic_fallback": false,
   "source_url": "https://openrouter.ai/api/v1/models/google/gemini-3.7-flash/endpoints",
   "endpoint_max_completion_tokens": 65536,
-  "endpoint_status": 0
+  "endpoint_status": 0,
+  "failed_logical_job_id": "v2standard:identify:P051",
+  "thinking_level": "high"
 }
