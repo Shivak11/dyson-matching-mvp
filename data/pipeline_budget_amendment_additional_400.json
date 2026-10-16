@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-16T08:48:25Z",
+  "owner_instruction": "budget increase by anohter 400",
+  "engineering_instruction": "now lets rework engineering bsed on the handoff...for failures (unsure ones) and confidently wrong ones and see whether we can dientify from them and how many",
+  "previous_stage_ceiling_inr": 600,
+  "additional_authorised_inr": 400,
+  "new_stage_ceiling_inr": 1000,
+  "overall_ceiling_inr": 2000,
+  "prior_stage_guard_inr": 574.8449861,
+  "remaining_stage_guard_inr": 425.1550139,
+  "guard_usd_inr": 100,
+  "previous_completed_benchmark_commit": "0dbda375b7c8bd5ebf6e6183271068878fbe36a7",
+  "scope": "A separately frozen engineering experiment on the 15 unresolved and five confidently wrong photos; preserve all completed 58-photo results and charges.",
+  "prior_run_configuration_unchanged": true
+}

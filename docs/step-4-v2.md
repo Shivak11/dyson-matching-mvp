@@ -96,3 +96,8 @@ P058's five-object refinement reported 37,957 input tokens, above the frozen est
 All 136 offline tests pass. The independent strict audit passes with all 58 photos complete, no pending requests, all 441 frozen file hashes unchanged, no duplicate physical paid jobs, all seven ledgers counted once, and 153 corrected-phase request hashes reconstructed. It independently checks saved raw observations and decisions, both offline recoveries, confidence gates, per-photo aggregation, rate-limit delays and costs. The final audit source, JSON result, test log and verification receipt are in out/pipeline_v2_recovery/.
 
 These public review photos were used during development; they are not a fresh client-store holdout. Source evidence names product families, with no exhaustive instance-level labels for every background object. No real additional photos of the same physical machine were supplied, so completion after a retake request remains untested. The known-product helper has offline tests but no paid live evaluation. The local upload screen and one-page client HTML report remain pending. This benchmark is complete; it does not establish that the requested high store-photo accuracy has been reached.
+
+
+## Budget authorised after this benchmark
+
+After this completed run, Shiva authorised another INR 400 and a separate engineering experiment on its 15 unsure and five confidently wrong photos. The prospective stage cap is INR 1,000, leaving INR 425.16 under the guard. The completed run above retains its original INR 600 configuration and unchanged results. New experiment costs and outcomes will be recorded separately.

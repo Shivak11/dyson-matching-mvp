@@ -118,3 +118,8 @@ Corrected run accounting is INR 302.31, or INR 5.21 per original photo (INR 5.36
 Current combined per-photo results, observations and detections remain in out/pipeline_v2_full/. The final combined scoreboard, completed run receipt, immutable recovery records, offline test log and independent audit are in out/pipeline_v2_recovery/. Earlier phase receipts remain historical stopped snapshots. Offline reproduction: python3 out/pipeline_v2_recovery/independent_audit.py --root . --require-complete. Do not launch another paid process for this completed benchmark.
 
 The source-labelled public-photo test is complete. Client-store holdout accuracy, actual retake completion and paid known-product verification remain untested. The local upload screen and client HTML report remain pending. Respect the original stop after step 4 and present the measured regression before proposing further paid work.
+
+
+## 16 October: additional INR 400 and a failure-focused experiment
+
+After the 58-photo benchmark completed, Shiva authorised another INR 400 and asked to rework the 15 unsure and five confidently wrong cases and measure how many become identifiable. The prospective stage cap is INR 1,000; historical 58-photo configuration/receipts retain their INR 600 cap. Guard spending remains INR 574.8449861, leaving INR 425.1550139 for the new phase. Read data/pipeline_budget_amendment_additional_400.json and the new PLAN.md section. Preserve all old results and costs. Investigation is active; no new paid request has started. This selected-failure experiment must not be presented as a fresh full-set accuracy evaluation.
