@@ -4,22 +4,22 @@ import argparse
 import fcntl
 import hmac
 import hashlib
-import base64
 import json
 import queue
 import re
 import secrets
 import threading
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from webapp.store import Store, ID, ConflictError
-from webapp.inference import Inference, BudgetError, settings, ledger_accounting, api_configured, api_key_for
+from webapp.store import Store, ID, ConflictError, now
+from webapp.predictions import collect_run_details, TERMINAL
+from webapp.inference import Inference, BudgetError, settings, ledger_accounting, api_configured, api_key_for, checked_accounting
 
 ROOT = Path(__file__).resolve().parent
 MAX_REQUEST_BYTES = 65 * 1024 * 1024
-EVALUATION_SUMMARY = {'singles': 57, 'correct': 37, 'confidently_wrong': 5, 'unsure': 15, 'multi_photo_count': 1}
 
 
 class App:
@@ -27,6 +27,7 @@ class App:
         self.root = Path(root).resolve()
         self.runtime = self.root / 'var'
         self.runtime.mkdir(parents=True, exist_ok=True, mode=0o700)
+        self.runtime.chmod(0o700)
         self.lock_file = (self.runtime / 'worker.lock').open('a+')
         try:
             fcntl.flock(self.lock_file, fcntl.LOCK_EX | fcntl.LOCK_NB)
@@ -35,13 +36,19 @@ class App:
             raise RuntimeError('Another local app is already running for this repository.') from None
         self.ledger_root = self.runtime / 'runtime'
         self.ledger_root.mkdir(exist_ok=True, mode=0o700)
+        self.ledger_root.chmod(0o700)
         try:
             self.store = Store(self.root, data_dir or self.runtime)
             self.store.interrupt_unfinished()
-            for job in self.store.jobs():
-                cost = ledger_accounting(self.ledger_root)['per_job'].get(job['id'], 0.0)
-                if cost != job['cost_inr']:
-                    self.store.update_job(job['id'], cost_inr=cost)
+            try:
+                costs = checked_accounting(self.ledger_root, self.store.jobs())['per_job']
+            except (ValueError, KeyError, TypeError, OSError):
+                costs = None
+            if costs is not None:
+                for job in self.store.jobs():
+                    cost = costs.get(job['id'], job['cost_inr'])
+                    if not job.get('exports_available') and cost != job['cost_inr']:
+                        self.store.update_job(job['id'], cost_inr=cost)
             self.engine = inference_factory(self.root, self.ledger_root, self.store)
         except Exception:
             self.lock_file.close()
@@ -63,7 +70,10 @@ class App:
             self.lock_file.close()
 
     def _cost(self, key):
-        return ledger_accounting(self.ledger_root)['per_job'].get(key, 0.0)
+        try:
+            return ledger_accounting(self.ledger_root)['per_job'].get(key, 0.0)
+        except (ValueError, KeyError, TypeError, OSError):
+            return self.store.job(key)['cost_inr']
 
     def _work(self):
         try:
@@ -80,9 +90,11 @@ class App:
         job = self.store.claim_job(key)
         if job is None:
             return
+        started = time.monotonic()
         try:
             matches = self.engine.run(job, lambda stage: self.store.update_job(key, stage=stage, cost_inr=self._cost(key)))
-            self.store.update_job(key, status='completed', stage='Complete', matches=matches, cost_inr=self._cost(key), error=None)
+            self.store.update_job(key, status='completed', stage='Complete', matches=matches, cost_inr=self._cost(key), error=None,
+                                  completed_at=now(), elapsed_seconds=time.monotonic() - started)
         except Exception as error:
             diagnostic = str(error)[:6000]
             try:
@@ -98,7 +110,9 @@ class App:
                 message = 'The result could not be validated. This upload and any charges were kept. Retry as a new run if needed.'
             else:
                 message = 'The model request failed. This upload and any charges were kept. Retry as a new run if needed.'
-            self.store.update_job(key, status='failed', stage='Run stopped', error=message, cost_inr=self._cost(key))
+            self.store.update_job(key, status='failed', stage='Run stopped', error=message, cost_inr=self._cost(key),
+                                  completed_at=now(), elapsed_seconds=time.monotonic() - started)
+        self._seal_prediction(key)
 
     def enqueue(self, jobs, created=True):
         if created:
@@ -108,70 +122,44 @@ class App:
 
     def bootstrap(self):
         return {'csrf_token': self.csrf_token, 'catalogue': self.store.products(), 'jobs': self.public_jobs(),
-                'settings': settings(self.ledger_root), 'evaluation': EVALUATION_SUMMARY}
+                'settings': settings(self.ledger_root, self.store.jobs())}
+
+    def _seal_prediction(self, key):
+        try:
+            job = self.store.job(key)
+            if job.get('exports_available'):
+                return job
+            costs = ledger_accounting(self.ledger_root)['per_job']
+            cost = costs.get(key, job['cost_inr'])
+            job = self.store.update_job(key, cost_inr=job['cost_inr'] if cost <= 0 < job['cost_inr'] else cost)
+            internal = self.store.job(key, internal=True)
+            details = collect_run_details(internal, internal['_snapshot'], self.ledger_root / key, job['cost_inr'])
+            return self.store.seal_prediction(key, details)
+        except Exception:
+            return self.store.update_job(key, exports_available=False,
+                export_error='The prediction could not be saved for download. Keep this run and reopen the app to try saving it again.')
 
     def public_jobs(self, key=None):
         jobs = [self.store.job(key)] if key is not None else self.store.jobs()
-        costs = ledger_accounting(self.ledger_root)['per_job']
-        for job in jobs:
-            job['cost_inr'] = costs.get(job['id'], job['cost_inr'])
+        try:
+            costs = ledger_accounting(self.ledger_root)['per_job'] if any(not job.get('exports_available') for job in jobs) else {}
+        except (ValueError, KeyError, TypeError, OSError):
+            costs = {}
+        for index, job in enumerate(jobs):
+            if not job.get('exports_available'):
+                job['cost_inr'] = costs.get(job['id'], job['cost_inr'])
+                if job['status'] in TERMINAL:
+                    jobs[index] = self._seal_prediction(job['id'])
+                elif job['status'] == 'running':
+                    internal = self.store.job(job['id'], internal=True)
+                    try:
+                        job['run_details'] = collect_run_details(internal, internal['_snapshot'], self.ledger_root / job['id'], job['cost_inr'])
+                    except Exception:
+                        job['run_details'] = None
+            jobs[index].setdefault('exports_available', False)
+            jobs[index].setdefault('run_details', None)
+            jobs[index].setdefault('export_error', None)
         return jobs
-
-    def evaluation(self):
-        manifest = json.loads((self.root / 'data/test/test_manifest.json').read_text())
-        scoreboard = json.loads((self.root / 'out/pipeline_v2_recovery/scoreboard.json').read_text())['all_photos']['groups'][0]
-        outcomes = {row['image_id']: row for row in scoreboard['per_photo']}
-        saved = json.loads((self.root / 'out/pipeline_v2_full/results.json').read_text())
-        detections = json.loads((self.root / 'out/pipeline_v2_full/detections.json').read_text())
-        original_cards = json.loads((self.root / 'data/reference_cards_v2.json').read_text())['products']
-        original_images = {product['id']: product['images'][:len(original_cards[product['id']]['images'])] for product in self.store.products() if product['id'] in original_cards}
-        media = {key: images[0]['url'] if images else None for key, images in original_images.items()}
-        photos = []
-        for photo in manifest:
-            key = photo['image_id']
-            matches = []
-            for row in saved:
-                if row['image_id'] != key or row['variant'] != 'evidence_final':
-                    continue
-                decision = row['decision']
-                product_id = decision['product']
-                product = original_cards.get(product_id)
-                status = decision['status'].replace('not_in_catalogue', 'not_in_catalog')
-                target = next((target for target in detections.get(key, []) if target['object_id'] == row['object_id']), {})
-                matches.append({'object_id': row['object_id'], 'box_2d': target.get('box_2d'), 'status': status,
-                    'product_id': product_id, 'product_name': product['name'] if product else None,
-                    'confidence': 'High' if status != 'not_sure' and decision.get('confidence', 0) >= 90 else 'Low',
-                    'evidence': decision['evidence'], 'missing_evidence': decision['missing_evidence'],
-                    'alternatives': [{'id': candidate, 'name': original_cards[candidate]['name']} for candidate in decision['top_two'] if candidate in original_cards],
-                    'reference_image_url': media.get(product_id), 'verification': None,
-                    'reference_images': original_images.get(product_id, []),
-                    'source_url': product['sources'][0]['url'] if product else None})
-            result = outcomes.get(key)
-            outcome = 'multi_photo' if photo.get('evaluation_role') == 'labelled_multi' else 'unsure' if result and result['status'] == 'not_sure' else 'correct' if result and result.get('correct') else 'wrong'
-            photos.append({'id': key, 'filename': key + Path(photo['file']).suffix,
-                           'image_url': '/media/eval-' + key, 'source_title': photo['source_title'],
-                           'source_url': photo['source_url'], 'source_labels': photo.get('labels', []),
-                           'outcome': outcome, 'matches': matches})
-        summary = {'original': EVALUATION_SUMMARY,
-                   'selected_failure_wave': {'selected_failures': 20, 'correct': 6, 'confidently_wrong': 1, 'unsure': 13, 'controls': 3},
-                   'multi_photo_scope': 'Photo identity set only; the source does not assign model identity to a box.'}
-        return {'summary': summary, 'photos': photos}
-
-    def media(self, key):
-        if re.fullmatch(r'eval-P[0-9]{3}', key):
-            wanted = key[5:]
-            manifest = json.loads((self.root / 'data/test/test_manifest.json').read_text())
-            photo = next((row for row in manifest if row['image_id'] == wanted), None)
-            if not photo:
-                raise KeyError('Image not found.')
-            path = (self.root / photo['file']).resolve()
-            if not path.is_relative_to(self.root / 'data/test/review_photos') or not path.is_file():
-                raise KeyError('Image not found.')
-            mime = {'.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp'}.get(path.suffix.lower())
-            if not mime:
-                raise KeyError('Image not found.')
-            return path, mime, wanted + path.suffix
-        return self.store.media(key)
 
 
 def build_app(root=ROOT, data_dir=None, **options):
@@ -210,15 +198,14 @@ class Handler(BaseHTTPRequestHandler):
             return False
         return True
 
-    def _headers(self, status, mime, size, script_hashes=()):
+    def _headers(self, status, mime, size):
         self.send_response(status)
         self.send_header('Content-Type', mime)
         self.send_header('Content-Length', str(size))
         self.send_header('X-Content-Type-Options', 'nosniff')
         self.send_header('Cache-Control', 'no-store')
         self.send_header('Referrer-Policy', 'no-referrer')
-        scripts = ' '.join(["'self'", *script_hashes])
-        self.send_header('Content-Security-Policy', "default-src 'self'; script-src " + scripts + "; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'none'")
+        self.send_header('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'none'")
 
     def send_json(self, status, data):
         encoded = json.dumps(data, ensure_ascii=False, allow_nan=False).encode()
@@ -230,11 +217,7 @@ class Handler(BaseHTTPRequestHandler):
         if not path.is_file():
             raise KeyError('File not found.')
         content = path.read_bytes()
-        hashes = []
-        if path == self.app.root / 'web/report.html':
-            for script in re.findall(rb'<script(?:\s[^>]*)?>(.*?)</script>', content, re.DOTALL):
-                hashes.append("'sha256-" + base64.b64encode(hashlib.sha256(script).digest()).decode() + "'")
-        self._headers(200, mime, len(content), hashes)
+        self._headers(200, mime, len(content))
         if name and mime == 'application/pdf':
             self.send_header('Content-Disposition', 'inline; filename="brochure.pdf"')
         self.end_headers()
@@ -257,12 +240,21 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json(200, {'jobs': self.app.public_jobs()})
             elif re.fullmatch(r'/api/jobs/[A-Za-z0-9_-]{1,80}', path):
                 self.send_json(200, self.app.public_jobs(path.rsplit('/', 1)[1])[0])
-            elif path == '/api/evaluation':
-                self.send_json(200, self.app.evaluation())
+            elif re.fullmatch(r'/api/jobs/[A-Za-z0-9_-]{1,80}/export\.(json|csv)', path):
+                key, kind = path.split('/')[3], path.rsplit('.', 1)[1]
+                if not self.app.store.job(key).get('exports_available'):
+                    self.app.public_jobs(key)
+                content = self.app.store.prediction_export(key, kind)
+                mime = 'application/json; charset=utf-8' if kind == 'json' else 'text/csv; charset=utf-8'
+                self._headers(200, mime, len(content))
+                self.send_header('Content-Disposition', 'attachment; filename="prediction-' + key + '.' + kind + '"')
+                self.send_header('X-Content-SHA256', hashlib.sha256(content).hexdigest())
+                self.end_headers()
+                self.wfile.write(content)
             elif re.fullmatch(r'/media/[A-Za-z0-9_-]{1,80}', path):
-                self.file(*self.app.media(path.rsplit('/', 1)[1]))
-            elif path in ('/', '/web/index.html', '/web/app.js', '/web/style.css', '/report'):
-                filename = 'report.html' if path == '/report' else 'index.html' if path == '/' else path.rsplit('/', 1)[1]
+                self.file(*self.app.store.media(path.rsplit('/', 1)[1]))
+            elif path in ('/', '/web/index.html', '/web/app.js', '/web/style.css'):
+                filename = 'index.html' if path == '/' else path.rsplit('/', 1)[1]
                 mime = {'html': 'text/html; charset=utf-8', 'css': 'text/css; charset=utf-8', 'js': 'text/javascript; charset=utf-8'}[filename.rsplit('.', 1)[1]]
                 self.file(self.app.root / 'web' / filename, mime)
             elif path == '/favicon.ico':
@@ -270,6 +262,8 @@ class Handler(BaseHTTPRequestHandler):
                 self.end_headers()
             else:
                 raise KeyError('Page not found.')
+        except ConflictError as error:
+            self.send_json(409, {'error': str(error)})
         except KeyError:
             self.send_json(404, {'error': 'The requested item was not found.'})
         except (BrokenPipeError, ConnectionResetError):
@@ -316,7 +310,11 @@ class Handler(BaseHTTPRequestHandler):
                 if not api_configured():
                     self.send_json(503, {'error': 'Add OPENROUTER_API_KEY to the local .env before running a photo.'})
                     return
-                if settings(self.app.ledger_root)['runtime_remaining_inr'] <= 0:
+                budget = settings(self.app.ledger_root, self.app.store.jobs())
+                if budget['accounting_error']:
+                    self.send_json(409, {'error': budget['accounting_error']})
+                    return
+                if budget['runtime_remaining_inr'] <= 0:
                     self.send_json(409, {'error': 'The app spending limit has been reached.'})
                     return
                 self.send_json(202, self.app.enqueue(*self.app.store.create_jobs(body, with_created=True)))
@@ -331,7 +329,11 @@ class Handler(BaseHTTPRequestHandler):
                 if not api_configured():
                     self.send_json(503, {'error': 'Add OPENROUTER_API_KEY to the local .env before retrying a photo.'})
                     return
-                if settings(self.app.ledger_root)['runtime_remaining_inr'] <= 0:
+                budget = settings(self.app.ledger_root, self.app.store.jobs())
+                if budget['accounting_error']:
+                    self.send_json(409, {'error': budget['accounting_error']})
+                    return
+                if budget['runtime_remaining_inr'] <= 0:
                     self.send_json(409, {'error': 'The app spending limit has been reached.'})
                     return
                 self.send_json(202, self.app.enqueue(*self.app.store.retry(original_id, body['request_id'], with_created=True)))

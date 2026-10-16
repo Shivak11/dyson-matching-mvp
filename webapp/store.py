@@ -4,6 +4,7 @@ import binascii
 import io
 import hashlib
 import json
+import os
 import re
 import sqlite3
 import uuid
@@ -14,6 +15,9 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from PIL import Image, ImageOps
+
+from .predictions import PIPELINE_VERSION, TERMINAL, csv_bytes, envelope
+from .transport import encoded, digest
 
 MAX_FILE_BYTES = 12 * 1024 * 1024
 MAX_PIXELS = 40_000_000
@@ -112,9 +116,13 @@ class Store:
         self.data_dir = Path(data_dir).resolve()
         self.data_dir.mkdir(parents=True, exist_ok=True, mode=0o700)
         self.data_dir.chmod(0o700)
-        (self.data_dir / 'media').mkdir(exist_ok=True, mode=0o700)
-        (self.data_dir / 'jobs').mkdir(exist_ok=True, mode=0o700)
+        for folder in ('media', 'jobs'):
+            (self.data_dir / folder).mkdir(exist_ok=True, mode=0o700)
+            (self.data_dir / folder).chmod(0o700)
         self.db = self.data_dir / 'app.sqlite3'
+        descriptor = os.open(self.db, os.O_CREAT | os.O_RDWR, 0o600)
+        os.close(descriptor)
+        self.db.chmod(0o600)
         with self.connect() as connection:
             connection.executescript("""
                 PRAGMA journal_mode=WAL;
@@ -128,6 +136,8 @@ class Store:
                 CREATE TABLE IF NOT EXISTS jobs (
                     id TEXT PRIMARY KEY, created_at TEXT NOT NULL, data TEXT NOT NULL,
                     snapshot TEXT NOT NULL, media_id TEXT NOT NULL REFERENCES media(id));
+                CREATE TABLE IF NOT EXISTS prediction_exports (
+                    job_id TEXT PRIMARY KEY REFERENCES jobs(id), json_bytes BLOB NOT NULL, csv_bytes BLOB NOT NULL);
             """)
         self.seed()
 
@@ -148,8 +158,10 @@ class Store:
         original = 'media/' + key + suffix
         provider = 'media/' + key + '.provider.jpg' if item['provider'] is not None else None
         (self.data_dir / original).write_bytes(item['raw'])
+        (self.data_dir / original).chmod(0o600)
         if provider:
             (self.data_dir / provider).write_bytes(item['provider'])
+            (self.data_dir / provider).chmod(0o600)
         connection.execute('INSERT INTO media VALUES (?,?,?,?,?,?)',
                            (key, item['filename'], item['mime'], original, provider, item['kind']))
         return key
@@ -173,12 +185,13 @@ class Store:
         with self.connect() as connection:
             if connection.execute('SELECT COUNT(*) FROM products').fetchone()[0]:
                 return
-            cards = json.loads((self.root / 'data/reference_cards_v2.json').read_text())['products']
+            seed = (self.root / 'var/catalogue-seed').resolve()
+            cards = json.loads((seed / 'reference_cards.json').read_text())['products']
             for key, card in cards.items():
                 images = []
                 for reference in card['images']:
-                    path = (self.root / reference['file']).resolve()
-                    if not path.is_relative_to(self.root / 'data'):
+                    path = (seed / reference['file']).resolve()
+                    if not path.is_relative_to(seed):
                         raise ValueError('Invalid manufacturer reference path.')
                     raw = path.read_bytes()
                     with Image.open(io.BytesIO(raw)) as image:
@@ -313,7 +326,7 @@ class Store:
                'created_at': now(), 'status': 'queued', 'stage': 'Waiting to run',
                'mode': 'verify' if expected else 'identify', 'expected_product_id': expected,
                'expected_product_name': product['name'] if product else None,
-               'cost_inr': 0.0, 'error': None, 'matches': []}
+               'cost_inr': 0.0, 'error': None, 'matches': [], 'exports_available': False, 'run_details': None, 'export_error': None}
         connection.execute('INSERT INTO jobs VALUES (?,?,?,?,?)',
                            (key, job['created_at'], json.dumps(job), json.dumps(snapshot), media_id))
         return job
@@ -344,6 +357,41 @@ class Store:
             connection.execute('UPDATE jobs SET data=? WHERE id=?', (json.dumps(data, allow_nan=False), key))
         return data
 
+    def seal_prediction(self, key, run_details):
+        """Save both download bodies in the same transaction, once per terminal job."""
+        with self.connect() as connection:
+            connection.execute('BEGIN IMMEDIATE')
+            row = connection.execute('SELECT * FROM jobs WHERE id=?', (key,)).fetchone()
+            if row is None:
+                raise KeyError('Run not found.')
+            data = json.loads(row['data'])
+            if data['status'] not in TERMINAL or connection.execute('SELECT 1 FROM prediction_exports WHERE job_id=?', (key,)).fetchone():
+                return data
+            media = connection.execute('SELECT original_path FROM media WHERE id=?', (row['media_id'],)).fetchone()
+            path = (self.data_dir / media['original_path']).resolve()
+            if not path.is_relative_to(self.data_dir / 'media'):
+                raise ValueError('Invalid saved photograph path.')
+            for match in data['matches']:
+                match.setdefault('retake_guidance', list(match.get('missing_evidence', [])))
+            data.update(run_details=run_details, exports_available=True, export_error=None)
+            value = envelope(data, digest(path.read_bytes()), now())
+            connection.execute('INSERT INTO prediction_exports VALUES (?,?,?)',
+                               (key, encoded(value) + b'\n', csv_bytes(value)))
+            connection.execute('UPDATE jobs SET data=? WHERE id=?', (json.dumps(data, allow_nan=False), key))
+        return data
+
+    def prediction_export(self, key, kind):
+        if kind not in ('json', 'csv'):
+            raise KeyError('Export not found.')
+        with self.connect() as connection:
+            job = connection.execute('SELECT data FROM jobs WHERE id=?', (key,)).fetchone()
+            if job is None:
+                raise KeyError('Run not found.')
+            row = connection.execute('SELECT json_bytes,csv_bytes FROM prediction_exports WHERE job_id=?', (key,)).fetchone()
+        if row is None:
+            raise ConflictError(json.loads(job['data']).get('export_error') or 'Wait for this run to finish before downloading its prediction.')
+        return bytes(row[kind + '_bytes'])
+
     def retry(self, key, request_id=None, *, with_created=False):
         request_key, fingerprint = self._request({'request_id': request_id}, key)
         with self.connect() as connection:
@@ -371,7 +419,8 @@ class Store:
             job = json.loads(row['data'])
             if job['status'] != 'queued':
                 return None
-            job.update(status='running', stage='Preparing manufacturer references')
+            job.update(status='running', stage='Preparing manufacturer references', started_at=now(),
+                       run_details={'pipeline_version': PIPELINE_VERSION})
             connection.execute('UPDATE jobs SET data=? WHERE id=?', (json.dumps(job), key))
             job['_snapshot'], job['_media_id'] = json.loads(row['snapshot']), row['media_id']
             return job
@@ -380,4 +429,5 @@ class Store:
         for job in self.jobs():
             if job['status'] in ('queued', 'running'):
                 self.update_job(job['id'], status='interrupted', stage='Run interrupted',
+                                completed_at=now(),
                                 error='The app restarted before this run finished. Start a deliberate retry to run it again.')

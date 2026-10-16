@@ -2,20 +2,15 @@
 import copy
 import json
 import math
-import sys
 import time
 from pathlib import Path
 
 from PIL import Image, ImageOps
 
-# Existing protocol modules use sibling imports rather than package-relative imports.
-TOOLS = Path(__file__).resolve().parents[1] / 'tools'
-if str(TOOLS) not in sys.path:
-    sys.path.insert(0, str(TOOLS))
-from pipeline_api import Client, positive
-from failure_protocol import inventory_prompt, validate_inventory
-from evidence_v2 import RESULT_FORMAT, validate_match_result, needs_refinement
-from run_baseline import api_key_for
+from .transport import Client, positive, api_key_for
+from .protocol import inventory_prompt, validate_inventory, RESULT_FORMAT, validate_match_result, needs_refinement
+from .predictions import PIPELINE_VERSION
+from .transport import digest, encoded
 
 RUNTIME_CAP_INR = 100.0
 HISTORICAL_STAGE_GUARD_INR = 801.9682441
@@ -72,13 +67,25 @@ def ledger_accounting(root):
     return {'spent_inr': amount, 'last_finished_unix': finished, 'per_job': per_job}
 
 
-def settings(ledger_root):
-    spent = ledger_accounting(ledger_root)['spent_inr']
+def checked_accounting(ledger_root, jobs):
+    account = ledger_accounting(ledger_root)
+    if any(positive(job.get('cost_inr', 0.0), 'saved job cost', True) > 0 and account['per_job'].get(job['id'], 0.0) <= 0 for job in jobs):
+        raise ValueError('A saved charge has no corresponding request ledger.')
+    return account
+
+
+def settings(ledger_root, jobs=()):
+    try:
+        spent = checked_accounting(ledger_root, jobs)['spent_inr']
+        accounting_error = None
+    except (ValueError, KeyError, TypeError, OSError):
+        spent = None
+        accounting_error = 'Saved request costs could not be read. Check the saved request ledgers before running another photo.'
     return {'model_label': 'Gemini 3.7 Flash · high', 'api_configured': api_configured(),
             'runtime_cap_inr': RUNTIME_CAP_INR, 'runtime_spent_inr': spent,
-            'runtime_remaining_inr': max(0.0, min(RUNTIME_CAP_INR - spent, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR - spent)),
-            'stage_remaining_inr': max(0.0, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR - spent),
-            'request_pause_seconds': PAUSE_SECONDS}
+            'runtime_remaining_inr': max(0.0, min(RUNTIME_CAP_INR - spent, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR - spent)) if spent is not None else None,
+            'stage_remaining_inr': max(0.0, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR - spent) if spent is not None else None,
+            'request_pause_seconds': PAUSE_SECONDS, 'accounting_error': accounting_error}
 
 
 def catalogue_projection(snapshot):
@@ -192,9 +199,12 @@ def display_match(target, result, snapshot, expected=None):
     verification = None
     if expected:
         verification = 'unresolved' if status == 'not_sure' else 'confirmed' if product and product['id'] == expected else 'rejected'
+    retake = decision.get('retake', '')
+    guidance = ([retake] if isinstance(retake, str) else retake if isinstance(retake, list) else []) + decision['missing_evidence']
     return {'object_id': target['object_id'], 'box_2d': target['box_2d'], 'status': status,
             'product_id': product['id'] if product else None, 'product_name': product['name'] if product else None,
             'confidence': confidence, 'evidence': decision['evidence'], 'missing_evidence': decision['missing_evidence'],
+            'retake_guidance': list(dict.fromkeys(item for item in guidance if isinstance(item, str) and item.strip())),
             'alternatives': [{'id': key, 'name': by_id[key]['name']} for key in decision['top_two']],
             'reference_image_url': '/media/' + product['image_ids'][0] if product and product['image_ids'] else None,
             'verification': verification,
@@ -209,12 +219,12 @@ class Inference:
         self.client_factory = client_factory
 
     def _client(self, job_id):
-        account = ledger_accounting(self.ledger_root)
+        account = checked_accounting(self.ledger_root, self.store.jobs())
         remaining = min(RUNTIME_CAP_INR - account['spent_inr'],
                         STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR - account['spent_inr'])
         if remaining <= 0:
             raise BudgetError('The app spending limit has been reached.')
-        model = read_json(self.root / 'data/pipeline_v2_recovery_config.json')['models']['flash37high']
+        model = read_json(self.root / 'runtime_config.json')['model']
         model = copy.deepcopy(model)
         if (model['provider'] != 'openrouter' or model['model'] != 'google/gemini-3.7-flash'
                 or model['thinking_level'] != 'high' or model['provider_only'] != ['google-ai-studio']):
@@ -226,6 +236,10 @@ class Inference:
                   'total_max_inr': RUNTIME_CAP_INR, 'prior_accounted_inr': account['spent_inr'], 'usd_inr': GUARD_FX}}
         client = self.client_factory(config, self.root, self.ledger_root / job_id,
                                      rate_limit_retries=2, request_interval_seconds=PAUSE_SECONDS, max_retry_delay_seconds=300)
+        snapshot = self.store.job(job_id, internal=True)['_snapshot']
+        self.store.update_job(job_id, run_details={'pipeline_version': PIPELINE_VERSION,
+            'config_sha256': digest(encoded(config)), 'catalogue_sha256': digest(encoded(snapshot)),
+            'requested_model': model['model'], 'requested_provider': model['provider_only'][0], 'reasoning_effort': model['thinking_level']})
         if account['last_finished_unix'] is not None:
             client.last_request_finished_at = time.monotonic() - max(0, time.time() - account['last_finished_unix'])
         return client

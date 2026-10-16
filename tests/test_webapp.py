@@ -33,20 +33,27 @@ def image_file(name='store.png', color='white', exif=False):
 
 def fixture_root(folder):
     root = Path(folder)
-    data = root / 'data'
-    data.mkdir()
-    cards = json.loads((ROOT / 'data/reference_cards_v2.json').read_text())
-    for key, card in cards['products'].items():
+    seed = root / 'var/catalogue-seed'
+    seed.mkdir(parents=True)
+    ids = ('dyson_big_ball', 'dyson_v8_absolute', 'dyson_v12_detect_slim', 'dyson_v15_detect',
+           'dyson_v16_piston_animal', 'dyson_washg1', 'dyson_v11', 'dyson_gen5detect', 'shark_stratos')
+    cards = {'products': {}}
+    for index, key in enumerate(ids):
         name = key + '.png'
         raw = base64.b64decode(image_file(name)['data_url'].split(',', 1)[1])
-        (data / name).write_bytes(raw)
-        card['images'] = [{'file': 'data/' + name, 'view': 'Manufacturer view'}]
-    (data / 'reference_cards_v2.json').write_text(json.dumps(cards))
-    config = json.loads((ROOT / 'data/pipeline_v2_recovery_config.json').read_text())
-    (data / 'pipeline_v2_recovery_config.json').write_text(json.dumps({'models': config['models']}))
+        (seed / name).write_bytes(raw)
+        cards['products'][key] = {'name': key.replace('_', ' ').title(), 'in_catalog': index < 6,
+            'images': [{'file': name, 'view': 'Manufacturer view'}],
+            'sources': [{'url': 'https://manufacturer.example/' + key, 'supporting_passage': 'Manufacturer details for ' + key}],
+            'visible_features': [], 'variant_limits': []}
+    (seed / 'reference_cards.json').write_text(json.dumps(cards))
+    model = {'model': 'google/gemini-3.7-flash', 'provider': 'openrouter', 'input_usd_per_million': .75,
+        'output_usd_per_million': 3.75, 'cached_input_usd_per_million': .075, 'max_output_tokens': 32768,
+        'input_token_bound': 28000, 'thinking_level': 'high', 'request_timeout_seconds': 480,
+        'provider_only': ['google-ai-studio']}
+    (root / 'runtime_config.json').write_text(json.dumps({'model': model}))
     (root / 'web').mkdir()
     (root / 'web/index.html').write_text('<html><body>Local test</body></html>')
-    (root / 'web/report.html').write_text('<html><body>Saved evaluation</body></html>')
     return root
 
 
@@ -212,30 +219,13 @@ class AppTests(unittest.TestCase):
         self.assertEqual(self.app.public_jobs(job['id'])[0]['cost_inr'], 25)
         self.assertEqual(self.app.bootstrap()['jobs'][0]['cost_inr'], 25)
 
-    def test_saved_evaluation_keeps_raw_evidence_multi_objects_and_original_names(self):
-        import shutil
-        for relative in ('data/test/test_manifest.json', 'out/pipeline_v2_recovery/scoreboard.json',
-                         'out/pipeline_v2_full/results.json', 'out/pipeline_v2_full/detections.json'):
-            target = self.root / relative
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(ROOT / relative, target)
-        before = self.app.evaluation()
-        self.assertEqual(len(before['photos']), 58)
-        self.assertTrue(before['photos'][0]['matches'][0]['evidence'])
-        multi = next(photo for photo in before['photos'] if photo['id'] == 'P059')
-        self.assertEqual(len(multi['matches']), 2)
-        self.assertTrue(all(match['box_2d'] for match in multi['matches']))
-        self.app.store.edit_product({'name': 'Edited current name', 'images': [image_file('extra-reference.png')]}, 'dyson_v8_absolute')
-        after = self.app.evaluation()
-        self.assertEqual(before['photos'][0]['matches'][0]['product_name'], after['photos'][0]['matches'][0]['product_name'])
-        self.assertEqual(len(after['photos'][0]['matches'][0]['reference_images']), 1)
 
     def test_process_lock_prevents_two_workers_even_with_other_data_dir(self):
         with self.assertRaises(RuntimeError):
             app_server.build_app(self.root, self.root / 'other-data', start_worker=False)
 
 
-class HTTPTests(unittest.TestCase):
+class HTTPFixture:
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = fixture_root(self.temp.name)
@@ -262,6 +252,7 @@ class HTTPTests(unittest.TestCase):
             with error:
                 return error.code, error.headers, error.read()
 
+class HTTPTests(HTTPFixture, unittest.TestCase):
     def test_bootstrap_host_origin_and_csrf(self):
         code, headers, raw = self.request('/api/bootstrap')
         data = json.loads(raw)
@@ -287,7 +278,7 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(self.request('/api/catalogue/dyson_v15_detect', {'name': 'New name'}, method='PATCH', headers=headers)[0], 200)
         for path in ('/.env', '/media/../../.env', '/media/%2e%2e', '/web/../.env', '/media/unknown'):
             self.assertEqual(self.request(path)[0], 404)
-        self.assertEqual(self.request('/report')[0], 200)
+        self.assertEqual(self.request('/report')[0], 404)
 
     def test_idempotent_upload_and_retry_do_not_duplicate_paid_queue_entries(self):
         headers = {'X-CSRF-Token': self.app.csrf_token}
@@ -310,17 +301,6 @@ class HTTPTests(unittest.TestCase):
             self.assertEqual(self.app.queue.qsize(), 2)
             self.assertEqual(len(self.app.store.jobs()), 2)
 
-    def test_report_inline_script_hash_does_not_relax_app_scripts(self):
-        script = b"document.getElementById('print-report').addEventListener('click',()=>window.print());"
-        (self.root / 'web/report.html').write_bytes(b'<html><script>' + script + b'</script></html>')
-        code, headers, _ = self.request('/report')
-        expected = base64.b64encode(hashlib.sha256(script).digest()).decode()
-        self.assertEqual(code, 200)
-        self.assertIn("'sha256-" + expected + "'", headers['Content-Security-Policy'])
-        app_policy = self.request('/')[1]['Content-Security-Policy']
-        self.assertNotIn('sha256-', app_policy)
-        self.assertIn('blob:', app_policy)
-        self.assertNotIn("script-src 'self' 'unsafe-inline'", app_policy)
 
     def test_invalid_batch_and_retry_while_queued(self):
         headers = {'X-CSRF-Token': self.app.csrf_token}
