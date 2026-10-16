@@ -1,0 +1,30 @@
+{
+  "recorded_at_utc": "2026-10-16T07:40:27.705310+00:00",
+  "owner_instruction": "continue the calls lets finish the 58",
+  "reason": "The standard endpoint exhausted its output allowance before returning a complete answer for P051.",
+  "failed_job_id": "v2standard:identify:P051:attempt:1",
+  "failed_finish_reason": "length",
+  "failed_native_finish_reason": "MAX_TOKENS",
+  "previous_max_output_tokens": 16384,
+  "new_max_output_tokens": 32768,
+  "requested_model": "google/gemini-3.7-flash",
+  "provider_only": [
+    "google-ai-studio"
+  ],
+  "reasoning_effort": "high",
+  "stage_ceiling_inr": 600,
+  "overall_ceiling_inr": 2000,
+  "earlier_stage_guard_inr": 489.7308611,
+  "remaining_stage_guard_inr": 110.2691389,
+  "input_token_bound": 28000,
+  "input_usd_per_million": 0.75,
+  "output_usd_per_million": 3.75,
+  "reservation_usd": 0.14388,
+  "prompts_and_thresholds_unchanged": true,
+  "completed_photos_repeated": false,
+  "partial_old_responses_reused": false,
+  "automatic_fallback": false,
+  "source_url": "https://openrouter.ai/api/v1/models/google/gemini-3.7-flash/endpoints",
+  "endpoint_max_completion_tokens": 65536,
+  "endpoint_status": 0
+}
