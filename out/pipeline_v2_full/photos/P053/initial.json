@@ -1,0 +1,46 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine has a red handle comfort pad, lacks a trigger, and includes an internal dusting tool with a red release button, identifying it as a non-catalogue Dyson Gen5detect."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The machine lacks the finger trigger of the V15 Detect and the top-mounted power button and slim proportions of the V12 Detect Slim."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "It lacks the CleanCompaktor compression mechanism and silhouette of the V16 Piston Animal."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "It visibly lacks a finger trigger on the handle, contradicting the V15 Detect specification."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "It lacks the top-mounted red power button and slim form factor of the V12 Detect Slim."
+      }
+    ],
+    "decisive_region": [
+      480,
+      180,
+      820,
+      330
+    ],
+    "refinement_reason": ""
+  }
+}

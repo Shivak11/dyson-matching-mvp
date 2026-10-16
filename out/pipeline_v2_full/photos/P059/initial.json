@@ -1,0 +1,88 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Red push-button power control on top of the cyclone assembly matches the V12 design.",
+        "Slim in-line bin and wand labeled dyson v12 detect slim total clean confirm the model."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Visible red top push-button control, slim body proportions, and wand identifier match V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "V15 uses trigger operation and larger bin proportions rather than a top push-button power control."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 features a perpendicular bin below the cyclone assembly instead of this in-line layout."
+      }
+    ],
+    "decisive_region": [
+      98,
+      434,
+      126,
+      449
+    ],
+    "refinement_reason": ""
+  },
+  "o2": {
+    "object_id": "o2",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Fuller in-line bin with two-tier radial cyclones and handle trigger matches V15.",
+        "Wand clearly displays dyson v15 detect total clean branding."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "Full-size in-line bin, two-tier cyclone layout, and wand label confirm V15 Detect."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Lacks the red push-button power switch on the body and exhibits larger bin proportions."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 uses a perpendicular bin configuration rather than this in-line cyclone and bin assembly."
+      }
+    ],
+    "decisive_region": [
+      405,
+      558,
+      520,
+      572
+    ],
+    "refinement_reason": ""
+  }
+}

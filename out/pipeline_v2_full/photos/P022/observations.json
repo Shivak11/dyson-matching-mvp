@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        75,
+        151,
+        1000,
+        755
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "Circular color display showing battery levels, power mode Auto, red power button and silver control button",
+          "box_2d": [
+            209,
+            401,
+            629,
+            668
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Translucent cyan rear filter ring housing the display assembly",
+          "box_2d": [
+            75,
+            273,
+            907,
+            755
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Metallic bronze/gold cyclone body partially visible along the lower left",
+          "box_2d": [
+            575,
+            150,
+            1000,
+            270
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": false,
+          "detail": "Extension wand and floor head are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        75,
+        151,
+        1000,
+        755
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "Circular color display showing battery levels, power mode Auto, red power button and silver control button",
+          "box_2d": [
+            209,
+            401,
+            629,
+            668
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Translucent cyan rear filter ring housing the display assembly",
+          "box_2d": [
+            75,
+            273,
+            907,
+            755
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Metallic bronze/gold cyclone body partially visible along the lower left",
+          "box_2d": [
+            575,
+            150,
+            1000,
+            270
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": false,
+          "detail": "Extension wand and floor head are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

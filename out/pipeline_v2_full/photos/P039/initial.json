@@ -1,0 +1,47 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The wand bears clearly legible text identifying the machine as 'dyson v11 advanced'.",
+        "The machine features an in-line bin and cyclone design with a trigger grip characteristic of the V11 family."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The printed 'dyson v11 advanced' designation establishes positive identification of a non-catalogue model."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The target features an in-line bin rather than the perpendicular bin layout of the V8, and is explicitly labelled V11."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The wand explicitly identifies the model as 'dyson v11 advanced' rather than V15 Detect."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The machine has standard trigger-operated V11 body proportions and is labelled 'dyson v11 advanced'."
+      }
+    ],
+    "decisive_region": [
+      360,
+      535,
+      455,
+      635
+    ],
+    "refinement_reason": ""
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "The floor nozzle visibly features 'duo clean POWERFINS' branding with five central front LED headlights and a Shark dual-roller arrangement."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The Shark DuoClean PowerFins motorized head with five headlights is incompatible with all Dyson catalogue families."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The DuoClean PowerFins nozzle with five integrated front headlights contradicts the Dyson V16 cleaner head designs."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The motorized DuoClean PowerFins nozzle contradicts the floor tools supplied with the Dyson Big Ball cylinder vacuum."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The DuoClean PowerFins cleaner head with five front LEDs is incompatible with Dyson V8 cleaner heads."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The five-LED DuoClean PowerFins nozzle contradicts Dyson V12 cleaner heads."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The DuoClean PowerFins head with five headlights contradicts Dyson V15 cleaner heads."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The DuoClean PowerFins vacuum nozzle contradicts the specialized Dyson WashG1 wet-cleaning head."
+      }
+    ],
+    "decisive_region": [
+      315,
+      360,
+      415,
+      665
+    ],
+    "refinement_reason": ""
+  }
+}

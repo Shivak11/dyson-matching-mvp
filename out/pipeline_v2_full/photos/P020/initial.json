@@ -1,0 +1,46 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The illuminated cleaner head features two conical brush rollers matching the V16 All Floor Cones Sense head reference."
+      ],
+      "missing_evidence": [
+        "Main motor body and dustbin are not visible in frame."
+      ],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "The dual conical roller cleaner head with illumination directly matches the manufacturer reference."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 family is not equipped with the illuminated dual-cone cleaner head."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The V12 family does not use the dual conical roller All Floor Cones Sense head."
+      }
+    ],
+    "decisive_region": [
+      657,
+      240,
+      923,
+      547
+    ],
+    "refinement_reason": ""
+  }
+}

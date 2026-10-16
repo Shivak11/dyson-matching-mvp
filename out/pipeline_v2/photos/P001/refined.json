@@ -1,0 +1,63 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 0.95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Perpendicular clear bin below the cyclone assembly with a top red release lever and rear filter cap matches the Dyson V8 architecture."
+      ],
+      "missing_evidence": [
+        "Evidence strength below the frozen automatic-match threshold."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the motor, dust bin, controls and any model label clearly.",
+      "raw_status": "match",
+      "raw_product": "dyson_v8_absolute"
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Matches the perpendicular bin layout beneath the cyclone assembly with top red release mechanism and rear filter cap."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the perpendicular bin layout rather than an in-line body with push-button control and rear LCD."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the perpendicular bin and cyclone configuration instead of an in-line body with rear LCD screen."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the handheld stick vacuum form factor instead of a wheeled canister body."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the perpendicular bin and standard cyclone assembly rather than an in-line body with CleanCompaktor mechanism."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the dry cordless stick vacuum layout rather than an upright wet floor cleaner with water tanks."
+      }
+    ],
+    "decisive_region": [
+      300,
+      210,
+      780,
+      520
+    ],
+    "refinement_reason": ""
+  }
+}

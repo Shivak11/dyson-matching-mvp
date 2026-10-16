@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        18,
+        225,
+        972,
+        836
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "inline cylindrical clear bin aligned with cyclone array, motor housing, and rear filter",
+          "box_2d": [
+            18,
+            225,
+            972,
+            836
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "purple cylindrical rear filter cap with side ventilation slots",
+          "box_2d": [
+            18,
+            552,
+            268,
+            695
+          ]
+        },
+        {
+          "feature": "bin_emptying",
+          "visible": true,
+          "detail": "red bin ejection lever mounted along underside track of the clear canister",
+          "box_2d": [
+            677,
+            425,
+            745,
+            474
+          ]
+        },
+        {
+          "feature": "handle_controls",
+          "visible": true,
+          "detail": "pistol grip handle integrated with battery pack bracket and red finger trigger",
+          "box_2d": [
+            323,
+            532,
+            658,
+            836
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        18,
+        225,
+        972,
+        836
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "inline cylindrical clear bin aligned with cyclone array, motor housing, and rear filter",
+          "box_2d": [
+            18,
+            225,
+            972,
+            836
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "purple cylindrical rear filter cap with side ventilation slots",
+          "box_2d": [
+            18,
+            552,
+            268,
+            695
+          ]
+        },
+        {
+          "feature": "bin_emptying",
+          "visible": true,
+          "detail": "red bin ejection lever mounted along underside track of the clear canister",
+          "box_2d": [
+            677,
+            425,
+            745,
+            474
+          ]
+        },
+        {
+          "feature": "handle_controls",
+          "visible": true,
+          "detail": "pistol grip handle integrated with battery pack bracket and red finger trigger",
+          "box_2d": [
+            323,
+            532,
+            658,
+            836
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

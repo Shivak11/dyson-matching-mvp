@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        103,
+        856,
+        674
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Clear cylindrical housing with a purple roller bar and red bristle strip",
+          "box_2d": [
+            405,
+            103,
+            856,
+            674
+          ]
+        },
+        {
+          "feature": "release_button",
+          "visible": true,
+          "detail": "Red oval quick-release button on the dark grey connector neck",
+          "box_2d": [
+            80,
+            469,
+            192,
+            519
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "Wand, dustbin, handle, and motor extend out of frame at the top",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        103,
+        856,
+        674
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Clear cylindrical housing with a purple roller bar and red bristle strip",
+          "box_2d": [
+            405,
+            103,
+            856,
+            674
+          ]
+        },
+        {
+          "feature": "release_button",
+          "visible": true,
+          "detail": "Red oval quick-release button on the dark grey connector neck",
+          "box_2d": [
+            80,
+            469,
+            192,
+            519
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "Wand, dustbin, handle, and motor extend out of frame at the top",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

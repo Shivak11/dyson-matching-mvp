@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        42,
+        212,
+        915,
+        666
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld motor unit connected to an orange wand and floor cleaner head",
+          "box_2d": [
+            42,
+            212,
+            915,
+            666
+          ]
+        },
+        {
+          "feature": "rear_filter",
+          "visible": true,
+          "detail": "Blue circular rear filter cap with printed text",
+          "box_2d": [
+            450,
+            213,
+            772,
+            416
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Multi-cyclone array above a clear cylindrical dirt container with red release lever",
+          "box_2d": [
+            303,
+            303,
+            560,
+            504
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Direct-drive style motorized roller head with rotating brush bar visible through clear cover",
+          "box_2d": [
+            42,
+            494,
+            203,
+            666
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        42,
+        212,
+        915,
+        666
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld motor unit connected to an orange wand and floor cleaner head",
+          "box_2d": [
+            42,
+            212,
+            915,
+            666
+          ]
+        },
+        {
+          "feature": "rear_filter",
+          "visible": true,
+          "detail": "Blue circular rear filter cap with printed text",
+          "box_2d": [
+            450,
+            213,
+            772,
+            416
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Multi-cyclone array above a clear cylindrical dirt container with red release lever",
+          "box_2d": [
+            303,
+            303,
+            560,
+            504
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Direct-drive style motorized roller head with rotating brush bar visible through clear cover",
+          "box_2d": [
+            42,
+            494,
+            203,
+            666
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

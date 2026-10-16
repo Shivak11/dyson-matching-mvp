@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        545,
+        597,
+        950
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "roller cleaner head emitting a green illumination light onto the floor",
+          "box_2d": [
+            149,
+            545,
+            594,
+            949
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red quick-release button on connection neck",
+          "box_2d": [
+            9,
+            809,
+            102,
+            856
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "main body, motor, dustbin, and handle are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        545,
+        597,
+        950
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "roller cleaner head emitting a green illumination light onto the floor",
+          "box_2d": [
+            149,
+            545,
+            594,
+            949
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red quick-release button on connection neck",
+          "box_2d": [
+            9,
+            809,
+            102,
+            856
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "main body, motor, dustbin, and handle are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

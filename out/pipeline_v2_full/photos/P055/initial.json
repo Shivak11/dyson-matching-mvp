@@ -1,0 +1,47 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "Legible 'STRATOS' text on the wand and Shark branding on the body identify this as a Shark Stratos vacuum.",
+        "The folding wand hinge and front LED floor nozzle contradict all Dyson catalogue stick vacuums."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The machine displays Shark Stratos branding and architecture, contradicting all Dyson catalogue models."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target displays Shark and Stratos branding, a folding wand, and lacks Dyson's dual conical rollers and CleanCompaktor mechanism."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Target features a digital display handle, Shark branding, and lacks Dyson's distinct perpendicular bin and cyclone assembly."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Target is a Shark Stratos vacuum with prominent Shark branding and a folding wand rather than a Dyson in-line cyclone body."
+      }
+    ],
+    "decisive_region": [
+      550,
+      475,
+      625,
+      510
+    ],
+    "refinement_reason": ""
+  }
+}

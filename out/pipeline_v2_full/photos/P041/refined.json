@@ -1,0 +1,61 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The rear filter face houses a segmented LED display with three battery icons and 'Med' text matching the non-catalogue Dyson V11 Animal."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The V12 Detect Slim and V15 Detect both feature full-colour particle-counting LCDs, while the remaining catalogue models lack this handheld filter display."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The target has an LED mode screen with battery icons rather than the V12 Detect Slim's full-colour particle-counting LCD."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The target displays a segmented LED mode interface, contradicting the V15 Detect's full-colour LCD particle graph and countdown timer."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 Absolute has a perpendicular bin layout and does not possess a rear display screen."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The Big Ball is a wheeled cylinder canister vacuum, unlike this handheld cordless motor and filter unit."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The V16 Piston Animal features a CleanCompaktor compression body and different LCD assembly."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The WashG1 is an upright wet floor cleaner with water tanks rather than a handheld cyclone vacuum."
+      }
+    ],
+    "decisive_region": [
+      185,
+      425,
+      605,
+      685
+    ],
+    "refinement_reason": ""
+  }
+}

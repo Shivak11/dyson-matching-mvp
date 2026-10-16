@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.8374285497593829,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.8374285497593829
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.8176995630926637
+          },
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.7838156298884182
+          }
+        ]
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "similarity": 0.8040566710680402,
+        "references": [
+          {
+            "reference": "dyson_v8_absolute_0",
+            "similarity": 0.8040566710680402
+          },
+          {
+            "reference": "dyson_v8_absolute_1",
+            "similarity": 0.7821567786613473
+          },
+          {
+            "reference": "dyson_v8_absolute_2",
+            "similarity": 0.7748955979876946
+          }
+        ]
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.7985130455922491,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.7985130455922491
+          },
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.783167348777024
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.7768731745869837
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P024/o1_body.jpg",
+      "sha256": "fe49cc40626c5ede21d064bdb2986ee175d44015b2568f308a4bcd438f449f0c",
+      "pixel_box": [
+        552,
+        490,
+        1286,
+        1080
+      ],
+      "width": 734,
+      "height": 590
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim"
+    ]
+  }
+}

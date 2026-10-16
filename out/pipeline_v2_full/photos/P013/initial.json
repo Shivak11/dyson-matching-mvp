@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The machine has a slim in-line canister with a single tier of yellow cyclones and a triggerless handle layout characteristic of the V12 Detect Slim."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Matches the slim in-line dustbin, single-tier yellow cyclone assembly, and triggerless handle design."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the target's slim bin and single-tier cyclone design rather than the larger trigger-operated V15 body."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the in-line horizontal dustbin layout rather than the perpendicular vertical bin of the V8."
+      }
+    ],
+    "decisive_region": [
+      124,
+      485,
+      412,
+      624
+    ],
+    "refinement_reason": ""
+  }
+}

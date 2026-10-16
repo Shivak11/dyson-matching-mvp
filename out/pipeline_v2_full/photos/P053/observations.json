@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        105,
+        70,
+        975,
+        1000
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Linear horizontal configuration of rear filter, radial purple cyclones, and front dustbin",
+          "box_2d": [
+            105,
+            70,
+            555,
+            829
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "Transparent cylindrical bin containing collected hair/fibers with a red underside sliding release mechanism",
+          "box_2d": [
+            135,
+            423,
+            565,
+            827
+          ]
+        },
+        {
+          "feature": "filter_assembly",
+          "visible": true,
+          "detail": "Translucent blue rear exhaust filter cap with vertical vent slits",
+          "box_2d": [
+            147,
+            71,
+            487,
+            226
+          ]
+        },
+        {
+          "feature": "handle_battery",
+          "visible": true,
+          "detail": "Pistol-grip handle with red trigger/accent attached to a bottom battery pack base",
+          "box_2d": [
+            487,
+            114,
+            975,
+            545
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        105,
+        70,
+        975,
+        1000
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Linear horizontal configuration of rear filter, radial purple cyclones, and front dustbin",
+          "box_2d": [
+            105,
+            70,
+            555,
+            829
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "Transparent cylindrical bin containing collected hair/fibers with a red underside sliding release mechanism",
+          "box_2d": [
+            135,
+            423,
+            565,
+            827
+          ]
+        },
+        {
+          "feature": "filter_assembly",
+          "visible": true,
+          "detail": "Translucent blue rear exhaust filter cap with vertical vent slits",
+          "box_2d": [
+            147,
+            71,
+            487,
+            226
+          ]
+        },
+        {
+          "feature": "handle_battery",
+          "visible": true,
+          "detail": "Pistol-grip handle with red trigger/accent attached to a bottom battery pack base",
+          "box_2d": [
+            487,
+            114,
+            975,
+            545
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

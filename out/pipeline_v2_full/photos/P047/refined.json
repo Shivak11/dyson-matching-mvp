@@ -1,0 +1,61 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The wand bears clearly readable text 'dyson gen5detect', identifying it as the non-catalogue Gen5detect family."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The printed 'dyson gen5detect' model designation contradicts all catalogue candidate families."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The wand displays 'dyson gen5detect' branding and connects to an in-line body rather than a perpendicular V8 bin layout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The machine is labeled 'dyson gen5detect', contradicting the V15 Detect family."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The machine is labeled 'dyson gen5detect', contradicting the V12 Detect Slim family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The target is a cordless stick vacuum labeled 'dyson gen5detect', contradicting the Big Ball canister form factor."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The wand displays 'dyson gen5detect' branding, contradicting the V16 Piston Animal family."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The target is a cordless stick vacuum with cyclone assembly, contradicting the WashG1 wet-cleaner twin-tank design."
+      }
+    ],
+    "decisive_region": [
+      180,
+      550,
+      350,
+      605
+    ],
+    "refinement_reason": ""
+  }
+}

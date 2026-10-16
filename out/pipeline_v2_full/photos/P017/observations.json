@@ -1,0 +1,139 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        17,
+        434,
+        939,
+        552
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline clear dustbin with yellow radial cyclone assembly and purple top filter",
+          "box_2d": [
+            17,
+            483,
+            313,
+            549
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight grey extension wand connecting main body to cleaner head",
+          "box_2d": [
+            313,
+            490,
+            856,
+            525
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized floor head attached at base",
+          "box_2d": [
+            849,
+            434,
+            939,
+            552
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v15 detect"
+    },
+    {
+      "object_id": "o2",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        824,
+        542,
+        977,
+        662
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "head_type",
+          "visible": true,
+          "detail": "Detached soft roller head with yellow and dark spiral stripes",
+          "box_2d": [
+            897,
+            542,
+            977,
+            662
+          ]
+        },
+        {
+          "feature": "connector",
+          "visible": true,
+          "detail": "Pivoting connector neck with red release catch",
+          "box_2d": [
+            824,
+            558,
+            924,
+            608
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        17,
+        434,
+        939,
+        552
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline clear dustbin with yellow radial cyclone assembly and purple top filter",
+          "box_2d": [
+            17,
+            483,
+            313,
+            549
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight grey extension wand connecting main body to cleaner head",
+          "box_2d": [
+            313,
+            490,
+            856,
+            525
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized floor head attached at base",
+          "box_2d": [
+            849,
+            434,
+            939,
+            552
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v15 detect"
+    }
+  ]
+}

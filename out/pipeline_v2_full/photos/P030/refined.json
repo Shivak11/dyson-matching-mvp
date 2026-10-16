@@ -1,0 +1,62 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_big_ball"
+      ],
+      "evidence": [
+        "Floor canister vacuum featuring a cord rewind button and spherical ball body.",
+        "Single-tier radial orange cyclones surround a central blue washable filter cap.",
+        "Transparent bin handle incorporates a central red release push-rod characteristic of the Dyson DC37/DC39 cylinder family."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "Dyson Big Ball features two-tier radial cyclones or Cinetic tips with a collar dirt-ejector bin rather than a single-tier orange cyclone assembly with central blue filter cap."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target features a single-tier radial cyclone pack with a central blue filter cap and clear handle push-rod, contradicting Big Ball cyclone and bin architecture."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target is a corded cylinder canister vacuum with a cord rewind button, contradicting a cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Target is a corded canister vacuum with a cord rewind button, contradicting the cordless stick format."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target is a corded canister vacuum with cord rewind and floor ball body, contradicting an in-line cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Target possesses a corded canister ball body with a cord rewind button, contradicting a cordless stick vacuum."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Target is a corded dry canister vacuum with a cyclone assembly, contradicting an upright wet floor cleaner with water tanks."
+      }
+    ],
+    "decisive_region": [
+      0,
+      0,
+      521,
+      747
+    ],
+    "refinement_reason": ""
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "Legible 'STRATOS' text on the wand and Shark branding on the handheld body identify this machine as a Shark Stratos cordless vacuum.",
+        "The folding wand hinge and illuminated DuoClean floor nozzle contradict all Dyson catalogue models."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The machine displays Shark Stratos branding and architecture, contradicting all Dyson catalogue models."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target displays Shark Stratos branding and a folding wand, lacking Dyson's CleanCompaktor body and conical rollers."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Target features Shark branding and a folding wand, lacking Dyson's perpendicular bin and radial cyclone assembly."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Target features Shark Stratos branding and a folding wand rather than a Dyson in-line cyclone body."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target is a cordless stick vacuum, contradicting the floor-standing canister and hose design of Dyson Big Ball."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target features Shark Stratos branding and a folding wand rather than Dyson's slim in-line cyclone body."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Target is a cordless dry stick vacuum, contradicting the upright wet-cleaner format with dual water tanks of WashG1."
+      }
+    ],
+    "decisive_region": [
+      550,
+      475,
+      625,
+      510
+    ],
+    "refinement_reason": ""
+  }
+}

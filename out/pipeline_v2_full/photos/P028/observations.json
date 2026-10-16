@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        50,
+        677,
+        519
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized cleaner head with transparent roller housing and brush bar",
+          "box_2d": [
+            179,
+            347,
+            677,
+            519
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Swivel joint connector attached to extension wand with red release button",
+          "box_2d": [
+            0,
+            51,
+            462,
+            357
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main motor body, cyclone assembly, and handle are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        50,
+        677,
+        519
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized cleaner head with transparent roller housing and brush bar",
+          "box_2d": [
+            179,
+            347,
+            677,
+            519
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Swivel joint connector attached to extension wand with red release button",
+          "box_2d": [
+            0,
+            51,
+            462,
+            357
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main motor body, cyclone assembly, and handle are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

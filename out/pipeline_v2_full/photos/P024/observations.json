@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        485,
+        308,
+        1000,
+        649
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "cleaner head with illuminated green light projecting onto the floor and baseboard",
+          "box_2d": [
+            485,
+            308,
+            760,
+            649
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "wand and main body are out of frame below",
+          "box_2d": null
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "pivoting neck connector with release button mechanism",
+          "box_2d": [
+            668,
+            434,
+            997,
+            542
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        485,
+        308,
+        1000,
+        649
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "cleaner head with illuminated green light projecting onto the floor and baseboard",
+          "box_2d": [
+            485,
+            308,
+            760,
+            649
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "wand and main body are out of frame below",
+          "box_2d": null
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "pivoting neck connector with release button mechanism",
+          "box_2d": [
+            668,
+            434,
+            997,
+            542
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

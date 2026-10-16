@@ -1,0 +1,46 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The rear end features a segmented LED display with three battery icons and 'Med' text matching the non-catalogue Dyson V11 Animal."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "Dyson V12 Detect Slim and V15 Detect both feature full-colour LCD screens with countdown timers and particle graphs, while V8 Absolute lacks a rear screen."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The target has a segmented LED display with three battery mode icons instead of the full-colour LCD screen found on the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The target features a segmented LED mode display, which contradicts the colour particle-counting LCD screen of the V15 Detect."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 Absolute has a perpendicular bin design and does not feature a rear digital display."
+      }
+    ],
+    "decisive_region": [
+      180,
+      425,
+      600,
+      685
+    ],
+    "refinement_reason": ""
+  }
+}

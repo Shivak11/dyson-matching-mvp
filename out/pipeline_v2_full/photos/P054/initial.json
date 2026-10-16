@@ -1,0 +1,48 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 50,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "Circular rear LCD showing particle count bars and numeric runtime",
+        "Single push-button control above the display"
+      ],
+      "missing_evidence": [
+        "Side view of motor body and handle to verify body proportions",
+        "Readable machine model identifier"
+      ],
+      "contradictions": [],
+      "retake": "Photograph the complete body and handle from the side to check body proportions and control layout."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "WashG1 is an upright wet floor cleaner with dual tanks and rollers, incompatible with this stick vacuum rear display."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "Rear LCD and button are visible, but body proportions and motor housing button placement cannot be confirmed from this rear view."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The CleanCompaktor body silhouette, handle, and conical roller cleaning head are outside the frame."
+      }
+    ],
+    "decisive_region": [
+      303,
+      446,
+      565,
+      536
+    ],
+    "refinement_reason": "Inspect side profile of the motor body and handle to evaluate body proportions and on/off button placement."
+  }
+}

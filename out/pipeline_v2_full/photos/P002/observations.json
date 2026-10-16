@@ -1,0 +1,336 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        38,
+        277,
+        364,
+        650
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Radial cyclone assembly over clear cylindrical bin",
+          "box_2d": [
+            38,
+            350,
+            360,
+            483
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Red latch mechanism on top of cyclone assembly",
+          "box_2d": [
+            84,
+            484,
+            191,
+            510
+          ]
+        },
+        {
+          "feature": "exhaust",
+          "visible": true,
+          "detail": "Purple rear post-motor filter housing",
+          "box_2d": [
+            71,
+            584,
+            256,
+            649
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    },
+    {
+      "object_id": "o2",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        343,
+        19,
+        444,
+        767
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Orange extension wand with red release button at one end",
+          "box_2d": [
+            343,
+            19,
+            444,
+            767
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v8 absolute"
+    },
+    {
+      "object_id": "o3",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        380,
+        24,
+        866,
+        329
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Soft roller cleaner head with red, blue, and black striped roller",
+          "box_2d": [
+            380,
+            24,
+            866,
+            329
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    },
+    {
+      "object_id": "o4",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        426,
+        342,
+        865,
+        623
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Direct drive motorhead cleaner head with articulated neck",
+          "box_2d": [
+            426,
+            342,
+            865,
+            623
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o5",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        389,
+        267,
+        634,
+        431
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Compact motorized brush tool attachment",
+          "box_2d": [
+            389,
+            267,
+            634,
+            431
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    },
+    {
+      "object_id": "o6",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        250,
+        40,
+        318,
+        287
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Molded plastic crevice tool",
+          "box_2d": [
+            250,
+            40,
+            318,
+            287
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o7",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        196,
+        656,
+        327,
+        856
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Combination accessory tool with slideable brush",
+          "box_2d": [
+            196,
+            656,
+            327,
+            856
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o8",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        468,
+        622,
+        761,
+        735
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Angled soft dusting brush tool",
+          "box_2d": [
+            468,
+            622,
+            761,
+            735
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o9",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        325,
+        808,
+        951,
+        999
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Grey wall-mountable docking station and accessory holder",
+          "box_2d": [
+            325,
+            808,
+            951,
+            999
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o10",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        466,
+        715,
+        844,
+        836
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Power supply charging adapter with cord and barrel plug",
+          "box_2d": [
+            466,
+            715,
+            844,
+            836
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        38,
+        277,
+        364,
+        650
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Radial cyclone assembly over clear cylindrical bin",
+          "box_2d": [
+            38,
+            350,
+            360,
+            483
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Red latch mechanism on top of cyclone assembly",
+          "box_2d": [
+            84,
+            484,
+            191,
+            510
+          ]
+        },
+        {
+          "feature": "exhaust",
+          "visible": true,
+          "detail": "Purple rear post-motor filter housing",
+          "box_2d": [
+            71,
+            584,
+            256,
+            649
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

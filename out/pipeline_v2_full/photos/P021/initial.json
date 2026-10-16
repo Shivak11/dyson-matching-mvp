@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The black motor housing with twin vertical vent slots, blue top filter cap, and gold cyclones matches the V16 reference.",
+        "The transparent bin features an internal CleanCompaktor piston assembly and a printed animal icon alongside the red release slider."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "Matches the V16 body silhouette with top blue cap, slotted motor housing, and CleanCompaktor bin mechanism."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the V16-specific top filter cap, slotted motor housing, and internal compactor piston."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the absence of the V12 red top power button and presence of the V16 piston compactor body."
+      }
+    ],
+    "decisive_region": [
+      46,
+      440,
+      750,
+      735
+    ],
+    "refinement_reason": ""
+  }
+}

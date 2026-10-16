@@ -1,0 +1,23 @@
+{
+  "job_id": "v2long:refine:P058",
+  "original_record_line": 26,
+  "original_record_sha256": "c7b934f878a22dfa07dd8731332c2f5172b0d08fbc6eca5030ec0bf0ee3622fc",
+  "provider_response_sha256": "209fd50ef53360252c1dfaa8940b46e59b7a91e4bde0a978a89b57a492e4782a",
+  "result_sha256": "13f3f53138fe7086442d9f4429c9bea04b81e7ab668087c3ca4727ea018e3955",
+  "request_sha256": "e2fb0643297a50bfb326c89fbc26abfff6683e722cb583f941232eee9e7e9321",
+  "config_sha256": "1b2fe6808302d9ca448cbde8be6e81ba80049528f75ea88edb4d03d6ab82622b",
+  "helper_source_sha256": "0f4fda79328b4ae5815c60fe9de487253b2bb53eac6448151fb39e5c0383c8d2",
+  "context_sha256": {
+    "out/pipeline_v2_full/photos/P058/observations.json": "0a2644ea0003e17df8bac494a232dc19f41423165f2dda2a49217ba0531c2598",
+    "out/pipeline_v2_full/photos/P058/refinement_inputs.json": "cc1d497f58720c8e3590c98be8c01f19ddfdc8ad63a420b65c4cab69b8fabb99"
+  },
+  "policy": "Accept only the complete saved P058 refinement after its exact input-token-bound error. Require unchanged provider JSON, full frozen domain validation and verified published-price usage within the original monetary reservation and authorised budgets. Make no paid request.",
+  "original_error": "Reported input tokens exceed reserved bound",
+  "original_actual_cost_usd": 0.05000775,
+  "original_reserved_cost_usd": 0.14388,
+  "published_input_cost_usd": 0.02846775,
+  "published_output_cost_usd": 0.02154,
+  "paid_requests": 0,
+  "additional_cost_usd": 0,
+  "recovery_record_sha256": "4834a12595e59a96c9c750d2634bf50026f4dfd960d3c199a92e888c5efced01"
+}

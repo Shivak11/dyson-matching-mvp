@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        8,
+        151,
+        990,
+        838
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "In-line dustbin and cyclone assembly aligned with the wand",
+          "box_2d": [
+            8,
+            634,
+            364,
+            837
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Gold-toned radial cyclone cones surrounding central shroud",
+          "box_2d": [
+            70,
+            710,
+            260,
+            794
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Metallic copper-colored extension wand",
+          "box_2d": [
+            398,
+            362,
+            744,
+            592
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized brush roll head with transparent casing",
+          "box_2d": [
+            829,
+            151,
+            990,
+            296
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        8,
+        151,
+        990,
+        838
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "In-line dustbin and cyclone assembly aligned with the wand",
+          "box_2d": [
+            8,
+            634,
+            364,
+            837
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Gold-toned radial cyclone cones surrounding central shroud",
+          "box_2d": [
+            70,
+            710,
+            260,
+            794
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Metallic copper-colored extension wand",
+          "box_2d": [
+            398,
+            362,
+            744,
+            592
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized brush roll head with transparent casing",
+          "box_2d": [
+            829,
+            151,
+            990,
+            296
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

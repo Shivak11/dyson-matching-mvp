@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        15,
+        808,
+        984
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "brushroll",
+          "visible": true,
+          "detail": "Translucent housing displaying blue-purple roller components on the left and red roller components on the right",
+          "box_2d": [
+            217,
+            15,
+            807,
+            984
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "Central red release button with an upward arrow positioned above a slide-out tray labeled Debris Tray",
+          "box_2d": [
+            246,
+            317,
+            705,
+            630
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Articulated neck swivel connector extending upward toward missing upper body",
+          "box_2d": [
+            0,
+            428,
+            252,
+            707
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, tanks, handle, and motor assembly are outside the frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        15,
+        808,
+        984
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "brushroll",
+          "visible": true,
+          "detail": "Translucent housing displaying blue-purple roller components on the left and red roller components on the right",
+          "box_2d": [
+            217,
+            15,
+            807,
+            984
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "Central red release button with an upward arrow positioned above a slide-out tray labeled Debris Tray",
+          "box_2d": [
+            246,
+            317,
+            705,
+            630
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Articulated neck swivel connector extending upward toward missing upper body",
+          "box_2d": [
+            0,
+            428,
+            252,
+            707
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "Main body, tanks, handle, and motor assembly are outside the frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

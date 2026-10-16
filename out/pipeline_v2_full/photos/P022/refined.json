@@ -1,0 +1,67 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "Rear circular display features an integrated red power button above the LCD and silver mode button below it.",
+        "Handle comfort pad is visible directly below the cyan filter housing, positively identifying the machine as Dyson Gen5detect."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "dyson_v12_detect_slim places its red power button on the cyclone body rather than above the rear LCD.",
+        "dyson_v15_detect uses trigger operation and lacks a red power button on the rear display face.",
+        "dyson_v16_piston_animal reference lacks the integrated rear-display power button.",
+        "dyson_big_ball is a cylinder canister vacuum, incompatible with this cordless stick vacuum body.",
+        "dyson_v8_absolute has a perpendicular bin without a rear LCD display.",
+        "dyson_wash_g1 is an upright wet floor cleaner without cyclones or a rear circular LCD filter assembly."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target possesses the Gen5detect rear display power button and handle comfort pad rather than V16 features."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "V12 Detect Slim positions its red power button on the cyclone body rather than directly above the rear LCD."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "V15 Detect relies on handle trigger operation and lacks a red power button on the rear display face."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Big Ball is a corded canister vacuum with a spherical wheeled body, incompatible with this cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 Absolute features a perpendicular bin and top pre-filter, lacking a rear circular LCD screen."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "WashG1 is a dedicated wet cleaner with water tanks, lacking a cyclone body and rear LCD filter assembly."
+      }
+    ],
+    "decisive_region": [
+      209,
+      401,
+      629,
+      668
+    ],
+    "refinement_reason": ""
+  }
+}

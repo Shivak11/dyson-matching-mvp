@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_wash_g1",
+      "confidence": 95,
+      "top_two": [
+        "dyson_wash_g1",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The broad rectangular cleaner head displays the readable model identifier 'dyson washG1' on the front bumper."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "confirmed",
+        "evidence": "The cleaner head design and readable 'dyson washG1' marking confirm identity with the WashG1 family."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The target is an upright wet floor cleaner rather than a cordless stick vacuum with conical roller heads."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The broad wet-cleaning floor nozzle and column structure contradict the V8 cordless stick layout."
+      }
+    ],
+    "decisive_region": [
+      845,
+      170,
+      895,
+      315
+    ],
+    "refinement_reason": ""
+  }
+}

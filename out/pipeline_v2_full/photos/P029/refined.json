@@ -1,0 +1,56 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 30,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_big_ball"
+      ],
+      "evidence": [
+        "Motorized floor cleaner head with a cylindrical brush roller and articulated ball swivel neck is visible."
+      ],
+      "missing_evidence": [
+        "The main vacuum body, cyclone assembly, and dustbin are out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the complete main body showing the dustbin, cyclone, and handle controls."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The motorized cleaner head is compatible with V8 models, but the main body and bin are out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head is viewed in isolation while the main body and LCD display remain out of frame."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The canister body, cyclone assembly, and flexible hose are entirely out of frame."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The slim motor body, dustbin, and power button are not visible in the frame."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main vacuum body with its trigger handle and LCD screen is completely out of frame."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The wet cleaner body and water tanks are out of frame and cannot be evaluated."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main vacuum body, cyclone assembly, and dustbin to determine the exact model family."
+  }
+}

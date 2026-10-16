@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        70,
+        288,
+        885,
+        715
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular color screen displaying particle count graph and remaining runtime with red button below",
+          "box_2d": [
+            184,
+            372,
+            644,
+            638
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "translucent purple rear filter cap encasing circular display",
+          "box_2d": [
+            70,
+            287,
+            831,
+            715
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "yellow-gold cyclone body visible below/ahead of rear filter",
+          "box_2d": [
+            584,
+            303,
+            864,
+            648
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        70,
+        288,
+        885,
+        715
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular color screen displaying particle count graph and remaining runtime with red button below",
+          "box_2d": [
+            184,
+            372,
+            644,
+            638
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "translucent purple rear filter cap encasing circular display",
+          "box_2d": [
+            70,
+            287,
+            831,
+            715
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "yellow-gold cyclone body visible below/ahead of rear filter",
+          "box_2d": [
+            584,
+            303,
+            864,
+            648
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

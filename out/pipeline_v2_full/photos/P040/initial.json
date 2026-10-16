@@ -1,0 +1,41 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 30,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "A Dyson-branded soft roller cleaner head and quick-release wand joint are visible."
+      ],
+      "missing_evidence": [
+        "The main motor body, dustbin layout, handle controls, and rear filter or display are completely out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the main motor unit showing the dustbin, handle, and rear filter."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The perpendicular dustbin and cyclone assembly that identify the V8 are out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The motor body and compression mechanism are not visible in the frame."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line bin, handle controls, and rear LCD screen are out of frame."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main body, dustbin, and handle to identify the specific model family."
+  }
+}

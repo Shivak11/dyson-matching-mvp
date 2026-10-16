@@ -1,0 +1,50 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 50,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "In-line cylindrical dustbin and cyclone assembly with a trigger-operated handle.",
+        "Clear horizontal dustbin and rear exhaust filter cover mounted on a lower battery base."
+      ],
+      "missing_evidence": [
+        "View of the rear circular LCD display to distinguish V15 Detect particle counts from the V11 lookalike interface.",
+        "Readable model identifier or attached illuminated cleaner head."
+      ],
+      "contradictions": [
+        "The in-line horizontal dustbin layout visibly contradicts the perpendicular bin design of the V8 Absolute family."
+      ],
+      "retake": "Photograph the rear circular LCD display while powered on to view the interface."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The in-line horizontal dustbin contradicts the perpendicular bin layout of the V8 Absolute."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line body and trigger handle match V15, but distinguishing details from the V11 lookalike cannot be verified without the rear display."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The visible finger trigger and full-size bin proportions contradict the push-button operated slim body of the V12 Detect Slim."
+      }
+    ],
+    "decisive_region": [
+      111,
+      367,
+      286,
+      446
+    ],
+    "refinement_reason": "Inspect the rear face of the exhaust filter to verify the LCD screen interface."
+  }
+}

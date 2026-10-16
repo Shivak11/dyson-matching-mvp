@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Perpendicular transparent dustbin positioned underneath the radial cyclone assembly.",
+        "Red lift-to-empty collar latch on top of cyclones paired with a central pre-filter knob and rear exhaust filter cover."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Features the classic perpendicular bin layout, top red lift lever, and dual filter configuration characteristic of the V8 family."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target has a perpendicular bin layout and dual filter knobs rather than the in-line body with a rear circular LCD screen."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Target possesses a perpendicular bin below radial cyclones rather than an in-line horizontal bin and rear digital LCD."
+      }
+    ],
+    "decisive_region": [
+      300,
+      210,
+      770,
+      520
+    ],
+    "refinement_reason": ""
+  }
+}

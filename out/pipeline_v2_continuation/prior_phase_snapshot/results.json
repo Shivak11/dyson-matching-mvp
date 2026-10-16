@@ -1,0 +1,2558 @@
+[
+  {
+    "image_id": "P001",
+    "instance_id": "P001_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Perpendicular transparent dustbin positioned underneath the radial cyclone assembly.",
+        "Red lift-to-empty collar latch on top of cyclones paired with a central pre-filter knob and rear exhaust filter cover."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Features the classic perpendicular bin layout, top red lift lever, and dual filter configuration characteristic of the V8 family."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target has a perpendicular bin layout and dual filter knobs rather than the in-line body with a rear circular LCD screen."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Target possesses a perpendicular bin below radial cyclones rather than an in-line horizontal bin and rear digital LCD."
+      }
+    ],
+    "decisive_region": [
+      300,
+      210,
+      770,
+      520
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P001",
+    "instance_id": "P001_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Perpendicular transparent dustbin positioned underneath the radial cyclone assembly.",
+        "Red lift-to-empty collar latch on top of cyclones paired with a central pre-filter knob and rear exhaust filter cover."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Features the classic perpendicular bin layout, top red lift lever, and dual filter configuration characteristic of the V8 family."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target has a perpendicular bin layout and dual filter knobs rather than the in-line body with a rear circular LCD screen."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Target possesses a perpendicular bin below radial cyclones rather than an in-line horizontal bin and rear digital LCD."
+      }
+    ],
+    "decisive_region": [
+      300,
+      210,
+      770,
+      520
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P002",
+    "instance_id": "P002_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v15_detect"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Perpendicular bin layout below radial cyclones with top red emptying latch, central pre-filter, and top slider switch matches Dyson V8."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "The perpendicular bin layout, top red release lever, and central pre-filter match the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The target is a handheld cordless body rather than a wheeled spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The target has a perpendicular bin layout instead of the in-line bin and rear display of the V15."
+      }
+    ],
+    "decisive_region": [
+      38,
+      277,
+      364,
+      650
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P002",
+    "instance_id": "P002_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v15_detect"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Perpendicular bin layout below radial cyclones with top red emptying latch, central pre-filter, and top slider switch matches Dyson V8."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "The perpendicular bin layout, top red release lever, and central pre-filter match the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The target is a handheld cordless body rather than a wheeled spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The target has a perpendicular bin layout instead of the in-line bin and rear display of the V15."
+      }
+    ],
+    "decisive_region": [
+      38,
+      277,
+      364,
+      650
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P003",
+    "instance_id": "P003_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v16_piston_animal"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v16_piston_animal"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The perpendicular bin layout positioned directly below the dual-tier radial cyclones with a top red release lever matches the Dyson V8 family."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Visible perpendicular dust bin beneath the radial cyclone pack, top red release lever, and rear purple filter cap confirm the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target is a cordless handheld vacuum rather than a floor-standing spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target has a perpendicular bin layout and radial cyclone assembly instead of the in-line body design of the V16."
+      }
+    ],
+    "decisive_region": [
+      25,
+      240,
+      350,
+      560
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P003",
+    "instance_id": "P003_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v16_piston_animal"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v16_piston_animal"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The perpendicular bin layout positioned directly below the dual-tier radial cyclones with a top red release lever matches the Dyson V8 family."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Visible perpendicular dust bin beneath the radial cyclone pack, top red release lever, and rear purple filter cap confirm the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target is a cordless handheld vacuum rather than a floor-standing spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target has a perpendicular bin layout and radial cyclone assembly instead of the in-line body design of the V16."
+      }
+    ],
+    "decisive_region": [
+      25,
+      240,
+      350,
+      560
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P004",
+    "instance_id": "P004_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v12_detect_slim"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v12_detect_slim"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Perpendicular bin positioned below the two-tier radial cyclone pack with top red release collar and top mode slider matches the Dyson V8 layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Features the signature perpendicular bin below the cyclone assembly, top red bin-release lever, and top slider switch."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target is an integrated cordless handheld unit rather than a floor-standing wheeled cylinder canister."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target has a perpendicular bin and cyclone configuration rather than the in-line body and bin layout of the V12."
+      }
+    ],
+    "decisive_region": [
+      67,
+      376,
+      380,
+      770
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P004",
+    "instance_id": "P004_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v12_detect_slim"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_big_ball",
+      "dyson_v12_detect_slim"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Perpendicular bin positioned below the two-tier radial cyclone pack with top red release collar and top mode slider matches the Dyson V8 layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Features the signature perpendicular bin below the cyclone assembly, top red bin-release lever, and top slider switch."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target is an integrated cordless handheld unit rather than a floor-standing wheeled cylinder canister."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target has a perpendicular bin and cyclone configuration rather than the in-line body and bin layout of the V12."
+      }
+    ],
+    "decisive_region": [
+      67,
+      376,
+      380,
+      770
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P005",
+    "instance_id": "P005_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v15_detect",
+      "dyson_big_ball"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_v15_detect",
+      "dyson_big_ball"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Handheld body features a vertical dustbin with red collar trim positioned ahead of the pistol grip with a red trigger and purple rear filter."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Matches the vertical bin layout below cyclones, red trigger switch, and rear purple filter housing of the V8 cordless family."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the vertical perpendicular dustbin orientation rather than the in-line horizontal bin layout of the V15."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the cordless handheld format rather than a spherical wheeled canister body."
+      }
+    ],
+    "decisive_region": [
+      0,
+      0,
+      630,
+      958
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P005",
+    "instance_id": "P005_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v15_detect",
+      "dyson_big_ball"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_v15_detect",
+      "dyson_big_ball"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Handheld body features a vertical dustbin with red collar trim positioned ahead of the pistol grip with a red trigger and purple rear filter."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Matches the vertical bin layout below cyclones, red trigger switch, and rear purple filter housing of the V8 cordless family."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the vertical perpendicular dustbin orientation rather than the in-line horizontal bin layout of the V15."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the cordless handheld format rather than a spherical wheeled canister body."
+      }
+    ],
+    "decisive_region": [
+      0,
+      0,
+      630,
+      958
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P006",
+    "instance_id": "P006_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Vertical clear dustbin positioned beneath the cyclone assembly rather than in-line.",
+        "Top red lift-release mechanism and rear cylindrical filter housing match the V8 family layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Features the perpendicular vertical bin below the cyclone assembly with the top red lift release."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Requires an in-line horizontal motor and bin body rather than a vertical perpendicular bin."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line horizontal bin and rear LCD screen, conflicting with the perpendicular bin layout."
+      }
+    ],
+    "decisive_region": [
+      140,
+      515,
+      820,
+      930
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P006",
+    "instance_id": "P006_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Vertical clear dustbin positioned beneath the cyclone assembly rather than in-line.",
+        "Top red lift-release mechanism and rear cylindrical filter housing match the V8 family layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Features the perpendicular vertical bin below the cyclone assembly with the top red lift release."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Requires an in-line horizontal motor and bin body rather than a vertical perpendicular bin."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line horizontal bin and rear LCD screen, conflicting with the perpendicular bin layout."
+      }
+    ],
+    "decisive_region": [
+      140,
+      515,
+      820,
+      930
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P007",
+    "instance_id": "P007_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The machine features a slim in-line body with a red circular power button on the gold motor housing.",
+        "The wand displays the readable text 'dyson v12 detect slim total clean'."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Matches the manufacturer reference showing a slim in-line motor body with a front circular red power button."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The V15 Detect uses a trigger-operated handle rather than a red circular push button on the cyclone housing."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 has a perpendicular dust bin located below the cyclone assembly instead of an in-line body."
+      }
+    ],
+    "decisive_region": [
+      55,
+      494,
+      90,
+      508
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P007",
+    "instance_id": "P007_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The machine features a slim in-line body with a red circular power button on the gold motor housing.",
+        "The wand displays the readable text 'dyson v12 detect slim total clean'."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Matches the manufacturer reference showing a slim in-line motor body with a front circular red power button."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The V15 Detect uses a trigger-operated handle rather than a red circular push button on the cyclone housing."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 has a perpendicular dust bin located below the cyclone assembly instead of an in-line body."
+      }
+    ],
+    "decisive_region": [
+      55,
+      494,
+      90,
+      508
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P008",
+    "instance_id": "P008_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Prominent red push-button power switch positioned directly on top of the gold cyclone housing.",
+        "In-line slim cyclone and purple rear filter body layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Features the distinctive red push-button power control on the cyclone body characteristic of the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The V15 Detect relies on trigger operation rather than a push-button mounted on the cyclone housing."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The in-line bin and motor configuration conflicts with the perpendicular bin layout of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      472,
+      453,
+      570,
+      548
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P008",
+    "instance_id": "P008_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Prominent red push-button power switch positioned directly on top of the gold cyclone housing.",
+        "In-line slim cyclone and purple rear filter body layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Features the distinctive red push-button power control on the cyclone body characteristic of the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The V15 Detect relies on trigger operation rather than a push-button mounted on the cyclone housing."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The in-line bin and motor configuration conflicts with the perpendicular bin layout of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      472,
+      453,
+      570,
+      548
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P009",
+    "instance_id": "P009_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The red circular push button located on top of the gold cyclone body matches the Dyson V12 power control design."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Features the distinctive red on/off push button situated directly on top of the gold cyclone housing."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "V15 uses handle trigger operation rather than a red top-mounted push button on the cyclone body."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 has a perpendicular dust bin positioned beneath the cyclones rather than an in-line horizontal canister."
+      }
+    ],
+    "decisive_region": [
+      265,
+      270,
+      360,
+      380
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P009",
+    "instance_id": "P009_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The red circular push button located on top of the gold cyclone body matches the Dyson V12 power control design."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Features the distinctive red on/off push button situated directly on top of the gold cyclone housing."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "V15 uses handle trigger operation rather than a red top-mounted push button on the cyclone body."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 has a perpendicular dust bin positioned beneath the cyclones rather than an in-line horizontal canister."
+      }
+    ],
+    "decisive_region": [
+      265,
+      270,
+      360,
+      380
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P010",
+    "instance_id": "P010_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "In-line horizontal dustbin and gold cyclone array.",
+        "Triggerless handle grip featuring a red vertical accent stripe."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "The triggerless grip with a red vertical accent stripe and in-line bin match the V12 Detect Slim layout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The machine has a triggerless handle with an accent stripe rather than the finger trigger mechanism of the V15 Detect."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The in-line horizontal dustbin configuration contradicts the perpendicular bin layout of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      400,
+      0,
+      950,
+      450
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P010",
+    "instance_id": "P010_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "In-line horizontal dustbin and gold cyclone array.",
+        "Triggerless handle grip featuring a red vertical accent stripe."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "The triggerless grip with a red vertical accent stripe and in-line bin match the V12 Detect Slim layout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The machine has a triggerless handle with an accent stripe rather than the finger trigger mechanism of the V15 Detect."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The in-line horizontal dustbin configuration contradicts the perpendicular bin layout of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      400,
+      0,
+      950,
+      450
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P011",
+    "instance_id": "P011_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim",
+      "dyson_v16_piston_animal"
+    ],
+    "supplied_candidates": [
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim",
+      "dyson_v16_piston_animal"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 50,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Rear circular LCD displays real-time particle counts and runtime within a translucent purple filter cap."
+      ],
+      "missing_evidence": [
+        "Clear side view of the handle and body to verify trigger operation versus top power button and bin proportions."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the entire vacuum body from the side to reveal the handle controls and bin."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The rear particle-count LCD matches V15, but the handle trigger and body proportions are not visible."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The rear display interface matches V12, but the top-mounted power button and slim body are obscured."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The rear filter view does not reveal the CleanCompaktor body or dual-cone cleaner head."
+      }
+    ],
+    "decisive_region": [
+      184,
+      372,
+      644,
+      638
+    ],
+    "refinement_reason": "Inspect the handle and top housing to verify control layout."
+  },
+  {
+    "image_id": "P011",
+    "instance_id": "P011_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim",
+      "dyson_v16_piston_animal"
+    ],
+    "supplied_candidates": [
+      "dyson_big_ball",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_wash_g1"
+    ],
+    "expected_product": null,
+    "refined": true,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The circular rear LCD features a red pill-shaped selection button beneath the particle count readout within the translucent purple filter housing, matching the Dyson V12 Detect Slim."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The Dyson V15 Detect display has a circular silver button below the LCD rather than a red pill-shaped button."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "The rear display interface features the distinctive red pill-shaped control button below the particle size readout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "V15 Detect uses a round silver selection button below the LCD display rather than a red pill button."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "V16 Piston Animal features a different body design and CleanCompaktor compression assembly."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Big Ball is a floor-standing canister vacuum with a spherical wheeled base."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 features a perpendicular bin and lacks a rear circular particle-count LCD screen."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "WashG1 is a dual-roller upright wet cleaner with twin water tanks, not a handheld stick vacuum."
+      }
+    ],
+    "decisive_region": [
+      184,
+      372,
+      644,
+      638
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P012",
+    "instance_id": "P012_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v16_piston_animal",
+      "dyson_big_ball"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_v16_piston_animal",
+      "dyson_big_ball"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 35,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "Dyson Hair Screw Tool with purple conical brush bar attached to a clear vacuum inlet collar with red release button."
+      ],
+      "missing_evidence": [
+        "Main body, cyclone pack, handle, trigger/power buttons, and model badge are cropped out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the entire vacuum body including the handle, cyclone assembly, and any model labelling."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The Hair Screw Tool is shared across several Dyson cordless ranges and the cyclone/bin layout cannot be seen."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The distinctive body silhouette, CleanCompaktor bin, and dual-cone cleaner head are not visible in the frame."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The spherical canister base and wand assembly are not visible to confirm or rule out a Big Ball setup."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the complete handheld body and cyclone layout to distinguish between Dyson cordless families."
+  },
+  {
+    "image_id": "P012",
+    "instance_id": "P012_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v16_piston_animal",
+      "dyson_big_ball"
+    ],
+    "supplied_candidates": [
+      "dyson_big_ball",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_wash_g1"
+    ],
+    "expected_product": null,
+    "refined": true,
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 35,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Dyson Hair screw tool with purple conical brush bar attached to an inlet collar with red release button."
+      ],
+      "missing_evidence": [
+        "Main vacuum body, cyclone pack, handle, power controls, and model label are cropped out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the entire vacuum body including the handle, cyclone assembly, and model labelling."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The Hair screw tool is shared across multiple Dyson ranges and the main body layout is out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The distinctive body silhouette and CleanCompaktor mechanism are not visible in the frame."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The spherical canister base, hose, and wand assembly are cropped out of frame."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The slim in-line body and separate push-button power control are not visible."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line bin, trigger handle, and rear LCD display are not visible in the crop."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The dual water tanks and upright floor-cleaning body are not visible."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the complete handheld body and control layout to distinguish between Dyson cordless families."
+  },
+  {
+    "image_id": "P013",
+    "instance_id": "P013_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The machine has a slim in-line canister with a single tier of yellow cyclones and a triggerless handle layout characteristic of the V12 Detect Slim."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Matches the slim in-line dustbin, single-tier yellow cyclone assembly, and triggerless handle design."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the target's slim bin and single-tier cyclone design rather than the larger trigger-operated V15 body."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the in-line horizontal dustbin layout rather than the perpendicular vertical bin of the V8."
+      }
+    ],
+    "decisive_region": [
+      124,
+      485,
+      412,
+      624
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P013",
+    "instance_id": "P013_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The machine has a slim in-line canister with a single tier of yellow cyclones and a triggerless handle layout characteristic of the V12 Detect Slim."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Matches the slim in-line dustbin, single-tier yellow cyclone assembly, and triggerless handle design."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the target's slim bin and single-tier cyclone design rather than the larger trigger-operated V15 body."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the in-line horizontal dustbin layout rather than the perpendicular vertical bin of the V8."
+      }
+    ],
+    "decisive_region": [
+      124,
+      485,
+      412,
+      624
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P014",
+    "instance_id": "P014_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Full-size in-line transparent dustbin with yellow cyclones and purple filter housing",
+        "Trigger-operated handle grip paired with green laser-illuminated floor head"
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "Matches the in-line full-size bin proportions, yellow cyclone array, trigger grip, and illuminated cleaner head."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Shows full-size bin proportions and a trigger handle rather than the slim body and top push-button control of the V12."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line cylindrical bin layout rather than the perpendicular under-body bin layout of the V8."
+      }
+    ],
+    "decisive_region": [
+      209,
+      242,
+      458,
+      403
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P014",
+    "instance_id": "P014_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Full-size in-line transparent dustbin with yellow cyclones and purple filter housing",
+        "Trigger-operated handle grip paired with green laser-illuminated floor head"
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "Matches the in-line full-size bin proportions, yellow cyclone array, trigger grip, and illuminated cleaner head."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Shows full-size bin proportions and a trigger handle rather than the slim body and top push-button control of the V12."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line cylindrical bin layout rather than the perpendicular under-body bin layout of the V8."
+      }
+    ],
+    "decisive_region": [
+      209,
+      242,
+      458,
+      403
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P015",
+    "instance_id": "P015_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute",
+      "dyson_v15_detect"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine has an in-line body layout with gold cyclone cones, a purple rear filter casing, and a red finger trigger on the handle."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The V12 Detect Slim uses a top push-button power control on the body rather than the visible red handle trigger."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 family features a perpendicular bin assembly rather than an in-line motor, cyclone, and filter layout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "The in-line layout with gold cyclone assembly, purple filter casing, and red handle trigger matches the V15 Detect."
+      }
+    ],
+    "decisive_region": [
+      450,
+      420,
+      1000,
+      976
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P015",
+    "instance_id": "P015_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_big_ball",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_wash_g1"
+    ],
+    "expected_product": null,
+    "refined": true,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "In-line handheld vacuum body featuring gold cyclone cones, purple rear filter housing, and a red finger trigger beneath the handle grip."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The V12 Detect Slim uses a top-mounted push-button power switch rather than the visible red handle trigger."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 family features a perpendicular bin and cyclone assembly rather than an in-line motor and filter layout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "The in-line body layout with gold cyclone cones, purple filter housing, and red finger trigger matches the V15 Detect."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The Big Ball is a canister cylinder vacuum rather than a stick vacuum handheld unit."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The V16 has a different body and handle silhouette with a CleanCompaktor mechanism."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The WashG1 is an upright wet floor cleaner with water tanks and a tall loop handle."
+      }
+    ],
+    "decisive_region": [
+      450,
+      420,
+      1000,
+      976
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P016",
+    "instance_id": "P016_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine features an in-line transparent bin with gold cyclone assembly and purple rear filter housing.",
+        "The body proportions and trigger handle design match the Dyson V15 Detect."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "In-line clear dustbin, gold cyclone pack, and purple filter housing match the V15 Detect."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Lacks the top push-button power control and slim form factor of the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line bin rather than the perpendicular bin layout of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      71,
+      452,
+      330,
+      522
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P016",
+    "instance_id": "P016_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_big_ball",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_wash_g1"
+    ],
+    "expected_product": null,
+    "refined": true,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "In-line transparent dustbin with gold cyclone assembly and purple rear filter housing.",
+        "Body layout and absence of a top push-button power switch match the trigger-operated V15 Detect."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "In-line clear bin, gold multi-cone cyclone assembly, and purple filter housing match the V15 Detect."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Lacks the top red push-button power switch on the cyclone housing characteristic of the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line bin rather than the perpendicular bin layout of the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Stick vacuum layout contradicts the canister and hose construction of the Big Ball."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Features traditional gold cyclone cones rather than the CleanCompaktor mechanism of the V16."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Dry cordless stick vacuum architecture contradicts the dual-tank wet cleaner design of the WashG1."
+      }
+    ],
+    "decisive_region": [
+      71,
+      452,
+      330,
+      522
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P017",
+    "instance_id": "P017_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine has an inline clear bin with yellow radial cyclones and clearly readable 'dyson v15 detect' text printed on the wand."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The vacuum exhibits full-size V15 body proportions and explicit 'dyson v15 detect' text on the wand."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "The inline body matches V15 styling and features readable 'dyson v15 detect' branding on the wand."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The inline dustbin contradicts the perpendicular bin design of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      365,
+      495,
+      445,
+      520
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P017",
+    "instance_id": "P017_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_big_ball",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_wash_g1"
+    ],
+    "expected_product": null,
+    "refined": true,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine features an inline transparent bin with yellow cyclones and clearly readable 'dyson v15 detect' branding printed on the wand."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The machine exhibits full-size V15 body proportions and readable 'dyson v15 detect' text on the wand."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "The inline body, yellow radial cyclones, and clear 'dyson v15 detect' wand identifier confirm this model."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The inline dustbin contradicts the perpendicular dustbin configuration of the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The cordless stick configuration contradicts the wheeled canister design of the Big Ball."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The standard inline bin and 'dyson v15 detect' labeling contradict the V16 Piston Animal design."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The cyclone stick vacuum layout contradicts the upright dual-tank wet-cleaning layout of the WashG1."
+      }
+    ],
+    "decisive_region": [
+      365,
+      495,
+      445,
+      520
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P018",
+    "instance_id": "P018_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_v8_absolute",
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 40,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "Dyson cleaner head with transparent roller cover, anti-tangle comb, and red release collar is visible."
+      ],
+      "missing_evidence": [
+        "Main vacuum body, dustbin layout, handle controls, and cyclone assembly are out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the complete handheld body showing the dustbin and handle."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "Cleaner heads are shared across models, and the characteristic perpendicular bin body is out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main body and compression bin are not visible to verify V16 features."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head alone does not confirm V15 without the in-line body or rear display."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main body to see the dustbin and cyclone layout."
+  },
+  {
+    "image_id": "P018",
+    "instance_id": "P018_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v8_absolute",
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect"
+    ],
+    "supplied_candidates": [
+      "dyson_big_ball",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_wash_g1"
+    ],
+    "expected_product": null,
+    "refined": true,
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 35,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "A Dyson cleaner head with a transparent roller cover, anti-tangle comb, and red quick-release collar is visible."
+      ],
+      "missing_evidence": [
+        "The main vacuum body, dustbin orientation, handle controls, and cyclone assembly are out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the main handheld body showing the dustbin, handle, and controls."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "Motorbar cleaner heads are shared across Dyson ranges, and the perpendicular dustbin body is out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main body with the CleanCompaktor mechanism is not visible to verify V16 identity."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head alone cannot identify V15 without the in-line body or rear LCD screen."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The canister body and hose are out of frame to verify a Big Ball cylinder vacuum."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The slim motor body and push-button power control are out of frame."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The wet-cleaner body and dual-roller assembly are not visible to establish or rule out the family definitively."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main vacuum body to see the dustbin layout and control interface."
+  },
+  {
+    "image_id": "P019",
+    "instance_id": "P019_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine features the distinctive All Floor Cones Sense cleaner head with dual conical rollers and the in-line body silhouette with a cyan top ring."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "Matches the dual conical brush roll cleaner head and overall in-line body design shown in the manufacturer references."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Possesses a dual-cone All Floor cleaner head and body styling distinct from the V12 Detect Slim references."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line dustbin and cyclone assembly rather than the perpendicular bin configuration of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      829,
+      151,
+      990,
+      296
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P019",
+    "instance_id": "P019_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute"
+    ],
+    "supplied_candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine features the distinctive All Floor Cones Sense cleaner head with dual conical rollers and the in-line body silhouette with a cyan top ring."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "Matches the dual conical brush roll cleaner head and overall in-line body design shown in the manufacturer references."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Possesses a dual-cone All Floor cleaner head and body styling distinct from the V12 Detect Slim references."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line dustbin and cyclone assembly rather than the perpendicular bin configuration of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      829,
+      151,
+      990,
+      296
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P020",
+    "instance_id": "P020_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim"
+    ],
+    "supplied_candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The illuminated cleaner head features two conical brush rollers matching the V16 All Floor Cones Sense head reference."
+      ],
+      "missing_evidence": [
+        "Main motor body and dustbin are not visible in frame."
+      ],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "The dual conical roller cleaner head with illumination directly matches the manufacturer reference."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 family is not equipped with the illuminated dual-cone cleaner head."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The V12 family does not use the dual conical roller All Floor Cones Sense head."
+      }
+    ],
+    "decisive_region": [
+      657,
+      240,
+      923,
+      547
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P020",
+    "instance_id": "P020_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim"
+    ],
+    "supplied_candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The illuminated cleaner head features two conical brush rollers matching the V16 All Floor Cones Sense head reference."
+      ],
+      "missing_evidence": [
+        "Main motor body and dustbin are not visible in frame."
+      ],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "The dual conical roller cleaner head with illumination directly matches the manufacturer reference."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 family is not equipped with the illuminated dual-cone cleaner head."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The V12 family does not use the dual conical roller All Floor Cones Sense head."
+      }
+    ],
+    "decisive_region": [
+      657,
+      240,
+      923,
+      547
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P021",
+    "instance_id": "P021_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_initial",
+    "candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim"
+    ],
+    "supplied_candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The black motor housing with twin vertical vent slots, blue top filter cap, and gold cyclones matches the V16 reference.",
+        "The transparent bin features an internal CleanCompaktor piston assembly and a printed animal icon alongside the red release slider."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "Matches the V16 body silhouette with top blue cap, slotted motor housing, and CleanCompaktor bin mechanism."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the V16-specific top filter cap, slotted motor housing, and internal compactor piston."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the absence of the V12 red top power button and presence of the V16 piston compactor body."
+      }
+    ],
+    "decisive_region": [
+      46,
+      440,
+      750,
+      735
+    ],
+    "refinement_reason": ""
+  },
+  {
+    "image_id": "P021",
+    "instance_id": "P021_o1",
+    "model": "flash37high_v2",
+    "variant": "evidence_final",
+    "candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim"
+    ],
+    "supplied_candidates": [
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim"
+    ],
+    "expected_product": null,
+    "refined": false,
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The black motor housing with twin vertical vent slots, blue top filter cap, and gold cyclones matches the V16 reference.",
+        "The transparent bin features an internal CleanCompaktor piston assembly and a printed animal icon alongside the red release slider."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "Matches the V16 body silhouette with top blue cap, slotted motor housing, and CleanCompaktor bin mechanism."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the V16-specific top filter cap, slotted motor housing, and internal compactor piston."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the absence of the V12 red top power button and presence of the V16 piston compactor body."
+      }
+    ],
+    "decisive_region": [
+      46,
+      440,
+      750,
+      735
+    ],
+    "refinement_reason": ""
+  }
+]

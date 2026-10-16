@@ -1,0 +1,61 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The circular rear LCD features a red pill-shaped selection button beneath the particle count readout within the translucent purple filter housing, matching the Dyson V12 Detect Slim."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The Dyson V15 Detect display has a circular silver button below the LCD rather than a red pill-shaped button."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "The rear display interface features the distinctive red pill-shaped control button below the particle size readout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "V15 Detect uses a round silver selection button below the LCD display rather than a red pill button."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "V16 Piston Animal features a different body design and CleanCompaktor compression assembly."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Big Ball is a floor-standing canister vacuum with a spherical wheeled base."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 features a perpendicular bin and lacks a rear circular particle-count LCD screen."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "WashG1 is a dual-roller upright wet cleaner with twin water tanks, not a handheld stick vacuum."
+      }
+    ],
+    "decisive_region": [
+      184,
+      372,
+      644,
+      638
+    ],
+    "refinement_reason": ""
+  }
+}

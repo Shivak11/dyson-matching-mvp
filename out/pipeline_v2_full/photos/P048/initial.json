@@ -1,0 +1,41 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 40,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Dyson illuminated roller cleaner head emitting green light onto the floor with a red quick-release catch."
+      ],
+      "missing_evidence": [
+        "Main vacuum body showing motor, dustbin, LCD display, and trigger or push-button controls."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the main body, handle, and controls of the vacuum."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The illuminated cleaner head is compatible with V12 Detect Slim, but the main body and controls are out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "Although not showing the conical roller head, V16 can use Fluffy Optic heads, and the body is out of frame."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The illuminated Fluffy cleaner head is used by V15 Detect, but the body and handle are not visible."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Photograph the main vacuum body and handle to determine the model family."
+  }
+}

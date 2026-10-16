@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        1000,
+        836
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "circular red power push-button with power symbol",
+          "box_2d": [
+            474,
+            453,
+            663,
+            552
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "cord rewind push-button with plug icon",
+          "box_2d": [
+            433,
+            26,
+            608,
+            166
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "radial orange cyclones surrounding a central blue filter cap",
+          "box_2d": [
+            0,
+            0,
+            521,
+            747
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        1000,
+        836
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "circular red power push-button with power symbol",
+          "box_2d": [
+            474,
+            453,
+            663,
+            552
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "cord rewind push-button with plug icon",
+          "box_2d": [
+            433,
+            26,
+            608,
+            166
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "radial orange cyclones surrounding a central blue filter cap",
+          "box_2d": [
+            0,
+            0,
+            521,
+            747
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

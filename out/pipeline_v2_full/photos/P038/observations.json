@@ -1,0 +1,192 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        282,
+        545,
+        663
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "floorhead with dual roller casing and articulated neck joint",
+          "box_2d": [
+            0,
+            282,
+            545,
+            663
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "upper wand, handle, and display are out of frame at the top",
+          "box_2d": null
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "edge cleaning text and directional arrows on roller housing",
+          "box_2d": [
+            226,
+            318,
+            248,
+            396
+          ]
+        }
+      ],
+      "readable_identifier": "dyson wash"
+    },
+    {
+      "object_id": "o2",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        194,
+        137,
+        814,
+        362
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "transparent cylindrical clean water tank with blue lid and nozzle",
+          "box_2d": [
+            194,
+            137,
+            814,
+            362
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "blue release latch on side of tank collar",
+          "box_2d": [
+            427,
+            209,
+            568,
+            255
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o3",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        410,
+        400,
+        816,
+        577
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "black plastic cylindrical mounting bracket with inner tabs",
+          "box_2d": [
+            410,
+            400,
+            816,
+            577
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o4",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        181,
+        614,
+        792,
+        846
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "transparent cylindrical dirty water container with dual-port grey lid",
+          "box_2d": [
+            181,
+            614,
+            792,
+            846
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red release latch on container collar",
+          "box_2d": [
+            404,
+            730,
+            547,
+            777
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        282,
+        545,
+        663
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "floorhead with dual roller casing and articulated neck joint",
+          "box_2d": [
+            0,
+            282,
+            545,
+            663
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "upper wand, handle, and display are out of frame at the top",
+          "box_2d": null
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "edge cleaning text and directional arrows on roller housing",
+          "box_2d": [
+            226,
+            318,
+            248,
+            396
+          ]
+        }
+      ],
+      "readable_identifier": "dyson wash"
+    }
+  ]
+}

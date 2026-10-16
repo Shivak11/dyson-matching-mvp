@@ -1,0 +1,61 @@
+{
+  "o2": {
+    "object_id": "o2",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The handheld unit features a Shark-style boxy dust container, ribbed cylindrical filter housing, and closed loop handle rather than Dyson cyclone architecture."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The body architecture completely lacks Dyson cyclonic assemblies, in-line transparent cylindrical bins, and Dyson handle ergonomics across all catalogue families."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Lacks the in-line radial cyclone assembly, circular rear filter housing, and pistol-grip trigger of the V15."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Lacks the slim in-line cyclone body, circular rear filter, and top red push button of the V12."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Target is a dry handheld vacuum unit rather than an upright wet cleaner with twin water tanks."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target is a cordless handheld vacuum rather than a floor-standing spherical wheeled canister vacuum."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Lacks the CleanCompaktor cylinder, conical cyclones, and Dyson handle architecture of the V16."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Lacks the perpendicular dust bin below a cyclone assembly and the red top release lever of the V8."
+      }
+    ],
+    "decisive_region": [
+      488,
+      805,
+      1000,
+      998
+    ],
+    "refinement_reason": ""
+  }
+}

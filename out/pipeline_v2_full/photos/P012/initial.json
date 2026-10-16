@@ -1,0 +1,41 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 35,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "Dyson Hair Screw Tool with purple conical brush bar attached to a clear vacuum inlet collar with red release button."
+      ],
+      "missing_evidence": [
+        "Main body, cyclone pack, handle, trigger/power buttons, and model badge are cropped out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the entire vacuum body including the handle, cyclone assembly, and any model labelling."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The Hair Screw Tool is shared across several Dyson cordless ranges and the cyclone/bin layout cannot be seen."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The distinctive body silhouette, CleanCompaktor bin, and dual-cone cleaner head are not visible in the frame."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The spherical canister base and wand assembly are not visible to confirm or rule out a Big Ball setup."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the complete handheld body and cyclone layout to distinguish between Dyson cordless families."
+  }
+}

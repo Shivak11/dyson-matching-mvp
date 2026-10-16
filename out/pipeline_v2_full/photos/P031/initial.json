@@ -1,0 +1,83 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_big_ball",
+      "confidence": 95,
+      "top_two": [
+        "dyson_big_ball",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "Spherical canister body with large wheel and visible text reading 'dyson big ball turbinehead' on the cyclone collar."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "confirmed",
+        "evidence": "Spherical canister layout and visible model labeling confirm Dyson Big Ball."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Spherical canister body contradicts the in-line cordless stick design."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Wheeled canister form contradicts the handheld perpendicular stick format."
+      }
+    ],
+    "decisive_region": [
+      190,
+      20,
+      330,
+      95
+    ],
+    "refinement_reason": ""
+  },
+  "o2": {
+    "object_id": "o2",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 30,
+      "top_two": [
+        "dyson_big_ball",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "Quick-release upholstery tool with Dyson branding is visible."
+      ],
+      "missing_evidence": [
+        "Main vacuum body showing motor, cyclones, and bin layout."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the main vacuum body showing the dust bin and cyclone assembly."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "This quick-release tool is an accessory shared across multiple Dyson models."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The tool is an interchangeable accessory that does not establish the attached vacuum family."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The tool alone does not reveal the main machine model."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main vacuum body to identify the machine model."
+  }
+}

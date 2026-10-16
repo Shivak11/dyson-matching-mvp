@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        80,
+        429,
+        825,
+        623
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen showing droplet icons and 31:50 runtime",
+          "box_2d": [
+            538,
+            429,
+            723,
+            535
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "central column fitted with clear cylindrical water reservoir tank",
+          "box_2d": [
+            108,
+            469,
+            499,
+            564
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "wide wet cleaning head with black and white casing",
+          "box_2d": [
+            80,
+            431,
+            298,
+            623
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "blue button marked MAX on the handle below the circular display",
+          "box_2d": [
+            753,
+            466,
+            796,
+            492
+          ]
+        }
+      ],
+      "readable_identifier": "dyson washg1"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        80,
+        429,
+        825,
+        623
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen showing droplet icons and 31:50 runtime",
+          "box_2d": [
+            538,
+            429,
+            723,
+            535
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "central column fitted with clear cylindrical water reservoir tank",
+          "box_2d": [
+            108,
+            469,
+            499,
+            564
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "wide wet cleaning head with black and white casing",
+          "box_2d": [
+            80,
+            431,
+            298,
+            623
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "blue button marked MAX on the handle below the circular display",
+          "box_2d": [
+            753,
+            466,
+            796,
+            492
+          ]
+        }
+      ],
+      "readable_identifier": "dyson washg1"
+    }
+  ]
+}

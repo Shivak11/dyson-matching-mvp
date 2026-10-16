@@ -1,0 +1,56 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 30,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "A Dyson soft roller cleaner head and quick-release wand joint are visible."
+      ],
+      "missing_evidence": [
+        "The main motor unit, dustbin layout, handle controls, and rear filter or display are out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the main motor body showing the dustbin, handle controls, and rear filter or display."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The perpendicular dustbin and cyclone assembly that identify the V8 are out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The motor body, compression mechanism, and rear LCD are out of frame."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line dustbin, trigger handle, and rear LCD screen are out of frame."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The canister body, cyclone assembly, and hose connection are out of frame."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The slim motor body, push-button power control, and rear LCD are out of frame."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main body, water tanks, and handle are out of frame."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main body, dustbin, and handle controls to distinguish the cordless vacuum family."
+  }
+}

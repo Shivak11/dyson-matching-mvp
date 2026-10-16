@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.851586784283646,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.851586784283646
+          },
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.8442954089203942
+          },
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.8415853500029871
+          }
+        ]
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.8359362933151844,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.8359362933151844
+          },
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.820610385282636
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.813678066444689
+          }
+        ]
+      },
+      {
+        "product": "dyson_v15_detect",
+        "similarity": 0.8286674217016687,
+        "references": [
+          {
+            "reference": "dyson_v15_detect_1",
+            "similarity": 0.8286674217016687
+          },
+          {
+            "reference": "dyson_v15_detect_0",
+            "similarity": 0.8237116165552067
+          },
+          {
+            "reference": "dyson_v15_detect_2",
+            "similarity": 0.8135881305961775
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P025/o1_body.jpg",
+      "sha256": "ddf093e931ee064a9761fe0078417214b1319b0e5ff862cbae02a868818f8af6",
+      "pixel_box": [
+        74,
+        0,
+        1664,
+        1000
+      ],
+      "width": 1536,
+      "height": 966
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ]
+  }
+}

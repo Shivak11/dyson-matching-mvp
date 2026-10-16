@@ -1,0 +1,118 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        160,
+        920,
+        575
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "wide rectangular floor head with white front bumper strip",
+          "box_2d": [
+            577,
+            160,
+            917,
+            574
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "upright central column connected by a pivot neck to the cleaning head",
+          "box_2d": [
+            0,
+            281,
+            689,
+            437
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": false,
+          "detail": "handle and upper user controls are out of frame at top",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson washG1"
+    },
+    {
+      "object_id": "o2",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        36,
+        612,
+        946,
+        824
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "detached transparent cylindrical dual water container with dark middle joining section",
+          "box_2d": [
+            36,
+            612,
+            946,
+            824
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        160,
+        920,
+        575
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "wide rectangular floor head with white front bumper strip",
+          "box_2d": [
+            577,
+            160,
+            917,
+            574
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "upright central column connected by a pivot neck to the cleaning head",
+          "box_2d": [
+            0,
+            281,
+            689,
+            437
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": false,
+          "detail": "handle and upper user controls are out of frame at top",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson washG1"
+    }
+  ]
+}

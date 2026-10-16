@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        209,
+        242,
+        898,
+        614
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline cylindrical dustbin with yellow cyclones and purple filter housing",
+          "box_2d": [
+            209,
+            242,
+            458,
+            403
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight dark extension wand connecting the handheld unit to the floor head",
+          "box_2d": [
+            422,
+            372,
+            843,
+            584
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor cleaner head emitting green illumination onto the floor",
+          "box_2d": [
+            768,
+            569,
+            903,
+            614
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        209,
+        242,
+        898,
+        614
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline cylindrical dustbin with yellow cyclones and purple filter housing",
+          "box_2d": [
+            209,
+            242,
+            458,
+            403
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight dark extension wand connecting the handheld unit to the floor head",
+          "box_2d": [
+            422,
+            372,
+            843,
+            584
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor cleaner head emitting green illumination onto the floor",
+          "box_2d": [
+            768,
+            569,
+            903,
+            614
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

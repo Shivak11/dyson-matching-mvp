@@ -1,0 +1,38 @@
+{
+  "dyson_big_ball": {
+    "file": "out/pipeline_v2/references/dyson_big_ball.jpg",
+    "sha256": "253eb396d9aead322376e3c4f194971b69b2194a82f6fdda16ee34d5117648dc"
+  },
+  "dyson_v8_absolute": {
+    "file": "out/pipeline_v2/references/dyson_v8_absolute.jpg",
+    "sha256": "d5ae8375e168f9cd7bb43c6a2e4ba6b538d5274f0e7fa93920a499f29a184f93"
+  },
+  "dyson_v12_detect_slim": {
+    "file": "out/pipeline_v2/references/dyson_v12_detect_slim.jpg",
+    "sha256": "dc3519401cf4b864ff61f91b11af85d3779da327e4166897c9f747b55532ca15"
+  },
+  "dyson_v15_detect": {
+    "file": "out/pipeline_v2/references/dyson_v15_detect.jpg",
+    "sha256": "960bfcff7330715e8de0179aeebfaba7a735bd1f8b1cc0015f308dee45d608ed"
+  },
+  "dyson_v16_piston_animal": {
+    "file": "out/pipeline_v2/references/dyson_v16_piston_animal.jpg",
+    "sha256": "a6298646a60d2a0c5f12f5866bdf7691264c5314b3e423ff33dac4445dd32cdb"
+  },
+  "dyson_wash_g1": {
+    "file": "out/pipeline_v2/references/dyson_wash_g1.jpg",
+    "sha256": "52bf0f2d7feb4e3ac0a77ad156d50010a227916514268fc9d51b50a42e271d23"
+  },
+  "dyson_v11": {
+    "file": "out/pipeline_v2/references/dyson_v11.jpg",
+    "sha256": "8d04387d9aea674d96f2777691d56ad6ee6a9606be2a0625c4362e6ce52faa22"
+  },
+  "dyson_gen5detect": {
+    "file": "out/pipeline_v2/references/dyson_gen5detect.jpg",
+    "sha256": "6817643ee34fb90104a38187fd6b6caecd35ff03f6cfb613c8d86c1bc54b32dd"
+  },
+  "shark_stratos": {
+    "file": "out/pipeline_v2/references/shark_stratos.jpg",
+    "sha256": "d4f883fb3f141a06ed3f357f32717c61a30091f58cb837673d79a3072b55b00f"
+  }
+}

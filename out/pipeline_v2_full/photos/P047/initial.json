@@ -1,0 +1,46 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The wand displays readable text 'dyson gen5detect', positively identifying it as the non-catalogue Gen5detect model."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The visible 'dyson gen5detect' identifier contradicts all catalogue candidate families."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The wand displays 'dyson gen5detect' branding, contradicting the V8 Absolute family."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The wand displays 'dyson gen5detect' branding, contradicting the V15 Detect family."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The wand displays 'dyson gen5detect' branding, contradicting the V12 Detect Slim family."
+      }
+    ],
+    "decisive_region": [
+      180,
+      550,
+      350,
+      605
+    ],
+    "refinement_reason": ""
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The machine features a slim in-line body with a red circular power button on the gold motor housing.",
+        "The wand displays the readable text 'dyson v12 detect slim total clean'."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Matches the manufacturer reference showing a slim in-line motor body with a front circular red power button."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The V15 Detect uses a trigger-operated handle rather than a red circular push button on the cyclone housing."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 has a perpendicular dust bin located below the cyclone assembly instead of an in-line body."
+      }
+    ],
+    "decisive_region": [
+      55,
+      494,
+      90,
+      508
+    ],
+    "refinement_reason": ""
+  }
+}

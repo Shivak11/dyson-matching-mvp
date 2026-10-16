@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        145,
+        909,
+        922
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaning_head",
+          "visible": true,
+          "detail": "wide wet-cleaning head with front bumper and roller brush underneath",
+          "box_2d": [
+            336,
+            145,
+            908,
+            922
+          ]
+        },
+        {
+          "feature": "neck_joint",
+          "visible": true,
+          "detail": "central articulated pivot neck leading out of top frame",
+          "box_2d": [
+            0,
+            396,
+            521,
+            675
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red slide switch or latch on left side of head",
+          "box_2d": [
+            441,
+            206,
+            483,
+            274
+          ]
+        }
+      ],
+      "readable_identifier": "dyson washG1"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        145,
+        909,
+        922
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaning_head",
+          "visible": true,
+          "detail": "wide wet-cleaning head with front bumper and roller brush underneath",
+          "box_2d": [
+            336,
+            145,
+            908,
+            922
+          ]
+        },
+        {
+          "feature": "neck_joint",
+          "visible": true,
+          "detail": "central articulated pivot neck leading out of top frame",
+          "box_2d": [
+            0,
+            396,
+            521,
+            675
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red slide switch or latch on left side of head",
+          "box_2d": [
+            441,
+            206,
+            483,
+            274
+          ]
+        }
+      ],
+      "readable_identifier": "dyson washG1"
+    }
+  ]
+}

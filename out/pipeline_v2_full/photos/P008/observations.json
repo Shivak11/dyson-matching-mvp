@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        48,
+        344,
+        1000,
+        638
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Gold radial cyclone section with central red push button",
+          "box_2d": [
+            265,
+            348,
+            715,
+            638
+          ]
+        },
+        {
+          "feature": "rear_filter",
+          "visible": true,
+          "detail": "Purple translucent rear housing containing pleated cylindrical filter",
+          "box_2d": [
+            594,
+            344,
+            1000,
+            631
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "Clear inline cylindrical dust canister positioned forward of cyclone",
+          "box_2d": [
+            83,
+            401,
+            335,
+            600
+          ]
+        },
+        {
+          "feature": "cleaning_head",
+          "visible": true,
+          "detail": "Directly attached cleaner head with transparent top cover",
+          "box_2d": [
+            48,
+            381,
+            332,
+            615
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        48,
+        344,
+        1000,
+        638
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Gold radial cyclone section with central red push button",
+          "box_2d": [
+            265,
+            348,
+            715,
+            638
+          ]
+        },
+        {
+          "feature": "rear_filter",
+          "visible": true,
+          "detail": "Purple translucent rear housing containing pleated cylindrical filter",
+          "box_2d": [
+            594,
+            344,
+            1000,
+            631
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "Clear inline cylindrical dust canister positioned forward of cyclone",
+          "box_2d": [
+            83,
+            401,
+            335,
+            600
+          ]
+        },
+        {
+          "feature": "cleaning_head",
+          "visible": true,
+          "detail": "Directly attached cleaner head with transparent top cover",
+          "box_2d": [
+            48,
+            381,
+            332,
+            615
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

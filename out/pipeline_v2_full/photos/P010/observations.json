@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Gold cyclone cone array with purple trim ring",
+          "box_2d": [
+            0,
+            0,
+            486,
+            432
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "Clear horizontal cylindrical dustbin container",
+          "box_2d": [
+            0,
+            368,
+            467,
+            1000
+          ]
+        },
+        {
+          "feature": "bin_release",
+          "visible": true,
+          "detail": "Red sliding bin release lever beneath the dustbin",
+          "box_2d": [
+            403,
+            550,
+            580,
+            672
+          ]
+        },
+        {
+          "feature": "handle",
+          "visible": true,
+          "detail": "Grey pistol grip handle with red insert stripe",
+          "box_2d": [
+            405,
+            0,
+            986,
+            530
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Gold cyclone cone array with purple trim ring",
+          "box_2d": [
+            0,
+            0,
+            486,
+            432
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "Clear horizontal cylindrical dustbin container",
+          "box_2d": [
+            0,
+            368,
+            467,
+            1000
+          ]
+        },
+        {
+          "feature": "bin_release",
+          "visible": true,
+          "detail": "Red sliding bin release lever beneath the dustbin",
+          "box_2d": [
+            403,
+            550,
+            580,
+            672
+          ]
+        },
+        {
+          "feature": "handle",
+          "visible": true,
+          "detail": "Grey pistol grip handle with red insert stripe",
+          "box_2d": [
+            405,
+            0,
+            986,
+            530
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

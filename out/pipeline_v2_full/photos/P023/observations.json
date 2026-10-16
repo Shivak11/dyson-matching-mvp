@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        75,
+        329,
+        824,
+        756
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline handheld body with gold cyclones, clear bin, pistol grip, and bottom-mounted battery",
+          "box_2d": [
+            75,
+            391,
+            686,
+            755
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "Circular screen on the rear blue filter cap",
+          "box_2d": [
+            75,
+            527,
+            258,
+            637
+          ]
+        },
+        {
+          "feature": "controls/release",
+          "visible": true,
+          "detail": "Red bin-release lever mechanism beneath the cyclone assembly",
+          "box_2d": [
+            483,
+            516,
+            547,
+            562
+          ]
+        },
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Narrow black crevice nozzle attached directly to the inlet",
+          "box_2d": [
+            577,
+            329,
+            824,
+            442
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        75,
+        329,
+        824,
+        756
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline handheld body with gold cyclones, clear bin, pistol grip, and bottom-mounted battery",
+          "box_2d": [
+            75,
+            391,
+            686,
+            755
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "Circular screen on the rear blue filter cap",
+          "box_2d": [
+            75,
+            527,
+            258,
+            637
+          ]
+        },
+        {
+          "feature": "controls/release",
+          "visible": true,
+          "detail": "Red bin-release lever mechanism beneath the cyclone assembly",
+          "box_2d": [
+            483,
+            516,
+            547,
+            562
+          ]
+        },
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Narrow black crevice nozzle attached directly to the inlet",
+          "box_2d": [
+            577,
+            329,
+            824,
+            442
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

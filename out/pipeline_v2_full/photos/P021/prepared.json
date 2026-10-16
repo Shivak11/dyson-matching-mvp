@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.8759390881486706,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.8759390881486706
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.8502660378503971
+          },
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.8460132142248163
+          }
+        ]
+      },
+      {
+        "product": "dyson_v15_detect",
+        "similarity": 0.850465166169054,
+        "references": [
+          {
+            "reference": "dyson_v15_detect_1",
+            "similarity": 0.850465166169054
+          },
+          {
+            "reference": "dyson_v15_detect_0",
+            "similarity": 0.8305843539186941
+          },
+          {
+            "reference": "dyson_v15_detect_2",
+            "similarity": 0.8102872625084717
+          }
+        ]
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.839418762449111,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.839418762449111
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.8333592950092825
+          },
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.8137185209095431
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P021/o1_body.jpg",
+      "sha256": "8fa52ff657f97d9b0310742bb4a11911eed2cc2c8c3177610dda92f2baa58b13",
+      "pixel_box": [
+        162,
+        0,
+        1122,
+        675
+      ],
+      "width": 960,
+      "height": 675
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim"
+    ]
+  }
+}

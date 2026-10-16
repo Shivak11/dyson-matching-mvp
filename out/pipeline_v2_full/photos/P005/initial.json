@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Handheld body features a vertical dustbin with red collar trim positioned ahead of the pistol grip with a red trigger and purple rear filter."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Matches the vertical bin layout below cyclones, red trigger switch, and rear purple filter housing of the V8 cordless family."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the vertical perpendicular dustbin orientation rather than the in-line horizontal bin layout of the V15."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Contradicted by the cordless handheld format rather than a spherical wheeled canister body."
+      }
+    ],
+    "decisive_region": [
+      0,
+      0,
+      630,
+      958
+    ],
+    "refinement_reason": ""
+  }
+}

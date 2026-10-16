@@ -1,0 +1,46 @@
+{
+  "o2": {
+    "object_id": "o2",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Handheld unit displays an offset boxy dust container, ribbed cylindrical chamber, and closed loop handle characteristic of a Shark cordless vacuum rather than Dyson cyclone architecture."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The body architecture lacks Dyson's in-line cylindrical canister, radial cyclones, and rear circular filter housing."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Lacks the in-line cylindrical transparent bin, radial cyclone assembly, and pistol-grip trigger handle of the V15."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Lacks the slim in-line cyclone body, circular rear filter, and top red push-button control of the V12."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Machine is a dry cordless handheld unit rather than an upright wet floor cleaner with dual tanks."
+      }
+    ],
+    "decisive_region": [
+      488,
+      805,
+      1000,
+      998
+    ],
+    "refinement_reason": ""
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.8065350683775419,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.8065350683775419
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.7966383270108254
+          },
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.7944594430610513
+          }
+        ]
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.7711353535023837,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.7711353535023837
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.7616637920897515
+          },
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.7615217706725013
+          }
+        ]
+      },
+      {
+        "product": "dyson_v15_detect",
+        "similarity": 0.7699773107533279,
+        "references": [
+          {
+            "reference": "dyson_v15_detect_2",
+            "similarity": 0.7699773107533279
+          },
+          {
+            "reference": "dyson_v15_detect_1",
+            "similarity": 0.7630954706962149
+          },
+          {
+            "reference": "dyson_v15_detect_0",
+            "similarity": 0.7526857185886014
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P022/o1_body.jpg",
+      "sha256": "718c9e860960aeffcf9bc66dd1ac29497a17cd7050bf538c1f3f149d072f4e11",
+      "pixel_box": [
+        137,
+        13,
+        950,
+        675
+      ],
+      "width": 813,
+      "height": 662
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ]
+  }
+}

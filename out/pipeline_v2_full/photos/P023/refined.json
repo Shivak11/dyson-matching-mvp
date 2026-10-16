@@ -1,0 +1,60 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The handle visibly lacks a finger trigger, featuring the smooth continuous grip with a red accent inlay of the V12 Detect Slim.",
+        "The red bin-release lever mechanism is positioned beneath the cyclone assembly."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "The triggerless handle grip and the red bin-release lever beneath the cyclones confirm the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The handle visibly lacks the trigger mechanism required for the V15 Detect."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The target lacks the CleanCompaktor mechanism and distinct body silhouette of the V16."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The machine is a cordless stick vacuum rather than a spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The in-line bin with a rear circular display contradicts the perpendicular bin layout and lack of LCD on the V8."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The target is a cyclone handheld vacuum rather than a dual-tank upright wet floor cleaner."
+      }
+    ],
+    "decisive_region": [
+      350,
+      500,
+      560,
+      680
+    ],
+    "refinement_reason": ""
+  }
+}

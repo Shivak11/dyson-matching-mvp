@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_wash_g1",
+        "similarity": 0.7978857753618019,
+        "references": [
+          {
+            "reference": "dyson_wash_g1_0",
+            "similarity": 0.7978857753618019
+          },
+          {
+            "reference": "dyson_wash_g1_2",
+            "similarity": 0.7924092598539692
+          },
+          {
+            "reference": "dyson_wash_g1_1",
+            "similarity": 0.7887391436372472
+          }
+        ]
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.7879535453181207,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.7879535453181207
+          },
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.7407917772584133
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.7397335227104785
+          }
+        ]
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "similarity": 0.7555540628274703,
+        "references": [
+          {
+            "reference": "dyson_v8_absolute_0",
+            "similarity": 0.7555540628274703
+          },
+          {
+            "reference": "dyson_v8_absolute_2",
+            "similarity": 0.7290306763534136
+          },
+          {
+            "reference": "dyson_v8_absolute_1",
+            "similarity": 0.7184435106401299
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P034/o1_body.jpg",
+      "sha256": "d874389d6faac42299e66f81df881620d204ebacf91072c707e21048ce1b3e99",
+      "pixel_box": [
+        125,
+        0,
+        1240,
+        694
+      ],
+      "width": 1115,
+      "height": 694
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_wash_g1",
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute"
+    ]
+  }
+}

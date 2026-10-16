@@ -1,0 +1,48 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 50,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "In-line transparent bin, cyclone assembly, rear purple filter cap, and pistol grip handle with red finger trigger are visible."
+      ],
+      "missing_evidence": [
+        "Rear LCD screen interface and machine model markings are not visible to separate Dyson V15 Detect from Dyson V11."
+      ],
+      "contradictions": [
+        "The visible finger trigger and full-sized bin contradict the button-operated V12 Detect Slim, and the in-line body layout contradicts the perpendicular V8 bin."
+      ],
+      "retake": "Take a photo showing the rear circular LCD display screen and any model badging on the motor body."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "Matches the in-line bin, cyclone form factor, and trigger operation, but cannot be distinguished from the non-catalogue V11 without the rear screen or model labeling."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target possesses a red trigger on the handle and larger bin proportions, contradicting the V12 Detect Slim's push-button control on the body and triggerless grip."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Target features an in-line horizontal bin layout aligned with the motor, contradicting the perpendicular bin orientation of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      370,
+      590,
+      445,
+      640
+    ],
+    "refinement_reason": "Inspect the rear circular display to check for the V15 particle readout versus V11 mode display."
+  }
+}

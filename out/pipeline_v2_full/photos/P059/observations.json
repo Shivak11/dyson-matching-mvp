@@ -1,0 +1,176 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        38,
+        397,
+        959,
+        507
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "stick vacuum with inline clear bin, orange cyclone cone, purple top cap, wand, and floor head",
+          "box_2d": [
+            38,
+            417,
+            332,
+            471
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red push-button power control on top of cyclone assembly",
+          "box_2d": [
+            98,
+            434,
+            126,
+            449
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "slim cleaner head with exposed brush bar and Dyson branding",
+          "box_2d": [
+            879,
+            397,
+            958,
+            507
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v12 detect slim total clean"
+    },
+    {
+      "object_id": "o2",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        37,
+        518,
+        963,
+        629
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "stick vacuum with inline clear bin, radial cyclones, purple top cap, wand, and wide cleaner head",
+          "box_2d": [
+            37,
+            534,
+            360,
+            594
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "floor cleaner head with transparent cover, internal comb, and brush roller",
+          "box_2d": [
+            884,
+            518,
+            963,
+            629
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v15 detect total clean"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        38,
+        397,
+        959,
+        507
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "stick vacuum with inline clear bin, orange cyclone cone, purple top cap, wand, and floor head",
+          "box_2d": [
+            38,
+            417,
+            332,
+            471
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red push-button power control on top of cyclone assembly",
+          "box_2d": [
+            98,
+            434,
+            126,
+            449
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "slim cleaner head with exposed brush bar and Dyson branding",
+          "box_2d": [
+            879,
+            397,
+            958,
+            507
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v12 detect slim total clean"
+    },
+    {
+      "object_id": "o2",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        37,
+        518,
+        963,
+        629
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "stick vacuum with inline clear bin, radial cyclones, purple top cap, wand, and wide cleaner head",
+          "box_2d": [
+            37,
+            534,
+            360,
+            594
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "floor cleaner head with transparent cover, internal comb, and brush roller",
+          "box_2d": [
+            884,
+            518,
+            963,
+            629
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v15 detect total clean"
+    }
+  ]
+}

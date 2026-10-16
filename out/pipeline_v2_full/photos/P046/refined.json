@@ -1,0 +1,56 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 30,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "A Dyson direct-drive cleaner head with a rotating bristle roller and articulating wand joint is visible."
+      ],
+      "missing_evidence": [
+        "The main vacuum body with the motor, cyclone assembly, dust bin, and controls is out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Take a photo of the main vacuum body showing the dust bin, handle, and cyclone assembly."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head matches Dyson direct-drive styling, but the perpendicular bin and lift lever are out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The handheld body with compression bin and rear LCD is out of frame."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line dust bin, trigger handle, and rear LCD are out of frame."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The spherical canister body, cyclone assembly, and hose are out of frame."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The slim motor body, push button, and rear display are out of frame."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main body with water tanks and roller assembly is out of frame."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Handheld body unit showing cyclone, dust bin, and handle interface"
+  }
+}

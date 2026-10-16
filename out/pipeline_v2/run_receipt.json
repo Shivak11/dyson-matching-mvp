@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-16T05:21:53Z",
+  "settled_utc": "2026-10-16T05:23:50Z",
+  "status": "completed",
+  "completed_count": 1,
+  "requested_count": 1,
+  "workers": 1,
+  "rate_limit_policy": {
+    "rate_limit_retries": 3,
+    "request_interval_seconds": 15,
+    "max_retry_delay_seconds": 300
+  },
+  "new_accounted_usd": 0.01996275,
+  "inflight_count": 0,
+  "error": null
+}

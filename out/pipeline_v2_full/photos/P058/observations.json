@@ -1,0 +1,340 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        367,
+        0,
+        1000,
+        815
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Black handheld vacuum body with clear dust cup below",
+          "box_2d": [
+            674,
+            0,
+            1000,
+            608
+          ]
+        },
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Angled oval dusting brush with bristle perimeter and Shark Anti-Allergen Dust Brush print",
+          "box_2d": [
+            367,
+            615,
+            649,
+            815
+          ]
+        }
+      ],
+      "readable_identifier": "Shark"
+    },
+    {
+      "object_id": "o2",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        62,
+        725,
+        292,
+        875
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Mint-green floor nozzle with visible roller bar",
+          "box_2d": [
+            228,
+            786,
+            292,
+            875
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o3",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        50,
+        793,
+        202,
+        924
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Black handheld body with integrated handle and cylindrical bin",
+          "box_2d": [
+            50,
+            793,
+            202,
+            924
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o4",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        114,
+        915,
+        280,
+        1000
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Grey handheld vacuum body with transparent angled dust container",
+          "box_2d": [
+            114,
+            915,
+            280,
+            1000
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o5",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        99,
+        0,
+        340,
+        99
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Floor cleaner nozzle with clear window on dark housing",
+          "box_2d": [
+            218,
+            0,
+            340,
+            99
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o6",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        434,
+        937,
+        574,
+        999
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Detached black motorized mini tool",
+          "box_2d": [
+            434,
+            937,
+            574,
+            999
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o7",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        184,
+        174,
+        706,
+        434
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Long extension wand with blue flat nozzle tip",
+          "box_2d": [
+            566,
+            174,
+            706,
+            234
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        367,
+        0,
+        1000,
+        815
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Black handheld vacuum body with clear dust cup below",
+          "box_2d": [
+            674,
+            0,
+            1000,
+            608
+          ]
+        },
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Angled oval dusting brush with bristle perimeter and Shark Anti-Allergen Dust Brush print",
+          "box_2d": [
+            367,
+            615,
+            649,
+            815
+          ]
+        }
+      ],
+      "readable_identifier": "Shark"
+    },
+    {
+      "object_id": "o2",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        62,
+        725,
+        292,
+        875
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Mint-green floor nozzle with visible roller bar",
+          "box_2d": [
+            228,
+            786,
+            292,
+            875
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o3",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        50,
+        793,
+        202,
+        924
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Black handheld body with integrated handle and cylindrical bin",
+          "box_2d": [
+            50,
+            793,
+            202,
+            924
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o4",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        114,
+        915,
+        280,
+        1000
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Grey handheld vacuum body with transparent angled dust container",
+          "box_2d": [
+            114,
+            915,
+            280,
+            1000
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o5",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        99,
+        0,
+        340,
+        99
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "Floor cleaner nozzle with clear window on dark housing",
+          "box_2d": [
+            218,
+            0,
+            340,
+            99
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

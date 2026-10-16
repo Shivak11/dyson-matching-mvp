@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_wash_g1",
+      "confidence": 95,
+      "top_two": [
+        "dyson_wash_g1",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "Legible 'dyson wash' branding is printed directly on the front of the roller casing.",
+        "The broad rectangular dual-roller wet cleaner head with articulated neck matches the WashG1 layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "confirmed",
+        "evidence": "The dual-roller casing, articulated neck, and printed 'dyson wash' text match the WashG1."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The wet-cleaning dual-roller head with 'dyson wash' text is incompatible with V16 dry vacuum cleaners."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The dual-roller wet cleaning floorhead conflicts with the V8 cordless vacuum family."
+      }
+    ],
+    "decisive_region": [
+      420,
+      288,
+      485,
+      415
+    ],
+    "refinement_reason": ""
+  }
+}

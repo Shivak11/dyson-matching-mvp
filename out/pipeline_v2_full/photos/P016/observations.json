@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        71,
+        344,
+        915,
+        522
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline clear dustbin with multi-cone gold cyclone assembly and purple rear housing",
+          "box_2d": [
+            71,
+            452,
+            330,
+            522
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight grey extension wand with quick-release buttons",
+          "box_2d": [
+            308,
+            401,
+            804,
+            484
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized roller cleaner head placed on carpeted step",
+          "box_2d": [
+            799,
+            344,
+            915,
+            452
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        71,
+        344,
+        915,
+        522
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Inline clear dustbin with multi-cone gold cyclone assembly and purple rear housing",
+          "box_2d": [
+            71,
+            452,
+            330,
+            522
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight grey extension wand with quick-release buttons",
+          "box_2d": [
+            308,
+            401,
+            804,
+            484
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Motorized roller cleaner head placed on carpeted step",
+          "box_2d": [
+            799,
+            344,
+            915,
+            452
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

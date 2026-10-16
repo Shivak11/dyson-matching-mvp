@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        1000,
+        958
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Pistol-grip handle positioned behind vertical clear dustbin with red trim",
+          "box_2d": [
+            0,
+            0,
+            1000,
+            928
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "Red trigger switch inside the handle grip finger guard",
+          "box_2d": [
+            369,
+            422,
+            627,
+            618
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Purple rear filter/motor housing",
+          "box_2d": [
+            0,
+            715,
+            290,
+            958
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        1000,
+        958
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Pistol-grip handle positioned behind vertical clear dustbin with red trim",
+          "box_2d": [
+            0,
+            0,
+            1000,
+            928
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "Red trigger switch inside the handle grip finger guard",
+          "box_2d": [
+            369,
+            422,
+            627,
+            618
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Purple rear filter/motor housing",
+          "box_2d": [
+            0,
+            715,
+            290,
+            958
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

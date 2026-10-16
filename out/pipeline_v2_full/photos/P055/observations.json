@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        237,
+        344,
+        987,
+        601
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "cordless stick configuration with upper handheld unit, dustbin, wand, and floor head",
+          "box_2d": [
+            237,
+            520,
+            463,
+            605
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "digital status screen on the handle top",
+          "box_2d": [
+            238,
+            555,
+            284,
+            590
+          ]
+        },
+        {
+          "feature": "wand_joint",
+          "visible": true,
+          "detail": "folding hinge mechanism located along the wand",
+          "box_2d": [
+            483,
+            498,
+            532,
+            532
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "motorized floor nozzle equipped with illuminated front LED lights and roller window",
+          "box_2d": [
+            818,
+            344,
+            987,
+            467
+          ]
+        }
+      ],
+      "readable_identifier": "Shark STRATOS"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        237,
+        344,
+        987,
+        601
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "cordless stick configuration with upper handheld unit, dustbin, wand, and floor head",
+          "box_2d": [
+            237,
+            520,
+            463,
+            605
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "digital status screen on the handle top",
+          "box_2d": [
+            238,
+            555,
+            284,
+            590
+          ]
+        },
+        {
+          "feature": "wand_joint",
+          "visible": true,
+          "detail": "folding hinge mechanism located along the wand",
+          "box_2d": [
+            483,
+            498,
+            532,
+            532
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "motorized floor nozzle equipped with illuminated front LED lights and roller window",
+          "box_2d": [
+            818,
+            344,
+            987,
+            467
+          ]
+        }
+      ],
+      "readable_identifier": "Shark STRATOS"
+    }
+  ]
+}

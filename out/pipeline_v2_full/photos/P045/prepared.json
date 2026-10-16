@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v8_absolute",
+        "similarity": 0.8846989154966984,
+        "references": [
+          {
+            "reference": "dyson_v8_absolute_0",
+            "similarity": 0.8846989154966984
+          },
+          {
+            "reference": "dyson_v8_absolute_1",
+            "similarity": 0.8596687134574295
+          },
+          {
+            "reference": "dyson_v8_absolute_2",
+            "similarity": 0.8520565370107603
+          }
+        ]
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.872973468495461,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.872973468495461
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.7997635163715905
+          },
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.7820993710554143
+          }
+        ]
+      },
+      {
+        "product": "dyson_v15_detect",
+        "similarity": 0.8269341870854222,
+        "references": [
+          {
+            "reference": "dyson_v15_detect_0",
+            "similarity": 0.8269341870854222
+          },
+          {
+            "reference": "dyson_v15_detect_1",
+            "similarity": 0.8254804534058562
+          },
+          {
+            "reference": "dyson_v15_detect_2",
+            "similarity": 0.8121778790477834
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P045/o1_body.jpg",
+      "sha256": "957df9cfc445ff45ba340b63ae731d96e6258de57961a5d7e741532743a78d1d",
+      "pixel_box": [
+        171,
+        0,
+        1771,
+        1276
+      ],
+      "width": 1536,
+      "height": 1225
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v8_absolute",
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect"
+    ]
+  }
+}

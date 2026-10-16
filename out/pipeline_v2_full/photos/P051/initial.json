@@ -1,0 +1,54 @@
+{
+  "o1": {
+    "candidate_checks": [
+      {
+        "evidence": "The in-line cylindrical HEPA filter and motor housing positioned directly above the cyclones contradict the perpendicular bin and central pre-filter design of the V8.",
+        "outcome": "contradicted",
+        "product": "dyson_v8_absolute"
+      },
+      {
+        "evidence": "The handheld in-line body contradicts the separate spherical wheeled canister architecture of the Big Ball.",
+        "outcome": "contradicted",
+        "product": "dyson_big_ball"
+      },
+      {
+        "evidence": "The visible upper in-line body is consistent, but distinguishing features such as the bin compression mechanism and handle controls are out of frame.",
+        "outcome": "insufficient_evidence",
+        "product": "dyson_v16_piston_animal"
+      }
+    ],
+    "decision": {
+      "confidence": 40,
+      "contradictions": [
+        "The in-line cylindrical filter and motor housing positioned coaxially above the cyclones contradict the perpendicular bin layout of the V8 and the wheeled canister of the Big Ball."
+      ],
+      "evidence": [
+        "Translucent teal pleated HEPA filter marked WASHABLE HEPA FILTER mounted above a grey cylindrical casing with dyson branding.",
+        "Purple radial cyclone assembly positioned directly beneath the grey motor housing."
+      ],
+      "missing_evidence": [
+        "The lower dustbin, bin compression mechanism, handle, power controls, and rear display are out of frame below."
+      ],
+      "product": null,
+      "retake": "A photo showing the complete machine body including the dustbin, handle, and rear display.",
+      "status": "not_sure",
+      "top_two": [
+        "dyson_v16_piston_animal"
+      ]
+    },
+    "decisive_region": [
+      18,
+      312,
+      480,
+      636
+    ],
+    "format_repairs": [
+      "Known non-catalogue advisory alternatives removed from top_two: dyson_gen5detect."
+    ],
+    "object_id": "o1",
+    "refinement_reason": "Inspect the full dustbin mechanism, handle, and display controls to distinguish between Gen5detect and V16.",
+    "unverified_alternatives": [
+      "dyson_gen5detect"
+    ]
+  }
+}

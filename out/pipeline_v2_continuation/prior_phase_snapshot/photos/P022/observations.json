@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        78,
+        149,
+        1000,
+        755
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "Circular rear screen showing power modes with 'Auto' selected and a silver button",
+          "box_2d": [
+            202,
+            396,
+            630,
+            663
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Translucent blue circular rear filter assembly and cylindrical body casing",
+          "box_2d": [
+            78,
+            271,
+            912,
+            754
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Gold-colored cyclone cones visible along the side",
+          "box_2d": [
+            564,
+            150,
+            1000,
+            290
+          ]
+        },
+        {
+          "feature": "wand_and_head",
+          "visible": false,
+          "detail": "Wand, handle, and cleaner head are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        78,
+        149,
+        1000,
+        755
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "Circular rear screen showing power modes with 'Auto' selected and a silver button",
+          "box_2d": [
+            202,
+            396,
+            630,
+            663
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Translucent blue circular rear filter assembly and cylindrical body casing",
+          "box_2d": [
+            78,
+            271,
+            912,
+            754
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Gold-colored cyclone cones visible along the side",
+          "box_2d": [
+            564,
+            150,
+            1000,
+            290
+          ]
+        },
+        {
+          "feature": "wand_and_head",
+          "visible": false,
+          "detail": "Wand, handle, and cleaner head are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

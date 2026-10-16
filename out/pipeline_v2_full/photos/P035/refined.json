@@ -1,0 +1,61 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_wash_g1",
+      "confidence": 95,
+      "top_two": [
+        "dyson_wash_g1",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The cleaner head features dual front and rear roller drives with color-coded blue and red components and a central slide-out Debris Tray, which matches the Dyson WashG1 wet floor cleaner."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "All other catalogue candidates are dry vacuum cleaners that do not feature dual wet rollers or a slide-out Debris Tray."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "confirmed",
+        "evidence": "The dual counter-rotating roller side drive with color-coded blue and red caps and central Debris Tray matches the WashG1 floorhead."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The V16 All Floor Cones Sense head features conical dry rollers and lacks a slide-out Debris Tray."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 Absolute uses single-roller dry floorheads without dual wet rollers or a Debris Tray."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Big Ball canister cleaner heads do not feature motorized dual wet rollers or an integrated Debris Tray."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "V12 Detect Slim uses single-roller dry cleaner heads rather than a dual-roller wet system with a Debris Tray."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "V15 Detect uses single-roller dry cleaner heads and lacks the dual wet-roller drive and Debris Tray."
+      }
+    ],
+    "decisive_region": [
+      246,
+      317,
+      705,
+      630
+    ],
+    "refinement_reason": ""
+  }
+}

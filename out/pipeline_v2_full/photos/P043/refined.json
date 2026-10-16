@@ -1,0 +1,56 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 25,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The cleaner head shows Dyson branding with hair removal vanes, a purple brush roller, and a quick-release neck connector."
+      ],
+      "missing_evidence": [
+        "The vacuum main body, motor housing, dust canister, and handle controls are completely out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Capture a photo of the main body, handle, and dust canister to reveal the model layout."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The Motorbar cleaner head is used across multiple Dyson cordless models, but the main body is out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head attachment does not identify the model and the main body is not visible."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head is compatible with V15, but the in-line bin and trigger assembly cannot be seen."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The canister body and hose are out of frame, leaving only the head attachment visible."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "Shared cleaner head attachments cannot distinguish V12 without seeing the slim body and push-button controls."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main machine body is outside the frame, preventing confirmation of the wet-cleaner format."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "The vacuum body and controls must be visible to distinguish between Dyson families."
+  }
+}

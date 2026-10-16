@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        437,
+        773,
+        651
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "floor cleaning head with cylindrical roller and clear housing",
+          "box_2d": [
+            647,
+            437,
+            773,
+            589
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "purple cylindrical extension wand",
+          "box_2d": [
+            173,
+            536,
+            629,
+            600
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "handle and battery assembly cropped by upper image frame",
+          "box_2d": null
+        },
+        {
+          "feature": "release_latch",
+          "visible": true,
+          "detail": "red release buttons at the wand joints",
+          "box_2d": [
+            531,
+            529,
+            638,
+            564
+          ]
+        }
+      ],
+      "readable_identifier": "dyson gen5detect"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        437,
+        773,
+        651
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "floor cleaning head with cylindrical roller and clear housing",
+          "box_2d": [
+            647,
+            437,
+            773,
+            589
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "purple cylindrical extension wand",
+          "box_2d": [
+            173,
+            536,
+            629,
+            600
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "handle and battery assembly cropped by upper image frame",
+          "box_2d": null
+        },
+        {
+          "feature": "release_latch",
+          "visible": true,
+          "detail": "red release buttons at the wand joints",
+          "box_2d": [
+            531,
+            529,
+            638,
+            564
+          ]
+        }
+      ],
+      "readable_identifier": "dyson gen5detect"
+    }
+  ]
+}

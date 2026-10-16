@@ -1,0 +1,61 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine features a triggerless handle with a red front comfort strip and an integrated wand tool release, identifying it as a non-catalogue Dyson Gen5detect."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The machine lacks the finger trigger of the V15 Detect and the top-mounted power button and slim body of the V12 Detect Slim."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target is a handheld cordless stick vacuum rather than a canister vacuum on a ball."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target has full-sized cyclone body proportions and lacks the top-mounted power button of the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Target visibly lacks a finger trigger in the handle crook, which contradicts the trigger-operated V15 Detect."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target has a standard in-line bin rather than the CleanCompaktor compression assembly of the V16 Piston Animal."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Target uses an in-line horizontal bin layout rather than the perpendicular bin of the V8."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Target is a dry cordless vacuum rather than a twin-roller upright wet cleaner with water tanks."
+      }
+    ],
+    "decisive_region": [
+      480,
+      180,
+      820,
+      330
+    ],
+    "refinement_reason": ""
+  }
+}

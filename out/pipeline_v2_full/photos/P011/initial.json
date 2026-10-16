@@ -1,0 +1,46 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 50,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Rear circular LCD displays real-time particle counts and runtime within a translucent purple filter cap."
+      ],
+      "missing_evidence": [
+        "Clear side view of the handle and body to verify trigger operation versus top power button and bin proportions."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the entire vacuum body from the side to reveal the handle controls and bin."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The rear particle-count LCD matches V15, but the handle trigger and body proportions are not visible."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The rear display interface matches V12, but the top-mounted power button and slim body are obscured."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The rear filter view does not reveal the CleanCompaktor body or dual-cone cleaner head."
+      }
+    ],
+    "decisive_region": [
+      184,
+      372,
+      644,
+      638
+    ],
+    "refinement_reason": "Inspect the handle and top housing to verify control layout."
+  }
+}

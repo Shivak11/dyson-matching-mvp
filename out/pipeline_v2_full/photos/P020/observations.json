@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        240,
+        923,
+        792
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "transparent conical brush roller head with green illumination light",
+          "box_2d": [
+            657,
+            240,
+            923,
+            547
+          ]
+        },
+        {
+          "feature": "wand_connector",
+          "visible": true,
+          "detail": "black swivel joint with red release button attached to an amber wand",
+          "box_2d": [
+            338,
+            512,
+            713,
+            658
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "motor body and dustbin are out of frame above wand",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        240,
+        923,
+        792
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "transparent conical brush roller head with green illumination light",
+          "box_2d": [
+            657,
+            240,
+            923,
+            547
+          ]
+        },
+        {
+          "feature": "wand_connector",
+          "visible": true,
+          "detail": "black swivel joint with red release button attached to an amber wand",
+          "box_2d": [
+            338,
+            512,
+            713,
+            658
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "motor body and dustbin are out of frame above wand",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

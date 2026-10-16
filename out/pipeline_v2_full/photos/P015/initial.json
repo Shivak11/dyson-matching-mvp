@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine has an in-line body layout with gold cyclone cones, a purple rear filter casing, and a red finger trigger on the handle."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The V12 Detect Slim uses a top push-button power control on the body rather than the visible red handle trigger."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 family features a perpendicular bin assembly rather than an in-line motor, cyclone, and filter layout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "The in-line layout with gold cyclone assembly, purple filter casing, and red handle trigger matches the V15 Detect."
+      }
+    ],
+    "decisive_region": [
+      450,
+      420,
+      1000,
+      976
+    ],
+    "refinement_reason": ""
+  }
+}

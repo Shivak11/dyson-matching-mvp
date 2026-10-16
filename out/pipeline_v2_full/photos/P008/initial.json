@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Prominent red push-button power switch positioned directly on top of the gold cyclone housing.",
+        "In-line slim cyclone and purple rear filter body layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Features the distinctive red push-button power control on the cyclone body characteristic of the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The V15 Detect relies on trigger operation rather than a push-button mounted on the cyclone housing."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The in-line bin and motor configuration conflicts with the perpendicular bin layout of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      472,
+      453,
+      570,
+      548
+    ],
+    "refinement_reason": ""
+  }
+}

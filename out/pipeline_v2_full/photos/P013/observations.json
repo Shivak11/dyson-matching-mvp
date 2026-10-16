@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        124,
+        296,
+        895,
+        624
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld body with purple top filter, gold cyclone cone assembly, clear dustbin, and rear pistol-grip handle",
+          "box_2d": [
+            124,
+            485,
+            412,
+            624
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight dark grey extension wand connecting handheld unit to floor nozzle",
+          "box_2d": [
+            390,
+            370,
+            835,
+            517
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Low-profile motorized cleaner head with roller resting on carpet",
+          "box_2d": [
+            776,
+            297,
+            895,
+            395
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        124,
+        296,
+        895,
+        624
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld body with purple top filter, gold cyclone cone assembly, clear dustbin, and rear pistol-grip handle",
+          "box_2d": [
+            124,
+            485,
+            412,
+            624
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight dark grey extension wand connecting handheld unit to floor nozzle",
+          "box_2d": [
+            390,
+            370,
+            835,
+            517
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Low-profile motorized cleaner head with roller resting on carpet",
+          "box_2d": [
+            776,
+            297,
+            895,
+            395
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

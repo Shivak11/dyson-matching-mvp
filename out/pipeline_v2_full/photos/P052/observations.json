@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        111,
+        365,
+        621,
+        718
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "in-line handheld stick vacuum body with pistol grip and lower battery base",
+          "box_2d": [
+            111,
+            365,
+            621,
+            718
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "clear cylindrical horizontal dustbin with round front opening",
+          "box_2d": [
+            168,
+            471,
+            503,
+            718
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "blue cylindrical rear exhaust filter cover",
+          "box_2d": [
+            111,
+            367,
+            286,
+            446
+          ]
+        },
+        {
+          "feature": "release_mechanism",
+          "visible": true,
+          "detail": "red bin ejection lever located under the cyclone assembly",
+          "box_2d": [
+            399,
+            524,
+            453,
+            566
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        111,
+        365,
+        621,
+        718
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "in-line handheld stick vacuum body with pistol grip and lower battery base",
+          "box_2d": [
+            111,
+            365,
+            621,
+            718
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "clear cylindrical horizontal dustbin with round front opening",
+          "box_2d": [
+            168,
+            471,
+            503,
+            718
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "blue cylindrical rear exhaust filter cover",
+          "box_2d": [
+            111,
+            367,
+            286,
+            446
+          ]
+        },
+        {
+          "feature": "release_mechanism",
+          "visible": true,
+          "detail": "red bin ejection lever located under the cyclone assembly",
+          "box_2d": [
+            399,
+            524,
+            453,
+            566
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

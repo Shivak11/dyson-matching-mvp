@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        208,
+        698,
+        804
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "brush_roll",
+          "visible": true,
+          "detail": "cylindrical brush bar with tangled fibers and bristles",
+          "box_2d": [
+            523,
+            246,
+            662,
+            785
+          ]
+        },
+        {
+          "feature": "swivel_neck",
+          "visible": true,
+          "detail": "articulated ball-joint connector extending upward",
+          "box_2d": [
+            0,
+            427,
+            286,
+            593
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "wand and vacuum body extend beyond top edge of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        208,
+        698,
+        804
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "brush_roll",
+          "visible": true,
+          "detail": "cylindrical brush bar with tangled fibers and bristles",
+          "box_2d": [
+            523,
+            246,
+            662,
+            785
+          ]
+        },
+        {
+          "feature": "swivel_neck",
+          "visible": true,
+          "detail": "articulated ball-joint connector extending upward",
+          "box_2d": [
+            0,
+            427,
+            286,
+            593
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "wand and vacuum body extend beyond top edge of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

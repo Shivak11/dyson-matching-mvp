@@ -1,0 +1,63 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 50,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "Circular rear LCD showing particle count bars and numeric runtime",
+        "Single push-button control positioned above the display"
+      ],
+      "missing_evidence": [
+        "Side view of motor body and handle to verify body proportions",
+        "Readable machine model identifier"
+      ],
+      "contradictions": [],
+      "retake": "Photograph the complete body and handle from the side to check body proportions and control layout."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "WashG1 is an upright wet floor cleaner with dual tanks and rollers, incompatible with this handheld stick vacuum's rear LCD."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "Rear LCD and push button are visible, but motor body proportions and on/off button housing placement cannot be confirmed from this angle."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The CleanCompaktor body silhouette, handle, and conical roller cleaning head remain outside the frame."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Big Ball is a corded cylinder canister vacuum, incompatible with this handheld cordless unit."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The handle and trigger area are obscured by the hand, preventing verification of trigger operation versus button control."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 models use a perpendicular bin and top central filter without a circular digital display."
+      }
+    ],
+    "decisive_region": [
+      303,
+      446,
+      565,
+      536
+    ],
+    "refinement_reason": "Inspect side profile of the motor body and handle to evaluate body proportions and on/off button placement."
+  }
+}

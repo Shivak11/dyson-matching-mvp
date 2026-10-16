@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        332,
+        735,
+        736
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaning_head",
+          "visible": true,
+          "detail": "Clear-housed motorized mini cleaner head with anti-tangle conical brush bar",
+          "box_2d": [
+            203,
+            332,
+            732,
+            736
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Lower clear bin section connected via quick-release collar with round red button",
+          "box_2d": [
+            0,
+            383,
+            542,
+            694
+          ]
+        },
+        {
+          "feature": "motor_and_handle",
+          "visible": false,
+          "detail": "Main handle, motor housing, and battery are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        332,
+        735,
+        736
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaning_head",
+          "visible": true,
+          "detail": "Clear-housed motorized mini cleaner head with anti-tangle conical brush bar",
+          "box_2d": [
+            203,
+            332,
+            732,
+            736
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Lower clear bin section connected via quick-release collar with round red button",
+          "box_2d": [
+            0,
+            383,
+            542,
+            694
+          ]
+        },
+        {
+          "feature": "motor_and_handle",
+          "visible": false,
+          "detail": "Main handle, motor housing, and battery are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

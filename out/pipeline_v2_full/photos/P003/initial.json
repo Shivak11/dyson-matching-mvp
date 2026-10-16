@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The perpendicular bin layout positioned directly below the dual-tier radial cyclones with a top red release lever matches the Dyson V8 family."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Visible perpendicular dust bin beneath the radial cyclone pack, top red release lever, and rear purple filter cap confirm the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target is a cordless handheld vacuum rather than a floor-standing spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target has a perpendicular bin layout and radial cyclone assembly instead of the in-line body design of the V16."
+      }
+    ],
+    "decisive_region": [
+      25,
+      240,
+      350,
+      560
+    ],
+    "refinement_reason": ""
+  }
+}

@@ -1,0 +1,1643 @@
+{
+  "audit_status": "PASS",
+  "errors": [],
+  "notes": [],
+  "completed_photo_count": 58,
+  "expected_photo_count": 58,
+  "initial": {
+    "metrics": {
+      "single_photo_count": 57,
+      "correct_total": 34,
+      "wrong_total": 6,
+      "confidently_wrong_count": 6,
+      "not_sure_count": 17,
+      "resolved_count": 40,
+      "accuracy": 0.5964912280701754
+    },
+    "per_photo": [
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P001",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P002",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P003",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P004",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P005",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P006",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P007",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P008",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P009",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P010",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P011",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P012",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P013",
+        "source_label": "dyson_v15_detect",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P014",
+        "source_label": "dyson_v15_detect",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P015",
+        "source_label": "dyson_v15_detect",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P016",
+        "source_label": "dyson_v15_detect",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P017",
+        "source_label": "dyson_v15_detect",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P018",
+        "source_label": "dyson_v15_detect",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P019",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P020",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P021",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P022",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P023",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P024",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P025",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_big_ball",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P026",
+        "source_label": "dyson_big_ball",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_big_ball",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P027",
+        "source_label": "dyson_big_ball",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P028",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P029",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P030",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P031",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P032",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P033",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P034",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P035",
+        "source_label": "dyson_wash_g1",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P036",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P037",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P038",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P039",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P040",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P041",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P042",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P043",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P045",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P046",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P047",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P048",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P049",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P050",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P051",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P052",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P053",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P054",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P055",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P056",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P057",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P058",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      }
+    ],
+    "multi_photo_results": [
+      {
+        "image_id": "P059",
+        "expected_identity_set": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ],
+        "predicted_identity_set": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ],
+        "correct_resolved_identity_set": true,
+        "unresolved": false,
+        "outside_instance_count": 0,
+        "result_complete": true
+      }
+    ]
+  },
+  "final": {
+    "metrics": {
+      "single_photo_count": 57,
+      "correct_total": 37,
+      "wrong_total": 5,
+      "confidently_wrong_count": 5,
+      "not_sure_count": 15,
+      "resolved_count": 42,
+      "accuracy": 0.6491228070175439
+    },
+    "per_photo": [
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P001",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P002",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P003",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P004",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P005",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P006",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P007",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P008",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P009",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P010",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P011",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P012",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P013",
+        "source_label": "dyson_v15_detect",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P014",
+        "source_label": "dyson_v15_detect",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P015",
+        "source_label": "dyson_v15_detect",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P016",
+        "source_label": "dyson_v15_detect",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P017",
+        "source_label": "dyson_v15_detect",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P018",
+        "source_label": "dyson_v15_detect",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P019",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P020",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P021",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P022",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P023",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P024",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P025",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_big_ball",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P026",
+        "source_label": "dyson_big_ball",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_big_ball",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P027",
+        "source_label": "dyson_big_ball",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P028",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P029",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P030",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P031",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P032",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P033",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P034",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P035",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P036",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P037",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P038",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P039",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P040",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P041",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P042",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P043",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P045",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P046",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P047",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P048",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P049",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P050",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P051",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P052",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P053",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P054",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": false
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P055",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P056",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P057",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P058",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      }
+    ],
+    "multi_photo_results": [
+      {
+        "image_id": "P059",
+        "expected_identity_set": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ],
+        "predicted_identity_set": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ],
+        "correct_resolved_identity_set": true,
+        "unresolved": false,
+        "outside_instance_count": 0,
+        "result_complete": true
+      }
+    ]
+  },
+  "common_old_gemini": {
+    "metrics": {
+      "single_photo_count": 15,
+      "correct_total": 11,
+      "wrong_total": 1,
+      "confidently_wrong_count": 1,
+      "not_sure_count": 3,
+      "resolved_count": 12,
+      "accuracy": 0.7333333333333333
+    },
+    "per_photo": [
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P001",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P006",
+        "source_label": "dyson_v8_absolute",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P007",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P012",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v15_detect",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P013",
+        "source_label": "dyson_v15_detect",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P018",
+        "source_label": "dyson_v15_detect",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P019",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P025",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_big_ball",
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P026",
+        "source_label": "dyson_big_ball",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P031",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P032",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P038",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P039",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P047",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 100,
+        "complete": true,
+        "image_id": "P055",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      }
+    ],
+    "multi_photo_results": [
+      {
+        "image_id": "P059",
+        "expected_identity_set": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ],
+        "predicted_identity_set": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ],
+        "correct_resolved_identity_set": true,
+        "unresolved": false,
+        "outside_instance_count": 0,
+        "result_complete": true
+      }
+    ]
+  },
+  "common_new_gemini": {
+    "metrics": {
+      "single_photo_count": 15,
+      "correct_total": 10,
+      "wrong_total": 2,
+      "confidently_wrong_count": 2,
+      "not_sure_count": 3,
+      "resolved_count": 12,
+      "accuracy": 0.6666666666666666
+    },
+    "per_photo": [
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P001",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v8_absolute",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P006",
+        "source_label": "dyson_v8_absolute",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P007",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P012",
+        "source_label": "dyson_v12_detect_slim",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v12_detect_slim",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P013",
+        "source_label": "dyson_v15_detect",
+        "correct": false
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P018",
+        "source_label": "dyson_v15_detect",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_v16_piston_animal",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P019",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P025",
+        "source_label": "dyson_v16_piston_animal",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_big_ball",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P026",
+        "source_label": "dyson_big_ball",
+        "correct": true
+      },
+      {
+        "status": "not_sure",
+        "product": null,
+        "confidence": 0,
+        "complete": true,
+        "image_id": "P031",
+        "source_label": "dyson_big_ball",
+        "correct": false
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 98,
+        "complete": true,
+        "image_id": "P032",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "match",
+        "product": "dyson_wash_g1",
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P038",
+        "source_label": "dyson_wash_g1",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P039",
+        "source_label": "NONCAT_dyson_v11",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P047",
+        "source_label": "NONCAT_dyson_gen5detect",
+        "correct": true
+      },
+      {
+        "status": "not_in_catalogue",
+        "product": null,
+        "confidence": 95,
+        "complete": true,
+        "image_id": "P055",
+        "source_label": "NONCAT_shark_stratos",
+        "correct": true
+      }
+    ],
+    "multi_photo_results": [
+      {
+        "image_id": "P059",
+        "expected_identity_set": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ],
+        "predicted_identity_set": [
+          "dyson_v12_detect_slim",
+          "dyson_v15_detect"
+        ],
+        "correct_resolved_identity_set": true,
+        "unresolved": false,
+        "outside_instance_count": 0,
+        "result_complete": true
+      }
+    ]
+  },
+  "old_gemini_saved_photo_scope": 16,
+  "refinement_transitions": [
+    {
+      "image_id": "P011",
+      "initial": "unresolved",
+      "final": "correct"
+    },
+    {
+      "image_id": "P035",
+      "initial": "wrong",
+      "final": "correct"
+    },
+    {
+      "image_id": "P052",
+      "initial": "unresolved",
+      "final": "correct"
+    }
+  ],
+  "refined_photo_ids": [
+    "P011",
+    "P012",
+    "P015",
+    "P016",
+    "P017",
+    "P018",
+    "P022",
+    "P023",
+    "P025",
+    "P028",
+    "P029",
+    "P030",
+    "P031",
+    "P035",
+    "P039",
+    "P040",
+    "P041",
+    "P042",
+    "P043",
+    "P045",
+    "P046",
+    "P047",
+    "P048",
+    "P049",
+    "P050",
+    "P051",
+    "P052",
+    "P053",
+    "P054",
+    "P055",
+    "P056",
+    "P057",
+    "P058",
+    "P059"
+  ],
+  "integrity": {
+    "audit_self_checks_passed": 11,
+    "frozen_file_count": 441,
+    "frozen_changes": [],
+    "physical_paid_jobs_across_all_ledgers": 538,
+    "duplicate_paid_job_ids": [],
+    "corrected_request_hashes_reconstructed": 153,
+    "truncated_request_hash_reconstructed": true,
+    "phase_request_checks": {
+      "v2full": 49,
+      "v2standard": 77,
+      "v2long": 27
+    },
+    "prior_snapshot_changes": [],
+    "prior_completed_photo_count": 49,
+    "offline_recovery_count": 1,
+    "independently_normalised_jobs": [
+      "v2long:identify:P051"
+    ],
+    "offline_recovery_additional_cost_usd": 0,
+    "expected_preserved_length_failure": {
+      "job_id": "v2standard:identify:P051:attempt:1",
+      "charged_usd": 0.06693675,
+      "accepted_as_result": false
+    },
+    "new_independent_raw_decision_checks": 102,
+    "new_raw_observation_checks": 60,
+    "old_unresolved_requests": {},
+    "replay_adapter_receipt": {
+      "adapter_source_sha256": "3a9158e7acd5b12037da92baa707f307a96f688df86fecfec140d27c3a40eecb",
+      "config_sha256": "1b2fe6808302d9ca448cbde8be6e81ba80049528f75ea88edb4d03d6ab82622b",
+      "policy": "Replay original provider JSON key order only after structural equality; retain offline-normalised results as saved.",
+      "model_settings_unchanged": true,
+      "paid_replays": false
+    },
+    "input_bound_recovery_count": 1,
+    "independently_gated_usage_recovery_jobs": [
+      "v2long:refine:P058"
+    ],
+    "input_bound_recovery_additional_cost_usd": 0,
+    "input_bound_repair_receipt": {
+      "job_id": "v2long:refine:P058",
+      "original_record_line": 26,
+      "original_record_sha256": "c7b934f878a22dfa07dd8731332c2f5172b0d08fbc6eca5030ec0bf0ee3622fc",
+      "provider_response_sha256": "209fd50ef53360252c1dfaa8940b46e59b7a91e4bde0a978a89b57a492e4782a",
+      "result_sha256": "13f3f53138fe7086442d9f4429c9bea04b81e7ab668087c3ca4727ea018e3955",
+      "request_sha256": "e2fb0643297a50bfb326c89fbc26abfff6683e722cb583f941232eee9e7e9321",
+      "config_sha256": "1b2fe6808302d9ca448cbde8be6e81ba80049528f75ea88edb4d03d6ab82622b",
+      "helper_source_sha256": "0f4fda79328b4ae5815c60fe9de487253b2bb53eac6448151fb39e5c0383c8d2",
+      "context_sha256": {
+        "out/pipeline_v2_full/photos/P058/observations.json": "0a2644ea0003e17df8bac494a232dc19f41423165f2dda2a49217ba0531c2598",
+        "out/pipeline_v2_full/photos/P058/refinement_inputs.json": "cc1d497f58720c8e3590c98be8c01f19ddfdc8ad63a420b65c4cab69b8fabb99"
+      },
+      "policy": "Accept only the complete saved P058 refinement after its exact input-token-bound error. Require unchanged provider JSON, full frozen domain validation and verified published-price usage within the original monetary reservation and authorised budgets. Make no paid request.",
+      "original_error": "Reported input tokens exceed reserved bound",
+      "original_actual_cost_usd": 0.05000775,
+      "original_reserved_cost_usd": 0.14388,
+      "published_input_cost_usd": 0.02846775,
+      "published_output_cost_usd": 0.02154,
+      "paid_requests": 0,
+      "additional_cost_usd": 0,
+      "recovery_record_sha256": "4834a12595e59a96c9c750d2634bf50026f4dfd960d3c199a92e888c5efced01"
+    }
+  },
+  "transport": {
+    "corrected_paid_requests": 158,
+    "new_paid_requests": 27,
+    "new_errors": [
+      "v2long:refine:P058:attempt:1"
+    ],
+    "retry_attempt_counts": {
+      "v2full:identify:P016": 3,
+      "v2full:identify:P019": 2,
+      "v2full:observe:P021": 3
+    },
+    "retry_backoff_gaps": [
+      {
+        "job": "v2full:identify:P016",
+        "seconds": 60.54516911506653,
+        "required_minimum": 60
+      },
+      {
+        "job": "v2full:identify:P016",
+        "seconds": 120.268972158432,
+        "required_minimum": 120
+      },
+      {
+        "job": "v2full:identify:P019",
+        "seconds": 60.42353677749634,
+        "required_minimum": 60
+      },
+      {
+        "job": "v2full:observe:P021",
+        "seconds": 60.50984072685242,
+        "required_minimum": 60
+      },
+      {
+        "job": "v2full:observe:P021",
+        "seconds": 120.52357196807861,
+        "required_minimum": 120
+      }
+    ],
+    "minimum_finish_to_start_gap_seconds": 15.000837087631226,
+    "actual_model_counts": {
+      "google/gemini-3.7-flash": 151
+    },
+    "actual_provider_counts": {
+      "Google": 49,
+      "Google AI Studio": 102
+    },
+    "actual_service_tier_counts": {
+      "flex": 49,
+      "default": 102
+    },
+    "maximum_input_tokens": 37957,
+    "prior_phase_rate_limit_errors": [
+      "v2full:identify:P016:attempt:1",
+      "v2full:identify:P016:attempt:2",
+      "v2full:identify:P019:attempt:1",
+      "v2full:observe:P021:attempt:1",
+      "v2full:observe:P021:attempt:2"
+    ],
+    "phase_maximum_input_tokens": {
+      "v2full": 18055,
+      "v2standard": 18171,
+      "v2long": 37957
+    },
+    "usage_cost_records_checked": 153,
+    "unresolved_jobs": []
+  },
+  "costs": {
+    "prior_six_ledgers_usd": 4.897308611,
+    "prior_corrected_flex_phase_usd": 0.67253175,
+    "prior_corrected_standard_phase_usd": 1.65326625,
+    "new_settled_usd": 0.85114125,
+    "unresolved_reserve_usd": 0,
+    "new_accounted_usd": 0.85114125,
+    "new_accounted_inr": 80.9920771972979,
+    "combined_stage_guard_inr": 574.8449860999999,
+    "stage_ceiling_inr": 600,
+    "remaining_stage_guard_inr": 25.155013900000085,
+    "combined_stage_reporting_inr": 547.0054411143959,
+    "overall_guard_inr": 617.5249861,
+    "corrected_run_per_completed_photo_inr": 5.212208921867444,
+    "corrected_run_and_failed_preflight_per_completed_photo_inr": 5.244960578561858,
+    "reused_v1_detection_and_embedding_usd": 0.09166725,
+    "corrected_run_plus_shared_preprocessing_per_photo_inr": 5.36260174360398
+  },
+  "scope": {
+    "extra_photo_completion_tested": false,
+    "expected_product_live_arm_tested": false,
+    "old_preflight_request_hashes_rebuilt": false,
+    "vertex_phase_receipt_expected_to_remain_stopped": true,
+    "provider_routes": {
+      "v2full": [
+        "google-vertex/global/flex"
+      ],
+      "v2standard": [
+        "google-ai-studio"
+      ],
+      "v2long": [
+        "google-ai-studio"
+      ]
+    },
+    "reason": "Original preflight retains its source/config; current reconstruction covers all three corrected phases, using archived P022/P051 partial-photo inputs for their old phases."
+  }
+}

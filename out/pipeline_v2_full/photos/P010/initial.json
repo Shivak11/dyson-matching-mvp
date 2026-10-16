@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "In-line horizontal dustbin and gold cyclone array.",
+        "Triggerless handle grip featuring a red vertical accent stripe."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "The triggerless grip with a red vertical accent stripe and in-line bin match the V12 Detect Slim layout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The machine has a triggerless handle with an accent stripe rather than the finger trigger mechanism of the V15 Detect."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The in-line horizontal dustbin configuration contradicts the perpendicular bin layout of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      400,
+      0,
+      950,
+      450
+    ],
+    "refinement_reason": ""
+  }
+}

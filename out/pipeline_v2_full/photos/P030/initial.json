@@ -1,0 +1,50 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_big_ball"
+      ],
+      "evidence": [
+        "Floor canister vacuum with cord rewind push-button and ball body architecture.",
+        "Single-tier radial orange cyclones surrounding a central blue washable filter cap.",
+        "Transparent dust bin carry handle with an integrated red release push-rod mechanism characteristic of the classic Dyson Ball cylinder range (DC37/DC39)."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "Dyson Big Ball features two-tier radial cyclones or filterless Cinetic cones with an integrated collar dirt-ejector bin rather than a single-tier orange cyclone assembly with central blue filter cap and arched clear handle."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target exhibits a classic Dyson Ball (DC37/DC39) single-tier radial cyclone with central blue filter cap and clear handle, which conflicts with Big Ball cyclone and bin architecture."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target is a corded cylinder vacuum with a cord rewind button and ball canister body, contradicting a cordless stick machine."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Presence of a cord rewind button and spherical wheeled canister body is incompatible with the cordless handheld V8 format."
+      }
+    ],
+    "decisive_region": [
+      0,
+      0,
+      521,
+      747
+    ],
+    "refinement_reason": "",
+    "format_repairs": [
+      "top_two: null placeholders removed"
+    ]
+  }
+}

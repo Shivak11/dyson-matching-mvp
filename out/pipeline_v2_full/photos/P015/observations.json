@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        1000,
+        976
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "grey pistol-grip handle housing aligned behind cylindrical motor and cyclone body",
+          "box_2d": [
+            183,
+            11,
+            1000,
+            581
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red trigger switch positioned beneath the upper handle grip",
+          "box_2d": [
+            621,
+            456,
+            762,
+            541
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "translucent purple upper filter casing set above gold cyclone cones",
+          "box_2d": [
+            0,
+            480,
+            1000,
+            976
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        0,
+        1000,
+        976
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "grey pistol-grip handle housing aligned behind cylindrical motor and cyclone body",
+          "box_2d": [
+            183,
+            11,
+            1000,
+            581
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red trigger switch positioned beneath the upper handle grip",
+          "box_2d": [
+            621,
+            456,
+            762,
+            541
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "translucent purple upper filter casing set above gold cyclone cones",
+          "box_2d": [
+            0,
+            480,
+            1000,
+            976
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 25,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "A motorized soft roller cleaner head and lower wand connector are visible."
+      ],
+      "missing_evidence": [
+        "Main motor body, cyclone assembly, dust bin, and handle controls are out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Capture a clear photo of the main vacuum body showing the cyclone assembly and bin."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main body, bin, and cyclone assembly are out of frame, leaving the machine indistinguishable from other models sharing this cleaner head."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The motor body and compression mechanism are not visible, so the cleaner head alone cannot confirm or exclude V16."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The canister body is out of frame, and the presence of a floor tool alone cannot establish or contradict a cylinder vacuum."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main body and cyclone assembly to determine the exact machine family."
+  }
+}

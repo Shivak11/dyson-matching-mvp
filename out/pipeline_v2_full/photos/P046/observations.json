@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        273,
+        818,
+        706
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "transparent roller head housing a brush roller with purple, red, and black spiral bristles",
+          "box_2d": [
+            574,
+            273,
+            818,
+            706
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red quick-release button on the grey connector joint",
+          "box_2d": [
+            253,
+            506,
+            340,
+            542
+          ]
+        },
+        {
+          "feature": "wand_joint",
+          "visible": true,
+          "detail": "articulating ball swivel joint and purple wand section",
+          "box_2d": [
+            0,
+            451,
+            589,
+            580
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "upper wand, motor, handle, and dust bin are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        273,
+        818,
+        706
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "transparent roller head housing a brush roller with purple, red, and black spiral bristles",
+          "box_2d": [
+            574,
+            273,
+            818,
+            706
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red quick-release button on the grey connector joint",
+          "box_2d": [
+            253,
+            506,
+            340,
+            542
+          ]
+        },
+        {
+          "feature": "wand_joint",
+          "visible": true,
+          "detail": "articulating ball swivel joint and purple wand section",
+          "box_2d": [
+            0,
+            451,
+            589,
+            580
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "upper wand, motor, handle, and dust bin are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

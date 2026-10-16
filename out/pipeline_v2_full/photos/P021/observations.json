@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        46,
+        178,
+        963,
+        892
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "inline cylindrical handheld body with dual-tier copper/gold cyclone assembly and rear blue filter cap",
+          "box_2d": [
+            46,
+            452,
+            569,
+            723
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "clear cylindrical dustbin slid forward with hinged bottom lid flipped open",
+          "box_2d": [
+            482,
+            178,
+            963,
+            564
+          ]
+        },
+        {
+          "feature": "controls_handle",
+          "visible": true,
+          "detail": "pistol grip handle with red sliding release lever and battery pack at the base",
+          "box_2d": [
+            254,
+            574,
+            640,
+            898
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        46,
+        178,
+        963,
+        892
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "inline cylindrical handheld body with dual-tier copper/gold cyclone assembly and rear blue filter cap",
+          "box_2d": [
+            46,
+            452,
+            569,
+            723
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "clear cylindrical dustbin slid forward with hinged bottom lid flipped open",
+          "box_2d": [
+            482,
+            178,
+            963,
+            564
+          ]
+        },
+        {
+          "feature": "controls_handle",
+          "visible": true,
+          "detail": "pistol grip handle with red sliding release lever and battery pack at the base",
+          "box_2d": [
+            254,
+            574,
+            640,
+            898
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

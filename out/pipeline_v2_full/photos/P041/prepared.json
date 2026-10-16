@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.8239345791762179,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.8239345791762179
+          },
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.8056650668235963
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.8027903845901373
+          }
+        ]
+      },
+      {
+        "product": "dyson_v15_detect",
+        "similarity": 0.8212353249789203,
+        "references": [
+          {
+            "reference": "dyson_v15_detect_2",
+            "similarity": 0.8212353249789203
+          },
+          {
+            "reference": "dyson_v15_detect_1",
+            "similarity": 0.8122288711547182
+          },
+          {
+            "reference": "dyson_v15_detect_0",
+            "similarity": 0.8077273773101402
+          }
+        ]
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "similarity": 0.8044184335230958,
+        "references": [
+          {
+            "reference": "dyson_v8_absolute_1",
+            "similarity": 0.8044184335230958
+          },
+          {
+            "reference": "dyson_v8_absolute_0",
+            "similarity": 0.803731842874137
+          },
+          {
+            "reference": "dyson_v8_absolute_2",
+            "similarity": 0.789559465356452
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P041/o1_body.jpg",
+      "sha256": "3bacccd899ec724bcdbdbfecef9734c6c78225c84639253dd24018ec3fc5f12c",
+      "pixel_box": [
+        216,
+        57,
+        1477,
+        1080
+      ],
+      "width": 1261,
+      "height": 1023
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect",
+      "dyson_v8_absolute"
+    ]
+  }
+}

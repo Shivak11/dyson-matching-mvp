@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_wash_g1",
+      "confidence": 98,
+      "top_two": [
+        "dyson_wash_g1",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The machine has a central upright column with clear water tanks, a wet cleaning head, and a circular display showing water droplet level icons corresponding to the Dyson WashG1."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "confirmed",
+        "evidence": "The water tank assembly, wet roller cleaning head, and droplet interface match the Dyson WashG1 design."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The target is a dedicated wet floor cleaner with water tanks rather than a dry stick vacuum with a cyclone and CleanCompaktor bin."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The machine features dual water tanks and a digital hydration display rather than the V8 trigger handle and perpendicular dry bin assembly."
+      }
+    ],
+    "decisive_region": [
+      248,
+      468,
+      404,
+      564
+    ],
+    "refinement_reason": ""
+  }
+}

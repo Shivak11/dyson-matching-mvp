@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_wash_g1",
+      "confidence": 95,
+      "top_two": [
+        "dyson_wash_g1",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The front bumper of the cleaning head features readable 'dyson washG1' branding.",
+        "The broad rectangular wet-cleaning head and pivot neck match the Dyson WashG1."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "confirmed",
+        "evidence": "The cleaning head displays visible 'dyson washG1' branding and matches the WashG1 wet-cleaner head."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The machine is branded 'dyson washG1' and lacks the conical roller configuration of the V16 head."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The wet-cleaner head structure and 'dyson washG1' label conflict with the V8 cordless vacuum heads."
+      }
+    ],
+    "decisive_region": [
+      765,
+      165,
+      855,
+      420
+    ],
+    "refinement_reason": ""
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "The cleaner head features front and rear roller assemblies with blue and red drive components and a central slide-out Debris Tray.",
+        "These features provide positive evidence of the Dyson WashG1 wet floor cleaner family."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "Dyson V16 Piston Animal uses an All Floor Cones Sense dry head with coaxial conical rollers and lacks a Debris Tray.",
+        "Dyson V8 Absolute uses single-roller dry cleaner heads without a dual-roller debris tray mechanism.",
+        "Dyson Big Ball is a canister vacuum utilizing dry floor tools without dual wet rollers or a debris tray."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The target head features front and rear wet roller assemblies with a slide-out Debris Tray, contradicting the V16 dry dual-cone head."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 Absolute uses single-roller dry floorheads rather than a dual-roller wet system with an integrated Debris Tray."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Big Ball canister cleaner heads do not feature motorized dual wet rollers or a Debris Tray."
+      }
+    ],
+    "decisive_region": [
+      246,
+      317,
+      705,
+      630
+    ],
+    "refinement_reason": ""
+  }
+}

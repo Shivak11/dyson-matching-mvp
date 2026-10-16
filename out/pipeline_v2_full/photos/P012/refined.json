@@ -1,0 +1,56 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 35,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Dyson Hair screw tool with purple conical brush bar attached to an inlet collar with red release button."
+      ],
+      "missing_evidence": [
+        "Main vacuum body, cyclone pack, handle, power controls, and model label are cropped out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the entire vacuum body including the handle, cyclone assembly, and model labelling."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The Hair screw tool is shared across multiple Dyson ranges and the main body layout is out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The distinctive body silhouette and CleanCompaktor mechanism are not visible in the frame."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The spherical canister base, hose, and wand assembly are cropped out of frame."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The slim in-line body and separate push-button power control are not visible."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line bin, trigger handle, and rear LCD display are not visible in the crop."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The dual water tanks and upright floor-cleaning body are not visible."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the complete handheld body and control layout to distinguish between Dyson cordless families."
+  }
+}

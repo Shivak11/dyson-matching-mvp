@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_wash_g1",
+      "confidence": 95,
+      "top_two": [
+        "dyson_wash_g1",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The handle features a red power button, cyan MAX hydration button, and circular screen displaying water droplet levels and battery percentage."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "confirmed",
+        "evidence": "The handle controls and circular display with hydration droplet indicators match the WashG1 wet cleaner interface."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The V16 is a dry cordless vacuum lacking hydration droplet controls and this handle-integrated circular screen."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 utilizes a trigger-operated body without a digital circular screen or hydration buttons."
+      }
+    ],
+    "decisive_region": [
+      47,
+      359,
+      955,
+      704
+    ],
+    "refinement_reason": ""
+  }
+}

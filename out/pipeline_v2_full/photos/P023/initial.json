@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The handle visibly lacks a finger trigger, featuring the smooth cushioned grip of the button-operated V12 Slim.",
+        "The red bin-release lever mechanism is positioned beneath the cyclone assembly."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "The triggerless handle grip and red bin-release lever beneath the cyclones confirm the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The visible handle lacks the trigger mechanism required for the V15 Detect."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The bin and handle layout do not show the CleanCompaktor mechanism or body structure of the V16."
+      }
+    ],
+    "decisive_region": [
+      350,
+      500,
+      560,
+      680
+    ],
+    "refinement_reason": ""
+  }
+}

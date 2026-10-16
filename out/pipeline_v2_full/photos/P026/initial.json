@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_big_ball",
+      "confidence": 95,
+      "top_two": [
+        "dyson_big_ball",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "Spherical wheeled canister body with central red hub matching the Big Ball design.",
+        "Separate floor-standing transparent bin and cyclone assembly connected via flexible hose to the extension wand."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "confirmed",
+        "evidence": "Features the characteristic spherical wheeled canister body, transparent bin, cyclone assembly, and flexible hose."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Target is a corded cylinder vacuum with a spherical wheeled canister, not a handheld cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target is a canister vacuum with hose and ball body rather than an integrated cordless stick vacuum."
+      }
+    ],
+    "decisive_region": [
+      601,
+      430,
+      950,
+      650
+    ],
+    "refinement_reason": ""
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.8697413237247489,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.8697413237247489
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.851885012327705
+          },
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.8496328931379018
+          }
+        ]
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.8459141561667429,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.8459141561667429
+          },
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.825109549531738
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.8210901495107742
+          }
+        ]
+      },
+      {
+        "product": "dyson_v15_detect",
+        "similarity": 0.8414709122876303,
+        "references": [
+          {
+            "reference": "dyson_v15_detect_1",
+            "similarity": 0.8414709122876303
+          },
+          {
+            "reference": "dyson_v15_detect_0",
+            "similarity": 0.8360298089779715
+          },
+          {
+            "reference": "dyson_v15_detect_2",
+            "similarity": 0.8177696052195518
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P023/o1_body.jpg",
+      "sha256": "87d0351eaba8b839b0236bb15564059a5e98ec8d51f57ef87b035412ce65341a",
+      "pixel_box": [
+        364,
+        20,
+        938,
+        587
+      ],
+      "width": 574,
+      "height": 567
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim",
+      "dyson_v15_detect"
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        17,
+        298,
+        1000,
+        656
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "translucent teal cylindrical filter mounted above grey cylindrical casing and purple cyclone assembly",
+          "box_2d": [
+            17,
+            298,
+            998,
+            656
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "blue translucent pleated filter housing marked WASHABLE HEPA FILTER",
+          "box_2d": [
+            18,
+            312,
+            480,
+            636
+          ]
+        },
+        {
+          "feature": "cyclones",
+          "visible": true,
+          "detail": "purple radial cyclone cones with red interior trim below grey housing",
+          "box_2d": [
+            662,
+            298,
+            1000,
+            656
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "lower dustbin, handle, battery, wand, and floor cleaning head are out of frame below",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        17,
+        298,
+        1000,
+        656
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "translucent teal cylindrical filter mounted above grey cylindrical casing and purple cyclone assembly",
+          "box_2d": [
+            17,
+            298,
+            998,
+            656
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "blue translucent pleated filter housing marked WASHABLE HEPA FILTER",
+          "box_2d": [
+            18,
+            312,
+            480,
+            636
+          ]
+        },
+        {
+          "feature": "cyclones",
+          "visible": true,
+          "detail": "purple radial cyclone cones with red interior trim below grey housing",
+          "box_2d": [
+            662,
+            298,
+            1000,
+            656
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "lower dustbin, handle, battery, wand, and floor cleaning head are out of frame below",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

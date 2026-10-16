@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        6,
+        131,
+        992,
+        932
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "inline cylindrical clear bin, cyclone assembly, pistol grip handle, and battery base",
+          "box_2d": [
+            6,
+            659,
+            414,
+            930
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "purple rigid wand with red quick-release latch buttons",
+          "box_2d": [
+            334,
+            318,
+            794,
+            663
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "motorized floor cleaning head with visible internal roller",
+          "box_2d": [
+            777,
+            131,
+            992,
+            332
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v11 advanced"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        6,
+        131,
+        992,
+        932
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "inline cylindrical clear bin, cyclone assembly, pistol grip handle, and battery base",
+          "box_2d": [
+            6,
+            659,
+            414,
+            930
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "purple rigid wand with red quick-release latch buttons",
+          "box_2d": [
+            334,
+            318,
+            794,
+            663
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "motorized floor cleaning head with visible internal roller",
+          "box_2d": [
+            777,
+            131,
+            992,
+            332
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v11 advanced"
+    }
+  ]
+}

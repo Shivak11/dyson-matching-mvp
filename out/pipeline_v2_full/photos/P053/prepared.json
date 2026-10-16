@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.8613886958225454,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.8613886958225454
+          },
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.851540593729228
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.8371322678545919
+          }
+        ]
+      },
+      {
+        "product": "dyson_v15_detect",
+        "similarity": 0.8573233123609889,
+        "references": [
+          {
+            "reference": "dyson_v15_detect_1",
+            "similarity": 0.8573233123609889
+          },
+          {
+            "reference": "dyson_v15_detect_0",
+            "similarity": 0.8529259459339075
+          },
+          {
+            "reference": "dyson_v15_detect_2",
+            "similarity": 0.8178530679267499
+          }
+        ]
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.8552599027235691,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.8552599027235691
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.8383225016809054
+          },
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.8216044697270006
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P053/o1_body.jpg",
+      "sha256": "3c5ad4a948716bfd6bb776465ef8ba9783716e0e6a9f848442fabf0ee4319852",
+      "pixel_box": [
+        11,
+        24,
+        830,
+        466
+      ],
+      "width": 819,
+      "height": 442
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v16_piston_animal",
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim"
+    ]
+  }
+}

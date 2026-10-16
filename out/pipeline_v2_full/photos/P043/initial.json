@@ -1,0 +1,41 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 30,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The cleaner head shows Dyson branding with hair removal vanes and a purple brush roller."
+      ],
+      "missing_evidence": [
+        "The main body containing the motor, cyclone layout, bin, and display is not visible."
+      ],
+      "contradictions": [],
+      "retake": "Capture the main body and handle of the vacuum cleaner to reveal the bin and motor layout."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head design is used across Dyson cordless vacuums, but the main body is out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head does not confirm the model and the main body is out of frame."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "Shared cleaner head attachments cannot establish V15 identity without the main body and controls."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "The main body and bin assembly must be visible to distinguish between Dyson families."
+  }
+}

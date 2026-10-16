@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Perpendicular bin positioned below the two-tier radial cyclone pack with top red release collar and top mode slider matches the Dyson V8 layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Features the signature perpendicular bin below the cyclone assembly, top red bin-release lever, and top slider switch."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Target is an integrated cordless handheld unit rather than a floor-standing wheeled cylinder canister."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Target has a perpendicular bin and cyclone configuration rather than the in-line body and bin layout of the V12."
+      }
+    ],
+    "decisive_region": [
+      67,
+      376,
+      380,
+      770
+    ],
+    "refinement_reason": ""
+  }
+}

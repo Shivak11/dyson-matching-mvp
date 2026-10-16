@@ -1,0 +1,46 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "The floor head clearly displays 'duoclean POWERFINS' branding with five front LED headlights and a dual roller system characteristic of Shark vacuums."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The DuoClean PowerFins motorized head with five headlights is incompatible with all Dyson catalogue models."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The DuoClean PowerFins head with five integrated front headlights contradicts the Dyson V16 cleaner head designs."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The motorized DuoClean PowerFins floor nozzle contradicts the canister tools supplied with Dyson Big Ball."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The DuoClean PowerFins cleaner head with front LEDs is incompatible with Dyson V8 cleaner heads."
+      }
+    ],
+    "decisive_region": [
+      315,
+      360,
+      415,
+      665
+    ],
+    "refinement_reason": ""
+  }
+}

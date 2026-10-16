@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        236,
+        0,
+        1000,
+        825
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld vacuum body with gold cyclone array, purple rear filter housing, and in-line clear bin",
+          "box_2d": [
+            236,
+            0,
+            788,
+            754
+          ]
+        },
+        {
+          "feature": "cyclone_design",
+          "visible": true,
+          "detail": "Gold flared radial cyclones surrounding the cylindrical central body",
+          "box_2d": [
+            288,
+            228,
+            751,
+            584
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Red push button positioned on top of the gold body section",
+          "box_2d": [
+            270,
+            270,
+            359,
+            376
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "Clear horizontal dust canister positioned forward of the cyclone assembly",
+          "box_2d": [
+            344,
+            535,
+            727,
+            751
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        236,
+        0,
+        1000,
+        825
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld vacuum body with gold cyclone array, purple rear filter housing, and in-line clear bin",
+          "box_2d": [
+            236,
+            0,
+            788,
+            754
+          ]
+        },
+        {
+          "feature": "cyclone_design",
+          "visible": true,
+          "detail": "Gold flared radial cyclones surrounding the cylindrical central body",
+          "box_2d": [
+            288,
+            228,
+            751,
+            584
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Red push button positioned on top of the gold body section",
+          "box_2d": [
+            270,
+            270,
+            359,
+            376
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "Clear horizontal dust canister positioned forward of the cyclone assembly",
+          "box_2d": [
+            344,
+            535,
+            727,
+            751
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

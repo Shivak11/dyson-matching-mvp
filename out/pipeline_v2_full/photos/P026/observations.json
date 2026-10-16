@@ -1,0 +1,150 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        191,
+        1000,
+        734
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "canister cleaner with large spherical wheel and clear bin surmounted by orange cyclone tips",
+          "box_2d": [
+            601,
+            428,
+            952,
+            655
+          ]
+        },
+        {
+          "feature": "hose",
+          "visible": true,
+          "detail": "grey ribbed flexible hose linking canister base to wand handle",
+          "box_2d": [
+            40,
+            191,
+            1000,
+            449
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "straight grey extension wand extending down from handle to floor head",
+          "box_2d": [
+            0,
+            396,
+            967,
+            734
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "compact floor tool attached to the lower wand end",
+          "box_2d": [
+            753,
+            646,
+            969,
+            734
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o2",
+      "role": "accessory",
+      "parent_id": "o1",
+      "box_2d": [
+        221,
+        502,
+        536,
+        618
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "tool_design",
+          "visible": true,
+          "detail": "combination accessory tool mounted to the side of the wand",
+          "box_2d": [
+            221,
+            502,
+            536,
+            618
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        191,
+        1000,
+        734
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "canister cleaner with large spherical wheel and clear bin surmounted by orange cyclone tips",
+          "box_2d": [
+            601,
+            428,
+            952,
+            655
+          ]
+        },
+        {
+          "feature": "hose",
+          "visible": true,
+          "detail": "grey ribbed flexible hose linking canister base to wand handle",
+          "box_2d": [
+            40,
+            191,
+            1000,
+            449
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "straight grey extension wand extending down from handle to floor head",
+          "box_2d": [
+            0,
+            396,
+            967,
+            734
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "compact floor tool attached to the lower wand end",
+          "box_2d": [
+            753,
+            646,
+            969,
+            734
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

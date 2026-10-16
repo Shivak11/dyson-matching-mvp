@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        25,
+        0,
+        942,
+        960
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld vacuum layout with rear handle, top cyclone unit, clear collection bin, and direct-attached motorized tool",
+          "box_2d": [
+            25,
+            0,
+            942,
+            960
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Radial cyclone assembly with metallic grey cyclone cones and red release collar",
+          "box_2d": [
+            25,
+            274,
+            346,
+            560
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "Clear cylindrical bin containing collected dust and debris",
+          "box_2d": [
+            341,
+            287,
+            912,
+            548
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Compact motorized tool attached directly to the suction inlet",
+          "box_2d": [
+            333,
+            498,
+            642,
+            960
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        25,
+        0,
+        942,
+        960
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld vacuum layout with rear handle, top cyclone unit, clear collection bin, and direct-attached motorized tool",
+          "box_2d": [
+            25,
+            0,
+            942,
+            960
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "Radial cyclone assembly with metallic grey cyclone cones and red release collar",
+          "box_2d": [
+            25,
+            274,
+            346,
+            560
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "Clear cylindrical bin containing collected dust and debris",
+          "box_2d": [
+            341,
+            287,
+            912,
+            548
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Compact motorized tool attached directly to the suction inlet",
+          "box_2d": [
+            333,
+            498,
+            642,
+            960
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

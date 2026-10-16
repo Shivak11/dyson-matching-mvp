@@ -1,0 +1,60 @@
+{
+  "o2": {
+    "object_id": "o2",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 98,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Target displays an in-line clear bin, two-tier radial cyclones, and legible 'dyson v15 detect total clean' text on the wand.",
+        "Absence of a red push-button power switch on the body distinguishes it from the V12 Detect Slim."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "Full-size in-line bin, cyclone configuration, and readable wand label confirm V15 Detect."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Lacks the red push-button power switch on the cyclone body and has larger bin proportions."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 features a perpendicular bin and cyclone layout rather than this in-line stick vacuum structure."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Big Ball is a corded cylinder canister vacuum, not an in-line cordless stick vacuum."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Lacks the distinct CleanCompaktor mechanism and dual conical brush rollers of the V16."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "WashG1 is an upright hard floor wet cleaner with water tanks rather than a dry cyclone vacuum."
+      }
+    ],
+    "decisive_region": [
+      405,
+      558,
+      520,
+      572
+    ],
+    "refinement_reason": ""
+  }
+}

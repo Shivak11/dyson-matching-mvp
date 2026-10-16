@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine has an inline clear bin with yellow radial cyclones and clearly readable 'dyson v15 detect' text printed on the wand."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The vacuum exhibits full-size V15 body proportions and explicit 'dyson v15 detect' text on the wand."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "The inline body matches V15 styling and features readable 'dyson v15 detect' branding on the wand."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The inline dustbin contradicts the perpendicular bin design of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      365,
+      495,
+      445,
+      520
+    ],
+    "refinement_reason": ""
+  }
+}

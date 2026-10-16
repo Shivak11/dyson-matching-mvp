@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        358,
+        1000,
+        704
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen showing droplet icons and battery percentage display",
+          "box_2d": [
+            338,
+            359,
+            955,
+            704
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "handle stem with red power button and cyan mode button",
+          "box_2d": [
+            47,
+            466,
+            341,
+            563
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "cleaner head, dustbin, and motor base are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        358,
+        1000,
+        704
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen showing droplet icons and battery percentage display",
+          "box_2d": [
+            338,
+            359,
+            955,
+            704
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "handle stem with red power button and cyan mode button",
+          "box_2d": [
+            47,
+            466,
+            341,
+            563
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "cleaner head, dustbin, and motor base are out of frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

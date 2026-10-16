@@ -1,0 +1,56 @@
+{
+  "o2": {
+    "object_id": "o2",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 30,
+      "top_two": [
+        "dyson_big_ball",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "A genuine Dyson quick-release upholstery tool attached to a wand neck is visible."
+      ],
+      "missing_evidence": [
+        "The main vacuum body showing the cyclone assembly, dust bin, and model markings is out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the main vacuum body showing the dust bin, cyclones, and model label."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The quick-release upholstery tool is a shared accessory that does not establish the attached vacuum body."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The tool is an interchangeable accessory and the canister body connected to this wand is not shown."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main vacuum body, compression mechanism, and handle are out of frame."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line slim body, LCD screen, and power button are not visible."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The bin, motor housing, and trigger controls are outside the crop."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main wet cleaner body, water tanks, and dual rollers are not visible."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "A shared accessory tool cannot identify the machine family without visible body or control features."
+  }
+}

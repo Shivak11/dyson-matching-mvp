@@ -1,0 +1,302 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "The handheld body displays prominent Shark branding, identifying it as a non-catalogue Shark vacuum."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "Prominent Shark branding directly contradicts Dyson catalogue vacuum families.",
+        "The body and attachment architecture do not match any Dyson cyclone or bin structure."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The unit bears Shark branding and lacks the Dyson V16 CleanCompaktor body architecture."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The device is a dry handheld vacuum branded Shark rather than an upright dual-roller wet cleaner."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The device features Shark branding and lacks Dyson's perpendicular bin and cyclone assembly."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The device is a handheld stick vacuum branded Shark rather than a spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The device bears Shark branding and lacks Dyson's slim in-line body with rear LCD."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The device bears Shark branding and lacks Dyson V15's in-line cyclone and bin layout."
+      }
+    ],
+    "decisive_region": [
+      760,
+      365,
+      850,
+      475
+    ],
+    "refinement_reason": ""
+  },
+  "o2": {
+    "object_id": "o2",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The nozzle and wand feature an all-mint-green housing with generic swivel joint and yellow sticker, incompatible with Dyson catalogue heads."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The mint-green floor nozzle and wand do not match any Dyson cleaner head or wand design in the catalogue.",
+        "The roller head structure lacks Dyson Fluffy or Cones Sense roller mechanisms and styling."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The nozzle has a single roller with mint-green casing instead of Dyson V16's All Floor Cones Sense dual conical rollers."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "This is a dry vacuum cleaner head and wand, not a WashG1 dual-roller wet floor cleaning system."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The mint-green nozzle construction, neck swivel, and wand contradict Dyson V15 Fluffy Optic or Motorbar designs."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The partial machine is a stick vacuum nozzle and wand rather than a spherical cylinder vacuum."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The mint-green nozzle and wand contradict Dyson V12's Fluffy or Motorbar cleaner head designs."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The mint-green nozzle construction contradicts all Dyson V8 floor tool designs."
+      }
+    ],
+    "decisive_region": [
+      228,
+      786,
+      292,
+      875
+    ],
+    "refinement_reason": ""
+  },
+  "o3": {
+    "object_id": "o3",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The machine shows a compact black housing with a top dial knob and transverse cylindrical body distinct from any Dyson architecture."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The horizontal body layout and top dial control contradict Dyson's cyclone packs and in-line or perpendicular bin designs.",
+        "The unit lacks any Dyson cyclone assembly, trigger, or characteristic filter housing."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The body lacks the Dyson V16 in-line CleanCompaktor bin, rear LCD, and cyclone assembly."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The body lacks the perpendicular transparent bin, top cyclone pack, and red emptying lever of the Dyson V8."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The machine is a compact black handheld vacuum body, not a tall upright wet cleaner with water tanks."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The unit is a compact handheld body rather than a floor-standing spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The body lacks Dyson V12's slim in-line cyclone layout and rear LCD."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The body lacks Dyson V15's in-line bin, cyclone assembly, and trigger handle."
+      }
+    ],
+    "decisive_region": [
+      50,
+      793,
+      202,
+      924
+    ],
+    "refinement_reason": ""
+  },
+  "o4": {
+    "object_id": "o4",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The handheld body features an angled conical metallic motor casing and open handle frame with white trigger incompatible with Dyson architecture."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The conical motor shroud and open handle with white trigger contradict Dyson's bin, cyclone, and trigger designs.",
+        "The machine lacks Dyson V8, V16, or WashG1 structural components and styling."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The body lacks the V16 CleanCompaktor mechanism, dual conical cyclone system, and rear display."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The body lacks the vertical transparent bin, cyclone assembly, and red emptying lever of the Dyson V8."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The item is a dry handheld vacuum body rather than a dual-roller upright wet cleaner with tanks."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The unit is a handheld vacuum body rather than a spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The body has an angled dust container and conical shroud unlike Dyson V12's in-line design."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The body architecture with open handle and white trigger contradicts Dyson V15's in-line bin and handle design."
+      }
+    ],
+    "decisive_region": [
+      114,
+      915,
+      280,
+      1000
+    ],
+    "refinement_reason": ""
+  },
+  "o5": {
+    "object_id": "o5",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_wash_g1"
+      ],
+      "evidence": [
+        "The cleaner head features a front LED headlight bar and dark casing with clear window, characteristic of non-catalogue upright/stick vacuums."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The integrated front LED headlights and housing design are incompatible with all Dyson catalogue cleaner heads.",
+        "The nozzle lacks the dual conical rollers of V16, dual sponge rollers of WashG1, and Motorbar or Fluffy head styling of V8."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The nozzle has a dark housing with integrated LED headlights rather than Dyson V16's All Floor Cones Sense dual conical rollers."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The head is a dry vacuum floor nozzle with headlights, not a WashG1 dual-roller wet cleaning floor head."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The nozzle features integrated LED headlights and dark angular casing not found on any Dyson V8 cleaner heads."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The nozzle is attached to a stick vacuum wand rather than a spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The head has a full front LED bar contradicting Dyson V12's Fluffy Optic or Motorbar designs."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The wide front LED headlight bar contradicts Dyson V15's cleaner head configurations."
+      }
+    ],
+    "decisive_region": [
+      218,
+      0,
+      340,
+      99
+    ],
+    "refinement_reason": ""
+  }
+}

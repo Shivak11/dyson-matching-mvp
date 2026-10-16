@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.8671473348459061,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.8671473348459061
+          },
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.8598219993891845
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.8447292944551856
+          }
+        ]
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.8192652832553654,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.8192652832553654
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.7995413629893814
+          },
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.7888507205560653
+          }
+        ]
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "similarity": 0.8127282651115297,
+        "references": [
+          {
+            "reference": "dyson_v8_absolute_0",
+            "similarity": 0.8127282651115297
+          },
+          {
+            "reference": "dyson_v8_absolute_1",
+            "similarity": 0.7869481355794031
+          },
+          {
+            "reference": "dyson_v8_absolute_2",
+            "similarity": 0.7757928808523964
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P019/o1_body.jpg",
+      "sha256": "4583ea9b6d7c20f60a95b6e5ce6c50605fe02a52613957206ac9d94013532ca2",
+      "pixel_box": [
+        131,
+        0,
+        1056,
+        514
+      ],
+      "width": 925,
+      "height": 514
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v16_piston_animal",
+      "dyson_v12_detect_slim",
+      "dyson_v8_absolute"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 30,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "A Dyson direct-drive cleaner head with rotating bristle roller and articulating wand joint is visible."
+      ],
+      "missing_evidence": [
+        "The main handheld body, including the cyclone assembly, dust bin, and handle controls, is out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Take a photo of the main handheld body showing the dust bin, handle, and cyclone assembly."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head matches Dyson direct-drive styling, but the perpendicular bin and lift lever are out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The compression bin mechanism and rear LCD are out of frame, leaving insufficient evidence."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line dust bin, trigger handle, and rear LCD are not visible in the image."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Handheld body unit showing cyclone, dust bin, and handle interface"
+  }
+}

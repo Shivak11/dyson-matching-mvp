@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        233,
+        938,
+        736
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "spherical canister body with clear dust bin and orange cyclone assembly",
+          "box_2d": [
+            319,
+            357,
+            680,
+            570
+          ]
+        },
+        {
+          "feature": "floor_head",
+          "visible": true,
+          "detail": "cleaner head with rotating brush bar featuring blue and red stripes",
+          "box_2d": [
+            746,
+            428,
+            938,
+            637
+          ]
+        },
+        {
+          "feature": "hose_and_wand",
+          "visible": true,
+          "detail": "flexible grey ribbed hose connecting to a rigid extension wand with red release clips",
+          "box_2d": [
+            0,
+            233,
+            831,
+            735
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        233,
+        938,
+        736
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "spherical canister body with clear dust bin and orange cyclone assembly",
+          "box_2d": [
+            319,
+            357,
+            680,
+            570
+          ]
+        },
+        {
+          "feature": "floor_head",
+          "visible": true,
+          "detail": "cleaner head with rotating brush bar featuring blue and red stripes",
+          "box_2d": [
+            746,
+            428,
+            938,
+            637
+          ]
+        },
+        {
+          "feature": "hose_and_wand",
+          "visible": true,
+          "detail": "flexible grey ribbed hose connecting to a rigid extension wand with red release clips",
+          "box_2d": [
+            0,
+            233,
+            831,
+            735
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

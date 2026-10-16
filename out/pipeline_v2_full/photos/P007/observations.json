@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        455,
+        996,
+        548
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Gold cyclone with clear dust bin and purple top filter",
+          "box_2d": [
+            0,
+            478,
+            288,
+            523
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Red circular power button on the front of the cyclone assembly",
+          "box_2d": [
+            55,
+            494,
+            90,
+            508
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight wand connecting handheld body to cleaner head",
+          "box_2d": [
+            282,
+            490,
+            946,
+            509
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Slim roller head with yellow and purple/blue striped soft roller",
+          "box_2d": [
+            948,
+            455,
+            996,
+            548
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v12 detect slim total clean"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        455,
+        996,
+        548
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Gold cyclone with clear dust bin and purple top filter",
+          "box_2d": [
+            0,
+            478,
+            288,
+            523
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "Red circular power button on the front of the cyclone assembly",
+          "box_2d": [
+            55,
+            494,
+            90,
+            508
+          ]
+        },
+        {
+          "feature": "wand",
+          "visible": true,
+          "detail": "Straight wand connecting handheld body to cleaner head",
+          "box_2d": [
+            282,
+            490,
+            946,
+            509
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Slim roller head with yellow and purple/blue striped soft roller",
+          "box_2d": [
+            948,
+            455,
+            996,
+            548
+          ]
+        }
+      ],
+      "readable_identifier": "dyson v12 detect slim total clean"
+    }
+  ]
+}

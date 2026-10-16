@@ -1,0 +1,198 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        58,
+        0,
+        410,
+        187
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "spherical canister body with large dark side wheel",
+          "box_2d": [
+            58,
+            0,
+            410,
+            187
+          ]
+        },
+        {
+          "feature": "cyclone",
+          "visible": true,
+          "detail": "orange multi-cyclone assembly",
+          "box_2d": [
+            58,
+            0,
+            321,
+            76
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "clear cylindrical bin",
+          "box_2d": [
+            100,
+            28,
+            390,
+            187
+          ]
+        }
+      ],
+      "readable_identifier": "dyson big ball turbinehead"
+    },
+    {
+      "object_id": "o2",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        614,
+        155,
+        1000,
+        458
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "wide flat upholstery tool resting on fabric",
+          "box_2d": [
+            614,
+            250,
+            977,
+            458
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red quick-release catch button on neck",
+          "box_2d": [
+            873,
+            251,
+            959,
+            298
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "grey extension wand leading off-frame",
+          "box_2d": [
+            786,
+            155,
+            1000,
+            351
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        58,
+        0,
+        410,
+        187
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "spherical canister body with large dark side wheel",
+          "box_2d": [
+            58,
+            0,
+            410,
+            187
+          ]
+        },
+        {
+          "feature": "cyclone",
+          "visible": true,
+          "detail": "orange multi-cyclone assembly",
+          "box_2d": [
+            58,
+            0,
+            321,
+            76
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "clear cylindrical bin",
+          "box_2d": [
+            100,
+            28,
+            390,
+            187
+          ]
+        }
+      ],
+      "readable_identifier": "dyson big ball turbinehead"
+    },
+    {
+      "object_id": "o2",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        614,
+        155,
+        1000,
+        458
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "distinguishing_head",
+          "visible": true,
+          "detail": "wide flat upholstery tool resting on fabric",
+          "box_2d": [
+            614,
+            250,
+            977,
+            458
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red quick-release catch button on neck",
+          "box_2d": [
+            873,
+            251,
+            959,
+            298
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "grey extension wand leading off-frame",
+          "box_2d": [
+            786,
+            155,
+            1000,
+            351
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

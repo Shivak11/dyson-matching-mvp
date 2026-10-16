@@ -1,0 +1,62 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The wand bears clearly legible printed text identifying the machine as 'dyson v11 advanced'.",
+        "The handheld body features an in-line clear bin, cyclone cluster, and trigger handle characteristic of the Dyson V11 family."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The printed 'dyson v11 advanced' designation positively confirms a non-catalogue model."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The target features an in-line bin rather than the perpendicular bin layout of the V8, and is labelled 'dyson v11 advanced'."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The wand explicitly identifies the vacuum as 'dyson v11 advanced' rather than V15 Detect."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The target has a standard trigger-operated handle and bin proportions labelled 'dyson v11 advanced' rather than the button-operated slim V12."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The target is a cordless stick vacuum rather than a spherical wheeled canister vacuum."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The machine features a standard V11 cyclone assembly and single-roller head rather than the V16 CleanCompaktor body or dual-roller head."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The target is a dry cyclonic vacuum rather than a dedicated wet floor cleaner with water tanks."
+      }
+    ],
+    "decisive_region": [
+      360,
+      535,
+      455,
+      635
+    ],
+    "refinement_reason": ""
+  }
+}

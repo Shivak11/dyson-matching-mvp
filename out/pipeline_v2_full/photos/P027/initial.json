@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_big_ball",
+      "confidence": 95,
+      "top_two": [
+        "dyson_big_ball",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "Floor-standing spherical canister body with self-righting ball profile and clear dust bin.",
+        "Flexible ribbed hose connects the wheeled canister to an extension wand and motorized floor head."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_big_ball",
+        "outcome": "confirmed",
+        "evidence": "Matches the floor-standing spherical canister layout, cyclone assembly over ball body, and flexible hose connection."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Target is a canister vacuum with a spherical wheeled body and hose, rather than a cordless handheld stick vacuum."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target features a floor-standing spherical canister with a hose, not an in-line cordless stick body."
+      }
+    ],
+    "decisive_region": [
+      319,
+      357,
+      680,
+      570
+    ],
+    "refinement_reason": ""
+  }
+}

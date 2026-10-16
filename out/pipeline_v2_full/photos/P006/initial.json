@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Vertical clear dustbin positioned beneath the cyclone assembly rather than in-line.",
+        "Top red lift-release mechanism and rear cylindrical filter housing match the V8 family layout."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "Features the perpendicular vertical bin below the cyclone assembly with the top red lift release."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Requires an in-line horizontal motor and bin body rather than a vertical perpendicular bin."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line horizontal bin and rear LCD screen, conflicting with the perpendicular bin layout."
+      }
+    ],
+    "decisive_region": [
+      140,
+      515,
+      820,
+      930
+    ],
+    "refinement_reason": ""
+  }
+}

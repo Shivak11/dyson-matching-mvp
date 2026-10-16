@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        198,
+        330,
+        1000,
+        650
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen showing particle measurement bars and numeric runtime",
+          "box_2d": [
+            407,
+            446,
+            565,
+            536
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red push button positioned above the display",
+          "box_2d": [
+            303,
+            476,
+            365,
+            512
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "translucent blue circular outer bezel surrounding black circular end cap",
+          "box_2d": [
+            198,
+            330,
+            770,
+            650
+          ]
+        },
+        {
+          "feature": "wand_or_head",
+          "visible": false,
+          "detail": "wand and cleaning head extend forward away from camera view",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        198,
+        330,
+        1000,
+        650
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular digital screen showing particle measurement bars and numeric runtime",
+          "box_2d": [
+            407,
+            446,
+            565,
+            536
+          ]
+        },
+        {
+          "feature": "controls",
+          "visible": true,
+          "detail": "red push button positioned above the display",
+          "box_2d": [
+            303,
+            476,
+            365,
+            512
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "translucent blue circular outer bezel surrounding black circular end cap",
+          "box_2d": [
+            198,
+            330,
+            770,
+            650
+          ]
+        },
+        {
+          "feature": "wand_or_head",
+          "visible": false,
+          "detail": "wand and cleaning head extend forward away from camera view",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

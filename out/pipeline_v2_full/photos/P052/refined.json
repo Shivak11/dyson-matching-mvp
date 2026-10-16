@@ -1,0 +1,63 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The handle features a vertical red comfort pad and lacks an index finger trigger, characteristic of the Gen5detect.",
+        "The front collar exposes the integrated dusting and crevice tool characteristic of the Gen5detect when the wand is detached.",
+        "The body features a fluted cyan HEPA filter cap and purple cyclones on a heavy 5.00 lb handheld chassis."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The triggerless handle with a comfort pad and integrated collar tool contradicts the trigger operation of the V15 Detect and the slim top-button layout of the V12 Detect Slim."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The in-line horizontal dustbin contradicts the perpendicular bin layout of the V8 Absolute."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The handle comfort pad without a trigger and the built-in crevice tool contradict the trigger-operated V15 Detect."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The full-size body with a handle comfort pad contradicts the slim push-button motor housing of the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The cordless handheld stick body contradicts the spherical wheeled canister and hose design of the Big Ball."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The standard cyclone body and Gen5 handle contradict the CleanCompaktor compression mechanism of the V16 Piston Animal."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The dry handheld vacuum body contradicts the wet-cleaning dual-tank system of the WashG1."
+      }
+    ],
+    "decisive_region": [
+      350,
+      420,
+      550,
+      475
+    ],
+    "refinement_reason": ""
+  }
+}

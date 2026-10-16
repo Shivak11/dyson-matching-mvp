@@ -1,0 +1,29 @@
+{
+  "time_utc": "2026-10-16T06:23:15Z",
+  "error": "Pipeline STOP file is present",
+  "attempted": "One Gemini worker, 15-second gaps, recorded bounded 429 retries, original-resolution evidence checks; no fallback.",
+  "completed_photos": [
+    "P001",
+    "P002",
+    "P003",
+    "P004",
+    "P005",
+    "P006",
+    "P007",
+    "P008",
+    "P009",
+    "P010",
+    "P011",
+    "P012",
+    "P013",
+    "P014",
+    "P015",
+    "P016",
+    "P017",
+    "P018",
+    "P019",
+    "P020",
+    "P021"
+  ],
+  "new_accounted_usd": 0.6725317500000001
+}

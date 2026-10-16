@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Full-size in-line transparent dustbin with yellow cyclones and purple filter housing",
+        "Trigger-operated handle grip paired with green laser-illuminated floor head"
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "Matches the in-line full-size bin proportions, yellow cyclone array, trigger grip, and illuminated cleaner head."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Shows full-size bin proportions and a trigger handle rather than the slim body and top push-button control of the V12."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line cylindrical bin layout rather than the perpendicular under-body bin layout of the V8."
+      }
+    ],
+    "decisive_region": [
+      209,
+      242,
+      458,
+      403
+    ],
+    "refinement_reason": ""
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "started_utc": "2026-10-16T08:35:59Z",
+  "settled_utc": "2026-10-16T08:37:34Z",
+  "status": "completed",
+  "completed_count": 58,
+  "requested_count": 9,
+  "selected_count": 2,
+  "workers": 1,
+  "rate_limit_policy": {
+    "rate_limit_retries": 3,
+    "request_interval_seconds": 15,
+    "max_retry_delay_seconds": 300
+  },
+  "recovery_accounted_usd": 0.85114125,
+  "reused_jobs": [],
+  "ledger": "out/pipeline_v2_recovery/calls.jsonl",
+  "inflight_count": 0,
+  "error": null,
+  "phase_route": {
+    "recorded_at_utc": "2026-10-16T06:22:50.554881+00:00",
+    "decision_owner": "agent",
+    "reason": "Five upstream shared-pool HTTP429 attempts during the first20 completed photos, despite sequential pacing and delayed retries. The owner authorised completion and INR200 additional spending.",
+    "previous_route": [
+      "google-vertex/global/flex"
+    ],
+    "new_route": [
+      "google-ai-studio"
+    ],
+    "requested_model": "google/gemini-3.7-flash",
+    "advertised_dated_model": "google/gemini-3.7-flash-20260813",
+    "endpoint_status_at_check": 0,
+    "input_usd_per_million": 0.75,
+    "output_usd_per_million": 3.75,
+    "source_url": "https://openrouter.ai/api/v1/models/google/gemini-3.7-flash/endpoints",
+    "automatic_fallback": false,
+    "completed_photos_repeated": false,
+    "note": "The original handover permits OpenRouter or native APIs; this changes the agent-selected provider pool, preserving the requested Gemini model, reasoning, prompts and scoring. Preserve partial old responses before a fresh provider preflight.",
+    "logical_job_prefix": "v2long:",
+    "partial_old_responses_reused": false,
+    "max_output_tokens": 32768
+  }
+}

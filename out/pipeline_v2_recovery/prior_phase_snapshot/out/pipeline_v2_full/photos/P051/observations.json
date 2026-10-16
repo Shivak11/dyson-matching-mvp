@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        19,
+        298,
+        1000,
+        658
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "translucent cyan cylindrical filter unit labeled WASHABLE HEPA FILTER",
+          "box_2d": [
+            19,
+            313,
+            480,
+            637
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "grey cylindrical housing marked with dyson logo",
+          "box_2d": [
+            405,
+            317,
+            767,
+            636
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "purple cyclone cones with red rim accent",
+          "box_2d": [
+            664,
+            298,
+            999,
+            658
+          ]
+        },
+        {
+          "feature": "handle_and_wand",
+          "visible": false,
+          "detail": "dustbin, handle, battery, and wand are cropped out below the frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        19,
+        298,
+        1000,
+        658
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "translucent cyan cylindrical filter unit labeled WASHABLE HEPA FILTER",
+          "box_2d": [
+            19,
+            313,
+            480,
+            637
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "grey cylindrical housing marked with dyson logo",
+          "box_2d": [
+            405,
+            317,
+            767,
+            636
+          ]
+        },
+        {
+          "feature": "cyclone_assembly",
+          "visible": true,
+          "detail": "purple cyclone cones with red rim accent",
+          "box_2d": [
+            664,
+            298,
+            999,
+            658
+          ]
+        },
+        {
+          "feature": "handle_and_wand",
+          "visible": false,
+          "detail": "dustbin, handle, battery, and wand are cropped out below the frame",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 50,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine has an inline cylindrical bin and cyclone body matching modern Dyson cordless stick vacuums.",
+        "The Dyson wordmark is visible on the transparent cleaner head cover."
+      ],
+      "missing_evidence": [
+        "The rear circular display is facing away from the camera.",
+        "The handle and trigger control layout is obscured behind the wand and body."
+      ],
+      "contradictions": [
+        "The inline bin layout contradicts the perpendicular under-cyclone bin layout of the V8.",
+        "The cordless stick format contradicts the canister design of the Big Ball and the wet-tank layout of the WashG1."
+      ],
+      "retake": "Capture a clear photo of the handle controls and rear LCD display to distinguish the model."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The target's inline bin and cyclone layout contradicts the perpendicular bin configuration beneath the cyclones of the V8 family."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The motor housing power button and handle area are obscured from this frontal perspective."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "Distinguishing interface details such as the rear display screen and handle trigger are completely obscured."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The target is an upright stick vacuum rather than a spherical wheeled canister machine."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The CleanCompaktor compression body and rear display are out of focus and cannot be evaluated."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The target's cyclone stick configuration contradicts the dual-tank upright structure of the WashG1."
+      }
+    ],
+    "decisive_region": [
+      112,
+      458,
+      334,
+      525
+    ],
+    "refinement_reason": "Inspect the rear display and handle controls to distinguish between inline Dyson families."
+  }
+}

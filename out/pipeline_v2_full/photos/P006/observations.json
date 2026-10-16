@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        67,
+        80,
+        971,
+        938
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Cordless handheld body with vertical clear dustbin, top cyclone assembly, pistol grip handle, and battery base",
+          "box_2d": [
+            140,
+            520,
+            966,
+            940
+          ]
+        },
+        {
+          "feature": "filter_assembly",
+          "visible": true,
+          "detail": "Blue cylindrical rear filter cap with round label",
+          "box_2d": [
+            195,
+            706,
+            497,
+            927
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Orange extension wand connected to the main body suction inlet",
+          "box_2d": [
+            198,
+            230,
+            442,
+            542
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor roller head with blue and red brush roll elements attached to wand",
+          "box_2d": [
+            67,
+            80,
+            281,
+            340
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        67,
+        80,
+        971,
+        938
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Cordless handheld body with vertical clear dustbin, top cyclone assembly, pistol grip handle, and battery base",
+          "box_2d": [
+            140,
+            520,
+            966,
+            940
+          ]
+        },
+        {
+          "feature": "filter_assembly",
+          "visible": true,
+          "detail": "Blue cylindrical rear filter cap with round label",
+          "box_2d": [
+            195,
+            706,
+            497,
+            927
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "Orange extension wand connected to the main body suction inlet",
+          "box_2d": [
+            198,
+            230,
+            442,
+            542
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor roller head with blue and red brush roll elements attached to wand",
+          "box_2d": [
+            67,
+            80,
+            281,
+            340
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

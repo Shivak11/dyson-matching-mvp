@@ -1,0 +1,59 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine features an inline transparent bin with yellow cyclones and clearly readable 'dyson v15 detect' branding printed on the wand."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The machine exhibits full-size V15 body proportions and readable 'dyson v15 detect' text on the wand."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "The inline body, yellow radial cyclones, and clear 'dyson v15 detect' wand identifier confirm this model."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The inline dustbin contradicts the perpendicular dustbin configuration of the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The cordless stick configuration contradicts the wheeled canister design of the Big Ball."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The standard inline bin and 'dyson v15 detect' labeling contradict the V16 Piston Animal design."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The cyclone stick vacuum layout contradicts the upright dual-tank wet-cleaning layout of the WashG1."
+      }
+    ],
+    "decisive_region": [
+      365,
+      495,
+      445,
+      520
+    ],
+    "refinement_reason": ""
+  }
+}

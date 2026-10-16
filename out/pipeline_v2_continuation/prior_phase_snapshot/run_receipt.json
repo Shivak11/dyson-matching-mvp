@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-16T05:27:07Z",
+  "settled_utc": "2026-10-16T06:23:16Z",
+  "status": "stopped",
+  "completed_count": 21,
+  "requested_count": 58,
+  "workers": 1,
+  "rate_limit_policy": {
+    "rate_limit_retries": 3,
+    "request_interval_seconds": 15,
+    "max_retry_delay_seconds": 300
+  },
+  "new_accounted_usd": 0.6725317500000001,
+  "inflight_count": 0,
+  "error": "Pipeline STOP file is present"
+}

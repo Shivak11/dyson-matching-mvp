@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v12_detect_slim",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "The red circular push button located on top of the gold cyclone body matches the Dyson V12 power control design."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "confirmed",
+        "evidence": "Features the distinctive red on/off push button situated directly on top of the gold cyclone housing."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "V15 uses handle trigger operation rather than a red top-mounted push button on the cyclone body."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "V8 has a perpendicular dust bin positioned beneath the cyclones rather than an in-line horizontal canister."
+      }
+    ],
+    "decisive_region": [
+      265,
+      270,
+      360,
+      380
+    ],
+    "refinement_reason": ""
+  }
+}

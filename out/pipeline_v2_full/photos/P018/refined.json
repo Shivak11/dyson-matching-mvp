@@ -1,0 +1,56 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 35,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "A Dyson cleaner head with a transparent roller cover, anti-tangle comb, and red quick-release collar is visible."
+      ],
+      "missing_evidence": [
+        "The main vacuum body, dustbin orientation, handle controls, and cyclone assembly are out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the main handheld body showing the dustbin, handle, and controls."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "Motorbar cleaner heads are shared across Dyson ranges, and the perpendicular dustbin body is out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main body with the CleanCompaktor mechanism is not visible to verify V16 identity."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head alone cannot identify V15 without the in-line body or rear LCD screen."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The canister body and hose are out of frame to verify a Big Ball cylinder vacuum."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The slim motor body and push-button power control are out of frame."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The wet-cleaner body and dual-roller assembly are not visible to establish or rule out the family definitively."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main vacuum body to see the dustbin layout and control interface."
+  }
+}

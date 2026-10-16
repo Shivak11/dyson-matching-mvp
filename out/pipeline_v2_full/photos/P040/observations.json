@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        308,
+        879,
+        735
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "transparent roller head housing with purple and blue soft roller",
+          "box_2d": [
+            677,
+            309,
+            879,
+            733
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "purple wand inserted into gray quick-release swivel joint with red latch button",
+          "box_2d": [
+            0,
+            408,
+            692,
+            544
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "motor unit, dustbin, handle, and battery are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        308,
+        879,
+        735
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "transparent roller head housing with purple and blue soft roller",
+          "box_2d": [
+            677,
+            309,
+            879,
+            733
+          ]
+        },
+        {
+          "feature": "wand_connection",
+          "visible": true,
+          "detail": "purple wand inserted into gray quick-release swivel joint with red latch button",
+          "box_2d": [
+            0,
+            408,
+            692,
+            544
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "motor unit, dustbin, handle, and battery are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

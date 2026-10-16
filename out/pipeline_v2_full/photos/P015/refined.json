@@ -1,0 +1,59 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "In-line handheld vacuum body featuring gold cyclone cones, purple rear filter housing, and a red finger trigger beneath the handle grip."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The V12 Detect Slim uses a top-mounted push-button power switch rather than the visible red handle trigger."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The V8 family features a perpendicular bin and cyclone assembly rather than an in-line motor and filter layout."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "The in-line body layout with gold cyclone cones, purple filter housing, and red finger trigger matches the V15 Detect."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The Big Ball is a canister cylinder vacuum rather than a stick vacuum handheld unit."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The V16 has a different body and handle silhouette with a CleanCompaktor mechanism."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The WashG1 is an upright wet floor cleaner with water tanks and a tall loop handle."
+      }
+    ],
+    "decisive_region": [
+      450,
+      420,
+      1000,
+      976
+    ],
+    "refinement_reason": ""
+  }
+}

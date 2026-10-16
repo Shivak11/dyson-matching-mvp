@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        49,
+        68,
+        965,
+        897
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Cordless handheld vacuum with top cyclone pack, clear dust canister, pistol grip, and bottom battery pack",
+          "box_2d": [
+            49,
+            68,
+            965,
+            897
+          ]
+        },
+        {
+          "feature": "cyclone_system",
+          "visible": true,
+          "detail": "Two-tier radial cyclone assembly with central purple filter knob and red release collar",
+          "box_2d": [
+            67,
+            376,
+            484,
+            636
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "Clear cylindrical dust bin with visible MAX fill line",
+          "box_2d": [
+            417,
+            405,
+            775,
+            604
+          ]
+        },
+        {
+          "feature": "rear_filter",
+          "visible": true,
+          "detail": "Purple cylindrical post-motor exhaust filter unit at the rear of the motor housing",
+          "box_2d": [
+            274,
+            698,
+            622,
+            897
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        49,
+        68,
+        965,
+        897
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Cordless handheld vacuum with top cyclone pack, clear dust canister, pistol grip, and bottom battery pack",
+          "box_2d": [
+            49,
+            68,
+            965,
+            897
+          ]
+        },
+        {
+          "feature": "cyclone_system",
+          "visible": true,
+          "detail": "Two-tier radial cyclone assembly with central purple filter knob and red release collar",
+          "box_2d": [
+            67,
+            376,
+            484,
+            636
+          ]
+        },
+        {
+          "feature": "dust_bin",
+          "visible": true,
+          "detail": "Clear cylindrical dust bin with visible MAX fill line",
+          "box_2d": [
+            417,
+            405,
+            775,
+            604
+          ]
+        },
+        {
+          "feature": "rear_filter",
+          "visible": true,
+          "detail": "Purple cylindrical post-motor exhaust filter unit at the rear of the motor housing",
+          "box_2d": [
+            274,
+            698,
+            622,
+            897
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

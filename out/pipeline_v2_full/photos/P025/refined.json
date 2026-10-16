@@ -1,0 +1,63 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The rear circular display features a red power push button at the top edge, identifying it as a Dyson Gen5detect.",
+        "The grip is a continuous triggerless handle without a trigger switch or guard."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The machine lacks a finger trigger, contradicting the trigger operation of the V15 Detect and V16 Piston Animal.",
+        "The power button is positioned directly on the rear display face rather than on top of the cyclone housing as on the V12 Detect Slim."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The target features a triggerless handle and a display power button, contradicting the trigger-operated handle of the V16 Piston Animal."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The red power button is mounted directly on the rear display face rather than on top of the cyclone housing."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The vacuum uses a push-button power switch on the rear screen and has a triggerless grip, contradicting the trigger operation of the V15 Detect."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The target is a handheld cordless stick vacuum, contradicting the wheeled canister and hose format of the Big Ball."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The target features an in-line bin and a rear LCD display, contradicting the perpendicular bin layout and top filter of the V8 Absolute."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The target is a cyclone stick vacuum, contradicting the twin-tank wet floor washer design of the WashG1."
+      }
+    ],
+    "decisive_region": [
+      85,
+      265,
+      255,
+      385
+    ],
+    "refinement_reason": ""
+  }
+}

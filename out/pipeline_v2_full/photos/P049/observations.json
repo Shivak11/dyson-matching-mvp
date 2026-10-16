@@ -1,0 +1,102 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        112,
+        362,
+        924,
+        634
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "inline cyclone body with blue end cap oriented toward the rear",
+          "box_2d": [
+            112,
+            458,
+            334,
+            525
+          ]
+        },
+        {
+          "feature": "extension_wand",
+          "visible": true,
+          "detail": "purple cylindrical wand",
+          "box_2d": [
+            330,
+            477,
+            646,
+            515
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "floor head with transparent roller cover and central red slider",
+          "box_2d": [
+            784,
+            362,
+            924,
+            634
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        112,
+        362,
+        924,
+        634
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "inline cyclone body with blue end cap oriented toward the rear",
+          "box_2d": [
+            112,
+            458,
+            334,
+            525
+          ]
+        },
+        {
+          "feature": "extension_wand",
+          "visible": true,
+          "detail": "purple cylindrical wand",
+          "box_2d": [
+            330,
+            477,
+            646,
+            515
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "floor head with transparent roller cover and central red slider",
+          "box_2d": [
+            784,
+            362,
+            924,
+            634
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

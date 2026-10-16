@@ -1,0 +1,124 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        42,
+        214,
+        915,
+        664
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Cordless handheld motor unit connected to an orange wand and motorized cleaner head",
+          "box_2d": [
+            42,
+            214,
+            915,
+            664
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "Clear cylindrical bin beneath cyclone assembly with red release latch",
+          "box_2d": [
+            361,
+            336,
+            915,
+            484
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Blue cylindrical rear exhaust filter cover and top center pre-filter knob",
+          "box_2d": [
+            303,
+            214,
+            772,
+            496
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor cleaner head with exposed motorized brush roller",
+          "box_2d": [
+            42,
+            497,
+            200,
+            666
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        42,
+        214,
+        915,
+        664
+      ],
+      "visibility": "whole_machine",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Cordless handheld motor unit connected to an orange wand and motorized cleaner head",
+          "box_2d": [
+            42,
+            214,
+            915,
+            664
+          ]
+        },
+        {
+          "feature": "dustbin",
+          "visible": true,
+          "detail": "Clear cylindrical bin beneath cyclone assembly with red release latch",
+          "box_2d": [
+            361,
+            336,
+            915,
+            484
+          ]
+        },
+        {
+          "feature": "filter",
+          "visible": true,
+          "detail": "Blue cylindrical rear exhaust filter cover and top center pre-filter knob",
+          "box_2d": [
+            303,
+            214,
+            772,
+            496
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Floor cleaner head with exposed motorized brush roller",
+          "box_2d": [
+            42,
+            497,
+            200,
+            666
+          ]
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

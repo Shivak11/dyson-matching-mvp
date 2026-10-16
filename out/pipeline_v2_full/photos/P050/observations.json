@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        344,
+        852,
+        650
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Clear-cased cleaner head with internal roller bar, comb vanes, and red slide control",
+          "box_2d": [
+            584,
+            345,
+            851,
+            650
+          ]
+        },
+        {
+          "feature": "extension_wand",
+          "visible": true,
+          "detail": "Purple cylindrical wand connected via grey collar with red release button",
+          "box_2d": [
+            0,
+            462,
+            468,
+            536
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "Motor, dust bin, and handle are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        344,
+        852,
+        650
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "Clear-cased cleaner head with internal roller bar, comb vanes, and red slide control",
+          "box_2d": [
+            584,
+            345,
+            851,
+            650
+          ]
+        },
+        {
+          "feature": "extension_wand",
+          "visible": true,
+          "detail": "Purple cylindrical wand connected via grey collar with red release button",
+          "box_2d": [
+            0,
+            462,
+            468,
+            536
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "Motor, dust bin, and handle are out of frame above",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

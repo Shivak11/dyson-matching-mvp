@@ -1,0 +1,60 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "In-line transparent dustbin with gold cyclone assembly and purple rear filter housing.",
+        "Body layout and absence of a top push-button power switch match the trigger-operated V15 Detect."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "In-line clear bin, gold multi-cone cyclone assembly, and purple filter housing match the V15 Detect."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Lacks the top red push-button power switch on the cyclone housing characteristic of the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line bin rather than the perpendicular bin layout of the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "Stick vacuum layout contradicts the canister and hose construction of the Big Ball."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Features traditional gold cyclone cones rather than the CleanCompaktor mechanism of the V16."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "Dry cordless stick vacuum architecture contradicts the dual-tank wet cleaner design of the WashG1."
+      }
+    ],
+    "decisive_region": [
+      71,
+      452,
+      330,
+      522
+    ],
+    "refinement_reason": ""
+  }
+}

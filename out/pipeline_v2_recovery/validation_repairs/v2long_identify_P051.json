@@ -1,0 +1,27 @@
+{
+  "job_id": "v2long:identify:P051",
+  "helper_source_sha256": "64cae709ed0eb1330536e6addcc9f354d030d0fe87de2105d3958f3ad3f47bdf",
+  "policy_file": "data/pipeline_v2_alternative_repair_decision.json",
+  "policy_sha256": "f1edb6ea4fc42ded9d837c3e22738d6ea7586a2cd862972e6cebaf7070f5ce45",
+  "original_response_line": 2,
+  "original_record_sha256": "244f69291e5dfc7c07782c9d9b72af823b49155f7bd0dad27e796818b687211f",
+  "validation_failure_sha256": "2e6613aead0c6aa426471d7b29c359924e2b37138ef8c0d34d54b18b818d461e",
+  "original_provider_response_sha256": "87453a800d0ddc7d1a42b2fc362a776c1bf6185838ec93afa17185a710844702",
+  "request_sha256": "6907db7f38c4d9d8966edce115c2bb48e9cf2595189322c128686b635fed79c6",
+  "config_sha256": "1b2fe6808302d9ca448cbde8be6e81ba80049528f75ea88edb4d03d6ab82622b",
+  "normalisation_policy": "Remove only known non-catalogue reference IDs outside the supplied candidates from top_two in not_sure answers with null product. Keep remaining order, preserve substantive answer fields and retain removed IDs as unverified alternatives.",
+  "context_sha256": {
+    "out/pipeline_v2_full/photos/P051/observations.json": "bba1bff18fa572bee63cc96b58e17e3be8f93be0f50e85ec780388d4c2a956bc",
+    "out/pipeline_v2_full/photos/P051/prepared.json": "621a0174f09e118e333fcf26b8730879d42d6e8e036c22685f723655e6987a20"
+  },
+  "removed_ids": {
+    "o1": [
+      "dyson_gen5detect"
+    ]
+  },
+  "normalised_result_sha256": "a2f5733f7cea4ab4251feed3d51e1e3437600ce9670324c770017de1a536fe2a",
+  "paid_requests": 0,
+  "additional_cost_usd": 0,
+  "recovery_record_sha256": "cf1612da43fdbdf2fb95897533b2d3cee9a987f8e581590f3272ddf956616f4c",
+  "recorded_at_utc": "2026-10-16T07:59:59Z"
+}

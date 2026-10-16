@@ -1,0 +1,48 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The rear circular display features a red power push button at the top edge, identifying it as a Dyson Gen5detect.",
+        "The grip is a continuous triggerless handle without a trigger switch or trigger guard."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "The vacuum lacks a handle trigger switch, contradicting the trigger-operated V15 Detect.",
+        "The power button is positioned above the rear LCD rather than on top of the motor housing as on the V12 Detect Slim."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The target features a triggerless handle and standard roller head, contradicting the trigger handle and dual conical roller head of the V16 Piston Animal."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The power button is located directly above the rear LCD screen rather than mounted on top of the main motor housing."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The target uses a push-button power switch above the rear LCD and has a triggerless grip, contradicting the trigger operation of the V15 Detect."
+      }
+    ],
+    "decisive_region": [
+      85,
+      265,
+      255,
+      385
+    ],
+    "refinement_reason": ""
+  }
+}

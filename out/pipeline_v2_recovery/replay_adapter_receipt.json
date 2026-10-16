@@ -1,0 +1,7 @@
+{
+  "adapter_source_sha256": "3a9158e7acd5b12037da92baa707f307a96f688df86fecfec140d27c3a40eecb",
+  "config_sha256": "1b2fe6808302d9ca448cbde8be6e81ba80049528f75ea88edb4d03d6ab82622b",
+  "policy": "Replay original provider JSON key order only after structural equality; retain offline-normalised results as saved.",
+  "model_settings_unchanged": true,
+  "paid_replays": false
+}

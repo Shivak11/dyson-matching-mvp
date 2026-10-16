@@ -1,0 +1,114 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        280,
+        1000,
+        715
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "tank",
+          "visible": true,
+          "detail": "transparent cylindrical water container viewed from above",
+          "box_2d": [
+            254,
+            280,
+            998,
+            714
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular central display face showing 'dyson washG1'",
+          "box_2d": [
+            448,
+            396,
+            835,
+            600
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red release catch positioned above the tank",
+          "box_2d": [
+            58,
+            451,
+            212,
+            555
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": false,
+          "detail": "cleaning head and rollers out of frame below",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson washG1"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        280,
+        1000,
+        715
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "tank",
+          "visible": true,
+          "detail": "transparent cylindrical water container viewed from above",
+          "box_2d": [
+            254,
+            280,
+            998,
+            714
+          ]
+        },
+        {
+          "feature": "display",
+          "visible": true,
+          "detail": "circular central display face showing 'dyson washG1'",
+          "box_2d": [
+            448,
+            396,
+            835,
+            600
+          ]
+        },
+        {
+          "feature": "controls_release",
+          "visible": true,
+          "detail": "red release catch positioned above the tank",
+          "box_2d": [
+            58,
+            451,
+            212,
+            555
+          ]
+        },
+        {
+          "feature": "cleaner_head",
+          "visible": false,
+          "detail": "cleaning head and rollers out of frame below",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson washG1"
+    }
+  ]
+}

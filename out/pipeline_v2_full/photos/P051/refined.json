@@ -1,0 +1,64 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 40,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Translucent teal pleated HEPA filter marked WASHABLE HEPA FILTER mounted above a grey cylindrical casing with dyson branding.",
+        "Purple radial cyclone assembly positioned directly beneath the grey motor housing."
+      ],
+      "missing_evidence": [
+        "The lower dustbin, bin compression mechanism, handle, power controls, and rear display are out of frame below."
+      ],
+      "contradictions": [
+        "The in-line cylindrical filter and motor housing positioned coaxially above the cyclones contradict the perpendicular bin layout of the V8, the wheeled canister of the Big Ball, and the dual-roller tank structure of the WashG1."
+      ],
+      "retake": "A photo showing the complete machine body including the dustbin, handle, and rear display."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The coaxial in-line arrangement of the HEPA filter and motor housing above the cyclones contradicts the perpendicular bin and top pre-filter layout of the V8."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The handheld in-line stick vacuum body contradicts the separate wheeled spherical canister architecture of the Big Ball."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The radial cyclone assembly and upper cylindrical filter contradict the dedicated wet-cleaning dual-roller and clean/dirty water tank architecture of the WashG1."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "Distinguishing features such as the separate on/off push button, narrower body diameter, and bin assembly are out of frame."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line cyclone and filter layout is consistent, but distinguishing features including the handle trigger, dustbin, and rear display are out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The upper in-line cylindrical filter and cyclone body are consistent, but distinguishing features such as the CleanCompaktor mechanism and handle controls are out of frame."
+      }
+    ],
+    "decisive_region": [
+      18,
+      312,
+      480,
+      636
+    ],
+    "refinement_reason": "Inspect the full dustbin mechanism, handle controls, and rear display to distinguish between the in-line Dyson cordless models."
+  }
+}

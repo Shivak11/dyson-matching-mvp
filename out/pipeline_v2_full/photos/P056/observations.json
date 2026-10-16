@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        134,
+        577,
+        906
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "brushroll",
+          "visible": true,
+          "detail": "front soft roller with red and black spiral pattern behind clear guard",
+          "box_2d": [
+            421,
+            159,
+            577,
+            881
+          ]
+        },
+        {
+          "feature": "headlights",
+          "visible": true,
+          "detail": "five illuminated LED headlights across front housing",
+          "box_2d": [
+            363,
+            389,
+            414,
+            650
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "wand and main vacuum body extend out of frame at top",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "duoclean POWERFINS"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        134,
+        577,
+        906
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "brushroll",
+          "visible": true,
+          "detail": "front soft roller with red and black spiral pattern behind clear guard",
+          "box_2d": [
+            421,
+            159,
+            577,
+            881
+          ]
+        },
+        {
+          "feature": "headlights",
+          "visible": true,
+          "detail": "five illuminated LED headlights across front housing",
+          "box_2d": [
+            363,
+            389,
+            414,
+            650
+          ]
+        },
+        {
+          "feature": "body_layout",
+          "visible": false,
+          "detail": "wand and main vacuum body extend out of frame at top",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "duoclean POWERFINS"
+    }
+  ]
+}

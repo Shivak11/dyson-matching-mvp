@@ -1,0 +1,41 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 40,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v8_absolute"
+      ],
+      "evidence": [
+        "Dyson cleaner head with transparent roller cover, anti-tangle comb, and red release collar is visible."
+      ],
+      "missing_evidence": [
+        "Main vacuum body, dustbin layout, handle controls, and cyclone assembly are out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the complete handheld body showing the dustbin and handle."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "Cleaner heads are shared across models, and the characteristic perpendicular bin body is out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main body and compression bin are not visible to verify V16 features."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head alone does not confirm V15 without the in-line body or rear display."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main body to see the dustbin and cyclone layout."
+  }
+}

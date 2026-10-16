@@ -1,0 +1,41 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 20,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "A Dyson cleaner head with hair removal vanes and a purple extension wand are visible."
+      ],
+      "missing_evidence": [
+        "The main handheld body, dust bin, handle, power controls, and display are out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Capture a photo showing the vacuum's main body, dust bin, and handle controls."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The perpendicular bin and cyclone body are out of frame, preventing verification."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line dust bin, trigger handle, and rear display are out of frame."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The slim body and push-button power control are out of frame."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "The main vacuum body and control layout must be inspected to distinguish Dyson families."
+  }
+}

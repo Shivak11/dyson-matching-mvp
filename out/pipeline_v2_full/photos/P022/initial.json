@@ -1,0 +1,48 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_in_catalogue",
+      "product": null,
+      "confidence": 95,
+      "top_two": [
+        "dyson_v12_detect_slim",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "Rear circular display has an integrated red power button above the screen.",
+        "Handle comfort pad is visible below the cyan filter housing, positively identifying the machine as Dyson Gen5detect."
+      ],
+      "missing_evidence": [],
+      "contradictions": [
+        "V12 Detect Slim features a red power button on the cyclone body rather than on the rear display face.",
+        "V15 Detect uses trigger operation with no red power button on the rear display."
+      ],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "Target possesses the Gen5detect rear display power button and handle comfort pad rather than V16 features."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "V12 Detect Slim positions its red power button on the cyclone body rather than directly above the rear LCD."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "V15 Detect relies on a handle trigger and lacks a red power button on the rear display face."
+      }
+    ],
+    "decisive_region": [
+      209,
+      401,
+      629,
+      668
+    ],
+    "refinement_reason": ""
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine features the distinctive All Floor Cones Sense cleaner head with dual conical rollers and the in-line body silhouette with a cyan top ring."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "Matches the dual conical brush roll cleaner head and overall in-line body design shown in the manufacturer references."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Possesses a dual-cone All Floor cleaner head and body styling distinct from the V12 Detect Slim references."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line dustbin and cyclone assembly rather than the perpendicular bin configuration of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      829,
+      151,
+      990,
+      296
+    ],
+    "refinement_reason": ""
+  }
+}

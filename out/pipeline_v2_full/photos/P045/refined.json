@@ -1,0 +1,57 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 40,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Dyson branding is visible on the clear cylindrical cleaner head with a purple brush roller and red bristles.",
+        "A red quick-release button is present on the dark grey connector neck."
+      ],
+      "missing_evidence": [
+        "The main vacuum body showing the dustbin orientation, cyclone assembly, and handle controls is completely out of frame."
+      ],
+      "contradictions": [],
+      "retake": "Take a photo showing the complete vacuum including the cyclone assembly, dustbin, and handle."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The cleaner head resembles the direct-drive head bundled with V8 models, but the main body is out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main vacuum body is not visible, preventing verification against the V16 body design."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The in-line bin and rear display characteristic of the V15 cannot be assessed because the handheld body is missing."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The canister body is out of frame, leaving insufficient evidence to confirm or rule out the Big Ball."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The slim body silhouette and power button are out of frame, preventing verification."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main body and tank structure are out of frame, leaving insufficient evidence."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Inspect the main body and cyclone layout to distinguish the model family."
+  }
+}

@@ -1,0 +1,4713 @@
+{
+  "labelled_photo_count": 58,
+  "single_photo_count": 57,
+  "multi_photo_count": 1,
+  "ignored_image_ids": [],
+  "detection_manifest_supplied": true,
+  "groups": [
+    {
+      "model": "flash37high_v2",
+      "variant": "evidence_final",
+      "metrics": {
+        "single_photo_count": 57,
+        "correct_total": 0,
+        "correct_catalogue_matches": 0,
+        "correct_non_catalogue_rejections": 0,
+        "catalogue_photo_count": 38,
+        "non_catalogue_photo_count": 19,
+        "accepted_count": 0,
+        "wrong_accepted_count": 0,
+        "confidently_wrong_count": 0,
+        "confidently_wrong_accepted_count": 0,
+        "confidently_wrong_rejection_count": 0,
+        "false_catalogue_rejection_count": 0,
+        "not_in_catalogue_count": 0,
+        "not_sure_count": 57,
+        "resolved_count": 0,
+        "accuracy": 0.0,
+        "accepted_precision": null,
+        "acceptance_coverage": 0.0,
+        "resolved_coverage": 0.0,
+        "label_confusion": [
+          {
+            "source_label": "NONCAT_dyson_gen5detect",
+            "prediction": "not_sure",
+            "count": 8
+          },
+          {
+            "source_label": "NONCAT_dyson_v11",
+            "prediction": "not_sure",
+            "count": 7
+          },
+          {
+            "source_label": "NONCAT_shark_stratos",
+            "prediction": "not_sure",
+            "count": 4
+          },
+          {
+            "source_label": "dyson_big_ball",
+            "prediction": "not_sure",
+            "count": 6
+          },
+          {
+            "source_label": "dyson_v12_detect_slim",
+            "prediction": "not_sure",
+            "count": 6
+          },
+          {
+            "source_label": "dyson_v15_detect",
+            "prediction": "not_sure",
+            "count": 6
+          },
+          {
+            "source_label": "dyson_v16_piston_animal",
+            "prediction": "not_sure",
+            "count": 7
+          },
+          {
+            "source_label": "dyson_v8_absolute",
+            "prediction": "not_sure",
+            "count": 6
+          },
+          {
+            "source_label": "dyson_wash_g1",
+            "prediction": "not_sure",
+            "count": 7
+          }
+        ]
+      },
+      "saved_photo_count": 1,
+      "missing_result_photo_count": 57,
+      "missing_result_image_ids": [
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012",
+        "P013",
+        "P014",
+        "P015",
+        "P016",
+        "P017",
+        "P018",
+        "P019",
+        "P020",
+        "P021",
+        "P022",
+        "P023",
+        "P024",
+        "P025",
+        "P026",
+        "P027",
+        "P028",
+        "P029",
+        "P030",
+        "P031",
+        "P032",
+        "P033",
+        "P034",
+        "P035",
+        "P036",
+        "P037",
+        "P038",
+        "P039",
+        "P040",
+        "P041",
+        "P042",
+        "P043",
+        "P045",
+        "P046",
+        "P047",
+        "P048",
+        "P049",
+        "P050",
+        "P051",
+        "P052",
+        "P053",
+        "P054",
+        "P055",
+        "P056",
+        "P057",
+        "P058",
+        "P059"
+      ],
+      "complete_photo_count": 1,
+      "missing_instance_result_count": 0,
+      "missing_instance_results": [],
+      "missing_instance_result_ids": [],
+      "missing_detection_record_photo_count": 57,
+      "subset_warning": "Incomplete model/variant coverage. Photos with missing results or detection records remain not sure; observed-subset accuracy is not a full-set comparison.",
+      "observed_single_photo_count": 1,
+      "observed_subset_accuracy": 0.0,
+      "per_photo": [
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [
+            "dyson_v8_absolute",
+            "dyson_v12_detect_slim"
+          ],
+          "evidence": [
+            "Perpendicular clear bin below the cyclone assembly with a top red release lever and rear filter cap matches the Dyson V8 architecture."
+          ],
+          "missing_evidence": [
+            "Detected objects did not give one consistent resolved identity.",
+            "Evidence strength below the frozen automatic-match threshold."
+          ],
+          "contradictions": [],
+          "retake": "Photograph the motor, dust bin, controls and any model label clearly.",
+          "image_id": "P001",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": true,
+          "result_complete": true,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P002",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P003",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P004",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P005",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P006",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P007",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P008",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P009",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P010",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P011",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P012",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P013",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P014",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P015",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P016",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P017",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P018",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P019",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P020",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P021",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P022",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P023",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P024",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P025",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P026",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P027",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P028",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P029",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P030",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P031",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P032",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P033",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P034",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P035",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P036",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P037",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P038",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P039",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P040",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P041",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P042",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P043",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P045",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P046",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P047",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P048",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P049",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P050",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P051",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P052",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P053",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P054",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P055",
+          "source_label": "NONCAT_shark_stratos",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P056",
+          "source_label": "NONCAT_shark_stratos",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P057",
+          "source_label": "NONCAT_shark_stratos",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P058",
+          "source_label": "NONCAT_shark_stratos",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        }
+      ],
+      "wrong_answers": [],
+      "multi_photo_results": [
+        {
+          "image_id": "P059",
+          "expected_identity_set": [
+            "dyson_v12_detect_slim",
+            "dyson_v15_detect"
+          ],
+          "predicted_identity_set": [],
+          "identity_set_exact": false,
+          "correct_resolved_identity_set": false,
+          "unresolved": true,
+          "outside_instance_count": 0,
+          "result_complete": false,
+          "missing_instance_result_ids": [],
+          "identity_to_box_accuracy": null,
+          "scope": "Photo identity set only; the source does not assign model identity to a box."
+        }
+      ],
+      "retrieval": {
+        "catalogue_single_photo_count": 38,
+        "recalled_catalogue_single_photos": 1,
+        "catalogue_single_recall": 0.02631578947368421,
+        "catalogue_single_top_one_recall": 0.02631578947368421,
+        "per_photo": [
+          {
+            "image_id": "P001",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [
+              "dyson_v12_detect_slim",
+              "dyson_v15_detect",
+              "dyson_v8_absolute"
+            ],
+            "retrieved_expected_count": 1,
+            "all_expected_retrieved": true,
+            "all_expected_in_top_one_union": true,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P002",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P003",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P004",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P005",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P006",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P007",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P008",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P009",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P010",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P011",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P012",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P013",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P014",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P015",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P016",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P017",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P018",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P019",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P020",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P021",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P022",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P023",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P024",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P025",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P026",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P027",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P028",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P029",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P030",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P031",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P032",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P033",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P034",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P035",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P036",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P037",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P038",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P059",
+            "expected": [
+              "dyson_v12_detect_slim",
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_multi"
+          }
+        ],
+        "scope": "Photo-level union of retrieved candidates. Multi-photo identity-to-box retrieval is unscored."
+      },
+      "detection": {
+        "explicit_detection_miss_photo_count": 0,
+        "missing_result_photo_count": 57,
+        "instance_count_deficit": 58,
+        "per_photo": [
+          {
+            "image_id": "P001",
+            "source_identity_count": 1,
+            "detected_instance_count": 1,
+            "result_missing": false,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": true,
+            "instance_count_deficit": 0
+          },
+          {
+            "image_id": "P002",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P003",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P004",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P005",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P006",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P007",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P008",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P009",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P010",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P011",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P012",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P013",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P014",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P015",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P016",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P017",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P018",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P019",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P020",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P021",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P022",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P023",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P024",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P025",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P026",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P027",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P028",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P029",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P030",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P031",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P032",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P033",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P034",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P035",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P036",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P037",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P038",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P039",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P040",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P041",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P042",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P043",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P045",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P046",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P047",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P048",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P049",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P050",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P051",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P052",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P053",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P054",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P055",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P056",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P057",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P058",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P059",
+            "source_identity_count": 2,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 2
+          }
+        ],
+        "scope": "Count deficit against source identities, using the detection record when supplied. Missing crop results are reported separately. Correct localisation and duplicate detections require separate box review."
+      },
+      "verification": {
+        "true_accept": 1,
+        "false_accept": 0,
+        "true_reject": 5,
+        "false_reject": 0,
+        "positive_abstention": 0,
+        "negative_abstention": 0,
+        "evaluated_pair_count": 6,
+        "positive_pair_count": 1,
+        "negative_pair_count": 5,
+        "positive_resolved_coverage": 1.0,
+        "negative_resolved_coverage": 1.0,
+        "false_accept_rate_all_negative_pairs": 0.0,
+        "false_reject_rate_all_positive_pairs": 0.0,
+        "false_accept_rate_resolved_negative_pairs": 0.0,
+        "false_reject_rate_resolved_positive_pairs": 0.0,
+        "pairs": [
+          {
+            "image_id": "P001",
+            "expected_product": "dyson_big_ball",
+            "source_positive": false,
+            "outcome": "contradicted",
+            "checked_instance_count": 1,
+            "result_instance_count": 1,
+            "detected_instance_count": 1,
+            "complete_instance_coverage": true
+          },
+          {
+            "image_id": "P001",
+            "expected_product": "dyson_v12_detect_slim",
+            "source_positive": false,
+            "outcome": "contradicted",
+            "checked_instance_count": 1,
+            "result_instance_count": 1,
+            "detected_instance_count": 1,
+            "complete_instance_coverage": true
+          },
+          {
+            "image_id": "P001",
+            "expected_product": "dyson_v15_detect",
+            "source_positive": false,
+            "outcome": "contradicted",
+            "checked_instance_count": 1,
+            "result_instance_count": 1,
+            "detected_instance_count": 1,
+            "complete_instance_coverage": true
+          },
+          {
+            "image_id": "P001",
+            "expected_product": "dyson_v16_piston_animal",
+            "source_positive": false,
+            "outcome": "contradicted",
+            "checked_instance_count": 1,
+            "result_instance_count": 1,
+            "detected_instance_count": 1,
+            "complete_instance_coverage": true
+          },
+          {
+            "image_id": "P001",
+            "expected_product": "dyson_v8_absolute",
+            "source_positive": true,
+            "outcome": "confirmed",
+            "checked_instance_count": 1,
+            "result_instance_count": 1,
+            "detected_instance_count": 1,
+            "complete_instance_coverage": true
+          },
+          {
+            "image_id": "P001",
+            "expected_product": "dyson_wash_g1",
+            "source_positive": false,
+            "outcome": "contradicted",
+            "checked_instance_count": 1,
+            "result_instance_count": 1,
+            "detected_instance_count": 1,
+            "complete_instance_coverage": true
+          }
+        ],
+        "excluded_image_ids": [
+          "P059"
+        ],
+        "excluded_photo_count": 1,
+        "exclusion_reason": "Photos with multiple detected or source-labelled products lack source-backed identity for every object. Candidate verification excludes these photos, including P059.",
+        "scope": "Only supplied, actually checked candidate-photo pairs on single-object photos. Unchecked candidates are excluded; incomplete instance coverage cannot establish contradiction."
+      }
+    },
+    {
+      "model": "flash37high_v2",
+      "variant": "evidence_initial",
+      "metrics": {
+        "single_photo_count": 57,
+        "correct_total": 0,
+        "correct_catalogue_matches": 0,
+        "correct_non_catalogue_rejections": 0,
+        "catalogue_photo_count": 38,
+        "non_catalogue_photo_count": 19,
+        "accepted_count": 0,
+        "wrong_accepted_count": 0,
+        "confidently_wrong_count": 0,
+        "confidently_wrong_accepted_count": 0,
+        "confidently_wrong_rejection_count": 0,
+        "false_catalogue_rejection_count": 0,
+        "not_in_catalogue_count": 0,
+        "not_sure_count": 57,
+        "resolved_count": 0,
+        "accuracy": 0.0,
+        "accepted_precision": null,
+        "acceptance_coverage": 0.0,
+        "resolved_coverage": 0.0,
+        "label_confusion": [
+          {
+            "source_label": "NONCAT_dyson_gen5detect",
+            "prediction": "not_sure",
+            "count": 8
+          },
+          {
+            "source_label": "NONCAT_dyson_v11",
+            "prediction": "not_sure",
+            "count": 7
+          },
+          {
+            "source_label": "NONCAT_shark_stratos",
+            "prediction": "not_sure",
+            "count": 4
+          },
+          {
+            "source_label": "dyson_big_ball",
+            "prediction": "not_sure",
+            "count": 6
+          },
+          {
+            "source_label": "dyson_v12_detect_slim",
+            "prediction": "not_sure",
+            "count": 6
+          },
+          {
+            "source_label": "dyson_v15_detect",
+            "prediction": "not_sure",
+            "count": 6
+          },
+          {
+            "source_label": "dyson_v16_piston_animal",
+            "prediction": "not_sure",
+            "count": 7
+          },
+          {
+            "source_label": "dyson_v8_absolute",
+            "prediction": "not_sure",
+            "count": 6
+          },
+          {
+            "source_label": "dyson_wash_g1",
+            "prediction": "not_sure",
+            "count": 7
+          }
+        ]
+      },
+      "saved_photo_count": 1,
+      "missing_result_photo_count": 57,
+      "missing_result_image_ids": [
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012",
+        "P013",
+        "P014",
+        "P015",
+        "P016",
+        "P017",
+        "P018",
+        "P019",
+        "P020",
+        "P021",
+        "P022",
+        "P023",
+        "P024",
+        "P025",
+        "P026",
+        "P027",
+        "P028",
+        "P029",
+        "P030",
+        "P031",
+        "P032",
+        "P033",
+        "P034",
+        "P035",
+        "P036",
+        "P037",
+        "P038",
+        "P039",
+        "P040",
+        "P041",
+        "P042",
+        "P043",
+        "P045",
+        "P046",
+        "P047",
+        "P048",
+        "P049",
+        "P050",
+        "P051",
+        "P052",
+        "P053",
+        "P054",
+        "P055",
+        "P056",
+        "P057",
+        "P058",
+        "P059"
+      ],
+      "complete_photo_count": 1,
+      "missing_instance_result_count": 0,
+      "missing_instance_results": [],
+      "missing_instance_result_ids": [],
+      "missing_detection_record_photo_count": 57,
+      "subset_warning": "Incomplete model/variant coverage. Photos with missing results or detection records remain not sure; observed-subset accuracy is not a full-set comparison.",
+      "observed_single_photo_count": 1,
+      "observed_subset_accuracy": 0.0,
+      "per_photo": [
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [
+            "dyson_v8_absolute",
+            "dyson_v15_detect"
+          ],
+          "evidence": [
+            "The machine shows a perpendicular bin layout beneath the cyclone assembly with a top red release lever and rear post-motor filter matching the Dyson V8 architecture."
+          ],
+          "missing_evidence": [
+            "Detected objects did not give one consistent resolved identity.",
+            "Evidence strength below the frozen automatic-match threshold."
+          ],
+          "contradictions": [],
+          "retake": "Photograph the motor, dust bin, controls and any model label clearly.",
+          "image_id": "P001",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": true,
+          "result_complete": true,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P002",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P003",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P004",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P005",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P006",
+          "source_label": "dyson_v8_absolute",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P007",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P008",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P009",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P010",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P011",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P012",
+          "source_label": "dyson_v12_detect_slim",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P013",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P014",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P015",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P016",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P017",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P018",
+          "source_label": "dyson_v15_detect",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P019",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P020",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P021",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P022",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P023",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P024",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P025",
+          "source_label": "dyson_v16_piston_animal",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P026",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P027",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P028",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P029",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P030",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P031",
+          "source_label": "dyson_big_ball",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P032",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P033",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P034",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P035",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P036",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P037",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P038",
+          "source_label": "dyson_wash_g1",
+          "in_catalogue": true,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P039",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P040",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P041",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P042",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P043",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P045",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P046",
+          "source_label": "NONCAT_dyson_v11",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P047",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P048",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P049",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P050",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P051",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P052",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P053",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P054",
+          "source_label": "NONCAT_dyson_gen5detect",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P055",
+          "source_label": "NONCAT_shark_stratos",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P056",
+          "source_label": "NONCAT_shark_stratos",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P057",
+          "source_label": "NONCAT_shark_stratos",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        },
+        {
+          "status": "not_sure",
+          "product": null,
+          "confidence": 0,
+          "top_two": [],
+          "evidence": [],
+          "missing_evidence": [
+            "No pipeline result was saved for this photo."
+          ],
+          "contradictions": [],
+          "retake": null,
+          "image_id": "P058",
+          "source_label": "NONCAT_shark_stratos",
+          "in_catalogue": false,
+          "correct": false,
+          "result_present": false,
+          "result_complete": false,
+          "missing_instance_result_ids": []
+        }
+      ],
+      "wrong_answers": [],
+      "multi_photo_results": [
+        {
+          "image_id": "P059",
+          "expected_identity_set": [
+            "dyson_v12_detect_slim",
+            "dyson_v15_detect"
+          ],
+          "predicted_identity_set": [],
+          "identity_set_exact": false,
+          "correct_resolved_identity_set": false,
+          "unresolved": true,
+          "outside_instance_count": 0,
+          "result_complete": false,
+          "missing_instance_result_ids": [],
+          "identity_to_box_accuracy": null,
+          "scope": "Photo identity set only; the source does not assign model identity to a box."
+        }
+      ],
+      "retrieval": {
+        "catalogue_single_photo_count": 38,
+        "recalled_catalogue_single_photos": 1,
+        "catalogue_single_recall": 0.02631578947368421,
+        "catalogue_single_top_one_recall": 0.02631578947368421,
+        "per_photo": [
+          {
+            "image_id": "P001",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [
+              "dyson_v12_detect_slim",
+              "dyson_v15_detect",
+              "dyson_v8_absolute"
+            ],
+            "retrieved_expected_count": 1,
+            "all_expected_retrieved": true,
+            "all_expected_in_top_one_union": true,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P002",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P003",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P004",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P005",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P006",
+            "expected": [
+              "dyson_v8_absolute"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P007",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P008",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P009",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P010",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P011",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P012",
+            "expected": [
+              "dyson_v12_detect_slim"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P013",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P014",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P015",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P016",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P017",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P018",
+            "expected": [
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P019",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P020",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P021",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P022",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P023",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P024",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P025",
+            "expected": [
+              "dyson_v16_piston_animal"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P026",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P027",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P028",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P029",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P030",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P031",
+            "expected": [
+              "dyson_big_ball"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P032",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P033",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P034",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P035",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P036",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P037",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P038",
+            "expected": [
+              "dyson_wash_g1"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_single"
+          },
+          {
+            "image_id": "P059",
+            "expected": [
+              "dyson_v12_detect_slim",
+              "dyson_v15_detect"
+            ],
+            "retrieved": [],
+            "retrieved_expected_count": 0,
+            "all_expected_retrieved": false,
+            "all_expected_in_top_one_union": false,
+            "evaluation_role": "labelled_multi"
+          }
+        ],
+        "scope": "Photo-level union of retrieved candidates. Multi-photo identity-to-box retrieval is unscored."
+      },
+      "detection": {
+        "explicit_detection_miss_photo_count": 0,
+        "missing_result_photo_count": 57,
+        "instance_count_deficit": 58,
+        "per_photo": [
+          {
+            "image_id": "P001",
+            "source_identity_count": 1,
+            "detected_instance_count": 1,
+            "result_missing": false,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": true,
+            "instance_count_deficit": 0
+          },
+          {
+            "image_id": "P002",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P003",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P004",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P005",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P006",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P007",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P008",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P009",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P010",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P011",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P012",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P013",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P014",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P015",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P016",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P017",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P018",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P019",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P020",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P021",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P022",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P023",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P024",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P025",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P026",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P027",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P028",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P029",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P030",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P031",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P032",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P033",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P034",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P035",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P036",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P037",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P038",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P039",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P040",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P041",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P042",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P043",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P045",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P046",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P047",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P048",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P049",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P050",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P051",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P052",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P053",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P054",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P055",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P056",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P057",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P058",
+            "source_identity_count": 1,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 1
+          },
+          {
+            "image_id": "P059",
+            "source_identity_count": 2,
+            "detected_instance_count": 0,
+            "result_missing": true,
+            "explicit_detection_miss": false,
+            "missing_instance_result_ids": [],
+            "detection_record_present": false,
+            "instance_count_deficit": 2
+          }
+        ],
+        "scope": "Count deficit against source identities, using the detection record when supplied. Missing crop results are reported separately. Correct localisation and duplicate detections require separate box review."
+      },
+      "verification": {
+        "true_accept": 1,
+        "false_accept": 0,
+        "true_reject": 2,
+        "false_reject": 0,
+        "positive_abstention": 0,
+        "negative_abstention": 0,
+        "evaluated_pair_count": 3,
+        "positive_pair_count": 1,
+        "negative_pair_count": 2,
+        "positive_resolved_coverage": 1.0,
+        "negative_resolved_coverage": 1.0,
+        "false_accept_rate_all_negative_pairs": 0.0,
+        "false_reject_rate_all_positive_pairs": 0.0,
+        "false_accept_rate_resolved_negative_pairs": 0.0,
+        "false_reject_rate_resolved_positive_pairs": 0.0,
+        "pairs": [
+          {
+            "image_id": "P001",
+            "expected_product": "dyson_v12_detect_slim",
+            "source_positive": false,
+            "outcome": "contradicted",
+            "checked_instance_count": 1,
+            "result_instance_count": 1,
+            "detected_instance_count": 1,
+            "complete_instance_coverage": true
+          },
+          {
+            "image_id": "P001",
+            "expected_product": "dyson_v15_detect",
+            "source_positive": false,
+            "outcome": "contradicted",
+            "checked_instance_count": 1,
+            "result_instance_count": 1,
+            "detected_instance_count": 1,
+            "complete_instance_coverage": true
+          },
+          {
+            "image_id": "P001",
+            "expected_product": "dyson_v8_absolute",
+            "source_positive": true,
+            "outcome": "confirmed",
+            "checked_instance_count": 1,
+            "result_instance_count": 1,
+            "detected_instance_count": 1,
+            "complete_instance_coverage": true
+          }
+        ],
+        "excluded_image_ids": [
+          "P059"
+        ],
+        "excluded_photo_count": 1,
+        "exclusion_reason": "Photos with multiple detected or source-labelled products lack source-backed identity for every object. Candidate verification excludes these photos, including P059.",
+        "scope": "Only supplied, actually checked candidate-photo pairs on single-object photos. Unchecked candidates are excluded; incomplete instance coverage cannot establish contradiction."
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v15_detect",
+        "similarity": 0.8634013010591575,
+        "references": [
+          {
+            "reference": "dyson_v15_detect_2",
+            "similarity": 0.8634013010591575
+          },
+          {
+            "reference": "dyson_v15_detect_1",
+            "similarity": 0.8035619803872973
+          },
+          {
+            "reference": "dyson_v15_detect_0",
+            "similarity": 0.7924689815787609
+          }
+        ]
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.8562479389689722,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.8562479389689722
+          },
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.8006918109660284
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.7975581260180913
+          }
+        ]
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.8078584688886338,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.8078584688886338
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.7828002436795818
+          },
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.7549176795421232
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P011/o1_body.jpg",
+      "sha256": "4be899b6d906910550b6736cc7579981feb342f011c820cb0b074fbe236bc520",
+      "pixel_box": [
+        840,
+        38,
+        2374,
+        1684
+      ],
+      "width": 1431,
+      "height": 1536
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v15_detect",
+      "dyson_v12_detect_slim",
+      "dyson_v16_piston_animal"
+    ]
+  }
+}

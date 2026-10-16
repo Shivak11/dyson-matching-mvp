@@ -1,0 +1,56 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "not_sure",
+      "product": null,
+      "confidence": 40,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "Dyson illuminated Fluffy cleaner head emitting green light onto the floor with a red quick-release catch."
+      ],
+      "missing_evidence": [
+        "Main vacuum body showing motor, dustbin, LCD display, and trigger or push-button controls."
+      ],
+      "contradictions": [],
+      "retake": "Photograph the main vacuum body, handle, and controls."
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "insufficient_evidence",
+        "evidence": "The illuminated cleaner head is compatible with V12 Detect Slim, but the slim body and push-button controls are out of frame."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "insufficient_evidence",
+        "evidence": "Although typically pictured with conical rollers, V16 can support Fluffy Optic heads and the body is out of frame."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "insufficient_evidence",
+        "evidence": "The illuminated Fluffy cleaner head is used by V15 Detect, but the main body and trigger handle are not visible."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "insufficient_evidence",
+        "evidence": "The canister body, hose, and wand are out of frame, leaving insufficient evidence from the cleaner head alone."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "insufficient_evidence",
+        "evidence": "The main body and bin assembly are out of frame, so V8 cannot be confirmed or excluded."
+      },
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "contradicted",
+        "evidence": "The visible illuminated single-roller head contradicts the integrated dual-roller wet cleaning head of the WashG1."
+      }
+    ],
+    "decisive_region": null,
+    "refinement_reason": "Photograph the main vacuum body and handle to determine the model family."
+  }
+}

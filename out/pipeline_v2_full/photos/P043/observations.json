@@ -1,0 +1,92 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        235,
+        893,
+        749
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "transparent brush head casing housing a purple roller with spiral bristles and hair removal vanes",
+          "box_2d": [
+            284,
+            235,
+            893,
+            672
+          ]
+        },
+        {
+          "feature": "connector_latch",
+          "visible": true,
+          "detail": "red push-button release catch on the grey neck connector",
+          "box_2d": [
+            174,
+            601,
+            278,
+            639
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "main body, motor, and dust canister are out of frame above the wand",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o1",
+      "role": "partial_machine",
+      "parent_id": null,
+      "box_2d": [
+        0,
+        235,
+        893,
+        749
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "cleaner_head",
+          "visible": true,
+          "detail": "transparent brush head casing housing a purple roller with spiral bristles and hair removal vanes",
+          "box_2d": [
+            284,
+            235,
+            893,
+            672
+          ]
+        },
+        {
+          "feature": "connector_latch",
+          "visible": true,
+          "detail": "red push-button release catch on the grey neck connector",
+          "box_2d": [
+            174,
+            601,
+            278,
+            639
+          ]
+        },
+        {
+          "feature": "main_body",
+          "visible": false,
+          "detail": "main body, motor, and dust canister are out of frame above the wand",
+          "box_2d": null
+        }
+      ],
+      "readable_identifier": "dyson"
+    }
+  ]
+}

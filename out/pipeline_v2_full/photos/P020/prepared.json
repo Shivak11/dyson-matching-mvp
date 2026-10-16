@@ -1,0 +1,81 @@
+{
+  "rankings": {
+    "o1": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "similarity": 0.9126956053964329,
+        "references": [
+          {
+            "reference": "dyson_v16_piston_animal_2",
+            "similarity": 0.9126956053964329
+          },
+          {
+            "reference": "dyson_v16_piston_animal_1",
+            "similarity": 0.8636133440336733
+          },
+          {
+            "reference": "dyson_v16_piston_animal_0",
+            "similarity": 0.8501089024699655
+          }
+        ]
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "similarity": 0.8585200013646525,
+        "references": [
+          {
+            "reference": "dyson_v8_absolute_0",
+            "similarity": 0.8585200013646525
+          },
+          {
+            "reference": "dyson_v8_absolute_1",
+            "similarity": 0.8308928552128959
+          },
+          {
+            "reference": "dyson_v8_absolute_2",
+            "similarity": 0.8295416135362927
+          }
+        ]
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "similarity": 0.8580904314380148,
+        "references": [
+          {
+            "reference": "dyson_v12_detect_slim_0",
+            "similarity": 0.8580904314380148
+          },
+          {
+            "reference": "dyson_v12_detect_slim_2",
+            "similarity": 0.8464886516261289
+          },
+          {
+            "reference": "dyson_v12_detect_slim_1",
+            "similarity": 0.8391405260185687
+          }
+        ]
+      }
+    ]
+  },
+  "crops": {
+    "o1": {
+      "file": "out/pipeline_v2_full/photos/P020/o1_body.jpg",
+      "sha256": "a8463f978197d1ce9749907c680478e97745868e854d7539b4397a1eccb15381",
+      "pixel_box": [
+        248,
+        0,
+        991,
+        661
+      ],
+      "width": 743,
+      "height": 661
+    }
+  },
+  "initial_candidates": {
+    "o1": [
+      "dyson_v16_piston_animal",
+      "dyson_v8_absolute",
+      "dyson_v12_detect_slim"
+    ]
+  }
+}

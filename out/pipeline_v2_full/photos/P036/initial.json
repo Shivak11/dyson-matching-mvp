@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_wash_g1",
+      "confidence": 98,
+      "top_two": [
+        "dyson_wash_g1",
+        "dyson_v16_piston_animal"
+      ],
+      "evidence": [
+        "The circular central face clearly displays the 'dyson washG1' model designation on the water reservoir assembly."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_wash_g1",
+        "outcome": "confirmed",
+        "evidence": "The target prominently displays 'dyson washG1' branding on its cylindrical clean-water tank assembly."
+      },
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "contradicted",
+        "evidence": "The target features a wet-cleaner water reservoir rather than the dry stick-vacuum cyclone body of the V16."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The vertical wet-cleaner tank design contradicts the wheeled spherical canister body of the Big Ball."
+      }
+    ],
+    "decisive_region": [
+      448,
+      396,
+      835,
+      600
+    ],
+    "refinement_reason": ""
+  }
+}

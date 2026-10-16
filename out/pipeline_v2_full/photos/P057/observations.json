@@ -1,0 +1,95 @@
+{
+  "objects": [
+    {
+      "object_id": "o1",
+      "role": "accessory",
+      "parent_id": null,
+      "box_2d": [
+        88,
+        65,
+        1000,
+        814
+      ],
+      "visibility": "part_only",
+      "observations": [
+        {
+          "feature": "brushroll_assembly",
+          "visible": true,
+          "detail": "Dual roller head with a front soft roller and a rear roller with rubber fins",
+          "box_2d": [
+            106,
+            126,
+            608,
+            762
+          ]
+        },
+        {
+          "feature": "release_latches",
+          "visible": true,
+          "detail": "Rotatable release fasteners with unlock symbols on the underside base plate",
+          "box_2d": [
+            622,
+            126,
+            793,
+            735
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    },
+    {
+      "object_id": "o2",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        488,
+        805,
+        1000,
+        998
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld unit with transparent dust canister, filter housing, and handle",
+          "box_2d": [
+            488,
+            805,
+            1000,
+            998
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ],
+  "machines": [
+    {
+      "object_id": "o2",
+      "role": "machine",
+      "parent_id": null,
+      "box_2d": [
+        488,
+        805,
+        1000,
+        998
+      ],
+      "visibility": "main_body",
+      "observations": [
+        {
+          "feature": "body_layout",
+          "visible": true,
+          "detail": "Handheld unit with transparent dust canister, filter housing, and handle",
+          "box_2d": [
+            488,
+            805,
+            1000,
+            998
+          ]
+        }
+      ],
+      "readable_identifier": ""
+    }
+  ]
+}

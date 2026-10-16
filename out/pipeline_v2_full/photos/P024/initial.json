@@ -1,0 +1,47 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v16_piston_animal",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v16_piston_animal",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The cleaner head matches the All Floor Cones Sense dual conical roller design with a central arch and anti-tangle cones marking.",
+        "The pivoting neck displays the red and blue lateral wheels shown in the manufacturer reference."
+      ],
+      "missing_evidence": [
+        "The main vacuum body, bin, and handle are out of frame."
+      ],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v16_piston_animal",
+        "outcome": "confirmed",
+        "evidence": "The cleaner head features the dual conical rollers and central arch characteristic of the All Floor Cones Sense head."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "The visible dual conical roller head is non-interchangeable and incompatible with the V8."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "The visible All Floor Cones Sense head is an intelligent attachment exclusive to the V16 and incompatible with V12."
+      }
+    ],
+    "decisive_region": [
+      485,
+      308,
+      760,
+      649
+    ],
+    "refinement_reason": ""
+  }
+}

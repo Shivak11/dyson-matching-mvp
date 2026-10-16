@@ -1,0 +1,45 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v15_detect",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v15_detect",
+        "dyson_v12_detect_slim"
+      ],
+      "evidence": [
+        "The machine features an in-line transparent bin with gold cyclone assembly and purple rear filter housing.",
+        "The body proportions and trigger handle design match the Dyson V15 Detect."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "confirmed",
+        "evidence": "In-line clear dustbin, gold cyclone pack, and purple filter housing match the V15 Detect."
+      },
+      {
+        "product": "dyson_v12_detect_slim",
+        "outcome": "contradicted",
+        "evidence": "Lacks the top push-button power control and slim form factor of the V12 Detect Slim."
+      },
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "contradicted",
+        "evidence": "Features an in-line bin rather than the perpendicular bin layout of the V8 family."
+      }
+    ],
+    "decisive_region": [
+      71,
+      452,
+      330,
+      522
+    ],
+    "refinement_reason": ""
+  }
+}

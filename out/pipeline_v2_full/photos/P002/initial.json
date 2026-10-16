@@ -1,0 +1,44 @@
+{
+  "o1": {
+    "object_id": "o1",
+    "decision": {
+      "status": "match",
+      "product": "dyson_v8_absolute",
+      "confidence": 95,
+      "top_two": [
+        "dyson_v8_absolute",
+        "dyson_v15_detect"
+      ],
+      "evidence": [
+        "Perpendicular bin layout below radial cyclones with top red emptying latch, central pre-filter, and top slider switch matches Dyson V8."
+      ],
+      "missing_evidence": [],
+      "contradictions": [],
+      "retake": ""
+    },
+    "candidate_checks": [
+      {
+        "product": "dyson_v8_absolute",
+        "outcome": "confirmed",
+        "evidence": "The perpendicular bin layout, top red release lever, and central pre-filter match the V8 family."
+      },
+      {
+        "product": "dyson_big_ball",
+        "outcome": "contradicted",
+        "evidence": "The target is a handheld cordless body rather than a wheeled spherical canister vacuum."
+      },
+      {
+        "product": "dyson_v15_detect",
+        "outcome": "contradicted",
+        "evidence": "The target has a perpendicular bin layout instead of the in-line bin and rear display of the V15."
+      }
+    ],
+    "decisive_region": [
+      38,
+      277,
+      364,
+      650
+    ],
+    "refinement_reason": ""
+  }
+}
