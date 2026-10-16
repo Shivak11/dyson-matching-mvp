@@ -11,3 +11,6 @@ var/
 *.sqlite3-wal
 *.sqlite3-shm
 .DS_Store
+
+# Private runtime configuration is prepared locally; no research config is shipped.
+/runtime_config.json
