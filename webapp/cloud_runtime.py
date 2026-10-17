@@ -29,7 +29,8 @@ def _request(method, data=None):
     if parsed.scheme != 'https' or not parsed.netloc or parsed.path != '/__state' or parsed.query or parsed.fragment or parsed.username or not token:
         raise RuntimeError('Cloud state configuration is incomplete.')
     request = urllib.request.Request(url, data=data, method=method,
-        headers={'Authorization': 'Bearer ' + token, 'Content-Type': 'application/gzip'})
+        headers={'Authorization': 'Bearer ' + token, 'Content-Type': 'application/gzip',
+                 'User-Agent': 'MultiplierPhotoDemo/1.0'})
     return urllib.request.urlopen(request, timeout=90)
 
 

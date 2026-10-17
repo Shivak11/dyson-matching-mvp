@@ -15,6 +15,14 @@ from webapp.transport import Client
 
 
 class CloudRuntimeTests(unittest.TestCase):
+    def test_state_transport_identifies_the_app(self):
+        with patch.dict(os.environ, {'CLOUD_STATE_URL': 'https://demo.example/__state', 'CLOUD_STATE_TOKEN': 'test-token'}), \
+                patch('webapp.cloud_runtime.urllib.request.urlopen') as network:
+            cloud_runtime._request('GET')
+        request = network.call_args.args[0]
+        self.assertEqual(request.get_header('User-agent'), 'MultiplierPhotoDemo/1.0')
+        self.assertEqual(request.get_header('Authorization'), 'Bearer test-token')
+
     def test_restore_rejects_traversal_and_links_before_writing(self):
         for name, link in [('var/media/../../escape', False), ('var/media/link', True)]:
             with self.subTest(name=name), tempfile.TemporaryDirectory() as folder:
