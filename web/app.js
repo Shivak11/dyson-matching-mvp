@@ -173,7 +173,8 @@
     const d = job.run_details;
     const header = `<details class="rundetails" id="runDetails" data-job="${esc(job.id)}" ${state.detailsOpen[job.id] ? 'open' : ''}><summary id="runDetailsSummary">Run details</summary>`;
     if (!d) return header + '<p class="legacydetails">Run details were not recorded for this run.</p></details>';
-    const fields = [['Elapsed time',d.elapsed_seconds == null ? null : duration(d.elapsed_seconds)],['Queue time',d.queued_seconds == null ? null : duration(d.queued_seconds)],['Started',d.started_at ? dateText(d.started_at) : null],['Completed',d.completed_at ? dateText(d.completed_at) : null],['Cost recorded (INR)',d.cost_inr == null ? null : recordedCost(d.cost_inr,'INR')]].filter(([,value]) => value !== null);
+    const costLabel = ['queued','running'].includes(job.status) ? 'Spent or reserved (INR)' : 'Cost recorded (INR)';
+    const fields = [['Elapsed time',d.elapsed_seconds == null ? null : duration(d.elapsed_seconds)],['Queue time',d.queued_seconds == null ? null : duration(d.queued_seconds)],['Started',d.started_at ? dateText(d.started_at) : null],['Completed',d.completed_at ? dateText(d.completed_at) : null],[costLabel,d.cost_inr == null ? null : recordedCost(d.cost_inr,'INR')]].filter(([,value]) => value !== null);
     return header + (fields.length ? `<dl>${fields.map(([name,value]) => `<dt>${esc(name)}</dt><dd>${esc(value)}</dd>`).join('')}</dl>` : '<p class="legacydetails">Time and cost have not been recorded yet.</p>') + '</details>';
   }
   function renderJob(job) {
