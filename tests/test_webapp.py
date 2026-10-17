@@ -77,6 +77,33 @@ class StoreTests(unittest.TestCase):
         self.assertIn('brochure_details', first)
         self.assertNotIn('visible_features', first)
 
+    def test_seed_preserves_original_manufacturer_document(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = fixture_root(folder)
+            seed = root / 'var/catalogue-seed'
+            raw = b'%PDF-1.4\nmanufacturer test document\n%%EOF\n'
+            name = 'Dyson V8 user manual.pdf'
+            (seed / name).write_bytes(raw)
+            cards_path = seed / 'reference_cards.json'
+            cards = json.loads(cards_path.read_text())
+            cards['products']['dyson_v8_absolute']['brochure_file'] = name
+            cards_path.write_text(json.dumps(cards))
+            store = Store(root, root / 'var')
+            product = store.product('dyson_v8_absolute')
+            self.assertEqual(product['brochure_filename'], name)
+            key = product['brochure_url'].rsplit('/', 1)[1]
+            self.assertEqual(store.media(key)[0].read_bytes(), raw)
+
+    def test_seed_rejects_document_path_outside_seed(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = fixture_root(folder)
+            cards_path = root / 'var/catalogue-seed/reference_cards.json'
+            cards = json.loads(cards_path.read_text())
+            cards['products']['dyson_v8_absolute']['brochure_file'] = '../outside.pdf'
+            cards_path.write_text(json.dumps(cards))
+            with self.assertRaisesRegex(ValueError, 'document path'):
+                Store(root, root / 'var')
+
     def test_snapshot_is_fixed_when_catalogue_changes(self):
         job = self.store.create_jobs({'images': [image_file()], 'expected_product_id': 'dyson_v15_detect'})[0]
         snapshot = self.store.job(job['id'], internal=True)['_snapshot']

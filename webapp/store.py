@@ -199,11 +199,18 @@ class Store:
                     item = validate_upload({'filename': path.name, 'data_url': 'data:' + mime + ';base64,' + base64.b64encode(raw).decode()})
                     images.append(self._save_media(connection, item))
                 passages = '\n\n'.join(source['supporting_passage'] for source in card['sources'])
+                brochure_id = None
+                if card.get('brochure_file'):
+                    path = (seed / card['brochure_file']).resolve()
+                    if not path.is_relative_to(seed):
+                        raise ValueError('Invalid manufacturer document path.')
+                    item = validate_upload({'filename': path.name, 'data_url': 'data:application/pdf;base64,' + base64.b64encode(path.read_bytes()).decode()}, pdf=True)
+                    brochure_id = self._save_media(connection, item)
                 data = {'id': key, 'name': card['name'], 'manufacturer': 'Shark' if key.startswith('shark_') else 'Dyson',
                         'in_catalog': card['in_catalog'], 'source_url': card['sources'][0]['url'],
                         'brochure_details': passages, 'sources': card['sources'],
                         'visible_features': card.get('visible_features', []), 'variant_limits': card.get('variant_limits', []),
-                        'image_ids': images, 'brochure_id': None}
+                        'image_ids': images, 'brochure_id': brochure_id}
                 connection.execute('INSERT INTO products VALUES (?,?)', (key, json.dumps(data)))
 
     def _product(self, connection, data):
@@ -211,9 +218,11 @@ class Store:
         for key in data['image_ids']:
             row = connection.execute('SELECT filename FROM media WHERE id=?', (key,)).fetchone()
             images.append({'id': key, 'url': '/media/' + key, 'filename': row['filename']})
+        brochure = connection.execute('SELECT filename FROM media WHERE id=?', (data['brochure_id'],)).fetchone() if data.get('brochure_id') else None
         return {key: data[key] for key in ('id', 'name', 'manufacturer', 'in_catalog', 'source_url', 'brochure_details')} | {
             'images': images, 'image_url': images[0]['url'] if images else None,
-            'brochure_url': '/media/' + data['brochure_id'] if data.get('brochure_id') else None}
+            'brochure_url': '/media/' + data['brochure_id'] if data.get('brochure_id') else None,
+            'brochure_filename': brochure['filename'] if brochure else None}
 
     def products(self):
         with self.connect() as connection:
