@@ -102,6 +102,46 @@ def public_match(match):
     return value
 
 
+def hosted_run_details(details):
+    if not isinstance(details, dict):
+        return None
+    return {key: details.get(key) for key in
+            ('started_at', 'completed_at', 'elapsed_seconds', 'queued_seconds', 'cost_inr')}
+
+
+def hosted_job(job):
+    value = {key: job.get(key) for key in
+             ('id', 'filename', 'image_url', 'created_at', 'status', 'mode', 'expected_product_id',
+              'expected_product_name', 'cost_inr', 'error', 'exports_available', 'export_error',
+              'started_at', 'completed_at', 'elapsed_seconds', 'retry_of') if key in job}
+    value['stage'] = {'queued': 'Waiting to run', 'running': 'Processing photograph',
+                      'completed': 'Complete', 'failed': 'Run stopped',
+                      'interrupted': 'Run interrupted'}.get(job.get('status'), 'Saved')
+    value['matches'] = []
+    for match in job.get('matches', []):
+        result = public_match(match)
+        result.update({key: match.get(key) for key in ('reference_image_url', 'source_url')})
+        result['reference_images'] = [{key: image.get(key) for key in ('id', 'url', 'filename')}
+                                      for image in match.get('reference_images', []) if isinstance(image, dict)]
+        value['matches'].append(result)
+    value['run_details'] = hosted_run_details(job.get('run_details'))
+    return value
+
+
+def hosted_prediction(value, kind):
+    public = {key: value.get(key) for key in
+              ('schema_version', 'prediction_id', 'saved_at', 'mode', 'claimed_product', 'status')}
+    public['photograph'] = {'filename': value['photograph']['filename']}
+    public['matches'] = [public_match(match) for match in value.get('matches', [])]
+    public['run_details'] = hosted_run_details(value.get('run_details'))
+    if kind == 'json':
+        return encoded(public) + b'\n'
+    fields = ('prediction_id', 'filename', 'mode', 'claimed_model', 'job_status', 'object_id',
+              'box_2d', 'decision_status', 'model_family', 'qualitative_confidence', 'verification',
+              'evidence', 'missing_evidence', 'retake_guidance', 'elapsed_seconds', 'cost_inr')
+    return csv_bytes(public, fields=fields)
+
+
 def envelope(job, photograph_sha256, saved_at):
     return {'schema_version': 1, 'prediction_id': job['id'], 'saved_at': saved_at,
             'photograph': {'filename': job['filename'], 'sha256': photograph_sha256},
@@ -110,16 +150,16 @@ def envelope(job, photograph_sha256, saved_at):
             'matches': [public_match(match) for match in job['matches']], 'run_details': job.get('run_details')}
 
 
-def csv_bytes(value):
+def csv_bytes(value, fields=CSV_FIELDS):
     output = io.StringIO(newline='')
-    writer = csv.DictWriter(output, fieldnames=CSV_FIELDS, lineterminator='\n')
+    writer = csv.DictWriter(output, fieldnames=fields, lineterminator='\n')
     writer.writeheader()
     details = value.get('run_details') or {}
     actual_models = list(dict.fromkeys(row['model'] for row in details.get('requests', []) if row.get('model')))
     actual_providers = list(dict.fromkeys(row['provider'] for row in details.get('requests', []) if row.get('provider')))
     for match in value['matches'] or [{}]:
         row = {'prediction_id': value['prediction_id'], 'filename': value['photograph']['filename'],
-               'photograph_sha256': value['photograph']['sha256'], 'mode': value['mode'],
+               'photograph_sha256': value['photograph'].get('sha256'), 'mode': value['mode'],
                'claimed_model': value['claimed_product']['name'] if value['claimed_product'] else None,
                'job_status': value['status'], 'object_id': match.get('object_id'), 'box_2d': match.get('box_2d'),
                'decision_status': match.get('status'), 'model_family': match.get('product_name'),
@@ -129,6 +169,7 @@ def csv_bytes(value):
                'requested_model': details.get('requested_model'), 'actual_models': actual_models,
                'actual_providers': actual_providers, 'config_sha256': details.get('config_sha256'),
                'catalogue_sha256': details.get('catalogue_sha256'), 'cost_inr': details.get('cost_inr')}
+        row = {key: row[key] for key in fields}
         for key, item in row.items():
             text = json.dumps(item, ensure_ascii=False, separators=(',', ':'), allow_nan=False) if isinstance(item, (list, dict)) else '' if item is None else str(item)
             # Spreadsheet programs may ignore leading whitespace before a formula.

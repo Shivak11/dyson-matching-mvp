@@ -18,7 +18,7 @@ from urllib.parse import unquote, urlsplit
 
 from webapp.store import Store, ID, ConflictError, now
 from webapp import cloud_runtime
-from webapp.predictions import collect_run_details, TERMINAL
+from webapp.predictions import collect_run_details, hosted_job, hosted_prediction, TERMINAL
 from webapp.inference import Inference, BudgetError, settings, ledger_accounting, api_configured, api_key_for, checked_accounting
 
 ROOT = Path(__file__).resolve().parent
@@ -133,11 +133,20 @@ class App:
         if created:
             for job in jobs:
                 self.queue.put(job['id'])
-        return {'jobs': jobs}
+        return self.job_response(jobs)
+
+    def job_response(self, jobs):
+        return {'jobs': [hosted_job(job) for job in jobs] if cloud_runtime.enabled() else jobs}
 
     def bootstrap(self):
+        runtime = settings(self.ledger_root, self.store.jobs())
+        if cloud_runtime.enabled():
+            current = runtime
+            runtime = {key: current[key] for key in ('runtime_cap_inr', 'runtime_spent_inr', 'runtime_remaining_inr')}
+            runtime['service_ready'] = current['api_configured']
+            runtime['accounting_error'] = 'Spending records are unavailable. Please contact the demo owner.' if current['accounting_error'] else None
         return {'csrf_token': self.csrf_token, 'catalogue': self.store.products(), 'jobs': self.public_jobs(),
-                'settings': settings(self.ledger_root, self.store.jobs())}
+                'settings': runtime}
 
     def _seal_prediction(self, key):
         with cloud_runtime.LOCK:
@@ -180,7 +189,7 @@ class App:
             jobs[index].setdefault('exports_available', False)
             jobs[index].setdefault('run_details', None)
             jobs[index].setdefault('export_error', None)
-        return jobs
+        return self.job_response(jobs)['jobs']
 
 
 def build_app(root=ROOT, data_dir=None, **options):
@@ -268,11 +277,13 @@ class Handler(BaseHTTPRequestHandler):
                 key, kind = path.split('/')[3], path.rsplit('.', 1)[1]
                 if not self.app.store.job(key).get('exports_available'):
                     self.app.public_jobs(key)
-                content = self.app.store.prediction_export(key, kind)
+                content = (hosted_prediction(json.loads(self.app.store.prediction_export(key, 'json')), kind)
+                           if cloud_runtime.enabled() else self.app.store.prediction_export(key, kind))
                 mime = 'application/json; charset=utf-8' if kind == 'json' else 'text/csv; charset=utf-8'
                 self._headers(200, mime, len(content))
                 self.send_header('Content-Disposition', 'attachment; filename="prediction-' + key + '.' + kind + '"')
-                self.send_header('X-Content-SHA256', hashlib.sha256(content).hexdigest())
+                if not cloud_runtime.enabled():
+                    self.send_header('X-Content-SHA256', hashlib.sha256(content).hexdigest())
                 self.end_headers()
                 self.wfile.write(content)
             elif re.fullmatch(r'/media/[A-Za-z0-9_-]{1,80}', path):
@@ -337,14 +348,14 @@ class Handler(BaseHTTPRequestHandler):
                     raise ValueError('A request ID is required before running a photo.')
                 cached = self.app.store.cached_jobs(body)
                 if cached is not None:
-                    self.send_json(202, {'jobs': cached})
+                    self.send_json(202, self.app.job_response(cached))
                     return
                 if not api_configured():
-                    self.send_json(503, {'error': 'Add OPENROUTER_API_KEY to the local .env before running a photo.'})
+                    self.send_json(503, {'error': 'Photo matching is unavailable. Please contact the demo owner.' if cloud_runtime.enabled() else 'Add OPENROUTER_API_KEY to the local .env before running a photo.'})
                     return
                 budget = settings(self.app.ledger_root, self.app.store.jobs())
                 if budget['accounting_error']:
-                    self.send_json(409, {'error': budget['accounting_error']})
+                    self.send_json(409, {'error': 'Spending records are unavailable. Please contact the demo owner.' if cloud_runtime.enabled() else budget['accounting_error']})
                     return
                 if budget['runtime_remaining_inr'] <= 0:
                     self.send_json(409, {'error': 'The app spending limit has been reached.'})
@@ -356,14 +367,14 @@ class Handler(BaseHTTPRequestHandler):
                 original_id = path.split('/')[3]
                 cached = self.app.store.cached_jobs(body, original_id)
                 if cached is not None:
-                    self.send_json(202, {'jobs': cached})
+                    self.send_json(202, self.app.job_response(cached))
                     return
                 if not api_configured():
-                    self.send_json(503, {'error': 'Add OPENROUTER_API_KEY to the local .env before retrying a photo.'})
+                    self.send_json(503, {'error': 'Photo matching is unavailable. Please contact the demo owner.' if cloud_runtime.enabled() else 'Add OPENROUTER_API_KEY to the local .env before retrying a photo.'})
                     return
                 budget = settings(self.app.ledger_root, self.app.store.jobs())
                 if budget['accounting_error']:
-                    self.send_json(409, {'error': budget['accounting_error']})
+                    self.send_json(409, {'error': 'Spending records are unavailable. Please contact the demo owner.' if cloud_runtime.enabled() else budget['accounting_error']})
                     return
                 if budget['runtime_remaining_inr'] <= 0:
                     self.send_json(409, {'error': 'The app spending limit has been reached.'})

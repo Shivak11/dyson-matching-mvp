@@ -43,7 +43,8 @@
   const uploadButton = (label = 'Upload photos') => `<button type="button" data-upload>${esc(label)}</button>`;
   const getProduct = id => state.catalogue.find(p => p.id === id);
   const currentJob = () => state.jobs.find(j => j.id === state.selectedJob);
-  const runUnavailable = () => !state.settings.api_configured || Boolean(state.settings.accounting_error);
+  const serviceReady = () => state.settings.service_ready ?? state.settings.api_configured;
+  const runUnavailable = () => !serviceReady() || Boolean(state.settings.accounting_error);
   const statusName = status => ({queued:'Queued',running:'Running',completed:'Complete',failed:'Failed',interrupted:'Interrupted'}[status] || status || 'Saved');
   const jobDescription = job => job.status === 'completed' ? `${job.matches?.length || 0} machine${job.matches?.length === 1 ? '' : 's'} · Complete` : statusName(job.status);
   const dateText = value => { const d = new Date(value); return Number.isNaN(d.getTime()) ? String(value || '') : d.toLocaleString('en-IN', {dateStyle:'medium',timeStyle:'short'}); };
@@ -53,6 +54,8 @@
     state.viewSignature = '';
     globalError('');
     render();
+    window.scrollTo({top:0, behavior:'instant'});
+    main.scrollTop = 0;
   }
   function render() {
     document.querySelectorAll('[data-nav]').forEach(button => {
@@ -93,7 +96,7 @@
     const signature = JSON.stringify(s);
     if (signature === state.allowanceSignature) return;
     state.allowanceSignature = signature;
-    $('#allowance').innerHTML = `<div class="budget"><span class="small muted">Run allowance remaining</span><strong class="small">${esc(money(s.runtime_remaining_inr))}</strong></div><p class="small muted">${esc(s.model_label || 'Model not configured')} · OpenRouter</p><p class="small muted allowance-details">${esc(money(s.runtime_spent_inr))} spent or reserved<br>${esc(money(s.stage_remaining_inr))} remaining in stage budget</p>${s.api_configured === false ? '<p class="error small">OpenRouter key is not configured.</p>' : ''}${s.accounting_error ? `<p class="error small">${esc(s.accounting_error)}</p>` : ''}`;
+    $('#allowance').innerHTML = `<div class="budget"><span class="small muted">Run allowance remaining</span><strong class="small">${esc(money(s.runtime_remaining_inr))}</strong></div><p class="small muted allowance-details">${esc(money(s.runtime_spent_inr))} spent or reserved</p>${serviceReady() === false ? '<p class="error small">Photo matching is unavailable.</p>' : ''}${s.accounting_error ? `<p class="error small">${esc(s.accounting_error)}</p>` : ''}`;
   }
   function renderMatch() {
     const job = currentJob();
@@ -162,37 +165,24 @@
       message.classList.remove('hidden');
     } finally { clearTimeout(timeout); link.removeAttribute('aria-disabled'); if (url) setTimeout(() => URL.revokeObjectURL(url),1000); }
   }
-  const recorded = value => value === null || value === undefined || value === '' ? 'Not recorded' : String(value);
   const duration = value => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? `${new Intl.NumberFormat('en-IN',{maximumFractionDigits:2}).format(value)} seconds` : 'Not recorded';
   const recordedCost = (value,currency) => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? new Intl.NumberFormat('en-IN',{style:'currency',currency,minimumFractionDigits:2,maximumFractionDigits:6}).format(value) : 'Not recorded';
-  const costBases = new Map([
-    ['provider_reported_cost','Reported by OpenRouter'],
-    ['recorded_request_costs','Recorded request charges'],
-    ['reported_tokens_and_configured_rates','Calculated from recorded tokens'],
-    ['includes_unresolved_or_reserved_usage','Includes unresolved request costs'],
-    ['reserved_upper_bound_usage_unavailable','Upper bound; usage not available'],
-    ['published_per_image_estimate','Published per-image estimate'],
-    ['offline_validation_recovery','Offline recovery; no new call'],
-    ['no_recorded_requests','No request cost recorded']
-  ]);
-  const costBasis = value => costBases.get(value) || 'Not recorded';
   function runDetails(job) {
     const previous = $('#runDetails');
     if (previous?.dataset.job === job.id) state.detailsOpen[job.id] = previous.open;
     const d = job.run_details;
     const header = `<details class="rundetails" id="runDetails" data-job="${esc(job.id)}" ${state.detailsOpen[job.id] ? 'open' : ''}><summary id="runDetailsSummary">Run details</summary>`;
     if (!d) return header + '<p class="legacydetails">Run details were not recorded for this run.</p></details>';
-    const fields = [['Elapsed time',duration(d.elapsed_seconds)],['Queue time',duration(d.queued_seconds)],['Started',d.started_at ? dateText(d.started_at) : null],['Completed',d.completed_at ? dateText(d.completed_at) : null],['Requested AI model',d.requested_model],['Requested provider',d.requested_provider],['Reasoning',d.reasoning_effort],['Pipeline version',d.pipeline_version],['Configuration SHA-256',d.config_sha256],['Catalogue SHA-256',d.catalogue_sha256],['Cost recorded (INR)',recordedCost(d.cost_inr,'INR')],['Cost basis',costBasis(d.cost_basis)]];
-    const requests = Array.isArray(d.requests) ? d.requests : [];
-    return header + `<dl>${fields.map(([name,value]) => `<dt>${esc(name)}</dt><dd>${esc(recorded(value))}</dd>`).join('')}</dl>` + (requests.length ? `<div class="tablewrap" id="requestRecords" role="region" aria-label="Request cost records" tabindex="0"><table><thead><tr>${['Request','Status','AI model used','Actual provider','Elapsed time','Charged USD','Request limit USD','Cost basis'].map(name => `<th scope="col">${name}</th>`).join('')}</tr></thead><tbody>${requests.map(r => `<tr>${[r.operation,r.status,r.model,r.provider,duration(r.elapsed_seconds),recordedCost(r.cost_usd,'USD'),recordedCost(r.reserved_cost_usd,'USD'),costBasis(r.cost_basis)].map(value => `<td>${esc(recorded(value))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : '<p class="legacydetails">No request records were saved.</p>') + '</details>';
+    const fields = [['Elapsed time',d.elapsed_seconds == null ? null : duration(d.elapsed_seconds)],['Queue time',d.queued_seconds == null ? null : duration(d.queued_seconds)],['Started',d.started_at ? dateText(d.started_at) : null],['Completed',d.completed_at ? dateText(d.completed_at) : null],['Cost recorded (INR)',d.cost_inr == null ? null : recordedCost(d.cost_inr,'INR')]].filter(([,value]) => value !== null);
+    return header + (fields.length ? `<dl>${fields.map(([name,value]) => `<dt>${esc(name)}</dt><dd>${esc(value)}</dd>`).join('')}</dl>` : '<p class="legacydetails">Time and cost have not been recorded yet.</p>') + '</details>';
   }
   function renderJob(job) {
     state.viewSignature = JSON.stringify([job,state.settings.accounting_error]);
     if (job.status === 'completed') { renderResult(job); return; }
     const failed = terminalErrors.has(job.status);
     const outcome = job.status === 'failed' ? 'Matching failed' : job.status === 'interrupted' ? 'Matching interrupted' : job.status === 'queued' ? 'Photo queued for identification' : 'Identifying products';
-    const blockedReason = state.settings.accounting_error || (!state.settings.api_configured ? 'Model access is unavailable. Check Model and run allowance before retrying.' : '');
-    main.innerHTML = heading(outcome,job.filename,uploadButton('Upload more')) + `<section class="statusarea"><div class="statusphoto">${image(job.image_url,'Uploaded store photograph')}</div><div class="statustext"><p class="small muted">${esc(statusName(job.status))}</p><h2 id="jobStage">${esc(job.stage || statusName(job.status))}</h2>${failed ? `<div class="errornote"><p>${esc(job.error || 'The server stopped before the result was saved.')}</p></div><p>Your photograph and any charges are preserved.</p><div class="buttonrow"><button class="primary" type="button" id="retryButton" data-retry="${esc(job.id)}" ${runUnavailable() ? 'disabled' : ''}>Retry as a new run</button><button type="button" data-nav="history">View history</button></div><p id="retryError" class="error ${blockedReason ? '' : 'hidden'}" role="alert">${esc(blockedReason)}</p>` : '<div class="working"><span class="spinner" aria-hidden="true"></span><p>Waiting for the next saved stage.</p></div><button type="button" data-nav="history">View history</button>'}${exportActions(job)}</div></section>${runDetails(job)}`;
+    const blockedReason = state.settings.accounting_error || (!serviceReady() ? 'Photo matching is unavailable. Check the run allowance before retrying.' : '');
+    main.innerHTML = heading(outcome,job.filename,uploadButton('Upload more')) + `<section class="statusarea"><div class="statusphoto">${image(job.image_url,'Uploaded store photograph')}</div><div class="statustext"><p class="small muted">${esc(statusName(job.status))}</p><h2 id="jobStage">${esc(job.stage || statusName(job.status))}</h2>${failed ? `<div class="errornote"><p>${esc(job.error || 'The server stopped before the result was saved.')}</p></div><p>Your photograph and any charges are preserved.</p><div class="buttonrow"><button class="primary" type="button" id="retryButton" data-retry="${esc(job.id)}" ${runUnavailable() ? 'disabled' : ''}>Retry as a new run</button><button type="button" data-nav="history">View history</button></div><p id="retryError" class="error ${blockedReason ? '' : 'hidden'}" role="alert">${esc(blockedReason)}</p>` : '<div class="working"><span class="spinner" aria-hidden="true"></span><p>Processing this photograph. This page updates automatically.</p></div><button type="button" data-nav="history">View history</button>'}${exportActions(job)}</div></section>${runDetails(job)}`;
   }
   const matchTitle = match => match.status === 'not_in_catalog' ? 'Outside catalogue' : match.status === 'not_sure' ? 'Model not established' : match.product_name || 'Model not established';
   const matchConfidence = match => ['High','Medium','Low'].includes(match.confidence) ? `${match.confidence} confidence` : 'Confidence not recorded';
@@ -202,6 +192,11 @@
     const matches = Array.isArray(job.matches) ? job.matches : [];
     state.selectedObject = Math.min(state.selectedObject, Math.max(0,matches.length-1));
     const match = matches[state.selectedObject];
+    if (!match) {
+      main.innerHTML = heading('No vacuum cleaner detected',job.filename,uploadButton('Upload more')) + `<div class="savedactions"><p>Complete · ${job.mode === 'verify' ? 'Verify' : 'Identify'}</p>${exportActions(job)}</div><section class="photopanel" aria-label="Checked store photograph"><div class="paneltitle"><span>Store photograph</span><span>Original image</span></div><div class="photo" id="resultPhoto">${image(job.image_url,'Uploaded store photograph','id="storePhoto"')}</div><p class="modehelp">Upload a photo showing a vacuum cleaner to identify its model.</p></section>${runDetails(job)}`;
+      setupBoxes([]);
+      return;
+    }
     const alternatives = Array.isArray(match?.alternatives) ? match.alternatives.filter(a => (typeof a === 'string' ? a : a.id) !== match.product_id) : [];
     const product = match?.status === 'match' ? getProduct(match.product_id) : null;
     const reference = match?.status === 'match' ? media(match.reference_image_url) : '';
@@ -307,7 +302,7 @@
     {view:'match', target:'#matchUpload, .runcontrols', title:'Upload and review store photos', text:'Choose photos, then review them. Identify finds the catalogue model. Verify checks a model you select. Running matching makes a paid call; this tour does not start one.'},
     {view:'result', target:'.reference', title:'Compare the predicted model', text:'The uploaded photo and manufacturer reference appear side by side. Select a detected machine to inspect its model and qualitative confidence.'},
     {view:'result', target:'.evidence>div:first-child', title:'Read the supporting evidence', text:'Review the details supporting the match, missing evidence and any retake guidance. Confidence describes this prediction; it is not benchmark accuracy.'},
-    {view:'result', target:'.savedactions .exports', title:'Export the saved prediction', text:'Download JSON or CSV for independent scoring against source-backed answer labels. Run details contain model, latency and cost records.'},
+    {view:'result', target:'.savedactions .exports', title:'Export the saved prediction', text:'Download JSON or CSV for independent scoring against source-backed answer labels. Run details contain time and total cost.'},
     {view:'dataset', target:'.guide-heading', title:'Keep evaluation labels separate', text:'The dataset guide shows the assumed reference and test-photo structure. Keep independently established answers outside Identify mode, then use them to score exported predictions.'}
   ];
   function positionTour() {
