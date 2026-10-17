@@ -75,7 +75,9 @@ export default {
       if (url.pathname === '/__state') {
         if (!env.CLOUD_STATE_TOKEN || !await equalSecret(request.headers.get('authorization'), 'Bearer ' + env.CLOUD_STATE_TOKEN)) return response('Not found', 404);
         if (request.method === 'POST' && request.headers.get('x-demo-action') === 'restart') {
-          await env.PHOTO_DEMO.getByName('multiplier-single-demo').stop('SIGKILL');
+          const saved = await env.STATE.head('demo/state.tar.gz');
+          if (!saved || saved.size <= 0) return response('A saved checkpoint is required before restarting.', 409);
+          await env.PHOTO_DEMO.getByName('multiplier-single-demo').destroy();
           return response('Restart requested');
         }
         if (request.method === 'GET') {
