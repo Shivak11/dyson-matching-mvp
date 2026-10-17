@@ -285,7 +285,7 @@ class HTTPTests(HTTPFixture, unittest.TestCase):
         data = json.loads(raw)
         self.assertEqual(code, 200)
         self.assertEqual(len(data['catalogue']), 9)
-        self.assertEqual(data['settings']['runtime_remaining_inr'], 100)
+        self.assertEqual(data['settings']['runtime_remaining_inr'], 300)
         self.assertNotIn('Access-Control-Allow-Origin', headers)
         self.assertEqual(self.request('/api/bootstrap', headers={'Host': 'attacker.example'})[0], 403)
         self.assertEqual(self.request('/api/bootstrap', headers={'Origin': 'https://attacker.example'})[0], 403)
