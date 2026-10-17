@@ -7,9 +7,9 @@
 The owner explicitly confirmed `shiva.research11@gmail.com` as the intended paid account. A fresh Wrangler OAuth authorisation succeeded with Workers and Containers scopes. The earlier automatic review rejection was resolved by that explicit account confirmation before retrying.
 
 - Account ID: `22744e58d83f933700484b130caec4fb`.
-- Worker version: `e99af30f-cc1f-4ac8-aed9-1ecac6fa45cb`.
+- Worker version: `80b4ffaa-dbe8-4263-bedc-79fe5e1f4da0`.
 - Container application: `a03c2ba7-42f7-446a-9696-d95272efec2c`.
-- Container image digest: `sha256:b4714be57ffc4370156c6488d93ef38f6806386273faccb7fcd409c77862e86d`.
+- Container image digest: `sha256:f7f5d02d555d6ccf7732478f2ad48b648673bf98156d316ed4738234db29d8e5`.
 - Private R2 bucket: `multiplier-photo-demo-state`.
 - `OPENROUTER_API_KEY`, `CLOUD_STATE_TOKEN`, `CLOUD_CONTAINER_TOKEN` and `DEMO_ACCESS_CODE` are hosted Worker secrets. Their values are excluded from source and image.
 - The six-digit owner access receipt is in ignored `cloudflare/demo-access.txt`. The access value and provider keys are not committed.
@@ -32,7 +32,7 @@ Six official unchanged Dyson manuals were downloaded. Big Ball, V8 and WashG1 fi
 - A fresh catalogue seed contains six active models, three outside references and three original PDFs.
 - Authenticated hosted assets match the committed frontend bytes. The nine catalogue records and three hosted PDFs are accessible.
 - Existing spend was carried forward without resetting any ledger. Before the final retry, INR61.14735 was spent and INR238.85265 remained in the owner-increased INR300 runtime allowance.
-- The final hosted JavaScript matches the committed source SHA-256 `5716ea86191be189d0a078f5d778209a851fff771425e4288292eb9da77be5b2`.
+- The initial hosted acceptance run used frontend SHA-256 `5716ea86191be189d0a078f5d778209a851fff771425e4288292eb9da77be5b2`; the current hash is recorded in the later review section.
 - Normal browser sign-in accepts the six-digit code. The login page uses `Referrer-Policy: same-origin` so its form supplies the origin required by the existing server check. Null and cross-origin submissions remain rejected.
 
 ## Hosted acceptance recovery
@@ -55,7 +55,7 @@ Cloudflare container rollout completion lagged the CLI deployment receipt. The f
 
 This remains one demo container with bounded private R2 checkpoints. Historical research runs, blind inputs, answer keys and past result exports were excluded from the image. The source prompts, confidence gates, catalogue families and model selection are unchanged; only the owner-authorised manufacturer facts and documents were added. No full dataset rerun or load test was performed. The existing HTTP allowance/origin/CSRF check passed after the budget update; its loopback socket needed sandbox escalation.
 
-The wiki taste consultation was read-only. Professional interface guidance changed hierarchy, progressive disclosure and tour behaviour; no wiki page, tracking state or QMD index was modified. Current contract digest: `4575babeb47b0d426c3bf829c8aef7131f72d7d0e05a25d02606db5861af06b2`.
+The wiki taste consultation was read-only. Professional interface guidance changed hierarchy, progressive disclosure and tour behaviour; no wiki page, tracking state or QMD index was modified. Contract digest read for that consultation: `4575babeb47b0d426c3bf829c8aef7131f72d7d0e05a25d02606db5861af06b2`.
 
 ## Cleanup
 
@@ -64,3 +64,15 @@ Docker Desktop reported stopped. Google Chrome is no longer running. The tempora
 ## Resources used
 
 Wrangler 4.151.1 deployed the Worker and hosted secrets; Cloudflare Containers runs the unchanged Python application, and private R2 checkpoints preserve its database, media and request ledgers. Docker Desktop built the allowlisted image locally. OpenRouter routes the Gemini 3.7 Flash high requests to Google AI Studio with the existing pacing and limits. Official Dyson original PDFs and page-supported text supply catalogue references. SHVA so-what-dashboard guidance changed the result hierarchy and progressive disclosure; the owner explicitly excluded dashboard features. CUA operated the real hosted sign-in, result state and spotlight tour. These uses are recorded here because wiki consultation was read-only.
+
+## Sequential store-photo and owner-review checks
+
+The ten noisy store photos now have completed results, including the explicit post-fix retry of IMG_001. IMG_002 and IMG_003 completed before that deployment. The new six source-labelled owner-review frames were captured in Dia and tested separately in Identify mode on the frozen validation-fix image. Four were identified correctly, two V15 views remained unsure, and none was confidently wrong. All six completed without a technical failure. The labels and transcript/source records were excluded from inference.
+
+The six frames cost INR53.006925. This review, including the ten latest store runs and the preserved first failure, cost INR106.849575. Runtime spending is INR175.798425 and INR124.201575 remains under the unchanged INR300 cap. No further paid tests were started after U006. The app uses the existing Gemini 3.7 Flash high/OpenRouter route and pacing. No prompts, catalogue or thresholds changed during these tests.
+
+The first store-photo validation bug and the hosted privacy boundaries are fixed. Hidden placeholder coordinates no longer stop a valid result or add invisible evidence. Public settings/jobs/downloads exclude private configuration and request details while preserving normal predictions, references, timing and cost. A UI-only correction distinguishes pending spent/reserved amounts from completed charges. The new image is recorded above. Authenticated live JavaScript matches the local SHA-256 27ec8833a951f45ee7b3d2b2aad511c1d0de4e91dedcfffcac07cd75b9432ea4. All nineteen saved attempts survived the idle restart, and no paid job was active.
+
+The source manifest, per-case outcomes, costs, latency and scoped verification are in docs/store-photo-ui-review.md. Ignored var/vipul-ui-review contains the actual source screenshots, neutral test inputs, public exports, results.json, results.csv and review-results.zip. U005/U006 are retained as a possible paired-view edge case in docs/edge-case-register.md; no combined-view recovery was run. The GitHub repository was verified private before pushing.
+
+Final cleanup: Docker Desktop is stopped, Google Chrome is not running, and neither task preview port 8768 nor 8770 has a listener. The hosted app remains open. Further Dia inspection was left alone after automatic approval review identified a possible unrelated-project window; all six requested review captures had already been saved. No further model calls were needed for deployment verification.

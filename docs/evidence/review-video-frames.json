@@ -1,0 +1,137 @@
+{
+  "frames": [
+    {
+      "id": "U001",
+      "filename": "U001.jpg",
+      "source_url": "https://www.youtube.com/watch?v=MS5GCLw7yU8&t=72s",
+      "source_title": "Dyson\u00ae V8 Absolute Review After 4 Years!",
+      "channel": "DirtFarmerJay",
+      "label_basis": "The title names Dyson V8 Absolute; at 00:25 the owner identifies the machine he bought as a Dyson V8.",
+      "expected_family": "dyson_v8_absolute",
+      "actual_player_timestamp_seconds": 72,
+      "capture_method": "Native Dia screenshot, paused player; crop only",
+      "source_screenshot": "U001-source.jpg",
+      "crop_box_pixels": [
+        464,
+        292,
+        2238,
+        1160
+      ],
+      "sha256": "3d80a661a954509630a53ec375e80c9a8c73ba6afee7f79900d7fa01b193fa04",
+      "vacuum_visible_native_check": true,
+      "training_or_catalogue_use": false
+    },
+    {
+      "id": "U002",
+      "filename": "U002.jpg",
+      "source_url": "https://www.youtube.com/watch?v=MS5GCLw7yU8&t=252s",
+      "source_title": "Dyson\u00ae V8 Absolute Review After 4 Years!",
+      "channel": "DirtFarmerJay",
+      "label_basis": "The title names Dyson V8 Absolute; at 00:25 the owner identifies the machine he bought as a Dyson V8.",
+      "expected_family": "dyson_v8_absolute",
+      "actual_player_timestamp_seconds": 252,
+      "capture_method": "Native Dia screenshot, paused player; crop only",
+      "source_screenshot": "U002-source.jpg",
+      "crop_box_pixels": [
+        464,
+        292,
+        2238,
+        1160
+      ],
+      "sha256": "f8b99a648ff99a467bc7f43db7cd1d5d4931c7d729411ad5f3f6812670c5ab91",
+      "vacuum_visible_native_check": true,
+      "training_or_catalogue_use": false
+    },
+    {
+      "id": "U003",
+      "filename": "U003.jpg",
+      "source_url": "https://www.youtube.com/watch?v=wPj-aRe5tU4&t=113s",
+      "source_title": "Dyson v12 Detect Slim Review: Is it worth the price tag?",
+      "channel": "sweetandtidy",
+      "label_basis": "The title and opening narration identify Dyson V12 Detect Slim; the reviewer states she purchased it.",
+      "expected_family": "dyson_v12_detect_slim",
+      "actual_player_timestamp_seconds": 113,
+      "capture_method": "Native Dia screenshot, paused player; crop only",
+      "source_screenshot": "U003-source.jpg",
+      "crop_box_pixels": [
+        464,
+        292,
+        2238,
+        1160
+      ],
+      "sha256": "0f8836534450cfb0099477659f8c5a36eaabe45e0793bc54d37d3e27a2deceb1",
+      "vacuum_visible_native_check": true,
+      "training_or_catalogue_use": false
+    },
+    {
+      "id": "U004",
+      "filename": "U004.jpg",
+      "source_url": "https://www.youtube.com/watch?v=wPj-aRe5tU4&t=187s",
+      "source_title": "Dyson v12 Detect Slim Review: Is it worth the price tag?",
+      "channel": "sweetandtidy",
+      "label_basis": "The title and opening narration identify Dyson V12 Detect Slim; the reviewer states she purchased it.",
+      "expected_family": "dyson_v12_detect_slim",
+      "actual_player_timestamp_seconds": 187,
+      "capture_method": "Native Dia screenshot, paused player; crop only",
+      "source_screenshot": "U004-source.jpg",
+      "crop_box_pixels": [
+        464,
+        292,
+        2238,
+        1160
+      ],
+      "sha256": "8464e0bb8d83810edb1ab7ed4216be43385fc98f9b0487e41601a1c74b837258",
+      "vacuum_visible_native_check": true,
+      "training_or_catalogue_use": false
+    },
+    {
+      "id": "U005",
+      "filename": "U005.jpg",
+      "source_url": "https://www.youtube.com/watch?v=qTPwEJaeRdM&t=302s",
+      "source_title": "Dyson V15 Detect Review: Pros & Cons | A Perfectionist\u2019s Nightmare?",
+      "channel": "Actually Helpful Reviews",
+      "label_basis": "The title and opening sentence explicitly identify Dyson V15 Detect. The reviewer describes this as her everyday vacuum.",
+      "expected_family": "dyson_v15_detect",
+      "actual_player_timestamp_seconds": 302,
+      "capture_method": "Native Dia screenshot, paused player; crop only",
+      "source_screenshot": "U005-source.jpg",
+      "crop_box_pixels": [
+        464,
+        292,
+        2238,
+        1160
+      ],
+      "sha256": "331d654e669d2cf4fded28a3effe35b180d950f6326ec975abc2747002b77b0e",
+      "vacuum_visible_native_check": true,
+      "training_or_catalogue_use": false
+    },
+    {
+      "id": "U006",
+      "filename": "U006.jpg",
+      "source_url": "https://www.youtube.com/watch?v=qTPwEJaeRdM&t=380s",
+      "source_title": "Dyson V15 Detect Review: Pros & Cons | A Perfectionist\u2019s Nightmare?",
+      "channel": "Actually Helpful Reviews",
+      "label_basis": "The title and opening sentence explicitly identify Dyson V15 Detect. The reviewer describes this as her everyday vacuum.",
+      "expected_family": "dyson_v15_detect",
+      "actual_player_timestamp_seconds": 380,
+      "capture_method": "Native Dia screenshot, paused player; crop only",
+      "source_screenshot": "U006-source.jpg",
+      "crop_box_pixels": [
+        464,
+        292,
+        2238,
+        1160
+      ],
+      "sha256": "195923374774ea169c828930c3be4f5fe09dfbf6a0fc915a78106ac058f2a607",
+      "vacuum_visible_native_check": true,
+      "training_or_catalogue_use": false
+    }
+  ],
+  "discarded_candidates": 1,
+  "discard_reason": "Initial V8 playback was buffering and showed no vacuum; no image submitted from it.",
+  "independent_source_videos": 3,
+  "note": "Two frames per video are correlated; labels are external to inference inputs.",
+  "frozen_code_commit": "d2b8459a83e717ee21118cd37db01025d0ae1d78",
+  "runtime_settings_sha256": "7a238c2ebd3a8514a9b9dae6422f04ca3e36e4820f7c57a027694ccc392059ee",
+  "deployed_image_digest": "sha256:b9f2ab5aa797bc67b0687d5f685af58b8959ac473f968b170cb719f7767978d0"
+}

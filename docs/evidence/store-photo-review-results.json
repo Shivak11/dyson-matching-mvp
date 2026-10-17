@@ -1,0 +1,1023 @@
+{
+  "score": {
+    "correct": 4,
+    "uncertain": 2,
+    "wrong": 0,
+    "not_identified": 0,
+    "confidently_wrong": 0,
+    "frames": 6,
+    "independent_videos": 3,
+    "technical_failures": 0
+  },
+  "costs_inr": {
+    "review_frames": 53.006925,
+    "latest_store_runs": 49.93395,
+    "preserved_original_failure": 3.9087,
+    "this_review_total": 106.849575
+  },
+  "store_accuracy_scored": false,
+  "store_predictions": [
+    {
+      "claimed_product": null,
+      "matches": [
+        {
+          "alternatives": [
+            {
+              "id": "dyson_wash_g1",
+              "name": "Dyson WashG1"
+            },
+            {
+              "id": "dyson_v12_detect_slim",
+              "name": "Dyson V12 Detect Slim"
+            }
+          ],
+          "box_2d": [
+            314,
+            290,
+            770,
+            448
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Upright frame with blue shaft, top loop handle, and vertically aligned dual water tanks",
+            "Visible 'dyson washG1' model branding printed on front left corner of floor head"
+          ],
+          "missing_evidence": [
+            "A detail region extended outside the detected machine and was excluded from support."
+          ],
+          "object_id": "o1",
+          "product_id": "dyson_wash_g1",
+          "product_name": "Dyson WashG1",
+          "retake_guidance": [
+            "A detail region extended outside the detected machine and was excluded from support."
+          ],
+          "status": "match",
+          "verification": null
+        },
+        {
+          "alternatives": [
+            {
+              "id": "dyson_big_ball",
+              "name": "Dyson Big Ball"
+            },
+            {
+              "id": "dyson_v8_absolute",
+              "name": "Dyson V8 Absolute family"
+            }
+          ],
+          "box_2d": [
+            333,
+            454,
+            844,
+            712
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Spherical wheeled canister base with clear dust bin and upper red cyclone tier",
+            "Multi-cyclone radial assembly with red collar positioned above the transparent bin",
+            "Legible 'dyson big ball' model identifier text on the canister bin collar"
+          ],
+          "missing_evidence": [],
+          "object_id": "o2",
+          "product_id": "dyson_big_ball",
+          "product_name": "Dyson Big Ball",
+          "retake_guidance": [],
+          "status": "match",
+          "verification": null
+        }
+      ],
+      "mode": "identify",
+      "photograph": {
+        "filename": "IMG_001.jpg"
+      },
+      "prediction_id": "3855c515024c445abc592094924bb174",
+      "run_details": {
+        "completed_at": "2026-10-17T05:20:55.492254+00:00",
+        "cost_inr": 5.211975,
+        "elapsed_seconds": 108.69242672899998,
+        "queued_seconds": 5.084194,
+        "started_at": "2026-10-17T05:19:06.796806+00:00"
+      },
+      "saved_at": "2026-10-17T05:20:55.509399+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    },
+    {
+      "claimed_product": null,
+      "matches": [],
+      "mode": "identify",
+      "photograph": {
+        "filename": "IMG_002.jpg"
+      },
+      "prediction_id": "fcd9744e67a04a49a19e8dcb607979f0",
+      "run_details": {
+        "completed_at": "2026-10-17T05:05:42.805684+00:00",
+        "cost_inr": 0.865575,
+        "elapsed_seconds": 39.018304863000026,
+        "queued_seconds": 5.360607,
+        "started_at": "2026-10-17T05:05:03.783034+00:00"
+      },
+      "saved_at": "2026-10-17T05:05:42.816035+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    },
+    {
+      "claimed_product": null,
+      "matches": [],
+      "mode": "identify",
+      "photograph": {
+        "filename": "IMG_003.jpg"
+      },
+      "prediction_id": "b096812ed79947888e1ee90dba75596c",
+      "run_details": {
+        "completed_at": "2026-10-17T05:08:14.317336+00:00",
+        "cost_inr": 0.242325,
+        "elapsed_seconds": 27.823960441000054,
+        "queued_seconds": 4.861786,
+        "started_at": "2026-10-17T05:07:46.492582+00:00"
+      },
+      "saved_at": "2026-10-17T05:08:14.338256+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    },
+    {
+      "claimed_product": null,
+      "matches": [],
+      "mode": "identify",
+      "photograph": {
+        "filename": "IMG_004.jpg"
+      },
+      "prediction_id": "cf64c66ebc9241b3bc7634bfb8c56d95",
+      "run_details": {
+        "completed_at": "2026-10-17T05:22:12.951029+00:00",
+        "cost_inr": 0.324825,
+        "elapsed_seconds": 28.466330320999987,
+        "queued_seconds": 4.642501,
+        "started_at": "2026-10-17T05:21:44.477392+00:00"
+      },
+      "saved_at": "2026-10-17T05:22:12.967350+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    },
+    {
+      "claimed_product": null,
+      "matches": [
+        {
+          "alternatives": [
+            {
+              "id": "dyson_v12_detect_slim",
+              "name": "Dyson V12 Detect Slim"
+            },
+            {
+              "id": "dyson_v15_detect",
+              "name": "Dyson V15 Detect"
+            }
+          ],
+          "box_2d": [
+            283,
+            6,
+            712,
+            183
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Prominent circular red push button on top of the cyclone housing for single-button power control without holding a trigger.",
+            "Slim in-line body configuration with cyclones and clear dust canister aligned directly along the motor axis."
+          ],
+          "missing_evidence": [
+            "Rear circular LCD interface is angled away from this frontal perspective"
+          ],
+          "object_id": "o1",
+          "product_id": "dyson_v12_detect_slim",
+          "product_name": "Dyson V12 Detect Slim",
+          "retake_guidance": [
+            "Rear circular LCD interface is angled away from this frontal perspective"
+          ],
+          "status": "match",
+          "verification": null
+        },
+        {
+          "alternatives": [
+            {
+              "id": "dyson_v8_absolute",
+              "name": "Dyson V8 Absolute family"
+            },
+            {
+              "id": "dyson_v15_detect",
+              "name": "Dyson V15 Detect"
+            }
+          ],
+          "box_2d": [
+            281,
+            271,
+            727,
+            375
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Perpendicular bin positioning underneath the radial cyclone assembly and motor unit.",
+            "Central pointed top filter cone flanked by radial multi-cyclones."
+          ],
+          "missing_evidence": [],
+          "object_id": "o2",
+          "product_id": "dyson_v8_absolute",
+          "product_name": "Dyson V8 Absolute family",
+          "retake_guidance": [],
+          "status": "match",
+          "verification": null
+        }
+      ],
+      "mode": "identify",
+      "photograph": {
+        "filename": "IMG_005.jpg"
+      },
+      "prediction_id": "554564a111464d07a0b1681ea8e3d88b",
+      "run_details": {
+        "completed_at": "2026-10-17T05:24:57.358971+00:00",
+        "cost_inr": 5.648475,
+        "elapsed_seconds": 121.72634789300002,
+        "queued_seconds": 4.733367,
+        "started_at": "2026-10-17T05:22:55.628581+00:00"
+      },
+      "saved_at": "2026-10-17T05:24:57.371681+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    },
+    {
+      "claimed_product": {
+        "id": "dyson_v8_absolute",
+        "name": "Dyson V8 Absolute family"
+      },
+      "matches": [
+        {
+          "alternatives": [
+            {
+              "id": "dyson_v8_absolute",
+              "name": "Dyson V8 Absolute family"
+            },
+            {
+              "id": "dyson_v11",
+              "name": "Dyson V11, non-catalogue lookalike"
+            }
+          ],
+          "box_2d": [
+            0,
+            396,
+            1000,
+            599
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Perpendicular body layout with motor and cyclone assembly stacked above the wand connector.",
+            "Radial cyclone pack surrounding a central washable circular filter cap.",
+            "Red lift latch positioned at the top collar of the cyclone assembly for emptying."
+          ],
+          "missing_evidence": [],
+          "object_id": "o1",
+          "product_id": "dyson_v8_absolute",
+          "product_name": "Dyson V8 Absolute family",
+          "retake_guidance": [],
+          "status": "match",
+          "verification": "confirmed"
+        }
+      ],
+      "mode": "verify",
+      "photograph": {
+        "filename": "IMG_006.jpg"
+      },
+      "prediction_id": "f0291ddd1ee548d897986660bf2c7e5a",
+      "run_details": {
+        "completed_at": "2026-10-17T05:27:23.879316+00:00",
+        "cost_inr": 3.4086,
+        "elapsed_seconds": 87.01059054099994,
+        "queued_seconds": 5.073563,
+        "started_at": "2026-10-17T05:25:56.867829+00:00"
+      },
+      "saved_at": "2026-10-17T05:27:23.888233+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    },
+    {
+      "claimed_product": {
+        "id": "dyson_v12_detect_slim",
+        "name": "Dyson V12 Detect Slim"
+      },
+      "matches": [
+        {
+          "alternatives": [
+            {
+              "id": "dyson_v8_absolute",
+              "name": "Dyson V8 Absolute family"
+            },
+            {
+              "id": "dyson_v12_detect_slim",
+              "name": "Dyson V12 Detect Slim"
+            }
+          ],
+          "box_2d": [
+            154,
+            414,
+            1000,
+            744
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Cordless body with cyclone cluster mounted over the clear bin perpendicular to the wand.",
+            "Red pull lever on top of the cyclone pack to lift the cyclone and empty the bin.",
+            "Radial cyclone assembly arranged around a central purple washable pre-filter."
+          ],
+          "missing_evidence": [],
+          "object_id": "o1",
+          "product_id": "dyson_v8_absolute",
+          "product_name": "Dyson V8 Absolute family",
+          "retake_guidance": [],
+          "status": "match",
+          "verification": "rejected"
+        }
+      ],
+      "mode": "verify",
+      "photograph": {
+        "filename": "IMG_007.jpg"
+      },
+      "prediction_id": "5a0a12122ffd4933924685aa13e31283",
+      "run_details": {
+        "completed_at": "2026-10-17T05:30:16.648395+00:00",
+        "cost_inr": 3.9377999999999997,
+        "elapsed_seconds": 97.94838281299997,
+        "queued_seconds": 5.732373,
+        "started_at": "2026-10-17T05:28:38.696719+00:00"
+      },
+      "saved_at": "2026-10-17T05:30:16.660643+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    },
+    {
+      "claimed_product": null,
+      "matches": [
+        {
+          "alternatives": [
+            {
+              "id": "dyson_v8_absolute",
+              "name": "Dyson V8 Absolute family"
+            },
+            {
+              "id": "dyson_v11",
+              "name": "Dyson V11, non-catalogue lookalike"
+            }
+          ],
+          "box_2d": [
+            118,
+            269,
+            946,
+            715
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Perpendicular body layout with transparent bin positioned directly below the radial cyclone pack and motor housing.",
+            "Red bin release lever on top of cyclone assembly that pulls upwards to release the cyclone and open the bin base.",
+            "Radial cyclone pack enclosing a central conical pre-filter with purple top cap."
+          ],
+          "missing_evidence": [],
+          "object_id": "o1",
+          "product_id": "dyson_v8_absolute",
+          "product_name": "Dyson V8 Absolute family",
+          "retake_guidance": [],
+          "status": "match",
+          "verification": null
+        }
+      ],
+      "mode": "identify",
+      "photograph": {
+        "filename": "IMG_008.jpg"
+      },
+      "prediction_id": "96f633d3fb7e430cb3887d6e70bbac21",
+      "run_details": {
+        "completed_at": "2026-10-17T05:33:28.536291+00:00",
+        "cost_inr": 7.435949999999999,
+        "elapsed_seconds": 155.78743185400003,
+        "queued_seconds": 5.458542,
+        "started_at": "2026-10-17T05:30:52.747391+00:00"
+      },
+      "saved_at": "2026-10-17T05:33:28.546011+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    },
+    {
+      "claimed_product": null,
+      "matches": [
+        {
+          "alternatives": [
+            {
+              "id": "dyson_v12_detect_slim",
+              "name": "Dyson V12 Detect Slim"
+            },
+            {
+              "id": "dyson_v15_detect",
+              "name": "Dyson V15 Detect"
+            }
+          ],
+          "box_2d": [
+            378,
+            144,
+            627,
+            252
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Red push-button power control on the cyclone housing, matching the V12 single-button interface.",
+            "Slim in-line cylindrical dustbin with gold cyclone assembly and purple rear filter.",
+            "Handle loop lacks a finger trigger, with an in-line sliding bin release mechanism below the cyclones."
+          ],
+          "missing_evidence": [],
+          "object_id": "o1",
+          "product_id": "dyson_v12_detect_slim",
+          "product_name": "Dyson V12 Detect Slim",
+          "retake_guidance": [],
+          "status": "match",
+          "verification": null
+        },
+        {
+          "alternatives": [
+            {
+              "id": "dyson_v8_absolute",
+              "name": "Dyson V8 Absolute family"
+            },
+            {
+              "id": "dyson_v12_detect_slim",
+              "name": "Dyson V12 Detect Slim"
+            }
+          ],
+          "box_2d": [
+            374,
+            327,
+            604,
+            417
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Perpendicular body layout with clear vertical bin situated directly beneath a dual-tier radial cyclone array and rear handle.",
+            "Red lift-up bin release lever atop the cyclone pack for collar-sliding emptying.",
+            "Purple cylindrical post-motor filter mounted at the rear of the cyclone body."
+          ],
+          "missing_evidence": [],
+          "object_id": "o2",
+          "product_id": "dyson_v8_absolute",
+          "product_name": "Dyson V8 Absolute family",
+          "retake_guidance": [],
+          "status": "match",
+          "verification": null
+        },
+        {
+          "alternatives": [
+            {
+              "id": "dyson_wash_g1",
+              "name": "Dyson WashG1"
+            },
+            {
+              "id": "dyson_v16_piston_animal",
+              "name": "Dyson V16 Piston Animal"
+            }
+          ],
+          "box_2d": [
+            394,
+            936,
+            910,
+            1000
+          ],
+          "confidence": "Low",
+          "evidence": [
+            "Bright blue upright shaft along image edge",
+            "Partial clear liquid container visible on lower body",
+            "Floor-level cleaner head resting in base tray"
+          ],
+          "missing_evidence": [
+            "Full view of dual counter-rotating microfibre rollers",
+            "Complete twin water tank arrangement",
+            "Upper loop handle and control display",
+            "Readable model identifier"
+          ],
+          "object_id": "o4",
+          "product_id": null,
+          "product_name": null,
+          "retake_guidance": [
+            "Take a centered photo of the complete machine showing the handle controls, twin water tanks, and front cleaner head rollers.",
+            "Full view of dual counter-rotating microfibre rollers",
+            "Complete twin water tank arrangement",
+            "Upper loop handle and control display",
+            "Readable model identifier"
+          ],
+          "status": "not_sure",
+          "verification": null
+        }
+      ],
+      "mode": "identify",
+      "photograph": {
+        "filename": "IMG_009.jpg"
+      },
+      "prediction_id": "17d6f5bbec4e41af8ea253402971f02c",
+      "run_details": {
+        "completed_at": "2026-10-17T05:39:21.092193+00:00",
+        "cost_inr": 15.912075,
+        "elapsed_seconds": 302.01674324600003,
+        "queued_seconds": 5.614926,
+        "started_at": "2026-10-17T05:34:19.074424+00:00"
+      },
+      "saved_at": "2026-10-17T05:39:21.106413+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    },
+    {
+      "claimed_product": null,
+      "matches": [
+        {
+          "alternatives": [
+            {
+              "id": "dyson_wash_g1",
+              "name": "Dyson WashG1"
+            },
+            {
+              "id": "dyson_v15_detect",
+              "name": "Dyson V15 Detect"
+            }
+          ],
+          "box_2d": [
+            218,
+            209,
+            881,
+            440
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Stacked clear clean/dirty water reservoirs mounted to the central column match the WashG1 body layout",
+            "Wide motorized wet floor nozzle accommodating twin internal rollers matches WashG1"
+          ],
+          "missing_evidence": [],
+          "object_id": "o1",
+          "product_id": "dyson_wash_g1",
+          "product_name": "Dyson WashG1",
+          "retake_guidance": [],
+          "status": "match",
+          "verification": null
+        },
+        {
+          "alternatives": [
+            {
+              "id": "dyson_big_ball",
+              "name": "Dyson Big Ball"
+            },
+            {
+              "id": "dyson_v15_detect",
+              "name": "Dyson V15 Detect"
+            }
+          ],
+          "box_2d": [
+            234,
+            539,
+            915,
+            925
+          ],
+          "confidence": "High",
+          "evidence": [
+            "Spherical wheeled canister base with forward bin position matches Dyson Big Ball layout",
+            "Two-tier red radial cyclones on top of the clear dust bin match Big Ball cyclone assembly",
+            "Articulated wand handle with high rotating swivel joint matches Big Ball wand"
+          ],
+          "missing_evidence": [],
+          "object_id": "o2",
+          "product_id": "dyson_big_ball",
+          "product_name": "Dyson Big Ball",
+          "retake_guidance": [],
+          "status": "match",
+          "verification": null
+        }
+      ],
+      "mode": "identify",
+      "photograph": {
+        "filename": "IMG_010.jpg"
+      },
+      "prediction_id": "b3379689da7e482c9fc18ddae3334ce9",
+      "run_details": {
+        "completed_at": "2026-10-17T05:43:11.087695+00:00",
+        "cost_inr": 6.946350000000001,
+        "elapsed_seconds": 148.2189640050001,
+        "queued_seconds": 6.71563,
+        "started_at": "2026-10-17T05:40:42.865863+00:00"
+      },
+      "saved_at": "2026-10-17T05:43:11.100221+00:00",
+      "schema_version": 1,
+      "status": "completed"
+    }
+  ],
+  "review_predictions": [
+    {
+      "case": "U001",
+      "source": {
+        "source_url": "https://www.youtube.com/watch?v=MS5GCLw7yU8&t=72s",
+        "source_title": "Dyson® V8 Absolute Review After 4 Years!",
+        "label_basis": "The title names Dyson V8 Absolute; at 00:25 the owner identifies the machine he bought as a Dyson V8.",
+        "expected_family": "dyson_v8_absolute",
+        "actual_player_timestamp_seconds": 72
+      },
+      "scored_outcome": "correct",
+      "prediction": {
+        "claimed_product": null,
+        "matches": [
+          {
+            "alternatives": [
+              {
+                "id": "dyson_v8_absolute",
+                "name": "Dyson V8 Absolute family"
+              },
+              {
+                "id": "dyson_v11",
+                "name": "Dyson V11, non-catalogue lookalike"
+              }
+            ],
+            "box_2d": [
+              338,
+              192,
+              737,
+              493
+            ],
+            "confidence": "High",
+            "evidence": [
+              "Perpendicular dustbin situated directly below the cyclone assembly ahead of the handle, matching V8 handheld layout.",
+              "Red top-mounted cyclone release latch lifted to empty the perpendicular dustbin, matching the V8 mechanism.",
+              "Cylindrical purple post-motor filter cap with radial exhaust vents protruding from the rear.",
+              "Finger trigger switch located inside the pistol grip handle."
+            ],
+            "missing_evidence": [],
+            "object_id": "o1",
+            "product_id": "dyson_v8_absolute",
+            "product_name": "Dyson V8 Absolute family",
+            "retake_guidance": [],
+            "status": "match",
+            "verification": null
+          }
+        ],
+        "mode": "identify",
+        "photograph": {
+          "filename": "U001.jpg"
+        },
+        "prediction_id": "fa201517b556432b9776cc8e9544a65e",
+        "run_details": {
+          "completed_at": "2026-10-17T05:46:32.620184+00:00",
+          "cost_inr": 5.149275,
+          "elapsed_seconds": 126.67483745999994,
+          "queued_seconds": 6.089287,
+          "started_at": "2026-10-17T05:44:25.942804+00:00"
+        },
+        "saved_at": "2026-10-17T05:46:32.634242+00:00",
+        "schema_version": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "case": "U002",
+      "source": {
+        "source_url": "https://www.youtube.com/watch?v=MS5GCLw7yU8&t=252s",
+        "source_title": "Dyson® V8 Absolute Review After 4 Years!",
+        "label_basis": "The title names Dyson V8 Absolute; at 00:25 the owner identifies the machine he bought as a Dyson V8.",
+        "expected_family": "dyson_v8_absolute",
+        "actual_player_timestamp_seconds": 252
+      },
+      "scored_outcome": "correct",
+      "prediction": {
+        "claimed_product": null,
+        "matches": [
+          {
+            "alternatives": [
+              {
+                "id": "dyson_v8_absolute",
+                "name": "Dyson V8 Absolute family"
+              },
+              {
+                "id": "dyson_v11",
+                "name": "Dyson V11, non-catalogue lookalike"
+              }
+            ],
+            "box_2d": [
+              614,
+              335,
+              986,
+              627
+            ],
+            "confidence": "High",
+            "evidence": [
+              "Perpendicular body layout with transparent bin positioned vertically beneath radial cyclones",
+              "Red top-mounted release lever between cyclones and motor housing to lift shroud for bin emptying",
+              "Purple cylindrical post-motor filter cap mounted to the rear of the motor housing"
+            ],
+            "missing_evidence": [],
+            "object_id": "o1",
+            "product_id": "dyson_v8_absolute",
+            "product_name": "Dyson V8 Absolute family",
+            "retake_guidance": [],
+            "status": "match",
+            "verification": null
+          }
+        ],
+        "mode": "identify",
+        "photograph": {
+          "filename": "U002.jpg"
+        },
+        "prediction_id": "353ef079befe4897ba429a6d9df04fa0",
+        "run_details": {
+          "completed_at": "2026-10-17T05:51:23.022818+00:00",
+          "cost_inr": 9.818925,
+          "elapsed_seconds": 207.1777221499999,
+          "queued_seconds": 6.517956,
+          "started_at": "2026-10-17T05:47:55.844132+00:00"
+        },
+        "saved_at": "2026-10-17T05:51:23.036777+00:00",
+        "schema_version": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "case": "U003",
+      "source": {
+        "source_url": "https://www.youtube.com/watch?v=wPj-aRe5tU4&t=113s",
+        "source_title": "Dyson v12 Detect Slim Review: Is it worth the price tag?",
+        "label_basis": "The title and opening narration identify Dyson V12 Detect Slim; the reviewer states she purchased it.",
+        "expected_family": "dyson_v12_detect_slim",
+        "actual_player_timestamp_seconds": 113
+      },
+      "scored_outcome": "correct",
+      "prediction": {
+        "claimed_product": null,
+        "matches": [
+          {
+            "alternatives": [
+              {
+                "id": "dyson_v12_detect_slim",
+                "name": "Dyson V12 Detect Slim"
+              },
+              {
+                "id": "dyson_v15_detect",
+                "name": "Dyson V15 Detect"
+              }
+            ],
+            "box_2d": [
+              254,
+              258,
+              1000,
+              753
+            ],
+            "confidence": "High",
+            "evidence": [
+              "Red push-button power control positioned directly on the top surface of the motor housing ahead of the filter, matching the button-operated V12 rather than trigger control.",
+              "In-line slim body configuration with single-tier cyclone flutes and integrated top housing button, matching the V12 Detect Slim body profile.",
+              "Rear circular LCD interface showing real-time 4-channel particle count bar graph and countdown runtime."
+            ],
+            "missing_evidence": [],
+            "object_id": "o1",
+            "product_id": "dyson_v12_detect_slim",
+            "product_name": "Dyson V12 Detect Slim",
+            "retake_guidance": [],
+            "status": "match",
+            "verification": null
+          }
+        ],
+        "mode": "identify",
+        "photograph": {
+          "filename": "U003.jpg"
+        },
+        "prediction_id": "ca348a30af3b4d7f877865d220d9c542",
+        "run_details": {
+          "completed_at": "2026-10-17T05:57:57.189554+00:00",
+          "cost_inr": 15.92955,
+          "elapsed_seconds": 317.4043144860002,
+          "queued_seconds": 6.716474,
+          "started_at": "2026-10-17T05:52:39.784186+00:00"
+        },
+        "saved_at": "2026-10-17T05:57:57.204852+00:00",
+        "schema_version": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "case": "U004",
+      "source": {
+        "source_url": "https://www.youtube.com/watch?v=wPj-aRe5tU4&t=187s",
+        "source_title": "Dyson v12 Detect Slim Review: Is it worth the price tag?",
+        "label_basis": "The title and opening narration identify Dyson V12 Detect Slim; the reviewer states she purchased it.",
+        "expected_family": "dyson_v12_detect_slim",
+        "actual_player_timestamp_seconds": 187
+      },
+      "scored_outcome": "correct",
+      "prediction": {
+        "claimed_product": null,
+        "matches": [
+          {
+            "alternatives": [
+              {
+                "id": "dyson_v12_detect_slim",
+                "name": "Dyson V12 Detect Slim"
+              },
+              {
+                "id": "dyson_v15_detect",
+                "name": "Dyson V15 Detect"
+              }
+            ],
+            "box_2d": [
+              250,
+              287,
+              1000,
+              395
+            ],
+            "confidence": "High",
+            "evidence": [
+              "Prominent red circular push button located directly on the gold housing above the cyclones",
+              "In-line slim motor, cyclone section, and cylindrical transparent bin",
+              "Gold cyclone pack with single-tier flutes below a purple top filter cap"
+            ],
+            "missing_evidence": [],
+            "object_id": "o1",
+            "product_id": "dyson_v12_detect_slim",
+            "product_name": "Dyson V12 Detect Slim",
+            "retake_guidance": [],
+            "status": "match",
+            "verification": null
+          }
+        ],
+        "mode": "identify",
+        "photograph": {
+          "filename": "U004.jpg"
+        },
+        "prediction_id": "b439527f162e44ec894b9d37125b9954",
+        "run_details": {
+          "completed_at": "2026-10-17T06:00:27.132539+00:00",
+          "cost_inr": 3.9912,
+          "elapsed_seconds": 110.70406247499977,
+          "queued_seconds": 7.22133,
+          "started_at": "2026-10-17T05:58:36.425399+00:00"
+        },
+        "saved_at": "2026-10-17T06:00:27.146484+00:00",
+        "schema_version": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "case": "U005",
+      "source": {
+        "source_url": "https://www.youtube.com/watch?v=qTPwEJaeRdM&t=302s",
+        "source_title": "Dyson V15 Detect Review: Pros & Cons | A Perfectionist’s Nightmare?",
+        "label_basis": "The title and opening sentence explicitly identify Dyson V15 Detect. The reviewer describes this as her everyday vacuum.",
+        "expected_family": "dyson_v15_detect",
+        "actual_player_timestamp_seconds": 302
+      },
+      "scored_outcome": "uncertain",
+      "prediction": {
+        "claimed_product": null,
+        "matches": [
+          {
+            "alternatives": [
+              {
+                "id": "dyson_v15_detect",
+                "name": "Dyson V15 Detect"
+              },
+              {
+                "id": "dyson_v12_detect_slim",
+                "name": "Dyson V12 Detect Slim"
+              }
+            ],
+            "box_2d": [
+              426,
+              270,
+              1000,
+              616
+            ],
+            "confidence": "Low",
+            "evidence": [
+              "Circular rear LCD display showing real-time piezo dust particle count bar graph (>10µm to >500µm)",
+              "Single metallic circular selection button located at the bottom rim of the LCD screen",
+              "Translucent purple rear filter housing with gold cyclone cones partially visible"
+            ],
+            "missing_evidence": [
+              "View of the handle to distinguish trigger operation (V15 Detect) from button operation (V12 Detect Slim)",
+              "View of the upper body to verify presence or absence of the red power button (V12 Detect Slim)",
+              "Side profile showing full body and bin proportions",
+              "Legible model name badge or serial rating label"
+            ],
+            "object_id": "o1",
+            "product_id": null,
+            "product_name": null,
+            "retake_guidance": [
+              "Capture a side profile view of the complete vacuum body showing the handle, power controls, and bin assembly.",
+              "View of the handle to distinguish trigger operation (V15 Detect) from button operation (V12 Detect Slim)",
+              "View of the upper body to verify presence or absence of the red power button (V12 Detect Slim)",
+              "Side profile showing full body and bin proportions",
+              "Legible model name badge or serial rating label"
+            ],
+            "status": "not_sure",
+            "verification": null
+          }
+        ],
+        "mode": "identify",
+        "photograph": {
+          "filename": "U005.jpg"
+        },
+        "prediction_id": "1c6f0b596a15483eb86a8f9d6581d546",
+        "run_details": {
+          "completed_at": "2026-10-17T06:04:18.651875+00:00",
+          "cost_inr": 7.362675,
+          "elapsed_seconds": 171.01083647299993,
+          "queued_seconds": 7.25835,
+          "started_at": "2026-10-17T06:01:27.636729+00:00"
+        },
+        "saved_at": "2026-10-17T06:04:18.673166+00:00",
+        "schema_version": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "case": "U006",
+      "source": {
+        "source_url": "https://www.youtube.com/watch?v=qTPwEJaeRdM&t=380s",
+        "source_title": "Dyson V15 Detect Review: Pros & Cons | A Perfectionist’s Nightmare?",
+        "label_basis": "The title and opening sentence explicitly identify Dyson V15 Detect. The reviewer describes this as her everyday vacuum.",
+        "expected_family": "dyson_v15_detect",
+        "actual_player_timestamp_seconds": 380
+      },
+      "scored_outcome": "uncertain",
+      "prediction": {
+        "claimed_product": null,
+        "matches": [
+          {
+            "alternatives": [
+              {
+                "id": "dyson_v15_detect",
+                "name": "Dyson V15 Detect"
+              },
+              {
+                "id": "dyson_v11",
+                "name": "Dyson V11, non-catalogue lookalike"
+              }
+            ],
+            "box_2d": [
+              265,
+              0,
+              1000,
+              794
+            ],
+            "confidence": "Low",
+            "evidence": [
+              "In-line body layout with clear cylindrical bin and red sliding release mechanism",
+              "Pistol-grip handle with trigger switch",
+              "Rear circular display housing on translucent purple filter assembly"
+            ],
+            "missing_evidence": [
+              "Active rear display showing particle count data or runtime modes",
+              "Legible printed model identifier on the body, bin, or wand"
+            ],
+            "object_id": "o1",
+            "product_id": null,
+            "product_name": null,
+            "retake_guidance": [
+              "Power on the vacuum to show the rear display interface or photograph the printed model name.",
+              "Active rear display showing particle count data or runtime modes",
+              "Legible printed model identifier on the body, bin, or wand"
+            ],
+            "status": "not_sure",
+            "verification": null
+          }
+        ],
+        "mode": "identify",
+        "photograph": {
+          "filename": "U006.jpg"
+        },
+        "prediction_id": "a0876fa6daf14714b21de9e0f07efca1",
+        "run_details": {
+          "completed_at": "2026-10-17T06:09:02.109266+00:00",
+          "cost_inr": 10.7553,
+          "elapsed_seconds": 226.8597144549999,
+          "queued_seconds": 7.760681,
+          "started_at": "2026-10-17T06:05:15.248584+00:00"
+        },
+        "saved_at": "2026-10-17T06:09:02.176037+00:00",
+        "schema_version": 1,
+        "status": "completed"
+      }
+    }
+  ],
+  "preserved_original_failure": {
+    "claimed_product": null,
+    "matches": [],
+    "mode": "identify",
+    "photograph": {
+      "filename": "IMG_001.jpg"
+    },
+    "prediction_id": "bcc89ff8f40142529e90421250b960b9",
+    "run_details": {
+      "completed_at": "2026-10-17T05:04:19.763950+00:00",
+      "cost_inr": 3.9087000000000005,
+      "elapsed_seconds": 99.20997486099998,
+      "queued_seconds": 4.431542,
+      "started_at": "2026-10-17T05:02:40.552652+00:00"
+    },
+    "saved_at": "2026-10-17T05:04:19.774226+00:00",
+    "schema_version": 1,
+    "status": "failed"
+  }
+}
