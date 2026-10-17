@@ -12,9 +12,9 @@ from .protocol import inventory_prompt, validate_inventory, RESULT_FORMAT, valid
 from .predictions import PIPELINE_VERSION
 from .transport import digest, encoded
 
-RUNTIME_CAP_INR = 100.0
+RUNTIME_CAP_INR = 300.0
 HISTORICAL_STAGE_GUARD_INR = 801.9682441
-STAGE_CAP_INR = 1000.0
+STAGE_CAP_INR = 1200.0
 GUARD_FX = 100.0
 PAUSE_SECONDS = 15
 FEATURES = {'body_layout', 'handle_control', 'bin_mechanism', 'display_layout',
@@ -136,7 +136,7 @@ def validate_batch(raw, targets, snapshot, available_originals=()):
     results = {}
     for row in raw['results']:
         target = next(target for target in targets if target['object_id'] == row['object_id'])
-        item = validate_match_result(row.get('result'), candidates)
+        item = validate_match_result(row.get('result', row), candidates)
         if item.get('decisive_region') is not None:
             valid_box(item['decisive_region'])
             try:

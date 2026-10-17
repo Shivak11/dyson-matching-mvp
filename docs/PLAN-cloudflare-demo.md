@@ -26,3 +26,9 @@ Shiva rejected the first UI as looking vibe coded and explicitly requested his w
 Official Dyson documents are now authorised additions. Download unchanged manufacturer PDFs where available, distinguish manuals from brochures, attach them to the right family, and add only source-supported diagnostic details with URL/title/page provenance. Preserve variant limits. UI must truthfully show attached document/usable-detail/processing states and refresh after changes. This amendment supersedes the earlier no-catalogue-change line only for these source-supported additions. No accuracy uplift is asserted without testing.
 
 Revised ownership: frontend worker owns web/index.html, web/app.js and web/style.css only. Manufacturer-document worker owns var/manufacturer-documents (ignored assets and manifest) and docs/manufacturer-document-sources.md only; it must not mutate the database, seed or inference code. Orchestrator owns integration, seed preparation, plan, Cloudflare files and deployment.
+
+## Hosted acceptance recovery and spending amendment
+
+17 October: the owner authorised a further INR200. Raise the app allowance from INR100 to INR300 and the cumulative stage ceiling from INR1000 to INR1200, preserving all prior charges and reservations. The two ceilings apply to the same spending; this is one INR200 increase.
+
+The first hosted photo reached Gemini and produced an evidence-supported V8 result, but validation failed because the provider flattened the per-object response instead of using the requested nested result object. Accept either response layout through the same existing validators. Do not change prompts, evidence gates, confidence thresholds or providers. Preserve the failed run and its sealed exports, test the already-paid response offline, then make one explicit retry through the app for hosted acceptance. No full dataset rerun.

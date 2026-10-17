@@ -117,6 +117,17 @@ class InferenceTests(unittest.TestCase):
         self.assertEqual(result['product_id'], 'dyson_gen5detect')
         self.assertEqual(result['verification'], 'rejected')
 
+    def test_flat_comparison_uses_the_same_evidence_validation(self):
+        raw = response(self.snapshot)
+        nested = validate_batch(raw, [target()], self.snapshot)['o1']
+        flat = {'results': [{'object_id': 'o1', **raw['results'][0]['result']}]}
+        accepted = validate_batch(flat, [target()], self.snapshot)['o1']
+        self.assertEqual(accepted['decision'], nested['decision'])
+        self.assertEqual(accepted['feature_checks'], nested['feature_checks'])
+        flat['results'][0]['decision']['confidence'] = 0.95
+        with self.assertRaises(ValueError):
+            validate_batch(flat, [target()], self.snapshot)
+
     def test_shared_controls_lcd_filter_cannot_resolve_v16(self):
         raw = response(self.snapshot, 'dyson_v16_piston_animal')
         checks = raw['results'][0]['result']['feature_checks']
