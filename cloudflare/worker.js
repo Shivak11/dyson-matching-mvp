@@ -74,6 +74,10 @@ export default {
     try {
       if (url.pathname === '/__state') {
         if (!env.CLOUD_STATE_TOKEN || !await equalSecret(request.headers.get('authorization'), 'Bearer ' + env.CLOUD_STATE_TOKEN)) return response('Not found', 404);
+        if (request.method === 'POST' && request.headers.get('x-demo-action') === 'restart') {
+          await env.PHOTO_DEMO.getByName('multiplier-single-demo').stop('SIGKILL');
+          return response('Restart requested');
+        }
         if (request.method === 'GET') {
           const saved = await env.STATE.get('demo/state.tar.gz');
           return saved ? response(saved.body, 200, { 'Content-Type': 'application/gzip' }) : response('Not found', 404);

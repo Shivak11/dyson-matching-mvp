@@ -14,6 +14,13 @@ const env = { DEMO_ACCESS_CODE: 'test-only-code', CLOUD_CONTAINER_TOKEN: secret,
 assert.equal((await worker.default.fetch(new Request('https://demo.example/api/jobs', { method: 'POST' }), env)).status, 401);
 assert.equal((await worker.default.fetch(new Request('https://demo.example/__state'), env)).status, 404);
 assert.equal((await worker.default.fetch(new Request('https://demo.example/__state', { headers: { authorization: 'Bearer undefined' } }), {})).status, 404);
+let stops = 0;
+const controlEnv = { ...env, PHOTO_DEMO: { getByName: () => ({ stop: async signal => { assert.equal(signal, 'SIGKILL'); stops += 1; } }) } };
+const restart = authorization => new Request('https://demo.example/__state', { method: 'POST', headers: { authorization, 'x-demo-action': 'restart' } });
+assert.equal((await worker.default.fetch(restart('Bearer wrong'), controlEnv)).status, 404);
+assert.equal(stops, 0);
+assert.equal((await worker.default.fetch(restart('Bearer test-only-state'), controlEnv)).status, 200);
+assert.equal(stops, 1);
 const login = await worker.default.fetch(new Request('https://demo.example/'), env);
 assert.equal(login.status, 200);
 assert.match(await login.text(), /Enter the demo access code/);
