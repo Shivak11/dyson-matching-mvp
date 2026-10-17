@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "retrieved_date": "2026-10-17",
+  "asset_directory": "var/manufacturer-documents",
+  "max_attachment_bytes": 12582912,
+  "documents": [
+    {
+      "product_id": "dyson_big_ball",
+      "document_type": "user_manual",
+      "title": "Dyson Big Ball CY23 user manual (India)",
+      "source_url": "https://www.dyson.co.uk/content/dam/dyson/india/2025/CY23_IN_DYSON-BIG-BALL.pdf",
+      "owner_page_url": "https://www.dyson.in/vacuum-cleaners/corded-vacuums/big-ball/owners",
+      "filename": "dyson_big_ball-user-manual.pdf",
+      "sha256": "6dc0ccbb54bd108c85a8166ba0286fb16b0d34b452b4023d9fb8fa34358288ce",
+      "size_bytes": 3509081,
+      "pdf_pages": 12,
+      "region_scope": "India CY23",
+      "attachment_eligible": true,
+      "attachment_status": "attach_original",
+      "text_extraction_status": "text_verified",
+      "text_extraction_method": "PDF text extraction only; no OCR",
+      "useful_identification_details": [
+        {
+          "detail": "The rating plate used to find the serial number is behind the clear bin.",
+          "pdf_page": 2,
+          "supporting_text": "behind the clear bin.",
+          "source_url": "https://www.dyson.co.uk/content/dam/dyson/india/2025/CY23_IN_DYSON-BIG-BALL.pdf#page=2"
+        },
+        {
+          "detail": "The machine has a red on/off power button and a separate cable-retract control.",
+          "pdf_page": 10,
+          "supporting_text": "press the red power button",
+          "source_url": "https://www.dyson.co.uk/content/dam/dyson/india/2025/CY23_IN_DYSON-BIG-BALL.pdf#page=10"
+        }
+      ],
+      "variant_limits": [
+        "This manual is for CY23; do not treat it as proof of every Dyson Ball or Cinetic upright/cylinder variant.",
+        "Rating-plate text must be legible and attached to the physical machine to establish an exact identifier."
+      ]
+    },
+    {
+      "product_id": "dyson_v8_absolute",
+      "document_type": "user_manual",
+      "title": "Dyson V8 SV10 operating manual (US, English/Spanish)",
+      "source_url": "https://www.dyson.com/content/dam/dyson/maintenance/user-guides/en_US/vacuumcleaners/cordlessstickvacuums/sv10/without-soft-roller/229602-01.pdf",
+      "owner_page_url": "https://www.dyson.in/vacuum-cleaners/cord-free/dyson-v8/owners",
+      "filename": "dyson_v8_absolute-user-manual.pdf",
+      "sha256": "fec13367d7676b81120ed3e08f6308003881033c482c79dcd0a0c828c062ec8b",
+      "size_bytes": 3075739,
+      "pdf_pages": 18,
+      "region_scope": "US SV10 family reference",
+      "attachment_eligible": true,
+      "attachment_status": "attach_original",
+      "text_extraction_status": "text_verified",
+      "text_extraction_method": "PDF text extraction only; no OCR",
+      "useful_identification_details": [
+        {
+          "detail": "The operating modes are labelled Powerful suction and Max mode.",
+          "pdf_page": 1,
+          "supporting_text": "Powerful suction",
+          "source_url": "https://www.dyson.com/content/dam/dyson/maintenance/user-guides/en_US/vacuumcleaners/cordlessstickvacuums/sv10/without-soft-roller/229602-01.pdf#page=1"
+        },
+        {
+          "detail": "The instructions refer to an ON trigger and a twist-removable filter B.",
+          "pdf_page": 12,
+          "supporting_text": "Be careful not to pull",
+          "source_url": "https://www.dyson.com/content/dam/dyson/maintenance/user-guides/en_US/vacuumcleaners/cordlessstickvacuums/sv10/without-soft-roller/229602-01.pdf#page=12"
+        }
+      ],
+      "variant_limits": [
+        "Official US V8/SV10 family manual; it does not establish the India Absolute accessory bundle.",
+        "The URL specifies without-soft-roller; absence or presence of a detachable cleaner head must not decide the family.",
+        "Several English pages have no extractable text; only cited text-bearing pages supplied these facts."
+      ]
+    },
+    {
+      "product_id": "dyson_v12_detect_slim",
+      "document_type": "user_manual",
+      "title": "Dyson V12 Detect Slim user manual (US)",
+      "source_url": "https://www.dyson.com/content/dam/dyson/maintenance/user-guides/en_US/vacuumcleaners/cordlessstickvacuums/v12/447625-01.pdf",
+      "owner_page_url": "https://www.dyson.in/vacuum-cleaners/cord-free/dyson-v12-detect-slim-vacuums/owners",
+      "filename": "dyson_v12_detect_slim-user-manual.pdf",
+      "sha256": "798ecfe03bc9d2300feb4ee2d05d6be759094c2521da8459e96ff8ace1c41dd5",
+      "size_bytes": 48606230,
+      "pdf_pages": 13,
+      "region_scope": "US V12 Detect Slim family reference",
+      "attachment_eligible": false,
+      "attachment_status": "external_link_only_size_limit",
+      "text_extraction_status": "text_verified",
+      "text_extraction_method": "PDF text extraction only; no OCR",
+      "useful_identification_details": [
+        {
+          "detail": "The selection button is at the filter end of the machine and selects Eco, Auto/Med and Boost modes.",
+          "pdf_page": 3,
+          "supporting_text": "on the filter end",
+          "source_url": "https://www.dyson.com/content/dam/dyson/maintenance/user-guides/en_US/vacuumcleaners/cordlessstickvacuums/v12/447625-01.pdf#page=3"
+        },
+        {
+          "detail": "The LCD presents particle-count information, selected mode and remaining run time.",
+          "pdf_page": 4,
+          "supporting_text": "particle count information and performance",
+          "source_url": "https://www.dyson.com/content/dam/dyson/maintenance/user-guides/en_US/vacuumcleaners/cordlessstickvacuums/v12/447625-01.pdf#page=4"
+        },
+        {
+          "detail": "A red bin release slides the bin down and opens its base.",
+          "pdf_page": 7,
+          "supporting_text": "Firmly push the red bin release button.",
+          "source_url": "https://www.dyson.com/content/dam/dyson/maintenance/user-guides/en_US/vacuumcleaners/cordlessstickvacuums/v12/447625-01.pdf#page=7"
+        }
+      ],
+      "variant_limits": [
+        "This is a US family manual, not proof of the India Absolute colour or accessory package.",
+        "The document explicitly says not all pictured cleaner heads are included.",
+        "Generic trigger wording appears in maintenance descriptions; do not use that wording to establish the V12 power-control type.",
+        "Shared LCD and bin features do not alone distinguish V12 from V15."
+      ]
+    },
+    {
+      "product_id": "dyson_v15_detect",
+      "document_type": "user_manual",
+      "title": "Dyson V15 Detect user manual (India-linked)",
+      "source_url": "https://www.dyson.co.uk/content/dam/dyson/india/2022/dyson-v15/Dyson-V15-Detect-User-Manual.pdf",
+      "owner_page_url": "https://www.dyson.in/vacuum-cleaners/cord-free/dyson-v15-cordfree-vacuum/owners",
+      "filename": "dyson_v15_detect-user-manual.pdf",
+      "sha256": "b7a308367e248fd269cc11bfd57e129fb78fa432c5975bd4dba3add5dfe96cd1",
+      "size_bytes": 66011259,
+      "pdf_pages": 14,
+      "region_scope": "India-linked V15 Detect family reference",
+      "attachment_eligible": false,
+      "attachment_status": "external_link_only_size_limit",
+      "text_extraction_status": "text_verified",
+      "text_extraction_method": "PDF text extraction only; no OCR",
+      "useful_identification_details": [
+        {
+          "detail": "The manual lists a click-in battery and Laser Slim Fluffy or High Torque anti-tangle cleaner heads.",
+          "pdf_page": 2,
+          "supporting_text": "Vacuum cleaner with click-in",
+          "source_url": "https://www.dyson.co.uk/content/dam/dyson/india/2022/dyson-v15/Dyson-V15-Detect-User-Manual.pdf#page=2"
+        },
+        {
+          "detail": "The LCD shows particle counts, selected cleaning mode and remaining run time.",
+          "pdf_page": 4,
+          "supporting_text": "particle count information and performance",
+          "source_url": "https://www.dyson.co.uk/content/dam/dyson/india/2022/dyson-v15/Dyson-V15-Detect-User-Manual.pdf#page=4"
+        },
+        {
+          "detail": "The bin slides down when its red release is pushed, and the base opens.",
+          "pdf_page": 7,
+          "supporting_text": "The bin will slide down",
+          "source_url": "https://www.dyson.co.uk/content/dam/dyson/india/2022/dyson-v15/Dyson-V15-Detect-User-Manual.pdf#page=7"
+        }
+      ],
+      "variant_limits": [
+        "The manual says the box contains one or more listed cleaner heads; not all are included.",
+        "Detachable accessories and these shared LCD features cannot alone establish an exact variant.",
+        "The cover contains SV12/JN placeholder text; do not use that placeholder as a V15 model identifier."
+      ]
+    },
+    {
+      "product_id": "dyson_v16_piston_animal",
+      "document_type": "user_manual",
+      "title": "Dyson V16 Piston Animal user manual (UK)",
+      "source_url": "https://www.dyson.co.uk/content/dam/dyson/maintenance/user-guides/en_GB/vacuumcleaners/cordlessstickvacuums/sv53-a/499085-01.pdf",
+      "owner_page_url": "https://www.dyson.co.uk/support/vacuum-cleaners/cordless/v16-piston-animal",
+      "filename": "dyson_v16_piston_animal-user-manual.pdf",
+      "sha256": "760a62cb5af2d0038da18f2be9484afe3a65aeb03fee84a6f2523e6baa498029",
+      "size_bytes": 39766778,
+      "pdf_pages": 19,
+      "region_scope": "UK SV53-A family reference",
+      "attachment_eligible": false,
+      "attachment_status": "external_link_only_size_limit",
+      "text_extraction_status": "text_verified",
+      "text_extraction_method": "PDF text extraction only; no OCR",
+      "useful_identification_details": [
+        {
+          "detail": "The wand has remote release and a built-in handheld tool; the listed main head is All Floor Cones Sense.",
+          "pdf_page": 2,
+          "supporting_text": "Wand with remote release and built-in-tool",
+          "source_url": "https://www.dyson.co.uk/content/dam/dyson/maintenance/user-guides/en_GB/vacuumcleaners/cordlessstickvacuums/sv53-a/499085-01.pdf#page=2"
+        },
+        {
+          "detail": "A red collar releases tools and a red button on the LCD starts the machine.",
+          "pdf_page": 3,
+          "supporting_text": "Press the red collar",
+          "source_url": "https://www.dyson.co.uk/content/dam/dyson/maintenance/user-guides/en_GB/vacuumcleaners/cordlessstickvacuums/sv53-a/499085-01.pdf#page=3"
+        },
+        {
+          "detail": "The dust-compression lever is separate from the bin-base release lever.",
+          "pdf_page": 10,
+          "supporting_text": "Compressing dust",
+          "source_url": "https://www.dyson.co.uk/content/dam/dyson/maintenance/user-guides/en_GB/vacuumcleaners/cordlessstickvacuums/sv53-a/499085-01.pdf#page=10"
+        }
+      ],
+      "variant_limits": [
+        "UK family manual; it includes optional Submarine 2.0 and Floor Dok accessories, which must not be assumed to be included with the India product.",
+        "This edition describes a silver bin release, while the US owner page describes a black release; use the mechanism rather than a universal colour rule.",
+        "The cover contains SV12/JN placeholder text; do not treat that as the V16 identifier."
+      ]
+    },
+    {
+      "product_id": "dyson_wash_g1",
+      "document_type": "user_manual",
+      "title": "Dyson WashG1 user manual (Hong Kong English)",
+      "source_url": "https://www.dyson.co.uk/content/dam/dyson/maintenance/user-guides/hk_hk/vacuums/washg1_hk_en_user_manual.pdf",
+      "owner_page_url": "https://www.dyson.in/vacuum-cleaners/wet-floor-cleaners/washg1/owners",
+      "filename": "dyson_washg1-user-manual.pdf",
+      "sha256": "3e98320ebe9b85250518de0822db6287dac3371bdf710dad7a51fb874ddaccd2",
+      "size_bytes": 10261955,
+      "pdf_pages": 16,
+      "region_scope": "Hong Kong English family reference",
+      "attachment_eligible": true,
+      "attachment_status": "attach_original",
+      "text_extraction_status": "no_extractable_text",
+      "text_extraction_method": "PDF text extraction only; no OCR",
+      "useful_identification_details": [],
+      "variant_limits": [
+        "The original PDF contains no extractable text. No local or Apple OCR was performed.",
+        "Attachment is an official family manual; no diagnostic claims were extracted from its diagrams.",
+        "The Hong Kong edition does not establish India-specific package contents or warranty terms."
+      ]
+    }
+  ],
+  "missing_brochures": "No separate first-party marketing brochure was located in this bounded search. Documents are labelled user manuals.",
+  "integration_notes": [
+    "Only entries with attachment_eligible=true may be attached under the unchanged upload cap.",
+    "Large PDFs remain local research evidence only and must not be copied into seeded media or the checkpoint.",
+    "Manufacturer text provides comparison evidence, not unique identity labels or measured accuracy improvement.",
+    "WashG1 PDF is attached reference material only; usable text status must remain unprocessed."
+  ]
+}

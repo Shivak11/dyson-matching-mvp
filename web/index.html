@@ -10,28 +10,32 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="topbar">
-    <div class="brand">Multiplier<span>Photo matching</span></div>
-    <nav aria-label="Main navigation">
-      <button type="button" data-nav="match" class="active" aria-current="page">Match photos</button>
-      <button type="button" data-nav="catalogue">Catalogue</button>
-      <button type="button" data-nav="dataset">Dataset guide</button>
-      <button type="button" data-nav="history">History</button>
-    </nav>
-    <button type="button" class="tour-launch" id="startTour">Take a tour <span aria-hidden="true">↗</span></button>
-  </header>
-  <p id="globalError" class="globalerror hidden" role="alert"></p>
-  <div class="layout">
-    <aside aria-label="Store photo queue">
-      <div class="asidetitle"><h2>Store photos</h2><span class="count" id="queueCount">0 photos</span></div>
-      <button class="upload" type="button" data-upload><span class="plus" aria-hidden="true">+</span> Upload photos</button>
-      <div id="queue"><p class="asideempty">Your store photos will appear here.</p></div>
-      <div class="asidebottom" id="allowance"><p class="small muted">Loading run allowance…</p></div>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <div class="brand">Multiplier<span>Photo matching</span></div>
+      <nav aria-label="Main navigation">
+        <button type="button" data-nav="match" class="active" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="8" cy="9" r="1.5"/><path d="m5 17 5-5 4 4 3-3 3 4"/></svg>Identify products</button>
+        <button type="button" data-nav="catalogue"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Manufacturer catalogue</button>
+        <button type="button" data-nav="history"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 11a9 9 0 1 1 2.6 7M3 4v7h7m2-4v5l3 2"/></svg>Saved results</button>
+        <button type="button" data-nav="dataset"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5zm4 5h6m-6 4h6m-6 4h4"/></svg>Dataset guide</button>
+      </nav>
+      <section class="queue-section" id="queueSection" hidden aria-label="Store photo queue">
+        <div class="asidetitle"><h2>Recent photos</h2><span class="count" id="queueCount">0</span></div>
+        <div id="queue"></div>
+      </section>
+      <div class="sidebar-bottom">
+        <button type="button" class="tour-launch" id="startTour"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg>Take a platform tour</button>
+        <details class="runtime"><summary>Model and run allowance</summary><div id="allowance"><p class="small muted">Loading settings…</p></div></details>
+      </div>
     </aside>
-    <main class="main" id="main" tabindex="-1" aria-busy="true"><div class="heading"><h1>Loading workspace…</h1></div></main>
+    <div class="workspace">
+      <p id="globalError" class="globalerror hidden" role="alert"></p>
+      <main class="main" id="main" tabindex="-1" aria-busy="true"><div class="heading"><h1>Loading workspace…</h1></div></main>
+    </div>
   </div>
+  <div id="tourOverlay" class="tour-overlay" hidden aria-hidden="true"><div data-shade="top"></div><div data-shade="left"></div><div data-shade="right"></div><div data-shade="bottom"></div><div id="tourFocus" class="tour-focus"></div></div>
   <dialog id="platformTour" class="tour" aria-labelledby="tourTitle" aria-describedby="tourText">
-    <div class="tour-top"><span id="tourProgress"></span><button type="button" class="quiet" id="closeTour" aria-label="Close tour">✕</button></div>
+    <div class="tour-top"><span id="tourProgress"></span><button type="button" class="quiet" id="closeTour">Skip tour</button></div>
     <h2 id="tourTitle"></h2><p id="tourText"></p>
     <div class="tour-actions"><button type="button" id="tourBack">Back</button><button type="button" class="primary" id="tourNext">Next</button></div>
   </dialog>
