@@ -7,9 +7,9 @@
 The owner explicitly confirmed `shiva.research11@gmail.com` as the intended paid account. A fresh Wrangler OAuth authorisation succeeded with Workers and Containers scopes. The earlier automatic review rejection was resolved by that explicit account confirmation before retrying.
 
 - Account ID: `22744e58d83f933700484b130caec4fb`.
-- Worker version: `80b4ffaa-dbe8-4263-bedc-79fe5e1f4da0`.
+- Worker version: `265182bc-2a0f-4b90-87a4-dec5f30a1256`.
 - Container application: `a03c2ba7-42f7-446a-9696-d95272efec2c`.
-- Container image digest: `sha256:f7f5d02d555d6ccf7732478f2ad48b648673bf98156d316ed4738234db29d8e5`.
+- Container image digest: `sha256:522cb9ad5403745c31660392e56b62fd59944509c7e3e869ebe3ee01eb98d15b`.
 - Private R2 bucket: `multiplier-photo-demo-state`.
 - `OPENROUTER_API_KEY`, `CLOUD_STATE_TOKEN`, `CLOUD_CONTAINER_TOKEN` and `DEMO_ACCESS_CODE` are hosted Worker secrets. Their values are excluded from source and image.
 - The six-digit owner access receipt is in ignored `cloudflare/demo-access.txt`. The access value and provider keys are not committed.
@@ -76,3 +76,9 @@ The first store-photo validation bug and the hosted privacy boundaries are fixed
 The source manifest, per-case outcomes, costs, latency and scoped verification are in docs/store-photo-ui-review.md. Ignored var/vipul-ui-review contains the actual source screenshots, neutral test inputs, public exports, results.json, results.csv and review-results.zip. U005/U006 are retained as a possible paired-view edge case in docs/edge-case-register.md; no combined-view recovery was run. The GitHub repository was verified private before pushing.
 
 Final cleanup: Docker Desktop is stopped, Google Chrome is not running, and neither task preview port 8768 nor 8770 has a listener. The hosted app remains open. Further Dia inspection was left alone after automatic approval review identified a possible unrelated-project window; all six requested review captures had already been saved. No further model calls were needed for deployment verification.
+
+## Cumulative views, 17 October
+
+The hosted Identify screen now accepts an explicitly confirmed second and third view of one product. Each new run compares all cumulative images jointly and preserves previous results. The saved U005 V15 result remained uncertain alone; U005+U006 identified V15 Detect with High confidence, and adding U007 retained the correct High-confidence V15 result. The two new checks cost INR12.778275. Runtime spending is INR188.576700, leaving INR111.423300. All nineteen original public records remain equal; twenty-one attempts are now saved, with no active jobs. The original six-image score is unchanged.
+
+The actual hosted UI matches source SHA-256 f42cda3018b1af23c0a16e330b138af7c56ce782aa051ef82f7ba1391424e0eb. An idle process restart did not refresh the image; the private checkpoint-guarded container recreation loaded it and restored all prior records/media/ledgers. The recreation request returned a transient 503, while subsequent app readback confirmed successful restoration. No R2 or Durable Object data was deleted. See docs/multiple-views-review.md for source checks, exact grouped jobs, screenshots, exports, costs and the scoped inference result.

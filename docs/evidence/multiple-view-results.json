@@ -1,0 +1,278 @@
+{
+  "original_jobs_unchanged": 19,
+  "saved_attempts": 21,
+  "active_jobs": 0,
+  "settings": {
+    "runtime_cap_inr": 300.0,
+    "runtime_spent_inr": 188.57670000000002,
+    "runtime_remaining_inr": 111.42329999999998,
+    "service_ready": true,
+    "accounting_error": null
+  },
+  "runs": [
+    {
+      "id": "6031b9e2ebc04c10a756de9935776c2a",
+      "filename": "U005.jpg",
+      "image_url": "/media/32c52f3509e546568258b32e3854ecaa",
+      "created_at": "2026-10-17T06:45:34.698980+00:00",
+      "status": "completed",
+      "mode": "identify",
+      "expected_product_id": null,
+      "expected_product_name": null,
+      "cost_inr": 7.19805,
+      "error": null,
+      "exports_available": true,
+      "export_error": null,
+      "started_at": "2026-10-17T06:45:42.222699+00:00",
+      "completed_at": "2026-10-17T06:48:23.954040+00:00",
+      "elapsed_seconds": 161.73024289,
+      "view_count": 2,
+      "parent_job_id": "1c6f0b596a15483eb86a8f9d6581d546",
+      "root_job_id": "1c6f0b596a15483eb86a8f9d6581d546",
+      "views": [
+        {
+          "view_id": "view_1",
+          "filename": "U005.jpg",
+          "image_url": "/media/32c52f3509e546568258b32e3854ecaa"
+        },
+        {
+          "view_id": "view_2",
+          "filename": "U006.jpg",
+          "image_url": "/media/f8f3b7e5180d4d128a86c05600885405"
+        }
+      ],
+      "stage": "Complete",
+      "matches": [
+        {
+          "object_id": "o1",
+          "box_2d": [
+            423,
+            274,
+            1000,
+            615
+          ],
+          "status": "match",
+          "product_id": "dyson_v15_detect",
+          "product_name": "Dyson V15 Detect",
+          "confidence": "High",
+          "evidence": [
+            "Visible red trigger on the handle confirms trigger operation as documented for V15 Detect, distinguishing it from V12 button control.",
+            "In-line transparent dustbin, gold radial cyclone assembly, and purple rear filter match V15 Detect architecture.",
+            "Circular LCD displays real-time particle counts across four categorized channels with bottom mode selection button."
+          ],
+          "missing_evidence": [],
+          "retake_guidance": [],
+          "verification": null,
+          "view_evidence": [
+            {
+              "view_id": "view_2",
+              "feature": "handle_control",
+              "detail": "Visible red trigger on the handle confirms trigger operation as documented for V15 Detect, distinguishing it from V12 button control."
+            },
+            {
+              "view_id": "view_2",
+              "feature": "body_layout",
+              "detail": "In-line transparent dustbin, gold radial cyclone assembly, and purple rear filter match V15 Detect architecture."
+            },
+            {
+              "view_id": "view_1",
+              "feature": "display_layout",
+              "detail": "Circular LCD displays real-time particle counts across four categorized channels with bottom mode selection button."
+            }
+          ],
+          "view_boxes": {
+            "view_1": [
+              423,
+              274,
+              1000,
+              615
+            ],
+            "view_2": [
+              264,
+              0,
+              1000,
+              792
+            ]
+          },
+          "alternatives": [
+            {
+              "id": "dyson_v15_detect",
+              "name": "Dyson V15 Detect"
+            },
+            {
+              "id": "dyson_v12_detect_slim",
+              "name": "Dyson V12 Detect Slim"
+            }
+          ],
+          "reference_image_url": "/media/908a8d9684a94ddaab8b946464b5a12b",
+          "source_url": "https://www.dyson.in/dyson-v15-detect-vacuum-cleaner",
+          "reference_images": [
+            {
+              "id": "908a8d9684a94ddaab8b946464b5a12b",
+              "url": "/media/908a8d9684a94ddaab8b946464b5a12b",
+              "filename": "01.jpg"
+            },
+            {
+              "id": "4bccb6b623d5469b942109a804538877",
+              "url": "/media/4bccb6b623d5469b942109a804538877",
+              "filename": "02.jpg"
+            },
+            {
+              "id": "e503a63836464aeab3652b2b7ceb5278",
+              "url": "/media/e503a63836464aeab3652b2b7ceb5278",
+              "filename": "05.jpg"
+            }
+          ]
+        }
+      ],
+      "run_details": {
+        "started_at": "2026-10-17T06:45:42.222699+00:00",
+        "completed_at": "2026-10-17T06:48:23.954040+00:00",
+        "elapsed_seconds": 161.73024289,
+        "queued_seconds": 7.523719,
+        "cost_inr": 7.19805
+      }
+    },
+    {
+      "id": "568647a1c9374c2ead0485ddf43ff5cb",
+      "filename": "U005.jpg",
+      "image_url": "/media/32c52f3509e546568258b32e3854ecaa",
+      "created_at": "2026-10-17T06:49:02.563066+00:00",
+      "status": "completed",
+      "mode": "identify",
+      "expected_product_id": null,
+      "expected_product_name": null,
+      "cost_inr": 5.5802249999999995,
+      "error": null,
+      "exports_available": true,
+      "export_error": null,
+      "started_at": "2026-10-17T06:49:09.924662+00:00",
+      "completed_at": "2026-10-17T06:51:16.022973+00:00",
+      "elapsed_seconds": 126.09533627000002,
+      "view_count": 3,
+      "parent_job_id": "6031b9e2ebc04c10a756de9935776c2a",
+      "root_job_id": "1c6f0b596a15483eb86a8f9d6581d546",
+      "views": [
+        {
+          "view_id": "view_1",
+          "filename": "U005.jpg",
+          "image_url": "/media/32c52f3509e546568258b32e3854ecaa"
+        },
+        {
+          "view_id": "view_2",
+          "filename": "U006.jpg",
+          "image_url": "/media/f8f3b7e5180d4d128a86c05600885405"
+        },
+        {
+          "view_id": "view_3",
+          "filename": "U007.jpg",
+          "image_url": "/media/139ae59e69a8465f9fe6698551cc9bdb"
+        }
+      ],
+      "stage": "Complete",
+      "matches": [
+        {
+          "object_id": "o1",
+          "box_2d": [
+            429,
+            271,
+            1000,
+            614
+          ],
+          "status": "match",
+          "product_id": "dyson_v15_detect",
+          "product_name": "Dyson V15 Detect",
+          "confidence": "High",
+          "evidence": [
+            "In-line body layout with clear bin ahead of cyclone assembly, handle, and rear filter casing matches V15 reference.",
+            "Point-and-shoot clear bin with red sliding release mechanism under the bin matches V15 architecture.",
+            "Circular LCD screen displaying real-time colored bar graph of categorized particle counts matches V15 Detect piezo display.",
+            "Handle features a red trigger control, distinguishing it from button-operated V12 and Gen5detect models."
+          ],
+          "missing_evidence": [],
+          "retake_guidance": [],
+          "verification": null,
+          "view_evidence": [
+            {
+              "view_id": "view_2",
+              "feature": "body_layout",
+              "detail": "In-line body layout with clear bin ahead of cyclone assembly, handle, and rear filter casing matches V15 reference."
+            },
+            {
+              "view_id": "view_2",
+              "feature": "bin_mechanism",
+              "detail": "Point-and-shoot clear bin with red sliding release mechanism under the bin matches V15 architecture."
+            },
+            {
+              "view_id": "view_1",
+              "feature": "display_layout",
+              "detail": "Circular LCD screen displaying real-time colored bar graph of categorized particle counts matches V15 Detect piezo display."
+            },
+            {
+              "view_id": "view_3",
+              "feature": "handle_control",
+              "detail": "Handle features a red trigger control, distinguishing it from button-operated V12 and Gen5detect models."
+            }
+          ],
+          "view_boxes": {
+            "view_1": [
+              429,
+              271,
+              1000,
+              614
+            ],
+            "view_2": [
+              263,
+              0,
+              1000,
+              792
+            ],
+            "view_3": [
+              160,
+              0,
+              1000,
+              915
+            ]
+          },
+          "alternatives": [
+            {
+              "id": "dyson_v15_detect",
+              "name": "Dyson V15 Detect"
+            },
+            {
+              "id": "dyson_v12_detect_slim",
+              "name": "Dyson V12 Detect Slim"
+            }
+          ],
+          "reference_image_url": "/media/908a8d9684a94ddaab8b946464b5a12b",
+          "source_url": "https://www.dyson.in/dyson-v15-detect-vacuum-cleaner",
+          "reference_images": [
+            {
+              "id": "908a8d9684a94ddaab8b946464b5a12b",
+              "url": "/media/908a8d9684a94ddaab8b946464b5a12b",
+              "filename": "01.jpg"
+            },
+            {
+              "id": "4bccb6b623d5469b942109a804538877",
+              "url": "/media/4bccb6b623d5469b942109a804538877",
+              "filename": "02.jpg"
+            },
+            {
+              "id": "e503a63836464aeab3652b2b7ceb5278",
+              "url": "/media/e503a63836464aeab3652b2b7ceb5278",
+              "filename": "05.jpg"
+            }
+          ]
+        }
+      ],
+      "run_details": {
+        "started_at": "2026-10-17T06:49:09.924662+00:00",
+        "completed_at": "2026-10-17T06:51:16.022973+00:00",
+        "elapsed_seconds": 126.09533627000002,
+        "queued_seconds": 7.361596,
+        "cost_inr": 5.5802249999999995
+      }
+    }
+  ],
+  "new_cost_inr": 12.778275
+}

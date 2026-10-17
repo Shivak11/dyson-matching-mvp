@@ -1,0 +1,16 @@
+{
+  "photo_id": "U007",
+  "file": "U007.jpg",
+  "source_url": "https://www.youtube.com/watch?v=qTPwEJaeRdM&t=386s",
+  "source_title": "Dyson V15 Detect Review: Pros & Cons | A Perfectionist\u2019s Nightmare?",
+  "label_basis": "Source title and opening narration identify V15 Detect; same reviewer machine as U005/U006. Labels kept outside inference.",
+  "timestamp_seconds": 386,
+  "capture": "native browser screenshot cropped to observed player content; no enhancement",
+  "crop_viewport_pixels": [
+    16,
+    68,
+    896,
+    508
+  ],
+  "sha256": "44d16f7ce1dbda318b87467732a9e506d42e3277b44f34a41fa2b6746ee1c55d"
+}
