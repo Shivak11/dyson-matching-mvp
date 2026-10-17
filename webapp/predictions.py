@@ -15,6 +15,7 @@ CSV_FIELDS = ('prediction_id', 'filename', 'photograph_sha256', 'mode', 'claimed
               'qualitative_confidence', 'verification', 'evidence', 'missing_evidence',
               'retake_guidance', 'elapsed_seconds', 'requested_model', 'actual_models',
               'actual_providers', 'config_sha256', 'catalogue_sha256', 'cost_inr')
+GROUP_FIELDS = ('view_count', 'views', 'parent_job_id', 'root_job_id', 'view_evidence', 'view_boxes')
 
 
 def seconds_between(start, end):
@@ -97,6 +98,11 @@ def public_match(match):
     value = {key: match.get(key) for key in fields}
     for key in ('evidence', 'missing_evidence', 'retake_guidance'):
         value[key] = [item for item in match.get(key, []) if isinstance(item, str)]
+    if 'view_evidence' in match:
+        value['view_evidence'] = [{key: evidence.get(key) for key in ('view_id', 'feature', 'detail')}
+                                  for evidence in match['view_evidence'] if isinstance(evidence, dict)]
+    if 'view_boxes' in match:
+        value['view_boxes'] = {key: box for key, box in match['view_boxes'].items() if key in ('view_1', 'view_2', 'view_3')}
     value['alternatives'] = [{key: candidate.get(key) for key in ('id', 'name')}
                              for candidate in match.get('alternatives', []) if isinstance(candidate, dict)]
     return value
@@ -114,6 +120,9 @@ def hosted_job(job):
              ('id', 'filename', 'image_url', 'created_at', 'status', 'mode', 'expected_product_id',
               'expected_product_name', 'cost_inr', 'error', 'exports_available', 'export_error',
               'started_at', 'completed_at', 'elapsed_seconds', 'retry_of') if key in job}
+    if job.get('view_count', 1) > 1:
+        value.update({key: job.get(key) for key in ('view_count', 'parent_job_id', 'root_job_id')})
+        value['views'] = [{key: view.get(key) for key in ('view_id', 'filename', 'image_url')} for view in job['views']]
     value['stage'] = {'queued': 'Waiting to run', 'running': 'Processing photograph',
                       'completed': 'Complete', 'failed': 'Run stopped',
                       'interrupted': 'Run interrupted'}.get(job.get('status'), 'Saved')
@@ -131,6 +140,9 @@ def hosted_job(job):
 def hosted_prediction(value, kind):
     public = {key: value.get(key) for key in
               ('schema_version', 'prediction_id', 'saved_at', 'mode', 'claimed_product', 'status')}
+    if value.get('view_count', 1) > 1:
+        public.update({key: value.get(key) for key in ('view_count', 'parent_job_id', 'root_job_id')})
+        public['views'] = [{key: view.get(key) for key in ('view_id', 'filename', 'image_url')} for view in value['views']]
     public['photograph'] = {'filename': value['photograph']['filename']}
     public['matches'] = [public_match(match) for match in value.get('matches', [])]
     public['run_details'] = hosted_run_details(value.get('run_details'))
@@ -143,14 +155,19 @@ def hosted_prediction(value, kind):
 
 
 def envelope(job, photograph_sha256, saved_at):
-    return {'schema_version': 1, 'prediction_id': job['id'], 'saved_at': saved_at,
+    value = {'schema_version': 1, 'prediction_id': job['id'], 'saved_at': saved_at,
             'photograph': {'filename': job['filename'], 'sha256': photograph_sha256},
             'mode': job['mode'], 'claimed_product': {'id': job['expected_product_id'], 'name': job['expected_product_name']}
             if job.get('expected_product_id') else None, 'status': job['status'],
             'matches': [public_match(match) for match in job['matches']], 'run_details': job.get('run_details')}
+    if job.get('view_count', 1) > 1:
+        value.update({key: job[key] for key in ('view_count', 'views', 'parent_job_id', 'root_job_id')})
+    return value
 
 
 def csv_bytes(value, fields=CSV_FIELDS):
+    if value.get('view_count', 1) > 1:
+        fields = fields + GROUP_FIELDS
     output = io.StringIO(newline='')
     writer = csv.DictWriter(output, fieldnames=fields, lineterminator='\n')
     writer.writeheader()
@@ -168,7 +185,10 @@ def csv_bytes(value, fields=CSV_FIELDS):
                'retake_guidance': match.get('retake_guidance', []), 'elapsed_seconds': details.get('elapsed_seconds'),
                'requested_model': details.get('requested_model'), 'actual_models': actual_models,
                'actual_providers': actual_providers, 'config_sha256': details.get('config_sha256'),
-               'catalogue_sha256': details.get('catalogue_sha256'), 'cost_inr': details.get('cost_inr')}
+               'catalogue_sha256': details.get('catalogue_sha256'), 'cost_inr': details.get('cost_inr'),
+               'view_count': value.get('view_count', 1), 'views': value.get('views', []),
+               'parent_job_id': value.get('parent_job_id'), 'root_job_id': value.get('root_job_id'),
+               'view_evidence': match.get('view_evidence', []), 'view_boxes': match.get('view_boxes', {})}
         row = {key: row[key] for key in fields}
         for key, item in row.items():
             text = json.dumps(item, ensure_ascii=False, separators=(',', ':'), allow_nan=False) if isinstance(item, (list, dict)) else '' if item is None else str(item)

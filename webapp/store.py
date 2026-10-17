@@ -308,18 +308,44 @@ class Store:
             connection.execute('INSERT INTO requests VALUES (?,?,?)', (key, fingerprint, json.dumps([job['id'] for job in jobs])))
 
     def create_jobs(self, payload, *, with_created=False):
-        if not isinstance(payload, dict) or set(payload) - {'images', 'expected_product_id', 'request_id'}:
+        if not isinstance(payload, dict) or set(payload) - {'images', 'expected_product_id', 'request_id', 'parent_job_id', 'same_product'}:
             raise ValueError('Enter images and an optional expected product.')
         request_id, fingerprint = self._request(payload)
         images = payload.get('images')
         if not isinstance(images, list) or not 1 <= len(images) <= 5:
             raise ValueError('Upload one to five store images.')
+        grouped = 'parent_job_id' in payload or 'same_product' in payload
+        if grouped and (len(images) != 1 or payload.get('same_product') is not True or payload.get('expected_product_id') is not None):
+            raise ValueError('Add one new photo of the same product in Identify mode.')
         items = [validate_upload(item) for item in images]
         with self.connect() as connection:
             connection.execute('BEGIN IMMEDIATE')
             cached = self._cached(connection, request_id, fingerprint)
             if cached is not None:
                 return (cached, False) if with_created else cached
+            if grouped:
+                parent_key = payload.get('parent_job_id')
+                if not isinstance(parent_key, str) or not ID.fullmatch(parent_key):
+                    raise ValueError('Choose a completed Identify result with one machine.')
+                parent_row = connection.execute('SELECT * FROM jobs WHERE id=?', (parent_key,)).fetchone()
+                parent = json.loads(parent_row['data']) if parent_row else None
+                if not parent or parent['status'] != 'completed' or parent['mode'] != 'identify' or len(parent.get('matches', [])) != 1:
+                    raise ValueError('Choose a completed Identify result with one machine.')
+                prior = self._views(connection, parent_row)
+                if len(prior) >= 3:
+                    raise ValueError('A product can have at most three views.')
+                for view in prior:
+                    saved = connection.execute('SELECT original_path,provider_path FROM media WHERE id=?', (view['media_id'],)).fetchone()
+                    if (digest((self.data_dir / saved['original_path']).read_bytes()) == digest(items[0]['raw']) or
+                            digest((self.data_dir / saved['provider_path']).read_bytes()) == digest(items[0]['provider'])):
+                        raise ValueError('Choose a different photo of this product.')
+                media_id = self._save_media(connection, items[0])
+                views = prior + [{'media_id': media_id, 'filename': items[0]['filename']}]
+                jobs = [self._insert_job(connection, prior[0]['media_id'], prior[0]['filename'],
+                        json.loads(parent_row['snapshot']), None, views=views, parent_job_id=parent_key,
+                        root_job_id=parent.get('root_job_id', parent_key))]
+                self._save_request(connection, request_id, fingerprint, jobs)
+                return (jobs, True) if with_created else jobs
             snapshot = self._snapshot(connection)
             expected = payload.get('expected_product_id')
             if expected is not None and (not isinstance(expected, str) or expected not in {p['id'] for p in snapshot if p['in_catalog']}):
@@ -328,7 +354,22 @@ class Store:
             self._save_request(connection, request_id, fingerprint, jobs)
         return (jobs, True) if with_created else jobs
 
-    def _insert_job(self, connection, media_id, name, snapshot, expected):
+    def _views(self, connection, row):
+        data = json.loads(row['data'])
+        views = data.get('views') or [{'image_url': '/media/' + row['media_id']}]
+        saved = []
+        for view in views:
+            url = view.get('image_url', '')
+            key = url.removeprefix('/media/')
+            if not url.startswith('/media/') or not ID.fullmatch(key):
+                raise ValueError('Invalid saved product view.')
+            media = connection.execute('SELECT id,filename FROM media WHERE id=?', (key,)).fetchone()
+            if media is None:
+                raise ValueError('A saved product view is unavailable.')
+            saved.append({'media_id': media['id'], 'filename': media['filename']})
+        return saved
+
+    def _insert_job(self, connection, media_id, name, snapshot, expected, *, views=None, parent_job_id=None, root_job_id=None):
         key = uuid.uuid4().hex
         product = next((p for p in snapshot if p['id'] == expected), None)
         job = {'id': key, 'filename': name, 'image_url': '/media/' + media_id,
@@ -336,6 +377,10 @@ class Store:
                'mode': 'verify' if expected else 'identify', 'expected_product_id': expected,
                'expected_product_name': product['name'] if product else None,
                'cost_inr': 0.0, 'error': None, 'matches': [], 'exports_available': False, 'run_details': None, 'export_error': None}
+        if views:
+            job.update(view_count=len(views), parent_job_id=parent_job_id, root_job_id=root_job_id,
+                       views=[{'view_id': 'view_' + str(index + 1), 'filename': view['filename'],
+                               'image_url': '/media/' + view['media_id']} for index, view in enumerate(views)])
         connection.execute('INSERT INTO jobs VALUES (?,?,?,?,?)',
                            (key, job['created_at'], json.dumps(job), json.dumps(snapshot), media_id))
         return job
@@ -347,12 +392,14 @@ class Store:
     def job(self, key, internal=False):
         with self.connect() as connection:
             row = connection.execute('SELECT * FROM jobs WHERE id=?', (key,)).fetchone()
+            views = self._views(connection, row) if row is not None and internal else None
         if row is None:
             raise KeyError('Run not found.')
         data = json.loads(row['data'])
         if internal:
             data['_snapshot'] = json.loads(row['snapshot'])
             data['_media_id'] = row['media_id']
+            data['_views'] = views
         return data
 
     def update_job(self, key, **changes):
@@ -384,6 +431,14 @@ class Store:
                 match.setdefault('retake_guidance', list(match.get('missing_evidence', [])))
             data.update(run_details=run_details, exports_available=True, export_error=None)
             value = envelope(data, digest(path.read_bytes()), now())
+            if data.get('view_count', 1) > 1:
+                value['views'] = [dict(view) for view in data['views']]
+                for view, saved in zip(value['views'], self._views(connection, row)):
+                    media = connection.execute('SELECT original_path FROM media WHERE id=?', (saved['media_id'],)).fetchone()
+                    original = (self.data_dir / media['original_path']).resolve()
+                    if not original.is_relative_to(self.data_dir / 'media'):
+                        raise ValueError('Invalid saved product view path.')
+                    view['sha256'] = digest(original.read_bytes())
             connection.execute('INSERT INTO prediction_exports VALUES (?,?,?)',
                                (key, encoded(value) + b'\n', csv_bytes(value)))
             connection.execute('UPDATE jobs SET data=? WHERE id=?', (json.dumps(data, allow_nan=False), key))
@@ -414,8 +469,12 @@ class Store:
             job = json.loads(row['data'])
             if job['status'] in ('queued', 'running'):
                 raise ValueError('Wait for this run to finish before retrying.')
-            # A deliberate new run uses current catalogue material; the previous snapshot remains immutable.
-            jobs = [self._insert_job(connection, row['media_id'], job['filename'], self._snapshot(connection), job['expected_product_id'])]
+            # Grouped retries retain the same views and catalogue; standalone retries use current material.
+            grouped = job.get('view_count', 1) > 1
+            jobs = [self._insert_job(connection, row['media_id'], job['filename'],
+                    json.loads(row['snapshot']) if grouped else self._snapshot(connection), job['expected_product_id'],
+                    views=self._views(connection, row) if grouped else None,
+                    parent_job_id=job.get('parent_job_id'), root_job_id=job.get('root_job_id'))]
             self._save_request(connection, request_key, fingerprint, jobs)
             return (jobs, True) if with_created else jobs
 
@@ -432,6 +491,7 @@ class Store:
                        run_details={'pipeline_version': PIPELINE_VERSION})
             connection.execute('UPDATE jobs SET data=? WHERE id=?', (json.dumps(job), key))
             job['_snapshot'], job['_media_id'] = json.loads(row['snapshot']), row['media_id']
+            job['_views'] = self._views(connection, row)
             return job
 
     def interrupt_unfinished(self):

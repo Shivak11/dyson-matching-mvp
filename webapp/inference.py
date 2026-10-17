@@ -125,7 +125,7 @@ def valid_box(box, parent=None):
         raise ValueError('Feature region belongs to another object.')
 
 
-def validate_batch(raw, targets, snapshot, available_originals=()):
+def validate_batch(raw, targets, snapshot, available_originals=(), view_targets=None):
     if not isinstance(raw, dict) or not isinstance(raw.get('results'), list):
         raise ValueError('Invalid comparison response.')
     names = [row.get('object_id') for row in raw['results'] if isinstance(row, dict)]
@@ -137,10 +137,16 @@ def validate_batch(raw, targets, snapshot, available_originals=()):
     for row in raw['results']:
         target = next(target for target in targets if target['object_id'] == row['object_id'])
         item = validate_match_result(row.get('result', row), candidates)
+        if view_targets is not None and item.get('decisive_region') is not None:
+            if item.get('decisive_view') not in view_targets:
+                raise ValueError('A decisive region must name a supplied view.')
+            decisive_target = view_targets[item['decisive_view']]
+        else:
+            decisive_target = target
         if item.get('decisive_region') is not None:
             valid_box(item['decisive_region'])
             try:
-                valid_box(item['decisive_region'], target['box_2d'])
+                valid_box(item['decisive_region'], decisive_target['box_2d'])
             except ValueError:
                 item['unverified_decisive_region'] = item['decisive_region']
                 item['decisive_region'] = None
@@ -156,6 +162,11 @@ def validate_batch(raw, targets, snapshot, available_originals=()):
                     or type(check.get('query_visible')) is not bool or type(check.get('reference_visible')) is not bool
                     or not isinstance(check.get('detail'), str) or not check['detail'].strip()):
                 raise ValueError('Invalid visible feature check.')
+            query_target = target
+            if view_targets is not None:
+                if check.get('query_view') not in view_targets:
+                    raise ValueError('A feature must name a supplied view.')
+                query_target = view_targets[check['query_view']]
             view = check.get('reference_view', 'plate')
             if view not in ('plate', 'original_detail') or (view == 'original_detail' and check['product'] not in available_originals):
                 raise ValueError('The referenced manufacturer view was not supplied.')
@@ -167,7 +178,7 @@ def validate_batch(raw, targets, snapshot, available_originals=()):
                     check[side + '_box_2d'] = None
             if check['query_visible']:
                 try:
-                    valid_box(check['query_box_2d'], target['box_2d'])
+                    valid_box(check['query_box_2d'], query_target['box_2d'])
                 except ValueError:
                     unverified.append(copy.deepcopy(check))
                     check['query_visible'] = False
@@ -185,6 +196,16 @@ def validate_batch(raw, targets, snapshot, available_originals=()):
         elif decision['status'] == 'match':
             decision['raw_evidence'] = decision['evidence']
             decision['evidence'] = list(dict.fromkeys(supported_details))
+        if view_targets is not None:
+            consistency = item.get('cross_view_consistency')
+            if (not isinstance(consistency, dict) or consistency.get('status') not in
+                    ('consistent', 'conflicting', 'insufficient_evidence') or
+                    not isinstance(consistency.get('evidence'), str) or not consistency['evidence'].strip()):
+                raise ValueError('A joint result must assess consistency across views.')
+            if consistency['status'] != 'consistent' or item.get('evidence_conflict') or decision['contradictions']:
+                decision['raw_status'], decision['raw_product'] = decision['status'], decision['product']
+                decision['status'], decision['product'] = 'not_sure', None
+                decision['missing_evidence'].append('The views contain a conflict or an unresolved product detail: ' + consistency['evidence'])
         results[row['object_id']] = item
     return results
 
@@ -301,6 +322,8 @@ class Inference:
                 raise ValueError(diagnostic) from None
             return value
 
+        if job.get('view_count', 1) > 1:
+            return self._run_multiple(job, snapshot, references, generate)
         inventory = generate('Finding physical machines', inventory_prompt(), [('Uploaded store scene', path)], validate_inventory)
         machines = inventory['machines']
         if not machines:
@@ -361,3 +384,44 @@ class Inference:
                                   lambda raw: validate_batch(raw, uncertain, snapshot, originals))
                 results.update(result)
         return [display_match(target, results[target['object_id']], snapshot, expected) for target in machines]
+
+
+    def _run_multiple(self, job, snapshot, references, generate):
+        images = [('View ' + str(index + 1), self.store.media(view['media_id'], provider=True)[0])
+                  for index, view in enumerate(job['_views'])]
+        view_ids = ['view_' + str(index + 1) for index in range(len(images))]
+        prompt = inventory_prompt() + '\nJOINT VIEWS: All supplied View 1/2/3 images are asserted by the user to show one physical product from different angles. Inspect ALL views together. Do not infer a model. Return {"views":[{"view_id":"view_1","objects":[the object records above]},...]}, exactly once for every supplied view ID: ' + json.dumps(view_ids) + '. Coordinates belong to each individual image, never a montage.'
+
+        def validate_views(raw):
+            rows = raw.get('views') if isinstance(raw, dict) else None
+            if (not isinstance(rows, list) or len(rows) != len(view_ids) or
+                    any(not isinstance(row, dict) for row in rows) or
+                    sorted(row.get('view_id', '') for row in rows) != view_ids):
+                raise ValueError('Missing or duplicate inventory view.')
+            return {row['view_id']: validate_inventory({'objects': row.get('objects')}) for row in rows}
+
+        inventories = generate('Finding product across views', prompt, images, validate_views)
+        targets = {key: value['machines'][0] for key, value in inventories.items()
+                   if len(value['machines']) == 1 and not value['machines'][0].get('accessory_only')}
+        anchor = targets.get('view_1', {'object_id': 'o1', 'box_2d': [0, 0, 1000, 1000]})
+        view_boxes = {key: target['box_2d'] for key, target in targets.items()}
+        if len(targets) != len(view_ids):
+            return [{'object_id': 'o1', 'box_2d': anchor['box_2d'], 'view_boxes': view_boxes,
+                     'view_evidence': [], 'status': 'not_sure', 'product_id': None, 'product_name': None,
+                     'confidence': 'Low', 'evidence': [], 'alternatives': [], 'verification': None,
+                     'reference_image_url': None, 'reference_images': [], 'source_url': None,
+                     'missing_evidence': ['Each view must contain one identifiable machine; a view is empty, accessory-only or contains multiple machines.'],
+                     'retake_guidance': ['Add a clear view of the same single product.']}]
+        joint_target = dict(targets['view_1'], object_id='o1')
+        projected = {key: {field: target[field] for field in
+                          ('role', 'visibility', 'box_2d', 'observations', 'readable_identifier')}
+                     for key, target in targets.items()}
+        prompt = comparison_prompt([joint_target], snapshot) + '\nJOINT VIEW RULES override scene-only coordinate wording above: Assess ALL supplied views together as one proposed physical product o1. These are separate images, not independent answers or votes. The user explicitly confirms these images show the same physical product. This confirmation establishes grouping; it does not establish the model family or override visible contradictions. Never use an earlier prediction. Explicitly compare cross-view consistency of body, bin, controls, identifiers and attachments. Check for separate machines, conflicting identifiers, incompatible bodies or controls. Return not_sure when a material visible contradiction cannot be resolved. Do not demand a serial number or independent proof of same-unit continuity. Consistent means the visible details are compatible with the user-confirmed grouping; insufficient_evidence applies when the intended machine cannot safely be located or a material conflict cannot be resolved. Add cross_view_consistency:{"status":"consistent|conflicting|insufficient_evidence","evidence":"visible reason"} INSIDE the per-target result. Every feature_check must add query_view:"view_1|view_2|view_3" naming the image that actually shows that detail, and query_box_2d must lie inside that view target. Never borrow a region from another view. Two diagnostic feature types may come from different views only after consistency is established. Give decisive_region:null, or add decisive_view naming its supplied image. More views do not require higher confidence. View-specific observed targets: ' + json.dumps(projected, separators=(',', ':'))
+        result = generate('Comparing product views together', prompt, images + references,
+                          lambda raw: validate_batch(raw, [joint_target], snapshot, view_targets=targets))['o1']
+        match = display_match(joint_target, result, snapshot)
+        match['view_boxes'] = view_boxes
+        match['view_evidence'] = [{'view_id': check['query_view'], 'feature': check['feature'], 'detail': check['detail']}
+                                  for check in result['feature_checks'] if check['product'] == match['product_id']
+                                  and check['query_visible'] and check['reference_visible']]
+        return [match]
