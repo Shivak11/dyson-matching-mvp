@@ -138,6 +138,25 @@ class InferenceTests(unittest.TestCase):
         self.assertIsNone(item['decision']['product'])
         self.assertIn('body', item['decision']['missing_evidence'][-1])
 
+    def test_invisible_placeholder_coordinates_are_removed_without_adding_support(self):
+        raw = response(self.snapshot)
+        checks = raw['results'][0]['result']['feature_checks']
+        hidden = copy.deepcopy(checks[0])
+        hidden.update(feature='identifier', reference_visible=False,
+                      reference_box_2d=[0, 0, 1000, 1000])
+        checks.append(hidden)
+        before = copy.deepcopy(raw)
+        item = validate_batch(raw, [target()], self.snapshot)['o1']
+        self.assertEqual(item['decision']['status'], 'match')
+        self.assertIsNone(item['feature_checks'][-1]['reference_box_2d'])
+        self.assertEqual(len(item['decision']['evidence']), 1)
+        self.assertTrue(item['format_repairs'])
+        self.assertEqual(raw, before)
+        checks[1]['reference_visible'] = False
+        item = validate_batch(raw, [target()], self.snapshot)['o1']
+        self.assertEqual(item['decision']['status'], 'not_sure')
+        self.assertIsNone(item['decision']['product'])
+
     def test_invalid_schema_duplicates_and_foreign_feature_regions_fail(self):
         for modify in ('fraction', 'duplicate', 'foreign'):
             raw = response(self.snapshot)

@@ -163,7 +163,8 @@ def validate_batch(raw, targets, snapshot, available_originals=()):
                 if check[side + '_visible']:
                     valid_box(check.get(side + '_box_2d'))
                 elif check.get(side + '_box_2d') is not None:
-                    raise ValueError('Hidden feature claims a region.')
+                    item.setdefault('format_repairs', []).append(side + ': unused hidden-feature coordinates removed')
+                    check[side + '_box_2d'] = None
             if check['query_visible']:
                 try:
                     valid_box(check['query_box_2d'], target['box_2d'])
@@ -294,9 +295,10 @@ class Inference:
             raw = client.generate(job['id'] + ':' + name, 'flash37high', prompt, images)
             try:
                 value = validator(raw)
-            except Exception:
-                client.record_validation_failure(job['id'] + ':' + name, 'The model response failed local evidence validation.')
-                raise ValueError('The model response failed local evidence validation.') from None
+            except Exception as error:
+                diagnostic = 'The model response failed local evidence validation: ' + type(error).__name__ + ': ' + str(error)[:600]
+                client.record_validation_failure(job['id'] + ':' + name, diagnostic)
+                raise ValueError(diagnostic) from None
             return value
 
         inventory = generate('Finding physical machines', inventory_prompt(), [('Uploaded store scene', path)], validate_inventory)
