@@ -8,7 +8,7 @@
   const image = (url, alt, attrs = '') => media(url) ? `<img src="${esc(media(url))}" alt="${esc(alt)}" ${attrs}>` : '<span class="muted small">No image available</span>';
   const pendingImage = item => `<img src="${esc(item.url)}" alt="Selected store photograph">`;
   const terminalErrors = new Set(['failed','interrupted']);
-  const state = {view:'match', catalogue:[], jobs:[], settings:{}, csrf:'', ready:false, pending:[], pendingIndex:0, selectedJob:null, selectedObject:0, productId:null, editor:null, mode:'identify', expected:'', submitting:false, queueSignature:'', allowanceSignature:'', viewSignature:'', historySignature:'', pollFailures:0, runRequestId:null, retryRequests:{}, detailsOpen:{}};
+  const state = {view:'match', catalogue:[], jobs:[], settings:{}, csrf:'', ready:false, pending:[], pendingIndex:0, selectedJob:null, selectedObject:0, productId:null, editor:null, mode:'identify', expected:'', submitting:false, queueSignature:'', allowanceSignature:'', viewSignature:'', historySignature:'', pollFailures:0, runRequestId:null, retryRequests:{}, detailsOpen:{}, selectedView:'view_1', pendingView:null, viewSubmitting:false, lineageLeaf:null};
   let resizeObserver;
   let pollTimer;
   let editorReturnFocus = null;
@@ -46,9 +46,78 @@
   const serviceReady = () => state.settings.service_ready ?? state.settings.api_configured;
   const runUnavailable = () => !serviceReady() || Boolean(state.settings.accounting_error);
   const statusName = status => ({queued:'Queued',running:'Running',completed:'Complete',failed:'Failed',interrupted:'Interrupted'}[status] || status || 'Saved');
-  const jobDescription = job => job.status === 'completed' ? `${job.matches?.length || 0} machine${job.matches?.length === 1 ? '' : 's'} · Complete` : statusName(job.status);
+  const jobDescription = job => `${job.view_count > 1 ? `${job.view_count} views together · ` : ''}${job.status === 'completed' ? `${job.matches?.length || 0} machine${job.matches?.length === 1 ? '' : 's'} · Complete` : statusName(job.status)}`;
   const dateText = value => { const d = new Date(value); return Number.isNaN(d.getTime()) ? String(value || '') : d.toLocaleString('en-IN', {dateStyle:'medium',timeStyle:'short'}); };
-  function rememberJob(id) { state.selectedJob = id; state.selectedObject = 0; try { localStorage.setItem('dyson-selected-job', id || ''); } catch {} }
+  function rememberJob(id, keepLineage = false) { state.selectedJob = id; state.selectedObject = 0; state.selectedView = 'view_1'; if (!keepLineage) state.lineageLeaf = id; try { localStorage.setItem('dyson-selected-job', id || ''); } catch {} }
+  const jobViews = job => Array.isArray(job.views) && job.views.length ? job.views : [{view_id:'view_1',filename:job.filename,image_url:job.image_url}];
+  const canAddView = job => Boolean(job) && job.status === 'completed' && job.mode === 'identify' && job.matches?.length === 1 && jobViews(job).length < 3;
+  function viewChain(job) {
+    const ancestors = item => {
+      const chain = []; const seen = new Set();
+      while (item && !seen.has(item.id)) { chain.unshift(item); seen.add(item.id); item = state.jobs.find(j => j.id === item.parent_job_id); }
+      return chain;
+    };
+    let chain = ancestors(job);
+    const remembered = state.jobs.find(j => j.id === state.lineageLeaf);
+    const rememberedChain = remembered && ancestors(remembered);
+    if (rememberedChain?.some(j => j.id === job.id)) chain = rememberedChain;
+    const seen = new Set(chain.map(j => j.id));
+    while (chain.length < 3) {
+      const last = chain[chain.length-1];
+      const child = state.jobs.find(j => j.parent_job_id === last.id && jobViews(j).length === jobViews(last).length+1 && !seen.has(j.id));
+      if (!child) break;
+      chain.push(child); seen.add(child.id);
+    }
+    state.lineageLeaf = chain[chain.length-1]?.id || job.id;
+    return chain;
+  }
+  const jobSignature = job => JSON.stringify([job,state.settings.accounting_error,job.mode === 'identify' ? viewChain(job) : []]);
+  function viewSteps(job) {
+    if (job.mode !== 'identify' || (!canAddView(job) && jobViews(job).length === 1 && !state.jobs.some(j => j.parent_job_id === job.id))) return '';
+    const chain = viewChain(job);
+    return `<div class="view-steps" aria-label="Saved results by number of views">${[1,2,3].map(n => {
+      const item = chain.find(j => jobViews(j).length === n);
+      const match = item?.matches?.[0];
+      const detail = !item ? 'Not added' : item.status === 'completed' ? `${match ? matchTitle(match) : 'No vacuum cleaner detected'} · ${match ? matchConfidence(match) : 'Complete'}` : item.status === 'running' ? 'Checking' : statusName(item.status);
+      return `<button type="button" data-view-step="${esc(item?.id || '')}" class="${item?.id === job.id ? 'selected' : ''}" ${item?.id === job.id ? 'aria-current="step"' : ''} ${!item || item.status !== 'completed' ? 'disabled' : ''}><strong>${n} view${n === 1 ? '' : 's'}</strong><span>${esc(detail)}</span></button>`;
+    }).join('')}</div>`;
+  }
+  function viewSelectors(job) {
+    const views = jobViews(job);
+    return views.length < 2 ? '' : `<div class="view-selectors" aria-label="Store photograph views">${views.map((v,i) => `<button type="button" data-store-view="${esc(v.view_id)}" aria-pressed="${v.view_id === state.selectedView}" class="${v.view_id === state.selectedView ? 'selected' : ''}">View ${i+1}</button>`).join('')}</div>`;
+  }
+  function viewControls(job) {
+    const pending = state.pendingView;
+    if (pending?.parentId === job.id) {
+      const count = jobViews(job).length+1;
+      return `<section class="view-preview" aria-labelledby="viewPreviewTitle"><h2 id="viewPreviewTitle">Review ${count} views of this product</h2><p class="small muted">All ${count} photos will be checked together.</p><div class="view-preview-images">${jobViews(job).map((v,i) => `<figure>${image(v.image_url,`Saved View ${i+1}`)}<figcaption>View ${i+1}</figcaption></figure>`).join('')}<figure>${pendingImage(pending)}<figcaption>View ${count} · ${esc(pending.filename)}</figcaption></figure></div><label class="same-product-confirm"><input type="checkbox" id="sameProductConfirm" ${pending.confirmed ? 'checked' : ''} ${state.viewSubmitting ? 'disabled' : ''}>This photo shows the same physical product as View 1.</label><div class="buttonrow"><button class="primary" type="button" id="runViewButton" ${!pending.confirmed || state.viewSubmitting || runUnavailable() ? 'disabled' : ''}>${state.viewSubmitting ? 'Saving view…' : `Identify using ${count} views`}</button><button type="button" id="cancelViewButton" ${state.viewSubmitting ? 'disabled' : ''}>Cancel</button></div><p id="viewUploadError" role="alert" class="error ${pending.error ? '' : 'hidden'}">${esc(pending.error || '')}</p></section>`;
+    }
+    return canAddView(job) ? '<div class="add-view-action"><button type="button" id="addViewButton">Add another view</button><p>Add a different angle of this same product.</p><p id="viewUploadError" role="alert" class="error hidden"></p></div>' : '';
+  }
+  function clearPendingView() { if (state.pendingView) URL.revokeObjectURL(state.pendingView.url); state.pendingView = null; }
+  function addProductView(files) {
+    const job = currentJob();
+    if (state.viewSubmitting || !job || !canAddView(job) || !files.length) return;
+    const file = files[0];
+    if (files.length !== 1 || !['image/jpeg','image/png','image/webp'].includes(file.type) || file.size > 12*1024*1024) { feedback('#viewUploadError','Choose one JPEG, PNG or WebP photo up to 12 MiB.'); return; }
+    clearPendingView();
+    state.pendingView = {parentId:job.id,filename:file.name,file,url:URL.createObjectURL(file),confirmed:false,requestId:crypto.randomUUID(),error:''};
+    renderJob(job); $('#sameProductConfirm')?.focus();
+  }
+  async function runProductViews() {
+    const pending = state.pendingView; const job = currentJob();
+    if (state.viewSubmitting || !pending?.confirmed || !job || pending.parentId !== job.id || !canAddView(job) || runUnavailable()) return;
+    state.viewSubmitting = true; pending.error = ''; renderJob(job);
+    const lockedButtons = Array.from(document.querySelectorAll('button')).filter(button => !button.disabled);
+    lockedButtons.forEach(button => { button.disabled = true; });
+    try {
+      const image = await fileData(pending.file);
+      const result = await api('/api/jobs',{method:'POST',body:JSON.stringify({request_id:pending.requestId,images:[image],expected_product_id:null,parent_job_id:job.id,same_product:true})});
+      if (result.jobs?.length !== 1) throw new Error('The server did not return the saved run. Check History before trying again.');
+      result.jobs.forEach(upsertJob); clearPendingView(); rememberJob(result.jobs[0].id); setView('match'); announce('View saved. The photos will be checked together.'); refresh(true);
+    } catch (error) { pending.error = error.message; }
+    finally { state.viewSubmitting = false; lockedButtons.forEach(button => { if (button.isConnected) button.disabled = false; }); if (state.view === 'match' && currentJob()) renderJob(currentJob()); }
+  }
   function setView(view) {
     state.view = view;
     state.viewSignature = '';
@@ -178,23 +247,27 @@
     return header + (fields.length ? `<dl>${fields.map(([name,value]) => `<dt>${esc(name)}</dt><dd>${esc(value)}</dd>`).join('')}</dl>` : '<p class="legacydetails">Time and cost have not been recorded yet.</p>') + '</details>';
   }
   function renderJob(job) {
-    state.viewSignature = JSON.stringify([job,state.settings.accounting_error]);
+    state.viewSignature = jobSignature(job);
+    const views = jobViews(job);
     if (job.status === 'completed') { renderResult(job); return; }
     const failed = terminalErrors.has(job.status);
-    const outcome = job.status === 'failed' ? 'Matching failed' : job.status === 'interrupted' ? 'Matching interrupted' : job.status === 'queued' ? 'Photo queued for identification' : 'Identifying products';
+    const outcome = views.length > 1 && !failed ? `Checking ${views.length} views together…` : job.status === 'failed' ? 'Matching failed' : job.status === 'interrupted' ? 'Matching interrupted' : job.status === 'queued' ? 'Photo queued for identification' : 'Identifying products';
     const blockedReason = state.settings.accounting_error || (!serviceReady() ? 'Photo matching is unavailable. Check the run allowance before retrying.' : '');
-    main.innerHTML = heading(outcome,job.filename,uploadButton('Upload more')) + `<section class="statusarea"><div class="statusphoto">${image(job.image_url,'Uploaded store photograph')}</div><div class="statustext"><p class="small muted">${esc(statusName(job.status))}</p><h2 id="jobStage">${esc(job.stage || statusName(job.status))}</h2>${failed ? `<div class="errornote"><p>${esc(job.error || 'The server stopped before the result was saved.')}</p></div><p>Your photograph and any charges are preserved.</p><div class="buttonrow"><button class="primary" type="button" id="retryButton" data-retry="${esc(job.id)}" ${runUnavailable() ? 'disabled' : ''}>Retry as a new run</button><button type="button" data-nav="history">View history</button></div><p id="retryError" class="error ${blockedReason ? '' : 'hidden'}" role="alert">${esc(blockedReason)}</p>` : '<div class="working"><span class="spinner" aria-hidden="true"></span><p>Processing this photograph. This page updates automatically.</p></div><button type="button" data-nav="history">View history</button>'}${exportActions(job)}</div></section>${runDetails(job)}`;
+    main.innerHTML = heading(outcome,job.filename,uploadButton('Upload more')) + viewSteps(job) + `<section class="statusarea"><div class="statusphoto">${image(job.image_url,'Uploaded store photograph')}</div><div class="statustext"><p class="small muted">${esc(statusName(job.status))}</p><h2 id="jobStage">${esc(job.stage || statusName(job.status))}</h2>${failed ? `<div class="errornote"><p>${esc(job.error || 'The server stopped before the result was saved.')}</p></div><p>Your photograph and any charges are preserved.</p><div class="buttonrow"><button class="primary" type="button" id="retryButton" data-retry="${esc(job.id)}" ${runUnavailable() ? 'disabled' : ''}>Retry as a new run</button><button type="button" data-nav="history">View history</button></div><p id="retryError" class="error ${blockedReason ? '' : 'hidden'}" role="alert">${esc(blockedReason)}</p>` : `<div class="working"><span class="spinner" aria-hidden="true"></span><p>${views.length > 1 ? `Checking ${views.length} views together. Your earlier results remain saved.` : 'Processing this photograph.'} This page updates automatically.</p></div><button type="button" data-nav="history">View history</button>`}${exportActions(job)}</div></section>${runDetails(job)}`;
   }
   const matchTitle = match => match.status === 'not_in_catalog' ? 'Outside catalogue' : match.status === 'not_sure' ? 'Model not established' : match.product_name || 'Model not established';
   const matchConfidence = match => ['High','Medium','Low'].includes(match.confidence) ? `${match.confidence} confidence` : 'Confidence not recorded';
   const textItem = item => typeof item === 'string' ? item : item?.detail || item?.observation || item?.text || JSON.stringify(item);
   const evidenceList = (items, fallback) => Array.isArray(items) && items.length ? `<ul>${items.map(item => `<li>${esc(textItem(item))}</li>`).join('')}</ul>` : `<p class="muted small">${esc(fallback)}</p>`;
   function renderResult(job) {
+    const views = jobViews(job);
+    if (!views.some(v => v.view_id === state.selectedView)) state.selectedView = views[0].view_id;
+    const selectedView = views.find(v => v.view_id === state.selectedView);
     const matches = Array.isArray(job.matches) ? job.matches : [];
     state.selectedObject = Math.min(state.selectedObject, Math.max(0,matches.length-1));
     const match = matches[state.selectedObject];
     if (!match) {
-      main.innerHTML = heading('No vacuum cleaner detected',job.filename,uploadButton('Upload more')) + `<div class="savedactions"><p>Complete · ${job.mode === 'verify' ? 'Verify' : 'Identify'}</p>${exportActions(job)}</div><section class="photopanel" aria-label="Checked store photograph"><div class="paneltitle"><span>Store photograph</span><span>Original image</span></div><div class="photo" id="resultPhoto">${image(job.image_url,'Uploaded store photograph','id="storePhoto"')}</div><p class="modehelp">Upload a photo showing a vacuum cleaner to identify its model.</p></section>${runDetails(job)}`;
+      main.innerHTML = heading('No vacuum cleaner detected',job.filename,uploadButton('Upload more')) + viewSteps(job) + `<div class="savedactions"><p>Complete · ${job.mode === 'verify' ? 'Verify' : 'Identify'}</p>${exportActions(job)}</div><section class="photopanel" aria-label="Checked store photograph"><div class="paneltitle"><span>Store photograph</span><span>Original image</span></div><div class="photo" id="resultPhoto">${image(selectedView.image_url,'Uploaded store photograph','id="storePhoto"')}</div>${viewSelectors(job)}<p class="modehelp">Upload a photo showing a vacuum cleaner to identify its model.</p></section>${runDetails(job)}`;
       setupBoxes([]);
       return;
     }
@@ -207,9 +280,9 @@
     const verification = job.mode === 'verify' ? ({confirmed:'Matches expected model',rejected:'Does not match expected model',unresolved:'Cannot verify'}[match?.verification] || 'Cannot verify') : '';
     const title = match?.status === 'not_in_catalog' && match.product_name ? match.product_name : match ? matchTitle(match) : 'No product identified';
     const confidence = match ? `<span class="confidence ${match.status !== 'match' ? 'neutral' : match.confidence === 'High' ? '' : 'medium'}">${esc(matchConfidence(match))}</span>` : '';
-    const context = `${job.filename} · ${matches.length} machine${matches.length === 1 ? '' : 's'}${match?.status === 'not_in_catalog' ? ' · Outside catalogue' : ''}`;
+    const context = `${views.length > 1 ? `${views.length} views together` : job.filename} · ${matches.length} machine${matches.length === 1 ? '' : 's'}${match?.status === 'not_in_catalog' ? ' · Outside catalogue' : ''}`;
     const recovery = match?.status === 'not_sure' ? '<p class="result-recovery">Review the missing details below or upload another photo.</p>' : '';
-    main.innerHTML = `<div class="heading result-heading"><div><div class="result-decision"><h1>${esc(title)}</h1>${confidence}</div><p class="result-context">${esc(context)}</p>${recovery}</div>${uploadButton('Upload more')}</div><div class="savedactions"><p>Complete · ${job.mode === 'verify' ? 'Verify' : 'Identify'}</p>${exportActions(job)}</div><section aria-label="Matching result"><div class="toolbar">${matches.length ? `<label for="objectSelect">Machine</label><select id="objectSelect">${options}</select>` : '<span>No machine result was returned.</span>'}</div><div class="resultbody"><div class="compare"><section class="photopanel"><div class="paneltitle"><span>Store photograph</span><span>Original image</span></div><div class="photo" id="resultPhoto">${image(job.image_url,'Store photograph containing the detected machines','id="storePhoto"')}${matches.map((m,i) => `<button type="button" class="box ${i === state.selectedObject ? 'selected' : ''}" data-object="${i}" aria-label="Select machine ${i+1}" aria-pressed="${i === state.selectedObject}" hidden><span>${i+1}</span></button>`).join('')}</div><div class="photofeet"><div class="objecttabs">${matches.map((m,i) => `<button type="button" class="${i === state.selectedObject ? 'selected' : ''}" data-object="${i}" aria-pressed="${i === state.selectedObject}">Machine ${i+1}</button>`).join('')}</div></div></section><section class="reference">${reference ? `<div class="paneltitle"><span>Manufacturer reference</span>${product ? `<button type="button" class="quiet small" data-product="${esc(product.id)}">Current catalogue product ↗</button>` : ''}</div><div class="refimage">${image(reference,`Manufacturer image of ${matchTitle(match)}`,'id="referencePhoto"')}</div>` : '<div class="no-reference"><p class="muted">No manufacturer match established.</p></div>'}<div class="refcaption"><h2>${esc(match ? matchTitle(match) : 'No result')}</h2>${match?.status === 'not_in_catalog' && match.product_name ? `<p class="outside-model">Model: ${esc(match.product_name)}</p>` : ''}${verification ? `<p class="verification">${esc(verification)}</p><p class="small muted">Expected: ${esc(job.expected_product_name || getProduct(job.expected_product_id)?.name || 'Selected model')}</p>` : ''}${reference && references.length ? `<div class="thumbs">${references.map((im,i) => `<button type="button" data-reference="${esc(media(im.url))}" aria-label="Show manufacturer reference ${i+1}">${image(im.url,'')}</button>`).join('')}</div>${referenceSource ? `<p class="source"><a href="${esc(referenceSource)}" target="_blank" rel="noreferrer">Manufacturer source ↗</a></p>` : ''}` : ''}</div></section></div><div class="evidence"><div><h3>Details supporting this result</h3>${evidenceList(match?.evidence,'No supporting details were recorded.')}</div><div class="missing"><h3>Details that remain unverified</h3>${evidenceList(match?.missing_evidence,'No missing details were recorded.')}${alternatives.length ? `<h3 class="alternatives-title">Other possible models</h3><p class="small">${alternatives.map(a => esc(typeof a === 'string' ? a : a.name)).join(', ')}</p>` : ''}</div></div>${Array.isArray(match?.retake_guidance) && match.retake_guidance.length ? `<section class="retake"><h3>Retake guidance for machine ${state.selectedObject+1}</h3>${evidenceList(match.retake_guidance,'')}</section>` : ''}</div></section>${runDetails(job)}`;
+    main.innerHTML = `<div class="heading result-heading"><div><div class="result-decision"><h1>${esc(title)}</h1>${confidence}</div><p class="result-context">${esc(context)}</p>${recovery}</div>${uploadButton('Upload more')}</div>${viewSteps(job)}<div class="savedactions"><p>Complete · ${job.mode === 'verify' ? 'Verify' : 'Identify'}</p>${exportActions(job)}</div>${viewControls(job)}<section aria-label="Matching result"><div class="toolbar">${matches.length ? `<label for="objectSelect">Machine</label><select id="objectSelect">${options}</select>` : '<span>No machine result was returned.</span>'}</div><div class="resultbody"><div class="compare"><section class="photopanel"><div class="paneltitle"><span>Store photograph</span><span>${views.length > 1 ? `View ${views.indexOf(selectedView)+1}` : 'Original image'}</span></div><div class="photo" id="resultPhoto">${image(selectedView.image_url,'Store photograph containing the detected machines','id="storePhoto"')}${matches.map((m,i) => `<button type="button" class="box ${i === state.selectedObject ? 'selected' : ''}" data-object="${i}" aria-label="Select machine ${i+1}" aria-pressed="${i === state.selectedObject}" hidden><span>${i+1}</span></button>`).join('')}</div>${viewSelectors(job)}<div class="photofeet"><div class="objecttabs">${matches.map((m,i) => `<button type="button" class="${i === state.selectedObject ? 'selected' : ''}" data-object="${i}" aria-pressed="${i === state.selectedObject}">Machine ${i+1}</button>`).join('')}</div></div></section><section class="reference">${reference ? `<div class="paneltitle"><span>Manufacturer reference</span>${product ? `<button type="button" class="quiet small" data-product="${esc(product.id)}">Current catalogue product ↗</button>` : ''}</div><div class="refimage">${image(reference,`Manufacturer image of ${matchTitle(match)}`,'id="referencePhoto"')}</div>` : '<div class="no-reference"><p class="muted">No manufacturer match established.</p></div>'}<div class="refcaption"><h2>${esc(match ? matchTitle(match) : 'No result')}</h2>${match?.status === 'not_in_catalog' && match.product_name ? `<p class="outside-model">Model: ${esc(match.product_name)}</p>` : ''}${verification ? `<p class="verification">${esc(verification)}</p><p class="small muted">Expected: ${esc(job.expected_product_name || getProduct(job.expected_product_id)?.name || 'Selected model')}</p>` : ''}${reference && references.length ? `<div class="thumbs">${references.map((im,i) => `<button type="button" data-reference="${esc(media(im.url))}" aria-label="Show manufacturer reference ${i+1}">${image(im.url,'')}</button>`).join('')}</div>${referenceSource ? `<p class="source"><a href="${esc(referenceSource)}" target="_blank" rel="noreferrer">Manufacturer source ↗</a></p>` : ''}` : ''}</div></section></div><div class="evidence"><div><h3>Details supporting this result</h3>${evidenceList(Array.isArray(match?.view_evidence) && match.view_evidence.length ? match.view_evidence.map(e => `${e.view_id?.replace('view_','View ')} · ${e.detail || ''}`) : match?.evidence,'No supporting details were recorded.')}</div><div class="missing"><h3>Details that remain unverified</h3>${evidenceList(match?.missing_evidence,'No missing details were recorded.')}${alternatives.length ? `<h3 class="alternatives-title">Other possible models</h3><p class="small">${alternatives.map(a => esc(typeof a === 'string' ? a : a.name)).join(', ')}</p>` : ''}</div></div>${Array.isArray(match?.retake_guidance) && match.retake_guidance.length ? `<section class="retake"><h3>Retake guidance for machine ${state.selectedObject+1}</h3>${evidenceList(match.retake_guidance,'')}</section>` : ''}</div></section>${runDetails(job)}`;
     setupBoxes(matches);
   }
   function setupBoxes(matches) {
@@ -222,7 +295,9 @@
       const width = img.naturalWidth*scale; const height = img.naturalHeight*scale;
       const left = (holder.clientWidth-width)/2; const top = (holder.clientHeight-height)/2;
       holder.querySelectorAll('[data-object]').forEach(button => {
-        const box = matches[Number(button.dataset.object)]?.box_2d;
+        const match = matches[Number(button.dataset.object)];
+        const job = currentJob();
+        const box = job && jobViews(job).length > 1 ? match?.view_boxes?.[state.selectedView] : match?.box_2d;
         if (!Array.isArray(box) || box.length !== 4 || !box.every(Number.isFinite) || box.some(v => v < 0 || v > 1000) || box[0] >= box[2] || box[1] >= box[3]) { button.hidden = true; return; }
         Object.assign(button.style,{left:`${left+box[1]*width/1000}px`,top:`${top+box[0]*height/1000}px`,width:`${(box[3]-box[1])*width/1000}px`,height:`${(box[2]-box[0])*height/1000}px`}); button.hidden = false;
       });
@@ -358,7 +433,8 @@
         const runButton = $('#runButton');
         if (runButton) { runButton.disabled = state.submitting || runUnavailable() || state.mode === 'verify' && !state.expected; feedback('#accountingError',state.settings.accounting_error || ''); }
         const job = currentJob();
-        if (state.view === 'match' && job && JSON.stringify([job,state.settings.accounting_error]) !== state.viewSignature) { const focus = focusKey(main); renderJob(job); restoreFocus(main,focus); if (job.status !== oldStatus) announce(`${job.filename}: ${statusName(job.status)}.`); }
+        const viewRunButton = $('#runViewButton'); if (viewRunButton) viewRunButton.disabled = state.viewSubmitting || !state.pendingView?.confirmed || runUnavailable();
+        if (state.view === 'match' && job && state.pendingView?.parentId !== job.id && !state.viewSubmitting && jobSignature(job) !== state.viewSignature) { const focus = focusKey(main); renderJob(job); restoreFocus(main,focus); if (job.status !== oldStatus) announce(`${job.filename}: ${statusName(job.status)}.`); }
         // Keep active forms and selected-file controls intact while background jobs update.
         if (state.view === 'product' && JSON.stringify(getProduct(state.productId)) !== tourProductSignature && !$('#platformTour').open) renderProduct();
         if (state.view === 'catalogue' && previousCatalogue !== JSON.stringify(state.catalogue) && !$('#platformTour').open) renderCatalogue();
@@ -373,7 +449,13 @@
   }
   document.addEventListener('click', event => {
     const button = event.target.closest('button,a'); if (!button || button.disabled) return;
-    if (button.id === 'startTour' || button.id === 'startGuideTour') { if (!state.ready || state.editor?.saving || state.submitting) return; tourReturnFocus = button; showTour(0); }
+    if (state.viewSubmitting) return;
+    if (button.id === 'addViewButton') { if (canAddView(currentJob())) $('#productViewInput').click(); }
+    else if (button.id === 'cancelViewButton') { clearPendingView(); renderJob(currentJob()); $('#addViewButton')?.focus(); }
+    else if (button.id === 'runViewButton') runProductViews();
+    else if (button.dataset.viewStep) { rememberJob(button.dataset.viewStep,true); setView('match'); }
+    else if (button.dataset.storeView) { state.selectedView = button.dataset.storeView; renderResult(currentJob()); $(`[data-store-view="${CSS.escape(state.selectedView)}"]`)?.focus(); }
+    else if (button.id === 'startTour' || button.id === 'startGuideTour') { if (!state.ready || state.editor?.saving || state.submitting) return; tourReturnFocus = button; showTour(0); }
     else if (button.id === 'closeTour') closeTour();
     else if (button.id === 'tourBack') showTour(Math.max(0,tourIndex-1));
     else if (button.id === 'tourNext') { if (tourIndex === tourSteps.length-1) closeTour(); else showTour(tourIndex+1); }
@@ -402,7 +484,10 @@
   }
   document.addEventListener('change', event => {
     const input = event.target;
-    if (input.id === 'photoInput') { addPhotos(Array.from(input.files || [])); input.value = ''; }
+    if (state.viewSubmitting) return;
+    if (input.id === 'productViewInput') { addProductView(Array.from(input.files || [])); input.value = ''; }
+    else if (input.id === 'sameProductConfirm') { if (state.pendingView) { state.pendingView.confirmed = input.checked; $('#runViewButton').disabled = !input.checked || runUnavailable(); } }
+    else if (input.id === 'photoInput') { addPhotos(Array.from(input.files || [])); input.value = ''; }
     else if (input.id === 'mode') { state.mode = input.value; state.runRequestId = null; $('#expectedField').classList.toggle('hidden',state.mode !== 'verify'); $('#runButton').disabled = runUnavailable() || state.mode === 'verify' && !state.expected; }
     else if (input.id === 'expectedModel') { state.expected = input.value; state.runRequestId = null; $('#runButton').disabled = runUnavailable() || state.mode === 'verify' && !state.expected; }
     else if (input.id === 'objectSelect') selectObject(Number(input.value));
@@ -415,13 +500,13 @@
   document.addEventListener('toggle', event => { if (event.target.id === 'runDetails') state.detailsOpen[event.target.dataset.job] = event.target.open; },true);
   document.addEventListener('input', event => { if (state.editor && ['name','manufacturer','source_url','brochure_details'].includes(event.target.name)) state.editor[event.target.name] = event.target.value; });
   document.addEventListener('submit', event => { if (event.target.id === 'productForm') { event.preventDefault(); saveProduct(event.target); } });
-  document.addEventListener('keydown', event => { if (event.key === 'Escape' && $('#platformTour').open) { event.preventDefault(); closeTour(); return; } if (event.key === 'Escape' && state.view === 'editor') { event.preventDefault(); cancelEditor(); } });
+  document.addEventListener('keydown', event => { if (state.viewSubmitting) return; if (event.key === 'Escape' && state.pendingView && state.view === 'match') { event.preventDefault(); clearPendingView(); renderJob(currentJob()); $('#addViewButton')?.focus(); return; } if (event.key === 'Escape' && $('#platformTour').open) { event.preventDefault(); closeTour(); return; } if (event.key === 'Escape' && state.view === 'editor') { event.preventDefault(); cancelEditor(); } });
   $('#platformTour').addEventListener('cancel', event => { event.preventDefault(); closeTour(); });
   window.addEventListener('resize',positionTour);
   window.addEventListener('scroll',positionTour,true);
   document.addEventListener('dragover', event => { const zone = event.target.closest('[data-drop]'); if (zone) { event.preventDefault(); zone.classList.add('dragging'); } });
   document.addEventListener('dragleave', event => { const zone = event.target.closest('[data-drop]'); if (zone && !zone.contains(event.relatedTarget)) zone.classList.remove('dragging'); });
-  document.addEventListener('drop', event => { const zone = event.target.closest('[data-drop]'); if (zone) { event.preventDefault(); zone.classList.remove('dragging'); if (!state.submitting) addPhotos(Array.from(event.dataTransfer?.files || [])); } });
-  window.addEventListener('pagehide',() => { clearTimeout(pollTimer); resizeObserver?.disconnect(); state.pending.forEach(p => URL.revokeObjectURL(p.url)); });
+  document.addEventListener('drop', event => { const zone = event.target.closest('[data-drop]'); if (zone) { event.preventDefault(); zone.classList.remove('dragging'); if (!state.submitting && !state.viewSubmitting) addPhotos(Array.from(event.dataTransfer?.files || [])); } });
+  window.addEventListener('pagehide',() => { clearTimeout(pollTimer); resizeObserver?.disconnect(); clearPendingView(); state.pending.forEach(p => URL.revokeObjectURL(p.url)); });
   refresh();
 })();
