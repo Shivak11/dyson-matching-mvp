@@ -23,5 +23,12 @@ assert.equal((await worker.default.fetch(restart('Bearer test-only-state'), cont
 assert.equal(stops, 1);
 const login = await worker.default.fetch(new Request('https://demo.example/'), env);
 assert.equal(login.status, 200);
+assert.equal(login.headers.get('Referrer-Policy'), 'same-origin');
 assert.match(await login.text(), /Enter the demo access code/);
+const loginRequest = origin => new Request('https://demo.example/login', { method: 'POST', headers: { origin }, body: new URLSearchParams({ code: env.DEMO_ACCESS_CODE }) });
+const loginEnv = { ...env, PHOTO_DEMO: { getByName: () => ({ allowLogin: async () => true }) } };
+assert.equal((await worker.default.fetch(loginRequest('null'), loginEnv)).status, 403);
+const accepted = await worker.default.fetch(loginRequest('https://demo.example'), loginEnv);
+assert.equal(accepted.status, 303);
+assert.match(accepted.headers.get('Set-Cookie'), /HttpOnly; Secure; SameSite=Strict/);
 console.log('Session validation and unauthorised API/state checks passed.');
