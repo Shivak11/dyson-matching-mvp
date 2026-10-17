@@ -14,7 +14,8 @@ from PIL import Image
 from test_webapp import fixture_root, image_file
 from webapp.store import Store
 from webapp.inference import (Inference, BudgetError, catalogue_projection, comparison_prompt,
-                              validate_batch, display_match, ledger_accounting, settings)
+                              validate_batch, display_match, ledger_accounting, settings,
+                              RUNTIME_CAP_INR, STAGE_CAP_INR, HISTORICAL_STAGE_GUARD_INR)
 
 
 def target():
@@ -291,19 +292,22 @@ class InferenceTests(unittest.TestCase):
         (folder / 'inflight.json').write_text(json.dumps({'unknown': {'reserved_cost_usd': .1}}))
         client = self.engine()._client(self.job['id'])
         self.assertAlmostEqual(client.config['budget']['prior_accounted_inr'], 30)
-        self.assertAlmostEqual(client.config['budget']['stage_max_inr'], 70)
+        self.assertAlmostEqual(client.config['budget']['stage_max_inr'],
+                               min(RUNTIME_CAP_INR, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR) - 30)
         self.assertLess(abs((time.monotonic() - client.last_request_finished_at) - 3), 1)
-        self.assertAlmostEqual(settings(self.ledgers)['stage_remaining_inr'], 168.0317559)
+        self.assertAlmostEqual(settings(self.ledgers)['stage_remaining_inr'],
+                               STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR - 30)
 
     def test_budget_stops_before_a_new_paid_request(self):
         folder = self.ledgers / 'old-job'
         folder.mkdir()
-        (folder / 'inflight.json').write_text(json.dumps({'unknown': {'reserved_cost_usd': .99}}))
+        limit = min(RUNTIME_CAP_INR, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR)
+        (folder / 'inflight.json').write_text(json.dumps({'unknown': {'reserved_cost_usd': (limit - 1) / 100}}))
         self.script = [{'objects': []}]
         with self.assertRaises(BudgetError):
             self.engine().run(self.job, lambda stage: None)
         self.assertEqual(self.created[0].seen, [])
-        self.assertEqual(ledger_accounting(self.ledgers)['spent_inr'], 99)
+        self.assertAlmostEqual(ledger_accounting(self.ledgers)['spent_inr'], limit - 1)
 
     def test_oversized_context_stops_before_transport(self):
         self.job['_snapshot'][0]['brochure_details'] = 'Manufacturer text. ' * 20000
