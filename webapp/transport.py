@@ -16,6 +16,8 @@ import time
 import urllib.error
 import urllib.request
 
+from . import cloud_runtime
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -144,6 +146,11 @@ class Client:
             self._atomic_json(self.pending_path, self.pending)
 
     def _atomic_json(self, path, value):
+        with cloud_runtime.LOCK:
+            self._write_json(path, value)
+            cloud_runtime.checkpoint()
+
+    def _write_json(self, path, value):
         temporary = path.with_suffix(path.suffix + '.tmp')
         with temporary.open('wb') as target:
             target.write(encoded(value) + b'\n')
@@ -157,11 +164,13 @@ class Client:
             os.close(directory)
 
     def _append(self, record):
-        with self.calls_path.open('ab') as target:
-            target.write(encoded(record) + b'\n')
-            target.flush()
-            os.fsync(target.fileno())
-        self._index_record(record)
+        with cloud_runtime.LOCK:
+            with self.calls_path.open('ab') as target:
+                target.write(encoded(record) + b'\n')
+                target.flush()
+                os.fsync(target.fileno())
+            self._index_record(record)
+            cloud_runtime.checkpoint()
 
     def _index_record(self, record):
         logical_id = record.get('logical_job_id', record['job_id'])

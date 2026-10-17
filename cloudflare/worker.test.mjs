@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+const source = (await readFile(new URL('./worker.js', import.meta.url), 'utf8'))
+  .replace("import { Container } from '@cloudflare/containers';", 'class Container {}');
+const worker = await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'));
+const secret = 'test-only-gateway-secret';
+const token = await worker.sessionToken(secret, Date.now() + 60000);
+const request = value => new Request('https://demo.example/api/bootstrap', { headers: { cookie: 'multiplier_demo=' + value } });
+assert.equal(await worker.validSession(request(token), secret), true);
+assert.equal(await worker.validSession(request(token), 'wrong-secret'), false);
+assert.equal(await worker.validSession(request(await worker.sessionToken(secret, Date.now() - 1000)), secret), false);
+assert.equal(await worker.equalSecret('first', 'second'), false);
+const env = { DEMO_ACCESS_CODE: 'test-only-code', CLOUD_CONTAINER_TOKEN: secret, CLOUD_STATE_TOKEN: 'test-only-state', OPENROUTER_API_KEY: 'test-only-key' };
+assert.equal((await worker.default.fetch(new Request('https://demo.example/api/jobs', { method: 'POST' }), env)).status, 401);
+assert.equal((await worker.default.fetch(new Request('https://demo.example/__state'), env)).status, 404);
+assert.equal((await worker.default.fetch(new Request('https://demo.example/__state', { headers: { authorization: 'Bearer undefined' } }), {})).status, 404);
+const login = await worker.default.fetch(new Request('https://demo.example/'), env);
+assert.equal(login.status, 200);
+assert.match(await login.text(), /Enter the demo access code/);
+console.log('Session validation and unauthorised API/state checks passed.');

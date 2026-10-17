@@ -15,9 +15,10 @@
     <nav aria-label="Main navigation">
       <button type="button" data-nav="match" class="active" aria-current="page">Match photos</button>
       <button type="button" data-nav="catalogue">Catalogue</button>
+      <button type="button" data-nav="dataset">Dataset guide</button>
       <button type="button" data-nav="history">History</button>
     </nav>
-    <span class="local">Local workspace</span>
+    <button type="button" class="tour-launch" id="startTour">Take a tour <span aria-hidden="true">↗</span></button>
   </header>
   <p id="globalError" class="globalerror hidden" role="alert"></p>
   <div class="layout">
@@ -29,6 +30,11 @@
     </aside>
     <main class="main" id="main" tabindex="-1" aria-busy="true"><div class="heading"><h1>Loading workspace…</h1></div></main>
   </div>
+  <dialog id="platformTour" class="tour" aria-labelledby="tourTitle" aria-describedby="tourText">
+    <div class="tour-top"><span id="tourProgress"></span><button type="button" class="quiet" id="closeTour" aria-label="Close tour">✕</button></div>
+    <h2 id="tourTitle"></h2><p id="tourText"></p>
+    <div class="tour-actions"><button type="button" id="tourBack">Back</button><button type="button" class="primary" id="tourNext">Next</button></div>
+  </dialog>
   <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden aria-label="Choose store photographs">
   <div class="sr-only" id="announcer" role="status" aria-live="polite"></div>
   <noscript><p class="globalerror">Enable JavaScript to upload photographs and inspect matching results.</p></noscript>

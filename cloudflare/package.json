@@ -1,0 +1,14 @@
+{
+  "name": "multiplier-photo-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@cloudflare/containers": "latest"
+  },
+  "devDependencies": {
+    "wrangler": "4.151.1"
+  }
+}

@@ -1,0 +1,14 @@
+**
+!requirements.txt
+!app_server.py
+!runtime_config.json
+!webapp/
+!webapp/*.py
+!web/
+!web/index.html
+!web/app.js
+!web/style.css
+!cloudflare/
+!cloudflare/Dockerfile
+!cloudflare/seed/
+!cloudflare/seed/**

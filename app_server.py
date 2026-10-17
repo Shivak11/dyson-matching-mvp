@@ -5,6 +5,8 @@ import fcntl
 import hmac
 import hashlib
 import json
+import os
+from contextlib import contextmanager
 import queue
 import re
 import secrets
@@ -15,6 +17,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 from webapp.store import Store, ID, ConflictError, now
+from webapp import cloud_runtime
 from webapp.predictions import collect_run_details, TERMINAL
 from webapp.inference import Inference, BudgetError, settings, ledger_accounting, api_configured, api_key_for, checked_accounting
 
@@ -22,9 +25,19 @@ ROOT = Path(__file__).resolve().parent
 MAX_REQUEST_BYTES = 65 * 1024 * 1024
 
 
+class CloudStore(Store):
+    @contextmanager
+    def connect(self):
+        with cloud_runtime.LOCK, super().connect() as connection:
+            yield connection
+
+
 class App:
     def __init__(self, root=ROOT, data_dir=None, *, start_worker=True, inference_factory=Inference):
         self.root = Path(root).resolve()
+        cloud_runtime.configure(self.root)
+        if cloud_runtime.enabled() and data_dir is not None and Path(data_dir).resolve() != self.root / 'var':
+            raise ValueError('Cloud runtime data must stay in var.')
         self.runtime = self.root / 'var'
         self.runtime.mkdir(parents=True, exist_ok=True, mode=0o700)
         self.runtime.chmod(0o700)
@@ -38,7 +51,7 @@ class App:
         self.ledger_root.mkdir(exist_ok=True, mode=0o700)
         self.ledger_root.chmod(0o700)
         try:
-            self.store = Store(self.root, data_dir or self.runtime)
+            self.store = (CloudStore if cloud_runtime.enabled() else Store)(self.root, data_dir or self.runtime)
             self.store.interrupt_unfinished()
             try:
                 costs = checked_accounting(self.ledger_root, self.store.jobs())['per_job']
@@ -50,6 +63,7 @@ class App:
                     if not job.get('exports_available') and cost != job['cost_inr']:
                         self.store.update_job(job['id'], cost_inr=cost)
             self.engine = inference_factory(self.root, self.ledger_root, self.store)
+            cloud_runtime.checkpoint()
         except Exception:
             self.lock_file.close()
             raise
@@ -115,6 +129,7 @@ class App:
         self._seal_prediction(key)
 
     def enqueue(self, jobs, created=True):
+        cloud_runtime.checkpoint()
         if created:
             for job in jobs:
                 self.queue.put(job['id'])
@@ -125,6 +140,12 @@ class App:
                 'settings': settings(self.ledger_root, self.store.jobs())}
 
     def _seal_prediction(self, key):
+        with cloud_runtime.LOCK:
+            result = self._save_prediction(key)
+            cloud_runtime.checkpoint()
+            return result
+
+    def _save_prediction(self, key):
         try:
             job = self.store.job(key)
             if job.get('exports_available'):
@@ -178,6 +199,9 @@ class Handler(BaseHTTPRequestHandler):
         return self.server.app
 
     def _security(self, mutate=False):
+        if cloud_runtime.enabled() and not hmac.compare_digest(self.headers.get('X-Container-Token', ''), os.environ.get('CLOUD_CONTAINER_TOKEN', '')):
+            self.send_json(403, {'error': 'Open this demo through its authorised address.'})
+            return False
         port = self.server.server_address[1]
         host = self.headers.get('Host', '')
         valid_hosts = {'127.0.0.1:' + str(port), 'localhost:' + str(port)}
@@ -291,15 +315,23 @@ class Handler(BaseHTTPRequestHandler):
             raise ValueError('The request contains invalid JSON.') from None
 
     def _mutate(self, method):
+        with cloud_runtime.LOCK:
+            self._mutate_locked(method)
+
+    def _mutate_locked(self, method):
         if not self._security(mutate=True):
             return
         try:
             path = urlsplit(self.path).path
             body = self._body()
             if method == 'POST' and path == '/api/catalogue':
-                self.send_json(201, self.app.store.edit_product(body))
+                product = self.app.store.edit_product(body)
+                cloud_runtime.checkpoint()
+                self.send_json(201, product)
             elif method == 'PATCH' and re.fullmatch(r'/api/catalogue/[A-Za-z0-9_-]{1,80}', path):
-                self.send_json(200, self.app.store.edit_product(body, path.rsplit('/', 1)[1]))
+                product = self.app.store.edit_product(body, path.rsplit('/', 1)[1])
+                cloud_runtime.checkpoint()
+                self.send_json(200, product)
             elif method == 'POST' and path == '/api/jobs':
                 if not isinstance(body, dict) or not isinstance(body.get('request_id'), str) or not ID.fullmatch(body['request_id']):
                     raise ValueError('A request ID is required before running a photo.')
@@ -357,7 +389,8 @@ class Handler(BaseHTTPRequestHandler):
         self._mutate('PATCH')
 
     def do_OPTIONS(self):
-        self.send_json(403, {'error': 'Cross-origin requests are not allowed.'})
+        if self._security():
+            self.send_json(403, {'error': 'Cross-origin requests are not allowed.'})
 
 
 class LocalServer(ThreadingHTTPServer):
@@ -373,7 +406,7 @@ def make_server(app=None, port=8768, *, root=ROOT, data_dir=None, **options):
     created = app is None
     app = app or build_app(root, data_dir, **options)
     try:
-        server = LocalServer(('127.0.0.1', port), Handler)
+        server = LocalServer(('0.0.0.0' if cloud_runtime.enabled() else '127.0.0.1', port), Handler)
     except Exception:
         if created:
             app.close()
@@ -384,7 +417,7 @@ def make_server(app=None, port=8768, *, root=ROOT, data_dir=None, **options):
 
 def main():
     parser = argparse.ArgumentParser(description='Run the local Dyson matching app.')
-    parser.add_argument('--port', type=int, default=8768)
+    parser.add_argument('--port', type=int, default=8080 if cloud_runtime.enabled() else 8768)
     parser.add_argument('--data-dir', type=Path)
     args = parser.parse_args()
     if not 1 <= args.port <= 65535:

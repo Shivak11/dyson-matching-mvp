@@ -1,0 +1,7 @@
+node_modules/
+.wrangler/
+seed/
+demo-access.txt
+.dev.vars
+secrets.json
+build/

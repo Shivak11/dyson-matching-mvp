@@ -12,6 +12,8 @@
   let resizeObserver;
   let pollTimer;
   let editorReturnFocus = null;
+  let tourIndex = 0;
+  let tourReturnFocus = null;
   const main = $('#main');
   const announce = message => { $('#announcer').textContent = message; };
   const feedback = (id, message) => { const el = $(id); if (el) { el.textContent = message; el.classList.toggle('hidden', !message); } };
@@ -29,7 +31,7 @@
       return data;
     } catch (error) {
       if (error.name === 'AbortError') throw new Error('The server did not respond in time. Your selection is preserved. Check History before starting another run.');
-      if (error instanceof TypeError) throw new Error('The local server could not be reached. Start the server and refresh this page.');
+      if (error instanceof TypeError) throw new Error('The workspace could not be reached. Check your connection and refresh this page.');
       throw error;
     } finally { clearTimeout(timeout); }
   }
@@ -59,6 +61,7 @@
     else if (state.view === 'product') renderProduct();
     else if (state.view === 'editor') renderEditor();
     else if (state.view === 'history') renderHistory();
+    else if (state.view === 'dataset') renderDataset();
     else renderMatch();
     renderQueue();
     renderAllowance();
@@ -91,7 +94,7 @@
     const job = currentJob();
     if (job) { renderJob(job); return; }
     if (state.pending.length) { renderSelected(); return; }
-    main.innerHTML = heading('Match store photos','Identify each machine using your manufacturer catalogue.', uploadButton()) + `<section class="empty"><div><h2>Upload a store photograph</h2><p>Choose the photos you want to check. You can inspect them before starting a run.</p><button class="primary upload" type="button" data-upload><span class="plus" aria-hidden="true">+</span> Choose photos</button><p class="filetypes">JPEG, PNG or WebP · Up to 5 photos · 12 MiB each</p><p class="error hidden" id="uploadError" role="alert"></p></div></section>`;
+    main.innerHTML = heading('Match store photos','Identify products in store photos against the manufacturer catalogue.', '<button type="button" data-nav="dataset">How to prepare the dataset</button>') + `<section class="empty upload-empty"><div><div class="upload-symbol" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0L7 9m5-5 5 5M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2>Upload your store photos</h2><p>Choose a photo to identify each vacuum cleaner and inspect the evidence behind its match.</p><button class="primary upload" type="button" data-upload><span class="plus" aria-hidden="true">+</span> Choose photos</button><p class="filetypes">JPEG, PNG or WebP · Up to 5 photos · 12 MiB each</p><p class="error hidden" id="uploadError" role="alert"></p></div></section><section class="workspace-start" aria-label="Prepare and review"><div><h3>Manufacturer references</h3><p>Review the catalogue images and brochure details used for matching.</p><button type="button" class="quiet" data-nav="catalogue">Open catalogue <span aria-hidden="true">→</span></button></div><div><h3>Saved predictions</h3><p>Inspect confidence, supporting details, time and cost for each photo.</p><button type="button" class="quiet" data-nav="history">View saved runs <span aria-hidden="true">→</span></button></div></section>`;
   }
   function renderSelected() {
     const p = state.pending[Math.min(state.pendingIndex,state.pending.length-1)];
@@ -149,7 +152,7 @@
       document.body.append(attachment); attachment.click(); attachment.remove();
       announce(`${link.dataset.format.toUpperCase()} prediction downloaded.`);
     } catch (error) {
-      message.textContent = error.name === 'AbortError' ? 'The download timed out. Try the download again.' : error instanceof TypeError ? 'The local server could not be reached. Reconnect and try the download again.' : error.message;
+      message.textContent = error.name === 'AbortError' ? 'The download timed out. Try the download again.' : error instanceof TypeError ? 'The workspace could not be reached. Reconnect and try the download again.' : error.message;
       message.classList.remove('hidden');
     } finally { clearTimeout(timeout); link.removeAttribute('aria-disabled'); if (url) setTimeout(() => URL.revokeObjectURL(url),1000); }
   }
@@ -227,7 +230,7 @@
   }
   function renderCatalogue() {
     const products = state.catalogue.filter(p => p.in_catalog); const negatives = state.catalogue.filter(p => !p.in_catalog);
-    main.innerHTML = heading('Manufacturer catalogue',`${products.length} products with manufacturer images and stored details.`,'<button class="primary" type="button" id="addProduct">+ Add product</button>') + productTable(products) + (negatives.length ? `<details class="negative-refs"><summary>Outside-catalogue comparison references (${negatives.length})</summary><p class="small muted">These references help distinguish lookalikes. They are outside the active catalogue.</p>${productTable(negatives)}</details>` : '');
+    main.innerHTML = heading('Manufacturer catalogue',`${products.length} products with manufacturer images and stored details.`,'<button class="primary" type="button" id="addProduct">+ Add product</button>') + '<p class="catalogue-note">Open a model to inspect or add manufacturer images and brochure details. <button type="button" class="quiet" data-nav="dataset">View the recommended dataset</button></p>' + productTable(products) + (negatives.length ? `<details class="negative-refs"><summary>Outside-catalogue comparison references (${negatives.length})</summary><p class="small muted">These references help distinguish lookalikes. They are outside the active catalogue.</p>${productTable(negatives)}</details>` : '');
   }
   function productTable(products) {
     return `<div class="tablewrap"><table><thead><tr><th scope="col">Product</th><th scope="col">Manufacturer</th><th scope="col">Reference images</th><th scope="col">Brochure</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead><tbody>${products.map(p => `<tr><td class="rowname">${image(p.image_url,'')}${esc(p.name)}</td><td>${esc(p.manufacturer)}</td><td>${p.images?.length || 0} image${p.images?.length === 1 ? '' : 's'}</td><td>${p.brochure_url ? 'PDF stored' : 'No PDF added'}</td><td><button type="button" class="rowaction" data-product="${esc(p.id)}">View details</button></td></tr>`).join('')}</tbody></table></div>`;
@@ -245,7 +248,7 @@
   }
   function renderEditor() {
     const d = state.editor; if (!d) { setView('catalogue'); return; }
-    main.innerHTML = heading(d.id ? 'Edit manufacturer product' : 'Add manufacturer product','Store its details and reference material in the local catalogue.','<button type="button" data-cancel-editor>Cancel</button>') + `<form class="addform" id="productForm"><div class="formgrid"><div class="field"><label for="productName">Product name</label><input id="productName" name="name" required maxlength="200" value="${esc(d.name)}"></div><div class="field"><label for="manufacturer">Manufacturer</label><input id="manufacturer" name="manufacturer" required maxlength="200" value="${esc(d.manufacturer)}"></div><div class="field full"><label for="sourceURL">Manufacturer source URL</label><input id="sourceURL" name="source_url" type="url" required value="${esc(d.source_url)}" placeholder="https://www.dyson.in/…"></div><div class="field full"><label for="brochureDetails">Brochure / product details</label><textarea id="brochureDetails" name="brochure_details" rows="7">${esc(d.brochure_details)}</textarea><p class="small muted">Enter details from the manufacturer source or brochure.</p></div><div class="field"><label for="referenceFiles">${d.id ? 'Add manufacturer images' : 'Manufacturer images'}</label><input id="referenceFiles" type="file" accept="image/jpeg,image/png,image/webp" multiple><p class="small muted">JPEG, PNG or WebP · 12 MiB each${d.id ? ' · Existing images stay saved' : ''}</p><ul class="selected-files small" id="referenceFilesList"></ul></div><div class="field"><label for="brochureFile">Brochure PDF (optional)</label><input id="brochureFile" type="file" accept="application/pdf"><p class="small muted">Original PDF · Up to 12 MiB</p><p class="small" id="brochureFileName"></p></div></div><p class="error hidden" role="alert" id="saveError"></p><div class="formactions"><button type="button" data-cancel-editor>Cancel</button><button type="submit" class="primary" id="saveProduct">Save product</button></div></form>`;
+    main.innerHTML = heading(d.id ? 'Edit manufacturer product' : 'Add manufacturer product','Store its manufacturer details and reference material in the catalogue.','<button type="button" data-cancel-editor>Cancel</button>') + `<form class="addform" id="productForm"><div class="formgrid"><div class="field"><label for="productName">Product name</label><input id="productName" name="name" required maxlength="200" value="${esc(d.name)}"></div><div class="field"><label for="manufacturer">Manufacturer</label><input id="manufacturer" name="manufacturer" required maxlength="200" value="${esc(d.manufacturer)}"></div><div class="field full"><label for="sourceURL">Manufacturer source URL</label><input id="sourceURL" name="source_url" type="url" required value="${esc(d.source_url)}" placeholder="https://www.dyson.in/…"></div><div class="field full"><label for="brochureDetails">Brochure / product details</label><textarea id="brochureDetails" name="brochure_details" rows="7">${esc(d.brochure_details)}</textarea><p class="small muted">Enter details from the manufacturer source or brochure.</p></div><div class="field"><label for="referenceFiles">${d.id ? 'Add manufacturer images' : 'Manufacturer images'}</label><input id="referenceFiles" type="file" accept="image/jpeg,image/png,image/webp" multiple><p class="small muted">JPEG, PNG or WebP · 12 MiB each${d.id ? ' · Existing images stay saved' : ''}</p><ul class="selected-files small" id="referenceFilesList"></ul></div><div class="field"><label for="brochureFile">Brochure PDF (optional)</label><input id="brochureFile" type="file" accept="application/pdf"><p class="small muted">Original PDF · Up to 12 MiB</p><p class="small" id="brochureFileName"></p></div></div><p class="error hidden" role="alert" id="saveError"></p><div class="formactions"><button type="button" data-cancel-editor>Cancel</button><button type="submit" class="primary" id="saveProduct">Save product</button></div></form>`;
     updateEditorFiles();
   }
   function updateEditorFiles() {
@@ -281,6 +284,29 @@
     state.historySignature = JSON.stringify(state.jobs);
     main.innerHTML = heading('Saved runs','Reopen a photograph to inspect its result or download its prediction.',uploadButton()) + (state.jobs.length ? `<div class="tablewrap" role="region" aria-label="Saved runs" tabindex="0"><table><thead><tr><th scope="col">Photograph</th><th scope="col">Saved</th><th scope="col">Result</th><th scope="col">Spent or reserved</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead><tbody>${state.jobs.map(j => `<tr><td class="rowname">${image(j.image_url,'')}${esc(j.filename)}</td><td>${esc(dateText(j.created_at))}</td><td>${esc(jobDescription(j))}</td><td>${esc(money(j.cost_inr))}</td><td><div class="historyactions"><button type="button" class="rowaction" data-job="${esc(j.id)}">Open run</button>${exportActions(j)}</div></td></tr>`).join('')}</tbody></table></div>` : '<section class="empty"><div><h2>No saved runs yet</h2><p>Upload store photos, review them and run matching to save your first result.</p><button type="button" class="primary" data-upload>Choose photos</button></div></section>');
   }
+  function renderDataset() {
+    main.innerHTML = heading('Prepare the dataset','Recommended structure for this demo. These requirements are assumptions for discussion with Multiplier.', '<button type="button" id="startGuideTour">Take a tour</button>') + `<div class="dataset-guide"><section class="guide-section"><div class="guide-heading"><h2>Manufacturer references</h2><button type="button" data-nav="catalogue">Open catalogue →</button></div><p>Create one record per model, with manufacturer images and supported brochure details. Add or edit these records in Catalogue.</p><dl class="guide-fields"><dt>Model identity</dt><dd>Manufacturer, model name, exact model code and relevant variant limits.</dd><dt>Reference photos</dt><dd>Where available, use 3–5 useful views: full product, body, controls and model label. Keep each view attached to the correct model.</dd><dt>Approved details</dt><dd>Record distinguishing features from the manufacturer. State when an image cannot distinguish a colour, accessory bundle or regional variant.</dd><dt>Sources</dt><dd>Retain the source URL and title for each reference and brochure. The current catalogue editor stores a model-level source URL and brochure details; keep per-image source records in your dataset manifest.</dd></dl></section><section class="guide-section"><div class="guide-heading"><h2>Store photos for evaluation</h2><button type="button" data-upload>Upload store photos →</button></div><p>Build a separate set of real store photographs. Include all catalogue models, visually similar products, outside-catalogue products and difficult lighting or angles.</p><div class="tablewrap"><table><thead><tr><th scope="col">Required field</th><th scope="col">What to record</th></tr></thead><tbody><tr><td>photo_id / filename</td><td>A stable ID and the original image file.</td></tr><tr><td>expected_model_id</td><td>Independently established model, or outside_catalogue.</td></tr><tr><td>source_url / source_title</td><td>Where the photograph and its model label came from.</td></tr><tr><td>label_basis</td><td>The source statement or attached identifier supporting the expected label.</td></tr></tbody></table></div><p class="guide-callout">Keep these answer labels outside Identify mode. Upload only the store photos for inference. Establish labels from source evidence; do not guess them from appearance.</p></section><section class="guide-section"><div class="guide-heading"><h2>Read and score the results</h2><button type="button" data-nav="history">Open saved runs →</button></div><p>A saved run shows the predicted model, qualitative confidence, supporting evidence, missing details, time and cost. Download JSON or CSV from the run.</p><div class="score-explanation"><div><h3>Confidence for one prediction</h3><p>High, Medium or Low describes the evidence behind that result. It is not a measured probability of being correct.</p></div><div><h3>Accuracy across a dataset</h3><p>Compare exported predictions with the separate answer labels. Count correct, wrong, confidently wrong, unsure and failed results. This demo exports predictions; benchmark scoring is separate.</p></div></div></section></div>`;
+  }
+  const tourSteps = [
+    {view:'dataset', title:'Prepare two separate datasets', text:'Manufacturer references help identify products. A separate, independently labelled set of store photos measures accuracy. The guide shows the assumed structure.'},
+    {view:'catalogue', title:'Inspect the manufacturer catalogue', text:'Open a model to see its reference images and brochure details. Use Add product or Edit details to add manufacturer material.'},
+    {view:'match', title:'Upload store photos', text:'Choose up to five photos. Identify is the default; Verify lets you choose an expected model. Review the images, then select Run matching to make a real model call.'},
+    {view:'history', title:'Inspect and export the predictions', text:'Open a saved run to compare the store photo with its manufacturer reference. Read qualitative confidence, evidence, time and cost, then download JSON or CSV for independent scoring.'}
+  ];
+  function showTour(index) {
+    tourIndex = index;
+    const step = tourSteps[index];
+    setView(step.view);
+    const dialog = $('#platformTour');
+    $('#tourProgress').textContent = `${index+1} of ${tourSteps.length}`;
+    $('#tourTitle').textContent = step.title;
+    $('#tourText').textContent = step.text;
+    $('#tourBack').disabled = index === 0;
+    $('#tourNext').textContent = index === tourSteps.length-1 ? 'Finish tour' : 'Next';
+    if (!dialog.open) dialog.show();
+    $('#tourNext').focus();
+  }
+  function closeTour() { $('#platformTour').close(); if (tourReturnFocus?.isConnected) tourReturnFocus.focus(); else $('#startTour').focus(); }
   async function refresh(force = false) {
     try {
       const data = await api('/api/bootstrap');
@@ -307,7 +333,11 @@
   }
   document.addEventListener('click', event => {
     const button = event.target.closest('button,a'); if (!button || button.disabled) return;
-    if (button.dataset.export) { event.preventDefault(); downloadPrediction(button); }
+    if (button.id === 'startTour' || button.id === 'startGuideTour') { if (!state.ready || state.editor?.saving || state.submitting) return; tourReturnFocus = button; showTour(0); }
+    else if (button.id === 'closeTour') closeTour();
+    else if (button.id === 'tourBack') showTour(Math.max(0,tourIndex-1));
+    else if (button.id === 'tourNext') { if (tourIndex === tourSteps.length-1) closeTour(); else showTour(tourIndex+1); }
+    else if (button.dataset.export) { event.preventDefault(); downloadPrediction(button); }
     else if (button.hasAttribute('data-upload')) { if (state.submitting || state.editor?.saving) return; $('#photoInput').click(); }
     else if (button.dataset.nav) { if (state.editor?.saving) return; setView(button.dataset.nav); }
     else if (button.hasAttribute('data-pending')) { rememberJob(null); state.pendingIndex = Number(button.dataset.pending); setView('match'); }
@@ -345,7 +375,7 @@
   document.addEventListener('toggle', event => { if (event.target.id === 'runDetails') state.detailsOpen[event.target.dataset.job] = event.target.open; },true);
   document.addEventListener('input', event => { if (state.editor && ['name','manufacturer','source_url','brochure_details'].includes(event.target.name)) state.editor[event.target.name] = event.target.value; });
   document.addEventListener('submit', event => { if (event.target.id === 'productForm') { event.preventDefault(); saveProduct(event.target); } });
-  document.addEventListener('keydown', event => { if (event.key === 'Escape' && state.view === 'editor') { event.preventDefault(); cancelEditor(); } });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && $('#platformTour').open) { event.preventDefault(); closeTour(); return; } if (event.key === 'Escape' && state.view === 'editor') { event.preventDefault(); cancelEditor(); } });
   window.addEventListener('pagehide',() => { clearTimeout(pollTimer); resizeObserver?.disconnect(); state.pending.forEach(p => URL.revokeObjectURL(p.url)); });
   refresh();
 })();
