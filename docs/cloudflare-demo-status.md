@@ -7,9 +7,9 @@
 The owner explicitly confirmed `shiva.research11@gmail.com` as the intended paid account. A fresh Wrangler OAuth authorisation succeeded with Workers and Containers scopes. The earlier automatic review rejection was resolved by that explicit account confirmation before retrying.
 
 - Account ID: `22744e58d83f933700484b130caec4fb`.
-- Worker version: `657d927c-ebee-4b93-a11d-b32a6a1f17d5`.
+- Worker version: `270893e4-e547-4729-961b-63237b092ccf`.
 - Container application: `a03c2ba7-42f7-446a-9696-d95272efec2c`.
-- Container image digest: `sha256:3274b538917da535d419356d981e2890e47a655c9a711a6a39f0ca948437a93f`.
+- Container image digest: `sha256:4b48bfb7e36cb0f9501464304aee1c5e786537dbb0f5103daa96b93bf3a7feb2`.
 - Private R2 bucket: `multiplier-photo-demo-state`.
 - `OPENROUTER_API_KEY`, `CLOUD_STATE_TOKEN`, `CLOUD_CONTAINER_TOKEN` and `DEMO_ACCESS_CODE` are hosted Worker secrets. Their values are excluded from source and image.
 - The six-digit owner access receipt is in ignored `cloudflare/demo-access.txt`. The access value and provider keys are not committed.
@@ -87,6 +87,16 @@ The actual hosted UI matches source SHA-256 f42cda3018b1af23c0a16e330b138af7c56c
 
 The owner authorised another INR200. Runtime allowance increased from INR300 to INR500; the cumulative ceiling increased from INR1200 to INR1400, preserving the historical guard and every spending ledger. Only the two budget constants and the immutable deployment image reference changed.
 
-The hosted readback confirms INR207.097500 spent and INR292.902500 remaining, with all 23 saved attempts and the catalogue equal before and after the idle restart. A new user run began during deployment; activation waited until no job was active. The verified private checkpoint contains 23 attempts and all files for 45 media records; SQLite integrity and charged request ledgers passed. Archive SHA256: 40bcb0cba76287ef5678fe539ecad69b26b54974917eaca8d3bcbeaa8dc0b757.
+The hosted readback confirmed INR207.097500 spent and INR292.902500 remaining, with all 23 saved attempts and the catalogue equal before and after the idle restart. A new user run began during the initial publish and was interrupted by that rollout; the later explicit restart waited for idle state. The subsequent repair investigation established this distinction. Future rollout checks must precede publishing as well as explicit restart. The verified private checkpoint contained 23 attempts and all files for 45 media records; SQLite integrity and charged request ledgers passed. Archive SHA256: 40bcb0cba76287ef5678fe539ecad69b26b54974917eaca8d3bcbeaa8dc0b757.
 
 Eighteen focused inference/accounting tests passed using the bundled Python runtime. The built container separately confirmed INR500/INR1400. No paid test or broad dataset rerun was started. Docker Desktop was started for the build and stopped afterwards. cf 1.0.0-beta.20 inspected the application; the existing pinned Wrangler 4.151.1 procedure built and deployed it. Evidence is in ignored var/budget-20261021/. This routine configuration amendment adds no new wiki knowledge; no wiki files or QMD state changed.
+
+## Structured JSON and background processing repair, 21 October 2026
+
+The failed store-photo retry used a malformed evidence-field name. The repair handles that exact alias and requests strict JSON schemas on all single-image, refinement and joint-view inference calls. Gemini receives required closed fields, types and enums; unsupported/complex bounds are retained in the original server-side schema validator. Real no-image probes established endpoint acceptance before the final photo retry.
+
+Independent jobs can now use two background workers, with a shared budget admission lock, durable reservations, at most two provider requests in flight and 15-second launch spacing. Successful call settlement needs one fewer remote checkpoint, and gzip uses level 1. These changes preserve the current model, catalogue and evidence rules.
+
+The affected photo completed in job `5f585828951741ebb11b834e9ff728d9`: 235.219 seconds, INR10.8813, with three saved predictions (V12 Detect Slim, V8 Absolute family and WashG1). Both provider outputs passed the original local schemas and evidence checks. This is a successful technical verification, not a labelled accuracy score or proof of reduced total latency. All 26 earlier records and the catalogue remained unchanged. Hosted spend is INR270.4779, leaving INR229.5221; separate schema diagnostics account for INR44.016675 including conservative no-usage reservations. See `docs/timeout-repair-20261021.md` for measured call times, review scope and accounting.
+
+The deployed digest and Worker version are recorded above. The source repair passed focused tests and two independent review cycles. Docker is stopped. Wiki scope remains read-only; project findings are recorded here without wiki or QMD writes.
