@@ -1,0 +1,5 @@
+# Additional INR200 allowance, 21 October 2026
+
+The owner explicitly requested another INR200 after the queue repair. Increase the runtime cap from INR500 to INR700 and the cumulative ceiling from INR1400 to INR1600. Preserve every ledger, reservation, result, catalogue record, model setting and recovery mechanism. This changes the application allowance; it does not purchase provider credits.
+
+Continue in `codex/cloudflare-demo` from `2559f3d`. Only root changes the two budget constants, adjusts the existing budget-boundary regression to use the configured limit, and updates the immutable image reference and release evidence. Do not stage unrelated `.cursor/` files. Run the focused accounting/resume checks without paid calls. Before publishing and before any explicit restart, verify zero active jobs and a complete checkpoint. Retain the previous image for rollback, wait for actual rollout completion, restore all records and verify that remaining allowance rises by exactly INR200. No new paid photo test is needed for this configuration change. Stop Docker afterwards. Wiki scope remains read-only.
