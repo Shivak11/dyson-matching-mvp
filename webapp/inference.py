@@ -12,9 +12,9 @@ from .protocol import inventory_prompt, validate_inventory, RESULT_FORMAT, valid
 from .predictions import PIPELINE_VERSION
 from .transport import digest, encoded
 
-RUNTIME_CAP_INR = 300.0
+RUNTIME_CAP_INR = 500.0
 HISTORICAL_STAGE_GUARD_INR = 801.9682441
-STAGE_CAP_INR = 1200.0
+STAGE_CAP_INR = 1400.0
 GUARD_FX = 100.0
 PAUSE_SECONDS = 15
 FEATURES = {'body_layout', 'handle_control', 'bin_mechanism', 'display_layout',
