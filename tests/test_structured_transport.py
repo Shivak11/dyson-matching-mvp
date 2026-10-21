@@ -57,6 +57,31 @@ class StructuredTransportTests(unittest.TestCase):
         self.assertEqual(row['estimated_cost_usd'], .001)
         self.assertEqual(json.loads(self.client.pending_path.read_text()), {})
 
+    def test_gemini_nullable_payload_retains_closed_objects_and_local_checks(self):
+        from webapp.schemas import inventory_schema, comparison_schema
+        original = inventory_schema()
+        adapted = transport.provider_schema(original, {'model': 'google/gemini-3.7-flash'})
+        machine = adapted['properties']['objects']['items']
+        self.assertEqual(machine['properties']['parent_id'], {'type': ['string', 'null']})
+        self.assertEqual(machine['properties']['observations']['items']['properties']['box_2d']['type'], ['array', 'null'])
+        self.assertFalse(machine['additionalProperties'])
+        self.assertEqual(set(machine['required']), set(machine['properties']))
+        self.assertIn('pattern', original['properties']['objects']['items']['properties']['object_id'])
+        self.assertNotIn('maxItems', adapted['properties']['objects'])
+        self.assertNotIn('minimum', machine['properties']['box_2d']['items'])
+        with self.assertRaises(ValueError):
+            transport.validate_shape([0, 0, 1001, 1000], original['properties']['objects']['items']['properties']['box_2d'])
+        with self.assertRaises(ValueError):
+            transport.validate_shape([0, 0, 1000], original['properties']['objects']['items']['properties']['box_2d'])
+        decision = transport.provider_schema(comparison_schema(['o1'], ['v8']), {'model': 'google/test'})['properties']['results']['items']['properties']['result']['properties']['decision']
+        self.assertEqual(decision['properties']['product']['enum'], ['v8', None])
+        for invalid in ('', 'bad id'):
+            with self.assertRaises(ValueError):
+                transport.validate_shape(invalid, original['properties']['objects']['items']['properties']['object_id'])
+        with self.assertRaises(ValueError):
+            transport.validate_shape('', original['properties']['objects']['items']['properties']['parent_id'])
+        self.assertEqual(transport.provider_schema(original, {'model': 'other/model'}), original)
+
     def test_no_schema_retains_existing_json_mode(self):
         def network(request, timeout):
             self.assertEqual(json.loads(request.data)['response_format'], {'type': 'json_object'})

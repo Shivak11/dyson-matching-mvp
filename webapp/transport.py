@@ -128,6 +128,28 @@ def validate_shape(value, schema):
             raise ValueError('Response number does not match schema bounds')
 
 
+def provider_schema(schema, model):
+    """Use Gemini's nullable syntax and check complex scalar/array bounds locally."""
+    if not model.get('model', '').startswith('google/'):
+        return copy.deepcopy(schema)
+    def adapt(node):
+        if isinstance(node, list):
+            return [adapt(item) for item in node]
+        if not isinstance(node, dict):
+            return node
+        options = node.get('anyOf')
+        if options and len(options) == 2 and options[1] == {'type': 'null'}:
+            result = adapt(options[0])
+            result['type'] = [result['type'], 'null']
+            if 'enum' in result:
+                result['enum'] = [*result['enum'], None]
+            return result
+        return {key: adapt(value) for key, value in node.items()
+                if key not in ('pattern', 'minLength', 'maxLength', 'minimum',
+                               'maximum', 'minItems', 'maxItems')}
+    return adapt(schema)
+
+
 class Client:
     """The runner holds the process lock; this class serialises ledger updates."""
     def __init__(self, config, root, out, *, reuse_records=(), rate_limit_retries=0, request_interval_seconds=0, max_retry_delay_seconds=300, request_coordinator=None):
@@ -287,7 +309,7 @@ class Client:
             if schema is not None:
                 if not isinstance(schema, dict) or schema.get('type') != 'object':
                     raise ValueError('An object response schema is required')
-                payload['response_format'] = {'type': 'json_schema', 'json_schema': {'name': 'photo_identification', 'strict': True, 'schema': schema}}
+                payload['response_format'] = {'type': 'json_schema', 'json_schema': {'name': 'photo_identification', 'strict': True, 'schema': provider_schema(schema, model)}}
                 payload['provider']['require_parameters'] = True
             if 'provider_only' in model:
                 payload['provider']['only'] = model['provider_only']
