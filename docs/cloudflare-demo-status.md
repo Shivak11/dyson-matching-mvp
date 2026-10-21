@@ -7,9 +7,9 @@
 The owner explicitly confirmed `shiva.research11@gmail.com` as the intended paid account. A fresh Wrangler OAuth authorisation succeeded with Workers and Containers scopes. The earlier automatic review rejection was resolved by that explicit account confirmation before retrying.
 
 - Account ID: `22744e58d83f933700484b130caec4fb`.
-- Worker version: `265182bc-2a0f-4b90-87a4-dec5f30a1256`.
+- Worker version: `657d927c-ebee-4b93-a11d-b32a6a1f17d5`.
 - Container application: `a03c2ba7-42f7-446a-9696-d95272efec2c`.
-- Container image digest: `sha256:522cb9ad5403745c31660392e56b62fd59944509c7e3e869ebe3ee01eb98d15b`.
+- Container image digest: `sha256:3274b538917da535d419356d981e2890e47a655c9a711a6a39f0ca948437a93f`.
 - Private R2 bucket: `multiplier-photo-demo-state`.
 - `OPENROUTER_API_KEY`, `CLOUD_STATE_TOKEN`, `CLOUD_CONTAINER_TOKEN` and `DEMO_ACCESS_CODE` are hosted Worker secrets. Their values are excluded from source and image.
 - The six-digit owner access receipt is in ignored `cloudflare/demo-access.txt`. The access value and provider keys are not committed.
@@ -82,3 +82,11 @@ Final cleanup: Docker Desktop is stopped, Google Chrome is not running, and neit
 The hosted Identify screen now accepts an explicitly confirmed second and third view of one product. Each new run compares all cumulative images jointly and preserves previous results. The saved U005 V15 result remained uncertain alone; U005+U006 identified V15 Detect with High confidence, and adding U007 retained the correct High-confidence V15 result. The two new checks cost INR12.778275. Runtime spending is INR188.576700, leaving INR111.423300. All nineteen original public records remain equal; twenty-one attempts are now saved, with no active jobs. The original six-image score is unchanged.
 
 The actual hosted UI matches source SHA-256 f42cda3018b1af23c0a16e330b138af7c56ce782aa051ef82f7ba1391424e0eb. An idle process restart did not refresh the image; the private checkpoint-guarded container recreation loaded it and restored all prior records/media/ledgers. The recreation request returned a transient 503, while subsequent app readback confirmed successful restoration. No R2 or Durable Object data was deleted. See docs/multiple-views-review.md for source checks, exact grouped jobs, screenshots, exports, costs and the scoped inference result.
+
+## Allowance increase, 21 October 2026
+
+The owner authorised another INR200. Runtime allowance increased from INR300 to INR500; the cumulative ceiling increased from INR1200 to INR1400, preserving the historical guard and every spending ledger. Only the two budget constants and the immutable deployment image reference changed.
+
+The hosted readback confirms INR207.097500 spent and INR292.902500 remaining, with all 23 saved attempts and the catalogue equal before and after the idle restart. A new user run began during deployment; activation waited until no job was active. The verified private checkpoint contains 23 attempts and all files for 45 media records; SQLite integrity and charged request ledgers passed. Archive SHA256: 40bcb0cba76287ef5678fe539ecad69b26b54974917eaca8d3bcbeaa8dc0b757.
+
+Eighteen focused inference/accounting tests passed using the bundled Python runtime. The built container separately confirmed INR500/INR1400. No paid test or broad dataset rerun was started. Docker Desktop was started for the build and stopped afterwards. cf 1.0.0-beta.20 inspected the application; the existing pinned Wrangler 4.151.1 procedure built and deployed it. Evidence is in ignored var/budget-20261021/. This routine configuration amendment adds no new wiki knowledge; no wiki files or QMD state changed.

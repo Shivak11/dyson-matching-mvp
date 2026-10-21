@@ -7,3 +7,5 @@ Use the existing dedicated codex/cloudflare-demo worktree. Root owns the two con
 Read current hosted settings and verify no queued or running jobs. Run focused budget/accounting tests without provider calls. Build through the existing pinned Wrangler procedure, publish the new container image and verify the actual hosted allowance increases by exactly INR200 without changing saved jobs or spending. Preserve a verified checkpoint before any idle container recreation. Stop Docker if started only for this deployment. Do not run paid inference.
 
 The existing private demo deployment and financial allowance increase are expressly authorised. No further product judgement is needed. Use the wiki no-update gate: this is a routine configuration amendment; no semantic wiki retrieval, write or QMD work.
+
+Completed: hosted allowance INR500, spent INR207.097500, remaining INR292.902500; 23 attempts preserved. Eighteen focused tests passed, no paid test calls, Docker stopped. See docs/cloudflare-demo-status.md and ignored var/budget-20261021/.
