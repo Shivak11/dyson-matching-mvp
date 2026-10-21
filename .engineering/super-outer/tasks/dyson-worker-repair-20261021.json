@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "dyson-worker-repair-20261021",
+  "status": "UNASSESSED",
+  "repository": "/Users/shivakakkar/Python Projects/Multiplier-dyson/cloudflare-demo",
+  "branch": "codex/cloudflare-demo",
+  "base": "8d8fffa@8d8fffa29eed76ac85280f9d4d741d00668648a7",
+  "mode": "FOCUSED",
+  "selected_modules": [
+    "backend-api",
+    "reliability-recovery",
+    "delivery-release"
+  ],
+  "allowed_actions": [
+    "edit-files",
+    "run-tests",
+    "commit",
+    "push",
+    "deploy"
+  ],
+  "allowed_paths": [
+    "."
+  ],
+  "allowed_destinations": [
+    "existing-demo"
+  ],
+  "plan": "docs/PLAN-breaker-repairs-20261021.md",
+  "environment": "hosted-demo",
+  "excluded_actions": [
+    "all-other-mutations"
+  ],
+  "created_at": "2026-10-21T10:52:02.854Z",
+  "attempt_limit": 4,
+  "minute_budget": 60,
+  "attempts": [],
+  "completion_contract": {
+    "schema_version": "1.0.0",
+    "claims": [
+      {
+        "id": "queue-regressions",
+        "level": "source",
+        "actor_ref": "configured-demo-user",
+        "client": "local-tools",
+        "environment": "local",
+        "action": "Run the recorded recovery regressions twice",
+        "expected_result": "Durable jobs finish once after transient save and claim failures",
+        "context_file": "docs/evidence/worker-repair/queue-regressions-context.json"
+      },
+      {
+        "id": "container-package",
+        "level": "package",
+        "actor_ref": "configured-demo-user",
+        "client": "docker",
+        "environment": "local",
+        "action": "Check built source hashes, budget and listen backlog",
+        "expected_result": "Built image matches repaired Python source with unchanged INR500 cap",
+        "context_file": "docs/evidence/worker-repair/container-package-context.json"
+      },
+      {
+        "id": "photo-completion",
+        "level": "runtime",
+        "actor_ref": "configured-demo-user",
+        "client": "deployed-api",
+        "environment": "hosted-demo",
+        "action": "Retry the affected photo and download both saved exports",
+        "expected_result": "Completed result, two settled calls, unchanged prior records and no unresolved request",
+        "context_file": "docs/evidence/worker-repair/photo-completion-context.json"
+      },
+      {
+        "id": "result-browser",
+        "level": "journey",
+        "actor_ref": "configured-demo-user",
+        "client": "in-app-browser",
+        "environment": "hosted-demo",
+        "action": "Open the running photo and observe automatic completion",
+        "expected_result": "Completed result and JSON/CSV controls appear without resubmission",
+        "context_file": "docs/evidence/worker-repair/result-browser-context.json"
+      }
+    ]
+  },
+  "completion_evidence": "docs/evidence/worker-repair/completion-receipt.json"
+}

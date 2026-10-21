@@ -7,9 +7,9 @@
 The owner explicitly confirmed `shiva.research11@gmail.com` as the intended paid account. A fresh Wrangler OAuth authorisation succeeded with Workers and Containers scopes. The earlier automatic review rejection was resolved by that explicit account confirmation before retrying.
 
 - Account ID: `22744e58d83f933700484b130caec4fb`.
-- Worker version: `17fc20ec-9e66-450a-b4b5-9afec498ece5`.
+- Worker version: `980b0d93-fef7-4909-8dca-39b9ed426b78`.
 - Container application: `a03c2ba7-42f7-446a-9696-d95272efec2c`.
-- Container image digest: `sha256:846e83ebe138e182cfd974657b34e729b24aba55e323389677a5ac50dbe55822`.
+- Container image digest: `sha256:33807655e3dbe70d4512681fcf619819cce0dfd70e547e1b9d52ba8af622388c`.
 - Private R2 bucket: `multiplier-photo-demo-state`.
 - `OPENROUTER_API_KEY`, `CLOUD_STATE_TOKEN`, `CLOUD_CONTAINER_TOKEN` and `DEMO_ACCESS_CODE` are hosted Worker secrets. Their values are excluded from source and image.
 - The six-digit owner access receipt is in ignored `cloudflare/demo-access.txt`. The access value and provider keys are not committed.
@@ -101,10 +101,18 @@ The affected photo completed in job `5f585828951741ebb11b834e9ff728d9`: 235.219 
 
 The deployed digest and Worker version are recorded above. The source repair passed focused tests and two independent review cycles. Docker is stopped. Wiki scope remains read-only; project findings are recorded here without wiki or QMD writes.
 
-## Current reliability findings, 21 October 2026
+## Reliability findings before queue repair, 21 October 2026
 
 The later storage-write repair adds bounded retries and correct error classification, but its new paid verification became interrupted after successful inventory. Its cause is unproved. No paid tests were started after that interruption. The demo is accessible, but background processing is not verified reliable across storage failures and restarts.
 
 The owner's independent report-only breaker audit reproduced four open findings: two High queue/final-save recovery failures, one Medium job-claim worker-loss failure and one Medium local HTTP burst failure. Root independently reproduced the recovery defects; targeted bursts failed in four of ten iterations. The audit used no real credentials, provider requests or production mutations and cost INR0. See `docs/breaker-audit-20261021.md` and the findings ledger. These findings remain unfixed; no overall pass is claimed.
 
 The final live allowance readback shows INR305.39505 accounted and INR194.60495 remaining, with 29 saved attempts and no active jobs. Including INR44.016675 in separately recorded local diagnostics leaves INR150.588275 in the combined allowance. Conservative reservations are included; this is not a wallet-balance statement. Further implementation requires resolving the open queue/worker recovery defects and investigating the hosted interruption. Docker remains stopped and wiki scope remains read-only.
+
+## Queue and worker repair, 21 October 2026
+
+The owner authorised fixing the four audit findings. The deployed repair makes SQLite the queue, contains worker exceptions, checkpoints claims before inference and retries final saves without another model call. Unambiguous running jobs can resume from successful cached responses; unknown provider outcomes remain interrupted with their reservations retained. The private lifecycle readback is authenticated and bounded. All four original failure sequences passed twice, the integrated Python set passed 95 checks, and Worker/privacy/UI checks passed.
+
+The single affected-photo run `8dd0f136b5024295885f96c92253daf0` completed in 225.756 seconds for INR10.350675 across two successful provider calls. Both downloaded exports worked and the browser updated automatically. No deployment or restart occurred during that run. All 29 earlier records and the catalogue are unchanged; 30 attempts are saved with no active work. Hosted spend is INR315.745725, leaving INR184.254275 in the UI. After separately recorded diagnostics, combined allowance remaining is INR140.2376. No old reservation or failed result was removed. See `docs/breaker-repair-20261021.md` for the exact proof and remaining scope.
+
+The running image and Worker are recorded above. Docker Desktop is stopped. Wiki consultation remains read-only, so technical findings remain in this project with no wiki or QMD write.

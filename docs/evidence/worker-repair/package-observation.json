@@ -1,0 +1,10 @@
+{
+  "files": {
+    "app_server.py": "b5e76f973ba45249fd767aab0c4cc007adb96e2851190686014f40c54a3c77ca",
+    "webapp/store.py": "cac6a5e42615e816e5d6c95ec448b806989b73e5ed61b4888210ff46c4f03f3b",
+    "webapp/inference.py": "59bba8ff9dc699686327daf7f96e730a1c8e6015a82ff7b3f292b400095cab2e"
+  },
+  "cap_inr": 500.0,
+  "listen_backlog": 128,
+  "image": "sha256:33807655e3dbe70d4512681fcf619819cce0dfd70e547e1b9d52ba8af622388c"
+}

@@ -1,0 +1,9 @@
+{
+  "actor_ref": "configured-demo-user",
+  "client": "deployed-api",
+  "environment": "hosted-demo",
+  "route": "existing-cloudflare-demo",
+  "revision": "980b0d93-fef7-4909-8dca-39b9ed426b78",
+  "permissions": "existing-owner-authorised-demo-scope",
+  "artifact_ref": "954e74d96d535296490162c6dcb315c9ebba4503c07d5f58c151fda51bf3ceba"
+}

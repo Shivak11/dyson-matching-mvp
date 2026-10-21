@@ -1,0 +1,9 @@
+{
+  "actor_ref": "configured-demo-user",
+  "client": "local-tools",
+  "environment": "local",
+  "route": "local-worktree",
+  "revision": "c2463788a14c24e2fb616399808ec98fe5953982",
+  "permissions": "existing-owner-authorised-demo-scope",
+  "artifact_ref": "8a4b61f0dfdf6927aeed81c45a36d4405449f7b0d2361726dc4c9d756721c8f3"
+}

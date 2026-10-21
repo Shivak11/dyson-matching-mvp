@@ -1,0 +1,9 @@
+{
+  "actor_ref": "configured-demo-user",
+  "client": "docker",
+  "environment": "local",
+  "route": "local-worktree",
+  "revision": "c2463788a14c24e2fb616399808ec98fe5953982",
+  "permissions": "existing-owner-authorised-demo-scope",
+  "artifact_ref": "04af9d7a9fc15ccc8c82e786081ed6744045a82b3e908b21e08215c198479de7"
+}

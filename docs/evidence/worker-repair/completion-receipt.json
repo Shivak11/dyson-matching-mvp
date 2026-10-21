@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "claims": [
+    {
+      "id": "queue-regressions",
+      "level": "source",
+      "contract_sha256": "93799659a8cf4b2c7fbf9f00656cc882a6bb42b30c2f2d15cd5980cdc3158fe0",
+      "context_sha256": "c59eda9756208c4c615d561060de5da6d3f5c4cf81fcb74debbcd967f07a7b17",
+      "status": "PASS",
+      "observed_at": "2026-10-21T10:52:27.653Z",
+      "expires_at": "2026-10-22T10:52:27.653Z",
+      "evidence_file": "docs/evidence/worker-repair/source-observation.json",
+      "evidence_sha256": "8a4b61f0dfdf6927aeed81c45a36d4405449f7b0d2361726dc4c9d756721c8f3",
+      "method": "local-check"
+    },
+    {
+      "id": "container-package",
+      "level": "package",
+      "contract_sha256": "93799659a8cf4b2c7fbf9f00656cc882a6bb42b30c2f2d15cd5980cdc3158fe0",
+      "context_sha256": "cbf02a3857b6503124a537591b768c18bae4ad3de7f2ed89648fb942cc913dfd",
+      "status": "PASS",
+      "observed_at": "2026-10-21T10:52:27.653Z",
+      "expires_at": "2026-10-22T10:52:27.653Z",
+      "evidence_file": "docs/evidence/worker-repair/package-observation.json",
+      "evidence_sha256": "04af9d7a9fc15ccc8c82e786081ed6744045a82b3e908b21e08215c198479de7",
+      "method": "local-check"
+    },
+    {
+      "id": "photo-completion",
+      "level": "runtime",
+      "contract_sha256": "93799659a8cf4b2c7fbf9f00656cc882a6bb42b30c2f2d15cd5980cdc3158fe0",
+      "context_sha256": "8d5998c959fe466e2dbfb4bdbc09400e4c563bb1e5d0f8a3866e986bffbe2a35",
+      "status": "PASS",
+      "observed_at": "2026-10-21T10:52:27.653Z",
+      "expires_at": "2026-10-22T10:52:27.653Z",
+      "evidence_file": "docs/evidence/worker-repair/hosted-observation.json",
+      "evidence_sha256": "954e74d96d535296490162c6dcb315c9ebba4503c07d5f58c151fda51bf3ceba",
+      "method": "direct-observation"
+    },
+    {
+      "id": "result-browser",
+      "level": "journey",
+      "contract_sha256": "93799659a8cf4b2c7fbf9f00656cc882a6bb42b30c2f2d15cd5980cdc3158fe0",
+      "context_sha256": "8886001ba445534566f702255b27e3faa8f23cf69102d0025344ecba65bbdf05",
+      "status": "PASS",
+      "observed_at": "2026-10-21T10:52:27.653Z",
+      "expires_at": "2026-10-22T10:52:27.653Z",
+      "evidence_file": "docs/evidence/worker-repair/browser-observation.json",
+      "evidence_sha256": "35f6c35ac8eeba3ae7844e520b51b227f57f2d92fc1c6a90d80e52a8eb4a0a32",
+      "method": "direct-observation"
+    }
+  ]
+}

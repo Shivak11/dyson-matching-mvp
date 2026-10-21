@@ -1,34 +1,35 @@
 {
   "schema_version": "1.0.0",
-  "task_id": "dyson-private-testing",
+  "task_id": "dyson-worker-repair-20261021",
   "status": "UNASSESSED",
-  "repository": "/Users/shivakakkar/Python Projects/Multiplier-dyson/app",
-  "branch": "codex/local-app",
-  "base": "ed4eb5f@ed4eb5f91a466d8d495af87ee0dbedfa788762c4",
+  "repository": "/Users/shivakakkar/Python Projects/Multiplier-dyson/cloudflare-demo",
+  "branch": "codex/cloudflare-demo",
+  "base": "8d8fffa@8d8fffa29eed76ac85280f9d4d741d00668648a7",
   "mode": "FOCUSED",
   "selected_modules": [
-    "ai-llm",
     "backend-api",
-    "frontend-client",
-    "compatibility-integrations"
+    "reliability-recovery",
+    "delivery-release"
   ],
   "allowed_actions": [
     "edit-files",
     "run-tests",
-    "commit"
+    "commit",
+    "push",
+    "deploy"
   ],
   "allowed_paths": [
     "."
   ],
   "allowed_destinations": [
-    "none"
+    "existing-demo"
   ],
-  "plan": "docs/PLAN-private-testing-app.md",
-  "environment": "local",
+  "plan": "docs/PLAN-breaker-repairs-20261021.md",
+  "environment": "hosted-demo",
   "excluded_actions": [
     "all-other-mutations"
   ],
-  "created_at": "2026-10-16T13:27:37.282Z",
+  "created_at": "2026-10-21T10:52:02.854Z",
   "attempt_limit": 4,
   "minute_budget": 60,
   "attempts": [],
@@ -36,68 +37,46 @@
     "schema_version": "1.0.0",
     "claims": [
       {
-        "id": "private-source",
+        "id": "queue-regressions",
         "level": "source",
-        "actor_ref": "configured-owner",
+        "actor_ref": "configured-demo-user",
         "client": "local-tools",
         "environment": "local",
-        "action": "Run app and parity tests without network inference",
-        "expected_result": "Offline tests pass; prompts, settings and gates preserve baseline behaviour",
-        "context_file": "docs/evidence/private-testing/private-source-context.json"
+        "action": "Run the recorded recovery regressions twice",
+        "expected_result": "Durable jobs finish once after transient save and claim failures",
+        "context_file": "docs/evidence/worker-repair/queue-regressions-context.json"
       },
       {
-        "id": "private-package",
+        "id": "container-package",
         "level": "package",
-        "actor_ref": "configured-owner",
-        "client": "local-tools",
+        "actor_ref": "configured-demo-user",
+        "client": "docker",
         "environment": "local",
-        "action": "Run allowlisted code with manufacturer seed and historical files absent",
-        "expected_result": "Fresh path starts and accepts test uploads without research manifests or outputs",
-        "context_file": "docs/evidence/private-testing/private-package-context.json"
+        "action": "Check built source hashes, budget and listen backlog",
+        "expected_result": "Built image matches repaired Python source with unchanged INR500 cap",
+        "context_file": "docs/evidence/worker-repair/container-package-context.json"
       },
       {
-        "id": "private-journey",
+        "id": "photo-completion",
+        "level": "runtime",
+        "actor_ref": "configured-demo-user",
+        "client": "deployed-api",
+        "environment": "hosted-demo",
+        "action": "Retry the affected photo and download both saved exports",
+        "expected_result": "Completed result, two settled calls, unchanged prior records and no unresolved request",
+        "context_file": "docs/evidence/worker-repair/photo-completion-context.json"
+      },
+      {
+        "id": "result-browser",
         "level": "journey",
-        "actor_ref": "configured-owner",
-        "client": "local-browser",
-        "environment": "local",
-        "action": "Use Identify/Verify, per-object decisions, Run details and downloads",
-        "expected_result": "Responsive accessible UI works; downloaded predictions remain unchanged",
-        "context_file": "docs/evidence/private-testing/private-journey-context.json"
-      },
-      {
-        "id": "private-hosting",
-        "level": "source",
-        "actor_ref": "configured-owner",
-        "client": "local-tools",
-        "environment": "local",
-        "action": "Inspect officially supported Sites execution and access model",
-        "expected_result": "Exact hosting dependencies or verified supported architecture are recorded",
-        "context_file": "docs/evidence/private-testing/private-hosting-context.json"
-      },
-      {
-        "id": "owner-acceptance",
-        "level": "owner-acceptance",
-        "actor_ref": "configured-owner",
-        "client": "local-browser",
-        "environment": "local",
-        "action": "Owner tries the resulting app",
-        "expected_result": "Explicit acceptance remains pending",
-        "context_file": "docs/evidence/private-testing/owner-acceptance-context.json"
+        "actor_ref": "configured-demo-user",
+        "client": "in-app-browser",
+        "environment": "hosted-demo",
+        "action": "Open the running photo and observe automatic completion",
+        "expected_result": "Completed result and JSON/CSV controls appear without resubmission",
+        "context_file": "docs/evidence/worker-repair/result-browser-context.json"
       }
     ]
   },
-  "design_package": {
-    "required": true,
-    "reason": "Bounded additions to the private upload and saved prediction interface",
-    "path": ".engineering/super-outer/design/private-testing/v1",
-    "version": "1",
-    "sha256": "4e1cc91ce6c78aef317376c5fbab5118fa16b9d5c80217bc856c9548a25b9075"
-  },
-  "product_intent": {
-    "path": ".engineering/super-outer/intent/private-testing.md",
-    "version": "1",
-    "sha256": "2af71e48f3cef34844d761db58c62424d6abc657ada997c8220c51b46b7f9a76"
-  },
-  "completion_evidence": "docs/evidence/private-testing/completion-receipt.json"
+  "completion_evidence": "docs/evidence/worker-repair/completion-receipt.json"
 }

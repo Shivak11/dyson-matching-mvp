@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-21T10:51:12Z",
+  "prior_jobs_unchanged": 29,
+  "jobs": 30,
+  "active_jobs": 0,
+  "catalogue_unchanged": true,
+  "job_id": "8dd0f136b5024295885f96c92253daf0",
+  "status": "completed",
+  "elapsed_seconds": 225.75606854299997,
+  "verification_cost_inr": 10.350674999999999,
+  "exports": [
+    "json",
+    "csv"
+  ],
+  "hosted_spent_inr": 315.7457249999999,
+  "hosted_remaining_inr": 184.25427500000012,
+  "separate_diagnostics_inr": 44.016675,
+  "combined_remaining_inr": 140.23760000000013,
+  "physical_calls": [
+    {
+      "job_id": "8dd0f136b5024295885f96c92253daf0:Finding physical machines:attempt:1",
+      "status": "ok",
+      "elapsed_seconds": 59.18822206600004,
+      "estimated_cost_usd": 0.0330795,
+      "http_status": 200
+    },
+    {
+      "job_id": "8dd0f136b5024295885f96c92253daf0:Comparing manufacturer references:attempt:1",
+      "status": "ok",
+      "elapsed_seconds": 111.12028361899996,
+      "estimated_cost_usd": 0.07042725,
+      "http_status": 200
+    }
+  ],
+  "inflight": {},
+  "archive_sha256": "c56787ea0bb1e0908e39d8d28a99faf25cfe86b739f43c10b36059be8fc20abb"
+}

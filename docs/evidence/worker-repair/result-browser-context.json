@@ -1,0 +1,9 @@
+{
+  "actor_ref": "configured-demo-user",
+  "client": "in-app-browser",
+  "environment": "hosted-demo",
+  "route": "existing-cloudflare-demo",
+  "revision": "980b0d93-fef7-4909-8dca-39b9ed426b78",
+  "permissions": "existing-owner-authorised-demo-scope",
+  "artifact_ref": "35f6c35ac8eeba3ae7844e520b51b227f57f2d92fc1c6a90d80e52a8eb4a0a32"
+}

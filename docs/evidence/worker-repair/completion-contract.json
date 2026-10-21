@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "claims": [
+    {
+      "id": "queue-regressions",
+      "level": "source",
+      "actor_ref": "configured-demo-user",
+      "client": "local-tools",
+      "environment": "local",
+      "action": "Run the recorded recovery regressions twice",
+      "expected_result": "Durable jobs finish once after transient save and claim failures",
+      "context_file": "docs/evidence/worker-repair/queue-regressions-context.json"
+    },
+    {
+      "id": "container-package",
+      "level": "package",
+      "actor_ref": "configured-demo-user",
+      "client": "docker",
+      "environment": "local",
+      "action": "Check built source hashes, budget and listen backlog",
+      "expected_result": "Built image matches repaired Python source with unchanged INR500 cap",
+      "context_file": "docs/evidence/worker-repair/container-package-context.json"
+    },
+    {
+      "id": "photo-completion",
+      "level": "runtime",
+      "actor_ref": "configured-demo-user",
+      "client": "deployed-api",
+      "environment": "hosted-demo",
+      "action": "Retry the affected photo and download both saved exports",
+      "expected_result": "Completed result, two settled calls, unchanged prior records and no unresolved request",
+      "context_file": "docs/evidence/worker-repair/photo-completion-context.json"
+    },
+    {
+      "id": "result-browser",
+      "level": "journey",
+      "actor_ref": "configured-demo-user",
+      "client": "in-app-browser",
+      "environment": "hosted-demo",
+      "action": "Open the running photo and observe automatic completion",
+      "expected_result": "Completed result and JSON/CSV controls appear without resubmission",
+      "context_file": "docs/evidence/worker-repair/result-browser-context.json"
+    }
+  ]
+}

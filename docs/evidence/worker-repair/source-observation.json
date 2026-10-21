@@ -1,0 +1,29 @@
+{
+  "commands": [
+    {
+      "command": "PYTHONPATH=tests <bundled-python> -m unittest test_job_resilience test_inference_resume",
+      "checks": 19,
+      "runs": 2,
+      "exit_codes": [
+        0,
+        0
+      ]
+    },
+    {
+      "command": "node cloudflare/worker.test.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node tests/test_multiview_ui.cjs",
+      "exit_code": 0
+    }
+  ],
+  "product_sha256": {
+    "app_server.py": "b5e76f973ba45249fd767aab0c4cc007adb96e2851190686014f40c54a3c77ca",
+    "webapp/store.py": "cac6a5e42615e816e5d6c95ec448b806989b73e5ed61b4888210ff46c4f03f3b",
+    "webapp/inference.py": "59bba8ff9dc699686327daf7f96e730a1c8e6015a82ff7b3f292b400095cab2e",
+    "cloudflare/worker.js": "6691ad69c58374f521e4927806b8eac6cbac05997fcd16a3293fbdc90ca5e4d6"
+  },
+  "earlier_integrated_checks": 95,
+  "source_core_changed_after_integrated_check": false
+}

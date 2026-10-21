@@ -1,0 +1,12 @@
+{
+  "action": "Opened the active run and observed its automatic completed state in the in-app browser",
+  "prediction_id": "8dd0f136b5024295885f96c92253daf0",
+  "heading": "Dyson V12 Detect Slim",
+  "status": "Complete",
+  "downloads": [
+    "JSON",
+    "CSV"
+  ],
+  "screenshot_file": "var/timeout-20261021/worker-repair-completed.png",
+  "screenshot_sha256": "cc9b0c9bdc45fbab0b1d8e375e5958442cc24d60c7f7529380dc3918d2957e68"
+}
