@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-21T11:02:52Z",
+  "cap_inr": 700,
+  "spent_inr": 315.7457249999999,
+  "remaining_inr": 384.2542750000001,
+  "combined_remaining_inr": 340.2376000000001,
+  "preserved_jobs": 30,
+  "active_jobs": 0,
+  "increase_inr": 200,
+  "new_model_calls": 0
+}

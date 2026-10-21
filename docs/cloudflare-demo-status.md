@@ -7,9 +7,9 @@
 The owner explicitly confirmed `shiva.research11@gmail.com` as the intended paid account. A fresh Wrangler OAuth authorisation succeeded with Workers and Containers scopes. The earlier automatic review rejection was resolved by that explicit account confirmation before retrying.
 
 - Account ID: `22744e58d83f933700484b130caec4fb`.
-- Worker version: `980b0d93-fef7-4909-8dca-39b9ed426b78`.
+- Worker version: `dbba2a06-51d4-4050-8c70-38838d673967`.
 - Container application: `a03c2ba7-42f7-446a-9696-d95272efec2c`.
-- Container image digest: `sha256:33807655e3dbe70d4512681fcf619819cce0dfd70e547e1b9d52ba8af622388c`.
+- Container image digest: `sha256:e5289555f5c91a9206d3145675dc66f622c095bc4f1becd0d4bdc97194341ee1`.
 - Private R2 bucket: `multiplier-photo-demo-state`.
 - `OPENROUTER_API_KEY`, `CLOUD_STATE_TOKEN`, `CLOUD_CONTAINER_TOKEN` and `DEMO_ACCESS_CODE` are hosted Worker secrets. Their values are excluded from source and image.
 - The six-digit owner access receipt is in ignored `cloudflare/demo-access.txt`. The access value and provider keys are not committed.
@@ -116,3 +116,7 @@ The owner authorised fixing the four audit findings. The deployed repair makes S
 The single affected-photo run `8dd0f136b5024295885f96c92253daf0` completed in 225.756 seconds for INR10.350675 across two successful provider calls. Both downloaded exports worked and the browser updated automatically. No deployment or restart occurred during that run. All 29 earlier records and the catalogue are unchanged; 30 attempts are saved with no active work. Hosted spend is INR315.745725, leaving INR184.254275 in the UI. After separately recorded diagnostics, combined allowance remaining is INR140.2376. No old reservation or failed result was removed. See `docs/breaker-repair-20261021.md` for the exact proof and remaining scope.
 
 The running image and Worker are recorded above. Docker Desktop is stopped. Wiki consultation remains read-only, so technical findings remain in this project with no wiki or QMD write.
+
+## Additional INR200, 21 October 2026
+
+After the verified queue repair, the owner authorised another INR200. Runtime cap is now INR700 and cumulative ceiling INR1600. The live app confirms INR315.745725 spent or reserved and INR384.254275 remaining. Including separately recorded diagnostics leaves INR340.2376. All 30 jobs, catalogue entries and spending records are unchanged; no paid model call was needed. The browser displays INR384.25 remaining and the completed affected-photo result. Thirty-seven focused checks passed. Cloudflare application version 22 completed, the idle checkpoint was preserved, and Docker was stopped. See `docs/PLAN-budget-addition-20261021.md` and `docs/evidence/budget-addition-20261021.json`.
