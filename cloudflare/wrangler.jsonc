@@ -7,7 +7,7 @@
   "workers_dev": true,
   "preview_urls": false,
   "vars": { "APP_ORIGIN": "https://multiplier-photo-demo.shiva-research11.workers.dev" },
-  "containers": [{ "class_name": "PhotoDemo", "image": "registry.cloudflare.com/22744e58d83f933700484b130caec4fb/multiplier-photo-demo-photodemo@sha256:4b48bfb7e36cb0f9501464304aee1c5e786537dbb0f5103daa96b93bf3a7feb2", "instance_type": "basic", "max_instances": 1 }],
+  "containers": [{ "class_name": "PhotoDemo", "image": "registry.cloudflare.com/22744e58d83f933700484b130caec4fb/multiplier-photo-demo-photodemo@sha256:846e83ebe138e182cfd974657b34e729b24aba55e323389677a5ac50dbe55822", "instance_type": "basic", "max_instances": 1 }],
   "durable_objects": { "bindings": [{ "name": "PHOTO_DEMO", "class_name": "PhotoDemo" }] },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["PhotoDemo"] }],
   "r2_buckets": [{ "binding": "STATE", "bucket_name": "multiplier-photo-demo-state" }],
