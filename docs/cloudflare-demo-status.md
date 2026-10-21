@@ -7,9 +7,9 @@
 The owner explicitly confirmed `shiva.research11@gmail.com` as the intended paid account. A fresh Wrangler OAuth authorisation succeeded with Workers and Containers scopes. The earlier automatic review rejection was resolved by that explicit account confirmation before retrying.
 
 - Account ID: `22744e58d83f933700484b130caec4fb`.
-- Worker version: `270893e4-e547-4729-961b-63237b092ccf`.
+- Worker version: `17fc20ec-9e66-450a-b4b5-9afec498ece5`.
 - Container application: `a03c2ba7-42f7-446a-9696-d95272efec2c`.
-- Container image digest: `sha256:4b48bfb7e36cb0f9501464304aee1c5e786537dbb0f5103daa96b93bf3a7feb2`.
+- Container image digest: `sha256:846e83ebe138e182cfd974657b34e729b24aba55e323389677a5ac50dbe55822`.
 - Private R2 bucket: `multiplier-photo-demo-state`.
 - `OPENROUTER_API_KEY`, `CLOUD_STATE_TOKEN`, `CLOUD_CONTAINER_TOKEN` and `DEMO_ACCESS_CODE` are hosted Worker secrets. Their values are excluded from source and image.
 - The six-digit owner access receipt is in ignored `cloudflare/demo-access.txt`. The access value and provider keys are not committed.
@@ -100,3 +100,11 @@ Independent jobs can now use two background workers, with a shared budget admiss
 The affected photo completed in job `5f585828951741ebb11b834e9ff728d9`: 235.219 seconds, INR10.8813, with three saved predictions (V12 Detect Slim, V8 Absolute family and WashG1). Both provider outputs passed the original local schemas and evidence checks. This is a successful technical verification, not a labelled accuracy score or proof of reduced total latency. All 26 earlier records and the catalogue remained unchanged. Hosted spend is INR270.4779, leaving INR229.5221; separate schema diagnostics account for INR44.016675 including conservative no-usage reservations. See `docs/timeout-repair-20261021.md` for measured call times, review scope and accounting.
 
 The deployed digest and Worker version are recorded above. The source repair passed focused tests and two independent review cycles. Docker is stopped. Wiki scope remains read-only; project findings are recorded here without wiki or QMD writes.
+
+## Current reliability findings, 21 October 2026
+
+The later storage-write repair adds bounded retries and correct error classification, but its new paid verification became interrupted after successful inventory. Its cause is unproved. No paid tests were started after that interruption. The demo is accessible, but background processing is not verified reliable across storage failures and restarts.
+
+The owner's independent report-only breaker audit reproduced four open findings: two High queue/final-save recovery failures, one Medium job-claim worker-loss failure and one Medium local HTTP burst failure. Root independently reproduced the recovery defects; targeted bursts failed in four of ten iterations. The audit used no real credentials, provider requests or production mutations and cost INR0. See `docs/breaker-audit-20261021.md` and the findings ledger. These findings remain unfixed; no overall pass is claimed.
+
+The final live allowance readback shows INR305.39505 accounted and INR194.60495 remaining, with 29 saved attempts and no active jobs. Including INR44.016675 in separately recorded local diagnostics leaves INR150.588275 in the combined allowance. Conservative reservations are included; this is not a wallet-balance statement. Further implementation requires resolving the open queue/worker recovery defects and investigating the hosted interruption. Docker remains stopped and wiki scope remains read-only.
