@@ -1,6 +1,8 @@
 # Dyson photo matching
 
-A local web app for comparing store photographs with manufacturer images and brochure details. It uses SQLite and Gemini 3.7 Flash high through OpenRouter. The saved accuracy report and earlier experiments remain in this repository.
+[![Deployed system architecture](docs/architecture/system-diagram.svg)](docs/architecture/system-diagram.svg)
+
+A web app for comparing store photographs with manufacturer images and brochure details. The [hosted demo](https://multiplier-photo-demo.shiva-research11.workers.dev/) runs on Cloudflare Workers and Containers, with private R2 checkpoints. It uses SQLite and Gemini 3.7 Flash high through OpenRouter and can also run locally. The saved accuracy report and earlier experiments remain in this repository. See the [diagram maintenance note](docs/architecture/DIAGRAM-STYLE.md) and [deployment record](docs/cloudflare-demo-status.md).
 
 ## Run locally
 
@@ -34,9 +36,9 @@ Expand **Run details** to inspect recorded latency, the AI model/provider, confi
 
 ## Costs and recovery
 
-The app has a shared initial runtime cap of ₹100, within the remaining experiment budget. It keeps a separate metered ledger for each job and includes unfinished-request reserves. One paid worker runs at a time, with at least 15 seconds after a response and bounded retries for rate limits. There is no silent model or provider fallback.
+The app has an owner-authorised shared runtime cap of ₹700. It keeps a separate metered ledger for each job and includes unfinished-request reserves. Two background workers process saved SQLite jobs, with at most two provider requests in flight, at least 15 seconds between launches and bounded retries for rate limits. Each client also pauses after a response. There is no silent model or provider fallback.
 
-Closing the browser does not cancel a running job. Restarting the server marks unfinished jobs as interrupted; it does not repeat paid calls. Review the preserved upload and deliberately retry when appropriate. The initial cap cannot be reset by choosing another database location.
+Closing the browser does not cancel a running job. The hosted app restores its database and files from a private R2 checkpoint at startup. Queued jobs remain queued, and interrupted work can resume when its exact saved requests and successful responses are unambiguous. Unknown provider outcomes remain interrupted with their reserves retained. Choosing another database location cannot reset the spending cap.
 
 Runtime databases, uploads, responses and `.env` are ignored by Git. The historic public-photo experiment evidence remains tracked for reproducibility. Do not add client uploads or keys to Git.
 
@@ -68,4 +70,4 @@ python3 tools/build_private_app.py --output var/private-testing-app --prepare-ca
 
 Choose an empty output folder. The adjacent `private-testing-app-code.zip` contains only the server, runtime modules, requirements and three web assets. It excludes source data, model configuration, databases, photos, keys, tests, reports and experiment outputs. The prepared local folder additionally contains the private manufacturer seed and selected model configuration; those inputs are never public static assets. The archive is a transport artifact, not a deployed Site. Runtime credentials are supplied separately through the server environment.
 
-Sites hosting is blocked for the unchanged Python server and background worker. Owner-private sign-in is supported, but hosting requires adapting execution, private storage and durable jobs, and configuring a hosted OpenRouter secret. See [the exact runtime findings](docs/private-testing-sites-feasibility.md). No Site, tunnel, hosted service or private data transfer was created for this conversion.
+The earlier [Sites feasibility assessment](docs/private-testing-sites-feasibility.md) concerns the standalone bundle. The current hosted app uses a Cloudflare Worker, a Durable Object, one Python container and private R2 checkpoints. OpenRouter credentials and access controls are supplied through hosted secrets. The container image is built locally with Docker and deployed using the pinned Wrangler release procedure.

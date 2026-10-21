@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1510" width="1440" height="1510" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Dyson photo matching: deployed system architecture</title>
+<desc id="desc">Staff use a browser to upload store photographs or manufacturer references. A Cloudflare Worker checks access and forwards requests through the PhotoDemo Durable Object to a Python container. Two background workers use Gemini through OpenRouter, validate structured JSON, save results in SQLite and files, and checkpoint private state in Cloudflare R2. A five-step trace follows the actual upload 12807_2_8.jpg. Full request logging is switched off.</desc>
+<metadata id="architecture-facts">{
+  "release_image_sha256": "e5289555f5c91a9206d3145675dc66f622c095bc4f1becd0d4bdc97194341ee1",
+  "verified_date": "2026-10-21",
+  "worker": "multiplier-photo-demo",
+  "durable_object": "PhotoDemo",
+  "container_instances": 1,
+  "port": 8080,
+  "background_workers": 2,
+  "max_inflight": 2,
+  "launch_gap_seconds": 15,
+  "max_product_views": 3,
+  "model": "google/gemini-3.7-flash",
+  "reasoning": "high",
+  "provider": "openrouter",
+  "provider_route": [
+    "google-ai-studio"
+  ],
+  "strict_json_schema": true,
+  "provider_fallback": false,
+  "request_logging": false,
+  "private_lifecycle_events": true,
+  "r2_bucket": "multiplier-photo-demo-state",
+  "checkpoint_key": "demo/state.tar.gz",
+  "working_database": "var/app.sqlite3",
+  "working_files": [
+    "var/media",
+    "var/jobs",
+    "var/runtime"
+  ],
+  "trace_photo": "12807_2_8.jpg",
+  "trace_job": "8dd0f136b5024295885f96c92253daf0",
+  "joint_views": true
+}</metadata>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1971C2"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8590C"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0B8A5F"/></marker>
+<marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6741D9"/></marker>
+<marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0C8599"/></marker>
+<marker id="a-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#868E96"/></marker>
+<marker id="a-indigo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4263EB"/></marker>
+</defs>
+<rect width="1440" height="1510" fill="#FFFFFF"/>
+<text x="40" y="62" font-size="42" font-weight="800" fill="#13294B">Dyson photo matching</text>
+<text x="40" y="100" font-size="20" font-weight="400" fill="#344054">Deployed image e5289555f5c9, 21 October 2026</text>
+<rect x="1040" y="26" width="370" height="82" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<rect x="1058" y="40" width="42" height="20" rx="5" fill="#FFFFFF" stroke="#334155" stroke-width="2"/>
+<text x="1112" y="56" font-size="17" font-weight="400" fill="#1F2937">Live</text>
+<rect x="1058" y="74" width="42" height="20" rx="5" fill="#FFFFFF" stroke="#334155" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1112" y="90" font-size="17" font-weight="400" fill="#1F2937">Switched off or planned</text>
+<rect x="30" y="150" width="270" height="470" rx="16" fill="#E7F5FF" stroke="#1971C2" stroke-width="2.5"/>
+<text x="50" y="188" font-size="25" font-weight="800" fill="#1864AB">Staff browser</text>
+<rect x="50" y="205" width="230" height="145" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="66" y="237" font-size="21" font-weight="700" fill="#1864AB">Web interface</text>
+<text x="66" y="267" font-size="16" font-weight="400" fill="#344054">Six-digit sign-in.</text>
+<text x="66" y="290" font-size="16" font-weight="400" fill="#344054">Upload and inspect results.</text>
+<text x="66" y="313" font-size="16" font-weight="400" fill="#344054">Add up to 3 product views.</text>
+<rect x="50" y="405" width="230" height="175" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="66" y="437" font-size="21" font-weight="700" fill="#1864AB">Catalogue editor</text>
+<text x="66" y="467" font-size="16" font-weight="400" fill="#344054">Add manufacturer photos.</text>
+<text x="66" y="490" font-size="16" font-weight="400" fill="#344054">Enter brochure details.</text>
+<text x="66" y="513" font-size="16" font-weight="400" fill="#344054">Keep original PDF files.</text>
+<rect x="380" y="150" width="650" height="960" rx="16" fill="#FFF4E6" stroke="#E8590C" stroke-width="2.5"/>
+<text x="400" y="188" font-size="25" font-weight="800" fill="#D9480F">App on Cloudflare</text>
+<rect x="403" y="205" width="604" height="115" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="419" y="237" font-size="21" font-weight="700" fill="#D9480F">Cloudflare Worker</text>
+<text x="419" y="267" font-size="16" font-weight="400" fill="#344054">Checks the access code and signed session.</text>
+<text x="419" y="290" font-size="16" font-weight="400" fill="#344054">Relays the interface, API and private checkpoints.</text>
+<text x="419" y="313" font-size="16" font-weight="400" fill="#344054">Provider credentials stay on the server.</text>
+<rect x="403" y="370" width="604" height="110" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="419" y="402" font-size="21" font-weight="700" fill="#D9480F">PhotoDemo Durable Object</text>
+<text x="419" y="432" font-size="16" font-weight="400" fill="#344054">One container instance; starts the Python service.</text>
+<text x="419" y="455" font-size="16" font-weight="400" fill="#344054">Keeps private lifecycle events.</text>
+<rect x="403" y="530" width="604" height="542" rx="16" fill="#FFF4E6" stroke="#E8590C" stroke-width="2.5"/>
+<text x="423" y="568" font-size="25" font-weight="800" fill="#D9480F">Cloudflare Container</text>
+<rect x="425" y="610" width="250" height="170" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="441" y="642" font-size="21" font-weight="700" fill="#D9480F">Python web server</text>
+<text x="441" y="672" font-size="16" font-weight="400" fill="#344054">Serves the interface and API.</text>
+<text x="441" y="695" font-size="16" font-weight="400" fill="#344054">Saves uploads and jobs.</text>
+<text x="441" y="718" font-size="16" font-weight="400" fill="#344054">Returns a run ID to poll.</text>
+<rect x="725" y="610" width="260" height="170" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="741" y="642" font-size="21" font-weight="700" fill="#D9480F">2 background workers</text>
+<text x="741" y="672" font-size="16" font-weight="400" fill="#344054">Pillow prepares references.</text>
+<text x="741" y="695" font-size="16" font-weight="400" fill="#344054">2 model calls maximum.</text>
+<text x="741" y="718" font-size="16" font-weight="400" fill="#344054">Launch at least 15s apart.</text>
+<path d="M435 892 C435 864 975 864 975 892 V1023 C975 1051 435 1051 435 1023 Z" fill="#FFFFFF" stroke="#6741D9" stroke-width="2.5"/>
+<path d="M435 892 C435 920 975 920 975 892" fill="none" stroke="#6741D9" stroke-width="2"/>
+<text x="451" y="938" font-size="21" font-weight="700" fill="#5F3DC4">Working state</text>
+<text x="451" y="966" font-size="16" font-weight="400" fill="#344054">SQLite: queued jobs, catalogue and predictions.</text>
+<text x="451" y="989" font-size="16" font-weight="400" fill="#344054">Files: photos, PDFs, exports and request ledgers.</text>
+<text x="451" y="1012" font-size="16" font-weight="400" fill="#344054">Checkpoint traffic goes through the Worker.</text>
+<rect x="1110" y="150" width="300" height="630" rx="16" fill="#EBFBEE" stroke="#0B8A5F" stroke-width="2.5"/>
+<text x="1130" y="188" font-size="25" font-weight="800" fill="#087F5B">Outside AI services</text>
+<rect x="1130" y="205" width="260" height="115" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="1146" y="237" font-size="21" font-weight="700" fill="#087F5B">OpenRouter</text>
+<text x="1146" y="267" font-size="16" font-weight="400" fill="#344054">Server-side API requests.</text>
+<text x="1146" y="290" font-size="16" font-weight="400" fill="#344054">Strict JSON schema.</text>
+<text x="1146" y="313" font-size="16" font-weight="400" fill="#344054">No provider fallback.</text>
+<rect x="1130" y="400" width="260" height="145" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="1146" y="432" font-size="21" font-weight="700" fill="#087F5B">Gemini 3.7 Flash</text>
+<text x="1146" y="462" font-size="16" font-weight="400" fill="#344054">High reasoning level.</text>
+<text x="1146" y="485" font-size="16" font-weight="400" fill="#344054">Google AI Studio route.</text>
+<text x="1146" y="508" font-size="16" font-weight="400" fill="#344054">Reads photos + references.</text>
+<rect x="1130" y="610" width="260" height="145" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="1146" y="642" font-size="21" font-weight="700" fill="#087F5B">Matching stages</text>
+<text x="1146" y="672" font-size="16" font-weight="400" fill="#344054">Find physical machines.</text>
+<text x="1146" y="695" font-size="16" font-weight="400" fill="#344054">Compare catalogue evidence.</text>
+<text x="1146" y="718" font-size="16" font-weight="400" fill="#344054">Optional detail refinement.</text>
+<rect x="30" y="690" width="270" height="420" rx="16" fill="#E3FAFC" stroke="#0C8599" stroke-width="2.5"/>
+<text x="50" y="728" font-size="25" font-weight="800" fill="#0B7285">Release and checks</text>
+<rect x="50" y="745" width="230" height="145" rx="10" fill="#FFFFFF" stroke="#0C8599" stroke-width="2"/>
+<text x="66" y="777" font-size="21" font-weight="700" fill="#0B7285">Source and release</text>
+<text x="66" y="807" font-size="16" font-weight="400" fill="#344054">Git + local source checks.</text>
+<text x="66" y="830" font-size="16" font-weight="400" fill="#344054">Docker builds the image.</text>
+<text x="66" y="853" font-size="16" font-weight="400" fill="#344054">Wrangler deploys it.</text>
+<rect x="50" y="935" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#868E96" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="66" y="967" font-size="21" font-weight="700" fill="#495057">Request logging</text>
+<text x="66" y="997" font-size="16" font-weight="400" fill="#344054">Switched off in config.</text>
+<text x="66" y="1020" font-size="16" font-weight="400" fill="#344054">Private lifecycle events</text>
+<text x="66" y="1043" font-size="16" font-weight="400" fill="#344054">remain enabled.</text>
+<rect x="1110" y="850" width="300" height="260" rx="16" fill="#F3F0FF" stroke="#6741D9" stroke-width="2.5"/>
+<text x="1130" y="888" font-size="25" font-weight="800" fill="#5F3DC4">Cloudflare R2</text>
+<path d="M1130 942 C1130 914 1390 914 1390 942 V1058 C1390 1086 1130 1086 1130 1058 Z" fill="#FFFFFF" stroke="#6741D9" stroke-width="2.5"/>
+<path d="M1130 942 C1130 970 1390 970 1390 942" fill="none" stroke="#6741D9" stroke-width="2"/>
+<text x="1146" y="988" font-size="21" font-weight="700" fill="#5F3DC4">Private checkpoint</text>
+<text x="1146" y="1016" font-size="16" font-weight="400" fill="#344054">Database + media files.</text>
+<text x="1146" y="1039" font-size="16" font-weight="400" fill="#344054">Exports + request ledgers.</text>
+<text x="1146" y="1062" font-size="16" font-weight="400" fill="#344054">Restored at startup.</text>
+<path d="M280 258 H403" fill="none" stroke="#1971C2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<text x="340" y="246" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">Upload</text>
+<path d="M403 295 H280" fill="none" stroke="#E8590C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<text x="340" y="284" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">UI / JSON</text>
+<path d="M705 320 V370" fill="none" stroke="#E8590C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<text x="718" y="351" font-size="14" font-weight="700" fill="#E8590C">proxy</text>
+<path d="M690 480 V650 H675" fill="none" stroke="#E8590C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<text x="704" y="512" font-size="14" font-weight="700" fill="#E8590C">HTTP</text>
+<path d="M490 780 V870" fill="none" stroke="#E8590C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<text x="502" y="824" font-size="14" font-weight="700" fill="#E8590C">save job</text>
+<path d="M620 870 V780" fill="none" stroke="#6741D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<text x="630" y="846" font-size="14" font-weight="700" fill="#6741D9">result</text>
+<path d="M800 870 V780" fill="none" stroke="#6741D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<text x="812" y="846" font-size="14" font-weight="700" fill="#6741D9">claim</text>
+<path d="M940 780 V870" fill="none" stroke="#E8590C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<text x="951" y="824" font-size="14" font-weight="700" fill="#E8590C">save</text>
+<path d="M985 655 H1058 V250 H1130" fill="none" stroke="#E8590C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<text x="1070" y="242" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">call</text>
+<path d="M1130 290 H1086 V710 H985" fill="none" stroke="#0B8A5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<text x="1056" y="702" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">JSON</text>
+<path d="M1195 320 V400" fill="none" stroke="#0B8A5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<text x="1207" y="366" font-size="14" font-weight="700" fill="#0B8A5F">route</text>
+<path d="M1325 400 V320" fill="none" stroke="#0B8A5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<text x="1337" y="366" font-size="14" font-weight="700" fill="#0B8A5F">JSON</text>
+<path d="M280 800 H315 V555 H403" fill="none" stroke="#0C8599" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<text x="325" y="680" font-size="14" font-weight="700" fill="#0C8599">deploy</text>
+<path d="M975 956 H1130" fill="none" stroke="#6741D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<text x="1070" y="946" font-size="14" font-weight="700" fill="#6741D9" text-anchor="middle">save</text>
+<path d="M1130 1020 H975" fill="none" stroke="#6741D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<text x="1070" y="1010" font-size="14" font-weight="700" fill="#6741D9" text-anchor="middle">restore</text>
+<rect x="30" y="1170" width="1380" height="300" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="1208" font-size="25" font-weight="800" fill="#364FC7">An actual store-photo run</text>
+<rect x="50" y="1235" width="250" height="150" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2"/>
+<text x="66" y="1267" font-size="21" font-weight="700" fill="#364FC7">1. Upload</text>
+<text x="66" y="1297" font-size="16" font-weight="400" fill="#344054">Staff upload</text>
+<text x="66" y="1320" font-size="16" font-weight="400" fill="#344054">12807_2_8.jpg.</text>
+<rect x="322" y="1235" width="250" height="150" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2"/>
+<text x="338" y="1267" font-size="21" font-weight="700" fill="#364FC7">2. Queue</text>
+<text x="338" y="1297" font-size="16" font-weight="400" fill="#344054">Save the photo and job.</text>
+<text x="338" y="1320" font-size="16" font-weight="400" fill="#344054">Return the run ID.</text>
+<rect x="594" y="1235" width="250" height="150" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2"/>
+<text x="610" y="1267" font-size="21" font-weight="700" fill="#364FC7">3. Inspect</text>
+<text x="610" y="1297" font-size="16" font-weight="400" fill="#344054">Gemini finds physical</text>
+<text x="610" y="1320" font-size="16" font-weight="400" fill="#344054">machines in the image.</text>
+<rect x="866" y="1235" width="250" height="150" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2"/>
+<text x="882" y="1267" font-size="21" font-weight="700" fill="#364FC7">4. Compare</text>
+<text x="882" y="1297" font-size="16" font-weight="400" fill="#344054">Compare real references</text>
+<text x="882" y="1320" font-size="16" font-weight="400" fill="#344054">and entered brochure text.</text>
+<text x="882" y="1343" font-size="16" font-weight="400" fill="#344054">Validate structured JSON.</text>
+<rect x="1138" y="1235" width="250" height="150" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2"/>
+<text x="1154" y="1267" font-size="21" font-weight="700" fill="#364FC7">5. Save result</text>
+<text x="1154" y="1297" font-size="16" font-weight="400" fill="#344054">Save predictions and costs.</text>
+<text x="1154" y="1320" font-size="16" font-weight="400" fill="#344054">Keep JSON/CSV exports.</text>
+<text x="1154" y="1343" font-size="16" font-weight="400" fill="#344054">Browser polls for updates.</text>
+<text x="50" y="1428" font-size="17" font-weight="400" fill="#1F2937">For a second or third view, a new run compares all photographs of that same product together.</text>
+</svg>
