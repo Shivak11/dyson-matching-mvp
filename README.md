@@ -2,6 +2,8 @@
 
 [![Deployed system architecture](docs/architecture/system-diagram.svg)](docs/architecture/system-diagram.svg)
 
+See the simpler [AI pipeline diagram](docs/architecture/ai-pipeline.svg) for catalogue preparation and joint matching of three photos.
+
 A web app for comparing store photographs with manufacturer images and brochure details. The [hosted demo](https://multiplier-photo-demo.shiva-research11.workers.dev/) runs on Cloudflare Workers and Containers, with private R2 checkpoints. It uses SQLite and Gemini 3.7 Flash high through OpenRouter and can also run locally. The saved accuracy report and earlier experiments remain in this repository. See the [diagram maintenance note](docs/architecture/DIAGRAM-STYLE.md) and [deployment record](docs/cloudflare-demo-status.md).
 
 ## Run locally

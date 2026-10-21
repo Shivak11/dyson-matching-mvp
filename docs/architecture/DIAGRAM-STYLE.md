@@ -17,3 +17,9 @@ node /Users/shivakakkar/.codex/plugins/cache/super-outer-developer-update/super-
 ```
 
 Inspect the final PNG after each layout change, then rerun the facts test. These checks require no model request or deployment.
+
+## AI pipeline diagram
+
+The owner requested ai-pipeline.svg and its 2x PNG as a simpler view of catalogue preparation and three-photo matching. It omits hosting and recovery. The catalogue reference sheets are prepared by Pillow when a run starts. Both joint-view Gemini calls receive all user photos, and the comparison also receives catalogue sheets and supplied brochure text. The user confirms the same-product grouping; visible contradictions can still produce an uncertain result. The existing multiple-view verification record supplies the real cumulative-photo case: U005 with U006, followed by U007, in ../multiple-views-review.md.
+
+Check this diagram with `python3 -m unittest discover -s tests -p 'test_ai_pipeline_diagram.py' -v`. Run the same SVG checker and renderer above with docs/architecture/ai-pipeline.svg. Keep both diagrams current when the pipeline changes.
