@@ -3,6 +3,18 @@ import { Container } from '@cloudflare/containers';
 const encoder = new TextEncoder();
 const COOKIE = 'multiplier_demo';
 const MAX_STATE = 100 * 1024 * 1024;
+const LIFECYCLE_TYPES = ['start', 'stop', 'error', 'activity_expired'];
+const ERROR_NAMES = ['Error', 'TypeError', 'RangeError', 'ReferenceError', 'SyntaxError', 'URIError', 'EvalError', 'AggregateError', 'AbortError', 'TimeoutError'];
+
+function lifecycleEvent(event) {
+  if (!event || !LIFECYCLE_TYPES.includes(event.type) || typeof event.timestamp_utc !== 'string'
+      || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(event.timestamp_utc)
+      || !Number.isFinite(Date.parse(event.timestamp_utc))) return null;
+  return { timestamp_utc: event.timestamp_utc, type: event.type,
+    exitCode: event.type === 'stop' && Number.isSafeInteger(event.exitCode) ? event.exitCode : null,
+    reason: event.type === 'stop' ? (['exit', 'runtime_signal'].includes(event.reason) ? event.reason : 'unknown') : null,
+    error_name: event.type === 'error' ? (ERROR_NAMES.includes(event.error_name) ? event.error_name : 'Error') : null };
+}
 
 export async function equalSecret(left, right) {
   if (!left || !right) return false;
@@ -55,6 +67,56 @@ export class PhotoDemo extends Container {
     await this.ctx.storage.put('login-window', window);
     return window.count <= 20;
   }
+
+  async recordLifecycle(type, fields = {}) {
+    try {
+      const event = lifecycleEvent({ ...fields, timestamp_utc: new Date().toISOString(), type });
+      if (!event) return;
+      await this.ctx.storage.transaction(async storage => {
+        const previous = await storage.get('lifecycle-events');
+        const events = (Array.isArray(previous) ? previous : []).slice(-19).map(lifecycleEvent).filter(Boolean);
+        await storage.put('lifecycle-events', [...events, event]);
+      });
+    } catch { /* Diagnostics must not change container lifecycle behaviour. */ }
+  }
+
+  async onStart() {
+    await this.recordLifecycle('start');
+    return super.onStart();
+  }
+
+  async onStop(params) {
+    await this.recordLifecycle('stop', { exitCode: params?.exitCode, reason: params?.reason });
+    return super.onStop(params);
+  }
+
+  async onError(error) {
+    await this.recordLifecycle('error', { error_name: error?.name });
+    // The SDK also throws; skip its raw error logging to keep private details out of logs.
+    throw error;
+  }
+
+  async onActivityExpired() {
+    await this.recordLifecycle('activity_expired');
+    return super.onActivityExpired();
+  }
+
+  async runtimeStatus() {
+    let events = [], telemetryAvailable = true, state = null;
+    try {
+      const stored = await this.ctx.storage.get('lifecycle-events');
+      events = (Array.isArray(stored) ? stored : []).slice(-20).map(lifecycleEvent).filter(Boolean);
+    } catch { telemetryAvailable = false; }
+    try {
+      const current = await this.getState();
+      if (['running', 'stopping', 'stopped', 'healthy', 'stopped_with_code'].includes(current?.status)) {
+        state = { status: current.status };
+        if (Number.isSafeInteger(current.lastChange) && current.lastChange >= 0) state.lastChange = current.lastChange;
+        if (Number.isSafeInteger(current.exitCode)) state.exitCode = current.exitCode;
+      }
+    } catch { /* A state read failure must not expose the underlying exception. */ }
+    return { events, state, telemetry_available: telemetryAvailable };
+  }
 }
 
 function response(body, status = 200, headers = {}) {
@@ -72,6 +134,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     try {
+      if (url.pathname === '/__runtime') {
+        if (!env.CLOUD_STATE_TOKEN || !await equalSecret(request.headers.get('authorization'), 'Bearer ' + env.CLOUD_STATE_TOKEN)) return response('Not found', 404);
+        if (request.method !== 'GET') return response('Method not allowed', 405);
+        const diagnostics = await env.PHOTO_DEMO.getByName('multiplier-single-demo').runtimeStatus();
+        return response(JSON.stringify(diagnostics), 200, { 'Content-Type': 'application/json' });
+      }
       if (url.pathname === '/__state') {
         if (!env.CLOUD_STATE_TOKEN || !await equalSecret(request.headers.get('authorization'), 'Bearer ' + env.CLOUD_STATE_TOKEN)) return response('Not found', 404);
         if (request.method === 'POST' && request.headers.get('x-demo-action') === 'restart') {

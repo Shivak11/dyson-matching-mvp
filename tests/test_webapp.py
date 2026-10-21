@@ -220,11 +220,11 @@ class AppTests(unittest.TestCase):
         self.assertNotIn('private key', self.app.store.job(jobs[0]['id'])['error'])
         self.assertEqual(self.app.store.job(jobs[1]['id'])['status'], 'completed')
 
-    def test_restart_interrupts_without_automatic_paid_resume(self):
+    def test_restart_preserves_queued_without_running_a_disabled_worker(self):
         job = self.app.store.create_jobs({'images': [image_file()]})[0]
         self.app.close()
         self.app = app_server.build_app(self.root, start_worker=False, inference_factory=FakeEngine)
-        self.assertEqual(self.app.store.job(job['id'])['status'], 'interrupted')
+        self.assertEqual(self.app.store.job(job['id'])['status'], 'queued')
         self.assertTrue(self.app.queue.empty())
         self.assertEqual(self.app.engine.count, 0)
 

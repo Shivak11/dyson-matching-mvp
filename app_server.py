@@ -20,7 +20,7 @@ from urllib.parse import unquote, urlsplit
 from webapp.store import Store, ID, ConflictError, now
 from webapp import cloud_runtime
 from webapp.predictions import collect_run_details, hosted_job, hosted_prediction, TERMINAL
-from webapp.inference import Inference, BudgetError, settings, ledger_accounting, api_configured, api_key_for, checked_accounting, RUNTIME_CAP_INR, STAGE_CAP_INR, HISTORICAL_STAGE_GUARD_INR, GUARD_FX, PAUSE_SECONDS
+from webapp.inference import Inference, BudgetError, settings, ledger_accounting, api_configured, api_key_for, checked_accounting, can_resume_job, RUNTIME_CAP_INR, STAGE_CAP_INR, HISTORICAL_STAGE_GUARD_INR, GUARD_FX, PAUSE_SECONDS
 from webapp.request_coordinator import RequestCoordinator
 from webapp.transport import Client
 
@@ -55,7 +55,7 @@ class App:
         self.ledger_root.chmod(0o700)
         try:
             self.store = (CloudStore if cloud_runtime.enabled() else Store)(self.root, data_dir or self.runtime)
-            self.store.interrupt_unfinished()
+            self.store.recover_unfinished(lambda key: can_resume_job(self.ledger_root, key))
             try:
                 costs = checked_accounting(self.ledger_root, self.store.jobs())['per_job']
             except (ValueError, KeyError, TypeError, OSError):
@@ -79,6 +79,8 @@ class App:
         self.csrf_token = secrets.token_urlsafe(32)
         self.queue = queue.Queue()
         self.stop = threading.Event()
+        self.save_lock = threading.Lock()
+        self.pending_saves = {}
         self.worker_lifecycle_lock = threading.Lock()
         self.workers = [threading.Thread(target=self._work, name='openrouter-worker-' + str(index + 1), daemon=True)
                         for index in range(2)]
@@ -109,10 +111,22 @@ class App:
     def _work(self):
         try:
             while not self.stop.is_set():
-                key = self.queue.get()
-                if key is None or self.stop.is_set():
+                try:
+                    self.queue.get(timeout=.5)
+                except queue.Empty:
+                    pass
+                if self.stop.is_set():
                     return
-                self.process_job(key)
+                try:
+                    self._retry_saves()
+                    for key in self.store.queued_jobs():
+                        if self.stop.is_set():
+                            return
+                        self.process_job(key)
+                        break
+                except Exception:
+                    # SQLite remains the queue after a failed claim or dependency call.
+                    self.stop.wait(.5)
         finally:
             with self.worker_lifecycle_lock:
                 self.remaining_workers -= 1
@@ -120,14 +134,20 @@ class App:
                     self.lock_file.close()
 
     def process_job(self, key):
-        job = self.store.claim_job(key)
-        if job is None:
-            return
+        with cloud_runtime.LOCK:
+            job = self.store.claim_job(key)
+            if job is None:
+                return
+            try:
+                cloud_runtime.checkpoint()
+            except Exception:
+                self.store.update_job(key, status='queued', stage='Waiting for storage', started_at=None)
+                raise
         started = time.monotonic()
         try:
             matches = self.engine.run(job, lambda stage: self.store.update_job(key, stage=stage, cost_inr=self._cost(key)))
-            self.store.update_job(key, status='completed', stage='Complete', matches=matches, cost_inr=self._cost(key), error=None,
-                                  completed_at=now(), elapsed_seconds=time.monotonic() - started)
+            changes = dict(status='completed', stage='Complete', matches=matches, cost_inr=self._cost(key), error=None,
+                           completed_at=now(), elapsed_seconds=time.monotonic() - started)
         except Exception as error:
             diagnostic = str(error)[:6000]
             try:
@@ -135,8 +155,11 @@ class App:
             except Exception:
                 pass
             folder = self.ledger_root / key
-            folder.mkdir(parents=True, exist_ok=True, mode=0o700)
-            (folder / 'error.json').write_text(json.dumps({'type': type(error).__name__, 'message': diagnostic}))
+            try:
+                folder.mkdir(parents=True, exist_ok=True, mode=0o700)
+                (folder / 'error.json').write_text(json.dumps({'type': type(error).__name__, 'message': diagnostic}))
+            except OSError:
+                pass
             if isinstance(error, BudgetError):
                 message = 'The remaining spending allowance cannot cover another request. This upload and any charges were kept.'
             elif isinstance(error, cloud_runtime.CloudStateError):
@@ -145,15 +168,16 @@ class App:
                 message = 'The result could not be validated. This upload and any charges were kept. Retry as a new run if needed.'
             else:
                 message = 'The model request failed. This upload and any charges were kept. Retry as a new run if needed.'
-            self.store.update_job(key, status='failed', stage='Run stopped', error=message, cost_inr=self._cost(key),
-                                  completed_at=now(), elapsed_seconds=time.monotonic() - started)
-        self._seal_prediction(key)
+            changes = dict(status='failed', stage='Run stopped', error=message, cost_inr=self._cost(key),
+                           completed_at=now(), elapsed_seconds=time.monotonic() - started)
+        self._seal_prediction(key, changes)
 
     def enqueue(self, jobs, created=True):
         cloud_runtime.checkpoint()
-        if created:
+        if created or self.queue.empty():
             for job in jobs:
-                self.queue.put(job['id'])
+                if job['status'] == 'queued':
+                    self.queue.put(job['id'])
         return self.job_response(jobs)
 
     def job_response(self, jobs):
@@ -169,11 +193,39 @@ class App:
         return {'csrf_token': self.csrf_token, 'catalogue': self.store.products(), 'jobs': self.public_jobs(),
                 'settings': runtime}
 
-    def _seal_prediction(self, key):
-        with cloud_runtime.LOCK:
-            result = self._save_prediction(key)
-            cloud_runtime.checkpoint()
-            return result
+    def _seal_prediction(self, key, changes=None, *, retry=False):
+        with self.save_lock:
+            pending = self.pending_saves.get(key)
+            if pending is not None and not retry:
+                return self.store.job(key)
+            attempts = pending['attempts'] if pending else 0
+            changes = pending['changes'] if pending else changes
+            try:
+                with cloud_runtime.LOCK:
+                    if changes:
+                        self.store.update_job(key, **changes)
+                    result = self._save_prediction(key)
+                    if not result.get('exports_available'):
+                        raise RuntimeError('Prediction export is not saved.')
+                    cloud_runtime.checkpoint()
+                self.pending_saves.pop(key, None)
+                return result
+            except Exception:
+                self.pending_saves[key] = {'changes': changes, 'attempts': attempts + 1,
+                                           'next': time.monotonic() + (1, 3, 10)[min(attempts, 2)]}
+                return self.store.job(key)
+
+    def _retry_saves(self):
+        with self.save_lock:
+            due = [key for key, value in self.pending_saves.items()
+                   if value['attempts'] < 3 and value['next'] <= time.monotonic()]
+            for key in due:
+                self.pending_saves[key]['next'] = float('inf')
+        for key in due:
+            self._seal_prediction(key, retry=True)
+        for job in self.store.jobs():
+            if job['status'] in TERMINAL and not job.get('exports_available'):
+                self._seal_prediction(job['id'])
 
     def _save_prediction(self, key):
         try:
@@ -369,7 +421,7 @@ class Handler(BaseHTTPRequestHandler):
                     raise ValueError('A request ID is required before running a photo.')
                 cached = self.app.store.cached_jobs(body)
                 if cached is not None:
-                    self.send_json(202, self.app.job_response(cached))
+                    self.send_json(202, self.app.enqueue(cached, created=False))
                     return
                 if not api_configured():
                     self.send_json(503, {'error': 'Photo matching is unavailable. Please contact the demo owner.' if cloud_runtime.enabled() else 'Add OPENROUTER_API_KEY to the local .env before running a photo.'})
@@ -388,7 +440,7 @@ class Handler(BaseHTTPRequestHandler):
                 original_id = path.split('/')[3]
                 cached = self.app.store.cached_jobs(body, original_id)
                 if cached is not None:
-                    self.send_json(202, self.app.job_response(cached))
+                    self.send_json(202, self.app.enqueue(cached, created=False))
                     return
                 if not api_configured():
                     self.send_json(503, {'error': 'Photo matching is unavailable. Please contact the demo owner.' if cloud_runtime.enabled() else 'Add OPENROUTER_API_KEY to the local .env before retrying a photo.'})
@@ -427,6 +479,7 @@ class Handler(BaseHTTPRequestHandler):
 
 class LocalServer(ThreadingHTTPServer):
     daemon_threads = True
+    request_queue_size = 128
 
     def server_close(self):
         super().server_close()

@@ -389,6 +389,11 @@ class Store:
         with self.connect() as connection:
             return [json.loads(row['data']) for row in connection.execute('SELECT data FROM jobs ORDER BY created_at DESC, rowid DESC')]
 
+    def queued_jobs(self):
+        with self.connect() as connection:
+            return [row['id'] for row in connection.execute('SELECT id, data FROM jobs ORDER BY created_at, rowid')
+                    if json.loads(row['data'])['status'] == 'queued']
+
     def job(self, key, internal=False):
         with self.connect() as connection:
             row = connection.execute('SELECT * FROM jobs WHERE id=?', (key,)).fetchone()
@@ -499,4 +504,15 @@ class Store:
             if job['status'] in ('queued', 'running'):
                 self.update_job(job['id'], status='interrupted', stage='Run interrupted',
                                 completed_at=now(),
+                                error='The app restarted before this run finished. Start a deliberate retry to run it again.')
+
+    def recover_unfinished(self, can_resume):
+        for job in self.jobs():
+            if job['status'] != 'running':
+                continue
+            if can_resume(job['id']):
+                self.update_job(job['id'], status='queued', stage='Waiting to resume', error=None,
+                                completed_at=None)
+            else:
+                self.update_job(job['id'], status='interrupted', stage='Run interrupted', completed_at=now(),
                                 error='The app restarted before this run finished. Start a deliberate retry to run it again.')

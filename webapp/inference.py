@@ -2,6 +2,7 @@
 import copy
 import json
 import math
+import re
 import time
 from pathlib import Path
 
@@ -38,6 +39,60 @@ def api_configured():
 def read_json(path):
     with Path(path).open() as source:
         return json.load(source, parse_constant=lambda value: (_ for _ in ()).throw(ValueError('Non-finite ledger number')))
+
+
+def pinned_model(root):
+    model = copy.deepcopy(read_json(Path(root) / 'runtime_config.json')['model'])
+    if (model['provider'] != 'openrouter' or model['model'] != 'google/gemini-3.7-flash'
+            or model['thinking_level'] != 'high' or model['provider_only'] != ['google-ai-studio']):
+        raise ValueError('The pinned OpenRouter model configuration changed.')
+    model['input_token_bound'] = 128000
+    for field in ('input_usd_per_million', 'output_usd_per_million', 'max_output_tokens', 'input_token_bound'):
+        positive(model[field], field)
+    return model
+
+
+def resume_config(root, folder):
+    config = read_json(folder / 'frozen_config.json')
+    if not isinstance(config, dict) or config.get('models') != {'flash37high': pinned_model(root)}:
+        raise ValueError('The saved model configuration changed.')
+    budget = config['budget']
+    if (budget['usd_inr'] != GUARD_FX
+            or positive(budget['total_max_inr'], 'saved total cap') > RUNTIME_CAP_INR
+            or positive(budget['stage_max_inr'], 'saved stage cap') > RUNTIME_CAP_INR
+            or positive(budget['prior_accounted_inr'], 'saved prior cost', True) >= budget['total_max_inr']):
+        raise ValueError('The saved spending configuration is invalid.')
+    return config
+
+
+def can_resume_job(ledger_root, job_id):
+    """Resume only when every started request has a successful saved response."""
+    if not isinstance(job_id, str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,80}', job_id):
+        return False
+    folder = Path(ledger_root) / job_id
+    try:
+        with cloud_runtime.LOCK:
+            if (folder / 'error.json').exists():
+                return False
+            calls = folder / 'calls.jsonl'
+            records = [json.loads(line) for line in calls.read_text().splitlines() if line.strip()] if calls.exists() else []
+            pending = read_json(folder / 'inflight.json') if (folder / 'inflight.json').exists() else {}
+            if not (folder / 'frozen_config.json').exists():
+                return not records and not pending
+            config = resume_config(Path(ledger_root).parent.parent, folder)
+            expected = digest(encoded(config))
+            settled = set()
+            for row in records:
+                if (not isinstance(row, dict) or row.get('status') != 'ok' or row.get('config_sha256') != expected
+                        or not isinstance(row.get('job_id'), str) or not row['job_id'].startswith(job_id + ':')
+                        or not isinstance(row.get('result'), dict) or row['job_id'] in settled):
+                    return False
+                positive(row['estimated_cost_usd'], 'saved call cost', True)
+                settled.add(row['job_id'])
+            return isinstance(pending, dict) and all(isinstance(row, dict) and key in settled and row.get('config_sha256') == expected
+                                                      for key, row in pending.items())
+    except (ValueError, KeyError, TypeError, OSError):
+        return False
 
 
 def ledger_accounting(root):
@@ -252,19 +307,14 @@ class Inference:
         account = checked_accounting(self.ledger_root, self.store.jobs())
         remaining = min(RUNTIME_CAP_INR - account['spent_inr'],
                         STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR - account['spent_inr'])
-        if remaining <= 0:
+        folder = self.ledger_root / job_id
+        frozen = folder / 'frozen_config.json'
+        if remaining <= 0 and not frozen.exists():
             raise BudgetError('The app spending limit has been reached.')
-        model = read_json(self.root / 'runtime_config.json')['model']
-        model = copy.deepcopy(model)
-        if (model['provider'] != 'openrouter' or model['model'] != 'google/gemini-3.7-flash'
-                or model['thinking_level'] != 'high' or model['provider_only'] != ['google-ai-studio']):
-            raise ValueError('The pinned OpenRouter model configuration changed.')
-        model['input_token_bound'] = 128000
-        for field in ('input_usd_per_million', 'output_usd_per_million', 'max_output_tokens', 'input_token_bound'):
-            positive(model[field], field)
-        config = {'models': {'flash37high': model}, 'budget': {'stage_max_inr': remaining,
+        model = pinned_model(self.root)
+        config = resume_config(self.root, folder) if frozen.exists() else {'models': {'flash37high': model}, 'budget': {'stage_max_inr': remaining,
                   'total_max_inr': RUNTIME_CAP_INR, 'prior_accounted_inr': account['spent_inr'], 'usd_inr': GUARD_FX}}
-        client = self.client_factory(config, self.root, self.ledger_root / job_id,
+        client = self.client_factory(config, self.root, folder,
                                      rate_limit_retries=2, request_interval_seconds=PAUSE_SECONDS, max_retry_delay_seconds=300)
         snapshot = self.store.job(job_id, internal=True)['_snapshot']
         self.store.update_job(job_id, run_details={'pipeline_version': PIPELINE_VERSION,
@@ -311,7 +361,8 @@ class Inference:
             account = ledger_accounting(self.ledger_root)
             model = client.config['models']['flash37high']
             bound = (model['input_token_bound'] * model['input_usd_per_million'] + model['max_output_tokens'] * model['output_usd_per_million']) / 1_000_000 * GUARD_FX
-            if account['spent_inr'] + bound > min(RUNTIME_CAP_INR, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR) + 1e-9:
+            cached = getattr(client, 'logical_records', {}).get(job['id'] + ':' + name, {})
+            if cached.get('status') != 'ok' and account['spent_inr'] + bound > min(RUNTIME_CAP_INR, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR) + 1e-9:
                 raise BudgetError('The remaining allowance cannot cover another request reservation.')
             # One UTF-8 byte per text token plus 1024 tokens per 512px tile is a conservative context guard.
             context_bound = len(prompt.encode('utf-8')) + len(json.dumps(schema).encode('utf-8')) + 4096
