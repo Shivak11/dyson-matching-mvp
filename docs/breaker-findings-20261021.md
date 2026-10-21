@@ -9,7 +9,7 @@ The persona is a Delhi retail supervisor who has several displays to verify befo
 - **Severity:** High.
 - **Date and target:** 21 October 2026, `9ceb173`.
 - **Category:** Lost queued action and misleading acknowledgement.
-- **Status:** Open.
+- **Status:** Fixed in source `4dded4f`; the recorded failure sequence passed twice with corrected behaviour. See `docs/breaker-repair-20261021.md`.
 - **Reproductions:** Two independent upload runs and two independent retry runs, each with fresh temporary state.
 - **Exact input:** `POST /api/jobs` with `{"images":[<invented white PNG named store.png>],"request_id":"resubmit-after-storage-error"}`. Raise `CloudStateError("invented temporary storage outage")` at the checkpoint performed by `App.enqueue`, then restore the state service and submit the identical body again. The retry variant uses `POST /api/jobs/<invented-failed-id>/retry` with `{"request_id":"retry-after-storage-error"}`.
 - **Observed:** The first response is HTTP 500. The repeated response is HTTP 202 with the saved job's `status` equal to `queued`. The queue contains zero entries. Exactly one uploaded job exists. The retry route produces the same outcome.
@@ -23,7 +23,7 @@ The persona is a Delhi retail supervisor who has several displays to verify befo
 - **Severity:** High.
 - **Date and target:** 21 October 2026, `9ceb173`.
 - **Category:** Background processing stops while queued work remains.
-- **Status:** Open.
+- **Status:** Fixed in source `4dded4f`; the recorded failure sequence passed twice with corrected behaviour. See `docs/breaker-repair-20261021.md`.
 - **Reproductions:** Two independent runs, each starting two actual app workers and three invented jobs.
 - **Exact input:** Submit three ordinary invented photos named `a.png`, `b.png` and `c.png`. Use a fake inference engine returning an empty valid machine list. At each final prediction-seal checkpoint raise `CloudStateError("invented final seal outage")`.
 - **Observed:** Both worker threads exit with that exception. The job states are `completed`, `completed`, `queued`; one queue entry remains and `remaining_workers` becomes zero. The application process itself remains available. This does not require a model response failure or model timeout.
@@ -37,7 +37,7 @@ The persona is a Delhi retail supervisor who has several displays to verify befo
 - **Severity:** Medium.
 - **Date and target:** 21 October 2026, `9ceb173`.
 - **Category:** Lost queued action and reduced worker capacity.
-- **Status:** Open.
+- **Status:** Fixed in source `4dded4f`; the recorded failure sequence passed twice with corrected behaviour. See `docs/breaker-repair-20261021.md`.
 - **Reproductions:** Two independent runs with fresh state.
 - **Exact input:** Upload one invented photo. When its actual worker pops the queue entry, make the SQLite claim boundary raise `OSError("invented SQLite write failure")`; then remove the injected failure.
 - **Observed:** One worker exits. The job remains `queued`, its queue entry is gone, and only one worker survives. Restoring the write boundary does not resubmit the popped job or replace the worker.
@@ -51,7 +51,7 @@ The persona is a Delhi retail supervisor who has several displays to verify befo
 - **Severity:** Medium for the local HTTP service; deployed gateway behaviour is unproved.
 - **Date and target:** 21 October 2026, `9ceb173`.
 - **Category:** A modest request burst produces a transport error instead of a response.
-- **Status:** Open.
+- **Status:** Fixed in source `4dded4f`; the recorded failure sequence passed twice with corrected behaviour. See `docs/breaker-repair-20261021.md`.
 - **Reproductions:** Four failures in ten targeted iterations after an independent full-suite rerun first exposed the failure. Each iteration starts a fresh local actual-code server and temporary database.
 - **Exact input:** Six simultaneous `POST /api/jobs` requests containing the same invented white PNG and `request_id:"supervisor-double-tap"`, released by a six-thread barrier. No model call is made.
 - **Observed:** Four of ten iterations return five HTTP responses for six requests. Two record `URLError: <urlopen error [Errno 54] Connection reset by peer>` and two record `URLError: <urlopen error [Errno 32] Broken pipe>`. No test thread remains alive. The other six iterations return six 202 responses for one job and one queued action, and reject changed content under the same ID with 409.
@@ -64,4 +64,4 @@ The persona is a Delhi retail supervisor who has several displays to verify befo
 
 The harness is `tests/breaker_audit_20261021.py`. The initial breaker runs are logged in `var/breaker-20261021/run-first.log` and `run.log`. They reached their expected observations, including BRK-001 to BRK-003; those green assertions were never a defect-free result. The independently rerun full-suite receipt is retained as `root-results-first.json`, and the targeted burst receipt is `burst-results.json`. Both include SHA-256 hashes of the tested Python product modules. The independent full-suite failure and the four targeted failures remain recorded and were not changed into passing assertions.
 
-All four entries remain open. Mark one fixed only after its sequence fails to reproduce twice on a named later release. No fixes or deployments were performed during this audit.
+All four entries were open at the end of the report-only audit. The later owner-authorised repair in `4dded4f` passed each sequence twice using direct regressions in `tests/test_job_resilience.py`. The original failing observations remain unchanged. Hosted verification and its limits are recorded separately in `docs/breaker-repair-20261021.md`.

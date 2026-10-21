@@ -16,6 +16,10 @@ Worker session/privacy/lifecycle tests and multiple-view UI assertions passed. T
 
 ## Hosted verification
 
-Pending deployment. The pre-deployment checkpoint has SQLite integrity `ok`, 29 jobs, 47 media records, all corresponding files and all charged ledgers. Accounted spending is INR305.39505, including INR21.888 in unresolved reservations. Its compressed archive SHA-256 is `465ccf7c4610d0746b3bbe4af8fce07c65987b94bdcde0ae5e216c2288eb9f9e`. No job is active. Separate schema diagnostics account for INR44.016675, leaving INR150.588275 in the combined INR500 allowance before any new verification call.
+Source repair `4dded4f` was built and the verified Python source hashes matched the container. The deployed container image is `sha256:33807655e3dbe70d4512681fcf619819cce0dfd70e547e1b9d52ba8af622388c`. Cloudflare application version 20 had no active rollout and reported that image on the running instance. The pinned Worker is `980b0d93-fef7-4909-8dca-39b9ed426b78`. The private diagnostic endpoint initially returned 503; after the protected readback amendment it returned HTTP200 with healthy state. Its historical 503 cause is unconfirmed.
+
+An idle checkpoint-guarded recreation restored all prior jobs, catalogue entries and spending unchanged. The pre-deployment checkpoint has SQLite integrity `ok`, 29 jobs, 47 media records, all corresponding files and all charged ledgers. Accounted spending is INR305.39505, including INR21.888 in unresolved reservations. Its compressed archive SHA-256 is `465ccf7c4610d0746b3bbe4af8fce07c65987b94bdcde0ae5e216c2288eb9f9e`. No job is active. Separate schema diagnostics account for INR44.016675, leaving INR150.588275 in the combined INR500 allowance before any new verification call.
 
 Technical decisions and evidence remain in this repository. Wiki consultation is read-only; no wiki, tracking or QMD state was changed.
+
+The single affected-photo retry is `8dd0f136b5024295885f96c92253daf0`. It was acknowledged HTTP202 in 9.667 seconds. No rollout or restart was performed after its submission. Hosted completion and final allowance are pending. Remote CI was not run; this remains the existing five-minute demo, with scoped source, container, API and browser verification.
