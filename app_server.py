@@ -139,6 +139,8 @@ class App:
             (folder / 'error.json').write_text(json.dumps({'type': type(error).__name__, 'message': diagnostic}))
             if isinstance(error, BudgetError):
                 message = 'The remaining spending allowance cannot cover another request. This upload and any charges were kept.'
+            elif isinstance(error, cloud_runtime.CloudStateError):
+                message = 'The run stopped because its data could not be saved. Your photograph and spending records were kept. Retry as a new run shortly.'
             elif isinstance(error, ValueError):
                 message = 'The result could not be validated. This upload and any charges were kept. Retry as a new run if needed.'
             else:

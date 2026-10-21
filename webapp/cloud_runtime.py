@@ -7,6 +7,7 @@ import sqlite3
 import tarfile
 import tempfile
 import threading
+import time
 import urllib.error
 import urllib.request
 from urllib.parse import urlsplit
@@ -18,11 +19,15 @@ MAX_FILES = 10000
 _root = None
 
 
+class CloudStateError(RuntimeError):
+    """A state write failed before the application could confirm durability."""
+
+
 def enabled():
     return os.environ.get('CLOUD_MODE') == '1'
 
 
-def _request(method, data=None):
+def _request(method, data=None, *, timeout=90):
     url = os.environ.get('CLOUD_STATE_URL', '')
     token = os.environ.get('CLOUD_STATE_TOKEN', '')
     parsed = urlsplit(url)
@@ -31,7 +36,7 @@ def _request(method, data=None):
     request = urllib.request.Request(url, data=data, method=method,
         headers={'Authorization': 'Bearer ' + token, 'Content-Type': 'application/gzip',
                  'User-Agent': 'MultiplierPhotoDemo/1.0'})
-    return urllib.request.urlopen(request, timeout=90)
+    return urllib.request.urlopen(request, timeout=timeout)
 
 
 def _allowed(name):
@@ -134,10 +139,30 @@ def checkpoint():
         return
     with LOCK:
         if _root is None:
-            raise RuntimeError('Cloud state has not been configured.')
+            raise CloudStateError('Cloud state has not been configured.')
         try:
-            with _request('PUT', snapshot(_root)) as response:
-                if not 200 <= response.status < 300:
-                    raise RuntimeError('Cloud state could not be saved.')
-        except Exception:
-            raise RuntimeError('Cloud state could not be saved. No further paid request can start until storage is available.') from None
+            archive = snapshot(_root)
+        except Exception as error:
+            raise CloudStateError('Cloud state snapshot failed (' + type(error).__name__ + '). No further paid request can start until storage is available.') from None
+        deadline = time.monotonic() + 30
+        for attempt in range(3):
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                raise CloudStateError('Cloud state could not be saved (storage retry deadline). No further paid request can start until storage is available.')
+            try:
+                with _request('PUT', archive, timeout=min(15, remaining)) as response:
+                    if not 200 <= response.status < 300:
+                        raise urllib.error.HTTPError('', response.status, 'State write failed', {}, None)
+                return
+            except Exception as error:
+                if isinstance(error, urllib.error.HTTPError):
+                    reason = 'HTTP ' + str(error.code)
+                    retryable = error.code in (408, 429, 500, 502, 503, 504)
+                    error.close()
+                else:
+                    reason = type(error).__name__
+                    retryable = isinstance(error, (urllib.error.URLError, OSError))
+                delay = attempt + 1
+                if not retryable or attempt == 2 or deadline - time.monotonic() <= delay:
+                    raise CloudStateError('Cloud state could not be saved (' + reason + '). No further paid request can start until storage is available.') from None
+                time.sleep(delay)
