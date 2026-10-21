@@ -111,7 +111,7 @@ def snapshot(root):
         output = io.BytesIO()
         total = 0
         count = 0
-        with tarfile.open(fileobj=output, mode='w:gz') as archive:
+        with tarfile.open(fileobj=output, mode='w:gz', compresslevel=1) as archive:
             for path in sorted((root / 'var').rglob('*')):
                 name = path.relative_to(root).as_posix()
                 if path.is_symlink():

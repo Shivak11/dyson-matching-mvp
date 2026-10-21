@@ -10,6 +10,7 @@ import math
 import mimetypes
 import os
 import random
+import re
 from pathlib import Path
 import threading
 import time
@@ -90,11 +91,49 @@ def parse_generation(response, provider):
     return result
 
 
+def validate_shape(value, schema):
+    """Check the JSON Schema subset emitted by this app before evidence validation."""
+    if 'anyOf' in schema:
+        for option in schema['anyOf']:
+            try:
+                validate_shape(value, option)
+                return
+            except ValueError:
+                pass
+        raise ValueError('Response does not match the required schema alternatives')
+    kind = schema.get('type')
+    matches = {'object': isinstance(value, dict), 'array': isinstance(value, list),
+               'string': isinstance(value, str), 'boolean': type(value) is bool,
+               'integer': type(value) is int,
+               'number': type(value) in (int, float) and math.isfinite(value), 'null': value is None}
+    if not matches.get(kind, False) or 'enum' in schema and value not in schema['enum']:
+        raise ValueError('Response does not match the required schema type or enum')
+    if kind == 'object':
+        properties = schema.get('properties', {})
+        if not set(schema.get('required', ())) <= value.keys() or (schema.get('additionalProperties') is False and not value.keys() <= properties.keys()):
+            raise ValueError('Response has missing or unexpected schema fields')
+        for key, item in value.items():
+            if key in properties:
+                validate_shape(item, properties[key])
+    elif kind == 'array':
+        if not schema.get('minItems', 0) <= len(value) <= schema.get('maxItems', float('inf')):
+            raise ValueError('Response array does not match schema bounds')
+        for item in value:
+            validate_shape(item, schema['items'])
+    elif kind == 'string':
+        if len(value) < schema.get('minLength', 0) or 'pattern' in schema and not re.search(schema['pattern'], value):
+            raise ValueError('Response string does not match schema constraints')
+    elif kind in ('integer', 'number'):
+        if not schema.get('minimum', -float('inf')) <= value <= schema.get('maximum', float('inf')):
+            raise ValueError('Response number does not match schema bounds')
+
+
 class Client:
     """The runner holds the process lock; this class serialises ledger updates."""
-    def __init__(self, config, root, out, *, reuse_records=(), rate_limit_retries=0, request_interval_seconds=0, max_retry_delay_seconds=300):
+    def __init__(self, config, root, out, *, reuse_records=(), rate_limit_retries=0, request_interval_seconds=0, max_retry_delay_seconds=300, request_coordinator=None):
         if isinstance(rate_limit_retries, bool) or not isinstance(rate_limit_retries, int) or rate_limit_retries < 0:
             raise ValueError('rate_limit_retries must be a non-negative integer')
+        self.request_coordinator = request_coordinator
         self.rate_limit_retries = rate_limit_retries
         self.request_interval_seconds = positive(request_interval_seconds, 'request_interval_seconds', True)
         self.max_retry_delay_seconds = positive(max_retry_delay_seconds, 'max_retry_delay_seconds', True)
@@ -170,7 +209,6 @@ class Client:
                 target.flush()
                 os.fsync(target.fileno())
             self._index_record(record)
-            cloud_runtime.checkpoint()
 
     def _index_record(self, record):
         logical_id = record.get('logical_job_id', record['job_id'])
@@ -246,13 +284,23 @@ class Client:
                     content.append({'type': 'image_url', 'image_url': {'url': 'data:' + item['mimeType'] + ';base64,' + item['data']}})
             reasoning = {'effort': model['thinking_level'].lower()} if model.get('thinking_level') else {'enabled': False}
             payload = {'model': model['model'], 'messages': [{'role': 'system', 'content': 'Return one valid JSON object. Follow the requested JSON fields exactly.'}, {'role': 'user', 'content': content}], 'max_tokens': model['max_output_tokens'], 'reasoning': reasoning, 'response_format': {'type': 'json_object'}, 'provider': {'sort': 'price', 'allow_fallbacks': False, 'max_price': {'prompt': model['input_usd_per_million'], 'completion': model['output_usd_per_million']}}, 'usage': {'include': True}}
+            if schema is not None:
+                if not isinstance(schema, dict) or schema.get('type') != 'object':
+                    raise ValueError('An object response schema is required')
+                payload['response_format'] = {'type': 'json_schema', 'json_schema': {'name': 'photo_identification', 'strict': True, 'schema': schema}}
+                payload['provider']['require_parameters'] = True
             if 'provider_only' in model:
                 payload['provider']['only'] = model['provider_only']
             url = 'https://openrouter.ai/api/v1/chat/completions'
         else:
             raise ValueError('Unsupported provider')
         reservation = (positive(model['input_token_bound'], 'input_token_bound') * positive(model['input_usd_per_million'], 'input price', True) + positive(model['max_output_tokens'], 'max_output_tokens') * positive(model['output_usd_per_million'], 'output price', True)) / 1_000_000
-        return self._call(job_id, 'generate', model, payload, url, reservation, lambda response: parse_generation(response, provider))
+        def parse(response):
+            result = parse_generation(response, provider)
+            if schema is not None:
+                validate_shape(result, schema)
+            return result
+        return self._call(job_id, 'generate', model, payload, url, reservation, parse)
 
 
     def _call(self, job_id, operation, model, payload, url, reservation, parse):
@@ -300,13 +348,19 @@ class Client:
                     self._wait(failed['retry_delay_seconds'])
 
     def _paid_call(self, job_id, logical_id, operation, model, body, request_sha, url, reservation, parse, timeout):
-        with self.lock:
+        with self.request_coordinator.slot() if self.request_coordinator else nullcontext():
+            return self._perform_paid_call(job_id, logical_id, operation, model, body, request_sha, url, reservation, parse, timeout)
+
+    def _perform_paid_call(self, job_id, logical_id, operation, model, body, request_sha, url, reservation, parse, timeout):
+        with self.lock, self.request_coordinator.admission() if self.request_coordinator else nullcontext():
             if self.failure or job_id in self.pending:
                 raise RuntimeError('Pipeline stopped after failed or unresolved request; inspect calls.jsonl and inflight.json')
             if (self.out / 'STOP').exists():
                 raise RuntimeError('Pipeline STOP file is present')
             if self.accounted_cost_usd + reservation > self.cap_usd + 1e-12:
                 raise RuntimeError('Pipeline budget stop before request: ' + job_id)
+            if self.request_coordinator:
+                self.request_coordinator.check_budget(reservation)
             key = api_key_for('OPENROUTER_API_KEY')
             record = {'job_id': job_id, 'operation': operation, 'config_sha256': self.config_sha256, 'request_sha256': request_sha, 'requested_model': model['model'], 'provider_route': model['provider'], 'timestamp_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'reserved_cost_usd': reservation}
             if self.retry_enabled:
@@ -315,6 +369,8 @@ class Client:
                 record['request_started_unix'] = time.time()
             self.pending[job_id] = record
             self._atomic_json(self.pending_path, self.pending)
+            if self.request_coordinator:
+                self.request_coordinator.started()
         start = time.monotonic()
         response = None
         usage = {}
@@ -360,7 +416,7 @@ class Client:
             record['cost_basis'] = 'reserved_upper_bound_usage_unavailable'
         if record['estimated_cost_usd'] > reservation + 1e-12:
             record.update(status='error', error='Provider cost exceeded request reservation')
-        with self.lock:
+        with self.lock, cloud_runtime.LOCK:
             if self.retry_enabled and self._is_rate_limit(record):
                 count = len(self.attempts.get(logical_id, ())) + 1
                 delay = self._retry_delay(record, count)
@@ -388,4 +444,5 @@ class Client:
                 record['logical_job_id'] = old['logical_job_id']
             record.update(status='validation_error', error=str(error), estimated_cost_usd=0, cost_basis='validation_only_no_new_request')
             self._append(record)
+            cloud_runtime.checkpoint()
             self.failure = True

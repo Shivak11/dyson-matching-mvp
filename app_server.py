@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Loopback-only local app, SQLite catalogue and one paid OpenRouter worker."""
+"""Loopback-only local app, SQLite catalogue and two bounded background workers."""
 import argparse
 import fcntl
 import hmac
@@ -7,6 +7,7 @@ import hashlib
 import json
 import os
 from contextlib import contextmanager
+from functools import partial
 import queue
 import re
 import secrets
@@ -19,7 +20,9 @@ from urllib.parse import unquote, urlsplit
 from webapp.store import Store, ID, ConflictError, now
 from webapp import cloud_runtime
 from webapp.predictions import collect_run_details, hosted_job, hosted_prediction, TERMINAL
-from webapp.inference import Inference, BudgetError, settings, ledger_accounting, api_configured, api_key_for, checked_accounting
+from webapp.inference import Inference, BudgetError, settings, ledger_accounting, api_configured, api_key_for, checked_accounting, RUNTIME_CAP_INR, STAGE_CAP_INR, HISTORICAL_STAGE_GUARD_INR, GUARD_FX, PAUSE_SECONDS
+from webapp.request_coordinator import RequestCoordinator
+from webapp.transport import Client
 
 ROOT = Path(__file__).resolve().parent
 MAX_REQUEST_BYTES = 65 * 1024 * 1024
@@ -62,7 +65,13 @@ class App:
                     cost = costs.get(job['id'], job['cost_inr'])
                     if not job.get('exports_available') and cost != job['cost_inr']:
                         self.store.update_job(job['id'], cost_inr=cost)
-            self.engine = inference_factory(self.root, self.ledger_root, self.store)
+            self.request_coordinator = RequestCoordinator(
+                lambda: checked_accounting(self.ledger_root, self.store.jobs())['spent_inr'],
+                lambda: min(RUNTIME_CAP_INR, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR),
+                fx=GUARD_FX, interval_seconds=PAUSE_SECONDS, error_factory=BudgetError)
+            self.engine = (inference_factory(self.root, self.ledger_root, self.store,
+                           client_factory=partial(Client, request_coordinator=self.request_coordinator))
+                           if inference_factory is Inference else inference_factory(self.root, self.ledger_root, self.store))
             cloud_runtime.checkpoint()
         except Exception:
             self.lock_file.close()
@@ -70,18 +79,26 @@ class App:
         self.csrf_token = secrets.token_urlsafe(32)
         self.queue = queue.Queue()
         self.stop = threading.Event()
-        self.worker = threading.Thread(target=self._work, name='openrouter-single-worker', daemon=True)
+        self.worker_lifecycle_lock = threading.Lock()
+        self.workers = [threading.Thread(target=self._work, name='openrouter-worker-' + str(index + 1), daemon=True)
+                        for index in range(2)]
+        self.worker = self.workers[0]
+        self.remaining_workers = len(self.workers) if start_worker else 0
         if start_worker:
-            self.worker.start()
+            for worker in self.workers:
+                worker.start()
 
     def close(self):
         self.stop.set()
-        self.queue.put(None)
-        if self.worker.is_alive():
-            self.worker.join(timeout=1)
+        for worker in self.workers:
+            self.queue.put(None)
+        for worker in self.workers:
+            if worker.is_alive():
+                worker.join(timeout=1)
         # Keep the process lock during an active network request, even after the HTTP listener closes.
-        if not self.worker.is_alive():
-            self.lock_file.close()
+        with self.worker_lifecycle_lock:
+            if self.remaining_workers == 0:
+                self.lock_file.close()
 
     def _cost(self, key):
         try:
@@ -97,8 +114,10 @@ class App:
                     return
                 self.process_job(key)
         finally:
-            if self.stop.is_set():
-                self.lock_file.close()
+            with self.worker_lifecycle_lock:
+                self.remaining_workers -= 1
+                if self.stop.is_set() and self.remaining_workers == 0:
+                    self.lock_file.close()
 
     def process_job(self, key):
         job = self.store.claim_job(key)

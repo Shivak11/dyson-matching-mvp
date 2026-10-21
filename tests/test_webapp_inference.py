@@ -49,8 +49,8 @@ class FakeClient:
         self.seen = []
         self.invalid = []
 
-    def generate(self, job_id, model, prompt, images):
-        self.seen.append({'prompt': prompt, 'images': images, 'job_id': job_id})
+    def generate(self, job_id, model, prompt, images, schema=None):
+        self.seen.append({'prompt': prompt, 'images': images, 'job_id': job_id, 'schema': schema})
         with (self.out / 'calls.jsonl').open('a') as output:
             output.write(json.dumps({'job_id': job_id, 'status': 'ok', 'estimated_cost_usd': 0.01,
                                      'request_finished_unix': time.time()}) + '\n')

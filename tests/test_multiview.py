@@ -128,7 +128,7 @@ class MultipleViewsTests(unittest.TestCase):
         self.assertEqual(client.options['request_interval_seconds'], 15)
         self.assertEqual(client.config['models']['flash37high']['thinking_level'], 'high')
         self.assertEqual(client.config['models']['flash37high']['provider_only'], ['google-ai-studio'])
-        self.assertEqual(client.config['budget']['total_max_inr'], 300)
+        self.assertEqual(client.config['budget']['total_max_inr'], RUNTIME_CAP_INR)
         self.complete(child)
         third = self.store.create_jobs(self.payload(child, 'green', 'step-three'))[0]
         _, client = self.run_fixture(third, self.inventory(3), self.joint_response())

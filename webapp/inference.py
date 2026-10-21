@@ -11,6 +11,8 @@ from .transport import Client, positive, api_key_for
 from .protocol import inventory_prompt, validate_inventory, RESULT_FORMAT, validate_match_result, needs_refinement
 from .predictions import PIPELINE_VERSION
 from .transport import digest, encoded
+from . import cloud_runtime
+from .schemas import inventory_schema, comparison_schema
 
 RUNTIME_CAP_INR = 500.0
 HISTORICAL_STAGE_GUARD_INR = 801.9682441
@@ -40,31 +42,32 @@ def read_json(path):
 
 def ledger_accounting(root):
     """Count every physical call once and retain unmatched in-flight reservations."""
-    amount = 0.0
-    finished = None
-    per_job = {}
-    for folder in sorted(Path(root).iterdir()) if Path(root).exists() else []:
-        if not folder.is_dir():
-            continue
-        records = []
-        calls = folder / 'calls.jsonl'
-        if calls.exists():
-            records = [json.loads(line, parse_constant=lambda value: (_ for _ in ()).throw(ValueError('Invalid ledger number')))
-                       for line in calls.read_text().splitlines() if line.strip()]
-        settled = {row['job_id'] for row in records if row.get('status') != 'validation_error'}
-        paid = sum(positive(row['estimated_cost_usd'], 'recorded cost', True)
-                   for row in records if row.get('status') != 'validation_error')
-        pending_file = folder / 'inflight.json'
-        pending = read_json(pending_file) if pending_file.exists() else {}
-        paid += sum(positive(row['reserved_cost_usd'], 'unresolved reservation', True)
-                    for key, row in pending.items() if key not in settled)
-        for row in records:
-            if 'request_finished_unix' in row:
-                value = positive(row['request_finished_unix'], 'request finished time', True)
-                finished = value if finished is None else max(finished, value)
-        per_job[folder.name] = paid * GUARD_FX
-        amount += paid * GUARD_FX
-    return {'spent_inr': amount, 'last_finished_unix': finished, 'per_job': per_job}
+    with cloud_runtime.LOCK:
+        amount = 0.0
+        finished = None
+        per_job = {}
+        for folder in sorted(Path(root).iterdir()) if Path(root).exists() else []:
+            if not folder.is_dir():
+                continue
+            records = []
+            calls = folder / 'calls.jsonl'
+            if calls.exists():
+                records = [json.loads(line, parse_constant=lambda value: (_ for _ in ()).throw(ValueError('Invalid ledger number')))
+                           for line in calls.read_text().splitlines() if line.strip()]
+            settled = {row['job_id'] for row in records if row.get('status') != 'validation_error'}
+            paid = sum(positive(row['estimated_cost_usd'], 'recorded cost', True)
+                       for row in records if row.get('status') != 'validation_error')
+            pending_file = folder / 'inflight.json'
+            pending = read_json(pending_file) if pending_file.exists() else {}
+            paid += sum(positive(row['reserved_cost_usd'], 'unresolved reservation', True)
+                        for key, row in pending.items() if key not in settled)
+            for row in records:
+                if 'request_finished_unix' in row:
+                    value = positive(row['request_finished_unix'], 'request finished time', True)
+                    finished = value if finished is None else max(finished, value)
+            per_job[folder.name] = paid * GUARD_FX
+            amount += paid * GUARD_FX
+        return {'spent_inr': amount, 'last_finished_unix': finished, 'per_job': per_job}
 
 
 def checked_accounting(ledger_root, jobs):
@@ -158,6 +161,11 @@ def validate_batch(raw, targets, snapshot, available_originals=(), view_targets=
         unverified = []
         decision = item['decision']
         for check in checks:
+            detail_alias = 'detail: short visible diagnostic comparison'
+            if (isinstance(check, dict) and 'detail' not in check
+                    and isinstance(check.get(detail_alias), str) and check[detail_alias].strip()):
+                check['detail'] = check[detail_alias]
+                item.setdefault('format_repairs', []).append(detail_alias + ': renamed to detail')
             if (not isinstance(check, dict) or check.get('product') not in candidates or check.get('feature') not in FEATURES
                     or type(check.get('query_visible')) is not bool or type(check.get('reference_visible')) is not bool
                     or not isinstance(check.get('detail'), str) or not check['detail'].strip()):
@@ -299,21 +307,21 @@ class Inference:
         client = self._client(job['id'])
         references = self._references(snapshot, folder)
 
-        def generate(name, prompt, images, validator):
+        def generate(name, prompt, images, validator, schema):
             account = ledger_accounting(self.ledger_root)
             model = client.config['models']['flash37high']
             bound = (model['input_token_bound'] * model['input_usd_per_million'] + model['max_output_tokens'] * model['output_usd_per_million']) / 1_000_000 * GUARD_FX
             if account['spent_inr'] + bound > min(RUNTIME_CAP_INR, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR) + 1e-9:
                 raise BudgetError('The remaining allowance cannot cover another request reservation.')
             # One UTF-8 byte per text token plus 1024 tokens per 512px tile is a conservative context guard.
-            context_bound = len(prompt.encode('utf-8')) + 4096
+            context_bound = len(prompt.encode('utf-8')) + len(json.dumps(schema).encode('utf-8')) + 4096
             for _, image_path in images:
                 with Image.open(image_path) as image:
                     context_bound += math.ceil(image.width / 512) * math.ceil(image.height / 512) * 1024
             if context_bound > model['input_token_bound']:
                 raise ValueError('Manufacturer content exceeds the reserved input context.')
             stage(name)
-            raw = client.generate(job['id'] + ':' + name, 'flash37high', prompt, images)
+            raw = client.generate(job['id'] + ':' + name, 'flash37high', prompt, images, schema=schema)
             try:
                 value = validator(raw)
             except Exception as error:
@@ -324,7 +332,8 @@ class Inference:
 
         if job.get('view_count', 1) > 1:
             return self._run_multiple(job, snapshot, references, generate)
-        inventory = generate('Finding physical machines', inventory_prompt(), [('Uploaded store scene', path)], validate_inventory)
+        inventory = generate('Finding physical machines', inventory_prompt(), [('Uploaded store scene', path)],
+                             validate_inventory, inventory_schema())
         machines = inventory['machines']
         if not machines:
             return []
@@ -337,7 +346,8 @@ class Inference:
         if ready:
             result = generate('Comparing manufacturer references', comparison_prompt(ready, snapshot, expected),
                               [('Uploaded store scene', path)] + references,
-                              lambda raw: validate_batch(raw, ready, snapshot))
+                              lambda raw: validate_batch(raw, ready, snapshot),
+                              comparison_schema([target['object_id'] for target in ready], [row['id'] for row in snapshot]))
             results.update(result)
             uncertain = [target for target in ready if needs_refinement(result[target['object_id']], [])]
             if uncertain:
@@ -381,7 +391,9 @@ class Inference:
                 if originals:
                     prompt += '\nExtra original manufacturer views are supplied for these family IDs: ' + json.dumps(originals) + '. When citing an extra view, set reference_view to original_detail and use its own 0..1000 coordinates. Otherwise use reference_view plate. These are additional views of the same supplied families, not new candidates.'
                 result = generate('Checking disputed visible details', prompt, images,
-                                  lambda raw: validate_batch(raw, uncertain, snapshot, originals))
+                                  lambda raw: validate_batch(raw, uncertain, snapshot, originals),
+                                  comparison_schema([target['object_id'] for target in uncertain],
+                                                    [row['id'] for row in snapshot], available_originals=originals))
                 results.update(result)
         return [display_match(target, results[target['object_id']], snapshot, expected) for target in machines]
 
@@ -400,7 +412,7 @@ class Inference:
                 raise ValueError('Missing or duplicate inventory view.')
             return {row['view_id']: validate_inventory({'objects': row.get('objects')}) for row in rows}
 
-        inventories = generate('Finding product across views', prompt, images, validate_views)
+        inventories = generate('Finding product across views', prompt, images, validate_views, inventory_schema(view_ids))
         targets = {key: value['machines'][0] for key, value in inventories.items()
                    if len(value['machines']) == 1 and not value['machines'][0].get('accessory_only')}
         anchor = targets.get('view_1', {'object_id': 'o1', 'box_2d': [0, 0, 1000, 1000]})
@@ -418,7 +430,8 @@ class Inference:
                      for key, target in targets.items()}
         prompt = comparison_prompt([joint_target], snapshot) + '\nJOINT VIEW RULES override scene-only coordinate wording above: Assess ALL supplied views together as one proposed physical product o1. These are separate images, not independent answers or votes. The user explicitly confirms these images show the same physical product. This confirmation establishes grouping; it does not establish the model family or override visible contradictions. Never use an earlier prediction. Explicitly compare cross-view consistency of body, bin, controls, identifiers and attachments. Check for separate machines, conflicting identifiers, incompatible bodies or controls. Return not_sure when a material visible contradiction cannot be resolved. Do not demand a serial number or independent proof of same-unit continuity. Consistent means the visible details are compatible with the user-confirmed grouping; insufficient_evidence applies when the intended machine cannot safely be located or a material conflict cannot be resolved. Add cross_view_consistency:{"status":"consistent|conflicting|insufficient_evidence","evidence":"visible reason"} INSIDE the per-target result. Every feature_check must add query_view:"view_1|view_2|view_3" naming the image that actually shows that detail, and query_box_2d must lie inside that view target. Never borrow a region from another view. Two diagnostic feature types may come from different views only after consistency is established. Give decisive_region:null, or add decisive_view naming its supplied image. More views do not require higher confidence. View-specific observed targets: ' + json.dumps(projected, separators=(',', ':'))
         result = generate('Comparing product views together', prompt, images + references,
-                          lambda raw: validate_batch(raw, [joint_target], snapshot, view_targets=targets))['o1']
+                          lambda raw: validate_batch(raw, [joint_target], snapshot, view_targets=targets),
+                          comparison_schema(['o1'], [row['id'] for row in snapshot], view_ids))['o1']
         match = display_match(joint_target, result, snapshot)
         match['view_boxes'] = view_boxes
         match['view_evidence'] = [{'view_id': check['query_view'], 'feature': check['feature'], 'detail': check['detail']}
