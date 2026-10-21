@@ -16,3 +16,7 @@ The isolated codex/cloudflare-demo worktree is at bd38b65. Cloudflare applicatio
 ## Verification
 
 Compare diagram facts with source using the existing unittest runner. Deliberately change one fact and confirm failure before restoring it. Run the skill's SVG checker, render and inspect the actual PNG, then check the final staged paths and whitespace. No dataset rerun or paid inference is needed.
+
+## Simpler AI pipeline requested by the owner
+
+Add a separate AI-only diagram covering catalogue reference preparation and joint matching of three photos. Preserve the full architecture diagram. Show the real Pillow image preparation, supplied brochure text, both joint Gemini calls and local validation. Check its source facts and final PNG, and save the files with the existing diagram maintenance note. No application or deployment changes are required.
