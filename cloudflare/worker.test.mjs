@@ -56,6 +56,12 @@ assert.equal((await worker.default.fetch(runtimeRequest(), runtimeEnv)).status, 
 assert.equal((await worker.default.fetch(runtimeRequest('Bearer wrong'), runtimeEnv)).status, 404);
 assert.equal((await worker.default.fetch(runtimeRequest('Bearer undefined'), {})).status, 404);
 assert.equal((await worker.default.fetch(runtimeRequest('Bearer test-only-state', 'POST'), runtimeEnv)).status, 405);
+const failedRuntime = await worker.default.fetch(runtimeRequest('Bearer test-only-state'), { ...env,
+  PHOTO_DEMO: { getByName: () => ({ runtimeStatus: async () => { throw new Error('RPC unavailable test-only-key test-only-state'); } }) } });
+assert.equal(failedRuntime.status, 503);
+const failedBody = await failedRuntime.text();
+assert.match(failedBody, /RPC unavailable/);
+assert.doesNotMatch(failedBody, /test-only-key|test-only-state/);
 for (let index = 0; index < 24; index += 1) await instance.onStart();
 assert.equal(instance.starts, 24);
 await instance.onStop({ exitCode: 137, reason: 'exit', message: 'PRIVATE STOP', env: 'PRIVATE' });

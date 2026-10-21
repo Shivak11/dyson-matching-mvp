@@ -137,8 +137,16 @@ export default {
       if (url.pathname === '/__runtime') {
         if (!env.CLOUD_STATE_TOKEN || !await equalSecret(request.headers.get('authorization'), 'Bearer ' + env.CLOUD_STATE_TOKEN)) return response('Not found', 404);
         if (request.method !== 'GET') return response('Method not allowed', 405);
-        const diagnostics = await env.PHOTO_DEMO.getByName('multiplier-single-demo').runtimeStatus();
-        return response(JSON.stringify(diagnostics), 200, { 'Content-Type': 'application/json' });
+        try {
+          const diagnostics = await env.PHOTO_DEMO.getByName('multiplier-single-demo').runtimeStatus();
+          return response(JSON.stringify(diagnostics), 200, { 'Content-Type': 'application/json' });
+        } catch (error) {
+          let detail = String(error?.message || 'Runtime diagnostics unavailable');
+          for (const name of ['CLOUD_STATE_TOKEN', 'CLOUD_CONTAINER_TOKEN', 'OPENROUTER_API_KEY', 'DEMO_ACCESS_CODE']) {
+            if (env[name]) detail = detail.replaceAll(env[name], '[REDACTED]');
+          }
+          return response(JSON.stringify({ error: 'Runtime diagnostics unavailable', detail: detail.slice(0, 600) }), 503, { 'Content-Type': 'application/json' });
+        }
       }
       if (url.pathname === '/__state') {
         if (!env.CLOUD_STATE_TOKEN || !await equalSecret(request.headers.get('authorization'), 'Bearer ' + env.CLOUD_STATE_TOKEN)) return response('Not found', 404);
