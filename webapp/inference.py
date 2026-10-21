@@ -15,9 +15,9 @@ from .transport import digest, encoded
 from . import cloud_runtime
 from .schemas import inventory_schema, comparison_schema
 
-RUNTIME_CAP_INR = 500.0
+RUNTIME_CAP_INR = 700.0
 HISTORICAL_STAGE_GUARD_INR = 801.9682441
-STAGE_CAP_INR = 1400.0
+STAGE_CAP_INR = 1600.0
 GUARD_FX = 100.0
 PAUSE_SECONDS = 15
 FEATURES = {'body_layout', 'handle_control', 'bin_mechanism', 'display_layout',

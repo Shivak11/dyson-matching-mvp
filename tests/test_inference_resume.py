@@ -8,7 +8,8 @@ from unittest.mock import patch
 import app_server
 from test_webapp import fixture_root, image_file
 from test_webapp_inference import target, response
-from webapp.inference import Inference, BudgetError, can_resume_job, ledger_accounting
+from webapp.inference import (Inference, BudgetError, can_resume_job, ledger_accounting,
+                             RUNTIME_CAP_INR, STAGE_CAP_INR, HISTORICAL_STAGE_GUARD_INR)
 from webapp.store import Store
 from webapp.transport import Client
 
@@ -85,12 +86,13 @@ class ResumeTests(unittest.TestCase):
         self.pause_after_inventory()
         other = self.ledgers / 'other'
         other.mkdir()
-        (other / 'inflight.json').write_text(json.dumps({'unknown': {'reserved_cost_usd': 4.998}}))
+        limit = min(RUNTIME_CAP_INR, STAGE_CAP_INR - HISTORICAL_STAGE_GUARD_INR)
+        (other / 'inflight.json').write_text(json.dumps({'unknown': {'reserved_cost_usd': (limit - .2) / 100}}))
         with patch('webapp.transport.urllib.request.urlopen') as network:
             with self.assertRaises(BudgetError):
                 self.engine.run(self.job, lambda stage: None)
         network.assert_not_called()
-        self.assertAlmostEqual(ledger_accounting(self.ledgers)['spent_inr'], 499.9)
+        self.assertAlmostEqual(ledger_accounting(self.ledgers)['spent_inr'], limit - .1)
 
     def test_unresolved_request_or_failed_validation_blocks_automatic_resume(self):
         self.pause_after_inventory()
