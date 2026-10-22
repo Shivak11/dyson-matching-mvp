@@ -1,75 +1,112 @@
-# Dyson photo matching
+# Multiplier photo matching
 
-[![Deployed system architecture](docs/architecture/system-diagram.svg)](docs/architecture/system-diagram.svg)
+Identify Dyson product families from store photographs by comparing them with manufacturer images and brochure details. Start with one photo, then add a second and third view of the same product for a joint identification with confidence and visible evidence.
 
-See the simpler [AI pipeline diagram](docs/architecture/ai-pipeline.svg) for catalogue preparation and joint matching of three photos.
+[Open the hosted demo](https://multiplier-photo-demo.shiva-research11.workers.dev/). Sign in with the access code supplied separately, then choose **Take a platform tour** for a guided walkthrough.
 
-A web app for comparing store photographs with manufacturer images and brochure details. The [hosted demo](https://multiplier-photo-demo.shiva-research11.workers.dev/) runs on Cloudflare Workers and Containers, with private R2 checkpoints. It uses SQLite and Gemini 3.7 Flash high through OpenRouter and can also run locally. The saved accuracy report and earlier experiments remain in this repository. See the [diagram maintenance note](docs/architecture/DIAGRAM-STYLE.md) and [deployment record](docs/cloudflare-demo-status.md).
+## Try an identification
+
+1. Open **Identify products**, select a JPEG, PNG or WebP photograph and start the comparison. Selecting a file alone does not start a paid model call.
+2. Inspect the result: the product family, confidence, marked regions, supporting evidence and any missing details.
+3. For a completed Identify result containing one machine, choose **Add another view**. Select another angle, confirm that it shows the same physical product and choose **Identify using 2 views**.
+4. Repeat with a third angle and choose **Identify using 3 views**. The model compares all accumulated photos together. Earlier results remain saved so you can compare the outcomes.
+5. Open **Saved results** to revisit a run or download its JSON and CSV exports.
+
+An initial batch upload creates separate photo jobs. **Add another view** combines photos of one product into a joint run. Additional views may resolve an uncertain identity, but confidence can also remain unchanged or decrease. Confidence is the model's judgement, not a measured accuracy percentage.
+
+Choose **Verify** when you want to check a claimed catalogue model rather than ask the app to identify it.
+
+## How the AI pipeline works
+
+Python uses Pillow to resize the real manufacturer photos and arrange a labelled reference sheet for each model. Brochure details are supplied as text. Reference sheets are currently prepared for each run.
+
+For a three-view identification, both Gemini calls receive all three user photos together. The first locates the product and reads visible details; the second also receives the catalogue references and compares the product's body, controls, identifiers and cross-view consistency. Python then validates the structured JSON and evidence before saving one joint result.
+
+[![AI pipeline: catalogue preparation and joint three-photo matching](docs/architecture/ai-pipeline.png)](docs/architecture/ai-pipeline.svg)
+
+[Open the editable pipeline SVG](docs/architecture/ai-pipeline.svg) · [Open the full-resolution PNG](docs/architecture/ai-pipeline.png)
+
+## Manufacturer catalogue
+
+The initial catalogue covers these six product families:
+
+| Product family | Catalogue entry |
+| --- | --- |
+| Dyson Big Ball | `dyson_big_ball` |
+| Dyson V8 Absolute family | `dyson_v8_absolute` |
+| Dyson V12 Detect Slim | `dyson_v12_detect_slim` |
+| Dyson V15 Detect | `dyson_v15_detect` |
+| Dyson V16 Piston Animal | `dyson_v16_piston_animal` |
+| Dyson WashG1 | `dyson_wash_g1` |
+
+V11, Gen5detect and Shark Stratos references help distinguish similar products outside that catalogue.
+
+Use **Manufacturer catalogue** to add or edit a product's model name, manufacturer images and source-backed brochure details. Uploaded PDFs are stored as original attachments; this MVP does not automatically extract their contents. Enter the relevant details in the brochure text field. **Dataset guide** explains the expected reference and evaluation inputs.
+
+Each run retains a fixed catalogue snapshot. Adding another product view uses that same snapshot, and later catalogue edits do not rewrite earlier results or exports.
+
+## System architecture
+
+A Cloudflare Worker checks sign-in and forwards the interface and API requests through the **PhotoDemo Durable Object** to one Python container. Two background workers process the saved SQLite queue. Gemini 3.7 Flash with high reasoning runs through OpenRouter's Google AI Studio route.
+
+The container holds the working database, media, exports and request ledgers. Private Cloudflare R2 checkpoints preserve that state for restoration at startup. The browser polls for progress, so closing the browser does not cancel a running job.
+
+[![System architecture: browser, Cloudflare application, model calls and saved state](docs/architecture/system-diagram.png)](docs/architecture/system-diagram.svg)
+
+[Open the editable architecture SVG](docs/architecture/system-diagram.svg) · [Open the full-resolution PNG](docs/architecture/system-diagram.png)
+
+The [deployment record](docs/cloudflare-demo-status.md) contains release and recovery evidence. The [diagram maintenance note](docs/architecture/DIAGRAM-STYLE.md) explains how to keep both diagrams consistent with the source.
 
 ## Run locally
 
-Use Python 3.11 or newer with Pillow installed:
+You need Python 3.11 or newer and an OpenRouter API key with access to the configured model. Clone this private repository while signed in to GitHub as an authorised user:
 
 ```bash
-python3 -m pip install -r requirements.txt
+git clone --branch codex/local-app https://github.com/Shivak11/dyson-matching-mvp.git
+cd dyson-matching-mvp
+python3 -m venv var/venv
+source var/venv/bin/activate
+python -m pip install -r requirements.txt
+python tools/build_private_app.py --output . --prepare-catalogue --inputs-only
 ```
 
-Set `OPENROUTER_API_KEY` in the server environment or in the ignored `.env` file in this folder. Keep the key on the server. In this research checkout, prepare the manufacturer-only seed and selected model configuration locally:
+The preparation command copies manufacturer references into `var/catalogue-seed` and writes the ignored `runtime_config.json`. It preserves an existing catalogue database and does not copy evaluation photographs or answer labels into the app inputs.
+
+Set `OPENROUTER_API_KEY` in the server environment or in an ignored `.env` file at the repository root. Then start the app:
 
 ```bash
-python3 tools/build_private_app.py --output . --prepare-catalogue --inputs-only
+python app_server.py --port 8768
 ```
 
-This writes the private seed under `var/catalogue-seed` and the ignored `runtime_config.json`. It does not copy test photographs or evaluation records. An existing catalogue database is preserved.
+Open [the local app](http://127.0.0.1:8768). Local mode binds to the loopback address and stores its database, uploads and results under `var/`.
+
+## Spending and recovery
+
+The configured shared runtime cap is ₹700. The app records charges and unfinished-request reservations per job. At most two provider requests run in parallel, with at least 15 seconds between launches. There is no silent model or provider fallback.
+
+Queued work survives a hosted restart through the R2 checkpoint. Running work resumes only when its saved requests and successful responses establish a safe continuation. Unknown provider outcomes remain interrupted with their reservations retained. Completed JSON and CSV exports preserve the recorded result.
+
+Credentials, access codes, runtime configuration, databases and client uploads are excluded from Git. Hosting uses Worker secrets; the browser receives no provider key. Docker builds the container image locally, and the pinned Wrangler procedure deploys it to Cloudflare.
+
+## Checks and evaluation
+
+Run the offline source checks with the local environment active:
 
 ```bash
-python3 app_server.py --port 8768
+python -m unittest discover -s tests -v
 ```
 
-Open [the local app](http://127.0.0.1:8768). It starts with six Dyson catalogue products and three outside-catalogue comparison references. The app binds to this computer's loopback address; it is not a public upload service.
-
-Choose **Identify** to find a model, or **Verify** to check a claimed catalogue model. Select up to five JPEG, PNG or WebP store photographs, inspect the previews, then run the comparison. Selecting photographs does not make a paid call. Results and the catalogue persist in the local database. Each run retains its own catalogue snapshot.
-
-In **Catalogue**, add manufacturer images and source-backed brochure details or add a new product. An uploaded PDF is stored as the original file. Enter the relevant brochure details in the text field; this MVP does not automatically extract uploaded PDFs.
-
-Each result shows a selectable box and model-family decision for each physical machine, qualitative confidence, visible evidence, missing details and any retake guidance. Confidence is the model's assessment, not a measured probability. The live app path compares all catalogue candidates and has not had a fresh full-set accuracy evaluation. Shared controls or an interchangeable attachment cannot uniquely identify a model.
-
-Expand **Run details** to inspect recorded latency, the AI model/provider, configuration identity and request charges or reservations. Unknown metadata is marked as unrecorded. Use **Download JSON** or **Download CSV** beside a saved result or in History. Downloads preserve the prediction and run details recorded at completion; later catalogue edits do not change their bytes. CSV cells are protected against spreadsheet formulas.
-
-## Costs and recovery
-
-The app has an owner-authorised shared runtime cap of ₹700. It keeps a separate metered ledger for each job and includes unfinished-request reserves. Two background workers process saved SQLite jobs, with at most two provider requests in flight, at least 15 seconds between launches and bounded retries for rate limits. Each client also pauses after a response. There is no silent model or provider fallback.
-
-Closing the browser does not cancel a running job. The hosted app restores its database and files from a private R2 checkpoint at startup. Queued jobs remain queued, and interrupted work can resume when its exact saved requests and successful responses are unambiguous. Unknown provider outcomes remain interrupted with their reserves retained. Choosing another database location cannot reset the spending cap.
-
-Runtime databases, uploads, responses and `.env` are ignored by Git. The historic public-photo experiment evidence remains tracked for reproducibility. Do not add client uploads or keys to Git.
-
-## Accuracy report and saved evidence
-
-[The historical HTML report](web/report.html) includes the measured comparison, costs and every development test photograph. Open that file directly. The private testing app does not serve the report, evaluation data or research-photo routes. Rebuild the report in this research checkout without API calls:
+To check just the facts and image dimensions of both diagrams:
 
 ```bash
-python3 tools/build_accuracy_report.py
+python -m unittest discover -s tests -p 'test_*diagram.py' -v
 ```
 
-The completed full-set Gemini run resolved 37 of 57 single-model photos correctly, with five confidently wrong answers and 15 not sure. The separate two-model photograph returned the correct identity set. Recovery experiments are reported separately; they are not fresh full-set scores. See [the handover](HANDOVER.md), [edge cases](docs/edge-case-register.md) and [the local-app verification record](docs/local-app-verification.md).
+These checks do not call paid models. Measured identification outcomes are recorded separately:
 
-## Check the source
+- [Cumulative-view example](docs/multiple-views-review.md): one V15 example checked with one, two and three views.
+- [Store-photo and owner-review checks](docs/store-photo-ui-review.md): noisy photographs and source-labelled review frames.
+- [Historical accuracy report](web/report.html): the earlier full-set comparison, costs and development photographs; open the HTML file locally.
+- [Queue and worker repair](docs/breaker-repair-20261021.md): failure-recovery checks and the hosted completion record.
 
-```bash
-python3 -m unittest discover -s tests -v
-```
-
-These tests do not call paid models. Browser and live OpenRouter verification are recorded separately.
-
-## Isolated local bundle and hosting
-
-Build a code-only archive and a separate local working copy with manufacturer inputs:
-
-```bash
-python3 tools/build_private_app.py --output var/private-testing-app --prepare-catalogue
-```
-
-Choose an empty output folder. The adjacent `private-testing-app-code.zip` contains only the server, runtime modules, requirements and three web assets. It excludes source data, model configuration, databases, photos, keys, tests, reports and experiment outputs. The prepared local folder additionally contains the private manufacturer seed and selected model configuration; those inputs are never public static assets. The archive is a transport artifact, not a deployed Site. Runtime credentials are supplied separately through the server environment.
-
-The earlier [Sites feasibility assessment](docs/private-testing-sites-feasibility.md) concerns the standalone bundle. The current hosted app uses a Cloudflare Worker, a Durable Object, one Python container and private R2 checkpoints. OpenRouter credentials and access controls are supplied through hosted secrets. The container image is built locally with Docker and deployed using the pinned Wrangler release procedure.
+The historical report and evaluation material are retained in the research repository. The hosted app excludes the report, test photographs and answer labels from its served files and inference inputs.
